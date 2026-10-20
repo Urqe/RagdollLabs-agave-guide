@@ -4,6 +4,7 @@ import { loadAppData } from "./data-loader.js";
 import { renderExplore } from "./explore.js";
 import { renderProfile, renderProfileNotFound } from "./profile.js";
 import { renderCompare } from "./compare-view.js";
+import { renderCatalogue } from "./catalogue-view.js";
 
 const state = {
   data: null,
@@ -60,6 +61,11 @@ async function renderRoute(container, route) {
     return;
   }
 
+  if (route.name === "catalogue") {
+    state.exploreApi = null;
+    renderCatalogue(container, { bottles, profiles, sources });
+    return;
+  }
   if (route.name === "compare") {
     state.exploreApi = null;
     renderCompare(container, {
@@ -83,7 +89,7 @@ async function renderRoute(container, route) {
       return;
     }
     const bottle = bottles.find((b) => b.id === profile.exampleBottleId) || null;
-    renderProfile(container, { profile, bottle, sources, returnTo: route.params.from || null, allProfiles: profiles });
+    renderProfile(container, { profile, bottle, sources, returnTo: route.params.from || null, allProfiles: profiles, allBottles: bottles });
     return;
   }
 

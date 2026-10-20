@@ -342,3 +342,59 @@ app, which is why CI stayed green while the feature was broken.
 **Verified:** real-app jsdom run confirms pick 1 → `#/compare/<id>`,
 pick 2 renders the table with differences, pick 3 adds a column, remove
 drops one. `npm run validate`: 29 suites passing.
+
+## Release 7 — Brands, Bottles & Reviews
+
+### Scope delivered
+
+- **Catalogue view** (`#/catalogue`, "Catalogue" nav link): every bottle
+  as an entry with brand, producer, exact expression, place, ABV and
+  batch/version kept as separate facts; alphabetical bottle list; brand
+  directory ("Browse all brands").
+- **Catalogue search** with **exact-expression prioritization** (exact
+  expression > brand > content match), accent/case normalization and
+  curated spelling variants; results keep catalogue context (in-page
+  anchors).
+- **3 new bottles (within the 2\u20135 cap; 7 total):**
+  - Cielo Rojo Bacanora Blanco (43%, Contreras family vinata, Aconchi)
+    with TEQUILA.net + Mezcal Reviews reviews \u2014 same vinata as the
+    featured example, editorial note explains the fit.
+  - Kilinga Bacanora Silvestre (40%, \u00c1lamos, Sonora) with a Mezcal
+    Reviews review \u2014 editorial note marks it fruitier/floral vs the
+    profile.
+  - La Venenosa Raicilla Costa (joven) \u2014 factual entry without review
+    or profile coverage, labeled "Tasting notes not yet documented" and
+    "Profile not yet covered"; coastal raicilla is a distinct editorial
+    tradition from the Sierra profile, so no character is borrowed.
+- **Profile-first hierarchy retained:** each profile keeps exactly one
+  featured example card; additional mapped bottles live behind a
+  keyboard-accessible `<details>` "See more bottles for this style (n)"
+  expansion.
+- **Profile-relative editorial notes:** each note stores its compared
+  profile id (`noteProfileId`) and its own review dependencies
+  (`noteSourceIds`), so profile edits trigger note reassessment; notes
+  are labeled editorial and prefer "vs this profile" over undefined
+  "typical" claims.
+- **Distinguishable layers:** reviewer impressions (attributed), producer
+  facts (identity fields) and the app's synthesis (labeled editorial)
+  are visually and semantically separate; review scores are never
+  converted into app rankings.
+- **Validator extended:** spirit/profileId/coverage/batch/note fields
+  validated; coverage labels forbid pairing "tasting-not-documented"
+  with an invented reviewSummary.
+
+### Checks run
+
+- `npm run validate` \u2014 schema + 36 node:test/jsdom suites (7 new
+  catalogue tests: search prioritization, variants, alphabetical list +
+  directory, coverage disclosure, layer distinguishability, featured/
+  expansion hierarchy, brand-producer-expression separation). All
+  passing.
+- Real-app boot smoke: catalogue renders 7 entries / 6 brands / 2
+  coverage labels; search "Bacanora Blanco" returns Cielo Rojo first;
+  bacanora profile shows "See more bottles (2)" with both extras.
+
+### Remaining issues / deferred
+
+- Native-device rendering still unverified in this environment.
+- Catalogue growth continues in later explicitly requested increments.

@@ -84,6 +84,11 @@ test/                       node:test suites (jsdom)
 - Basic search covers spirits, agave plants, places, producers, brands and
   bottles; accents and case are normalized and common aliases are supported
   (e.g. “espadin” finds espadín).
+- Catalogue (`#/catalogue`) lists every bottle with brand, producer and
+  expression as separate facts, exact-expression-first search, a brand
+  directory, and explicit "not yet documented" labels on entries without
+  review or profile coverage. Profiles keep one featured example; extra
+  bottles sit behind a "See more bottles" expansion.
 - Compare (`#/compare`) shows two or three editorial profiles side by side
   across eight sensory dimensions, with a biggest-differences view, flavor
   moods and “If you like this, try…” suggestions. Sensory levels are

@@ -1,6 +1,7 @@
 import { el, safeLink, clear } from "./dom-utils.js";
 import { STATE_NAMES } from "./map.js";
 import { flavorMoods, ifYouLikeThis } from "./compare.js";
+import { bottlesForProfile } from "./catalogue.js";
 
 const BODY_LABELS = { light: "Light body", medium: "Medium body", full: "Full body" };
 
@@ -46,7 +47,7 @@ function exampleBottleCard(bottle, sources) {
  * Profile view: title, place/style context, description, body, taste notes,
  * smoke (where relevant), finish, one example bottle card and source links.
  */
-export function renderProfile(container, { profile, bottle, sources, returnTo = null, allProfiles = [] }) {
+export function renderProfile(container, { profile, bottle, sources, returnTo = null, allProfiles = [], allBottles = [] }) {
   clear(container);
   const section = el("section", { class: "profile-view", "aria-labelledby": "profile-title" });
 
@@ -114,6 +115,30 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   section.appendChild(facts);
 
   if (bottle) section.appendChild(exampleBottleCard(bottle, sources));
+
+  // Optional expansion: other catalogue bottles mapped to this profile.
+  const { others } = bottlesForProfile(allBottles, profile);
+  if (others.length > 0) {
+    const details = el("details", { class: "more-bottles" });
+    const summary = el("summary", {}, `See more bottles for this style (${others.length})`);
+    details.appendChild(summary);
+    const moreList = el("ul", { class: "catalogue-list" });
+    for (const other of others) {
+      const item = el("li", { class: "more-bottle-item" });
+      item.appendChild(el("strong", {}, `${other.brand} — ${other.expression}`));
+      if (other.reviewSummary) item.appendChild(el("p", { class: "bottle-review" }, other.reviewSummary));
+      if (other.editorialNote) item.appendChild(el("p", { class: "editorial-note" }, other.editorialNote));
+      const src = el("p", {});
+      for (const sid of other.sourceIds || []) {
+        const source = sources.find((x) => x.id === sid);
+        if (source) src.appendChild(safeLink(source.url, source.title, { class: "source-link" }));
+      }
+      item.appendChild(src);
+      moreList.appendChild(item);
+    }
+    details.appendChild(moreList);
+    section.appendChild(details);
+  }
 
   const suggestions = ifYouLikeThis(profile, allProfiles);
   if (suggestions.length > 0) {

@@ -15,6 +15,9 @@ export function parseHash(hash) {
     if (segments.length === 2) return { name: "state", params: { stateId: segments[1] } };
     return { name: "notFound", params: {} };
   }
+  if (segments[0] === "catalogue" && segments.length === 1) {
+    return { name: "catalogue", params: {} };
+  }
   if (segments[0] === "compare") {
     if (segments.length === 1) return { name: "compare", params: { compareIds: "" } };
     if (segments.length === 2) return { name: "compare", params: { compareIds: segments[1] } };
@@ -37,6 +40,8 @@ export function buildHash(route) {
       return "#/explore";
     case "state":
       return `#/explore/${encodeURIComponent(route.params.stateId)}`;
+    case "catalogue":
+      return "#/catalogue";
     case "compare":
       return `#/compare${route.params.compareIds ? `/${route.params.compareIds.split(",").map(encodeURIComponent).join(",")}` : ""}`;
     case "profile":

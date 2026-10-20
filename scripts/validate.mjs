@@ -62,7 +62,13 @@ for (const p of profiles) {
     }
   }
   if (!p.finish || typeof p.finish !== "string") fail(`${label}: finish required`);
-  if (!bottleIds.has(p.exampleBottleId)) fail(`${label}: exampleBottleId ${p.exampleBottleId} not in bottles.json`);
+  if (p.exampleBottleId != null && !bottleIds.has(p.exampleBottleId)) fail(`${label}: exampleBottleId ${p.exampleBottleId} not in bottles.json`);
+  if (p.notableBottleIds !== undefined) {
+    if (!Array.isArray(p.notableBottleIds)) fail(`${label}: notableBottleIds must be an array when present`);
+    else for (const bid of p.notableBottleIds) {
+      if (!bottleIds.has(bid)) fail(`${label}: notableBottleId ${bid} not in bottles.json`);
+    }
+  }
   if (!Array.isArray(p.sourceIds) || p.sourceIds.length === 0) fail(`${label}: sourceIds required`);
   for (const sid of p.sourceIds) {
     if (!sourceIds.has(sid)) fail(`${label}: sourceId ${sid} not in sources.json`);
@@ -73,13 +79,15 @@ for (const p of profiles) {
   }
 }
 
-// Exactly one example bottle per profile.
+// Exactly one featured example per profile; several bottles may map to the
+// same profile, but only one of them is the featured example.
 const bottleUse = new Map();
 for (const p of profiles) {
+  if (p.exampleBottleId == null) continue;
   bottleUse.set(p.exampleBottleId, (bottleUse.get(p.exampleBottleId) ?? 0) + 1);
 }
 for (const [bid, count] of bottleUse) {
-  if (count > 1) fail(`bottle ${bid} is the example for ${count} profiles; exactly one example bottle per profile is required`);
+  if (count > 1) fail(`bottle ${bid} is the featured example for ${count} profiles; a bottle can only be featured by one profile`);
 }
 
 for (const b of bottles) {
@@ -92,7 +100,37 @@ for (const b of bottles) {
   }
   if (b.producer !== undefined && typeof b.producer !== "string") fail(`${label}: producer must be a string when present`);
   if (b.place !== undefined && typeof b.place !== "string") fail(`${label}: place must be a string when present`);
-  if (!b.reviewSummary || b.reviewSummary.length < 40) fail(`${label}: reviewSummary too short`);
+  if (b.spirit !== undefined && !VALID_SPIRITS.has(b.spirit)) fail(`${label}: spirit must be tequila, mezcal, bacanora or raicilla`);
+  if (b.profileId != null && !profileIds.has(b.profileId)) fail(`${label}: profileId ${b.profileId} not in profiles.json`);
+  if (b.profileId === undefined) fail(`${label}: profileId is required (null means no profile coverage yet)`);
+  if (b.batch !== undefined && typeof b.batch !== "string") fail(`${label}: batch must be a string when present`);
+  const VALID_COVERAGE = new Set(["tasting-not-documented", "profile-not-covered"]);
+  if (b.coverage !== undefined) {
+    if (!Array.isArray(b.coverage)) fail(`${label}: coverage must be an array when present`);
+    else for (const c of b.coverage) {
+      if (!VALID_COVERAGE.has(c)) fail(`${label}: unknown coverage label ${c}`);
+    }
+  }
+  if (b.coverage?.includes("tasting-not-documented") && b.reviewSummary) {
+    fail(`${label}: marked tasting-not-documented but has a reviewSummary`);
+  }
+  if (!b.reviewSummary && !(b.coverage || []).includes("tasting-not-documented")) {
+    fail(`${label}: reviewSummary required unless the bottle is labeled tasting-not-documented`);
+  }
+  if (b.editorialNote !== undefined && typeof b.editorialNote !== "string") fail(`${label}: editorialNote must be a string when present`);
+  // Profile-relative notes must store their compared profile and review deps.
+  if (b.noteProfileId != null && !profileIds.has(b.noteProfileId)) fail(`${label}: noteProfileId ${b.noteProfileId} not in profiles.json`);
+  if (b.editorialNote && b.noteProfileId == null) fail(`${label}: editorialNote requires noteProfileId (the profile it is relative to)`);
+  if (b.noteSourceIds !== undefined) {
+    if (!Array.isArray(b.noteSourceIds)) fail(`${label}: noteSourceIds must be an array when present`);
+    else for (const sid of b.noteSourceIds) {
+      if (!sourceIds.has(sid)) fail(`${label}: noteSourceId ${sid} not in sources.json`);
+    }
+  }
+  if (b.coverageNote !== undefined && typeof b.coverageNote !== "string") fail(`${label}: coverageNote must be a string when present`);
+  if (b.reviewSummary && b.reviewSummary.length < 40 && !(b.coverage || []).includes("tasting-not-documented")) {
+    fail(`${label}: reviewSummary too short`);
+  }
   if (!Array.isArray(b.sourceIds) || b.sourceIds.length === 0) fail(`${label}: sourceIds required`);
   for (const sid of b.sourceIds) {
     if (!sourceIds.has(sid)) fail(`${label}: sourceId ${sid} not in sources.json`);

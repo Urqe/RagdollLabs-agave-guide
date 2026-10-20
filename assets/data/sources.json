@@ -107,6 +107,30 @@
       "title": "Wikipedia — Raicilla (Denomination of Origin, process and types)",
       "url": "https://en.wikipedia.org/wiki/Raicilla",
       "kind": "style"
+    },
+    {
+      "id": "mezcalreviews-cielo-rojo",
+      "title": "Mezcal Reviews — Cielo Rojo Bacanora Blanco",
+      "url": "https://www.mezcalreviews.com/mezcal/cielo-rojo-bacanora-blanco/",
+      "kind": "review"
+    },
+    {
+      "id": "tequilanet-cielo-rojo",
+      "title": "TEQUILA.net — Review: Cielo Rojo Bacanora Blanco",
+      "url": "https://www.tequila.net/other-reviews/spirits/cielo-rojo-bacanora-blanco.html",
+      "kind": "review"
+    },
+    {
+      "id": "mezcalreviews-kilinga",
+      "title": "Mezcal Reviews — Kilinga Bacanora Silvestre",
+      "url": "https://www.mezcalreviews.com/mezcal/kilinga-bacanora-silvestre/",
+      "kind": "review"
+    },
+    {
+      "id": "puntagave-cielo-rojo",
+      "title": "Puntagave — Cielo Rojo Bacanora (producer)",
+      "url": "https://www.puntagave.com/bacanora",
+      "kind": "producer"
     }
   ]
 }

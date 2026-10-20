@@ -12,7 +12,9 @@
         "liquor-com-fortaleza-blanco-review"
       ],
       "producer": "Tequila Fortaleza (Fortaleza distillery, Tequila, Jalisco)",
-      "place": "Tequila, Jalisco"
+      "place": "Tequila, Jalisco",
+      "spirit": "tequila",
+      "profileId": "tequila-blanco-valley-jalisco"
     },
     {
       "id": "lost-explorer-espadin",
@@ -26,7 +28,9 @@
         "drinkhacker-lost-explorer-review"
       ],
       "producer": "The Lost Explorer (produced at its Oaxaca palenque)",
-      "place": "Valles Centrales, Oaxaca"
+      "place": "Valles Centrales, Oaxaca",
+      "spirit": "mezcal",
+      "profileId": "mezcal-espadin-valles-centrales"
     },
     {
       "id": "rancho-tepua-bacanora",
@@ -39,7 +43,9 @@
       "sourceIds": [
         "mezcalistas-tepua-tasting",
         "mezcalreviews-tepua-blanco"
-      ]
+      ],
+      "spirit": "bacanora",
+      "profileId": "bacanora-pacifica-sierra-sonora"
     },
     {
       "id": "la-venenosa-tabernas",
@@ -52,7 +58,70 @@
       "sourceIds": [
         "mezcalreviews-lavenenosa-tabernas",
         "casaendemica-brands"
+      ],
+      "spirit": "raicilla",
+      "profileId": "raicilla-maximiliana-sierra-jalisco"
+    },
+    {
+      "id": "cielo-rojo-bacanora-blanco",
+      "brand": "Cielo Rojo",
+      "producer": "Roberto Contreras Mayoral (Contreras family vinata, Rancho Tepúa, Aconchi, Sonora)",
+      "expression": "Bacanora Blanco",
+      "abv": 43,
+      "spirit": "bacanora",
+      "place": "Aconchi, Sonora",
+      "batch": "Small batches; first premium bacanora legally imported to the US",
+      "profileId": "bacanora-pacifica-sierra-sonora",
+      "reviewSummary": "TEQUILA.net describes grassy, sweet agave with a hint of smoke and citrus, a medium-thin body, with smoke coming forward and grassy, earthy notes overtaking the initial sweetness; Mezcal Reviews calls it a pleasant and vibrant bacanora.",
+      "editorialNote": "From the same Contreras family vinata as this profile's example bottle — expect a similarly mineral, pit-roast character, with the Tequila.net review noting smoke that sits forward of the typical profile.",
+      "noteProfileId": "bacanora-pacifica-sierra-sonora",
+      "noteSourceIds": [
+        "tequilanet-cielo-rojo",
+        "mezcalreviews-cielo-rojo"
+      ],
+      "sourceIds": [
+        "mezcalreviews-cielo-rojo",
+        "tequilanet-cielo-rojo",
+        "puntagave-cielo-rojo"
       ]
+    },
+    {
+      "id": "kilinga-bacanora-silvestre",
+      "brand": "Kilinga",
+      "producer": "Rodrigo Bojórquez Bours (family vinata, Álamos, Sonora)",
+      "expression": "Bacanora Silvestre",
+      "abv": 40,
+      "spirit": "bacanora",
+      "place": "Álamos, Sonora",
+      "profileId": "bacanora-pacifica-sierra-sonora",
+      "reviewSummary": "Mezcal Reviews describes notes of wildflowers, citrus and the tartness of green apple, with a gentle violet finish — an aromatic, moderately complex bacanora.",
+      "editorialNote": "A fruitier, more floral read on bacanora than this profile describes — the green-apple tartness and violet finish sit well outside the mineral, savory center of the Rancho Tepúa example.",
+      "noteProfileId": "bacanora-pacifica-sierra-sonora",
+      "noteSourceIds": [
+        "mezcalreviews-kilinga"
+      ],
+      "sourceIds": [
+        "mezcalreviews-kilinga"
+      ]
+    },
+    {
+      "id": "la-venenosa-costa",
+      "brand": "La Venenosa",
+      "producer": "Jorge Armando Ramos (Casa Endémica bottling), coastal Jalisco",
+      "expression": "Raicilla Costa (joven)",
+      "abv": null,
+      "spirit": "raicilla",
+      "place": "Coastal Jalisco (Cabo Corrientes region)",
+      "profileId": null,
+      "coverage": [
+        "tasting-not-documented",
+        "profile-not-covered"
+      ],
+      "reviewSummary": null,
+      "sourceIds": [
+        "casaendemica-brands"
+      ],
+      "coverageNote": "Coastal raicilla is a distinct editorial tradition from the Sierra profile in this app: coastal producers cook agave (angustifolia, rhodacantha) in underground pits rather than above-ground adobe ovens, so it is not covered by the Sierra profile. Listed here as a factual catalogue entry."
     }
   ]
 }

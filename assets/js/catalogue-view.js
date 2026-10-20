@@ -1,0 +1,185 @@
+import { el, clear, safeLink } from "./dom-utils.js";
+import { navigateTo } from "./router.js";
+import { searchBottles, brandDirectory } from "./catalogue.js";
+
+const SPIRIT_LABELS = {
+  tequila: "Tequila",
+  mezcal: "Mezcal",
+  bacanora: "Bacanora",
+  raicilla: "Raicilla",
+};
+
+const COVERAGE_LABELS = {
+  "tasting-not-documented": "Tasting notes not yet documented",
+  "profile-not-covered": "Profile not yet covered",
+};
+
+function sourceLinks(sources, sourceIds) {
+  const list = el("ul", { class: "source-list" });
+  for (const id of sourceIds || []) {
+    const source = sources.find((s) => s.id === id);
+    if (!source) continue;
+    const item = el("li");
+    item.appendChild(safeLink(source.url, source.title, { class: "source-link" }));
+    item.appendChild(el("span", { class: "source-kind" }, ` \u2014 ${source.kind} source`));
+    list.appendChild(item);
+  }
+  return list;
+}
+
+/**
+ * Bottle entry: identity + facts + review summary with attribution +
+ * profile-relative editorial note + explicit coverage disclosures.
+ * Reviewer impressions, producer facts and the app's synthesis stay
+ * visually and semantically distinguishable.
+ */
+export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = true } = {}) {
+  const article = el("article", { class: "catalogue-entry", "aria-labelledby": `bottle-${bottle.id}` });
+  article.id = `bottle-${bottle.id}`;
+
+  const name = el("h3", { id: `bottle-${bottle.id}`, class: "catalogue-entry-title" },
+    `${bottle.brand} \u2014 ${bottle.expression}`);
+  article.appendChild(name);
+
+  const facts = el("ul", { class: "catalogue-facts" });
+  facts.appendChild(el("li", {}, `Spirit: ${SPIRIT_LABELS[bottle.spirit] || bottle.spirit || "not documented"}`));
+  if (bottle.abv != null) facts.appendChild(el("li", {}, `ABV: ${bottle.abv}% (label fact)`));
+  if (bottle.producer) facts.appendChild(el("li", {}, `Producer: ${bottle.producer}`));
+  if (bottle.place) facts.appendChild(el("li", {}, `Place: ${bottle.place}`));
+  if (bottle.batch) facts.appendChild(el("li", {}, `Batch/version: ${bottle.batch}`));
+  article.appendChild(facts);
+
+  // Coverage disclosures first: factual entry without borrowed character.
+  for (const label of bottle.coverage || []) {
+    article.appendChild(el("p", { class: "coverage-label" }, COVERAGE_LABELS[label] || label));
+  }
+
+  // Reviewer impressions (attributed).
+  if (bottle.reviewSummary) {
+    article.appendChild(el("p", { class: "bottle-review" }, bottle.reviewSummary));
+  }
+
+  // The app's synthesis, explicitly profile-relative and sourced.
+  if (bottle.editorialNote) {
+    const note = el("p", { class: "editorial-note" });
+    const profile = profiles.find((p) => p.id === bottle.noteProfileId);
+    note.appendChild(document.createTextNode(
+      `How it fits the ${profile ? `\u201c${profile.title}\u201d` : "reference"} profile (editorial): ${bottle.editorialNote}`
+    ));
+    article.appendChild(note);
+    if (bottle.noteSourceIds && bottle.noteSourceIds.length > 0) {
+      article.appendChild(el("p", { class: "bottle-links-label" }, "Note sources:"));
+      article.appendChild(sourceLinks(sources, bottle.noteSourceIds));
+    }
+  }
+
+  if (bottle.coverageNote) {
+    article.appendChild(el("p", { class: "editorial-note" }, bottle.coverageNote));
+  }
+
+  article.appendChild(el("p", { class: "bottle-links-label" }, "Sources:"));
+  article.appendChild(sourceLinks(sources, bottle.sourceIds));
+
+  if (linkToProfile && bottle.profileId) {
+    const profile = profiles.find((p) => p.id === bottle.profileId);
+    if (profile) {
+      article.appendChild(el("a", {
+        href: `#/profile/${encodeURIComponent(profile.id)}`,
+        class: "catalogue-profile-link",
+      }, `See the ${SPIRIT_LABELS[profile.spirit] || profile.spirit} style profile \u2192`));
+    }
+  }
+
+  return article;
+}
+
+/**
+ * Catalogue view: search over bottles/brands/producers, an alphabetical
+ * bottle list, and a brand directory. Search results and the list link to
+ * profiles with the catalogue context preserved in the route.
+ */
+export function renderCatalogue(container, { bottles, profiles, sources, returnTo = "catalogue" }) {
+  clear(container);
+  const section = el("section", { class: "catalogue-view", "aria-labelledby": "catalogue-heading" });
+  section.appendChild(el("h2", { id: "catalogue-heading" }, "Bottle catalogue"));
+  section.appendChild(el("p", { class: "view-intro" },
+    "Every bottle entry keeps the brand, the actual producer and the exact expression as separate facts. Reviewer impressions are attributed to their source; the app's own profile-relative notes are labeled editorial; factual entries without review or profile coverage say so instead of borrowing character."));
+
+  // Search
+  const searchInput = el("input", {
+    type: "search",
+    class: "search-input",
+    id: "catalogue-search",
+    placeholder: "Search: expression, brand, producer, place\u2026",
+    "aria-label": "Search the catalogue",
+  });
+  const searchResults = el("div", { class: "search-results", "aria-live": "polite" });
+  const form = el("form", { class: "search-form", role: "search" });
+  form.addEventListener("submit", (event) => event.preventDefault());
+  form.appendChild(searchInput);
+  const searchHolder = el("div", { class: "search-holder" });
+  searchHolder.appendChild(form);
+  searchHolder.appendChild(searchResults);
+  section.appendChild(searchHolder);
+
+  const renderSearch = () => {
+    clear(searchResults);
+    const query = searchInput.value;
+    if (!query || query.trim().length < 2) return;
+    const matches = searchBottles(bottles, query);
+    if (matches.length === 0) {
+      searchResults.appendChild(el("p", { class: "search-empty" },
+        `No bottles match \u201c${query}\u201d. Try a brand (Fortaleza), an expression (Blanco Tequila) or a place (Sonora).`));
+      return;
+    }
+    const list = el("ul", { class: "search-result-list" });
+    for (const bottle of matches) {
+      const item = el("li");
+      const link = el("a", { href: `#/${returnTo}`, class: "search-result-link" });
+      link.appendChild(el("span", { class: "profile-link-title" }, `${bottle.brand} \u2014 ${bottle.expression}`));
+      link.appendChild(el("span", { class: "search-result-reason" },
+        `${SPIRIT_LABELS[bottle.spirit] || bottle.spirit}${bottle.place ? ` \u00b7 ${bottle.place}` : ""}`));
+      item.appendChild(link);
+      // Context-preserving: clicking scrolls to the entry inside the catalogue.
+      link.addEventListener("click", () => {
+        const target = document.getElementById(`bottle-${bottle.id}`);
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      list.appendChild(item);
+    }
+    searchResults.appendChild(list);
+  };
+  searchInput.addEventListener("input", renderSearch);
+
+  // Alphabetical bottle list
+  const listHeading = el("h3", {}, "All bottles (alphabetical)");
+  section.appendChild(listHeading);
+  const alphaList = el("ul", { class: "catalogue-list" });
+  const sorted = [...bottles].sort((a, b) =>
+    a.brand.localeCompare(b.brand) || a.expression.localeCompare(b.expression)
+  );
+  for (const bottle of sorted) {
+    const item = el("li");
+    item.appendChild(bottleEntry(bottle, { sources, profiles }));
+    alphaList.appendChild(item);
+  }
+  section.appendChild(alphaList);
+
+  // Brand directory
+  const dirHeading = el("h3", {}, "Browse all brands");
+  section.appendChild(dirHeading);
+  const dir = el("ul", { class: "brand-directory" });
+  for (const { brand, bottles: brandBottles } of brandDirectory(bottles)) {
+    const item = el("li", { class: "brand-directory-item" });
+    item.appendChild(el("h4", {}, brand));
+    const bl = el("ul", { class: "brand-directory-bottles" });
+    for (const bottle of brandBottles) {
+      bl.appendChild(el("li", {}, bottle.expression));
+    }
+    item.appendChild(bl);
+    dir.appendChild(item);
+  }
+  section.appendChild(dir);
+
+  container.appendChild(section);
+}
