@@ -1,33 +1,48 @@
 # RagdollLabs Agave Guide — Release Plan
 
-Status: proposed; no implementation completed.  
-Scope decision pending: the final section proposes a broader Mexican spirits identity in response to the follow-up discussion. The agave-focused roadmap below is the baseline draft, not a finalized naming decision.  
-Prepared: 2026-10-20  
-Recommended repository: `RagdollLabs-agave-guide`  
-Product subtitle: **Mexican agave spirits & sotol**
+Status: planned; no implementation or deployment completed.  
+Updated: 2026-10-20  
+Confirmed repository name: `RagdollLabs-agave-guide`  
+Product subtitle: **Explore Mexico’s agave spirits**
 
-## 1. Product direction and naming
+## 1. Product direction and confirmed scope
 
-A static, source-backed discovery guide to tequila, mezcal, bacanora, raicilla, sotol, and selected other Mexican agave distilling traditions. Help people understand what they are drinking, navigate Mexico's regional diversity, compare styles, and find familiar bottles and related alternatives.
+A static, source-backed guide to Mexican agave-based distilled spirits, their regions, plants, makers, brands, and individual bottles. Carry forward Whiskey Compass's discovery, comparison, education, and source transparency patterns with a Mexico SVG map and a domain model suited to agave traditions.
 
-Recommended name: **RagdollLabs Agave Guide**. It follows Whiskey Compass's discovery identity. The subtitle explicitly includes sotol, which is made from Dasylirion rather than Agave [S1]. Use the same established RagdollLabs wordmark treatment as the companion apps.
+The confirmed product name is **RagdollLabs Agave Guide**. Earlier Compass naming and broader Mexican-spirits alternatives are superseded.
+
+### Scope rules
+
+- Include tequila, mezcal, bacanora, raicilla, and additional documented agave distillates in phased deployments.
+- Exclude sotol (Dasylirion), charanda, pox, cane-only rum/aguardiente, and other non-agave spirits from catalogue, profiles, and comparison. They may appear briefly in a glossary distinction, never as app coverage.
+- “Agave-based” does not mean every product must be labeled 100% agave. Include established agave-based traditions with other fermentable sugars when their composition is verified and clearly disclosed. Do not label them 100% agave or hide that distinction.
+- Include distilled products derived from agave sap where supported. Fermented pulque itself stays outside the spirit catalogue, with educational context where needed.
+- Keep geographical traditions, protected designations, plant varieties, production methods, classes, and brands distinct. More content must not mean inventing more spirit categories.
+- English UI first, preserving Spanish names and accents; reviewed Spanish localization comes later.
+- No live pricing, stock tracking, commerce, accounts, runtime scraping, or generated tasting claims. Research produces reviewed static data updates.
 
 ### Core user journeys
 
-1. “I know this bottle.” Search it, identify the exact expression, see its profile and how it differs, then explore related choices.
-2. “I'm curious about Sonora.” Select it on Mexico's map, discover bacanora profiles and producers, and see what the app does and does not cover.
-3. “I want something herbal with little smoke.” Use flavor discovery, then compare suitable profiles.
-4. “What is the difference between these spirits?” Compare plant, process, maturation, sensory character, and sourced definitions.
-5. “I'm new to this.” Start with a short beginner guide and follow examples into the explorer.
+1. Search a familiar brand or exact bottle, read its sourced character, and understand its fit with a profile.
+2. Select a Mexican state on the SVG map or equivalent list and discover covered traditions and makers.
+3. Choose flavor preferences and find supported profiles with understandable recommendation reasons.
+4. Compare profiles across agave traditions without conflating place, plant, process, or legal category.
+5. Learn how agave spirits differ using concise explanations and real bottle examples.
 
-### Scope boundaries
+### Coverage backlog and classification
 
-- Include tequila, mezcal, bacanora, raicilla, and sotol from the first public release, with modest evidence-backed coverage for each.
-- Include a neutral route for other documented agave distillates; do not automatically label them mezcal or treat lack of a verified designation as a quality judgment.
-- Sotol is an adjacent Mexican spirit, visibly distinguished from agave spirits throughout plant filters and educational content.
-- Pulque can appear in educational context as a fermented beverage; it is outside the initial distilled-spirit comparison model. Other Mexican spirits can be considered separately later.
-- No live prices, stock tracking, commerce, accounts, crowdsourced ratings, runtime scraping, or generative tasting claims in the initial roadmap.
-- English UI initially, retaining correct Spanish names and accents. Prepare text structure for a later reviewed Spanish edition.
+| Tradition / content group | Planned treatment | Evidence gate |
+| --- | --- | --- |
+| Tequila | Foundation seed, later class and regional expansion | Distinguish category from class; record exact expression facts and review evidence |
+| Mezcal | Foundation seed, later plant/process/region expansion | Distinguish regulated categories/classes from editorial flavor groupings |
+| Bacanora | First content expansion | Sonora coverage with verified maker, place, process and bottle notes |
+| Raicilla | First content expansion | Document coastal/sierra examples without assuming uniform flavor or plant identity |
+| Tuxca | Later regional expansion | Documented regional agave-distillate tradition associated with Colima and neighboring areas; verify each origin and label identity [S7] |
+| Comiteco | Later regional expansion | Agave-sap-based tradition; verify agave/cane composition and current designation scope rather than implying 100% agave [S8] |
+| Destilado de pulque | Later regional expansion | Distilled agave-derived product, distinct from fermented pulque; verify bottle composition and review evidence [S9] |
+| Other documented destilados de agave | Ongoing evidence-led backlog | Preserve exact label/tradition identity; no automatic relabeling as mezcal and no inference about quality from certification status |
+
+Espadín, tobalá and other plant names belong in the plant taxonomy; pechuga, ensamble, cristalino and maturation terms need contextual treatment rather than promotion into equivalent spirit families. Local aliases may overlap and require research.
 
 ## 2. Carry forward the architecture, redesign the domain model
 
@@ -67,19 +82,21 @@ Keep modules small enough to test their contracts. Add modules when their releas
 | File / entity | Required distinctions |
 | --- | --- |
 | `spirits.json` | Spirit identity, definitions, terminology, sources; legal category and class terms scoped to that spirit |
-| `plants.json` | Genus, species/taxon, regional common names, aliases, uncertainty, sources |
+| `plants.json` | Agave genus/species/taxon, regional common names, aliases, uncertainty, sources |
 | `places.json` | State, municipality/community where verified, parent IDs, coordinates with precision/provenance |
 | `designations.json` | Named designation, dated sources, geographic scope and amendments; separate from tasting coverage |
 | `profiles.json` | Explicit editorial profile ID, spirit, place references, plant/process context, sensory assessment, explanations and sources |
 | `processes.json` | Cooking, extraction, fermentation, distillation, resting, wood contact and other verified treatments |
 | `brands.json`, `producers.json` | Brand owner/identity versus actual maker, palenque/vinata/distillery, and documented relationships |
-| `bottles.json` | Expression ID, brand/producer, version or batch where material, verified label facts, profile mapping or uncovered status, notes and sources |
+| `bottles.json` | Expression ID, brand/producer, version or batch where material, verified label and fermentable-composition facts, profile mapping or uncovered status, review references and notes |
+| `reviews.json` | Expression-linked published review records, reviewer/date/version provenance, supported observations and source references |
 | `sources.json` | Specific URL, title, publisher/author, publication/review date where known, verification date, source type and supported content |
 | `glossary.json`, `guides.json`, `pairings.json` | Educational and optional enrichment content, source references, editorial labels |
 | `search-aliases.json`, `map-layers.json` | Curated aliases, stable feature IDs, map provenance, coverage and layer metadata |
 
 Key modeling rules:
 
+- Record agave contribution and any verified additional fermentable ingredients separately from plant taxonomy; do not equate app eligibility with a 100%-agave claim.
 - A profile is an authored description of a bounded style/context, not an automatically generated state × spirit × plant combination.
 - A brand can work with multiple producers; a producer can make several brands. Do not treat a brand's office as the production location.
 - Keep legal designation, actual production place, plant-growing origin, and cultural region separate.
@@ -106,116 +123,164 @@ The map is a primary discovery surface, with a fully equivalent list for accessi
 - Avoid forcing users to tap tiny shapes. Offer list selection and accessible zoom/reset controls if zoom is introduced; preserve normal page scrolling.
 - On mobile, use map → selected-place summary → results. On desktop, map and results can sit side by side. Keep the chosen place and result context on return from a profile.
 
-## 4. Release sequence
+## 4. Deployment sequence
 
-All tasks below are planned. Version labels are suggested milestones, not dates or estimates.
+Every numbered release is a deployed increment. Odd numbers add features or content; even numbers review code quality and UX, implement fixes, and deploy a maintenance update. Release 1 is a working GitHub Pages foundation, not an internal-only skeleton. Do not bundle several planned releases into one deployment or skip maintenance because the previous feature passed tests.
 
-### Release 0 — Foundation & Evidence (v0.1, internal)
+Release numbers are sequencing identifiers, not dates. Assign semantic version tags to actual shipped scope. Each release records its deployed commit, Pages URL, validation evidence, known limitations, and release notes. Unchecked tasks mean planned work.
 
-Goal: establish reliable domain contracts before building a large catalogue.
+| Release | Type | Deployed outcome |
+| --- | --- | --- |
+| 1 — Foundation on the Map | Feature/foundation | Inspectable Pages app, Mexico SVG, small tequila/mezcal seed, brands and reviewed bottles |
+| 2 — Foundation Review & Fixes | Maintenance | Code, routing, accessibility and mobile UX fixes from the first deployment |
+| 3 — Four Traditions | Feature/content | Bacanora, raicilla, richer profiles and basic multi-entity search |
+| 4 — Explorer Review & Fixes | Maintenance | Map, search, content presentation and domain-model corrections |
+| 5 — Find Your Flavor | Feature | Profile comparison, mood discovery and explained recommendations |
+| 6 — Comparison Review & Fixes | Maintenance | Ranking/explanation, state, focus and comparison UX fixes |
+| 7 — Brands, Bottles & Reviews | Feature/content | Wider searchable catalogue, alphabetical browsing and sourced profile-relative notes |
+| 8 — Catalogue Review & Fixes | Maintenance | Expression identity, review attribution, search and catalogue UX fixes |
+| 9 — Regional Agave Traditions | Feature/content | Evidence-backed tuxca, comiteco and destilado de pulque coverage |
+| 10 — Regional Review & Fixes | Maintenance | Classification, map precision, incomplete-data and expansion regressions fixed |
+| 11 — Plants, Process & Pairings | Feature | Deeper learning, label interpretation, serving guidance and food discovery |
+| 12 — Learning Review & Fixes | Maintenance | Educational content presentation, navigation and accessibility fixes |
+| 13 — Regional Depth & Spanish | Feature/content | Selected geographic depth and reviewed Spanish edition |
+| 14 — Localization Review & Fixes | Maintenance | Bilingual search, layout, source consistency and mobile UX fixes |
 
-- [ ] Create the repo, static application shell, native module boundaries, source registry, and validation command.
-- [ ] Inspect Whiskey Compass fixes before reusing code; independently verify navigation, comparison focus, route hydration, and optional-module failure handling.
-- [ ] Implement the cross-linked data model above with explicit unknown/uncovered values and schema validation.
-- [ ] Establish spirit-specific terminology and a dated evidence register for tequila, mezcal, bacanora, raicilla, and sotol.
-- [ ] Obtain and document the Mexico map geometry and asset reuse rights.
-- [ ] Define an editorial sensory rubric and seed a few contrasting records to test it without publishing invented numbers.
-- [ ] Establish safe DOM construction and strict HTTPS/no-credentials reference URLs.
-- [ ] Add a documented cache-version strategy covering code, data, CSS dependencies, and maps.
-- [ ] Add a repository CI workflow running the complete validation command on changes.
+Continue the same odd-feature/even-maintenance pattern for later work. If a feature is too large, split it into two feature deployments with a maintenance deployment between them. Urgent production fixes may ship immediately without cancelling the next planned maintenance review.
 
-Acceptance: schema checks reject broken references, invalid sensory values, incorrect sotol genus assignment, and misleading uncovered/profile mappings. A fresh checkout installs and validates successfully. Evidence and map provenance are recorded.
+### Release 1 — Foundation on the Map
 
-### Release 1 — Explore Mexico (v1.0, first public release)
+Goal: a small but complete public vertical slice that can be inspected on GitHub Pages.
 
-Goal: a useful small explorer covering all five headline spirits.
+- [ ] Create the repository shell, native ES modules, local JSON, shared DOM utilities, routing/state owner, and source registry.
+- [ ] Implement only the schema and modules needed for this release; preserve extension points for later releases.
+- [ ] Publish a responsive, local SVG of Mexico with the state list, selection summary, coverage legend, and honest uncovered states.
+- [ ] Add a small researched seed: target 2–4 tequila/mezcal profiles, at least two distinct brands, and 4–8 actual expressions across those traditions. These are planning bounds, not reasons to fabricate content.
+- [ ] Show brand and maker separately where documented, exact expression name, verified ABV/class/process facts, and a brief attributed summary of a real published tasting review for each seed bottle.
+- [ ] Include welcome, spirit/profile browsing, visible bottle details and sources. Future functionality must not appear as broken controls.
+- [ ] Use stable query/hash routes that reload on GitHub Pages; preserve valid links and handle invalid routes gracefully.
+- [ ] Build safe data loading, clear essential-data errors, separate optional enrichment failure, strict reference URL validation, and text-safe rendering.
+- [ ] Establish charcoal/cream, agave green/blue, terracotta/copper visual identity and a discreet ragdoll motif with readable typography and touch targets.
+- [ ] Set up `npm run validate`, schema/reference checks, focused DOM/security checks, and CI.
+- [ ] Configure GitHub Pages deployment from a validated artifact with repository-subpath-safe asset URLs. Record map licensing/provenance and cache versioning.
+- [ ] Verify the deployed site from a fresh browser session and publish release notes identifying its limited seed coverage.
 
-Planning target: roughly 12–18 carefully bounded profiles and 20–30 sourced expression examples. These are editorial workload targets, not quotas; defer weak entries rather than manufacture evidence.
+Acceptance: the Pages URL loads real content; a user can choose a covered state, open a profile and bottle, read a genuine attributed review summary, follow its sources, and reload a shared route. Inspect phone/tablet layout and keyboard behavior. No placeholder citations or invented taste claims may ship.
 
-Initial editorial coverage candidates:
+### Release 2 — Foundation Review & Fixes
 
-| Area | Candidate coverage to research and publish when supported |
-| --- | --- |
-| Tequila | Agave-forward blanco and wood-influenced examples; explain category versus class; Jalisco regional examples without deterministic highlands/valley flavor rules |
-| Mezcal | Contrasting documented plant/process profiles, beginning with strong evidence from Oaxaca and at least one other producing state |
-| Bacanora | Sonoran examples with maker and process context; equal visibility with the larger categories |
-| Raicilla | Documented coastal and sierra examples, with precise production locations and plant identification where available |
-| Sotol | Mexican examples from documented northern production contexts; identify Dasylirion clearly and avoid claiming one universal desert flavor |
+Apply the mandatory maintenance protocol below. Focus on module boundaries, schema clarity, route hydration and Back/Forward, relative asset paths, exclusive views, small map targets, text contrast, scrolling and focus. Implement identified fixes, rerun checks, and deploy the corrected foundation before Release 3.
 
-- [ ] Build welcome, beginner entry, spirit browser, Mexico map, state list, profile view, and gallery.
-- [ ] Implement search for existing spirit, plant, place, producer, brand, and expression names; support accents and curated aliases.
-- [ ] Display profile character, plant/process facts, notable bottles, serving suggestions, and directly accessible references.
-- [ ] Provide a concise explanation of plant, roasting/cooking, fermentation, distillation, and resting/wood effects with appropriately qualified wording.
-- [ ] Distinguish tequila category from class using authoritative terminology [S4]; keep mezcal's own categories/classes separate [S5].
-- [ ] Add stable query/hash routes that work on GitHub Pages without server rewrites, including direct reload and invalid-route recovery.
-- [ ] Make gallery/map/profile transitions exclusive; initial route hydration must not push duplicate history entries.
-- [ ] Establish a distinctive visual identity: charcoal and warm cream, agave green/blue, terracotta/copper accents, botanical details, and a discreet ragdoll motif. Maintain readability and avoid generic party imagery or decorative cultural stereotypes.
+### Release 3 — Four Traditions
 
-Acceptance: users can explore all five spirits by map or list, search seeded expressions, understand sotol's botanical distinction, follow citations, and share a profile link. iPhone/iPad Safari and desktop keyboard/mouse flows pass. The map represents coverage honestly.
+- [ ] Add bacanora and raicilla with a modest number of sourced profiles, makers and reviewed expressions.
+- [ ] Expand tequila/mezcal only where evidence supports useful contrasts; target roughly 10–16 total profiles and 20–30 expressions across the four traditions.
+- [ ] Add basic search over spirits, plants, places, producers, brands and bottles; normalize accents/case and support curated aliases.
+- [ ] Expand profile detail: plant/process context, character, brief beginner explanations, notable bottles and directly accessible references.
+- [ ] Distinguish spirit-specific legal category/class terms and editorial profile grouping.
+- [ ] Preserve selected map/list context when navigating to a profile and back.
 
-### Release 2 — Find Your Flavor (v1.1)
+Acceptance: all four traditions are discoverable by place and name; published bottle taste summaries have expression-matched review evidence. No region automatically assigns smoke or sweetness.
 
-Goal: explain meaningful differences and recommend useful next explorations.
+### Release 4 — Explorer Review & Fixes
 
-- [ ] Add two- or three-profile comparison, explicit remove/replace controls, retained selections, and an optional “biggest differences” view.
-- [ ] Use a small shared editorial scale: smoke, herbal/vegetal character, fruit/floral character, perceived sweetness, pepper/spice, body, oak, and finish length. Disclose subjectivity and avoid excessive decimal precision.
-- [ ] Show known bottling ABV separately from sensory impressions. Perceived sweetness is not measured sugar, and smoky flavor is not peat content.
-- [ ] Use a compact default comparison with expandable detail; show plant/process/class alongside sensory differences.
-- [ ] Add mood entry points such as Herbal & fresh, Fruit & floral, Smoky & earthy, Rich & rounded, and Something different. Predicates must use supported profile data.
-- [ ] Provide “If you like this, try…” with similarity and contrast explanations based on actual compared attributes.
-- [ ] Allow comparison across spirit families while clearly exposing their differences.
-- [ ] Define handling of missing sensory dimensions; do not score unknowns as zero or rank profiles on incomparable evidence.
-- [ ] Keep unprofiled bottles searchable but outside score-based recommendations.
-- [ ] Add deterministic explanation tests, keyboard Add/Remove focus preservation, and workspace-aware search shortcuts.
+Apply the maintenance protocol. Focus on overlapping state coverage, map/list consistency, aliases, duplicate results, producer versus brand identities, source visibility, optional-data failures and small-screen profile readability. Deploy fixes before comparison work.
 
-Acceptance: comparison and recommendations do not infer smoke from a Mexican region or the word mezcal. No mandatory destination is hardcoded into ranking tests. Removal, full comparisons, empty results, Back/Forward, and status announcements remain usable.
+### Release 5 — Find Your Flavor
 
-### Release 3 — Bottle Discovery & Context (v1.2)
+- [ ] Add two- or three-profile comparison with explicit remove/replace controls, retained selections and an optional biggest-differences view.
+- [ ] Use disclosed editorial sensory dimensions: smoke, herbal/vegetal, fruit/floral, perceived sweetness, pepper/spice, body, oak and finish. Avoid excessive precision.
+- [ ] Keep ABV as a factual property; perceived sweetness is not measured sugar and smoke is not peat content.
+- [ ] Add flavor moods and “If you like this, try…” explanations derived from supported profile attributes.
+- [ ] Allow cross-tradition comparison, displaying plant/process differences clearly.
+- [ ] Handle missing sensory data explicitly; no unknown-as-zero scores or recommendations based on incompatible evidence.
+- [ ] Test explanation invariants with deterministic fixtures rather than requiring an accidental current ranking.
+- [ ] Preserve focus after Add/Remove and target only visible search controls with shortcuts.
 
-Goal: implement the wider catalogue planned for Whiskey Compass with expression-level accuracy from the start.
+Acceptance: comparison is explicitly between editorial profiles; choosing a bottle does not turn profile scores into bottle measurements. Users can complete the workflow by touch and keyboard without losing focus or selections.
 
-- [ ] Expand to a curated catalogue of roughly 60–100 expressions if evidence supports that workload, balancing all five headline spirits rather than filling it mostly with tequila brands.
-- [ ] Preserve existing examples as curated selections backed by canonical expression records.
-- [ ] Broaden search to the full catalogue, aliases, common spelling variants, and documented producer names; favor exact expression matches.
-- [ ] Add “See more bottles” below notable examples, opening a contextual alphabetical expression list.
-- [ ] Add “Browse all brands”, with alphabetical brands and their expressions. Brand identity must remain separate from maker and bottling identity.
-- [ ] Keep a matched expression identifiable when navigating to its profile.
-- [ ] Support sourced but uncovered expressions with “Profile not yet covered”, without borrowed scores or forced classification.
-- [ ] Add optional short expression-to-profile notes, e.g. “Less smoky than this profile suggests; more herbal.” This is illustrative wording, not a claim about a named bottle.
-- [ ] Tie every comparison note to its reference profile and supporting reviews; omit weak or uninformative notes.
-- [ ] Show notes discreetly beneath expressions, with accessible supporting references and editorial labeling.
-- [ ] Record bottling/batch differences where they materially change ABV, plant, producer, or tasting character.
+### Release 6 — Comparison Review & Fixes
 
-Acceptance: catalogue records are unique, references are valid, all expansion controls work by touch/keyboard, and brand searches never imply one universal flavor. Profile changes trigger review of dependent comparative notes. No aggregate review score is converted into a flavor measurement.
+Apply the maintenance protocol. Audit comparison state, deduplication, slot promotion, missing data, mood predicates, explanation truthfulness, focus, live announcements, and persistent navigation. Fix and deploy before catalogue expansion.
 
-### Release 4 — Plants, Process & Traditions (v1.3)
+### Release 7 — Brands, Bottles & Reviews
 
-Goal: deepen education once discovery is reliable.
+- [ ] Expand the canonical catalogue incrementally; a tentative 60–100 expressions is an editorial planning range, not a completion quota.
+- [ ] Retain brands, actual producers and exact expressions as separate linked entities, supporting multiple makers and material batch/version differences.
+- [ ] Add full catalogue search, exact-expression prioritization, curated spelling variants and context-preserving result navigation.
+- [ ] Add “See more bottles” beneath curated notable bottles for a contextual alphabetical list, and “Browse all brands” for the wider directory.
+- [ ] Show expression facts and review-based tasting notes with direct attribution and accessible references.
+- [ ] Add an optional short, sourced editorial note explaining how an expression fits or differs from its reference profile; prefer “less smoky than this profile” to an undefined “less smoky than typical”.
+- [ ] Store the compared profile ID and review dependencies so profile edits trigger note reassessment.
+- [ ] Allow factual catalogue entries without adequate review/profile coverage, visibly labeled “Tasting notes not yet documented” and/or “Profile not yet covered”. Do not invent character or borrow profile scores.
+- [ ] Make disclosures semantic and keyboard accessible; ensure list expansion is usable on iPhone/iPad.
 
-- [ ] Add plant pages connecting scientific names, locally used names, documented uses, and profiles; acknowledge unresolved taxonomy.
-- [ ] Expand illustrated process explanations: cooking/roasting, extraction, fermentation vessels, fibers, distillation apparatus, and resting/wood maturation.
-- [ ] Explain label terms in context: category/class, ensamble, pechuga, cristalino, producer identifiers, strength and batch details. Verify which terms are regulated, customary, or marketing language.
-- [ ] Separate wood maturation, glass resting, and plant growth timelines. Avoid universal age-to-flavor ladders or suggesting older is inherently better.
-- [ ] Add contextual histories and maker attribution with specific sources; identify disputed origin stories as disputed.
-- [ ] Add optional Mexican food pairings and curated food aliases, using intensity and flavor reasoning rather than hard rules.
-- [ ] Add concise serving guidance and optional cocktail suitability without overwhelming the spirit profiles.
-- [ ] If sustainability or additive claims are included, attach expression/producer-specific evidence and verification dates. Wild harvest, small batch, a category name, or an attractive label must not become an automatic ethical or quality endorsement.
+Acceptance: reviewers' impressions, producer facts and the app's synthesis remain distinguishable. All published sensory claims are supported for the actual expression/version. Review scores are never converted into smoke, sweetness or quality rankings for the app.
 
-Acceptance: learning content links back to concrete profiles, sources appear in the relevant panels, and the app does not imply that geography, species, certification, or age guarantees a taste or quality outcome.
+### Release 8 — Catalogue Review & Fixes
 
-### Release 5 — Regional Depth & Spanish Edition (v1.4+)
+Apply the maintenance protocol. Audit duplicate/ambiguous bottle names, batch matching, maker attribution, source integrity, evidence gaps, mobile list density, alphabetical ordering and focus after expansion. Deploy corrections before adding traditions.
 
-Goal: expand where the catalogue exposes useful gaps.
+### Release 9 — Regional Agave Traditions
 
-- [ ] Maintain a backlog of unmatched expressions and missing traditions with evidence, intended user benefit, and proposed profile boundaries.
-- [ ] Prioritize meaningful process/plant/flavor differences over filling states on the map.
-- [ ] Research additional mezcal regions, other documented agave distillates such as regional traditions described as tuxca, and deeper bacanora, raicilla, and sotol coverage. Preserve actual label identities and verify terminology before publication.
-- [ ] Add municipality/community detail or producer maps only when coordinates and evidence justify it.
-- [ ] Consider a separate designation layer only after verifying current legal scope and amendments and matching them to geographic data.
-- [ ] Add a reviewed Spanish UI and educational copy with bilingual search aliases; preserve local terminology rather than mechanically translating it.
-- [ ] Consider a small local favorites list only if it improves repeat use; keep it private to the device and optional.
+- [ ] Research and add a small sourced set of tuxca, comiteco and destilado de pulque profiles and expressions [S7–S9]. If one lacks adequate evidence, explicitly defer it while shipping the supported subset.
+- [ ] Preserve actual label/tradition identities; do not imply every regional name has the same legal status as tequila or mezcal.
+- [ ] Clearly disclose verified non-agave fermentable ingredients in agave-based traditions, particularly comiteco; keep a 100%-agave attribute distinct from eligibility for this app.
+- [ ] Explain cooked-heart versus sap-derived production without inferring universal taste from either process.
+- [ ] Add documented regional aliases and verified map locations. Record approximate coordinates honestly.
+- [ ] Maintain a backlog of unmatched agave expressions and missing profiles; prioritize substantive differences rather than filled map areas.
+- [ ] Continue reviewing exact products even when a broad tradition is already covered.
 
-Acceptance: each added profile resolves a documented coverage need. Designation layers disclose verification dates and do not imply certification of every producer inside a boundary. English and Spanish navigation, references, and search work consistently.
+Acceptance: expanded traditions pass the same data, review, map and UX gates as existing content. Fermented pulque and non-agave spirits cannot enter the spirit catalogue through aliases or ambiguous names.
+
+### Release 10 — Regional Review & Fixes
+
+Apply the maintenance protocol. Focus on plant/common-name ambiguity, mixed fermentables, protected versus cultural names, source dates, map precision, uncovered expressions and recommendation regressions. Deploy evidence and UX corrections.
+
+### Release 11 — Plants, Process & Pairings
+
+- [ ] Add plant pages with regional common names, scientific identity where established, uncertainty, and linked profiles/bottles.
+- [ ] Expand cooking, fermentation, distillation, glass resting, wood maturation and filtration explanations with sourced illustrations or diagrams.
+- [ ] Explain pechuga, ensamble, cristalino, category/class, producer identifiers and batch labels in their proper contexts.
+- [ ] Separate plant growth from spirit maturation; avoid universal age-to-flavor ladders or “older is better” claims.
+- [ ] Add concise serving guidance, optional cocktail suitability, food pairings and curated food aliases.
+- [ ] Attribute histories and maker knowledge. Sustainability/additive claims require specific evidence and dates, not assumptions from wild harvest or artisanal branding.
+
+Acceptance: guides link to actual examples and show references where claims appear. Food suggestions remain optional editorial guidance; educational descriptions do not guarantee flavor from geography, species or age.
+
+### Release 12 — Learning Review & Fixes
+
+Apply the maintenance protocol. Review cognitive load, jargon, panel length, source discoverability, semantic headings, mobile reading, keyboard navigation and guide-to-profile routing. Correct evidence inconsistencies and deploy refinements.
+
+### Release 13 — Regional Depth & Spanish
+
+- [ ] Expand selected agave regions based on the documented coverage backlog and available expression reviews.
+- [ ] Add municipality/community or producer detail only where location evidence supports it.
+- [ ] Consider a separate designation layer only after validating operative declarations, amendments and matching geographic geometry.
+- [ ] Publish reviewed Spanish UI and learning copy with bilingual search aliases and appropriate alphabetical behavior.
+- [ ] Keep locale separate from stable entity IDs and routes; define translation fallback and disclose untranslated content.
+
+Acceptance: all language variants preserve source meaning and expression identity. Legal-area layers carry verification dates and never imply that every producer inside a polygon is certified.
+
+### Release 14 — Localization Review & Fixes
+
+Apply the maintenance protocol. Audit Spanish terminology, translated layouts, search, sorting, missing translations, route stability, mobile readability and accessibility. Deploy fixes and establish the next feature/maintenance pair from the backlog.
+
+### Mandatory protocol for every maintenance release
+
+A maintenance release is implementation and deployment, not a findings-only report.
+
+1. Review the latest deployed commit and changes since the prior maintenance release; also inspect affected adjacent modules and real user journeys.
+2. Review code quality: responsibilities, duplicated logic, state ownership, data contracts, errors/timeouts, security, dependencies, performance and maintainability. Refactor only where there is a concrete benefit.
+3. Review UX/design on deployed Pages: iPhone/iPad Safari, desktop mouse/keyboard, navigation/history, focus, touch targets, typography/contrast, content density, loading/empty/error states and screen-reader behavior.
+4. Review data integrity and source presentation, including exact bottle/review matching and misleading editorial claims.
+5. Record prioritized findings with reproduction, severity and scope in a dated review document. Distinguish confirmed defects, improvements and unverified concerns.
+6. Implement confirmed bugs and justified code/UX improvements. No unrelated feature expansion or cosmetic rewrite without a demonstrated need.
+7. Add focused regression tests for changed behavior, run validation, and repeat the affected manual flows. Never mark native Safari or VoiceOver checks passed if only DOM tests ran.
+8. Deploy the maintenance fixes; verify the public Pages URL, cache refresh, deep links and corrected workflows. Record commit/tag, results and remaining limitations.
+9. Close resolved findings and explicitly defer non-blocking items with reasons. Resolve release blockers before the next feature release.
+
+If review finds no defect, document the evidence and assess concrete robustness/usability improvements. Never manufacture a bug or make meaningless edits merely to create a fix commit; record a verified maintenance deployment honestly. Routine feature releases must also pass quality gates—maintenance is additional scrutiny, not permission to ship known defects.
 
 ## 5. Editorial and sourcing policy
 
@@ -244,12 +309,29 @@ Acceptance: each added profile resolves a documented coverage need. Designation 
 
 These were consulted during planning on 2026-10-20. They are starting evidence, not a complete legal or botanical audit and not an exhaustive current designation list. Recheck their scope and any later amendments during implementation.
 
-- **[S1] Sotol / Dasylirion:** [PROFEPA botanical discussion](https://www.gob.mx/profepa/articulos/el-sotol-y-la-pata-de-elefante-especies-protegidas-por-la-ley?idiom=es), with [CONAFOR's Dasylirion leiophyllum management resource](https://www.gob.mx/conafor/documentos/mejores-practicas-de-manejo-y-ecuaciones-alometricas-de-biomasa-de-dasylirion-leiophyllum-en-el-estado-de-chihuahua). Botanical sources should guide taxonomy rather than older regulatory family names.
+- **[S1] Scope exclusion — Sotol / Dasylirion:** [PROFEPA botanical discussion](https://www.gob.mx/profepa/articulos/el-sotol-y-la-pata-de-elefante-especies-protegidas-por-la-ley?idiom=es), with [CONAFOR's Dasylirion leiophyllum management resource](https://www.gob.mx/conafor/documentos/mejores-practicas-de-manejo-y-ecuaciones-alometricas-de-biomasa-de-dasylirion-leiophyllum-en-el-estado-de-chihuahua). Botanical sources should guide taxonomy rather than older regulatory family names.
 - **[S2] Bacanora:** [Consejo Sonorense Regulador del Bacanora](https://www.sonora.gob.mx/gobierno/estructura-organizacional/item/consejo-sonorense-regulador-del-bacanora). The official summary describes protection across 35 Sonoran municipalities; obtain the operative declaration and scope before implementing legal polygons.
 - **[S3] Raicilla:** [IMPI designation announcement](https://www.gob.mx/impi/prensa/el-impi-protege-a-la-raicilla-como-denominacion-de-origen-207026?idiom=es-MX) and [official declaration](https://sidof.segob.gob.mx/notas/docFuente/5564454).
 - **[S4] Tequila:** [CRT overview](https://www.crt.org.mx/en/our-tequila/). It distinguishes the two categories and classes, but its English page contains inconsistent reposado aging statements; verify precise requirements against the operative NOM rather than copying the summary.
 - **[S5] Mezcal:** [NOM-070-SCFI-2016 official publication](https://sidof.segob.gob.mx/notas/docFuente/5472787) and [Secretaría de Economía standards record](https://platiica.economia.gob.mx/normalizacion/NOM-070-SCFI-2016/). Check subsequent modifications and effective dates before implementing exact rules.
 - **[S6] Geographic geometry:** [INEGI Marco Geoestadístico](https://www.inegi.org.mx/programas/mg/default.html) and [official geographic identifier catalogue](https://www.inegi.org.mx/servicios/catalogounico.html). Statistical geography is an input to a locator map, not itself a declaration of spirit-designation boundaries.
+
+
+### Required review provenance for bottles
+
+- Store review records with stable ID, exact expression ID, reviewed batch/version where available, reviewer, publication, direct URL, review date when known, date checked, and a concise original-language paraphrase of supported observations.
+- Do not manufacture missing authors, dates or batch information. Record unknowns explicitly and qualify whether an older or unspecified-batch review is applicable.
+- Require at least one actual expression-matched published tasting review for every published review-based tasting summary; prefer two independent accounts for comparative claims. A producer tasting note alone is not an independent review.
+- Distinguish producer notes, reviewer observations and editorial synthesis in data and UI. If evidence disagrees, attribute the difference or omit the conclusion.
+- Use reputable specialist reviews and relevant established spirits publications after checking their methods/disclosures; community comments can supplement, not automatically establish consensus.
+- Factual-only catalogue entries may remain searchable with an explicit evidence gap. They do not receive fabricated scores, tasting notes or unsupported recommendations.
+- Check rights before storing images or substantial excerpts. Prefer original short paraphrases with links; never reproduce full reviews or scrape sites at app runtime.
+
+Additional research references:
+
+- **[S7] Tuxca:** [SECTUR Colima regional document](https://sistemas.sectur.gob.mx/SECTUR/2024/DGIPT/20240409/Colima_CT_SECTUR.pdf), identifying tuxca as a local agave distillate. This supports research candidacy, not a complete definition or tasting profile.
+- **[S8] Comiteco:** [Official declaration for Comiteco de Comitán, Chiapas](https://sidof.segob.gob.mx/notas/docFuente/5769331), describing maguey comiteco and cane sugars. Verify current scope and exact product composition when implementing.
+- **[S9] Destilado de pulque:** [Agricultura's Hidalgo distillers event](https://www.gob.mx/agricultura/es/agenda/segundo-encuentro-de-destiladores-de-pulque-de-hidalgo?idiom=es). Establishes the tradition as a research candidate; bottle claims still require expression-specific documentation and reviews.
 
 ## 6. Shared release gates and operations
 
@@ -281,34 +363,16 @@ These were consulted during planning on 2026-10-20. They are starting evidence, 
 - Document rollback by release tag and keep deployment simple. Avoid a service worker until offline support is an explicit requirement with a tested update strategy.
 - Do not collect search histories or add analytics merely to discover gaps; the curated catalogue already supplies a coverage backlog.
 
-## 7. Definition of a successful first release
+## 7. Definition of completion and deployment handoff
 
-A visitor can find a familiar expression or select a Mexican state, understand the spirit's plant and production context, see what makes the covered profile distinctive, and open its supporting sources. Sotol is correctly presented, the map is useful on a phone, and unavailable evidence is visible rather than invented.
+Release 1 is complete only when its GitHub Pages URL is inspectable and the foundation acceptance criteria pass. Later releases add only their scheduled functionality/content, followed by the mandatory maintenance deployment. No implementation milestone is complete merely because code exists in a branch.
 
-The priority order is trustworthy scope and navigation, then comparison, then catalogue breadth, then educational and regional depth.
+For each release, record:
 
-## 8. Scope alternative — Mexican Spirits Guide
+- Release number/name, feature or maintenance type, and deployed version/tag/commit.
+- Public Pages URL and deployment verification time.
+- Completed scope, data/review coverage, validation results, and manual environments actually checked.
+- Remaining issues, explicitly deferred content, and rollback reference.
+- For maintenance: findings, implemented fixes, and evidence that the deployed behaviors improved.
 
-Recommendation following the scope discussion: adopt **RagdollLabs Mexican Spirits Guide** (`RagdollLabs-mexican-spirits-guide`) as the umbrella and retain the five-spirit launch above. Add selected non-agave traditions in a subsequent release rather than removing sotol or expanding the first release indiscriminately. This recommendation awaits the owner's scope decision.
-
-Good candidates:
-
-| Tradition | Documented base and regional connection | Editorial opportunity |
-| --- | --- | --- |
-| Charanda | Sugarcane juice or derivatives; Michoacán | Compare specific cane-based expressions with agave spirits using the same sensory dimensions |
-| Pox | Chiapas; recipes can involve maize, wheat and cane-derived sugars | Explain grain/cane composition and compare documented unflavored expressions; preserve producer variation |
-| Regional Mexican rum / aguardiente de caña | For example, fresh-cane-juice distillates in Oaxaca's Sierra Mazateca | Explore fermentation and vegetal/fruity character through sourced expression reviews |
-
-Sources checked during planning: [Agricultura on charanda](https://www.gob.mx/agricultura/articulos/charanda-tradicion-purepecha), [Agricultura on pox](https://www.gob.mx/agricultura/articulos/pox-la-bebida-que-alegra-el-corazon), and [Paranubes producer description](https://www.paranubes.com/about). These establish candidate identities and ingredients, not universal tasting profiles.
-
-If this alternative is adopted:
-
-- Rename the product and repo throughout before implementation; use a subtitle such as “Discover Mexico, one spirit at a time.”
-- Generalize the plant schema into raw-material records supporting multiple ingredients and cane juice versus molasses, while retaining detailed agave taxonomy.
-- Add material-family filters: agave, Dasylirion, sugarcane, grain/mixed materials. Keep spirit identity independent of those filters.
-- Retain shared sensory axes and cross-family comparison, but avoid treating raw material as a guaranteed flavor. Add specific aroma descriptors as needed rather than redesigning the entire scale for each family.
-- Scope a later “Beyond Agave” release with a small sourced sample of charanda, pox, and regional cane spirits, using the same map, catalogue, and source contracts.
-- Keep liqueurs and sweetened/flavored products separate if added later; their formulation changes the meaning of sweetness comparisons. Keep fermented drinks outside the initial distilled-spirit model.
-- Avoid duplicating every Mexican whisky, gin, or vodka merely because it is made in Mexico. Prioritize distinct regional traditions that improve the map and discovery experience.
-
-The broader identity is technically a small adjustment before implementation. Its principal cost is research and editorial maintenance, so release breadth should remain bounded.
+This file is the agreed plan for `RagdollLabs-agave-guide`; it does not create the repo, publish a site, or certify any listed bottle content. Implementers must source and verify the actual expressions before publication.
