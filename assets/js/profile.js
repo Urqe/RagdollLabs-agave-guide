@@ -65,24 +65,30 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
 
   section.appendChild(el("h2", { id: "profile-title" }, profile.title));
 
-  if (profile.placeCoords) {
-    const c = profile.placeCoords;
-    section.appendChild(el("p", { class: "profile-coords editorial-note" },
-      `Approximate location: ${c.lat.toFixed(2)}, ${c.lon.toFixed(2)} \u2014 precision: ${c.precision}. This is a place reference, not a legal boundary.`));
-  }
+  
 
   const place = el("p", { class: "profile-place" });
   place.appendChild(el("span", { class: "profile-spirit-tag" }, SPIRIT_LABELS[profile.spirit] || profile.spirit));
   place.appendChild(document.createTextNode(` · ${profile.stateName}, México`));
   section.appendChild(place);
 
+  if (profile.placeCoords) {
+    const c = profile.placeCoords;
+    section.appendChild(el("p", { class: "profile-coords editorial-note" },
+      `Approximate location: ${c.lat.toFixed(2)}, ${c.lon.toFixed(2)} \u2014 precision: ${c.precision}. This is a place reference, not a legal boundary.`));
+  }
+
   section.appendChild(el("p", { class: "profile-context" }, profile.context));
 
+  
+
+  section.appendChild(el("p", { class: "profile-description" }, profile.description));
+  if (profile.beginnerNote) {
+    section.appendChild(el("p", { class: "beginner-note" }, profile.beginnerNote));
+  }
   const guidanceNote = el("p", { class: "editorial-note" },
     "Editorial style guidance — a description of the style, not a review or rating of any bottle.");
   section.appendChild(guidanceNote);
-
-  section.appendChild(el("p", { class: "profile-description" }, profile.description));
 
   const craft = el("dl", { class: "profile-facts profile-craft" });
   if (profile.category) {
@@ -104,19 +110,9 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   }
   if (craft.childNodes.length > 0) section.appendChild(craft);
 
-  if (profile.beginnerNote) {
-    section.appendChild(el("p", { class: "beginner-note" }, profile.beginnerNote));
-  }
+  
 
-  const moods = flavorMoods(profile);
-  if (moods.length > 0) {
-    const moodLine = el("p", { class: "mood-line" });
-    moodLine.appendChild(el("strong", {}, t("profile.moods") + " "));
-    moodLine.appendChild(document.createTextNode(
-      moods.map((m) => (locale ? locale.mood(m) : m)).join(", ") + "."
-    ));
-    section.appendChild(moodLine);
-  }
+  
 
   const facts = el("dl", { class: "profile-facts" });
   facts.appendChild(el("dt", {}, "Body"));
@@ -134,6 +130,15 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   facts.appendChild(el("dt", {}, "Finish"));
   facts.appendChild(el("dd", { class: "profile-finish" }, profile.finish));
   section.appendChild(facts);
+  const moods = flavorMoods(profile);
+  if (moods.length > 0) {
+    const moodLine = el("p", { class: "mood-line" });
+    moodLine.appendChild(el("strong", {}, t("profile.moods") + " "));
+    moodLine.appendChild(document.createTextNode(
+      moods.map((m) => (locale ? locale.mood(m) : m)).join(", ") + "."
+    ));
+    section.appendChild(moodLine);
+  }
 
   if (bottle) section.appendChild(exampleBottleCard(bottle, sources, t));
 
@@ -170,14 +175,11 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     }
     section.appendChild(pairing);
   }
-  const learnLink = el("a", { href: "#/learn", class: "back-link" }, t("profile.learnLink"));
-  const learnLine = el("p", {});
-  learnLine.appendChild(learnLink);
-  section.appendChild(learnLine);
+  
 
   const suggestions = ifYouLikeThis(profile, allProfiles);
   if (suggestions.length > 0) {
-    const suggHeading = el("h3", { class: "sources-heading" }, t("profile.ifYouLike"));
+    const suggHeading = el("h3", { class: "suggestions-heading" }, t("profile.ifYouLike"));
     section.appendChild(suggHeading);
     const suggList = el("ul", { class: "suggestion-list" });
     for (const { profile: other, reason } of suggestions) {
@@ -189,6 +191,9 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     }
     section.appendChild(suggList);
   }
+
+  const learnLink = el("a", { href: "#/learn", class: "learn-callout-link" }, t("profile.learnLink"));
+  section.appendChild(learnLink);
 
   const srcHeading = el("h3", { class: "sources-heading" }, t("profile.sources"));
   section.appendChild(srcHeading);

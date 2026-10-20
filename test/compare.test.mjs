@@ -243,6 +243,7 @@ test("end-to-end: real app boots and compare selection updates the route and tab
     url: "https://example.test/RagdollLabs-agave-guide/#/compare",
     pretendToBeVisual: true,
   });
+  bootDom.window.localStorage.clear();
   const prevWindow = globalThis.window;
   const prevDocument = globalThis.document;
   globalThis.window = bootDom.window;

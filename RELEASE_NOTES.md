@@ -785,3 +785,26 @@ stability, mobile readability and accessibility.
 Per the plan's cadence, the next feature increment candidate from the
 backlog is D'Anta\u00f1o as a disclosed-composition catalogue entry
 (agave + cane), followed by its maintenance review.
+
+### UX refinement — profile page reading order (owner-approved review)
+
+Following a full-app UX walk, the profile page was reordered for
+learners; content unchanged, presentation only:
+
+- Place name ("Bacanora \u00b7 Sonora, M\u00e9xico") now precedes the raw
+  approximate-coordinates note (verification detail, no longer the
+  opening statement).
+- The beginner note ("New to bacanora?") moved up, directly after the
+  description \u2014 the most accessible sentence is now reachable before
+  the legal/category facts.
+- Flavor moods now follow the sensory facts they summarize, instead of
+  preceding them.
+- The two fact tables (what-it-is / how-it-tastes) now sit adjacent,
+  no longer split by the beginner note and moods.
+- The Learn link became a prominent styled callout after the "If you
+  like this, try\u2026" suggestions (previously a bare orphan paragraph);
+  the suggestions heading got its own semantic class.
+
+Also: the end-to-end boot test now clears its jsdom localStorage,
+fixing cross-file test interference (a locale preference persisted by
+another test file could flip the e2e run to Spanish).
