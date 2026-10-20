@@ -24,11 +24,11 @@ const VALID_STATES = new Set([
   "yuc", "zac",
 ]);
 
-const VALID_SPIRITS = new Set(["tequila", "mezcal", "bacanora", "raicilla", "tuxca", "comiteco", "destilado-de-pulque"]);
+const VALID_SPIRITS = new Set(["tequila", "mezcal", "bacanora", "raicilla", "tuxca", "comiteco", "destilado-de-pulque", "sotol"]);
 const VALID_BODIES = new Set(["light", "medium", "full"]);
 const VALID_KINDS = new Set(["style", "producer", "review"]);
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const FORBIDDEN_WORDS = ["sotol"];
+const FORBIDDEN_WORDS = [];
 
 if (!Array.isArray(profiles) || profiles.length === 0) fail("profiles.json must contain a non-empty profiles array");
 if (!Array.isArray(bottles) || bottles.length === 0) fail("bottles.json must contain a non-empty bottles array");
@@ -38,7 +38,7 @@ for (const p of profiles) {
   const label = `profile ${p.id ?? "(missing id)"}`;
   if (!p.id || !ID_PATTERN.test(p.id)) fail(`${label}: id must be kebab-case`);
   if (!p.title || typeof p.title !== "string") fail(`${label}: title required`);
-  if (!VALID_SPIRITS.has(p.spirit)) fail(`${label}: spirit must be tequila or mezcal`);
+  if (!VALID_SPIRITS.has(p.spirit)) fail(`${label}: spirit must be a known spirit id`);
   if (!VALID_STATES.has(p.stateId)) fail(`${label}: unknown stateId ${p.stateId}`);
   if (!p.stateName || typeof p.stateName !== "string") fail(`${label}: stateName required`);
   if (!p.context || p.context.length < 40) fail(`${label}: context too short`);
@@ -115,7 +115,7 @@ for (const b of bottles) {
   }
   if (b.producer !== undefined && typeof b.producer !== "string") fail(`${label}: producer must be a string when present`);
   if (b.place !== undefined && typeof b.place !== "string") fail(`${label}: place must be a string when present`);
-  if (b.spirit !== undefined && !VALID_SPIRITS.has(b.spirit)) fail(`${label}: spirit must be tequila, mezcal, bacanora or raicilla`);
+  if (b.spirit !== undefined && !VALID_SPIRITS.has(b.spirit)) fail(`${label}: spirit must be a known spirit id`);
   if (b.profileId != null && !profileIds.has(b.profileId)) fail(`${label}: profileId ${b.profileId} not in profiles.json`);
   if (b.profileId === undefined) fail(`${label}: profileId is required (null means no profile coverage yet)`);
   if (b.batch !== undefined && typeof b.batch !== "string") fail(`${label}: batch must be a string when present`);

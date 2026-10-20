@@ -12,7 +12,24 @@ export const SPIRIT_LABELS = {
   tuxca: "Tuxca",
   comiteco: "Comiteco",
   "destilado-de-pulque": "Destilado de pulque",
+  sotol: "Sotol",
 };
+
+/**
+ * Logical grouping order for profile lists: agave classics first, regional
+ * sap traditions next, northern Dasylirion last. Spirits not listed keep
+ * their encounter order after the known ones.
+ */
+export const SPIRIT_GROUP_ORDER = [
+  "tequila",
+  "mezcal",
+  "raicilla",
+  "bacanora",
+  "sotol",
+  "tuxca",
+  "comiteco",
+  "destilado-de-pulque",
+];
 
 /** Human label for a spirit id, falling back to the raw id. */
 export function spiritLabel(spirit) {

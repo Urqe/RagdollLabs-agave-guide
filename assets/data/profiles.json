@@ -879,6 +879,61 @@
         "mezcalreviews-montelobos-tobala",
         "mezcalreviews-macurichos-tobala"
       ]
+    },
+    {
+      "id": "sotol-chihuahua",
+      "title": "Sotol, Chihuahua desert style",
+      "spirit": "sotol",
+      "stateId": "chih",
+      "stateName": "Chihuahua",
+      "context": "Sotol is distilled from plants of the Dasylirion genus (desert spoon), native to the Chihuahuan desert — not agave, though the plants are relatives in the Asparagaceae family and share the roasted-piña production logic. Sotol has had a Denominación de Origen since 2002, covering only Chihuahua, Coahuila and Durango; it was illegal in Mexico before 1994, and clandestine vinatas kept the tradition alive. This guide includes it as an agave-adjacent tradition, honestly labeled: sotol is not an agave spirit, and saying so is part of its story. This profile describes the Chihuahua desert style.",
+      "description": "Sotol's signature is a bright, grassy, herbal, sometimes menthol- or eucalyptus-adjacent freshness — more vegetal than most agave spirits, with a smoky, earthy base from pit roasting. Terroir is unusually audible: the cited DO sources describe forested-region sotols tasting of menthol, mushrooms and pine, while arid-desert ones lean to leather, cacao and pepper. A single plant yields roughly one bottle after 8-12 years, so batches are small and vary genuinely. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Dasylirion (desert spoon; commonly wheeleri, cedrosanum or leiophyllum), wild-harvested; not an agave, though a close relative",
+      "process": "Piña pit-roasted in conical ovens (or steam-cooked by larger producers), wild-fermented, distilled in copper or clay; harvest can leave roots intact so the plant regrows",
+      "category": "Sotol — spirit with its own Denomination of Origin (Chihuahua, Coahuila, Durango, since 2002); explicitly not an agave spirit, included here as an agave-adjacent northern tradition",
+      "beginnerNote": "New to sotol? Expect bright wet-grass and herbal freshness over gentle smoke — closer to a green, wild cousin of mezcal than to tequila.",
+      "aliases": [
+        "sotol",
+        "desert spoon spirit",
+        "chihuahua sotol"
+      ],
+      "body": "light",
+      "tasteNotes": [
+        "fresh-cut grass",
+        "wet earth",
+        "mint / eucalyptus freshness",
+        "gentle smoke"
+      ],
+      "smoke": "A gentle, usually lighter smoke than mezcal from the pit roast; batch and producer dependent.",
+      "finish": "Medium, herbal and slightly tingly, with a mineral fade.",
+      "sensory": {
+        "smoke": "low",
+        "herbal": "high",
+        "fruit": "low",
+        "sweetness": "low",
+        "pepper": "medium",
+        "oak": "none",
+        "finishLength": "medium"
+      },
+      "exampleBottleId": "clande-sotol-yellow",
+      "placeCoords": {
+        "lat": 28.6,
+        "lon": -106.1,
+        "precision": "state (Chihuahua, batch varies); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat in a small glass; also good with mineral sparkling water (editorial suggestion).",
+        "foods": [
+          "asadero cheeses",
+          "flour-tortilla northern dishes",
+          "roasted vegetables"
+        ]
+      },
+      "sourceIds": [
+        "wikipedia-sotol",
+        "mezcalreviews-clande-yellow"
+      ],
+      "plantId": "dasylirion-desert-spoon"
     }
   ]
 }

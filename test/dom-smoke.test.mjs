@@ -142,7 +142,15 @@ test("explore view shows covered profiles, empty state and search", async () => 
   });
   assert.ok(container.querySelector(".state-results-title").textContent.includes("Jalisco"));
   const link = container.querySelector('.profile-link');
-  assert.equal(link.getAttribute("href"), "#/profile/tequila-blanco-valley-jalisco?from=jal");
+  assert.ok(link.getAttribute("href").endsWith("?from=jal"), "profile links keep their state context");
+
+  // Grouping: tequila profiles read as neighbors, raicilla together, etc.
+  const spirits = [...container.querySelectorAll(".profile-link-spirit")].map((s) => s.textContent);
+  const known = spirits.filter((s) => s !== undefined);
+  const groupRuns = known.filter((s, i) => i > 0 && s === known[i - 1]).length;
+  assert.ok(groupRuns >= 2, `multi-profile spirits are grouped (found ${groupRuns} adjacent same-spirit runs)`);
+  const groupLabels = [...container.querySelectorAll(".profile-group-label")].map((g) => g.textContent);
+  assert.ok(groupLabels.length >= 2, "spirit group labels render");
 
   // Search: by spirit (accent/case-insensitive), with a reason.
   const searchInput = container.querySelector(".search-input");
@@ -173,8 +181,13 @@ test("explore view shows covered profiles, empty state and search", async () => 
   assert.ok(container.querySelector(".state-results-title").textContent.includes("Sonora"));
   assert.ok(container.querySelector('a[href="#/profile/bacanora-pacifica-sierra-sonora?from=son"]'));
 
-  // An uncovered state still renders the neutral empty state.
+  // Chihuahua now carries the sotol profile (agave-adjacent tradition).
   api.setState("chih");
+  assert.ok(container.querySelector(".state-results-title").textContent.includes("Chihuahua"));
+  assert.ok(container.querySelector('a[href*="#/profile/sotol-chihuahua"]'));
+
+  // An uncovered state still renders the neutral empty state.
+  api.setState("yuc");
   assert.equal(container.querySelector(".empty-state").textContent, "No profiles added here yet");
 
   api.setState("oax");
@@ -207,6 +220,12 @@ test("profile view renders all sections and the example bottle card", () => {
   assert.ok(card.textContent.includes("40% ABV"));
   assert.ok(card.querySelector(".bottle-review").textContent.length > 0);
   assert.ok(card.querySelectorAll(".source-link").length >= 2);
+
+  // Bottle reference links are collapsed out of the reading flow.
+  const bottleSources = card.querySelector("details.source-details");
+  assert.ok(bottleSources, "bottle sources render inside a collapsible details element");
+  assert.ok(bottleSources.querySelector("summary").textContent.includes("Sources"));
+  assert.equal(bottleSources.querySelectorAll(".source-link").length, card.querySelectorAll(".bottle-card .source-link").length, "all bottle source links live inside the disclosure");
 
   // Profile sources rendered as https links.
   for (const link of container.querySelectorAll(".source-link")) {
