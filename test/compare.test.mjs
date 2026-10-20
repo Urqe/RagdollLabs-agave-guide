@@ -285,3 +285,71 @@ test("end-to-end: real app boots and compare selection updates the route and tab
     globalThis.fetch = prevFetch;
   }
 });
+
+test("compare picker: searchable, grouped by spirit, alphabetized within groups", () => {
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  const profiles = [
+    fixture({ id: "t-blanco", title: "Blanco tequila", spirit: "tequila" }),
+    fixture({ id: "t-anejo", title: "Añejo tequila", spirit: "tequila" }),
+    fixture({ id: "r-costa", title: "Costa raicilla", spirit: "raicilla" }),
+    fixture({ id: "r-sierra", title: "Sierra raicilla", spirit: "raicilla" }),
+    fixture({ id: "m-espadin", title: "Espadín mezcal", spirit: "mezcal" }),
+  ];
+  const render = () => renderCompare(container, {
+    profiles, locale: enLocale, compareIds: "", onSelectionChange: () => {},
+  });
+
+  render();
+  // All profiles render, grouped by spirit with visible labels.
+  assert.equal(container.querySelectorAll(".compare-pick-button").length, profiles.length);
+  const labels = [...container.querySelectorAll(".profile-group-label")].map((g) => g.textContent);
+  assert.deepEqual(labels, ["Tequila", "Mezcal", "Raicilla"], "spirit groups in logical order");
+  const buttons = [...container.querySelectorAll(".compare-pick-button")].map((b) => b.dataset.profileId);
+  assert.deepEqual(buttons, ["t-anejo", "t-blanco", "m-espadin", "r-costa", "r-sierra"],
+    "alphabetical within each group");
+
+  // Search narrows the list live.
+  const search = container.querySelector("#compare-search");
+  assert.ok(search, "search input renders");
+  search.value = "raicilla";
+  search.dispatchEvent(new window.Event("input", { bubbles: true }));
+  assert.equal(container.querySelectorAll(".compare-pick-button").length, 2, "only raicilla profiles match");
+  assert.equal(container.querySelectorAll(".profile-group-label").length, 1, "one group after filtering");
+
+  // No match message.
+  search.value = "zzz-unknown";
+  search.dispatchEvent(new window.Event("input", { bubbles: true }));
+  assert.ok(container.querySelector(".search-empty").textContent.includes("No profiles match"));
+  container.remove();
+});
+
+test("compare picker: selected profiles stay visible and selectable under a filter", () => {
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  const profiles = [
+    fixture({ id: "t-blanco", title: "Blanco tequila", spirit: "tequila" }),
+    fixture({ id: "r-costa", title: "Costa raicilla", spirit: "raicilla" }),
+    fixture({ id: "r-sierra", title: "Sierra raicilla", spirit: "raicilla" }),
+  ];
+  renderCompare(container, {
+    profiles, locale: enLocale, compareIds: "t-blanco,r-costa", onSelectionChange: () => {},
+  });
+
+  // Filter to raicilla: the selected tequila profile must remain visible so
+  // it can still be deselected.
+  const search = container.querySelector("#compare-search");
+  search.value = "raicilla";
+  search.dispatchEvent(new window.Event("input", { bubbles: true }));
+  const ids = [...container.querySelectorAll(".compare-pick-button")].map((b) => b.dataset.profileId);
+  assert.ok(ids.includes("t-blanco"), "selected profile stays visible under the filter");
+  const tequilaButton = [...container.querySelectorAll(".compare-pick-button")].find((b) => b.dataset.profileId === "t-blanco");
+  assert.equal(tequilaButton.getAttribute("aria-pressed"), "true", "still shows as selected");
+
+  // With two of three slots filled the third stays open; the selected ones
+  // are disabled (their click path is the remove control in the table).
+  const sierra = [...container.querySelectorAll(".compare-pick-button")].find((b) => b.dataset.profileId === "r-sierra");
+  assert.equal(sierra.disabled, false, "third slot still open with two selected");
+  assert.equal(tequilaButton.disabled, true, "selected buttons are disabled (click path is the remove control)");
+  container.remove();
+});

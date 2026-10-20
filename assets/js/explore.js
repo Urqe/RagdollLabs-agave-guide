@@ -2,26 +2,9 @@ import { el, clear } from "./dom-utils.js";
 import { renderMap, shadeCovered, STATE_NAMES } from "./map.js";
 import { navigateTo } from "./router.js";
 import { searchProfiles } from "./search.js";
-import { SPIRIT_LABELS, SPIRIT_GROUP_ORDER } from "./spirit-labels.js";
+import { SPIRIT_LABELS, groupProfilesBySpirit } from "./spirit-labels.js";
 
 const EMPTY_MESSAGE = "No profiles added here yet";
-
-/**
- * Group profiles by spirit in a logical order (tequila together, raicilla
- * together, …) so related styles read as neighbors instead of interleaving
- * by encounter order. Stable within each group by title.
- */
-export function groupProfilesBySpirit(profiles, compare) {
-  const cmp = compare || ((a, b) => a.localeCompare(b));
-  const rank = (spirit) => {
-    const index = SPIRIT_GROUP_ORDER.indexOf(spirit);
-    return index === -1 ? SPIRIT_GROUP_ORDER.length : index;
-  };
-  return [...profiles].sort((a, b) =>
-    rank(a.spirit) - rank(b.spirit) ||
-    cmp(a.title, b.title)
-  );
-}
 
 function profilesForState(profiles, stateId) {
   return profiles.filter((profile) => profile.stateId === stateId);

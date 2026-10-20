@@ -6,7 +6,7 @@ import {
   missingDimensions,
   levelOf,
 } from "./compare.js";
-import { SPIRIT_LABELS } from "./spirit-labels.js";
+import { SPIRIT_LABELS, groupProfilesBySpirit } from "./spirit-labels.js";
 
 const MAX_SLOTS = 3;
 
@@ -25,24 +25,90 @@ function parseIds(raw) {
     .slice(0, MAX_SLOTS);
 }
 
-function slotSelector(profiles, selectedIds, onPick) {
-  const list = el("ul", { class: "compare-picker-list" });
-  for (const profile of profiles) {
-    const item = el("li");
-    const isSelected = selectedIds.includes(profile.id);
-    const button = el("button", {
-      type: "button",
-      class: "compare-pick-button",
-      dataset: { profileId: profile.id },
-      "aria-pressed": isSelected ? "true" : "false",
-      disabled: isSelected || (selectedIds.length >= MAX_SLOTS && !isSelected) ? "true" : null,
-    },
-      `${profile.title} — ${SPIRIT_LABELS[profile.spirit] || profile.spirit}`);
-    button.addEventListener("click", () => onPick(profile.id));
-    item.appendChild(button);
-    list.appendChild(item);
-  }
-  return list;
+const normalize = (text) =>
+  (text || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+
+/** Picker button for one profile. */
+function pickButton(profile, isSelected, disabled, onPick) {
+  const button = el("button", {
+    type: "button",
+    class: "compare-pick-button",
+    dataset: { profileId: profile.id },
+    "aria-pressed": isSelected ? "true" : "false",
+    disabled: disabled ? "true" : null,
+  },
+    `${profile.title} — ${SPIRIT_LABELS[profile.spirit] || profile.spirit}`);
+  button.addEventListener("click", () => onPick(profile.id));
+  return button;
+}
+
+/**
+ * Searchable, grouped profile picker. Profiles group by spirit in logical
+ * order, alphabetically within each group; a filter box narrows the list;
+ * selected profiles always stay visible (so they can be deselected) even
+ * when they fall outside the current filter.
+ */
+function slotSelector(profiles, selectedIds, onPick, { locale = null } = {}) {
+  const t = (key) => (locale ? locale.t(key) : key);
+  const compare = locale ? (a, b) => locale.compare(a, b) : null;
+  const holder = el("div", { class: "compare-picker-search" });
+
+  const searchInput = el("input", {
+    type: "search",
+    class: "search-input",
+    id: "compare-search",
+    placeholder: t("compare.searchPlaceholder"),
+    "aria-label": t("compare.searchPlaceholder"),
+  });
+  const form = el("form", { class: "search-form", role: "search" });
+  form.addEventListener("submit", (event) => event.preventDefault());
+  form.appendChild(searchInput);
+  holder.appendChild(form);
+
+  const results = el("div", { class: "compare-picker-results", "aria-live": "polite" });
+  holder.appendChild(results);
+
+  const renderList = () => {
+    clear(results);
+    const q = normalize(searchInput.value);
+    const matches = q.length < 2
+      ? profiles
+      : profiles.filter((p) =>
+          normalize([p.title, p.spirit, SPIRIT_LABELS[p.spirit] || ""].join(" ")).includes(q));
+    // Keep selected profiles visible regardless of the filter.
+    const visible = q.length < 2
+      ? matches
+      : [...matches, ...profiles.filter((p) => selectedIds.includes(p.id) && !matches.includes(p))];
+    if (visible.length === 0) {
+      results.appendChild(el("p", { class: "search-empty" },
+        `${t("compare.searchEmpty")} “${searchInput.value}”.`));
+      return;
+    }
+    const grouped = groupProfilesBySpirit(visible, compare);
+    const list = el("ul", { class: "compare-picker-list" });
+    let lastSpirit = null;
+    for (const profile of grouped) {
+      const item = el("li");
+      if (profile.spirit !== lastSpirit) {
+        item.appendChild(el("span", { class: "profile-group-label" },
+          SPIRIT_LABELS[profile.spirit] || profile.spirit));
+        lastSpirit = profile.spirit;
+      }
+      const isSelected = selectedIds.includes(profile.id);
+      const disabled = isSelected || (selectedIds.length >= MAX_SLOTS && !isSelected);
+      item.appendChild(pickButton(profile, isSelected, disabled, onPick));
+      list.appendChild(item);
+    }
+    results.appendChild(list);
+  };
+
+  searchInput.addEventListener("input", renderList);
+  renderList();
+  return holder;
 }
 
 function levelCell(profile, dimKey, t) {
@@ -94,7 +160,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
     announce(removing ? `Removed ${name}. ${next.length} profile${next.length === 1 ? "" : "s"} selected.` : `Added ${name}. ${next.length} profile${next.length === 1 ? "" : "s"} selected.`);
     if (onSelectionChange) onSelectionChange(next);
   };
-  pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick));
+  pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick, { locale }));
   section.appendChild(pickerHolder);
 
   if (selected.length === 0) {

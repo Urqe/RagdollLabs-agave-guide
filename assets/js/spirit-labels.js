@@ -31,6 +31,23 @@ export const SPIRIT_GROUP_ORDER = [
   "destilado-de-pulque",
 ];
 
+/**
+ * Group profiles by spirit in a logical order (tequila together, raicilla
+ * together, …) so related styles read as neighbors instead of interleaving
+ * by encounter order. Stable within each group by title.
+ */
+export function groupProfilesBySpirit(profiles, compare) {
+  const cmp = compare || ((a, b) => a.localeCompare(b));
+  const rank = (spirit) => {
+    const index = SPIRIT_GROUP_ORDER.indexOf(spirit);
+    return index === -1 ? SPIRIT_GROUP_ORDER.length : index;
+  };
+  return [...profiles].sort((a, b) =>
+    rank(a.spirit) - rank(b.spirit) ||
+    cmp(a.title, b.title)
+  );
+}
+
 /** Human label for a spirit id, falling back to the raw id. */
 export function spiritLabel(spirit) {
   return SPIRIT_LABELS[spirit] || spirit;
