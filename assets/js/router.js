@@ -16,7 +16,10 @@ export function parseHash(hash) {
     return { name: "notFound", params: {} };
   }
   if (segments[0] === "profile" && segments.length === 2) {
-    return { name: "profile", params: { profileId: segments[1] } };
+    const [profileId, query = ""] = segments[1].split("?");
+    const params = new URLSearchParams(query);
+    const from = params.get("from");
+    return { name: "profile", params: { profileId, ...(from ? { from } : {}) } };
   }
   return { name: "notFound", params: {} };
 }
@@ -30,7 +33,9 @@ export function buildHash(route) {
     case "state":
       return `#/explore/${encodeURIComponent(route.params.stateId)}`;
     case "profile":
-      return `#/profile/${encodeURIComponent(route.params.profileId)}`;
+      return `#/profile/${encodeURIComponent(route.params.profileId)}${
+        route.params.from ? `?from=${encodeURIComponent(route.params.from)}` : ""
+      }`;
     default:
       return "#/";
   }

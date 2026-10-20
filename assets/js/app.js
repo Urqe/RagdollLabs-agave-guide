@@ -51,6 +51,7 @@ async function renderRoute(container, route) {
     const selectedStateId = route.name === "state" ? route.params.stateId : null;
     state.exploreApi = await renderExplore(container, {
       profiles,
+      bottles,
       selectedStateId,
       mapUrl: new URL("assets/geo/mexico-states.svg", baseUrl()).href,
     });
@@ -65,7 +66,7 @@ async function renderRoute(container, route) {
       return;
     }
     const bottle = bottles.find((b) => b.id === profile.exampleBottleId) || null;
-    renderProfile(container, { profile, bottle, sources });
+    renderProfile(container, { profile, bottle, sources, returnTo: route.params.from || null });
     return;
   }
 

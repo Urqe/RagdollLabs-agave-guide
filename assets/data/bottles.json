@@ -23,6 +23,32 @@
         "diffords-lost-explorer-espadin",
         "drinkhacker-lost-explorer-review"
       ]
+    },
+    {
+      "id": "rancho-tepua-bacanora",
+      "brand": "Rancho Tepúa",
+      "producer": "Vinata Rancho Tepúa (Roberto Contreras, Maestro Bacanorero)",
+      "expression": "Bacanora (joven)",
+      "abv": 43,
+      "place": "Rancho Tepúa, Aconchi, Sonora",
+      "reviewSummary": "Mezcalistas' tasting notes describe a mineral, roast-agave-driven spirit: sandalwood, cinnamon, lemongrass and a mineral tang around a center of roast agave, with a rich, sweet-agave nose.",
+      "sourceIds": [
+        "mezcalistas-tepua-tasting",
+        "mezcalreviews-tepua-blanco"
+      ]
+    },
+    {
+      "id": "la-venenosa-tabernas",
+      "brand": "La Venenosa",
+      "producer": "Antonio Arrizon (Maestro Tabernero), La Vieja, Sierra Occidental, Jalisco; brand by Casa Endémica",
+      "expression": "Raicilla Tabernas Edición (joven)",
+      "abv": 40,
+      "place": "La Vieja, Sierra Occidental, Jalisco",
+      "reviewSummary": "Mezcal Reviews members describe a funky, approachable raicilla: sour apple and slight vinegar on the nose, sweet agave and a pleasant fermented funk on the palate, light and easy to sip or mix.",
+      "sourceIds": [
+        "mezcalreviews-lavenenosa-tabernas",
+        "casaendemica-brands"
+      ]
     }
   ]
 }

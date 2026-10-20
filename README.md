@@ -1,7 +1,7 @@
 # RagdollLabs Agave Guide
 
 A small, dependency-light guide to the **body and taste** of Mexican agave-based
-distilled spirits — tequila and mezcal. Each style profile describes the style
+distilled spirits — tequila, mezcal, bacanora and raicilla. Each style profile describes the style
 (place, body, taste notes, smoke where relevant, finish) as editorial guidance,
 with exactly one example bottle per profile and attributed source links.
 
@@ -79,6 +79,14 @@ test/                       node:test suites (jsdom)
 
 - Mexican agave-based distilled spirits only; sotol and other non-agave spirits
   are excluded.
+- Four traditions covered: tequila, mezcal, bacanora (Sonora) and raicilla
+  (Jalisco/Nayarit), each as a bounded style profile with one example bottle.
+- Basic search covers spirits, agave plants, places, producers, brands and
+  bottles; accents and case are normalized and common aliases are supported
+  (e.g. “espadin” finds espadín).
+- Legal category/class terms (denominations of origin, classes like blanco or
+  joven) are kept distinct from editorial style groupings (e.g. Sierra vs
+  Costa raicilla).
 - Map shading shows **app coverage**, not legal production boundaries.
 - All 32 states are shown on the map for context, but only states with
   style profiles are selectable (on the map and in the state list).

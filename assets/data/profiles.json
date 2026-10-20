@@ -25,7 +25,11 @@
         "diffords-fortaleza-blanco",
         "liquor-com-fortaleza-blanco-review",
         "tequilafortaleza-blanco"
-      ]
+      ],
+      "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
+      "process": "Steam-cooked (oven/autoclave), tahona or roller-mill extraction, fermented in open tanks, double distilled, unaged (blanco)",
+      "category": "Tequila — spirit with its own Denomination of Origin; blanco is an unaged legal class",
+      "beginnerNote": "New to tequila? A blanco is the unaged version — the purest read on cooked agave, before any oak influence."
     },
     {
       "id": "mezcal-espadin-valles-centrales",
@@ -52,6 +56,70 @@
         "thelostexplorer-our-craft",
         "drinkhacker-lost-explorer-review",
         "diffords-lost-explorer-palenque"
+      ],
+      "plant": "Agave angustifolia (espadín, cultivated)",
+      "process": "Earthen-pit roast, tahona or horse-drawn mill, wild-yeast fermentation, double distilled, joven (unaged)",
+      "category": "Mezcal — spirit with its own Denomination of Origin; joven/abocado is an unaged legal class",
+      "beginnerNote": "New to mezcal? The smoke comes from roasting the agave underground — it is a character of the process, not an added flavor."
+    },
+    {
+      "id": "bacanora-pacifica-sierra-sonora",
+      "title": "Bacanora, Agave Pacifica style (Sierra de Sonora)",
+      "spirit": "bacanora",
+      "stateId": "son",
+      "stateName": "Sonora",
+      "context": "Bacanora is a Sonoran agave spirit with a denomination of origin covering 35 municipalities in Sonora. It is distilled from Agave angustifolia pacifica (locally called Pacifica or Yaquiana), a wild-harvested agave of the Sonoran Sierra Madre. Production was banned for much of the 20th century (1915–1992) and continued clandestinely; the DO dates from 2000.",
+      "description": "Traditional bacanora roasts the agave hearts in earthen pit ovens, often with mesquite wood, ferments with wild yeasts and distills twice, giving a spirit that sits stylistically between tequila and Oaxacan mezcal: roasted agave at the center with smoke that is usually gentler than mezcal's, plus desert herbs and a mineral edge from the Sierra. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Agave angustifolia pacifica (wild-harvested; locally Pacifica or Yaquiana)",
+      "process": "Pit-roasted (often mesquite-fueled), wild-yeast fermentation, double distillation",
+      "category": "Bacanora — spirit with its own Denomination of Origin (Sonora, since 2000)",
+      "beginnerNote": "New to bacanora? Think of it as mezcal's Sonoran cousin: same roasted-agave heart, usually a touch less smoky, often leaner and more herbal.",
+      "body": "medium",
+      "tasteNotes": [
+        "roasted agave",
+        "mesquite smoke",
+        "desert herbs",
+        "mineral",
+        "black pepper"
+      ],
+      "smoke": "Present but usually gentler than Oaxacan mezcal: the pit roast gives a lean, savory smoke rather than a dominant one.",
+      "finish": "Dry and herbal, with a soft smoky thread and a mineral, peppery fade.",
+      "exampleBottleId": "rancho-tepua-bacanora",
+      "sourceIds": [
+        "mezcalistas-bacanora-tradition",
+        "sunora-bacanora",
+        "mezcalistas-tepua-tasting",
+        "mezcalreviews-tepua-blanco"
+      ]
+    },
+    {
+      "id": "raicilla-maximiliana-sierra-jalisco",
+      "title": "Sierra raicilla, Maximiliana style (Jalisco)",
+      "spirit": "raicilla",
+      "stateId": "jal",
+      "stateName": "Jalisco",
+      "context": "Raicilla is a Jalisco (and one Nayarit municipality) agave spirit with a denomination of origin from 2019. It splits into two editorial traditions: Sierra (mountain) raicilla, made mainly from Agave maximiliana and inaequidens cooked in above-ground ovens, and Costa (coastal) raicilla from angustifolia and rhodacantha cooked in underground pits. This profile covers the Sierra style around the Sierra Occidental.",
+      "description": "Sierra raicilla is typically cooked in above-ground adobe ovens rather than pits, so it tends to be less smoky than pit-roasted agave spirits, with a distinctive fermented, gently funky character: orchard fruit, herbs and a soft lactic roundness from wild-yeast fermentation in wooden vats. Distillation is often in small rustic stills (tabernas), and each maestro's batches vary widely. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Agave maximiliana (wild-harvested; Sierra raicilla's signature agave)",
+      "process": "Above-ground adobe-oven roast, open wild-yeast fermentation in wooden vats, small-batch distillation",
+      "category": "Raicilla — spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019)",
+      "beginnerNote": "New to raicilla? Expect an agave spirit that is often funkier and fruitier than tequila, and usually lighter on smoke than mezcal — Sierra versions especially.",
+      "body": "medium",
+      "tasteNotes": [
+        "orchard fruit",
+        "fresh herbs",
+        "fermented funk",
+        "sweet agave",
+        "citrus"
+      ],
+      "smoke": "Usually light in the Sierra style: above-ground ovens give a faint roast note rather than pit smoke.",
+      "finish": "Medium-long, gently funky, with orchard fruit and a soft sweet-agave fade.",
+      "exampleBottleId": "la-venenosa-tabernas",
+      "sourceIds": [
+        "mezcalreviews-raicilla-category",
+        "wikipedia-raicilla",
+        "casaendemica-brands",
+        "mezcalreviews-lavenenosa-tabernas"
       ]
     }
   ]

@@ -59,6 +59,54 @@
       "title": "Drinkhacker — Review: The Lost Explorer Mezcals, Complete Lineup",
       "url": "https://www.drinkhacker.com/2025/07/29/review-the-lost-explorer-mezcals-espadin-tobala-and-salmiana/",
       "kind": "review"
+    },
+    {
+      "id": "mezcalistas-bacanora-tradition",
+      "title": "Mezcalistas — Bacanora: Another great Mexican distilling tradition",
+      "url": "https://www.mezcalistas.com/bacanora-at-agave-heritage-festival/",
+      "kind": "style"
+    },
+    {
+      "id": "sunora-bacanora",
+      "title": "Sunora Bacanora — Agave Pacifica spirit of Sonora",
+      "url": "https://www.sunorabacanora.com/",
+      "kind": "producer"
+    },
+    {
+      "id": "mezcalistas-tepua-tasting",
+      "title": "Mezcalistas — Rancho Tepua Bacanora tasting notes",
+      "url": "https://www.mezcalistas.com/rancho-tepua-bacanora-tasting-notes/",
+      "kind": "review"
+    },
+    {
+      "id": "mezcalreviews-tepua-blanco",
+      "title": "Mezcal Reviews — Rancho Tepúa Bacanora Blanco",
+      "url": "https://www.mezcalreviews.com/mezcal/rancho-tepua-bacanora-blanco/",
+      "kind": "review"
+    },
+    {
+      "id": "mezcalreviews-raicilla-category",
+      "title": "Mezcal Reviews — Raicilla category overview (Costa and Sierra types)",
+      "url": "https://www.mezcalreviews.com/filter-by/category/raicilla/",
+      "kind": "style"
+    },
+    {
+      "id": "casaendemica-brands",
+      "title": "Casa Endémica — La Venenosa raicilla range",
+      "url": "https://www.casaendemica.com/",
+      "kind": "producer"
+    },
+    {
+      "id": "mezcalreviews-lavenenosa-tabernas",
+      "title": "Mezcal Reviews — La Venenosa Tabernas Edición I (member tasting notes)",
+      "url": "https://www.mezcalreviews.com/mezcal/la-venenosa-raicilla-tabernas/",
+      "kind": "review"
+    },
+    {
+      "id": "wikipedia-raicilla",
+      "title": "Wikipedia — Raicilla (Denomination of Origin, process and types)",
+      "url": "https://en.wikipedia.org/wiki/Raicilla",
+      "kind": "style"
     }
   ]
 }

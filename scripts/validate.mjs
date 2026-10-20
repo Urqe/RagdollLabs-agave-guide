@@ -24,7 +24,7 @@ const VALID_STATES = new Set([
   "yuc", "zac",
 ]);
 
-const VALID_SPIRITS = new Set(["tequila", "mezcal"]);
+const VALID_SPIRITS = new Set(["tequila", "mezcal", "bacanora", "raicilla"]);
 const VALID_BODIES = new Set(["light", "medium", "full"]);
 const VALID_KINDS = new Set(["style", "producer", "review"]);
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -48,6 +48,10 @@ for (const p of profiles) {
     fail(`${label}: tasteNotes must have 3–5 entries`);
   }
   if (p.smoke !== null && typeof p.smoke !== "string") fail(`${label}: smoke must be a string or null`);
+  if (p.plant !== undefined && typeof p.plant !== "string") fail(`${label}: plant must be a string when present`);
+  if (p.process !== undefined && typeof p.process !== "string") fail(`${label}: process must be a string when present`);
+  if (p.category !== undefined && typeof p.category !== "string") fail(`${label}: category must be a string when present`);
+  if (p.beginnerNote !== undefined && typeof p.beginnerNote !== "string") fail(`${label}: beginnerNote must be a string when present`);
   if (!p.finish || typeof p.finish !== "string") fail(`${label}: finish required`);
   if (!bottleIds.has(p.exampleBottleId)) fail(`${label}: exampleBottleId ${p.exampleBottleId} not in bottles.json`);
   if (!Array.isArray(p.sourceIds) || p.sourceIds.length === 0) fail(`${label}: sourceIds required`);
@@ -77,6 +81,8 @@ for (const b of bottles) {
   if (b.abv != null && (typeof b.abv !== "number" || b.abv < 35 || b.abv > 55)) {
     fail(`${label}: abv must be a number between 35 and 55 when present`);
   }
+  if (b.producer !== undefined && typeof b.producer !== "string") fail(`${label}: producer must be a string when present`);
+  if (b.place !== undefined && typeof b.place !== "string") fail(`${label}: place must be a string when present`);
   if (!b.reviewSummary || b.reviewSummary.length < 40) fail(`${label}: reviewSummary too short`);
   if (!Array.isArray(b.sourceIds) || b.sourceIds.length === 0) fail(`${label}: sourceIds required`);
   for (const sid of b.sourceIds) {

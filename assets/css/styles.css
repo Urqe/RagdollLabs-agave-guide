@@ -176,6 +176,67 @@ h1, h2, h3, .brand, .cta-link, button {
   background: #f4efe4;
 }
 
+.search-holder { margin-bottom: 1rem; }
+
+.search-input {
+  width: 100%;
+  max-width: 32rem;
+  min-height: var(--tap);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--cream-dark);
+  border-radius: var(--radius);
+  background: #fffdf6;
+  color: var(--charcoal);
+  font-size: 1rem;
+}
+
+.search-results { margin-top: 0.75rem; }
+
+.search-result-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+  max-width: 46rem;
+}
+
+.search-result-link {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--cream-dark);
+  border-radius: var(--radius);
+  background: #fffdf6;
+  color: var(--charcoal);
+  text-decoration: none;
+}
+
+.search-result-link:hover { border-color: var(--agave-green); }
+
+.search-result-reason {
+  color: var(--charcoal-soft);
+  font-size: 0.85rem;
+}
+
+.search-empty { color: var(--charcoal-soft); }
+
+.beginner-note {
+  border-left: 3px solid var(--agave-green);
+  background: #eef3ea;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius);
+  max-width: 46rem;
+}
+
+.bottle-producer, .bottle-place {
+  margin: 0.15rem 0;
+  color: var(--charcoal-soft);
+  font-size: 0.9rem;
+}
+
+.profile-craft { margin-top: 1rem; }
+
 .state-results { margin-top: 1.5rem; }
 .state-results-title { margin-bottom: 0.5rem; }
 .state-results-hint { color: var(--charcoal-soft); }

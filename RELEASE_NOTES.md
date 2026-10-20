@@ -122,3 +122,54 @@ structural feedback on Release 1.
   detail simplified); adequate for state selection.
 - Content unchanged: two seed profiles, two example bottles (Release 3
   scope).
+
+
+## Release 3 — Four Traditions
+
+### Scope delivered
+
+- **2 new profiles, 1 example bottle each (4/4 total):**
+  - Bacanora, Agave Pacifica style (Sierra de Sonora) — example bottle:
+    Rancho Tepúa Bacanora (43% ABV, Aconchi, Sonora; producer page +
+    Mezcalistas tasting notes and Mezcal Reviews as review evidence).
+  - Sierra raicilla, Maximiliana style (Jalisco) — example bottle: La
+    Venenosa Raicilla Tabernas Edición (40% ABV, La Vieja, Sierra
+    Occidental, Jalisco; Casa Endémica producer page + Mezcal Reviews
+    member tasting notes).
+- **8 new sources** (18 total): style references (Mezcalistas bacanora
+  overview, Mezcal Reviews raicilla category, Wikipedia raicilla DO),
+  producer pages (Sunora, Casa Endémica) and reviews. All verified live
+  over HTTPS before inclusion. Failed/blocked candidates (Liquor.com,
+  Food & Wine, ranchotepua.com, lavenenosa.com) were replaced once each
+  within the bounded-research rules.
+- **Basic search** (`assets/js/search.js`): accent- and case-insensitive
+  matching over spirits, agave plants, places, producers, brands and
+  bottles, with curated aliases (espadin, plata/silver, tepua, mountain
+  raicilla…) and per-result match reasons. Live results as you type.
+- **Expanded profile detail:** legal category (DO), agave plant, process,
+  and a short beginner note on every profile; example-bottle cards now
+  show producer and place. The two Release 1 profiles were backfilled
+  with the same fields.
+- **Category vs editorial grouping kept distinct:** e.g. raicilla's DO
+  is stated as the legal category, while “Sierra” vs “Costa” is labeled
+  as an editorial tradition split; smoke/sweetness are never auto-assigned
+  by region.
+- **Context preservation:** profile links from a selected state carry
+  `?from=<state>`; the profile's back link returns to that state view,
+  restoring the map/list selection.
+
+### Checks run
+
+- `npm run validate` — schema (now including bacanora/raicilla spirits and
+  the new plant/process/category/beginnerNote/producer/place fields) plus
+  15 node:test/jsdom suites: routing (incl. `?from=`), map selection,
+  search behavior, expanded profile sections, context-preserving back
+  links, security tests. All passing.
+
+### Remaining issues / deferred
+
+- Native-device rendering still unverified in this environment.
+- Search is deliberately basic (prefix-of-content matching); comparison,
+  advanced search and catalogue expansion are later releases.
+- Coastal (Costa) raicilla and additional mezcal/tequila variants
+  deferred per plan.

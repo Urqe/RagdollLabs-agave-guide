@@ -3,6 +3,13 @@ import { STATE_NAMES } from "./map.js";
 
 const BODY_LABELS = { light: "Light body", medium: "Medium body", full: "Full body" };
 
+const SPIRIT_LABELS = {
+  tequila: "Tequila",
+  mezcal: "Mezcal",
+  bacanora: "Bacanora",
+  raicilla: "Raicilla",
+};
+
 function sourceLinks(sources, sourceIds) {
   const list = el("ul", { class: "source-list" });
   for (const id of sourceIds) {
@@ -25,6 +32,8 @@ function exampleBottleCard(bottle, sources) {
     name.appendChild(el("span", { class: "bottle-abv" }, ` · ${bottle.abv}% ABV`));
   }
   card.appendChild(name);
+  if (bottle.producer) card.appendChild(el("p", { class: "bottle-producer" }, bottle.producer));
+  if (bottle.place) card.appendChild(el("p", { class: "bottle-place" }, bottle.place));
   card.appendChild(el("p", { class: "bottle-review" }, bottle.reviewSummary));
   const linksLabel = el("p", { class: "bottle-links-label" }, "Sources for this bottle:");
   card.appendChild(linksLabel);
@@ -36,17 +45,18 @@ function exampleBottleCard(bottle, sources) {
  * Profile view: title, place/style context, description, body, taste notes,
  * smoke (where relevant), finish, one example bottle card and source links.
  */
-export function renderProfile(container, { profile, bottle, sources }) {
+export function renderProfile(container, { profile, bottle, sources, returnTo = null }) {
   clear(container);
   const section = el("section", { class: "profile-view", "aria-labelledby": "profile-title" });
 
-  const back = el("a", { href: "#/explore", class: "back-link" }, "← Back to explore");
+  const backHref = returnTo ? `#/explore/${encodeURIComponent(returnTo)}` : "#/explore";
+  const back = el("a", { href: backHref, class: "back-link" }, "← Back to explore");
   section.appendChild(back);
 
   section.appendChild(el("h2", { id: "profile-title" }, profile.title));
 
   const place = el("p", { class: "profile-place" });
-  place.appendChild(el("span", { class: "profile-spirit-tag" }, profile.spirit === "mezcal" ? "Mezcal" : "Tequila"));
+  place.appendChild(el("span", { class: "profile-spirit-tag" }, SPIRIT_LABELS[profile.spirit] || profile.spirit));
   place.appendChild(document.createTextNode(` · ${profile.stateName}, México`));
   section.appendChild(place);
 
@@ -57,6 +67,25 @@ export function renderProfile(container, { profile, bottle, sources }) {
   section.appendChild(guidanceNote);
 
   section.appendChild(el("p", { class: "profile-description" }, profile.description));
+
+  const craft = el("dl", { class: "profile-facts profile-craft" });
+  if (profile.category) {
+    craft.appendChild(el("dt", {}, "Legal category"));
+    craft.appendChild(el("dd", { class: "profile-category" }, profile.category));
+  }
+  if (profile.plant) {
+    craft.appendChild(el("dt", {}, "Agave"));
+    craft.appendChild(el("dd", { class: "profile-plant" }, profile.plant));
+  }
+  if (profile.process) {
+    craft.appendChild(el("dt", {}, "Process"));
+    craft.appendChild(el("dd", { class: "profile-process" }, profile.process));
+  }
+  if (craft.childNodes.length > 0) section.appendChild(craft);
+
+  if (profile.beginnerNote) {
+    section.appendChild(el("p", { class: "beginner-note" }, profile.beginnerNote));
+  }
 
   const facts = el("dl", { class: "profile-facts" });
   facts.appendChild(el("dt", {}, "Body"));
