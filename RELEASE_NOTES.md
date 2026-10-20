@@ -504,3 +504,58 @@ expansion.
 - Native-device rendering still unverified in this environment.
 - Backlog: Costa raicilla profile; more tuxca producers; D'Anta\u00f1o
   (aguamiel + cane) as a disclosed-composition catalogue entry.
+
+## Release 10 — Regional Review & Fixes
+
+Maintenance release per the plan: audit of plant/common-name ambiguity,
+mixed fermentables, protected vs cultural names, source dates, map
+precision, uncovered expressions and recommendation regressions.
+
+### Findings and fixes
+
+- **Source dates (gap found):** none of the 30 sources recorded when
+  they were last verified. Every source now carries a `verified` ISO
+  date, and the validator requires it for future sources.
+- **Map precision (gap found):** profiles mapped only to states. Each
+  profile now stores `placeCoords` with an honest `precision` label
+  ("municipality (Comit\u00e1n de Dom\u00ednguez); approximate", etc.),
+  displayed on the profile as an approximate location note that
+  explicitly says it is a place reference, not a legal boundary. The
+  validator enforces coordinates within Mexico's bounding box and a
+  precision label containing "approximate".
+- **ABV honesty (defect found):** three bottles (Balanc\u00e1n Tuxca, 9
+  Guardianes, La Venenosa Costa) silently omitted ABV. Missing ABV is
+  now explicitly labeled "ABV not documented in cited sources" on the
+  bottle card and catalogue entry, and the validator requires an
+  `abvNote` whenever ABV is absent (and forbids a redundant note when
+  present).
+- **Backlog (gap found):** uncovered expressions and missing profiles
+  were not maintained anywhere. `assets/data/backlog.json` now records
+  five prioritized entries (Costa raicilla profile gap, D'Anta\u00f1o
+  disclosed-composition entry, more tuxca producers, mezcal plant
+  variants, Juerte) with kind/item/reason, so content increments are
+  driven by substantive gaps rather than filled map areas.
+- **Plant/common-name ambiguity (verified, no defect):** every profile
+  pairs species with local common names (Li\u00f1eno/Cimarr\u00f3n,
+  maguey Comiteco, maguey pulquero) without asserting unsupported
+  species identities.
+- **Mixed fermentables (verified, no defect):** comiteco composition
+  disclosure intact from Release 9; sap-derived vs cooked-heart
+  distinctions hold across all seven profiles.
+- **Protected vs cultural names (verified, no defect):** DO statuses
+  remain honestly stated; no regional name implies tequila-level legal
+  status.
+- **Recommendation regressions (verified, no defect):** comparison
+  ranking, moods and if-you-like suggestions are unchanged and fully
+  fixture-tested; no regressions from the expansion.
+
+### Checks run
+
+- `npm run validate` — schema (verified dates, coords bounds/precision,
+  abvNote consistency) plus 49 node:test/jsdom suites (4 new regional
+  maintenance tests). All passing.
+
+### Remaining issues / deferred
+
+- Native-device rendering still unverified in this environment.
+- Backlog items land in future content increments.

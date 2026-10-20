@@ -34,7 +34,10 @@ function exampleBottleCard(bottle, sources) {
   const name = el("p", { class: "bottle-name" });
   name.appendChild(el("strong", {}, `${bottle.brand} ${bottle.expression}`));
   if (bottle.abv != null) {
-    name.appendChild(el("span", { class: "bottle-abv" }, ` · ${bottle.abv}% ABV`));
+    name.appendChild(el("span", { class: "bottle-abv" }, ` \u00b7 ${bottle.abv}% ABV`));
+  }
+  if (bottle.abv == null && bottle.abvNote) {
+    name.appendChild(el("span", { class: "bottle-abv" }, ` \u00b7 ${bottle.abvNote}`));
   }
   card.appendChild(name);
   if (bottle.producer) card.appendChild(el("p", { class: "bottle-producer" }, bottle.producer));
@@ -60,6 +63,12 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   section.appendChild(back);
 
   section.appendChild(el("h2", { id: "profile-title" }, profile.title));
+
+  if (profile.placeCoords) {
+    const c = profile.placeCoords;
+    section.appendChild(el("p", { class: "profile-coords editorial-note" },
+      `Approximate location: ${c.lat.toFixed(2)}, ${c.lon.toFixed(2)} \u2014 precision: ${c.precision}. This is a place reference, not a legal boundary.`));
+  }
 
   const place = el("p", { class: "profile-place" });
   place.appendChild(el("span", { class: "profile-spirit-tag" }, SPIRIT_LABELS[profile.spirit] || profile.spirit));

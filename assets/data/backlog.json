@@ -1,0 +1,34 @@
+{
+  "backlog": [
+    {
+      "kind": "missing-profile",
+      "spirit": "raicilla",
+      "item": "Costa raicilla profile (angustifolia/rhodacantha, underground pit cook)",
+      "reason": "bottle la-venenosa-costa is catalogued but the coastal tradition has no profile"
+    },
+    {
+      "kind": "uncovered-expression",
+      "spirit": "comiteco",
+      "item": "D'Antaño (aguamiel + cane spirit)",
+      "reason": "agave-based with disclosed cane composition; would be a factual catalogue entry with composition disclosure"
+    },
+    {
+      "kind": "missing-profile",
+      "spirit": "tuxca",
+      "item": "Additional tuxca producers (Siete Pozos, Indio Alonso)",
+      "reason": "category exists; more bottles deferred until requested"
+    },
+    {
+      "kind": "missing-profile",
+      "spirit": "mezcal",
+      "item": "Additional agave variants (tobalá, ensambles)",
+      "reason": "plant/process expansion deferred per plan; pechuga/ensamble need contextual treatment, not new categories"
+    },
+    {
+      "kind": "uncovered-expression",
+      "spirit": "destilado-de-pulque",
+      "item": "Juerte destilado de pulque",
+      "reason": "second expression in an existing profile; defer to a content increment"
+    }
+  ]
+}

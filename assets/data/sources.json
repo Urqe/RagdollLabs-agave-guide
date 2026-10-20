@@ -4,181 +4,211 @@
       "id": "diffords-tequila-made",
       "title": "Difford's Guide — Tequila: How Is Tequila Made and What From?",
       "url": "https://www.diffordsguide.com/encyclopedia/991/bws/tequila-how-is-tequila-made-and-what-from",
-      "kind": "style"
+      "kind": "style",
+      "verified": "2026-10-20"
     },
     {
       "id": "diffords-tequila-category",
       "title": "Difford's Guide — Tequila",
       "url": "https://www.diffordsguide.com/beer-wine-spirits/category/508/tequila",
-      "kind": "style"
+      "kind": "style",
+      "verified": "2026-10-20"
     },
     {
       "id": "diffords-mezcal-what-it-is",
       "title": "Difford's Guide — Mezcal: What It Is and How It's Made",
       "url": "https://www.diffordsguide.com/encyclopedia/363/bws/mezcal-what-it-is-and-how-its-made",
-      "kind": "style"
+      "kind": "style",
+      "verified": "2026-10-20"
     },
     {
       "id": "tequilafortaleza-blanco",
       "title": "Tequila Fortaleza — Fortaleza Blanco",
       "url": "https://tequilafortaleza.com/tequila-fortaleza-blanco/",
-      "kind": "producer"
+      "kind": "producer",
+      "verified": "2026-10-20"
     },
     {
       "id": "thelostexplorer-our-craft",
       "title": "The Lost Explorer — Our Craft",
       "url": "https://thelostexplorer.com/our-craft/",
-      "kind": "producer"
+      "kind": "producer",
+      "verified": "2026-10-20"
     },
     {
       "id": "diffords-lost-explorer-palenque",
       "title": "Difford's Guide — The Lost Explorer Oaxaca Palenque: Mezcal Process",
       "url": "https://www.diffordsguide.com/producer/1273/the-lost-explorer/oaxaca-palenque",
-      "kind": "producer"
+      "kind": "producer",
+      "verified": "2026-10-20"
     },
     {
       "id": "diffords-fortaleza-blanco",
       "title": "Difford's Guide — Fortaleza Blanco Tequila",
       "url": "https://www.diffordsguide.com/beer-wine-spirits/7225/fortaleza-blanco-tequila",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "liquor-com-fortaleza-blanco-review",
       "title": "Liquor.com — Fortaleza Blanco Tequila Review",
       "url": "https://www.liquor.com/fortaleza-blanco-tequila-bottle-review-7570583",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "diffords-lost-explorer-espadin",
       "title": "Difford's Guide — The Lost Explorer Espadín Joven Mezcal",
       "url": "https://www.diffordsguide.com/beer-wine-spirits/6892/the-lost-explorer-espadin",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "drinkhacker-lost-explorer-review",
       "title": "Drinkhacker — Review: The Lost Explorer Mezcals, Complete Lineup",
       "url": "https://www.drinkhacker.com/2025/07/29/review-the-lost-explorer-mezcals-espadin-tobala-and-salmiana/",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalistas-bacanora-tradition",
       "title": "Mezcalistas — Bacanora: Another great Mexican distilling tradition",
       "url": "https://www.mezcalistas.com/bacanora-at-agave-heritage-festival/",
-      "kind": "style"
+      "kind": "style",
+      "verified": "2026-10-20"
     },
     {
       "id": "sunora-bacanora",
       "title": "Sunora Bacanora — Agave Pacifica spirit of Sonora",
       "url": "https://www.sunorabacanora.com/",
-      "kind": "producer"
+      "kind": "producer",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalistas-tepua-tasting",
       "title": "Mezcalistas — Rancho Tepua Bacanora tasting notes",
       "url": "https://www.mezcalistas.com/rancho-tepua-bacanora-tasting-notes/",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalreviews-tepua-blanco",
       "title": "Mezcal Reviews — Rancho Tepúa Bacanora Blanco",
       "url": "https://www.mezcalreviews.com/mezcal/rancho-tepua-bacanora-blanco/",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalreviews-raicilla-category",
       "title": "Mezcal Reviews — Raicilla category overview (Costa and Sierra types)",
       "url": "https://www.mezcalreviews.com/filter-by/category/raicilla/",
-      "kind": "style"
+      "kind": "style",
+      "verified": "2026-10-20"
     },
     {
       "id": "casaendemica-brands",
       "title": "Casa Endémica — La Venenosa raicilla range",
       "url": "https://www.casaendemica.com/",
-      "kind": "producer"
+      "kind": "producer",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalreviews-lavenenosa-tabernas",
       "title": "Mezcal Reviews — La Venenosa Tabernas Edición I (member tasting notes)",
       "url": "https://www.mezcalreviews.com/mezcal/la-venenosa-raicilla-tabernas/",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "wikipedia-raicilla",
       "title": "Wikipedia — Raicilla (Denomination of Origin, process and types)",
       "url": "https://en.wikipedia.org/wiki/Raicilla",
-      "kind": "style"
+      "kind": "style",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalreviews-cielo-rojo",
       "title": "Mezcal Reviews — Cielo Rojo Bacanora Blanco",
       "url": "https://www.mezcalreviews.com/mezcal/cielo-rojo-bacanora-blanco/",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "tequilanet-cielo-rojo",
       "title": "TEQUILA.net — Review: Cielo Rojo Bacanora Blanco",
       "url": "https://www.tequila.net/other-reviews/spirits/cielo-rojo-bacanora-blanco.html",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalreviews-kilinga",
       "title": "Mezcal Reviews — Kilinga Bacanora Silvestre",
       "url": "https://www.mezcalreviews.com/mezcal/kilinga-bacanora-silvestre/",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "puntagave-cielo-rojo",
       "title": "Puntagave — Cielo Rojo Bacanora (producer)",
       "url": "https://www.puntagave.com/bacanora",
-      "kind": "producer"
+      "kind": "producer",
+      "verified": "2026-10-20"
     },
     {
       "id": "mexicanspiritsbible-tuxca",
       "title": "Mexican Spirits Bible — Tuxca (category and production definition)",
       "url": "https://mexicanspiritsbible.com/en/spirits/tuxca",
-      "kind": "style"
+      "kind": "style",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalistas-balancan-tasting",
       "title": "Mezcalistas — Balancán Tuxca Artesanal tasting notes",
       "url": "https://www.mezcalistas.com/balancan-tuxca-artesanal-tasting-notes/",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalreviews-balancan-tuxca",
       "title": "Mezcal Reviews — Balancan Tuxca (member tasting notes)",
       "url": "https://www.mezcalreviews.com/mezcal/balancan-tuxca/",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "backalley-comiteco",
       "title": "Back Alley Imports — Comiteco and Chiapas (category, history, production)",
       "url": "https://www.backalleyimports.com/comiteco-and-chiapas/",
-      "kind": "style"
+      "kind": "style",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalreviews-9guardianes-blanco",
       "title": "Mezcal Reviews — 9 Guardianes Comiteco Blanco",
       "url": "https://www.mezcalreviews.com/mezcal/9-guardianes-comiteco-blanco/",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "skurnik-estancia",
       "title": "Skurnik Wines & Spirits — Destilado de Pulque, Estancia Distillery (producer facts and tasting notes)",
       "url": "https://www.skurnik.com/sku/destilado-de-pulque-estancia-distillery/",
-      "kind": "producer"
+      "kind": "producer",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalreviews-estancia-pulque",
       "title": "Mezcal Reviews — Estancia Destilado de Pulque",
       "url": "https://www.mezcalreviews.com/mezcal/estancia-destilado-de-pulque/",
-      "kind": "review"
+      "kind": "review",
+      "verified": "2026-10-20"
     },
     {
       "id": "mezcalistas-juerte",
       "title": "Mezcalistas — Juerte tasting notes (destilado de pulque category context)",
       "url": "https://www.mezcalistas.com/juerte-tasting-notes/",
-      "kind": "style"
+      "kind": "style",
+      "verified": "2026-10-20"
     }
   ]
 }

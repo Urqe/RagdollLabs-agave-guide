@@ -86,3 +86,42 @@ test("release 9: new traditions pass the same map gate (state ids valid)", async
     assert.ok(svg.includes(`data-state="${profile.stateId}"`), `${profile.stateId} exists on the map`);
   }
 });
+
+test("release 10: sources carry verification dates", () => {
+  for (const src of sources) {
+    assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(src.verified || ""), `${src.id} has a verified date`);
+  }
+});
+
+test("release 10: coordinates are in Mexico and labeled approximate", () => {
+  for (const profile of profiles) {
+    const c = profile.placeCoords;
+    if (!c) continue;
+    assert.ok(c.lat >= 14.5 && c.lat <= 32.6, `${profile.id} lat in Mexico`);
+    assert.ok(c.lon >= -118.4 && c.lon <= -86.7, `${profile.id} lon in Mexico`);
+    assert.ok(c.precision.toLowerCase().includes("approximate"), `${profile.id} precision is honest`);
+  }
+});
+
+test("release 10: missing ABV is explicitly noted, never silently blank", () => {
+  for (const bottle of bottles) {
+    if (bottle.abv == null) {
+      assert.ok(bottle.abvNote, `${bottle.id} notes its undocumented ABV`);
+    } else {
+      assert.ok(!bottle.abvNote, `${bottle.id} has no redundant abvNote`);
+    }
+  }
+});
+
+test("release 10: backlog maintains uncovered expressions and missing profiles", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const path = await import("node:path");
+  const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+  const backlog = JSON.parse(await readFile(path.join(root, "assets/data/backlog.json"), "utf8"));
+  assert.ok(backlog.backlog.length >= 5, "backlog entries recorded");
+  for (const entry of backlog.backlog) {
+    assert.ok(entry.kind && entry.item && entry.reason, "each entry has kind, item and reason");
+  }
+  // Costa raicilla gap is tracked (its bottle exists without a profile).
+  assert.ok(backlog.backlog.some((e) => e.item.includes("Costa raicilla")));
+});

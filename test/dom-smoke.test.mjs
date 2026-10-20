@@ -194,7 +194,7 @@ test("profile view renders all sections and the example bottle card", () => {
   assert.ok(container.querySelector(".profile-category").textContent.includes("Tequila"));
   assert.ok(container.querySelector(".beginner-note").textContent.length > 0);
   assert.ok(container.querySelector(".profile-context").textContent.length > 0);
-  assert.ok(container.querySelector(".editorial-note").textContent.includes("Editorial style guidance"));
+  assert.ok([...container.querySelectorAll(".editorial-note")].some((n) => n.textContent.includes("Editorial style guidance")));
   assert.equal(container.querySelectorAll(".taste-list li").length, profile.tasteNotes.length);
   assert.ok(container.querySelector(".profile-body").textContent.includes("Light"));
   assert.ok(container.querySelector(".profile-finish").textContent.length > 0);

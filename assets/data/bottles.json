@@ -121,7 +121,8 @@
       "sourceIds": [
         "casaendemica-brands"
       ],
-      "coverageNote": "Coastal raicilla is a distinct editorial tradition from the Sierra profile in this app: coastal producers cook agave (angustifolia, rhodacantha) in underground pits rather than above-ground adobe ovens, so it is not covered by the Sierra profile. Listed here as a factual catalogue entry."
+      "coverageNote": "Coastal raicilla is a distinct editorial tradition from the Sierra profile in this app: coastal producers cook agave (angustifolia, rhodacantha) in underground pits rather than above-ground adobe ovens, so it is not covered by the Sierra profile. Listed here as a factual catalogue entry.",
+      "abvNote": "ABV not documented in cited sources"
     },
     {
       "id": "balancan-tuxca",
@@ -136,7 +137,8 @@
       "sourceIds": [
         "mezcalistas-balancan-tasting",
         "mezcalreviews-balancan-tuxca"
-      ]
+      ],
+      "abvNote": "ABV not documented in cited sources"
     },
     {
       "id": "nine-guardianes-comiteco-blanco",
@@ -152,7 +154,8 @@
       "sourceIds": [
         "backalley-comiteco",
         "mezcalreviews-9guardianes-blanco"
-      ]
+      ],
+      "abvNote": "ABV not documented in cited sources"
     },
     {
       "id": "estancia-destilado-de-pulque",

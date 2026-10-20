@@ -50,6 +50,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
   const facts = el("ul", { class: "catalogue-facts" });
   facts.appendChild(el("li", {}, `Spirit: ${SPIRIT_LABELS[bottle.spirit] || bottle.spirit || "not documented"}`));
   if (bottle.abv != null) facts.appendChild(el("li", {}, `ABV: ${bottle.abv}% (label fact)`));
+  if (bottle.abv == null && bottle.abvNote) facts.appendChild(el("li", {}, `ABV: ${bottle.abvNote}`));
   if (bottle.producer) facts.appendChild(el("li", {}, `Producer: ${bottle.producer}`));
   if (bottle.place) facts.appendChild(el("li", {}, `Place: ${bottle.place}`));
   if (bottle.batch) facts.appendChild(el("li", {}, `Batch/version: ${bottle.batch}`));

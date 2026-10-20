@@ -52,6 +52,16 @@ for (const p of profiles) {
   if (p.process !== undefined && typeof p.process !== "string") fail(`${label}: process must be a string when present`);
   if (p.category !== undefined && typeof p.category !== "string") fail(`${label}: category must be a string when present`);
   if (p.beginnerNote !== undefined && typeof p.beginnerNote !== "string") fail(`${label}: beginnerNote must be a string when present`);
+  if (p.placeCoords !== undefined) {
+    const c = p.placeCoords;
+    if (typeof c.lat !== "number" || typeof c.lon !== "number") fail(`${label}: placeCoords requires numeric lat/lon`);
+    else if (c.lat < 14.5 || c.lat > 32.6 || c.lon < -118.4 || c.lon > -86.7) {
+      fail(`${label}: placeCoords outside Mexico's bounding box`);
+    }
+    if (typeof c.precision !== "string" || !c.precision.toLowerCase().includes("approximate")) {
+      fail(`${label}: placeCoords requires an honest precision label containing "approximate"`);
+    }
+  }
   if (p.aliases !== undefined) {
     if (!Array.isArray(p.aliases) || p.aliases.some((a) => typeof a !== "string" || !a.trim())) {
       fail(`${label}: aliases must be an array of non-empty strings when present`);
@@ -110,6 +120,8 @@ for (const b of bottles) {
   if (b.profileId === undefined) fail(`${label}: profileId is required (null means no profile coverage yet)`);
   if (b.batch !== undefined && typeof b.batch !== "string") fail(`${label}: batch must be a string when present`);
   if (b.composition !== undefined && typeof b.composition !== "string") fail(`${label}: composition must be a string when present`);
+  if (b.abv == null && !b.abvNote) fail(`${label}: missing ABV requires an abvNote saying it is not documented`);
+  if (b.abv != null && b.abvNote) fail(`${label}: abvNote must be omitted when the ABV is documented`);
   if (b.spirit === "comiteco" && !b.composition) {
     fail(`${label}: comiteco bottles must carry a composition disclosure (agave vs cane-source facts)`);
   }
@@ -162,6 +174,9 @@ for (const s of sources) {
   if (!VALID_KINDS.has(s.kind)) fail(`${label}: kind must be style, producer or review`);
   if (s.author !== undefined && typeof s.author !== "string") fail(`${label}: author must be a string when present`);
   if (s.date !== undefined && typeof s.date !== "string") fail(`${label}: date must be a string when present`);
+  if (!s.verified || !/^\d{4}-\d{2}-\d{2}$/.test(s.verified)) {
+    fail(`${label}: verified (ISO date the source was last checked) is required`);
+  }
 }
 
 // Duplicate or ambiguous bottle names: brand + expression must be unique

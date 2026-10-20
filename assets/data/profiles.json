@@ -38,6 +38,11 @@
         "pepper": "medium",
         "oak": "none",
         "finishLength": "medium"
+      },
+      "placeCoords": {
+        "lat": 20.9,
+        "lon": -103.84,
+        "precision": "town (Tequila, Jalisco); approximate"
       }
     },
     {
@@ -78,6 +83,11 @@
         "pepper": "low",
         "oak": "none",
         "finishLength": "high"
+      },
+      "placeCoords": {
+        "lat": 16.86,
+        "lon": -96.12,
+        "precision": "municipality (Santiago Matatlán area); approximate"
       }
     },
     {
@@ -117,6 +127,11 @@
         "pepper": "medium",
         "oak": "none",
         "finishLength": "medium"
+      },
+      "placeCoords": {
+        "lat": 29.79,
+        "lon": -110.16,
+        "precision": "municipality (Aconchi, Sonora); approximate"
       }
     },
     {
@@ -156,6 +171,11 @@
         "pepper": "low",
         "oak": "none",
         "finishLength": "medium"
+      },
+      "placeCoords": {
+        "lat": 20.09,
+        "lon": -104.58,
+        "precision": "region (Sierra Occidental, Jalisco); approximate"
       }
     },
     {
@@ -198,7 +218,12 @@
         "mexicanspiritsbible-tuxca",
         "mezcalistas-balancan-tasting",
         "mezcalreviews-balancan-tuxca"
-      ]
+      ],
+      "placeCoords": {
+        "lat": 19.87,
+        "lon": -103.58,
+        "precision": "municipality (Tuxcacuesco, Jalisco); approximate"
+      }
     },
     {
       "id": "comiteco-aguamiel-chiapas",
@@ -237,7 +262,12 @@
       "sourceIds": [
         "backalley-comiteco",
         "mezcalreviews-9guardianes-blanco"
-      ]
+      ],
+      "placeCoords": {
+        "lat": 16.25,
+        "lon": -92.13,
+        "precision": "municipality (Comitán de Domínguez, Chiapas); approximate"
+      }
     },
     {
       "id": "destilado-de-pulque-salmiana-tlaxcala",
@@ -279,7 +309,12 @@
         "skurnik-estancia",
         "mezcalreviews-estancia-pulque",
         "mezcalistas-juerte"
-      ]
+      ],
+      "placeCoords": {
+        "lat": 19.31,
+        "lon": -98.23,
+        "precision": "municipality (Nanacamilpa, Tlaxcala); approximate"
+      }
     }
   ]
 }
