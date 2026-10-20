@@ -730,3 +730,58 @@ note:" ("Para esta botella:" / "Para la nota editorial:" in Spanish).
 Entries without editorial notes keep a single group. Reviewer evidence
 and the app's editorial synthesis stay distinguishable \u2014 one click,
 clear provenance. Verified in a real-app boot; all 59 suites passing.
+
+## Release 14 — Localization Review & Fixes
+
+Maintenance release per the plan: audit of Spanish terminology,
+translated layouts, search, sorting, missing translations, route
+stability, mobile readability and accessibility.
+
+### Findings and fixes
+
+- **Untranslated surfaces (defect found):** the Compare view and the
+  Home view bypassed the locale system entirely \u2014 every string was
+  hardcoded English even in ES mode. Both now go through the string
+  bundles: "Compara estilos", "Elige al menos dos perfiles",
+  "Mayores diferencias", "Quitar", the home heading/intro/CTA
+  ("Gu\u00eda de estilos de destilados de agave", "Explora el mapa de
+  M\u00e9xico \u2192").
+- **Sensory levels and moods (defect found):** compare tables showed
+  None/Low/Medium/High and profile mood labels in English only. New
+  `locale.level()` and `locale.mood()` helpers translate them \u2014
+  "Nada/Bajo/Medio/Alto", "Con humo", "Limpio y herbal", "Final largo",
+  "Jard\u00edn del desierto".
+- **Bundle parity (verified + enforced):** EN and ES key sets are
+  identical; a raw-key leak check is part of the new regression tests
+  (no "compare." keys ever render into cells).
+- **Terminology (verified, no defect):** Mexican Spanish usage holds
+  \u2014 destilados de agave, botella de ejemplo, notas de cata; ABV kept
+  as the universal label term; no es-Mexico spelling errors found.
+- **Route stability (verified, no defect):** locale still never touches
+  routes/IDs; compare selections survive language switches.
+- **Mobile & accessibility (verified, no defect):** translated strings
+  flow through the same responsive containers; the disclosure and
+  toggle controls remain keyboard accessible.
+- The untranslated-content disclosure does not render anywhere \u2014
+  every shipped UI string now has a reviewed Spanish translation.
+
+### Checks run
+
+- `npm run validate` \u2014 schema plus 61 node:test/jsdom suites (2 new
+  Spanish compare/mood regression tests). All passing.
+- Real-app ES boot smoke: home, compare (levels "Nada | Medio | \u2026",
+  "Quitar" buttons, "Mayores diferencias"), and profile moods all
+  render in Spanish with no raw keys and no untranslated note.
+
+### Remaining issues / deferred
+
+- Entity content (profile/bottle prose) remains authored-language by
+  design; a content-translation increment can be scheduled from the
+  backlog.
+- Native-device rendering still unverified in this environment.
+
+### Next pair
+
+Per the plan's cadence, the next feature increment candidate from the
+backlog is D'Anta\u00f1o as a disclosed-composition catalogue entry
+(agave + cane), followed by its maintenance review.

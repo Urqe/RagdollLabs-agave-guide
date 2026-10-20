@@ -30,6 +30,19 @@ const STRINGS = {
     "compare.oneMore": "One more pick starts the comparison.",
     "compare.remove": "Remove",
     "compare.biggestDiffs": "Biggest differences",
+    "compare.noDiffs": "No documented differences large enough to highlight.",
+    "compare.notDocumented": "Not documented",
+    "compare.removeLabel": "Remove",
+    "level.none": "None",
+    "level.low": "Low",
+    "level.medium": "Medium",
+    "level.high": "High",
+    "mood.smoke-forward": "Smoke-forward",
+    "mood.clean-herbal": "Clean & herbal",
+    "mood.round-fruity": "Round & fruity",
+    "mood.peppery-savory": "Peppery & savory",
+    "mood.long-finish": "Long finish",
+    "mood.desert-garden": "Desert garden",
     "catalogue.heading": "Bottle catalogue",
     "catalogue.intro": "Every bottle entry keeps the brand, the actual producer and the exact expression as separate facts. Reviewer impressions are attributed to their source; the app's own profile-relative notes are labeled editorial; factual entries without review or profile coverage say so instead of borrowing character.",
     "catalogue.searchPlaceholder": "Search: expression, brand, producer, place\u2026",
@@ -86,6 +99,19 @@ const STRINGS = {
     "compare.oneMore": "Una elecci\u00f3n m\u00e1s inicia la comparaci\u00f3n.",
     "compare.remove": "Quitar",
     "compare.biggestDiffs": "Mayores diferencias",
+    "compare.noDiffs": "No hay diferencias documentadas lo bastante grandes para destacar.",
+    "compare.notDocumented": "No documentado",
+    "compare.removeLabel": "Quitar",
+    "level.none": "Nada",
+    "level.low": "Bajo",
+    "level.medium": "Medio",
+    "level.high": "Alto",
+    "mood.smoke-forward": "Con humo",
+    "mood.clean-herbal": "Limpio y herbal",
+    "mood.round-fruity": "Redondo y afrutado",
+    "mood.peppery-savory": "Especiado y sabroso",
+    "mood.long-finish": "Final largo",
+    "mood.desert-garden": "Jardín del desierto",
     "catalogue.heading": "Cat\u00e1logo de botellas",
     "catalogue.intro": "Cada entrada mantiene la marca, el productor real y la expresi\u00f3n exacta como datos separados. Las impresiones de los revisores se atribuyen a su fuente; las notas editoriales de la app se etiquetan como tales; las entradas f\u00e1cticas sin rese\u00f1a o cobertura de perfil lo declaran en lugar de tomar car\u00e1cter prestado.",
     "catalogue.searchPlaceholder": "Buscar: expresi\u00f3n, marca, productor, lugar\u2026",
@@ -147,6 +173,19 @@ export function createLocale() {
     },
     /** True when the active locale lacks reviewed strings (for disclosure). */
     hasMissing() { return current !== "en" && missing.size > 0; },
+    /** Translate an editorial mood label ("Smoke-forward" etc.). */
+    mood(name) {
+      const key = "mood." + String(name).toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "");
+      const bundle = STRINGS[current] || STRINGS.en;
+      return bundle[key] ?? name;
+    },
+    /** Translate a sensory level (None/Low/Medium/High). */
+    level(level) {
+      if (level === null || level === undefined) return null;
+      const key = "level." + level;
+      const bundle = STRINGS[current] || STRINGS.en;
+      return bundle[key] ?? level;
+    },
     /** Locale-aware alphabetical comparison for lists. */
     compare(a, b) { return String(a).localeCompare(String(b), current === "es" ? "es" : "en"); },
     /** Locale-aware sort helper. */

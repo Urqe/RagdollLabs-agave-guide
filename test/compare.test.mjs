@@ -18,6 +18,8 @@ globalThis.Event = dom.window.Event;
 const { biggestDifferences, missingDimensions, flavorMoods, ifYouLikeThis, levelOf, DIMENSIONS } =
   await import("../assets/js/compare.js");
 const { renderCompare } = await import("../assets/js/compare-view.js");
+const { createLocale } = await import("../assets/js/locale.js");
+const enLocale = createLocale();
 
 /**
  * Deterministic fixtures for explanation invariants. These do NOT depend
@@ -112,19 +114,19 @@ test("compare view: picker, table, remove controls, missing-data note", () => {
   ];
 
   // Empty state
-  renderCompare(container, { profiles, compareIds: "", onSelectionChange: (ids) => changes.push(ids) });
+  renderCompare(container, { profiles, locale: enLocale, compareIds: "", onSelectionChange: (ids) => changes.push(ids) });
   assert.ok(container.textContent.includes("Pick at least two profiles"));
   container.textContent = "";
 
   // One pick: prompt for one more, no table yet
-  renderCompare(container, { profiles, compareIds: "a", onSelectionChange: (ids) => changes.push(ids) });
+  renderCompare(container, { profiles, locale: enLocale, compareIds: "a", onSelectionChange: (ids) => changes.push(ids) });
   assert.ok(container.textContent.includes("One more pick"));
   assert.equal(container.querySelector(".compare-table"), null);
   container.textContent = "";
 
   // Two picks: full comparison
   profiles[1] = fixture({ id: "b", title: "Profile B", spirit: "mezcal", stateName: "Oaxaca", sensory: { smoke: "high", herbal: "low", pepper: "high", fruit: "low", sweetness: "high", oak: "none", finishLength: "low" } });
-  renderCompare(container, { profiles, compareIds: "a,b", onSelectionChange: (ids) => changes.push(ids) });
+  renderCompare(container, { profiles, locale: enLocale, compareIds: "a,b", onSelectionChange: (ids) => changes.push(ids) });
   assert.ok(container.querySelector(".compare-table"));
   assert.equal(container.querySelectorAll(".compare-remove-button").length, 2);
   assert.ok(container.textContent.includes("Biggest differences"));
@@ -138,7 +140,7 @@ test("compare view: picker, table, remove controls, missing-data note", () => {
 
   // Third slot allowed, fourth refused by disabling
   container.textContent = "";
-  renderCompare(container, { profiles, compareIds: "a,b,c", onSelectionChange: (ids) => changes.push(ids) });
+  renderCompare(container, { profiles, locale: enLocale, compareIds: "a,b,c", onSelectionChange: (ids) => changes.push(ids) });
   assert.equal(container.querySelectorAll("thead th:not([scope]) , thead th[scope]").length - 1, 3);
   const disabled = [...container.querySelectorAll(".compare-pick-button")].filter((b) => b.disabled);
   assert.equal(disabled.length, 3, "all picker buttons disabled when 3 selected");
@@ -152,7 +154,7 @@ test("compare view: missing sensory data renders explicit unknown cells", () => 
     fixture({ id: "a", title: "A" }),
     fixture({ id: "b", title: "B", sensory: { smoke: null } }),
   ];
-  renderCompare(container, { profiles, compareIds: "a,b", onSelectionChange: () => {} });
+  renderCompare(container, { profiles, locale: enLocale, compareIds: "a,b", onSelectionChange: () => {} });
   const unknownCells = container.querySelectorAll(".compare-unknown");
   assert.ok(unknownCells.length > 0);
   assert.ok([...unknownCells].some((c) => c.textContent.includes("Not documented")));
@@ -167,7 +169,7 @@ test("release 6: dedupe, invalid-id pruning and route canonicalization", () => {
     fixture({ id: "b", title: "Profile B", sensory: { smoke: "high" } }),
   ];
   const changes = [];
-  renderCompare(container, { profiles, compareIds: "a,a,not-a-profile", onSelectionChange: (ids) => changes.push(ids) });
+  renderCompare(container, { profiles, locale: enLocale, compareIds: "a,a,not-a-profile", onSelectionChange: (ids) => changes.push(ids) });
   // Duplicates collapse and unknown ids are pruned, canonicalizing the route once.
   assert.deepEqual(changes[changes.length - 1], ["a"]);
   assert.equal(container.querySelector(".compare-table"), null, "no table with one valid profile");
@@ -182,7 +184,7 @@ test("release 6: duplicate route ids never render duplicate columns", () => {
     fixture({ id: "a", title: "Profile A" }),
     fixture({ id: "b", title: "Profile B", sensory: { smoke: "high" } }),
   ];
-  renderCompare(container, { profiles, compareIds: "a,a,b", onSelectionChange: () => {} });
+  renderCompare(container, { profiles, locale: enLocale, compareIds: "a,a,b", onSelectionChange: () => {} });
   const columns = container.querySelectorAll("thead th[scope]");
   assert.equal(columns.length - 1, 2, "exactly two columns for a,a,b");
   const titles = [...columns].slice(1).map((c) => c.textContent);
@@ -198,7 +200,7 @@ test("release 6: live announcements on add and remove", () => {
     fixture({ id: "b", title: "Profile B", sensory: { smoke: "high" } }),
   ];
   const changes = [];
-  renderCompare(container, { profiles, compareIds: "a", onSelectionChange: (ids) => changes.push(ids) });
+  renderCompare(container, { profiles, locale: enLocale, compareIds: "a", onSelectionChange: (ids) => changes.push(ids) });
   const status = container.querySelector(".compare-status");
   assert.equal(status.getAttribute("role"), "status");
 
@@ -208,7 +210,7 @@ test("release 6: live announcements on add and remove", () => {
 
   // After re-render with the new route, removing announces too.
   container.textContent = "";
-  renderCompare(container, { profiles, compareIds: "a,b", onSelectionChange: (ids) => changes.push(ids) });
+  renderCompare(container, { profiles, locale: enLocale, compareIds: "a,b", onSelectionChange: (ids) => changes.push(ids) });
   const status2 = container.querySelector(".compare-status");
   const removeButton = container.querySelector(".compare-remove-button");
   removeButton.dispatchEvent(new window.Event("click", { bubbles: true }));
@@ -225,7 +227,7 @@ test("release 6: focus restores to the acted-on picker button", () => {
   ];
   // After removing profile A, its picker button is enabled again and focus
   // lands on it, so keyboard users keep their place.
-  renderCompare(container, { profiles, compareIds: "b", focusProfileId: "a", onSelectionChange: () => {} });
+  renderCompare(container, { profiles, locale: enLocale, compareIds: "b", focusProfileId: "a", onSelectionChange: () => {} });
   const focused = document.activeElement;
   assert.equal(focused && focused.dataset ? focused.dataset.profileId : null, "a");
   container.remove();

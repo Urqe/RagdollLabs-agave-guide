@@ -16,12 +16,6 @@ const SPIRIT_LABELS = {
   raicilla: "Raicilla",
 };
 
-const LEVEL_LABELS = {
-  none: "None",
-  low: "Low",
-  medium: "Medium",
-  high: "High",
-};
 
 function parseIds(raw) {
   const seen = new Set();
@@ -57,12 +51,12 @@ function slotSelector(profiles, selectedIds, onPick) {
   return list;
 }
 
-function levelCell(profile, dimKey) {
+function levelCell(profile, dimKey, t) {
   const level = levelOf(profile, dimKey);
   if (level === null || level === undefined) {
-    return el("td", { class: "compare-unknown" }, "Not documented");
+    return el("td", { class: "compare-unknown" }, t("compare.notDocumented"));
   }
-  return el("td", {}, LEVEL_LABELS[level] || level);
+  return el("td", {}, t(`level.${level}`) || level);
 }
 
 /**
@@ -71,7 +65,7 @@ function levelCell(profile, dimKey) {
  * missing-data notes. Selections live in the route (#/compare/a,b,c) so
  * they survive reload, sharing and Back/Forward.
  */
-export function renderCompare(container, { profiles, compareIds, onSelectionChange, focusProfileId = null }) {
+export function renderCompare(container, { profiles, compareIds, onSelectionChange, focusProfileId = null, locale = null }) {
   clear(container);
   const byId = new Map(profiles.map((p) => [p.id, p]));
   const parsedIds = parseIds(compareIds);
@@ -84,9 +78,9 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   }
 
   const section = el("section", { class: "compare-view", "aria-labelledby": "compare-heading" });
-  section.appendChild(el("h2", { id: "compare-heading" }, "Compare styles"));
-  section.appendChild(el("p", { class: "view-intro" },
-    "Compare two or three editorial style profiles side by side. Sensory levels are editorial impressions — perceived sweetness is not measured sugar, smoke is not peat content, and ABV stays a factual property. Choosing an example bottle never turns these profile levels into bottle measurements."));
+  const t = (key) => (locale ? locale.t(key) : key);
+  section.appendChild(el("h2", { id: "compare-heading" }, t("compare.heading")));
+  section.appendChild(el("p", { class: "view-intro" }, t("compare.intro")));
 
   // Picker
   const status = el("p", { class: "compare-status", role: "status", "aria-live": "polite" });
@@ -111,7 +105,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
 
   if (selected.length === 0) {
     announce("No profiles selected.");
-    section.appendChild(el("p", { class: "compare-empty" }, "Pick at least two profiles to compare."));
+    section.appendChild(el("p", { class: "compare-empty" }, t("compare.pick")));
     container.appendChild(section);
     restoreFocus(pickerHolder, focusProfileId);
     return;
@@ -119,7 +113,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
 
   if (selected.length === 1) {
     announce(`1 profile selected: ${selected[0].title}.`);
-    section.appendChild(el("p", { class: "compare-empty" }, "One more pick starts the comparison."));
+    section.appendChild(el("p", { class: "compare-empty" }, t("compare.oneMore")));
     container.appendChild(section);
     restoreFocus(pickerHolder, focusProfileId);
     return;
@@ -138,8 +132,8 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
       type: "button",
       class: "compare-remove-button",
       dataset: { profileId: profile.id },
-      "aria-label": `Remove ${profile.title} from comparison`,
-    }, "Remove");
+      "aria-label": `${t("compare.removeLabel")}: ${profile.title}`,
+    }, t("compare.removeLabel"));
     removeButton.addEventListener("click", () => pick(profile.id));
     th.appendChild(removeButton);
     headRow.appendChild(th);
@@ -152,7 +146,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
     const row = el("tr", {});
     const th = el("th", { scope: "row", title: hint }, label);
     row.appendChild(th);
-    for (const profile of selected) row.appendChild(levelCell(profile, key));
+    for (const profile of selected) row.appendChild(levelCell(profile, key, t));
     tbody.appendChild(row);
   }
   table.appendChild(tbody);
@@ -169,20 +163,20 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   // Biggest differences
   const diffs = biggestDifferences(selected);
   if (diffs.length > 0) {
-    const diffHeading = el("h3", {}, "Biggest differences");
+    const diffHeading = el("h3", {}, t("compare.biggestDiffs"));
     section.appendChild(diffHeading);
     const diffList = el("ul", { class: "compare-diff-list" });
     for (const diff of diffs) {
       const item = el("li", {});
       item.appendChild(el("strong", {}, `${diff.label}: `));
       item.appendChild(document.createTextNode(
-        selected.map((p, i) => `${p.title} — ${LEVEL_LABELS[diff.levels[i]] || "not documented"}`).join("; ")
+        selected.map((p, i) => `${p.title} — ${t(`level.${diff.levels[i]}`) || t("compare.notDocumented")}`).join("; ")
       ));
       diffList.appendChild(item);
     }
     section.appendChild(diffList);
   } else {
-    section.appendChild(el("p", { class: "compare-empty" }, "No documented differences large enough to highlight."));
+    section.appendChild(el("p", { class: "compare-empty" }, t("compare.noDiffs")));
   }
 
   // Explicit missing-data note

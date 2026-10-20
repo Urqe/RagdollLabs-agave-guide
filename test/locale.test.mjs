@@ -57,3 +57,46 @@ test("untranslated content is disclosed, not silent", () => {
   locale.t("some.key.that.does.not.exist");
   assert.equal(locale.hasMissing(), true);
 });
+
+test("release 14: compare view fully translates in Spanish", async () => {
+  localStorage.clear();
+  const { readFile: rf } = await import("node:fs/promises");
+  const path = await import("node:path");
+  const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+  const profiles = JSON.parse(await rf(path.join(root, "assets/data/profiles.json"), "utf8")).profiles;
+  const { renderCompare } = await import("../assets/js/compare-view.js");
+  const es = createLocale();
+  es.set("es");
+
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  const withGap = { ...profiles[0], sensory: { ...profiles[0].sensory, smoke: null } };
+  const ids = [profiles[0].id, profiles[1].id].join(",");
+  renderCompare(container, { profiles: [withGap, profiles[1]], locale: es, compareIds: ids, onSelectionChange: () => {} });
+
+  assert.equal(container.querySelector("#compare-heading").textContent, "Compara estilos");
+  const cells = [...container.querySelectorAll(".compare-table tbody td")].map((c) => c.textContent);
+  assert.ok(cells.includes("Nada") || cells.includes("Medio") || cells.includes("Bajo"), "levels translated");
+  assert.ok(!cells.includes("Not documented"), "no English leakage in cells");
+  assert.ok(!cells.includes("compare."), "no raw keys leak into cells");
+  const remove = container.querySelector(".compare-remove-button");
+  assert.equal(remove.textContent, "Quitar");
+  assert.ok(container.textContent.includes("Mayores diferencias"), "diffs heading translated");
+  assert.equal(container.querySelector(".compare-unknown")?.textContent, "No documentado");
+  container.remove();
+});
+
+test("release 14: moods translate via locale.mood and home via strings", () => {
+  localStorage.clear();
+  const es = createLocale();
+  es.set("es");
+  assert.equal(es.mood("Smoke-forward"), "Con humo");
+  assert.equal(es.mood("Clean & herbal"), "Limpio y herbal");
+  assert.equal(es.mood("Long finish"), "Final largo");
+  assert.equal(es.t("home.heading"), "Gu\u00eda de estilos de destilados de agave");
+  assert.equal(es.t("home.cta"), "Explora el mapa de M\u00e9xico \u2192");
+  // EN unchanged (fresh storage so the persisted ES choice does not leak in)
+  localStorage.clear();
+  const en = createLocale();
+  assert.equal(en.mood("Smoke-forward"), "Smoke-forward");
+});

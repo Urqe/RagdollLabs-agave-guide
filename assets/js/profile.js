@@ -112,7 +112,9 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   if (moods.length > 0) {
     const moodLine = el("p", { class: "mood-line" });
     moodLine.appendChild(el("strong", {}, t("profile.moods") + " "));
-    moodLine.appendChild(document.createTextNode(moods.join(", ") + "."));
+    moodLine.appendChild(document.createTextNode(
+      moods.map((m) => (locale ? locale.mood(m) : m)).join(", ") + "."
+    ));
     section.appendChild(moodLine);
   }
 
