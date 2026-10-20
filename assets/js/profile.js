@@ -2,7 +2,7 @@ import { el, safeLink, clear } from "./dom-utils.js";
 import { STATE_NAMES } from "./map.js";
 import { flavorMoods, ifYouLikeThis } from "./compare.js";
 import { bottlesForProfile } from "./catalogue.js";
-import { SPIRIT_LABELS } from "./spirit-labels.js";
+import { SPIRIT_LABELS } from "./spirit-labels.js";;
 
 const BODY_LABELS = { light: "Light body", medium: "Medium body", full: "Full body" };
 
@@ -37,8 +37,24 @@ function exampleBottleCard(bottle, sources, t) {
   card.appendChild(el("p", { class: "bottle-review" }, bottle.reviewSummary));
   const linksLabel = el("p", { class: "bottle-links-label" }, t("profile.sourcesBottle"));
   card.appendChild(linksLabel);
-  card.appendChild(sourceLinks(sources, bottle.sourceIds));
+  card.appendChild(collapsibleBottleSources(sources, bottle, t));
   return card;
+}
+
+/**
+ * Bottle reference links stay available but collapsed out of the reading
+ * flow, mirroring the catalogue's source disclosure pattern.
+ */
+function collapsibleBottleSources(sources, bottle, t) {
+  const details = el("details", { class: "source-details" });
+  const total = (bottle.sourceIds || []).length + (bottle.noteSourceIds || []).length;
+  details.appendChild(el("summary", {}, `${t("learn.sources")} (${total})`));
+  details.appendChild(sourceLinks(sources, bottle.sourceIds));
+  if (bottle.noteSourceIds && bottle.noteSourceIds.length > 0) {
+    details.appendChild(el("p", { class: "source-group-label" }, t("catalogue.groupNote")));
+    details.appendChild(sourceLinks(sources, bottle.noteSourceIds));
+  }
+  return details;
 }
 
 /**

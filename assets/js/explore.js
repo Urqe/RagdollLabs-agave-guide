@@ -2,18 +2,43 @@ import { el, clear } from "./dom-utils.js";
 import { renderMap, shadeCovered, STATE_NAMES } from "./map.js";
 import { navigateTo } from "./router.js";
 import { searchProfiles } from "./search.js";
-import { SPIRIT_LABELS } from "./spirit-labels.js";
+import { SPIRIT_LABELS, SPIRIT_GROUP_ORDER } from "./spirit-labels.js";
 
 const EMPTY_MESSAGE = "No profiles added here yet";
+
+/**
+ * Group profiles by spirit in a logical order (tequila together, raicilla
+ * together, …) so related styles read as neighbors instead of interleaving
+ * by encounter order. Stable within each group by title.
+ */
+export function groupProfilesBySpirit(profiles, compare) {
+  const cmp = compare || ((a, b) => a.localeCompare(b));
+  const rank = (spirit) => {
+    const index = SPIRIT_GROUP_ORDER.indexOf(spirit);
+    return index === -1 ? SPIRIT_GROUP_ORDER.length : index;
+  };
+  return [...profiles].sort((a, b) =>
+    rank(a.spirit) - rank(b.spirit) ||
+    cmp(a.title, b.title)
+  );
+}
 
 function profilesForState(profiles, stateId) {
   return profiles.filter((profile) => profile.stateId === stateId);
 }
 
-function profileList(profiles, stateId = null) {
+function profileList(profiles, stateId = null, locale = null) {
+  const compare = locale ? (a, b) => locale.compare(a, b) : null;
+  const grouped = groupProfilesBySpirit(profiles, compare);
   const list = el("ul", { class: "profile-list" });
-  for (const profile of profiles) {
+  let lastSpirit = null;
+  for (const profile of grouped) {
     const item = el("li");
+    if (profile.spirit !== lastSpirit) {
+      item.appendChild(el("span", { class: "profile-group-label" },
+        SPIRIT_LABELS[profile.spirit] || profile.spirit));
+      lastSpirit = profile.spirit;
+    }
     const suffix = stateId ? `?from=${encodeURIComponent(stateId)}` : "";
     const link = el("a", { href: `#/profile/${encodeURIComponent(profile.id)}${suffix}`, class: "profile-link" });
     link.appendChild(el("span", { class: "profile-link-title" }, profile.title));
@@ -62,7 +87,7 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
       results.appendChild(el("p", { class: "empty-state" }, t("explore.empty")));
       return;
     }
-    results.appendChild(profileList(covered, stateId));
+    results.appendChild(profileList(covered, stateId, locale));
   };
 
   let mapApi = null;

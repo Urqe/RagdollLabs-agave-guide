@@ -423,6 +423,104 @@
       "sourceIds": [
         "mezcalreviews-indio-alonso-tuxca"
       ]
+    },
+    {
+      "id": "clande-sotol-yellow",
+      "brand": "Clande",
+      "producer": "Bienvenido Fernandez (40+ years' experience; learned in clandestine vinatas of the northern Chihuahuan Sierra), Chihuahua",
+      "expression": "Clande Sotol Yellow",
+      "abv": null,
+      "abvNote": "ABV varies by batch (a cited member review lists 46.5% for a March 2018 lot); check your bottle",
+      "spirit": "sotol",
+      "place": "Northern Chihuahuan Sierra, Chihuahua",
+      "batch": "Small batches from wild Dasylirion; the color-coded Clande labels each mark a different sotolero — the yellow label is Bienvenido Fernandez",
+      "profileId": "sotol-chihuahua",
+      "reviewSummary": "Mezcal Reviews members call the Yellow their favorite of the Clande line — pure magic in aroma and flavor, and for one reviewer their favorite sotol tried thus far; the brand's terroir-driven project supports small local producers and Dasylirion conservation.",
+      "sourceIds": [
+        "mezcalreviews-clande-yellow",
+        "wikipedia-sotol"
+      ]
+    },
+    {
+      "id": "hacienda-de-chihuahua-sotol-anejo",
+      "brand": "Hacienda de Chihuahua",
+      "producer": "Vinomex (master distiller José Daumas Gil de Partearroyo), Delicias, Chihuahua",
+      "expression": "Sotol Añejo",
+      "abv": null,
+      "abvNote": "ABV not stated on the cited review page; the producer's aged line is lower-ABV per member notes — check your bottle",
+      "spirit": "sotol",
+      "place": "Delicias, Chihuahua",
+      "batch": "100% wild-harvested Dasylirion, steam-cooked, triple-distilled in double-column copper, then aged 2 years in new French white oak; USDA organic and Kosher certified",
+      "profileId": "sotol-chihuahua",
+      "reviewSummary": "A Mezcal Reviews member finds a medicinal-herbal character with brown sugar and anise and a very slight bitter finish — a light summer sipper comparable to fine añejo tequilas but deeper; the producer runs a Dasylirion conservation program.",
+      "sourceIds": [
+        "mezcalreviews-hacienda-chihuahua-anejo",
+        "wikipedia-sotol"
+      ]
+    },
+    {
+      "id": "bacatt-bacanora",
+      "brand": "Bacatt",
+      "producer": "Bacatt (small-batch Sonoran bacanora), Sonora",
+      "expression": "Bacatt Bacanora",
+      "abv": null,
+      "abvNote": "Small-lot production; ABV varies (the cited review is from lot 2305) — check your bottle",
+      "spirit": "bacanora",
+      "place": "Sonora",
+      "batch": "Traditional underground-oven roasted maguey pacifica; lot 2305, bottle 242 of the cited run",
+      "profileId": "bacanora-pacifica-sierra-sonora",
+      "reviewSummary": "A Mezcal Reviews member describes wet grass after a rainstorm, woody sweetness and minerality on the nose; the palate shifts between a sweet mesquite-oak note with a minty finish and a peppery cookies-and-cream note — a souvenir-worthy bottle they now save for special occasions.",
+      "sourceIds": [
+        "mezcalreviews-bacatt"
+      ]
+    },
+    {
+      "id": "sunora-bacanora-blanco",
+      "brand": "Sunora",
+      "producer": "Sunora (small-batch, several generations of bacanora makers), Sonora",
+      "expression": "Bacanora Blanco",
+      "abv": null,
+      "abvNote": "ABV not documented on the cited review page — check your bottle",
+      "spirit": "bacanora",
+      "place": "Sonora",
+      "batch": "Maguey pacifica roasted 48 hours in underground ovens (mallas), stone-wheel crushed, fermented 6-12 days, triple-distilled",
+      "profileId": "bacanora-pacifica-sierra-sonora",
+      "reviewSummary": "Mezcal Reviews members describe jalapeño, watermelon and cream cheese with roasted agave piña and sourdough on the nose; grilled artichoke, charred asparagus, wet stone and turkey-jerky meatiness on the palate with a light earthy smoke — a solid introduction to the category.",
+      "sourceIds": [
+        "mezcalreviews-sunora-blanco"
+      ]
+    },
+    {
+      "id": "la-nina-del-mezcal-bacanora",
+      "brand": "La Niña del Mezcal",
+      "producer": "Rafael Encinas (double-distillation), San Pedro de la Cueva, Sonora",
+      "expression": "Bacanora",
+      "abv": null,
+      "abvNote": "Small-batch production; ABV varies (the cited review lists 48% for batch B002) — check your bottle",
+      "spirit": "bacanora",
+      "place": "San Pedro de la Cueva, Sonora",
+      "batch": "Handcrafted small batches from agave pacifica; cited batch B002, bottle 909/1000",
+      "profileId": "bacanora-pacifica-sierra-sonora",
+      "reviewSummary": "Mezcal Reviews describes it as briny and viscous with fruit and agave sugar; a member found cotton candy on the nose with orange fancy-toothpaste and buttercream notes and a slight sour finish.",
+      "sourceIds": [
+        "mezcalreviews-la-nina-bacanora"
+      ]
+    },
+    {
+      "id": "el-acabo-plata-raicilla",
+      "brand": "El Acabo",
+      "producer": "Taberna 3 Gallos (producer Fausto, chemical engineer; Labastida family tradition), Jalisco",
+      "expression": "Plata Raicilla",
+      "abv": 42,
+      "spirit": "raicilla",
+      "place": "Jalisco",
+      "batch": "Unaged plata from the Taberna 3 Gallos taberna; homage to the harvest celebrations of Hacienda de Ahuacatepec",
+      "profileId": "raicilla-maximiliana-sierra-jalisco",
+      "reviewSummary": "Tastings.com scored it 97/100 in May 2025 and Forbes reports it was the top-ranked agave spirit at the 2025 Beverage Testing Institute judging, one of only two Platinum medals; judges describe bright aromatics of green bell pepper and grass with jalapeño and red bell pepper, and a grass-driven palate of agave, green apple and jalapeño.",
+      "sourceIds": [
+        "tastings-el-acabo-raicilla",
+        "forbes-bti-2025"
+      ]
     }
   ]
 }

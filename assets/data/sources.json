@@ -356,6 +356,62 @@
       "url": "https://www.mezcalreviews.com/mezcal/macurichos-ancestral-tobala/",
       "kind": "review",
       "verified": "2026-10-20"
+    },
+    {
+      "id": "wikipedia-sotol",
+      "title": "Wikipedia — Sotol (Dasylirion, Denomination of Origin, Chihuahua/Coahuila/Durango)",
+      "url": "https://en.wikipedia.org/wiki/Sotol",
+      "kind": "style",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-clande-yellow",
+      "title": "Mezcal Reviews — Clande Sotol Yellow (Bienvenido Fernandez)",
+      "url": "https://www.mezcalreviews.com/mezcal/clande-sotol-yellow/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-hacienda-chihuahua-anejo",
+      "title": "Mezcal Reviews — Hacienda de Chihuahua Sotol Añejo",
+      "url": "https://www.mezcalreviews.com/mezcal/hacienda-de-chihuahua-sotol-anejo/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-bacatt",
+      "title": "Mezcal Reviews — Bacatt Bacanora (member tasting notes)",
+      "url": "https://www.mezcalreviews.com/mezcal/bacatt-bacanora/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-sunora-blanco",
+      "title": "Mezcal Reviews — Sunora Bacanora Blanco (member tasting notes)",
+      "url": "https://www.mezcalreviews.com/mezcal/sunora-bacanora-blanco/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-la-nina-bacanora",
+      "title": "Mezcal Reviews — La Niña del Mezcal Bacanora",
+      "url": "https://www.mezcalreviews.com/mezcal/la-nina-del-mezcal-bacanora/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "tastings-el-acabo-raicilla",
+      "title": "Tastings.com — El Acabo Plata Raicilla (97 points, BTI 2025 judging)",
+      "url": "https://www.tastings.com/Spirits-Review/El-Acabo-Plata-Raicilla-Mexico-84-Proof-06-01-2025.aspx",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "forbes-bti-2025",
+      "title": "Forbes — The World's Top Mezcal, According to the Beverage Testing Institute (2025)",
+      "url": "https://www.forbes.com/sites/joemicallef/2025/06/18/the-worlds-top-mezcal-according-to-the-beverage-testing-institute/",
+      "kind": "style",
+      "verified": "2026-10-20"
     }
   ]
 }
