@@ -1,28 +1,3 @@
 {
-  "backlog": [
-    {
-      "kind": "missing-profile",
-      "spirit": "tuxca",
-      "item": "Additional tuxca producers (Siete Pozos, Indio Alonso)",
-      "reason": "category exists; more bottles deferred until requested"
-    },
-    {
-      "kind": "missing-profile",
-      "spirit": "mezcal",
-      "item": "Additional agave variants (tobalá, ensambles)",
-      "reason": "plant/process expansion deferred per plan; pechuga/ensamble need contextual treatment, not new categories"
-    },
-    {
-      "kind": "missing-profile",
-      "spirit": "mezcal",
-      "item": "Mezcal reposado/añejo (dormido) variants",
-      "reason": "legal aged classes exist; audit found every profile unaged; defer per one-tradition-at-a-time expansion"
-    },
-    {
-      "kind": "missing-profile",
-      "spirit": "tequila",
-      "item": "Extra añejo (3-year class)",
-      "reason": "legal class beyond añejo; small step once añejo is reviewed by owner"
-    }
-  ]
+  "backlog": []
 }

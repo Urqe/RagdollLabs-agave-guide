@@ -279,6 +279,83 @@
       "url": "https://www.mezcalreviews.com/mezcal/la-venenosa-raicilla-tabernas-reposado/",
       "kind": "review",
       "verified": "2026-10-20"
+    },
+    {
+      "id": "wikipedia-tequila",
+      "title": "Wikipedia — Tequila (NOM classes incl. extra añejo)",
+      "url": "https://en.wikipedia.org/wiki/Tequila",
+      "kind": "style",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "drinkhacker-eltesoro-xa",
+      "title": "Drinkhacker — Review: El Tesoro Tequila Extra Añejo",
+      "url": "https://www.drinkhacker.com/2020/02/02/review-el-tesoro-tequila-extra-anejo/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "diffords-mezcal-categories",
+      "title": "Difford's Guide — Mezcal categories (joven, reposado, añejo)",
+      "url": "https://www.diffordsguide.com/encyclopedia/363/bws/mezcal-what-it-is-and-how-its-made",
+      "kind": "style",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "bbcgoodfood-ilegal-reposado",
+      "title": "BBC Good Food — Ilegal Mezcal reposado review",
+      "url": "https://www.bbcgoodfood.com/review/ilegal-mezcal-reposado",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "bourbonbanter-ilegal",
+      "title": "Bourbon Banter — State of the Margarita with Ilegal Mezcal (reposado/añejo context)",
+      "url": "https://www.bourbonbanter.com/national-margarita-day-with-ilegal-mezcal/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-tobala-category",
+      "title": "Mezcal Reviews — Maguey Tobala category overview (Agave potatorum)",
+      "url": "https://www.mezcalreviews.com/filter-by/maguey/tobala/",
+      "kind": "style",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-montelobos-tobala",
+      "title": "Mezcal Reviews — Montelobos Tobala",
+      "url": "https://www.mezcalreviews.com/mezcal/montelobos-tobala/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-del-maguey-pechuga",
+      "title": "Mezcal Reviews — Del Maguey Pechuga",
+      "url": "https://www.mezcalreviews.com/mezcal/del-maguey-pechuga/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-siete-pozos-tuxca",
+      "title": "Mezcal Reviews — Siete Pozos Tuxca Ixteco Amarillo / Lineño (member tasting notes)",
+      "url": "https://www.mezcalreviews.com/mezcal/siete-pozos-tuxca-ixteco-amarillo-lineno/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-indio-alonso-tuxca",
+      "title": "Mezcal Reviews — Indio Alonso Tuxca Cimarron / Salmiana",
+      "url": "https://www.mezcalreviews.com/mezcal/indio-alonso-tuxca-cimarron-salmiana/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-macurichos-tobala",
+      "title": "Mezcal Reviews — Macurichos Ancestral Tobala",
+      "url": "https://www.mezcalreviews.com/mezcal/macurichos-ancestral-tobala/",
+      "kind": "review",
+      "verified": "2026-10-20"
     }
   ]
 }

@@ -710,6 +710,175 @@
         "mezcalreviews-lavenenosa-tabernas-reposado"
       ],
       "plantId": "agave-maximiliana"
+    },
+    {
+      "id": "tequila-extra-anejo-highland-jalisco",
+      "title": "Extra añejo tequila, highland style (Jalisco)",
+      "spirit": "tequila",
+      "stateId": "jal",
+      "stateName": "Jalisco",
+      "context": "Extra añejo ('extra aged') is the newest legal tequila class: a minimum of three years in oak barrels of no more than 600 liters, added to the NOM in 2006. It exists because producers wanted recognition for long-rested tequilas; El Tesoro's family released its Paradiso in 1994, before the class legally existed. This profile describes a highland extra añejo of four to five years — the longer side of the legal range.",
+      "description": "Three-plus years of oak pushes tequila toward brandy territory: deep oak, chocolate, coffee and dried fruit around a cooked-agave core. The honest tension of this class is that many producers consider more than about four years excessive — wood can overwhelm the delicate agave — so the best extra añejos are those that keep agave in the frame, as the example bottle's reviewers note. 'Older is better' remains marketing, not a rule. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Agave tequilana Weber azul (blue weber agave, cultivated; highland mineral soils)",
+      "plantId": "agave-tequilana",
+      "process": "Steam-cooked (or stone-roasted by some traditionalists), fermented, double distilled, then aged at least three years in oak (typically American ex-bourbon barrels)",
+      "category": "Tequila — spirit with its own Denomination of Origin; extra añejo is a legal class (oak-aged, 3-year minimum, barrels up to 600 liters)",
+      "beginnerNote": "New to extra añejo? This is tequila at its most whiskey-adjacent: expect oak, chocolate and coffee — the good ones still taste of agave underneath.",
+      "aliases": [
+        "extra anejo",
+        "extra añejo",
+        "ultra aged tequila"
+      ],
+      "body": "full",
+      "tasteNotes": [
+        "deep oak",
+        "chocolate",
+        "coffee",
+        "dried fruit",
+        "cooked agave"
+      ],
+      "smoke": null,
+      "finish": "Long and oaky, with chocolate, gentle spice and a slow agave fade.",
+      "sensory": {
+        "smoke": "none",
+        "herbal": "low",
+        "fruit": "medium",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "high",
+        "finishLength": "high"
+      },
+      "exampleBottleId": "el-tesoro-extra-anejo",
+      "placeCoords": {
+        "lat": 20.9,
+        "lon": -103.84,
+        "precision": "town (Tequila, Jalisco); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat after dinner, in a snifter-style glass (editorial suggestion).",
+        "foods": [
+          "dark chocolate",
+          "cigar-adjacent desserts",
+          "aged cheese"
+        ]
+      },
+      "sourceIds": [
+        "wikipedia-tequila",
+        "diffords-tequila-category",
+        "drinkhacker-eltesoro-xa"
+      ]
+    },
+    {
+      "id": "mezcal-reposado-espadin-oaxaca",
+      "title": "Mezcal reposado, briefly barrel-rested espadín style (Valles Centrales, Oaxaca)",
+      "spirit": "mezcal",
+      "stateId": "oax",
+      "stateName": "Oaxaca",
+      "context": "Reposado is a legal mezcal class (the NOM recognizes joven, reposado and añejo): a rest of two months to a year in oak. Most mezcal sold worldwide is joven (unaged), and many traditionalists argue wood obscures what makes mezcal distinct; aged mezcal is nonetheless a growing, legal part of the category. This profile covers the short-rested end: a few months in wood, typically starting from pit-roasted espadín.",
+      "description": "A short barrel rest softens the pit-roast smoke of espadín mezcal and layers light vanilla and caramel over it, without erasing the spirit's vegetal, roasted character. Reviews of the example bottle describe exactly that balance — smoke carried from nose to finish, ending in a smoky butterscotch — while others caution the wood can dominate. Expect mezcal first, wood second; if the wood leads, it is closer to tequila reposado territory. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Agave angustifolia (espadín, cultivated); some producers blend wild agaves",
+      "plantId": "agave-angustifolia",
+      "process": "Pit-roasted, stone-milled, wild-fermented, distilled, then rested in oak 2-12 months (the example bottle lists 4-6 months in American oak)",
+      "category": "Mezcal — spirit with its own denomination of origin; reposado is a legal class (oak-rested, 2 months to 1 year)",
+      "beginnerNote": "New to mezcal reposado? Expect the smoke of a joven softened with vanilla and caramel — a gentler entry into smoked agave spirits.",
+      "aliases": [
+        "mezcal reposado",
+        "aged mezcal",
+        "rested mezcal"
+      ],
+      "body": "medium",
+      "tasteNotes": [
+        "pit-roast smoke",
+        "vanilla",
+        "caramel",
+        "citrus"
+      ],
+      "smoke": "The pit-roast smoke of espadín mezcal persists through the rest; reviewers describe it from nose to finish.",
+      "finish": "Medium, smoky-sweet, with a butterscotch-adjacent fade.",
+      "sensory": {
+        "smoke": "medium",
+        "herbal": "low",
+        "fruit": "medium",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "low",
+        "finishLength": "medium"
+      },
+      "exampleBottleId": "ilegal-mezcal-reposado",
+      "placeCoords": {
+        "lat": 16.9,
+        "lon": -96.5,
+        "precision": "region (Tlacolula valley, Valles Centrales, Oaxaca); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat; also works in margaritas where a smoky reposado is welcome (editorial suggestion).",
+        "foods": [
+          "mild cheeses",
+          "carnitas",
+          "grilled corn"
+        ]
+      },
+      "sourceIds": [
+        "diffords-mezcal-categories",
+        "bbcgoodfood-ilegal-reposado",
+        "bourbonbanter-ilegal"
+      ]
+    },
+    {
+      "id": "mezcal-tobala-sierra-oaxaca",
+      "title": "Tobalá mezcal, wild Agave potatorum style (Sierra, Oaxaca)",
+      "spirit": "mezcal",
+      "stateId": "oax",
+      "stateName": "Oaxaca",
+      "context": "Tobalá (Agave potatorum) is a small, high-altitude, mostly wild agave often called the 'king of agaves' in México; its tiny size and 12-15 year maturity give very low yields, which has pushed prices up and wild populations down. The mezcal DO permits any agave species, so tobalá is mezcal; some tobalá is now cultivated, which changes both the sustainability story and, reviewers note, sometimes the flavor. This is a plant-driven style, not a place-driven one: tobalá grows across Oaxaca's Sierra Norte and beyond.",
+      "description": "Tobalá mezcal is typically lighter and more floral than espadín, with sweet citrus, tropical fruit and a silky texture over a gentler roast. Batch variation is genuinely large — a cited blind tasting of eight tobalás found no single common thread — so treat this as a family of expressions, not one flavor. The example bottle, from 100% cultivated tobalá, shows lemon, pear and green pepper aromas with basil and roasted fig on the palate. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Agave potatorum (tobalá; mostly wild-harvested, some cultivated — check the bottle)",
+      "plantId": "agave-potatorum",
+      "process": "Pit-roasted, stone-milled, wild-fermented, distilled (clay pot stills in ancestral productions, copper in artisanal ones)",
+      "category": "Mezcal — tobalá is within the mezcal denomination of origin; it is a wild agave category under sustainability pressure, not a legal class of its own",
+      "beginnerNote": "New to tobalá? Expect mezcal's gentler, more floral cousin: sweet citrus and tropical fruit over a soft roast — pricier because the agave is small, slow and scarce.",
+      "aliases": [
+        "tobala",
+        "tobalá",
+        "agave potatorum mezcal"
+      ],
+      "body": "light",
+      "tasteNotes": [
+        "sweet citrus",
+        "tropical fruit",
+        "florals",
+        "gentle roast"
+      ],
+      "smoke": "A gentle roast character rather than heavy smoke; ancestral clay-pot batches can show more.",
+      "finish": "Medium and silky, with fruit sweetness and a soft mineral fade.",
+      "sensory": {
+        "smoke": "low",
+        "herbal": "medium",
+        "fruit": "high",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "none",
+        "finishLength": "medium"
+      },
+      "exampleBottleId": "montelobos-tobala",
+      "placeCoords": {
+        "lat": 17.2,
+        "lon": -96.5,
+        "precision": "region (Sierra Norte / Santiago Matatlán area, Oaxaca); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat in a small copita; tobalá's florals fade in cocktails (editorial suggestion).",
+        "foods": [
+          "fresh cheeses",
+          "fruit salsas",
+          "seafood tostadas"
+        ]
+      },
+      "sourceIds": [
+        "mezcalreviews-tobala-category",
+        "mezcalreviews-montelobos-tobala",
+        "mezcalreviews-macurichos-tobala"
+      ]
     }
   ]
 }
