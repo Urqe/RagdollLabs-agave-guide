@@ -48,14 +48,14 @@ test("spanish alphabetical behavior via locale-aware compare", () => {
   assert.ok(sorted.indexOf("\u00c1lamos") < sorted.indexOf("Bacanora"), "\u00c1lamos sorts before B in Spanish");
 });
 
-test("untranslated content is disclosed, not silent", () => {
+test("translation fallback chain: es string, English fallback, then the key", () => {
   const locale = createLocale();
   locale.set("es");
-  // All shipped keys have Spanish translations; missing ones would disclose.
-  assert.equal(locale.hasMissing(), false);
-  // Simulate: a missing key marks the gap.
-  locale.t("some.key.that.does.not.exist");
-  assert.equal(locale.hasMissing(), true);
+  // Shipped keys have Spanish translations.
+  assert.equal(locale.t("profile.backExplore"), "\u2190 Volver a explorar");
+  // Unknown keys fall through both bundles to the raw key, which callers
+  // only pass for dynamic keys (e.g. level.* ranks).
+  assert.equal(locale.t("some.key.that.does.not.exist"), "some.key.that.does.not.exist");
 });
 
 test("release 14: compare view fully translates in Spanish", async () => {

@@ -969,7 +969,7 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .leaf-6 { transform: rotate(76deg) scaleY(.9); }
 
 /* ---------- exploration ---------- */
-.discovery-controls { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; align-items: end; gap: 1rem; margin: 1.5rem 0; padding: 1.25rem; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.discovery-controls { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr) auto; align-items: end; gap: 1rem; margin: 1.5rem 0; padding: 1.25rem; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
 .search-holder .search-input { max-width: none; border-radius: 10px; min-height: 52px; }
 .profile-list > li { min-width: 0; display: flex; flex-direction: column; }
 .profile-list .profile-group-label { margin: 0 0 .5rem; color: var(--text-soft); }

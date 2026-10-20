@@ -115,8 +115,8 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
     results.appendChild(profileList(covered, stateId, locale));
   };
 
-  for (const input of [searchInput, spirit, mood]) {
-    input.addEventListener("input", () => renderResults(currentStateId));
+  searchInput.addEventListener("input", () => renderResults(currentStateId));
+  for (const input of [spirit, mood]) {
     input.addEventListener("change", () => renderResults(currentStateId));
   }
   reset.addEventListener("click", () => {
