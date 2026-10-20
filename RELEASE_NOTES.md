@@ -398,3 +398,15 @@ drops one. `npm run validate`: 29 suites passing.
 
 - Native-device rendering still unverified in this environment.
 - Catalogue growth continues in later explicitly requested increments.
+
+### UI theme refresh — "A\u00f1ejo Lounge" (owner-requested, pre-Release 8)
+
+Replaced the light cream theme after owner feedback that the palette
+felt bland/engineer-like. The app is now **dark-first**: deep
+charcoal-green night tones, a\u00f1ejo amber and copper accents, warm glow
+shadows, and the Fraunces display serif for headings (body stays a
+clean system sans). A refined light variant remains available via a
+sun/moon toggle in the header (persisted in localStorage, applied
+before first paint to avoid flashes). Dark is the default for new
+visitors. No DOM contract changes; all 36 suites pass; the toggle was
+verified end-to-end in a real-app jsdom boot.

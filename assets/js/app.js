@@ -97,10 +97,29 @@ async function renderRoute(container, route) {
   renderProfileNotFound(container, "");
 }
 
+function wireThemeToggle() {
+  const button = document.getElementById("theme-toggle");
+  if (!button) return;
+  const render = () => {
+    const theme = document.documentElement.getAttribute("data-theme") || "dark";
+    button.textContent = theme === "dark" ? "\u2600" : "\u263e";
+    button.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+  };
+  button.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") || "dark";
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("agave-theme", next); } catch (error) { /* storage unavailable */ }
+    render();
+  });
+  render();
+}
+
 async function boot() {
   const root = document.getElementById("app");
   const main = el("main", { id: "main", class: "app-main", tabindex: "-1" });
   root.appendChild(main);
+  wireThemeToggle();
 
   try {
     state.data = await loadAppData(baseUrl());

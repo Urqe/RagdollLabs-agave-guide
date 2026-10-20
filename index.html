@@ -6,6 +6,17 @@
   <meta name="description" content="A small guide to the body and taste of Mexican agave spirits — tequila, mezcal, bacanora and raicilla style profiles with example bottles.">
   <title>RagdollLabs Agave Guide</title>
   <base href="./">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem("agave-theme"); } catch (e) {}
+      var theme = stored || "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
@@ -16,6 +27,7 @@
       <a class="nav-link" href="#/explore">Explore</a>
       <a class="nav-link" href="#/compare" id="nav-compare">Compare</a>
       <a class="nav-link" href="#/catalogue">Catalogue</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch color theme" title="Switch theme"> ☾ </button>
     </nav>
   </header>
   <div id="app">
