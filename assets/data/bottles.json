@@ -239,6 +239,59 @@
         "mezcalreviews-9guardianes-anejo",
         "backalley-comiteco"
       ]
+    },
+    {
+      "id": "la-venenosa-tabernas-reposado",
+      "brand": "La Venenosa",
+      "producer": "Tabernas Edición line (batch producers vary; Antonio Arrizon, Benito Salcedo Rios, José Salcedo listed by the review source), Sierra Occidental, Jalisco",
+      "expression": "Raicilla Tabernas Reposado",
+      "abv": null,
+      "abvNote": "ABV varies by batch (review source lists a 44.8% batch; a 40-46% range is documented) — check the bottle",
+      "spirit": "raicilla",
+      "place": "Sierra Occidental, Jalisco",
+      "batch": "Rested about 3 months in wooden (sherry) casks; each Tabernas Edición batch differs — check your bottle",
+      "profileId": "raicilla-reposado-jalisco",
+      "reviewSummary": "A Mezcal Reviews member describes vanilla, caramel, leather, sweet tobacco and plum on the nose; plum, raisin, luxardo cherry, vanilla and leather on the palate, finishing with sweet campfire smoke, cinnamon and tobacco — noting the sherry-cask influence is fun but overpowers the agave a bit.",
+      "sourceIds": [
+        "mezcalreviews-lavenenosa-tabernas-reposado",
+        "casaendemica-brands"
+      ]
+    },
+    {
+      "id": "juerte-destilado-de-pulque",
+      "brand": "Juerte",
+      "producer": "Gerónimo Rosainz (master distiller; brand by Jorge Viveros), northeast Tlaxcala village",
+      "expression": "Destilado de Pulque",
+      "abv": 40,
+      "spirit": "destilado-de-pulque",
+      "place": "Tlaxcala",
+      "batch": "Single distilled in stainless steel; aguamiel fermented about a week with pulque madre",
+      "profileId": "destilado-de-pulque-salmiana-tlaxcala",
+      "reviewSummary": "Mezcalistas describes a beguiling nose of lightly fermented tepache, mango and molasses richness; on the palate hints of licorice and fennel with a lactic blast, and a fantastic tension between sweet and savory.",
+      "sourceIds": [
+        "mezcalistas-juerte",
+        "mezcalreviews-juerte"
+      ]
+    },
+    {
+      "id": "dantano-aguamiel-cane",
+      "brand": "D'Antaño",
+      "producer": "Comiteco 9 Guardianes line (Don Elias in Mexico), Comitán de Domínguez, Chiapas",
+      "expression": "D'Antaño Comiteco (aguamiel + cane)",
+      "abv": 45,
+      "spirit": "comiteco",
+      "place": "Comitán de Domínguez, Chiapas",
+      "batch": "Aguamiel and cane spirit; per the review source this label is an aguamiel and cane spirit, unlike the 100%-sap 9 Guardianes label",
+      "profileId": null,
+      "coverage": [
+        "profile-not-covered",
+        "tasting-not-documented"
+      ],
+      "composition": "Distilled from fermented agave sap (aguamiel) blended with cane-based spirit; the non-agave component is disclosed on the label and by the cited source — included as a factual entry, not as a comiteco style profile",
+      "sourceIds": [
+        "mezcalreviews-9guardianes-anejo",
+        "backalley-comiteco"
+      ]
     }
   ]
 }
