@@ -1,16 +1,7 @@
 import { el, clear, safeLink } from "./dom-utils.js";
 import { navigateTo } from "./router.js";
 import { searchBottles, brandDirectory } from "./catalogue.js";
-
-const SPIRIT_LABELS = {
-  tequila: "Tequila",
-  mezcal: "Mezcal",
-  bacanora: "Bacanora",
-  raicilla: "Raicilla",
-  tuxca: "Tuxca",
-  comiteco: "Comiteco",
-  "destilado-de-pulque": "Destilado de pulque",
-};
+import { SPIRIT_LABELS } from "./spirit-labels.js";
 
 const COVERAGE_LABELS = {
   "tasting-not-documented": "Tasting notes not yet documented",

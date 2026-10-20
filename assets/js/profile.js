@@ -2,18 +2,9 @@ import { el, safeLink, clear } from "./dom-utils.js";
 import { STATE_NAMES } from "./map.js";
 import { flavorMoods, ifYouLikeThis } from "./compare.js";
 import { bottlesForProfile } from "./catalogue.js";
+import { SPIRIT_LABELS } from "./spirit-labels.js";
 
 const BODY_LABELS = { light: "Light body", medium: "Medium body", full: "Full body" };
-
-const SPIRIT_LABELS = {
-  tequila: "Tequila",
-  mezcal: "Mezcal",
-  bacanora: "Bacanora",
-  raicilla: "Raicilla",
-  tuxca: "Tuxca",
-  comiteco: "Comiteco",
-  "destilado-de-pulque": "Destilado de pulque",
-};
 
 function sourceLinks(sources, sourceIds) {
   const list = el("ul", { class: "source-list" });

@@ -2,18 +2,9 @@ import { el, clear } from "./dom-utils.js";
 import { renderMap, shadeCovered, STATE_NAMES } from "./map.js";
 import { navigateTo } from "./router.js";
 import { searchProfiles } from "./search.js";
+import { SPIRIT_LABELS } from "./spirit-labels.js";
 
 const EMPTY_MESSAGE = "No profiles added here yet";
-
-const SPIRIT_LABELS = {
-  tequila: "Tequila",
-  mezcal: "Mezcal",
-  bacanora: "Bacanora",
-  raicilla: "Raicilla",
-  tuxca: "Tuxca",
-  comiteco: "Comiteco",
-  "destilado-de-pulque": "Destilado de pulque",
-};
 
 function profilesForState(profiles, stateId) {
   return profiles.filter((profile) => profile.stateId === stateId);

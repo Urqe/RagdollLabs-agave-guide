@@ -65,7 +65,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
     t("learn.intro")));
 
   // --- Plants ---
-  section.appendChild(el("h3", { id: "learn-plants" }, t("learn.plants")));
+  section.appendChild(el("h3", { id: "learn-plants", tabindex: "-1" }, t("learn.plants")));
   for (const plant of plants) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `plant-${plant.id}` });
     card.appendChild(el("h4", { id: `plant-${plant.id}` }, plant.species));
@@ -91,7 +91,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
   }
 
   // --- Processes ---
-  section.appendChild(el("h3", { id: "learn-processes" }, t("learn.processes")));
+  section.appendChild(el("h3", { id: "learn-processes", tabindex: "-1" }, t("learn.processes")));
   for (const proc of processes) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `process-${proc.id}` });
     card.appendChild(el("h4", { id: `process-${proc.id}` }, `${proc.name} — ${proc.stage}`));
@@ -109,7 +109,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
   }
 
   // --- Glossary ---
-  section.appendChild(el("h3", { id: "learn-terms" }, t("learn.terms")));
+  section.appendChild(el("h3", { id: "learn-terms", tabindex: "-1" }, t("learn.terms")));
   section.appendChild(el("p", { class: "view-intro" },
     "Class terms are spirit-specific: tequila's rules do not transfer to mezcal or raicilla. Where a term is not a legal class, that is stated."));
   for (const term of glossary) {
