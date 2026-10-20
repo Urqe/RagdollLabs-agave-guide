@@ -116,6 +116,65 @@ test("an unknown-id deep link heals the route and the persisted selection", asyn
   }
 });
 
+test("F6: profile-to-profile navigation scrolls to the heading; locale toggle does not", async () => {
+  const app = await bootApp("#/profile/" + profileIds[0], { withHeader: true });
+  try {
+    app.scrollCalls.length = 0;
+    // A different profile is a new page: start at its heading.
+    app.window.location.hash = "#/profile/" + profileIds[1];
+    await new Promise((r) => setTimeout(r, 80));
+    assert.ok(app.scrollCalls.length >= 1, "profile-to-profile navigation scrolls to the heading");
+    // The language toggle on the same profile keeps the position.
+    app.scrollCalls.length = 0;
+    const toggle = app.document.getElementById("locale-toggle");
+    toggle.click();
+    await new Promise((r) => setTimeout(r, 80));
+    assert.equal(app.scrollCalls.length, 0, "locale re-render preserves the scroll position");
+    assert.equal(app.document.documentElement.lang, "es");
+  } finally {
+    app.cleanup();
+  }
+});
+
+test("F10: switching language before data loads does not crash and applies after boot", async () => {
+  const dom = new JSDOM(`<!doctype html><html><body><header class="app-header"><button type="button" class="theme-toggle" id="theme-toggle"></button><button type="button" class="theme-toggle" id="locale-toggle">ES</button></header><div id="app"></div></body></html>`, {
+    url: "https://example.test/RagdollLabs-agave-guide/#/",
+    pretendToBeVisual: true,
+  });
+  const prevWindow = globalThis.window;
+  const prevDocument = globalThis.document;
+  const prevFetch = globalThis.fetch;
+  const prevLocalStorage = globalThis.localStorage;
+  const prevSessionStorage = globalThis.sessionStorage;
+  globalThis.window = dom.window;
+  globalThis.document = dom.window.document;
+  globalThis.localStorage = dom.window.localStorage;
+  globalThis.sessionStorage = dom.window.sessionStorage;
+  let release;
+  const gate = new Promise((r) => { release = r; });
+  globalThis.fetch = async () => { await gate; return { ok: true, json: async () => ({}), text: async () => "" }; };
+  const restore = () => {
+    globalThis.window = prevWindow;
+    globalThis.document = prevDocument;
+    globalThis.fetch = prevFetch;
+    globalThis.localStorage = prevLocalStorage;
+    globalThis.sessionStorage = prevSessionStorage;
+  };
+  try {
+    // Boot against a pending data load; click the toggle while it is pending.
+    await import(`../assets/js/app.js?boot=early-${++bootCount}`);
+    const toggle = dom.window.document.getElementById("locale-toggle");
+    toggle.click(); // must not throw (handleRoute not yet initialized)
+    assert.equal(dom.window.localStorage.getItem("agave-locale"), "es", "language persisted immediately");
+    release();
+    await new Promise((r) => setTimeout(r, 120));
+    assert.equal(dom.window.document.documentElement.lang, "es",
+      "the completed page renders in the language chosen during loading");
+  } finally {
+    restore();
+  }
+});
+
 test("same-route re-render (language toggle) does not scroll to the heading", async () => {
   const app = await bootApp("#/explore", { withHeader: true });
   try {

@@ -10,19 +10,27 @@ function collapsibleSources(sources, sourceIds, t) {
   return details;
 }
 
+/**
+ * Narrow, non-empty keyword rules mapping a process id to the process
+ * descriptions that genuinely use it. A rule must never match every
+ * profile (no empty search term) and must not cross traditions: pit
+ * roasting is not steam cooking, and resting in wood is not implied by
+ * any roast mention.
+ */
+const PROCESS_KEYWORDS = {
+  "pit-roast": ["pit roast", "pit-roasted", "roasted in earthen", "cylindrical pit", "conical ovens", "adobe-oven roast", "underground pit roast"],
+  "steam-cook": ["steam-cooked", "steam cooked", "steam-cook", "oven/autoclave"],
+  "sap-collection": ["sap-derived", "sap collected", "aguamiel collected", "aguamiel fermented"],
+  "wild-fermentation": ["wild-yeast", "wild yeast", "wild-fermented", "open fermentation", "open wild-yeast", "wild-fe"],
+  "distillation-methods": ["distilled", "distillation", "still"],
+  "glass-resting": ["glass resting", "madurado", "glass-rested"],
+  "wood-maturation": ["rested in oak", "rested in wood", "aged in oak", "wooden casks", "barrel-rested", "charcoal-filtered clear"],
+  "filtration": ["filtered", "filtration"],
+};
+
 function relevantTo(profile, proc) {
   const text = (profile.process || "").toLowerCase();
-  const keywords = {
-    "pit-roast": ["pit roast", "pit-roasted", "roasted in earthen", "cylindrical pit"],
-    "steam-cook": ["steam-cooked", "steam cooked", "oven/autoclave"],
-    "sap-collection": ["sap-derived", "sap collected", "aguamiel collected"],
-    "wild-fermentation": ["wild-yeast", "wild yeast", "open fermentation"],
-    "distillation-methods": ["distilled", "still"],
-    "glass-resting": ["glass resting", "madurado"],
-    "wood-maturation": ["wood", "rested in wood", "añejo"],
-    "filtration": ["filtered", "filtration"],
-  };
-  return (keywords[proc.id] || []).some((k) => text.includes(k));
+  return (PROCESS_KEYWORDS[proc.id] || []).some((k) => k && text.includes(k));
 }
 
 function sourceLinks(sources, sourceIds) {
@@ -96,7 +104,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
     const card = el("article", { class: "learn-card", "aria-labelledby": `process-${proc.id}` });
     card.appendChild(el("h4", { id: `process-${proc.id}` }, `${proc.name} — ${proc.stage}`));
     card.appendChild(el("p", {}, proc.explanation));
-    const usedBy = profiles.filter((pr) => (pr.process || "").toLowerCase().includes(proc.stage === "cooking" ? "roast" : "") || relevantTo(pr, proc));
+    const usedBy = profiles.filter((pr) => relevantTo(pr, proc));
     if (usedBy.length > 0) {
       const line = el("p", { class: "learn-usedby" }, `${t("learn.seenIn")} `);
       for (const pr of usedBy.slice(0, 4)) {

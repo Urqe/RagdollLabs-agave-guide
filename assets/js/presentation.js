@@ -1,4 +1,5 @@
-import { el } from "./dom-utils.js";
+import { el, clear } from "./dom-utils.js";
+import { tasteNote } from "./taste-notes.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 import { DIMENSIONS, levelOf } from "./compare.js";
 
@@ -18,7 +19,9 @@ const COPY = {
     allFlavours: "All flavours", map: "Explore by place", mapHint: "Map shading shows guide coverage, not legal production boundaries.",
     results: "Style profiles", reset: "Clear all",
     profile: "profile", profiles: "profiles",
-    compareSelected: "In your comparison \u2197", compareFull: "Comparison full \u2014 open your selection \u2197", removed: "Removed from your comparison.", noMatches: "No profiles match these filters. Try another combination.",
+    compareSelected: "In your comparison \u2197", compareFull: "Comparison full \u2014 open your selection \u2197", removed: "Removed from your comparison.",
+    noneSelected: "No profiles selected.", oneSelected: "1 profile selected",
+    comparing: "Comparing", removedFrom: "Removed {name}.", addedTo: "Added {name}.", noMatches: "No profiles match these filters. Try another combination.",
     sensory: "Character in the glass", sensoryNote: "Qualitative editorial guidance; individual bottles and batches vary.",
     body: "Body", notes: "Typical notes", smoke: "Smoke", finish: "Finish",
     light: "Light body", medium: "Medium body", full: "Full body",
@@ -49,7 +52,9 @@ const COPY = {
     allFlavours: "Todos los sabores", map: "Explorar por lugar", mapHint: "El sombreado indica la cobertura de la guía, no los límites legales de producción.",
     results: "Perfiles de estilo", reset: "Borrar todo",
     profile: "perfil", profiles: "perfiles",
-    compareSelected: "En tu comparaci\u00f3n \u2197", compareFull: "Comparaci\u00f3n completa \u2014 abre tu selecci\u00f3n \u2197", removed: "Quitado de tu comparaci\u00f3n.", noMatches: "Ningún perfil coincide. Prueba otra combinación.",
+    compareSelected: "En tu comparaci\u00f3n \u2197", compareFull: "Comparaci\u00f3n completa \u2014 abre tu selecci\u00f3n \u2197", removed: "Quitado de tu comparaci\u00f3n.",
+    noneSelected: "Ning\u00fan perfil seleccionado.", oneSelected: "1 perfil seleccionado",
+    comparing: "Comparando", removedFrom: "Quitado {name}.", addedTo: "A\u00f1adido {name}.", noMatches: "Ningún perfil coincide. Prueba otra combinación.",
     sensory: "Carácter en la copa", sensoryNote: "Orientación editorial cualitativa; cada botella y lote puede variar.",
     body: "Cuerpo", notes: "Notas típicas", smoke: "Humo", finish: "Final",
     light: "Cuerpo ligero", medium: "Cuerpo medio", full: "Cuerpo pleno",
@@ -71,17 +76,19 @@ export function ui(locale, key) {
   return COPY[locale?.get() === "es" ? "es" : "en"][key] || key;
 }
 
-export function discoveryCard(profile) {
+export function discoveryCard(profile, locale = null) {
   const link = el("a", { class: "discovery-card", href: "#/profile/" + encodeURIComponent(profile.id) });
   link.appendChild(el("span", { class: "eyebrow" }, SPIRIT_LABELS[profile.spirit] || profile.spirit));
   link.appendChild(el("strong", {}, profile.title));
   link.appendChild(el("span", { class: "discovery-place" }, profile.stateName + ", México"));
-  link.appendChild(el("span", { class: "discovery-notes" }, (profile.tasteNotes || []).slice(0, 3).join(" · ")));
+  link.appendChild(el("span", { class: "discovery-notes" },
+    (profile.tasteNotes || []).slice(0, 3).map((n) => tasteNote(n, locale)).join(" · ")));
   link.appendChild(el("span", { class: "card-arrow", "aria-hidden": "true" }, "↗"));
   return link;
 }
 
 export function renderHome(container, { profiles, locale }) {
+  clear(container);
   const section = el("section", { class: "home-view", "aria-labelledby": "home-heading" });
   const hero = el("div", { class: "welcome-hero" });
   const copy = el("div", { class: "welcome-copy" });
@@ -124,6 +131,12 @@ export function renderHome(container, { profiles, locale }) {
   featured.appendChild(el("a", { class: "text-action", href: "#/explore" }, ui(locale, "all") + " →"));
   section.appendChild(featured);
   container.appendChild(section);
+}
+
+/** Localized label for a comparison/sensory dimension key. */
+export function dimensionLabel(key, locale) {
+  const keys = { bodyLevel: "body", finishLength: "finish" };
+  return ui(locale, keys[key] || key);
 }
 
 export function sensoryOverview(profile, locale) {

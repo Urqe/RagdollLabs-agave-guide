@@ -34,6 +34,21 @@ const ALIASES = new Map([
   ["dulce", "sweetness"],
   ["bacanorero", "bacanora"],
   ["tabernero", "taberna"],
+  // Spanish descriptors resolve to the English note vocabulary.
+  ["humo", "smoke"],
+  ["humo de mezquite", "mesquite smoke"],
+  ["pimienta", "pepper"],
+  ["caramelo", "caramel"],
+  ["vainilla", "vanilla"],
+  ["citricos", "citrus"],
+  ["cítricos", "citrus"],
+  ["agave cocido", "cooked agave"],
+  ["agave asado", "roasted agave"],
+  ["roble", "oak"],
+  ["hierbas", "herbs"],
+  ["florales", "floral"],
+  ["mineral", "mineral"],
+  ["dulce", "sweet"],
 ]);
 
 export function applyAliases(normalizedQuery) {

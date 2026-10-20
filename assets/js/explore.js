@@ -6,6 +6,7 @@ import { ui } from "./presentation.js";
 import { flavorMoods } from "./compare.js";
 import { SPIRIT_LABELS, groupProfilesBySpirit } from "./spirit-labels.js";
 import { captureView } from "./view-memory.js";
+import { tasteNote } from "./taste-notes.js";
 
 function profilesForState(profiles, stateId) {
   return profiles.filter((profile) => profile.stateId === stateId);
@@ -28,7 +29,8 @@ function profileList(profiles, stateId = null, locale = null) {
     link.appendChild(el("span", { class: "profile-link-title" }, profile.title));
     link.appendChild(el("span", { class: "profile-link-spirit" }, SPIRIT_LABELS[profile.spirit] || profile.spirit));
     link.appendChild(el("span", { class: "discovery-place" }, profile.stateName));
-    link.appendChild(el("span", { class: "discovery-notes" }, (profile.tasteNotes || []).slice(0, 3).join(" · ")));
+    link.appendChild(el("span", { class: "discovery-notes" },
+      (profile.tasteNotes || []).slice(0, 3).map((n) => tasteNote(n, locale)).join(" · ")));
     item.appendChild(link);
     list.appendChild(item);
   }
@@ -126,15 +128,21 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
     if (currentStateId) navigateTo({ name: "explore" });
     else renderResults(null);
   });
+  // Controls and results render before the map so a stalled (or slow)
+  // map request never delays the discovery list.
+  renderResults(selectedStateId || null);
   let mapApi = null;
   try {
-    mapApi = await renderMap(mapHolder, mapUrl, {
-      selectedStateId: selectedStateId || null,
-      coveredStateIds,
-      onSelect: (stateId) => {
-        navigateTo({ name: "state", params: { stateId } });
-      },
-    });
+    mapApi = await Promise.race([
+      renderMap(mapHolder, mapUrl, {
+        selectedStateId: selectedStateId || null,
+        coveredStateIds,
+        onSelect: (stateId) => {
+          navigateTo({ name: "state", params: { stateId } });
+        },
+      }),
+      new Promise((_, reject) => setTimeout(() => reject(new Error("map timeout")), 8000)),
+    ]);
     shadeCovered(mapHolder, coveredStateIds);
   } catch (error) {
     clear(mapHolder);
@@ -153,8 +161,6 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
     mapHolder.appendChild(list);
   }
 
-  renderResults(selectedStateId || null);
-
   return {
     capture() {
       captureView("explore", {
@@ -163,6 +169,14 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
         mood: mood.value,
         stateId: currentStateId,
       });
+    },
+    snapshot() {
+      return {
+        query: searchInput.value,
+        spirit: spirit.value,
+        mood: mood.value,
+        stateId: currentStateId,
+      };
     },
     setState(stateId) {
       currentStateId = stateId || null;

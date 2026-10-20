@@ -4,6 +4,7 @@ import { flavorMoods, ifYouLikeThis } from "./compare.js";
 import { bottlesForProfile } from "./catalogue.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 import { ui, sensoryOverview } from "./presentation.js";
+import { tasteNote } from "./taste-notes.js";
 
 function sourceLinks(sources, sourceIds) {
   const list = el("ul", { class: "source-list" });
@@ -127,7 +128,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   facts.appendChild(el("dt", {}, ui(locale, "notes")));
   const notes = el("dd", { class: "profile-taste" });
   const tasteList = el("ul", { class: "taste-list" });
-  for (const note of profile.tasteNotes) tasteList.appendChild(el("li", {}, note));
+  for (const note of profile.tasteNotes) tasteList.appendChild(el("li", {}, tasteNote(note, locale)));
   notes.appendChild(tasteList);
   facts.appendChild(notes);
   if (profile.smoke) {
@@ -191,8 +192,11 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     const suggList = el("ul", { class: "suggestion-list" });
     for (const { profile: other, reason } of suggestions) {
       const item = el("li");
+      const params = [];
+      if (returnTo) params.push(`from=${encodeURIComponent(returnTo)}`);
+      if (fromCatalogue) params.push("origin=catalogue");
       const link = el("a", {
-        href: `#/profile/${encodeURIComponent(other.id)}` + (fromCatalogue ? "?origin=catalogue" : ""),
+        href: `#/profile/${encodeURIComponent(other.id)}` + (params.length ? `?${params.join("&")}` : ""),
         class: "suggestion-link",
       }, other.title);
       item.appendChild(link);

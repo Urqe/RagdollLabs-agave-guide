@@ -8,6 +8,7 @@ import {
   levelOf,
 } from "./compare.js";
 import { SPIRIT_LABELS, groupProfilesBySpirit } from "./spirit-labels.js";
+import { dimensionLabel } from "./presentation.js";
 
 const MAX_SLOTS = 3;
 
@@ -53,7 +54,7 @@ function pickButton(profile, isSelected, disabled, onPick) {
  * selected profiles always stay visible (so they can be deselected) even
  * when they fall outside the current filter.
  */
-function slotSelector(profiles, selectedIds, onPick, { locale = null } = {}) {
+function slotSelector(profiles, selectedIds, onPick, { locale = null, initialQuery = "" } = {}) {
   const t = (key) => (locale ? locale.t(key) : key);
   const compare = locale ? (a, b) => locale.compare(a, b) : null;
   const holder = el("div", { class: "compare-picker-search" });
@@ -64,6 +65,7 @@ function slotSelector(profiles, selectedIds, onPick, { locale = null } = {}) {
     id: "compare-search",
     placeholder: t("compare.searchPlaceholder"),
     "aria-label": t("compare.searchPlaceholder"),
+    value: initialQuery,
   });
   const form = el("form", { class: "search-form", role: "search" });
   form.addEventListener("submit", (event) => event.preventDefault());
@@ -126,7 +128,7 @@ function levelCell(profile, dimKey, t) {
  * missing-data notes. Selections live in the route (#/compare/a,b,c) so
  * they survive reload, sharing and Back/Forward.
  */
-export function renderCompare(container, { profiles, compareIds, onSelectionChange, focusProfileId = null, locale = null }) {
+export function renderCompare(container, { profiles, compareIds, onSelectionChange, focusProfileId = null, keepPickerQuery = "", locale = null }) {
   clear(container);
   const byId = new Map(profiles.map((p) => [p.id, p]));
   const parsedIds = parseIds(compareIds);
@@ -146,20 +148,25 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   // Picker
   const status = el("p", { class: "compare-status", role: "status", "aria-live": "polite" });
   section.appendChild(status);
+  const dimLabel = (key) => dimensionLabel(key, locale);
+  const total = (n) => `${n} ${n === 1 ? ui(locale, "profile") : ui(locale, "profiles")}`;
   const announce = (message) => {
     clear(status);
     status.appendChild(document.createTextNode(message));
   };
 
   const pickerHolder = el("div", { class: "compare-picker" });
-  const pick = (profileId) => {
+  const currentQuery = () => pickerHolder.querySelector("#compare-search")?.value || "";
+  const pick = (profileId, pickerQuery) => {
     const removing = selectedIds.includes(profileId);
     const next = removing
       ? selectedIds.filter((id) => id !== profileId)
       : [...selectedIds, profileId].slice(0, MAX_SLOTS);
     const name = byId.get(profileId)?.title || profileId;
-    announce(removing ? `Removed ${name}. ${next.length} profile${next.length === 1 ? "" : "s"} selected.` : `Added ${name}. ${next.length} profile${next.length === 1 ? "" : "s"} selected.`);
-    if (onSelectionChange) onSelectionChange(next);
+    announce(removing
+      ? `${ui(locale, "removedFrom").replace("{name}", name)} ${total(next.length)}.`
+      : `${ui(locale, "addedTo").replace("{name}", name)} ${total(next.length)}.`);
+    if (onSelectionChange) onSelectionChange(next, pickerQuery ?? currentQuery());
   };
   const selections = el("section", { class: "comparison-selections", "aria-label": ui(locale, "choices") });
   selections.appendChild(el("p", { class: "sensory-note" }, ui(locale, "slots")));
@@ -174,11 +181,11 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   }
   selections.appendChild(selectionList);
   section.appendChild(selections);
-  pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick, { locale }));
+  pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick, { locale, initialQuery: keepPickerQuery || "" }));
   section.appendChild(pickerHolder);
 
   if (selected.length === 0) {
-    announce("No profiles selected.");
+    announce(ui(locale, "noneSelected"));
     section.appendChild(el("p", { class: "compare-empty" }, t("compare.pick")));
     container.appendChild(section);
     restoreFocus(pickerHolder, focusProfileId);
@@ -186,14 +193,14 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   }
 
   if (selected.length === 1) {
-    announce(`1 profile selected: ${selected[0].title}.`);
+    announce(`${ui(locale, "oneSelected")}: ${selected[0].title}.`);
     section.appendChild(el("p", { class: "compare-empty" }, t("compare.oneMore")));
     container.appendChild(section);
     restoreFocus(pickerHolder, focusProfileId);
     return;
   }
 
-  announce(`Comparing ${selected.length} profiles: ${selected.map((p) => p.title).join(", ")}.`);
+  announce(`${ui(locale, "comparing")} ${total(selected.length)}: ${selected.map((p) => p.title).join(", ")}.`);
 
   // Sensory table
   const table = el("table", { class: "compare-table" });
@@ -216,9 +223,9 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   table.appendChild(thead);
 
   const tbody = el("tbody", {});
-  for (const { key, label, hint } of DIMENSIONS) {
+  for (const { key, hint } of DIMENSIONS) {
     const row = el("tr", {});
-    const th = el("th", { scope: "row", title: hint }, label);
+    const th = el("th", { scope: "row", title: hint }, dimLabel(key));
     row.appendChild(th);
     for (const profile of selected) row.appendChild(levelCell(profile, key, t));
     tbody.appendChild(row);
@@ -246,7 +253,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
     const diffList = el("ul", { class: "compare-diff-list" });
     for (const diff of diffs) {
       const item = el("li", {});
-      item.appendChild(el("strong", {}, `${diff.label}: `));
+      item.appendChild(el("strong", {}, `${dimLabel(diff.key)}: `));
       item.appendChild(document.createTextNode(
         selected.map((p, i) => `${p.title} — ${t(`level.${diff.levels[i]}`) || t("compare.notDocumented")}`).join("; ")
       ));
