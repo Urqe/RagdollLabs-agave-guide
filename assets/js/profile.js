@@ -2,7 +2,8 @@ import { el, safeLink, clear } from "./dom-utils.js";
 import { STATE_NAMES } from "./map.js";
 import { flavorMoods, ifYouLikeThis } from "./compare.js";
 import { bottlesForProfile } from "./catalogue.js";
-import { SPIRIT_LABELS } from "./spirit-labels.js";;
+import { SPIRIT_LABELS } from "./spirit-labels.js";
+import { ui, sensoryOverview } from "./presentation.js";
 
 const BODY_LABELS = { light: "Light body", medium: "Medium body", full: "Full body" };
 
@@ -70,7 +71,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const back = el("a", { href: backHref, class: "back-link" }, t("profile.backExplore"));
   section.appendChild(back);
 
-  section.appendChild(el("h2", { id: "profile-title" }, profile.title));
+  section.appendChild(el("h1", { id: "profile-title" }, profile.title));
 
   
 
@@ -94,16 +95,16 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     section.appendChild(el("p", { class: "beginner-note" }, profile.beginnerNote));
   }
   const guidanceNote = el("p", { class: "editorial-note" },
-    "Editorial style guidance — a description of the style, not a review or rating of any bottle.");
+    ui(locale, "guidance"));
   section.appendChild(guidanceNote);
 
   const craft = el("dl", { class: "profile-facts profile-craft" });
   if (profile.category) {
-    craft.appendChild(el("dt", {}, "Legal category"));
+    craft.appendChild(el("dt", {}, ui(locale, "legal")));
     craft.appendChild(el("dd", { class: "profile-category" }, profile.category));
   }
   if (profile.plant) {
-    craft.appendChild(el("dt", {}, "Agave"));
+    craft.appendChild(el("dt", {}, ui(locale, "plant")));
     const plantDd = el("dd", { class: "profile-plant" }, profile.plant);
     if (profile.plantId) {
       plantDd.appendChild(document.createTextNode(" "));
@@ -112,7 +113,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     craft.appendChild(plantDd);
   }
   if (profile.process) {
-    craft.appendChild(el("dt", {}, "Process"));
+    craft.appendChild(el("dt", {}, ui(locale, "process")));
     craft.appendChild(el("dd", { class: "profile-process" }, profile.process));
   }
   if (craft.childNodes.length > 0) section.appendChild(craft);
@@ -122,19 +123,19 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   
 
   const facts = el("dl", { class: "profile-facts" });
-  facts.appendChild(el("dt", {}, "Body"));
-  facts.appendChild(el("dd", { class: "profile-body" }, BODY_LABELS[profile.body] || profile.body));
-  facts.appendChild(el("dt", {}, "Taste notes"));
+  facts.appendChild(el("dt", {}, ui(locale, "body")));
+  facts.appendChild(el("dd", { class: "profile-body" }, ["light", "medium", "full"].includes(profile.body) ? ui(locale, profile.body) : profile.body));
+  facts.appendChild(el("dt", {}, ui(locale, "notes")));
   const notes = el("dd", { class: "profile-taste" });
   const tasteList = el("ul", { class: "taste-list" });
   for (const note of profile.tasteNotes) tasteList.appendChild(el("li", {}, note));
   notes.appendChild(tasteList);
   facts.appendChild(notes);
   if (profile.smoke) {
-    facts.appendChild(el("dt", {}, "Smoke"));
+    facts.appendChild(el("dt", {}, ui(locale, "smoke")));
     facts.appendChild(el("dd", { class: "profile-smoke" }, profile.smoke));
   }
-  facts.appendChild(el("dt", {}, "Finish"));
+  facts.appendChild(el("dt", {}, ui(locale, "finish")));
   facts.appendChild(el("dd", { class: "profile-finish" }, profile.finish));
   section.appendChild(facts);
   const moods = flavorMoods(profile);
@@ -205,6 +206,40 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const srcHeading = el("h3", { class: "sources-heading" }, t("profile.sources"));
   section.appendChild(srcHeading);
   section.appendChild(sourceLinks(sources, profile.sourceIds));
+
+  // Lead with sensory information; retain the original reference content in disclosures.
+  const titleNode = section.querySelector("#profile-title");
+  const placeNode = section.querySelector(".profile-place");
+  const factsNode = section.querySelector(".profile-facts:not(.profile-craft)");
+  const bottleNode = section.querySelector(".bottle-card");
+  const moreNode = section.querySelector(".more-bottles");
+  const pairingNode = section.querySelector(".profile-pairing");
+  const suggestionsHeading = section.querySelector(".suggestions-heading");
+  const suggestionsNode = section.querySelector(".suggestion-list");
+  const beginnerNode = section.querySelector(".beginner-note");
+  const detailNodes = [".profile-context", ".profile-description", ".profile-craft", ".profile-coords", ".learn-callout-link"]
+    .map(selector => section.querySelector(selector)).filter(Boolean);
+  const sourceNodes = [...section.children].filter(node => node.classList.contains("source-list") || node === srcHeading);
+  const identity = el("header", { class: "profile-heading" });
+  identity.append(titleNode, placeNode);
+  const core = el("div", { class: "profile-core" });
+  core.append(sensoryOverview(profile, locale), factsNode);
+  const action = el("a", { class: "secondary-button compare-profile-link", href: "#/compare/" + encodeURIComponent(profile.id) }, ui(locale, "compareThis") + " ↗");
+  const details = el("details", { class: "profile-learning" });
+  details.appendChild(el("summary", {}, ui(locale, "details")));
+  for (const node of detailNodes) details.appendChild(node);
+  const references = el("details", { class: "profile-learning" });
+  references.appendChild(el("summary", {}, ui(locale, "sources")));
+  for (const node of sourceNodes) references.appendChild(node);
+  clear(section);
+  section.append(back, identity, guidanceNote, core, action);
+  if (beginnerNode) section.appendChild(beginnerNode);
+  if (pairingNode) section.appendChild(pairingNode);
+  if (bottleNode) section.appendChild(bottleNode);
+  if (moreNode) section.appendChild(moreNode);
+  if (suggestionsHeading) section.appendChild(suggestionsHeading);
+  if (suggestionsNode) section.appendChild(suggestionsNode);
+  section.append(details, references);
 
   container.appendChild(section);
   return section;

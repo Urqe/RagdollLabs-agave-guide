@@ -7,6 +7,7 @@ import { renderCompare } from "./compare-view.js";
 import { renderCatalogue } from "./catalogue-view.js";
 import { renderLearn } from "./learn-view.js";
 import { createLocale } from "./locale.js";
+import { renderHome, ui } from "./presentation.js";
 
 const locale = createLocale();
 
@@ -19,18 +20,6 @@ const state = {
 
 function baseUrl() {
   return new URL(".", document.baseURI);
-}
-
-function renderHome(container) {
-  const t = (key) => locale.t(key);
-  clear(container);
-  const section = el("section", { class: "home-view", "aria-labelledby": "home-heading" });
-  section.appendChild(el("h2", { id: "home-heading" }, t("home.heading")));
-  section.appendChild(el("p", { class: "home-intro" }, t("home.intro")));
-  const cta = el("p", { class: "home-cta" });
-  cta.appendChild(el("a", { href: "#/explore", class: "cta-link" }, t("home.cta")));
-  section.appendChild(cta);
-  container.appendChild(section);
 }
 
 function renderError(container, error) {
@@ -48,7 +37,7 @@ async function renderRoute(container, route) {
 
   if (route.name === "home") {
     state.exploreApi = null;
-    renderHome(container);
+    renderHome(container, { profiles, locale });
     return;
   }
 
@@ -152,7 +141,6 @@ async function boot() {
   root.appendChild(main);
   wireThemeToggle();
   wireLocaleToggle(() => {
-    const route = parseHash(window.location.hash);
     handleRoute();
   });
 
@@ -178,6 +166,18 @@ async function boot() {
   const handleRoute = async () => {
     const route = parseHash(window.location.hash);
     syncCompareNav(route);
+    document.documentElement.lang = locale.get();
+    for (const link of document.querySelectorAll(".nav-link")) {
+      const name = link.dataset.view;
+      link.textContent = locale.t("nav." + name);
+      const active = name === route.name || (name === "explore" && (route.name === "state" || route.name === "profile"));
+      if (active) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    }
+    const brand = document.querySelector(".brand");
+    if (brand) brand.setAttribute("aria-label", ui(locale, "home"));
+    const footer = document.querySelector(".app-footer p");
+    if (footer) footer.textContent = ui(locale, "footer");
     clear(main);
     main.appendChild(el("p", { class: "loading-note" }, "Loading…"));
     try {
@@ -186,7 +186,7 @@ async function boot() {
     } catch (error) {
       renderError(main, error);
     }
-    main.focus({ preventScroll: true });
+    if (!main.contains(document.activeElement)) main.focus({ preventScroll: true });
   };
 
   // Render the initial route without pushing a duplicate history entry.
@@ -199,10 +199,10 @@ async function boot() {
  * render instead of silently showing English.
  */
 function appendUntranslatedNote(container) {
-  if (locale.hasMissing()) {
+  if (locale.get() === "es") {
     const note = document.createElement("p");
     note.className = "editorial-note untranslated-note";
-    note.textContent = locale.t("untranslated.note");
+    note.textContent = ui(locale, "disclosure");
     container.appendChild(note);
   }
 }

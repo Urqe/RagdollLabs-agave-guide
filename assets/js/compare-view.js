@@ -1,5 +1,6 @@
 import { el, clear } from "./dom-utils.js";
 import { navigateTo } from "./router.js";
+import { ui } from "./presentation.js";
 import {
   DIMENSIONS,
   biggestDifferences,
@@ -139,7 +140,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
 
   const section = el("section", { class: "compare-view", "aria-labelledby": "compare-heading" });
   const t = (key) => (locale ? locale.t(key) : key);
-  section.appendChild(el("h2", { id: "compare-heading" }, t("compare.heading")));
+  section.appendChild(el("h1", { id: "compare-heading" }, t("compare.heading")));
   section.appendChild(el("p", { class: "view-intro" }, t("compare.intro")));
 
   // Picker
@@ -160,6 +161,19 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
     announce(removing ? `Removed ${name}. ${next.length} profile${next.length === 1 ? "" : "s"} selected.` : `Added ${name}. ${next.length} profile${next.length === 1 ? "" : "s"} selected.`);
     if (onSelectionChange) onSelectionChange(next);
   };
+  const selections = el("section", { class: "comparison-selections", "aria-label": ui(locale, "choices") });
+  selections.appendChild(el("p", { class: "sensory-note" }, ui(locale, "slots")));
+  const selectionList = el("div", { class: "selection-list" });
+  for (const profile of selected) {
+    const chip = el("div", { class: "selection-chip" });
+    chip.appendChild(el("span", {}, profile.title));
+    const remove = el("button", { type: "button", class: "selection-remove", "aria-label": ui(locale, "remove") + ": " + profile.title }, ui(locale, "remove") + " ×");
+    remove.addEventListener("click", () => pick(profile.id));
+    chip.appendChild(remove);
+    selectionList.appendChild(chip);
+  }
+  selections.appendChild(selectionList);
+  section.appendChild(selections);
   pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick, { locale }));
   section.appendChild(pickerHolder);
 
@@ -185,7 +199,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   const table = el("table", { class: "compare-table" });
   const thead = el("thead", {});
   const headRow = el("tr", {});
-  headRow.appendChild(el("th", { scope: "col" }, "Dimension"));
+  headRow.appendChild(el("th", { scope: "col" }, ui(locale, "dimension")));
   for (const profile of selected) {
     const th = el("th", { scope: "col" }, profile.title);
     const removeButton = el("button", {
@@ -210,7 +224,11 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
     tbody.appendChild(row);
   }
   table.appendChild(tbody);
-  section.appendChild(table);
+  const scrollHint = el("p", { id: "compare-scroll-hint", class: "sensory-note compare-scroll-hint" }, ui(locale, "scroll"));
+  section.appendChild(scrollHint);
+  const scroll = el("div", { class: "comparison-scroll", tabindex: "0", role: "region", "aria-label": ui(locale, "choices"), "aria-describedby": "compare-scroll-hint" });
+  scroll.appendChild(table);
+  section.appendChild(scroll);
 
   // Plant/process context (cross-tradition differences shown clearly)
   const craft = el("dl", { class: "profile-facts compare-craft" });
