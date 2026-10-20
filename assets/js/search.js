@@ -28,6 +28,10 @@ const ALIASES = new Map([
   ["lechuguilla", "maximiliana"],
   ["mountain raicilla", "sierra raicilla"],
   ["coastal raicilla", "costa"],
+  ["raicilla de la costa", "costa"],
+  ["destilado", "destilado"],
+  ["humo", "smoke"],
+  ["dulce", "sweetness"],
   ["bacanorero", "bacanora"],
   ["tabernero", "taberna"],
 ]);

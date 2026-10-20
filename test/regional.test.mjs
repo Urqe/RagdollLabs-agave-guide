@@ -19,6 +19,8 @@ const profiles = (await readJson("assets/data/profiles.json")).profiles;
 const bottles = (await readJson("assets/data/bottles.json")).bottles;
 const sources = (await readJson("assets/data/sources.json")).sources;
 const { renderProfile } = await import("../assets/js/profile.js");
+const { createLocale } = await import("../assets/js/locale.js");
+const enLocale = createLocale();
 const { bottleEntry } = await import("../assets/js/catalogue-view.js");
 
 test("release 9: three regional traditions added with one example bottle each", () => {
@@ -118,12 +120,12 @@ test("release 10: backlog maintains uncovered expressions and missing profiles",
   const path = await import("node:path");
   const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
   const backlog = JSON.parse(await readFile(path.join(root, "assets/data/backlog.json"), "utf8"));
-  assert.ok(backlog.backlog.length >= 5, "backlog entries recorded");
+  assert.ok(backlog.backlog.length >= 4, "backlog entries recorded (Costa raicilla closed in Release 13)");
   for (const entry of backlog.backlog) {
     assert.ok(entry.kind && entry.item && entry.reason, "each entry has kind, item and reason");
   }
   // Costa raicilla gap is tracked (its bottle exists without a profile).
-  assert.ok(backlog.backlog.some((e) => e.item.includes("Costa raicilla")));
+  assert.ok(!backlog.backlog.some((e) => e.item.includes("Costa raicilla")), "closed gaps leave the backlog");
 });
 
 test("release 11: learn datasets validate and link to real profiles", async () => {
@@ -174,7 +176,7 @@ test("release 11: learn view renders plants, processes and glossary", async () =
   const { renderLearn } = await import("../assets/js/learn-view.js");
   const container = document.createElement("div");
   document.body.appendChild(container);
-  renderLearn(container, { plants, processes, glossary, profiles, bottles, sources });
+  renderLearn(container, { plants, processes, glossary, profiles, bottles, sources, locale: enLocale });
   assert.equal(container.querySelectorAll(".learn-card").length, plants.length + processes.length + glossary.length);
   assert.ok(container.textContent.includes("Uncertainty"), "uncertainty shown where it exists");
   assert.ok(container.querySelectorAll(".source-link").length > 10, "claims carry references");
@@ -186,7 +188,7 @@ test("release 11: profile pairing section renders with editorial label", () => {
   const bottle = bottles.find((b) => b.id === profile.exampleBottleId);
   const container = document.createElement("div");
   document.body.appendChild(container);
-  renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles });
+  renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles, locale: enLocale });
   assert.ok(container.querySelector(".profile-pairing"), "pairing section present");
   assert.ok(container.textContent.includes("Serving & pairings (editorial)"), "labeled editorial");
   assert.ok(container.textContent.includes("carne asada"), "food suggestions listed");
@@ -203,7 +205,7 @@ test("release 12: learn view has section jumps, verified dates and profile routi
   const { renderLearn } = await import("../assets/js/learn-view.js");
   const container = document.createElement("div");
   document.body.appendChild(container);
-  renderLearn(container, { plants, processes, glossary, profiles, bottles, sources });
+  renderLearn(container, { plants, processes, glossary, profiles, bottles, sources, locale: enLocale });
 
   // Cognitive load: jump navigation targets exist.
   const jumps = [...container.querySelectorAll(".learn-jump")];
@@ -229,7 +231,7 @@ test("release 12: profiles link both ways to the plant pages", () => {
     const bottle = bottles.find((b) => b.id === profile.exampleBottleId);
     const container = document.createElement("div");
     document.body.appendChild(container);
-    renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles });
+    renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles, locale: enLocale });
     assert.ok(container.querySelector(".plant-learn-link"), `${profile.id} links to the plant page`);
     container.remove();
   }

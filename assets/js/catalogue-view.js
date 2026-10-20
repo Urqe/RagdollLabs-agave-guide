@@ -36,7 +36,8 @@ function sourceLinks(sources, sourceIds) {
  * Reviewer impressions, producer facts and the app's synthesis stay
  * visually and semantically distinguishable.
  */
-export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = true } = {}) {
+export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = true, locale = null } = {}) {
+  const t = (key) => (locale ? locale.t(key) : key);
   const article = el("article", { class: "catalogue-entry", "aria-labelledby": `bottle-${bottle.id}-title` });
   article.id = `bottle-${bottle.id}`;
 
@@ -59,7 +60,8 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
 
   // Coverage disclosures first: factual entry without borrowed character.
   for (const label of bottle.coverage || []) {
-    article.appendChild(el("p", { class: "coverage-label" }, COVERAGE_LABELS[label] || label));
+    const coverageText = label === "tasting-not-documented" ? t("coverage.tasting") : label === "profile-not-covered" ? t("coverage.profile") : (COVERAGE_LABELS[label] || label);
+    article.appendChild(el("p", { class: "coverage-label" }, coverageText));
   }
 
   // Reviewer impressions (attributed).
@@ -106,19 +108,19 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
  * bottle list, and a brand directory. Search results and the list link to
  * profiles with the catalogue context preserved in the route.
  */
-export function renderCatalogue(container, { bottles, profiles, sources, returnTo = "catalogue" }) {
+export function renderCatalogue(container, { bottles, profiles, sources, locale = null, returnTo = "catalogue" }) {
   clear(container);
+  const t = (key) => (locale ? locale.t(key) : key);
   const section = el("section", { class: "catalogue-view", "aria-labelledby": "catalogue-heading" });
-  section.appendChild(el("h2", { id: "catalogue-heading" }, "Bottle catalogue"));
-  section.appendChild(el("p", { class: "view-intro" },
-    "Every bottle entry keeps the brand, the actual producer and the exact expression as separate facts. Reviewer impressions are attributed to their source; the app's own profile-relative notes are labeled editorial; factual entries without review or profile coverage say so instead of borrowing character."));
+  section.appendChild(el("h2", { id: "catalogue-heading" }, t("catalogue.heading")));
+  section.appendChild(el("p", { class: "view-intro" }, t("catalogue.intro")));
 
   // Search
   const searchInput = el("input", {
     type: "search",
     class: "search-input",
     id: "catalogue-search",
-    placeholder: "Search: expression, brand, producer, place\u2026",
+    placeholder: t("catalogue.searchPlaceholder"),
     "aria-label": "Search the catalogue",
   });
   const searchResults = el("div", { class: "search-results", "aria-live": "polite" });
@@ -171,7 +173,7 @@ export function renderCatalogue(container, { bottles, profiles, sources, returnT
   searchInput.addEventListener("input", renderSearch);
 
   // Alphabetical bottle list
-  const listHeading = el("h3", {}, "All bottles (alphabetical)");
+  const listHeading = el("h3", {}, t("catalogue.allBottles"));
   section.appendChild(listHeading);
   const alphaList = el("ul", { class: "catalogue-list" });
   const sorted = [...bottles].sort((a, b) =>
@@ -179,13 +181,13 @@ export function renderCatalogue(container, { bottles, profiles, sources, returnT
   );
   for (const bottle of sorted) {
     const item = el("li");
-    item.appendChild(bottleEntry(bottle, { sources, profiles }));
+    item.appendChild(bottleEntry(bottle, { sources, profiles, locale }));
     alphaList.appendChild(item);
   }
   section.appendChild(alphaList);
 
   // Brand directory
-  const dirHeading = el("h3", {}, "Browse all brands");
+  const dirHeading = el("h3", {}, t("catalogue.brands"));
   section.appendChild(dirHeading);
   const dir = el("ul", { class: "brand-directory" });
   for (const { brand, bottles: brandBottles } of brandDirectory(bottles)) {

@@ -37,12 +37,12 @@ function profileList(profiles, stateId = null) {
  * Explore view: SVG map + state list on the left, covered profiles for the
  * selected state on the right.
  */
-export async function renderExplore(container, { profiles, bottles, selectedStateId, mapUrl }) {
+export async function renderExplore(container, { profiles, bottles, selectedStateId, locale, mapUrl }) {
   clear(container);
   const section = el("section", { class: "explore-view", "aria-labelledby": "explore-heading" });
-  section.appendChild(el("h2", { id: "explore-heading" }, "Explore by state"));
-  const intro = el("p", { class: "view-intro" },
-    "Shaded states have style profiles in this app; the full map of México is shown for context. Shading shows app coverage only — it is not a legal production boundary map. Only states with profiles can be selected.");
+  const t = (key) => (locale ? locale.t(key) : key);
+  section.appendChild(el("h2", { id: "explore-heading" }, t("explore.heading")));
+  const intro = el("p", { class: "view-intro" }, t("explore.intro"));
   section.appendChild(intro);
 
   const searchHolder = el("div", { class: "search-holder" });
@@ -61,15 +61,14 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
   const renderResults = (stateId) => {
     clear(results);
     if (!stateId) {
-      results.appendChild(el("p", { class: "state-results-hint" },
-        "Select one of the shaded states with profiles to see their style profiles."));
+      results.appendChild(el("p", { class: "state-results-hint" }, t("explore.hint")));
       return;
     }
     const name = STATE_NAMES[stateId] || stateId;
     results.appendChild(el("h3", { class: "state-results-title" }, name));
     const covered = profilesForState(profiles, stateId);
     if (covered.length === 0) {
-      results.appendChild(el("p", { class: "empty-state" }, EMPTY_MESSAGE));
+      results.appendChild(el("p", { class: "empty-state" }, t("explore.empty")));
       return;
     }
     results.appendChild(profileList(covered, stateId));
@@ -107,7 +106,7 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
     type: "search",
     class: "search-input",
     id: "profile-search",
-    placeholder: "Search: spirit, agave, place, producer, brand…",
+    placeholder: t("explore.searchPlaceholder"),
     "aria-label": "Search profiles",
   });
   const searchResults = el("div", { class: "search-results", "aria-live": "polite" });
@@ -124,7 +123,7 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
     const matches = searchProfiles({ profiles, bottles: bottles || [], query });
     if (matches.length === 0) {
       searchResults.appendChild(el("p", { class: "search-empty" },
-        `No profiles match “${query}”. Try a spirit (mezcal), an agave (espadín), a place (Sonora) or a brand (La Venenosa).`));
+        `${t("explore.searchEmpty")} “${query}”.`));
       return;
     }
     const list = el("ul", { class: "search-result-list" });

@@ -33,31 +33,32 @@ function sourceLinks(sources, sourceIds) {
  * identity, honest uncertainty, and links to the profiles/bottles that
  * use them), production explanations, and a label-terms glossary.
  */
-export function renderLearn(container, { plants, processes, glossary, profiles, bottles, sources }) {
+export function renderLearn(container, { plants, processes, glossary, profiles, bottles, sources, locale = null }) {
   clear(container);
   const section = el("section", { class: "learn-view", "aria-labelledby": "learn-heading" });
-  section.appendChild(el("h2", { id: "learn-heading" }, "Learn"));
+  const t = (key) => (locale ? locale.t(key) : key);
+  section.appendChild(el("h2", { id: "learn-heading" }, t("learn.heading")));
   const jumps = el("nav", { class: "learn-jumps", "aria-label": "Learn sections" });
-  for (const [href, label] of [["#learn-plants", "The agaves"], ["#learn-processes", "How they are made"], ["#learn-terms", "Label vocabulary"]]) {
+  for (const [href, label] of [["#learn-plants", t("learn.plants")], ["#learn-processes", t("learn.processes")], ["#learn-terms", t("learn.terms")]]) {
     jumps.appendChild(el("a", { href, class: "nav-link learn-jump" }, label));
   }
   section.appendChild(jumps);
   section.appendChild(el("p", { class: "view-intro" },
-    "Agave plants, production methods and label vocabulary behind the profiles. Educational descriptions do not guarantee flavor from geography, species or age; where the botany is genuinely unsettled, we say so instead of guessing."));
+    t("learn.intro")));
 
   // --- Plants ---
-  section.appendChild(el("h3", { id: "learn-plants" }, "The agaves"));
+  section.appendChild(el("h3", { id: "learn-plants" }, t("learn.plants")));
   for (const plant of plants) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `plant-${plant.id}` });
     card.appendChild(el("h4", { id: `plant-${plant.id}` }, plant.species));
     const names = el("p", { class: "learn-names" });
     names.appendChild(document.createTextNode(
-      "Common names: " + plant.commonNames.map((n) => `${n.name} (${n.region})`).join(", ")
+      t("learn.commonNames") + " " + plant.commonNames.map((n) => `${n.name} (${n.region})`).join(", ")
     ));
     card.appendChild(names);
-    card.appendChild(el("p", { class: "learn-cultivation" }, `Harvest: ${plant.cultivation}.`));
+    card.appendChild(el("p", { class: "learn-cultivation" }, `${t("learn.harvest")} ${plant.cultivation}.`));
     if (plant.uncertainty) {
-      card.appendChild(el("p", { class: "editorial-note" }, `Uncertainty: ${plant.uncertainty}`));
+      card.appendChild(el("p", { class: "editorial-note" }, `${t("learn.uncertainty")} ${plant.uncertainty}`));
     }
     const links = el("p", {});
     for (const pid of plant.profileIds || []) {
@@ -72,14 +73,14 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
   }
 
   // --- Processes ---
-  section.appendChild(el("h3", { id: "learn-processes" }, "How the spirits are made"));
+  section.appendChild(el("h3", { id: "learn-processes" }, t("learn.processes")));
   for (const proc of processes) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `process-${proc.id}` });
     card.appendChild(el("h4", { id: `process-${proc.id}` }, `${proc.name} — ${proc.stage}`));
     card.appendChild(el("p", {}, proc.explanation));
     const usedBy = profiles.filter((pr) => (pr.process || "").toLowerCase().includes(proc.stage === "cooking" ? "roast" : "") || relevantTo(pr, proc));
     if (usedBy.length > 0) {
-      const line = el("p", { class: "learn-usedby" }, "Seen in: ");
+      const line = el("p", { class: "learn-usedby" }, `${t("learn.seenIn")} `);
       for (const pr of usedBy.slice(0, 4)) {
         line.appendChild(el("a", { href: `#/profile/${encodeURIComponent(pr.id)}`, class: "catalogue-profile-link" }, `${pr.title}; `));
       }
@@ -90,7 +91,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
   }
 
   // --- Glossary ---
-  section.appendChild(el("h3", { id: "learn-terms" }, "Label vocabulary"));
+  section.appendChild(el("h3", { id: "learn-terms" }, t("learn.terms")));
   section.appendChild(el("p", { class: "view-intro" },
     "Class terms are spirit-specific: tequila's rules do not transfer to mezcal or raicilla. Where a term is not a legal class, that is stated."));
   for (const term of glossary) {
@@ -100,7 +101,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
     card.appendChild(el("p", {}, term.definition));
     const related = profiles.filter((pr) => (pr.category || "").toLowerCase().includes(term.term.split(" ")[0].toLowerCase()));
     if (related.length > 0) {
-      const line = el("p", { class: "learn-usedby" }, "Relates to: ");
+      const line = el("p", { class: "learn-usedby" }, `${t("learn.relatesTo")} `);
       for (const pr of related.slice(0, 4)) {
         line.appendChild(el("a", { href: `#/profile/${encodeURIComponent(pr.id)}`, class: "catalogue-profile-link" }, `${pr.title}; `));
       }

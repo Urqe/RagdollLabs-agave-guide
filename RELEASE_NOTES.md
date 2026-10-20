@@ -651,3 +651,48 @@ evidence consistency.
 ### Remaining issues / deferred
 
 - Native-device rendering still unverified in this environment.
+
+## Release 13 — Regional Depth & Spanish
+
+### Scope delivered
+
+- **Regional depth (backlog-driven):** closed the Costa raicilla gap \u2014
+  a new profile (Costa raicilla, coastal style, Jalisco; 8 profiles
+  total) built from already-cited sources (pit-cooked angustifolia/
+  rhodacantha vs the Sierra's above-ground ovens; Costa is an editorial
+  tradition split, not a legal class). The previously uncatalogued
+  La Venenosa Costa bottle is re-linked to it: now profile-covered,
+  still honestly "tasting notes not yet documented". Approximate
+  coordinates and pairing included; backlog updated (gap closed).
+- **Spanish edition:** full reviewed Spanish UI and learning chrome \u2014
+  nav, explore, compare, catalogue, profile and Learn strings
+  ("Explora por estado", "Cat\u00e1logo de botellas", "Notas de cata a\u00fan
+  no documentadas", \u2026) via a new `locale.js` with an EN/ES toggle in
+  the header (persisted like the theme).
+- **Locale isolation:** the locale is a pure presentation concern \u2014
+  no locale ever appears in routes, entity IDs or URLs (tested).
+- **Translation fallback + disclosure:** missing strings fall back to
+  English and set a flag that renders a visible "shown in English
+  because a reviewed Spanish translation is not yet available" note
+  instead of silently leaking language (tested).
+- **Spanish alphabetical behavior:** locale-aware `localeCompare` for
+  catalogue/brand lists (\u00c1lamos sorts with the A's); bilingual search
+  aliases (raicilla de la costa, humo, dulce).
+- **Designation layer:** deliberately not added \u2014 the plan allows it
+  only after validating operative declarations and matching geometry;
+  recorded as future work.
+
+### Checks run
+
+- `npm run validate` \u2014 schema plus 59 node:test/jsdom suites (4 new
+  locale tests). All passing.
+- Real-app boot smoke: EN\u2192ES toggle re-renders all views in Spanish,
+  routes stay locale-free, ES catalogue renders translated coverage
+  labels, Costa profile + bottle flow verified.
+
+### Remaining issues / deferred
+
+- Profile/bottle editorial content (titles, descriptions) remains in
+  its authored language, disclosed by the fallback note; translating
+  entity content is Release 14 (Localization Review) scope.
+- Native-device rendering still unverified in this environment.

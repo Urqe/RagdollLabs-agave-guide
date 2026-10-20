@@ -378,6 +378,62 @@
         ]
       },
       "plantId": "agave-salmiana"
+    },
+    {
+      "id": "raicilla-costa-jalisco",
+      "title": "Costa raicilla, coastal style (Jalisco)",
+      "spirit": "raicilla",
+      "stateId": "jal",
+      "stateName": "Jalisco",
+      "context": "Raicilla's denomination of origin (2019) spans 16 Jalisco municipalities and one in Nayarit, and editorially splits into two traditions: Sierra (mountain) and Costa (coastal). Coastal raicilla comes from the Cabo Corrientes and Tomatlán area, made mainly with Agave angustifolia (locally chico aguiar) and Agave rhodacantha.",
+      "description": "Unlike the Sierra style's above-ground adobe ovens, coastal producers traditionally cook their agave in underground pits — so coastal raicilla leans smokier and more savory than its mountain sibling, with the pit roast alongside citrus and herbal notes. This profile describes the editorial style; individual bottles vary widely and tasting notes for the example bottle are not yet documented. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Agave angustifolia (chico aguiar) and Agave rhodacantha (wild and cultivated)",
+      "plantId": "agave-angustifolia",
+      "process": "Underground pit roast, wild-yeast fermentation, small-batch distillation",
+      "category": "Raicilla — spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019); Costa is an editorial tradition split, not a legal class",
+      "beginnerNote": "New to coastal raicilla? Think of it as the smokier seaside cousin of Sierra raicilla: same DO, different cook.",
+      "aliases": [
+        "costa",
+        "raicilla de la costa",
+        "coastal raicilla"
+      ],
+      "body": "medium",
+      "tasteNotes": [
+        "pit-roasted agave",
+        "smoke",
+        "citrus",
+        "fresh herbs"
+      ],
+      "smoke": "More present than in Sierra raicilla: the underground pit cook gives a savory smoke woven through citrus and herbs.",
+      "finish": "Medium-long, smoky and savory with a citrus fade.",
+      "sensory": {
+        "smoke": "medium",
+        "herbal": "medium",
+        "fruit": "low",
+        "sweetness": "low",
+        "pepper": "low",
+        "oak": "none",
+        "finishLength": "medium"
+      },
+      "placeCoords": {
+        "lat": 20.28,
+        "lon": -105.45,
+        "precision": "region (Cabo Corrientes coast, Jalisco); approximate"
+      },
+      "exampleBottleId": "la-venenosa-costa",
+      "pairing": {
+        "serving": "Sipped neat; the smoke suits slow evening sipping (editorial suggestion).",
+        "foods": [
+          "grilled fish",
+          "seafood with chile",
+          "coastal tocios"
+        ]
+      },
+      "sourceIds": [
+        "mezcalreviews-raicilla-category",
+        "wikipedia-raicilla",
+        "casaendemica-brands"
+      ]
     }
   ]
 }

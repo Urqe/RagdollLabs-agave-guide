@@ -67,14 +67,15 @@ export function bottlesForProfile(bottles, profile) {
 }
 
 /** Brand directory: unique brands with their bottles, alphabetical. */
-export function brandDirectory(bottles) {
+export function brandDirectory(bottles, compare) {
   const byBrand = new Map();
   for (const bottle of bottles) {
     if (!byBrand.has(bottle.brand)) byBrand.set(bottle.brand, []);
     byBrand.get(bottle.brand).push(bottle);
   }
+  const cmp = compare || ((a, b) => a.localeCompare(b));
   return [...byBrand.entries()]
-    .sort((a, b) => a[0].localeCompare(b[0]))
+    .sort((a, b) => cmp(a[0], b[0]))
     .map(([brand, brandBottles]) => ({
       brand,
       bottles: [...brandBottles].sort((a, b) =>

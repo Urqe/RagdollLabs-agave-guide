@@ -28,9 +28,9 @@ function sourceLinks(sources, sourceIds) {
   return list;
 }
 
-function exampleBottleCard(bottle, sources) {
+function exampleBottleCard(bottle, sources, t) {
   const card = el("article", { class: "bottle-card", "aria-labelledby": "bottle-card-heading" });
-  card.appendChild(el("h3", { id: "bottle-card-heading", class: "bottle-card-title" }, "Example bottle"));
+  card.appendChild(el("h3", { id: "bottle-card-heading", class: "bottle-card-title" }, t("profile.exampleBottle")));
   const name = el("p", { class: "bottle-name" });
   name.appendChild(el("strong", {}, `${bottle.brand} ${bottle.expression}`));
   if (bottle.abv != null) {
@@ -44,7 +44,7 @@ function exampleBottleCard(bottle, sources) {
   if (bottle.place) card.appendChild(el("p", { class: "bottle-place" }, bottle.place));
   if (bottle.composition) card.appendChild(el("p", { class: "bottle-composition editorial-note" }, `Composition: ${bottle.composition}`));
   card.appendChild(el("p", { class: "bottle-review" }, bottle.reviewSummary));
-  const linksLabel = el("p", { class: "bottle-links-label" }, "Sources for this bottle:");
+  const linksLabel = el("p", { class: "bottle-links-label" }, t("profile.sourcesBottle"));
   card.appendChild(linksLabel);
   card.appendChild(sourceLinks(sources, bottle.sourceIds));
   return card;
@@ -54,12 +54,13 @@ function exampleBottleCard(bottle, sources) {
  * Profile view: title, place/style context, description, body, taste notes,
  * smoke (where relevant), finish, one example bottle card and source links.
  */
-export function renderProfile(container, { profile, bottle, sources, returnTo = null, allProfiles = [], allBottles = [] }) {
+export function renderProfile(container, { profile, bottle, sources, returnTo = null, allProfiles = [], allBottles = [], locale = null }) {
   clear(container);
   const section = el("section", { class: "profile-view", "aria-labelledby": "profile-title" });
 
+  const t = (key) => (locale ? locale.t(key) : key);
   const backHref = returnTo ? `#/explore/${encodeURIComponent(returnTo)}` : "#/explore";
-  const back = el("a", { href: backHref, class: "back-link" }, "← Back to explore");
+  const back = el("a", { href: backHref, class: "back-link" }, t("profile.backExplore"));
   section.appendChild(back);
 
   section.appendChild(el("h2", { id: "profile-title" }, profile.title));
@@ -93,7 +94,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     const plantDd = el("dd", { class: "profile-plant" }, profile.plant);
     if (profile.plantId) {
       plantDd.appendChild(document.createTextNode(" "));
-      plantDd.appendChild(el("a", { href: "#/learn", class: "plant-learn-link" }, "About this agave →"));
+      plantDd.appendChild(el("a", { href: "#/learn", class: "plant-learn-link" }, t("profile.aboutPlant")));
     }
     craft.appendChild(plantDd);
   }
@@ -110,7 +111,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const moods = flavorMoods(profile);
   if (moods.length > 0) {
     const moodLine = el("p", { class: "mood-line" });
-    moodLine.appendChild(el("strong", {}, "Flavor moods: "));
+    moodLine.appendChild(el("strong", {}, t("profile.moods") + " "));
     moodLine.appendChild(document.createTextNode(moods.join(", ") + "."));
     section.appendChild(moodLine);
   }
@@ -132,13 +133,13 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   facts.appendChild(el("dd", { class: "profile-finish" }, profile.finish));
   section.appendChild(facts);
 
-  if (bottle) section.appendChild(exampleBottleCard(bottle, sources));
+  if (bottle) section.appendChild(exampleBottleCard(bottle, sources, t));
 
   // Optional expansion: other catalogue bottles mapped to this profile.
   const { others } = bottlesForProfile(allBottles, profile);
   if (others.length > 0) {
     const details = el("details", { class: "more-bottles" });
-    const summary = el("summary", {}, `See more bottles for this style (${others.length})`);
+    const summary = el("summary", {}, `${t("profile.moreBottles")} (${others.length})`);
     details.appendChild(summary);
     const moreList = el("ul", { class: "catalogue-list" });
     for (const other of others) {
@@ -160,21 +161,21 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
 
   if (profile.pairing) {
     const pairing = el("div", { class: "profile-pairing" });
-    pairing.appendChild(el("h3", { class: "sources-heading" }, "Serving & pairings (editorial)"));
+    pairing.appendChild(el("h3", { class: "sources-heading" }, t("profile.pairing")));
     pairing.appendChild(el("p", {}, profile.pairing.serving));
     if (profile.pairing.foods && profile.pairing.foods.length > 0) {
-      pairing.appendChild(el("p", {}, "Foods to try: " + profile.pairing.foods.join(", ") + "."));
+      pairing.appendChild(el("p", {}, t("profile.pairingFoods") + " " + profile.pairing.foods.join(", ") + "."));
     }
     section.appendChild(pairing);
   }
-  const learnLink = el("a", { href: "#/learn", class: "back-link" }, "Learn about the agaves, methods and label terms →");
+  const learnLink = el("a", { href: "#/learn", class: "back-link" }, t("profile.learnLink"));
   const learnLine = el("p", {});
   learnLine.appendChild(learnLink);
   section.appendChild(learnLine);
 
   const suggestions = ifYouLikeThis(profile, allProfiles);
   if (suggestions.length > 0) {
-    const suggHeading = el("h3", { class: "sources-heading" }, "If you like this, try…");
+    const suggHeading = el("h3", { class: "sources-heading" }, t("profile.ifYouLike"));
     section.appendChild(suggHeading);
     const suggList = el("ul", { class: "suggestion-list" });
     for (const { profile: other, reason } of suggestions) {
@@ -187,7 +188,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     section.appendChild(suggList);
   }
 
-  const srcHeading = el("h3", { class: "sources-heading" }, "Sources for this profile");
+  const srcHeading = el("h3", { class: "sources-heading" }, t("profile.sources"));
   section.appendChild(srcHeading);
   section.appendChild(sourceLinks(sources, profile.sourceIds));
 

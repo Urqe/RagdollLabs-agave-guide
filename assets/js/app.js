@@ -6,6 +6,9 @@ import { renderProfile, renderProfileNotFound } from "./profile.js";
 import { renderCompare } from "./compare-view.js";
 import { renderCatalogue } from "./catalogue-view.js";
 import { renderLearn } from "./learn-view.js";
+import { createLocale } from "./locale.js";
+
+const locale = createLocale();
 
 const state = {
   data: null,
@@ -57,6 +60,7 @@ async function renderRoute(container, route) {
       profiles,
       bottles,
       selectedStateId,
+      locale,
       mapUrl: new URL("assets/geo/mexico-states.svg", baseUrl()).href,
     });
     return;
@@ -69,12 +73,13 @@ async function renderRoute(container, route) {
       processes: state.data.processes,
       glossary: state.data.glossary,
       profiles, bottles, sources,
+      locale,
     });
     return;
   }
   if (route.name === "catalogue") {
     state.exploreApi = null;
-    renderCatalogue(container, { bottles, profiles, sources });
+    renderCatalogue(container, { bottles, profiles, sources, locale });
     return;
   }
   if (route.name === "compare") {
@@ -100,12 +105,28 @@ async function renderRoute(container, route) {
       return;
     }
     const bottle = bottles.find((b) => b.id === profile.exampleBottleId) || null;
-    renderProfile(container, { profile, bottle, sources, returnTo: route.params.from || null, allProfiles: profiles, allBottles: bottles });
+    renderProfile(container, { profile, bottle, sources, returnTo: route.params.from || null, allProfiles: profiles, allBottles: bottles, locale });
     return;
   }
 
   state.exploreApi = null;
   renderProfileNotFound(container, "");
+}
+
+function wireLocaleToggle(refresh) {
+  const button = document.getElementById("locale-toggle");
+  if (!button) return;
+  const render = () => {
+    const next = locale.get() === "en" ? "es" : "en";
+    button.textContent = next.toUpperCase();
+    button.setAttribute("aria-label", locale.get() === "en" ? "Cambiar idioma" : "Switch language");
+  };
+  button.addEventListener("click", () => {
+    locale.set(locale.get() === "en" ? "es" : "en");
+    render();
+    refresh();
+  });
+  render();
 }
 
 function wireThemeToggle() {
@@ -131,6 +152,10 @@ async function boot() {
   const main = el("main", { id: "main", class: "app-main", tabindex: "-1" });
   root.appendChild(main);
   wireThemeToggle();
+  wireLocaleToggle(() => {
+    const route = parseHash(window.location.hash);
+    handleRoute();
+  });
 
   try {
     state.data = await loadAppData(baseUrl());
@@ -158,6 +183,7 @@ async function boot() {
     main.appendChild(el("p", { class: "loading-note" }, "Loading…"));
     try {
       await renderRoute(main, route);
+      appendUntranslatedNote(main);
     } catch (error) {
       renderError(main, error);
     }
@@ -167,6 +193,19 @@ async function boot() {
   // Render the initial route without pushing a duplicate history entry.
   await handleRoute();
   startRouter(handleRoute);
+}
+
+/**
+ * When the active locale lacks reviewed strings, disclose it once per
+ * render instead of silently showing English.
+ */
+function appendUntranslatedNote(container) {
+  if (locale.hasMissing()) {
+    const note = document.createElement("p");
+    note.className = "editorial-note untranslated-note";
+    note.textContent = locale.t("untranslated.note");
+    container.appendChild(note);
+  }
 }
 
 boot();

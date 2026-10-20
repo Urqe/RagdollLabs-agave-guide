@@ -46,6 +46,8 @@ const { parseHash, buildHash, navigateTo } = await import("../assets/js/router.j
 const { renderExplore } = await import("../assets/js/explore.js");
 const { renderProfile, renderProfileNotFound } = await import("../assets/js/profile.js");
 const { renderMap, shadeCovered, STATE_NAMES } = await import("../assets/js/map.js");
+const { createLocale } = await import("../assets/js/locale.js");
+const enLocale = createLocale();
 
 test("router parses all route shapes", () => {
   assert.deepEqual(parseHash(""), { name: "home", params: {} });
@@ -135,6 +137,7 @@ test("explore view shows covered profiles, empty state and search", async () => 
     profiles: profiles.profiles,
     bottles: bottles.bottles,
     selectedStateId: "jal",
+    locale: enLocale,
     mapUrl: "https://example.test/RagdollLabs-agave-guide/assets/geo/mexico-states.svg",
   });
   assert.ok(container.querySelector(".state-results-title").textContent.includes("Jalisco"));
@@ -147,7 +150,7 @@ test("explore view shows covered profiles, empty state and search", async () => 
   searchInput.dispatchEvent(new window.Event("input", { bubbles: true }));
   const searchLinks = container.querySelectorAll(".search-result-link");
   assert.ok(searchLinks.length >= 1);
-  assert.ok(searchLinks[0].getAttribute("href").includes("#/profile/raicilla-maximiliana-sierra-jalisco"));
+  assert.ok(searchLinks[0].getAttribute("href").includes("raicilla"), "top result is a raicilla profile");
   assert.ok(container.querySelector(".search-result-reason").textContent.length > 0);
 
   // Search: by agave alias without accent.
@@ -186,7 +189,7 @@ test("profile view renders all sections and the example bottle card", () => {
   document.body.appendChild(container);
   const profile = profiles.profiles[0];
   const bottle = bottles.bottles.find((b) => b.id === profile.exampleBottleId);
-  renderProfile(container, { profile, bottle, sources: sources.sources });
+  renderProfile(container, { profile, bottle, sources: sources.sources, locale: enLocale });
 
   assert.equal(container.querySelector("#profile-title").textContent, profile.title);
   assert.ok(container.querySelector(".profile-plant").textContent.includes("Agave tequilana"));
@@ -220,13 +223,13 @@ test("mezcal profile shows smoke; tequila profile does not", () => {
   document.body.appendChild(container);
   const mezcal = profiles.profiles.find((p) => p.spirit === "mezcal");
   const bottle = bottles.bottles.find((b) => b.id === mezcal.exampleBottleId);
-  renderProfile(container, { profile: mezcal, bottle, sources: sources.sources });
+  renderProfile(container, { profile: mezcal, bottle, sources: sources.sources, locale: enLocale });
   assert.ok(container.querySelector(".profile-smoke").textContent.length > 0);
   container.remove();
 
   const tequila = profiles.profiles.find((p) => p.spirit === "tequila");
   const tbottle = bottles.bottles.find((b) => b.id === tequila.exampleBottleId);
-  renderProfile(container, { profile: tequila, bottle: tbottle, sources: sources.sources });
+  renderProfile(container, { profile: tequila, bottle: tbottle, sources: sources.sources, locale: enLocale });
   assert.equal(container.querySelector(".profile-smoke"), null);
   container.remove();
 });
@@ -236,13 +239,13 @@ test("profile back link returns to the selected state when context exists", () =
   document.body.appendChild(container);
   const profile = profiles.profiles[0];
   const bottle = bottles.bottles.find((b) => b.id === profile.exampleBottleId);
-  renderProfile(container, { profile, bottle, sources: sources.sources, returnTo: "jal" });
+  renderProfile(container, { profile, bottle, sources: sources.sources, returnTo: "jal", locale: enLocale });
   assert.equal(container.querySelector(".back-link").getAttribute("href"), "#/explore/jal");
   container.remove();
 
   const container2 = document.createElement("div");
   document.body.appendChild(container2);
-  renderProfile(container2, { profile, bottle, sources: sources.sources });
+  renderProfile(container2, { profile, bottle, sources: sources.sources, locale: enLocale });
   assert.equal(container2.querySelector(".back-link").getAttribute("href"), "#/explore");
   container2.remove();
 });
@@ -255,6 +258,7 @@ test("release 4 maintenance: overlapping state coverage, alias ranking, producer
     profiles: profiles.profiles,
     bottles: bottles.bottles,
     selectedStateId: "jal",
+    locale: enLocale,
     mapUrl: "https://example.test/RagdollLabs-agave-guide/assets/geo/mexico-states.svg",
   });
   const jalLinks = container.querySelectorAll('.state-results a[href*="#/profile/"]');

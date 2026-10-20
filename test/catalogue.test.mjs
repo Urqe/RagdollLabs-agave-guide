@@ -23,6 +23,8 @@ const sources = (await readJson("assets/data/sources.json")).sources;
 const { searchBottles, bottlesForProfile, brandDirectory, applyVariants } =
   await import("../assets/js/catalogue.js");
 const { renderCatalogue, bottleEntry } = await import("../assets/js/catalogue-view.js");
+const { createLocale } = await import("../assets/js/locale.js");
+const enLocale = createLocale();
 const { renderProfile } = await import("../assets/js/profile.js");
 
 test("catalogue search prioritizes exact expression, then brand, then content", () => {
@@ -50,7 +52,7 @@ test("catalogue search applies curated spelling variants and normalization", () 
 test("catalogue lists entries alphabetically and shows the brand directory", () => {
   const container = document.createElement("div");
   document.body.appendChild(container);
-  renderCatalogue(container, { bottles, profiles, sources });
+  renderCatalogue(container, { bottles, profiles, sources, locale: enLocale });
   assert.equal(container.querySelectorAll(".catalogue-entry").length, bottles.length);
   const names = [...container.querySelectorAll(".catalogue-entry-title")].map((n) => n.textContent);
   const sortedNames = [...names].sort((a, b) => a.localeCompare(b));
@@ -66,17 +68,18 @@ test("factual entries disclose missing coverage instead of borrowing character",
   assert.ok(costa, "catalogue contains a factual no-review entry");
   assert.equal(costa.reviewSummary, null);
   assert.ok(costa.coverage.includes("tasting-not-documented"));
-  assert.ok(costa.coverage.includes("profile-not-covered"));
+  // Release 13: profile covered now; only tasting notes remain undisclosed.
+  assert.equal(costa.profileId, "raicilla-costa-jalisco", "re-linked to the new Costa profile");
 
   const container = document.createElement("div");
   document.body.appendChild(container);
-  const entry = bottleEntry(costa, { sources, profiles });
+  const entry = bottleEntry(costa, { sources, profiles, locale: enLocale });
   container.appendChild(entry);
   const labels = [...entry.querySelectorAll(".coverage-label")].map((l) => l.textContent);
   assert.ok(labels.includes("Tasting notes not yet documented"));
-  assert.ok(labels.includes("Profile not yet covered"));
+  assert.ok(!labels.includes("Profile not yet covered"), "no longer marked profile-not-covered");
   assert.equal(entry.querySelector(".bottle-review"), null, "no invented tasting note");
-  assert.equal(entry.querySelector(".catalogue-profile-link"), null, "no profile link when uncovered");
+  assert.ok(entry.querySelector(".catalogue-profile-link"), "profile link present now that it is covered");
   container.remove();
 });
 
@@ -84,7 +87,7 @@ test("reviewer impressions, producer facts and editorial synthesis stay distingu
   const cielo = bottles.find((b) => b.id === "cielo-rojo-bacanora-blanco");
   const container = document.createElement("div");
   document.body.appendChild(container);
-  const entry = bottleEntry(cielo, { sources, profiles });
+  const entry = bottleEntry(cielo, { sources, profiles, locale: enLocale });
   container.appendChild(entry);
   assert.ok(entry.querySelector(".catalogue-facts").textContent.includes("Producer:"));
   assert.ok(entry.querySelector(".bottle-review").textContent.includes("TEQUILA.net describes"), "review attributed");
@@ -105,6 +108,7 @@ test("profile view keeps one featured example and hides extras behind See more b
     sources,
     allProfiles: profiles,
     allBottles: bottles,
+    locale: enLocale,
   });
   assert.ok(container.querySelector(".bottle-card"), "featured example remains the card");
   const details = container.querySelector(".more-bottles");
@@ -122,7 +126,7 @@ test("profile view keeps one featured example and hides extras behind See more b
   renderProfile(container2, {
     profile: teq,
     bottle: bottles.find((b) => b.id === teq.exampleBottleId),
-    sources, allProfiles: profiles, allBottles: bottles,
+    sources, allProfiles: profiles, allBottles: bottles, locale: enLocale,
   });
   assert.equal(container2.querySelector(".more-bottles"), null);
   container2.remove();
@@ -143,7 +147,7 @@ test("brands, producers and expressions remain separate linked entities", () => 
 test("release 8: search results keep context and move focus to the entry", () => {
   const container = document.createElement("div");
   document.body.appendChild(container);
-  renderCatalogue(container, { bottles, profiles, sources });
+  renderCatalogue(container, { bottles, profiles, sources, locale: enLocale });
   const search = container.querySelector("#catalogue-search");
   search.value = "cielo rojo";
   search.dispatchEvent(new window.Event("input", { bubbles: true }));

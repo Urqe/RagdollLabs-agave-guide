@@ -112,17 +112,20 @@
       "abv": null,
       "spirit": "raicilla",
       "place": "Coastal Jalisco (Cabo Corrientes region)",
-      "profileId": null,
-      "coverage": [
-        "tasting-not-documented",
-        "profile-not-covered"
-      ],
+      "profileId": "raicilla-costa-jalisco",
       "reviewSummary": null,
       "sourceIds": [
         "casaendemica-brands"
       ],
-      "coverageNote": "Coastal raicilla is a distinct editorial tradition from the Sierra profile in this app: coastal producers cook agave (angustifolia, rhodacantha) in underground pits rather than above-ground adobe ovens, so it is not covered by the Sierra profile. Listed here as a factual catalogue entry.",
-      "abvNote": "ABV not documented in cited sources"
+      "abvNote": "ABV not documented in cited sources",
+      "coverage": [
+        "tasting-not-documented"
+      ],
+      "editorialNote": "The app's Costa raicilla profile: pit-cooked coastal style. This specific expression's tasting notes are not yet documented; the entry is factual.",
+      "noteProfileId": "raicilla-costa-jalisco",
+      "noteSourceIds": [
+        "casaendemica-brands"
+      ]
     },
     {
       "id": "balancan-tuxca",
