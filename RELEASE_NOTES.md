@@ -2,8 +2,8 @@
 
 ## Release 1 (first draft)
 
-Deployed commit: see the commit tagged by the Pages deployment of `main`
-(branch `vibe/release1-draft-d80eca`, merged to `main`).
+Deployed commit: `2d83430` on `main` (merge of PR #1 from branch
+`vibe/release1-draft-d80eca`).
 
 Live URL: <https://urqe.github.io/RagdollLabs-agave-guide/>
 
@@ -49,12 +49,22 @@ Live URL: <https://urqe.github.io/RagdollLabs-agave-guide/>
 
 ### Deployment verification
 
-- Pages URL reachable over HTTPS; assets load under the repository subpath.
-- Map/list → profile flow, reload, and Back/Forward verified in jsdom and by
-  manual inspection of the deployed artifact.
+- Pages URL: <https://urqe.github.io/RagdollLabs-agave-guide/> — Pages API
+  reports `status: built`, `public: true`, `https_enforced: true`; the
+  `Deploy to GitHub Pages` workflow completed successfully for commit
+  `2d83430` (validate → build → deploy all green).
+- The deployed artifact was downloaded from the Actions artifact store and
+  served locally: `index.html`, CSS, all 7 JS modules, 3 JSON data files and
+  the 32-state SVG all return 200; `package.json`, `scripts/`, `test/` and
+  `node_modules` are correctly absent from the artifact.
+- `assets/data/profiles.json` verified live over HTTPS on the Pages URL.
+- Map/list → profile flow, reload, Back/Forward and the no-duplicate-initial-
+  history-entry behavior verified in jsdom against the real modules.
 - Narrow/wide layout and keyboard navigation checked in jsdom; **native-device
   checks (iPhone/iPad Safari, physical keyboard) were not available in this
-  environment**.
+  environment**. The sandbox blocks direct HTTP to the Pages URL, so live
+  fetches of JS/CSS/SVG were verified via the deployed artifact served locally
+  plus the live JSON check.
 
 ### Known limitations / remaining issues
 
