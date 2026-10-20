@@ -8,6 +8,8 @@ import { renderCatalogue } from "./catalogue-view.js";
 import { renderLearn } from "./learn-view.js";
 import { createLocale } from "./locale.js";
 import { renderHome, ui } from "./presentation.js";
+import { getCompareSelection, setCompareSelection } from "./compare-selection.js";
+import { takeView, captureView } from "./view-memory.js";
 
 const locale = createLocale();
 
@@ -15,11 +17,23 @@ const state = {
   data: null,
   error: null,
   exploreApi: null,
+  catalogueActive: false,
+  consumedRestore: null,
   lastComparePick: null,
 };
 
 function baseUrl() {
   return new URL(".", document.baseURI);
+}
+
+function parseIds(raw) {
+  const seen = new Set();
+  return (raw || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .filter((id) => (seen.has(id) ? false : (seen.add(id), true)))
+    .slice(0, 3);
 }
 
 function renderError(container, error) {
@@ -43,12 +57,15 @@ async function renderRoute(container, route) {
 
   if (route.name === "explore" || route.name === "state") {
     const selectedStateId = route.name === "state" ? route.params.stateId : null;
+    const restore = takeView("explore");
+    state.consumedRestore = restore;
     state.exploreApi = await renderExplore(container, {
       profiles,
       bottles,
       selectedStateId,
       locale,
       mapUrl: new URL("assets/geo/mexico-states.svg", baseUrl()).href,
+      ...(restore ? { restore } : {}),
     });
     return;
   }
@@ -66,21 +83,34 @@ async function renderRoute(container, route) {
   }
   if (route.name === "catalogue") {
     state.exploreApi = null;
-    renderCatalogue(container, { bottles, profiles, sources, locale });
+    const restore = takeView("catalogue");
+    state.consumedRestore = restore;
+    renderCatalogue(container, { bottles, profiles, sources, locale, ...(restore ? { restore } : {}) });
     return;
   }
   if (route.name === "compare") {
     state.exploreApi = null;
+    // Deep links carry the selection; a bare #/compare reopens the saved one.
+    const deepIds = parseIds(route.params.compareIds);
+    const persisted = getCompareSelection();
+    let ids = deepIds;
+    if (deepIds.length === 0 && persisted.length > 0) {
+      ids = persisted;
+      navigateTo({ name: "compare", params: { compareIds: ids.join(",") } });
+      return;
+    }
+    setCompareSelection(ids);
     renderCompare(container, {
       profiles,
       locale,
-      compareIds: route.params.compareIds || "",
+      compareIds: ids.join(","),
       focusProfileId: state.lastComparePick,
-      onSelectionChange: (ids) => {
-        state.lastComparePick = state.lastComparePick && ids.includes(state.lastComparePick)
+      onSelectionChange: (nextIds) => {
+        setCompareSelection(nextIds);
+        state.lastComparePick = state.lastComparePick && nextIds.includes(state.lastComparePick)
           ? state.lastComparePick
-          : ids[ids.length - 1] || null;
-        navigateTo({ name: "compare", params: { compareIds: ids.join(",") } });
+          : nextIds[nextIds.length - 1] || null;
+        navigateTo({ name: "compare", params: { compareIds: nextIds.join(",") } });
       },
     });
     return;
@@ -93,10 +123,19 @@ async function renderRoute(container, route) {
       return;
     }
     const bottle = bottles.find((b) => b.id === profile.exampleBottleId) || null;
-    renderProfile(container, { profile, bottle, sources, returnTo: route.params.from || null, allProfiles: profiles, allBottles: bottles, locale });
+    renderProfile(container, {
+      profile,
+      bottle,
+      sources,
+      returnTo: route.params.from || null,
+      origin: route.params.origin || null,
+      compareSelection: getCompareSelection(),
+      allProfiles: profiles,
+      allBottles: bottles,
+      locale,
+    });
     return;
   }
-
   state.exploreApi = null;
   renderProfileNotFound(container, "");
 }
@@ -155,16 +194,30 @@ async function boot() {
   const syncCompareNav = (route) => {
     const navCompare = document.getElementById("nav-compare");
     if (!navCompare) return;
-    const target = route.name === "compare" && route.params.compareIds
-      ? `#/compare/${encodeURIComponent(route.params.compareIds)}`
-      : "#/compare";
+    const persisted = getCompareSelection();
+    const ids = (route.name === "compare" && route.params.compareIds) || (persisted.length ? persisted.join(",") : "");
+    const target = ids ? `#/compare/${ids.split(",").map(encodeURIComponent).join(",")}` : "#/compare";
     if (navCompare.getAttribute("href") !== target) {
       navCompare.setAttribute("href", target);
     }
   };
 
+  // Leaving a list view for a profile captures its query, filters and
+  // scroll so the return trip reopens exactly where the user left off.
+  const rememberListViews = (route) => {
+    if (route.name !== "profile") return;
+    if (state.exploreApi && typeof state.exploreApi.capture === "function") state.exploreApi.capture();
+    if (state.catalogueActive) {
+      const input = document.getElementById("catalogue-search");
+      captureView("catalogue", { query: input ? input.value : "" });
+    }
+  };
+
   const handleRoute = async () => {
     const route = parseHash(window.location.hash);
+    rememberListViews(route);
+    state.consumedRestore = null;
+    state.catalogueActive = route.name === "catalogue";
     syncCompareNav(route);
     document.documentElement.lang = locale.get();
     for (const link of document.querySelectorAll(".nav-link")) {
@@ -185,6 +238,16 @@ async function boot() {
       appendUntranslatedNote(main);
     } catch (error) {
       renderError(main, error);
+    }
+    const restoreScroll = state.consumedRestore && typeof state.consumedRestore.scrollY === "number"
+      ? state.consumedRestore.scrollY
+      : null;
+    if (restoreScroll != null) {
+      window.scrollTo(0, restoreScroll);
+    } else {
+      // New pages start at their heading.
+      const heading = main.querySelector("h1, h2");
+      if (heading && typeof heading.scrollIntoView === "function") heading.scrollIntoView({ block: "start" });
     }
     if (!main.contains(document.activeElement)) main.focus({ preventScroll: true });
   };

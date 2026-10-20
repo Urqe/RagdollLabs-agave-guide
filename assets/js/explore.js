@@ -5,8 +5,7 @@ import { searchProfiles } from "./search.js";
 import { ui } from "./presentation.js";
 import { flavorMoods } from "./compare.js";
 import { SPIRIT_LABELS, groupProfilesBySpirit } from "./spirit-labels.js";
-
-const EMPTY_MESSAGE = "No profiles added here yet";
+import { captureView } from "./view-memory.js";
 
 function profilesForState(profiles, stateId) {
   return profiles.filter((profile) => profile.stateId === stateId);
@@ -37,10 +36,11 @@ function profileList(profiles, stateId = null, locale = null) {
 }
 
 /**
- * Explore view: SVG map + state list on the left, covered profiles for the
- * selected state on the right.
+ * Explore view: one combined discovery surface. Search, tradition and
+ * flavour-mood filters all narrow the same results collection, with a
+ * visible result count; the map stays available as a place disclosure.
  */
-export async function renderExplore(container, { profiles, bottles, selectedStateId, locale, mapUrl }) {
+export async function renderExplore(container, { profiles, bottles, selectedStateId, locale, mapUrl, restore = null }) {
   clear(container);
   const section = el("section", { class: "explore-view", "aria-labelledby": "explore-heading" });
   const t = (key) => (locale ? locale.t(key) : key);
@@ -48,8 +48,14 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
   const intro = el("p", { class: "view-intro" }, ui(locale, "browseIntro"));
   section.appendChild(intro);
 
-  const searchHolder = el("div", { class: "search-holder" });
-  section.appendChild(searchHolder);
+  const searchInput = el("input", {
+    type: "search",
+    class: "search-input",
+    id: "profile-search",
+    placeholder: t("explore.searchPlaceholder"),
+    "aria-label": ui(locale, "search"),
+  });
+  if (restore && restore.query) searchInput.value = restore.query;
 
   const mapHolder = el("div", { class: "map-holder" });
   const mapDetails = el("details", { class: "place-disclosure", ...(selectedStateId ? { open: "" } : {}) });
@@ -69,9 +75,11 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
   for (const name of new Set(profiles.flatMap(flavorMoods))) {
     mood.appendChild(el("option", { value: name }, locale ? locale.mood(name) : name));
   }
-  for (const [key, input] of [["tradition", spirit], ["flavour", mood]]) {
+  if (restore && restore.spirit) spirit.value = restore.spirit;
+  if (restore && restore.mood) mood.value = restore.mood;
+  for (const [key, input, labelText] of [["search", searchInput, ui(locale, "search")], ["tradition", spirit, ui(locale, "tradition")], ["flavour", mood, ui(locale, "flavour")]]) {
     const field = el("div", { class: "filter-field" });
-    field.appendChild(el("label", { for: input.id }, ui(locale, key)));
+    field.appendChild(el("label", { for: input.id }, labelText));
     field.appendChild(input);
     controls.appendChild(field);
   }
@@ -84,22 +92,35 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
 
   const coveredStateIds = [...new Set(profiles.map((profile) => profile.stateId))];
 
+  // One results collection: place (state) + search + tradition + mood.
   const renderResults = (stateId) => {
     clear(results);
     const name = stateId ? (STATE_NAMES[stateId] || stateId) : ui(locale, "results");
     results.appendChild(el("h2", { class: "state-results-title" }, name));
-    const covered = (stateId ? profilesForState(profiles, stateId) : profiles)
+    const base = stateId ? profilesForState(profiles, stateId) : profiles;
+    const query = searchInput.value.trim();
+    const searched = query.length >= 2
+      ? searchProfiles({ profiles: base, bottles: bottles || [], query }).map((r) => r.profile)
+      : base;
+    const covered = searched
       .filter(p => !spirit.value || p.spirit === spirit.value)
       .filter(p => !mood.value || flavorMoods(p).includes(mood.value));
+    const count = el("p", { class: "results-count" },
+      `${covered.length} ${covered.length === 1 ? ui(locale, "profile") : ui(locale, "profiles")}`);
+    results.appendChild(count);
     if (covered.length === 0) {
-      results.appendChild(el("p", { class: "empty-state" }, stateId && !profilesForState(profiles, stateId).length ? t("explore.empty") : ui(locale, "noMatches")));
+      results.appendChild(el("p", { class: "empty-state" }, stateId && base.length === 0 ? t("explore.empty") : ui(locale, "noMatches")));
       return;
     }
     results.appendChild(profileList(covered, stateId, locale));
   };
 
-  for (const input of [spirit, mood]) input.addEventListener("change", () => renderResults(currentStateId));
+  for (const input of [searchInput, spirit, mood]) {
+    input.addEventListener("input", () => renderResults(currentStateId));
+    input.addEventListener("change", () => renderResults(currentStateId));
+  }
   reset.addEventListener("click", () => {
+    searchInput.value = "";
     spirit.value = "";
     mood.value = "";
     if (currentStateId) navigateTo({ name: "explore" });
@@ -132,50 +153,17 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
     mapHolder.appendChild(list);
   }
 
-  // Basic search over spirits, plants, places, producers, brands and bottles.
-  const searchInput = el("input", {
-    type: "search",
-    class: "search-input",
-    id: "profile-search",
-    placeholder: t("explore.searchPlaceholder"),
-    "aria-label": ui(locale, "search"),
-  });
-  const searchResults = el("div", { class: "search-results", "aria-live": "polite" });
-  const searchForm = el("form", { class: "search-form", role: "search" });
-  searchForm.addEventListener("submit", (event) => event.preventDefault());
-  searchForm.appendChild(searchInput);
-  searchHolder.appendChild(searchForm);
-  searchHolder.appendChild(searchResults);
-
-  const renderSearch = () => {
-    clear(searchResults);
-    const query = searchInput.value;
-    if (!query || query.trim().length < 2) return;
-    const matches = searchProfiles({ profiles, bottles: bottles || [], query });
-    if (matches.length === 0) {
-      searchResults.appendChild(el("p", { class: "search-empty" },
-        `${t("explore.searchEmpty")} “${query}”.`));
-      return;
-    }
-    const list = el("ul", { class: "search-result-list" });
-    for (const { profile, reason } of matches) {
-      const item = el("li");
-      const link = el("a", {
-        href: `#/profile/${encodeURIComponent(profile.id)}`,
-        class: "search-result-link",
-      });
-      link.appendChild(el("span", { class: "profile-link-title" }, profile.title));
-      link.appendChild(el("span", { class: "search-result-reason" }, reason));
-      item.appendChild(link);
-      list.appendChild(item);
-    }
-    searchResults.appendChild(list);
-  };
-  searchInput.addEventListener("input", renderSearch);
-
   renderResults(selectedStateId || null);
 
   return {
+    capture() {
+      captureView("explore", {
+        query: searchInput.value,
+        spirit: spirit.value,
+        mood: mood.value,
+        stateId: currentStateId,
+      });
+    },
     setState(stateId) {
       currentStateId = stateId || null;
       if (mapApi) mapApi.select(stateId || "");

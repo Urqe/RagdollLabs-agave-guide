@@ -107,7 +107,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
     const profile = profiles.find((p) => p.id === bottle.profileId);
     if (profile) {
       article.appendChild(el("a", {
-        href: `#/profile/${encodeURIComponent(profile.id)}`,
+        href: `#/profile/${encodeURIComponent(profile.id)}?origin=catalogue`,
         class: "catalogue-profile-link",
       }, `See the ${SPIRIT_LABELS[profile.spirit] || profile.spirit} style profile \u2192`));
     }
@@ -121,7 +121,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
  * bottle list, and a brand directory. Search results and the list link to
  * profiles with the catalogue context preserved in the route.
  */
-export function renderCatalogue(container, { bottles, profiles, sources, locale = null, returnTo = "catalogue" }) {
+export function renderCatalogue(container, { bottles, profiles, sources, locale = null, returnTo = "catalogue", restore = null }) {
   clear(container);
   const t = (key) => (locale ? locale.t(key) : key);
   const section = el("section", { class: "catalogue-view", "aria-labelledby": "catalogue-heading" });
@@ -183,6 +183,10 @@ export function renderCatalogue(container, { bottles, profiles, sources, locale 
     }
     searchResults.appendChild(list);
   };
+  if (restore && restore.query) {
+    searchInput.value = restore.query;
+    renderSearch();
+  }
   searchInput.addEventListener("input", renderSearch);
 
   // Alphabetical bottle list

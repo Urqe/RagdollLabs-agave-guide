@@ -1028,6 +1028,10 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .compare-craft { max-width: none; }
 .compare-picker-list { gap: .65rem; }
 .compare-scroll-hint { margin-bottom: .5rem; }
+.results-count { color: var(--text-soft); font-size: .85rem; margin: 0 0 1rem; }
+.compare-profile-link.is-selected { border-color: var(--agave); color: var(--agave); }
+.compare-profile-link.is-full { border-style: dashed; color: var(--text-soft); }
+.discovery-controls .search-input { max-width: none; }
 .catalogue-list, .brand-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; }
 .catalogue-entry { max-width: none; }
 .more-bottles .catalogue-list { grid-template-columns: 1fr; }
