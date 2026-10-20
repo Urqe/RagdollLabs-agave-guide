@@ -10,7 +10,9 @@
         "tequilafortaleza-blanco",
         "diffords-fortaleza-blanco",
         "liquor-com-fortaleza-blanco-review"
-      ]
+      ],
+      "producer": "Tequila Fortaleza (Fortaleza distillery, Tequila, Jalisco)",
+      "place": "Tequila, Jalisco"
     },
     {
       "id": "lost-explorer-espadin",
@@ -22,7 +24,9 @@
         "thelostexplorer-our-craft",
         "diffords-lost-explorer-espadin",
         "drinkhacker-lost-explorer-review"
-      ]
+      ],
+      "producer": "The Lost Explorer (produced at its Oaxaca palenque)",
+      "place": "Valles Centrales, Oaxaca"
     },
     {
       "id": "rancho-tepua-bacanora",

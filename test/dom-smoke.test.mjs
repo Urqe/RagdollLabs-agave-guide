@@ -247,6 +247,47 @@ test("profile back link returns to the selected state when context exists", () =
   container2.remove();
 });
 
+test("release 4 maintenance: overlapping state coverage, alias ranking, producer visibility", async () => {
+  // Jalisco now holds two profiles (tequila + raicilla); both render under the state view.
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  const api = await renderExplore(container, {
+    profiles: profiles.profiles,
+    bottles: bottles.bottles,
+    selectedStateId: "jal",
+    mapUrl: "https://example.test/RagdollLabs-agave-guide/assets/geo/mexico-states.svg",
+  });
+  const jalLinks = container.querySelectorAll('.state-results a[href*="#/profile/"]');
+  assert.equal(jalLinks.length, 2);
+  container.remove();
+
+  const { searchProfiles, applyAliases } = await import("../assets/js/search.js");
+
+  // Exact spirit match ranks first: "mezcal" -> the mezcal profile, not mentioners.
+  const mezcalHits = searchProfiles({ profiles: profiles.profiles, bottles: bottles.bottles, query: "mezcal" });
+  assert.ok(mezcalHits.length >= 1);
+  assert.equal(mezcalHits[0].profile.spirit, "mezcal");
+  assert.equal(mezcalHits[0].rank, 0);
+
+  // Aliases: no-op identity entries are gone; real aliases map.
+  assert.equal(applyAliases("espadin"), "espadin");
+  assert.equal(applyAliases("silver"), "blanco");
+  assert.equal(applyAliases("blue agave"), "tequilana");
+  assert.equal(applyAliases("lechuguilla"), "maximiliana");
+
+  // Duplicate results: every search returns each profile at most once.
+  const all = searchProfiles({ profiles: profiles.profiles, bottles: bottles.bottles, query: "agave" });
+  const ids = all.map((r) => r.profile.id);
+  assert.equal(new Set(ids).size, ids.length);
+
+  // Seed bottles now show producer and place (brand vs producer identity).
+  const fortaleza = bottles.bottles.find((b) => b.id === "fortaleza-blanco");
+  assert.ok(fortaleza.producer.includes("Tequila Fortaleza"));
+  assert.ok(fortaleza.place.includes("Jalisco"));
+  const explorer = bottles.bottles.find((b) => b.id === "lost-explorer-espadin");
+  assert.ok(explorer.producer.length > 0 && explorer.place.length > 0);
+});
+
 test("unknown profile id renders a not-found view with a way back", () => {
   const container = document.createElement("div");
   document.body.appendChild(container);

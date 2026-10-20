@@ -173,3 +173,53 @@ structural feedback on Release 1.
   advanced search and catalogue expansion are later releases.
 - Coastal (Costa) raicilla and additional mezcal/tequila variants
   deferred per plan.
+
+## Release 4 — Explorer Review & Fixes
+
+Maintenance release per the plan: audit of map/list consistency, aliases,
+duplicate results, producer vs brand identities, source visibility,
+optional-data failures and small-screen profile readability.
+
+### Findings and fixes
+
+- **Stale copy (found):** home intro and the `index.html` meta description
+  still said "tequila and mezcal" after Release 3. Fixed to name all four
+  spirits.
+- **Producer vs brand identity (found):** the two seed bottles had no
+  producer/place fields, so the brand read as the producer. Backfilled
+  from their already-cited producer pages (Tequila Fortaleza distillery,
+  Tequila, Jalisco; The Lost Explorer's Oaxaca palenque).
+- **Alias map contained no-op entries (found):** `espadin → espadín` etc.
+  were identities because matching normalizes accents. Removed; replaced
+  with real alias gaps: silver/plata → blanco, blue agave / weber azul /
+  tequilana weber → tequilana, lechuguilla → maximiliana,
+  mountain/coastal raicilla, bacanorero, tabernero.
+- **Search relevance (found):** querying a spirit (e.g. "mezcal") put
+  profiles that merely mention mezcal on equal footing with the actual
+  mezcal profile. Exact spirit matches now rank first (rank 0), others
+  follow alphabetically. No duplicate results (one entry per profile,
+  now asserted by test).
+- **Overlapping state coverage (verified, no defect):** Jalisco now holds
+  two profiles (tequila + raicilla); the state view renders both and the
+  map/list stays consistent. Covered by a new test.
+- **Optional-data failures (verified, no defect):** all optional profile
+  and bottle fields degrade gracefully (sections/bottle lines are
+  conditional); validator accepts their absence.
+- **Small-screen profile readability (improved):** below 52rem the
+  profile-facts grid now stacks single-column with tighter spacing, and
+  headings/bottle names scale down for comfortable phone reading.
+- **Source visibility (verified, no defect):** profile and bottle source
+  lists remain visible with kind labels on every profile view.
+
+### Checks run
+
+- `npm run validate` — schema plus 16 node:test/jsdom suites (new
+  maintenance test: overlapping state coverage, spirit-match ranking,
+  alias mapping, duplicate-free results, producer visibility). All
+  passing.
+
+### Remaining issues / deferred
+
+- Native-device rendering still unverified in this environment.
+- Advanced search (multi-term, fuzzy) and comparison remain backlog
+  (Release 5+).

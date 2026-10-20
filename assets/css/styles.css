@@ -388,6 +388,17 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   .map-and-list { grid-template-columns: 1fr; }
   .state-list { max-height: 16rem; }
   .app-main { padding: 1rem; }
+  .profile-facts {
+    grid-template-columns: 1fr;
+    gap: 0.35rem 0;
+    padding: 0.9rem 1rem;
+  }
+  .profile-facts dt {
+    letter-spacing: 0.03em;
+  }
+  .profile-view h2 { font-size: 1.4rem; }
+  .bottle-name { font-size: 1rem; }
+  .search-input { font-size: 1rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

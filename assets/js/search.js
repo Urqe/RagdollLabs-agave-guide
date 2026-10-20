@@ -2,6 +2,8 @@
  * Basic search over profiles, spirits, places, producers, brands and
  * bottles. Accent- and case-insensitive; supports curated aliases so
  * common alternate spellings and regional names find their targets.
+ * Exact spirit matches rank first, so querying "mezcal" surfaces the
+ * mezcal profile above profiles that merely mention mezcal.
  */
 
 const normalize = (text) =>
@@ -11,31 +13,28 @@ const normalize = (text) =>
     .toLowerCase()
     .trim();
 
-/** Curated aliases: normalized alias -> normalized target term. */
+/**
+ * Curated aliases. Keys are normalized (accent-stripped, lowercase)
+ * queries; values are normalized target terms that participate in
+ * matching. Values are compared normalized too, so accented targets
+ * like "espadín" are written here accent-stripped.
+ */
 const ALIASES = new Map([
-  ["espadin", "espadín"],
-  ["pacifica", "pacifica"],
-  ["yaquiana", "yaquiana"],
-  ["maximiliana", "maximiliana"],
-  ["blue agave", "blue weber agave"],
-  ["tequilana weber", "blue weber agave"],
-  ["joven", "joven"],
-  ["blanco", "blanco"],
+  ["tequilana weber", "tequilana"],
+  ["blue agave", "tequilana"],
+  ["weber azul", "tequilana"],
   ["silver", "blanco"],
   ["plata", "blanco"],
-  ["sierra raicilla", "sierra"],
-  ["mountain raicilla", "sierra"],
+  ["lechuguilla", "maximiliana"],
+  ["mountain raicilla", "sierra raicilla"],
   ["coastal raicilla", "costa"],
-  ["sonora", "sonora"],
-  ["oaxaca", "oaxaca"],
-  ["jalisco", "jalisco"],
-  ["tepua", "tepúa"],
-  ["venenosa", "venenosa"],
+  ["bacanorero", "bacanora"],
+  ["tabernero", "taberna"],
 ]);
 
 export function applyAliases(normalizedQuery) {
   const mapped = ALIASES.get(normalizedQuery);
-  return mapped ? normalize(mapped) : normalizedQuery;
+  return mapped || normalizedQuery;
 }
 
 function profileSearchTerms(profile) {
@@ -49,6 +48,12 @@ function profileSearchTerms(profile) {
     ...(profile.tasteNotes || []),
     profile.context || "",
   ];
+}
+
+function rankFor(profile, q) {
+  // Exact spirit match ranks above profiles that only mention the term.
+  if (normalize(profile.spirit) === q) return 0;
+  return 1;
 }
 
 export function searchProfiles({ profiles, bottles, query }) {
@@ -70,10 +75,12 @@ export function searchProfiles({ profiles, bottles, query }) {
       results.push({
         profile,
         exampleBottle: example || null,
+        rank: rankFor(profile, q),
         reason: reasonFor(profile, example, q),
       });
     }
   }
+  results.sort((a, b) => a.rank - b.rank || a.profile.title.localeCompare(b.profile.title));
   return results;
 }
 

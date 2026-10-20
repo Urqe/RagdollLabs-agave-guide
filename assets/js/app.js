@@ -19,7 +19,7 @@ function renderHome(container) {
   const section = el("section", { class: "home-view", "aria-labelledby": "home-heading" });
   section.appendChild(el("h2", { id: "home-heading" }, "Agave spirits style guide"));
   section.appendChild(el("p", { class: "home-intro" },
-    "A small guide to the body and taste of Mexican agave spirits — tequila and mezcal. "
+    "A small guide to the body and taste of Mexican agave spirits — tequila, mezcal, bacanora and raicilla. "
     + "Each profile describes a style, with one example bottle to show what it can taste like. "
     + "The examples are single bottles, not a verdict on every tequila or mezcal from a region."));
   const cta = el("p", { class: "home-cta" });
