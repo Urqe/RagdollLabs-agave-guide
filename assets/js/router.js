@@ -1,0 +1,54 @@
+/**
+ * Hash router. Routes:
+ *   #/            home (welcome)
+ *   #/explore     map + state list
+ *   #/explore/:stateId   state view (map with state selected)
+ *   #/profile/:id profile view
+ */
+
+export function parseHash(hash) {
+  const raw = (hash || "").replace(/^#/, "");
+  const segments = raw.split("/").filter((s) => s.length > 0).map(decodeURIComponent);
+  if (segments.length === 0) return { name: "home", params: {} };
+  if (segments[0] === "explore") {
+    if (segments.length === 1) return { name: "explore", params: {} };
+    if (segments.length === 2) return { name: "state", params: { stateId: segments[1] } };
+    return { name: "notFound", params: {} };
+  }
+  if (segments[0] === "profile" && segments.length === 2) {
+    return { name: "profile", params: { profileId: segments[1] } };
+  }
+  return { name: "notFound", params: {} };
+}
+
+export function buildHash(route) {
+  switch (route.name) {
+    case "home":
+      return "#/";
+    case "explore":
+      return "#/explore";
+    case "state":
+      return `#/explore/${encodeURIComponent(route.params.stateId)}`;
+    case "profile":
+      return `#/profile/${encodeURIComponent(route.params.profileId)}`;
+    default:
+      return "#/";
+  }
+}
+
+/**
+ * Navigate without adding a duplicate entry when the target hash equals the
+ * current one. Returns true when the location actually changed.
+ */
+export function navigateTo(route) {
+  const hash = buildHash(route);
+  if (window.location.hash === hash) return false;
+  window.location.hash = hash;
+  return true;
+}
+
+export function startRouter(onChange) {
+  const handler = () => onChange(parseHash(window.location.hash));
+  window.addEventListener("hashchange", handler);
+  return () => window.removeEventListener("hashchange", handler);
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ragdolllabs-agave-guide",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A small guide to the body and taste of Mexican agave spirits (tequila and mezcal).",
+  "scripts": {
+    "validate": "node scripts/validate.mjs && node --test",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0"
+  }
+}

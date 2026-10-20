@@ -1,0 +1,64 @@
+{
+  "sources": [
+    {
+      "id": "diffords-tequila-made",
+      "title": "Difford's Guide — Tequila: How Is Tequila Made and What From?",
+      "url": "https://www.diffordsguide.com/encyclopedia/991/bws/tequila-how-is-tequila-made-and-what-from",
+      "kind": "style"
+    },
+    {
+      "id": "diffords-tequila-category",
+      "title": "Difford's Guide — Tequila",
+      "url": "https://www.diffordsguide.com/beer-wine-spirits/category/508/tequila",
+      "kind": "style"
+    },
+    {
+      "id": "diffords-mezcal-what-it-is",
+      "title": "Difford's Guide — Mezcal: What It Is and How It's Made",
+      "url": "https://www.diffordsguide.com/encyclopedia/363/bws/mezcal-what-it-is-and-how-its-made",
+      "kind": "style"
+    },
+    {
+      "id": "tequilafortaleza-blanco",
+      "title": "Tequila Fortaleza — Fortaleza Blanco",
+      "url": "https://tequilafortaleza.com/tequila-fortaleza-blanco/",
+      "kind": "producer"
+    },
+    {
+      "id": "thelostexplorer-our-craft",
+      "title": "The Lost Explorer — Our Craft",
+      "url": "https://thelostexplorer.com/our-craft/",
+      "kind": "producer"
+    },
+    {
+      "id": "diffords-lost-explorer-palenque",
+      "title": "Difford's Guide — The Lost Explorer Oaxaca Palenque: Mezcal Process",
+      "url": "https://www.diffordsguide.com/producer/1273/the-lost-explorer/oaxaca-palenque",
+      "kind": "producer"
+    },
+    {
+      "id": "diffords-fortaleza-blanco",
+      "title": "Difford's Guide — Fortaleza Blanco Tequila",
+      "url": "https://www.diffordsguide.com/beer-wine-spirits/7225/fortaleza-blanco-tequila",
+      "kind": "review"
+    },
+    {
+      "id": "liquor-com-fortaleza-blanco-review",
+      "title": "Liquor.com — Fortaleza Blanco Tequila Review",
+      "url": "https://www.liquor.com/fortaleza-blanco-tequila-bottle-review-7570583",
+      "kind": "review"
+    },
+    {
+      "id": "diffords-lost-explorer-espadin",
+      "title": "Difford's Guide — The Lost Explorer Espadín Joven Mezcal",
+      "url": "https://www.diffordsguide.com/beer-wine-spirits/6892/the-lost-explorer-espadin",
+      "kind": "review"
+    },
+    {
+      "id": "drinkhacker-lost-explorer-review",
+      "title": "Drinkhacker — Review: The Lost Explorer Mezcals, Complete Lineup",
+      "url": "https://www.drinkhacker.com/2025/07/29/review-the-lost-explorer-mezcals-espadin-tobala-and-salmiana/",
+      "kind": "review"
+    }
+  ]
+}
