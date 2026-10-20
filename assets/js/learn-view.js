@@ -1,5 +1,15 @@
 import { el, clear, safeLink } from "./dom-utils.js";
 
+/** Sources stay available but out of the reading flow. */
+function collapsibleSources(sources, sourceIds, t) {
+  const details = el("details", { class: "source-details" });
+  const label = t("learn.sources") || "Sources";
+  const summary = el("summary", {}, `${label} (${(sourceIds || []).length})`);
+  details.appendChild(summary);
+  details.appendChild(sourceLinks(sources, sourceIds));
+  return details;
+}
+
 function relevantTo(profile, proc) {
   const text = (profile.process || "").toLowerCase();
   const keywords = {
@@ -39,8 +49,16 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
   const t = (key) => (locale ? locale.t(key) : key);
   section.appendChild(el("h2", { id: "learn-heading" }, t("learn.heading")));
   const jumps = el("nav", { class: "learn-jumps", "aria-label": "Learn sections" });
-  for (const [href, label] of [["#learn-plants", t("learn.plants")], ["#learn-processes", t("learn.processes")], ["#learn-terms", t("learn.terms")]]) {
-    jumps.appendChild(el("a", { href, class: "nav-link learn-jump" }, label));
+  for (const [id, label] of [["learn-plants", t("learn.plants")], ["learn-processes", t("learn.processes")], ["learn-terms", t("learn.terms")]]) {
+    const jump = el("button", { type: "button", class: "nav-link learn-jump" }, label);
+    jump.addEventListener("click", () => {
+      const target = section.querySelector(`#${id}`);
+      if (target && typeof target.scrollIntoView === "function") {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      target?.focus?.({ preventScroll: true });
+    });
+    jumps.appendChild(jump);
   }
   section.appendChild(jumps);
   section.appendChild(el("p", { class: "view-intro" },
@@ -68,7 +86,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
       }
     }
     card.appendChild(links);
-    card.appendChild(sourceLinks(sources, plant.sourceIds));
+    card.appendChild(collapsibleSources(sources, plant.sourceIds, t));
     section.appendChild(card);
   }
 
@@ -86,7 +104,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
       }
       card.appendChild(line);
     }
-    card.appendChild(sourceLinks(sources, proc.sourceIds));
+    card.appendChild(collapsibleSources(sources, proc.sourceIds, t));
     section.appendChild(card);
   }
 
@@ -107,7 +125,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
       }
       card.appendChild(line);
     }
-    card.appendChild(sourceLinks(sources, term.sourceIds));
+    card.appendChild(collapsibleSources(sources, term.sourceIds, t));
     section.appendChild(card);
   }
 

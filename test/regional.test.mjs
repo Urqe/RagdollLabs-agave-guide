@@ -207,13 +207,17 @@ test("release 12: learn view has section jumps, verified dates and profile routi
   document.body.appendChild(container);
   renderLearn(container, { plants, processes, glossary, profiles, bottles, sources, locale: enLocale });
 
-  // Cognitive load: jump navigation targets exist.
+  // Cognitive load: jump navigation targets exist (buttons scroll in-page,
+  // never touching the hash router).
   const jumps = [...container.querySelectorAll(".learn-jump")];
   assert.equal(jumps.length, 3, "three section jumps");
-  for (const jump of jumps) {
-    const targetId = jump.getAttribute("href").slice(1);
-    assert.ok(container.querySelector(`#${targetId}`), `jump target #${targetId} exists`);
+  const jumpIds = ["learn-plants", "learn-processes", "learn-terms"];
+  for (const id of jumpIds) {
+    assert.ok(container.querySelector(`#${id}`), `jump target #${id} exists`);
   }
+  // Sources collapsed out of the reading flow but still present.
+  const sourceDetails = container.querySelectorAll(".source-details");
+  assert.ok(sourceDetails.length >= 20, "source lists collapsed under disclosures");
 
   // Source discoverability: verified dates shown.
   assert.ok(container.textContent.includes("verified 20"), "verified dates visible");

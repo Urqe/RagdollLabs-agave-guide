@@ -30,6 +30,15 @@ function sourceLinks(sources, sourceIds) {
   return list;
 }
 
+/** Sources stay available but out of the reading flow. */
+function collapsibleSources(sources, sourceIds, t) {
+  const details = el("details", { class: "source-details" });
+  const summary = el("summary", {}, `Sources (${(sourceIds || []).length})`);
+  details.appendChild(summary);
+  details.appendChild(sourceLinks(sources, sourceIds));
+  return details;
+}
+
 /**
  * Bottle entry: identity + facts + review summary with attribution +
  * profile-relative editorial note + explicit coverage disclosures.
@@ -78,8 +87,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
     ));
     article.appendChild(note);
     if (bottle.noteSourceIds && bottle.noteSourceIds.length > 0) {
-      article.appendChild(el("p", { class: "bottle-links-label" }, "Note sources:"));
-      article.appendChild(sourceLinks(sources, bottle.noteSourceIds));
+      article.appendChild(collapsibleSources(sources, bottle.noteSourceIds, t));
     }
   }
 
@@ -87,8 +95,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
     article.appendChild(el("p", { class: "editorial-note" }, bottle.coverageNote));
   }
 
-  article.appendChild(el("p", { class: "bottle-links-label" }, "Sources:"));
-  article.appendChild(sourceLinks(sources, bottle.sourceIds));
+  article.appendChild(collapsibleSources(sources, bottle.sourceIds, t));
 
   if (linkToProfile && bottle.profileId) {
     const profile = profiles.find((p) => p.id === bottle.profileId);

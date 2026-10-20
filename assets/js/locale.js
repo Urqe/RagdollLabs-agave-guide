@@ -59,6 +59,7 @@ const STRINGS = {
     "learn.seenIn": "Seen in:",
     "learn.relatesTo": "Relates to:",
     "learn.verified": "verified",
+    "learn.sources": "Sources",
     "untranslated.note": "Part of this content is shown in English because a reviewed Spanish translation is not yet available.",
   },
   es: {
@@ -112,6 +113,7 @@ const STRINGS = {
     "learn.seenIn": "Visto en:",
     "learn.relatesTo": "Relacionado con:",
     "learn.verified": "verificado",
+    "learn.sources": "Fuentes",
     "untranslated.note": "Parte de este contenido se muestra en ingl\u00e9s porque a\u00fan no hay una traducci\u00f3n al espa\u00f1ol revisada.",
   },
 };

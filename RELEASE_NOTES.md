@@ -696,3 +696,22 @@ evidence consistency.
   its authored language, disclosed by the fallback note; translating
   entity content is Release 14 (Localization Review) scope.
 - Native-device rendering still unverified in this environment.
+
+### UX hotfix — Learn jumps and link clutter (owner-reported)
+
+**Defects found and fixed:**
+- **Learn section buttons did nothing.** Root cause: the jump links were
+  anchors whose hrefs (`#learn-plants`) collided with the hash router \u2014
+  clicking changed the route, which re-rendered the not-found view and
+  wiped the page. They are now real buttons that scroll in-page and
+  never touch the route (verified: hash unchanged after click).
+- **Learn and Catalogue were cluttered with source links.** All source
+  lists (24 Learn cards, 13 catalogue locations) now sit collapsed
+  under keyboard-accessible `<details>` disclosures \u2014 "Sources (2)" /
+  "Fuentes (2)" \u2014 keeping every reference one click away without
+  competing with the educational text. "Seen in:" profile trails are
+  styled as a discreet footer line per card.
+
+Verified in a real-app jsdom boot: jumps stay on `#/learn`, all cards
+render, zero raw source lists outside disclosures, Spanish summaries
+translate. All 59 test suites passing.

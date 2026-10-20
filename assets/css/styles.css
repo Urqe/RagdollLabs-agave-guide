@@ -789,7 +789,25 @@ a { color: var(--blue); }
 
 .learn-jumps { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.75rem 0 0.5rem; }
 .learn-jump { padding: 0.4rem 0.85rem; border: 1px solid var(--line); border-radius: 999px; }
-.learn-usedby { font-size: 0.92rem; color: var(--text-soft); }
+.learn-usedby { font-size: 0.88rem; color: var(--text-soft); border-top: 1px solid var(--line-soft); padding-top: 0.45rem; margin-bottom: 0.35rem; }
+.learn-usedby a { font-size: 0.88rem; }
+
+.source-details { margin-top: 0.6rem; }
+.source-details summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.35rem;
+}
+.source-details summary::before { content: "\2295"; color: var(--agave); font-size: 1rem; }
+.source-details[open] summary::before { content: "\2296"; }
+.source-details summary::after { content: none; }
+.source-details .source-list { padding-top: 0.3rem; }
+.source-details .source-kind { font-size: 0.82rem; }
 .learn-view h3 { margin-top: 1.75rem; scroll-margin-top: 5rem; }
 
 .learn-card {
