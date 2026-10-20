@@ -33,9 +33,27 @@ function sourceLinks(sources, sourceIds) {
 /** Sources stay available but out of the reading flow. */
 function collapsibleSources(sources, sourceIds, t) {
   const details = el("details", { class: "source-details" });
-  const summary = el("summary", {}, `Sources (${(sourceIds || []).length})`);
+  const summary = el("summary", {}, `${t("learn.sources")} (${(sourceIds || []).length})`);
   details.appendChild(summary);
   details.appendChild(sourceLinks(sources, sourceIds));
+  return details;
+}
+
+/**
+ * One disclosure per entry holding every reference group, each with a
+ * small label so the bottle's own reviews and the editorial note's
+ * dependencies stay distinguishable without two mystery dropdowns.
+ */
+function mergedSourceDetails(sources, bottle, t) {
+  const total = (bottle.sourceIds || []).length + (bottle.noteSourceIds || []).length;
+  const details = el("details", { class: "source-details" });
+  details.appendChild(el("summary", {}, `${t("learn.sources")} (${total})`));
+  details.appendChild(el("p", { class: "source-group-label" }, t("catalogue.groupBottle")));
+  details.appendChild(sourceLinks(sources, bottle.sourceIds));
+  if (bottle.noteSourceIds && bottle.noteSourceIds.length > 0) {
+    details.appendChild(el("p", { class: "source-group-label" }, t("catalogue.groupNote")));
+    details.appendChild(sourceLinks(sources, bottle.noteSourceIds));
+  }
   return details;
 }
 
@@ -86,16 +104,13 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
       `How it fits the ${profile ? `\u201c${profile.title}\u201d` : "reference"} profile (editorial): ${bottle.editorialNote}`
     ));
     article.appendChild(note);
-    if (bottle.noteSourceIds && bottle.noteSourceIds.length > 0) {
-      article.appendChild(collapsibleSources(sources, bottle.noteSourceIds, t));
-    }
   }
 
   if (bottle.coverageNote) {
     article.appendChild(el("p", { class: "editorial-note" }, bottle.coverageNote));
   }
 
-  article.appendChild(collapsibleSources(sources, bottle.sourceIds, t));
+  article.appendChild(mergedSourceDetails(sources, bottle, t));
 
   if (linkToProfile && bottle.profileId) {
     const profile = profiles.find((p) => p.id === bottle.profileId);

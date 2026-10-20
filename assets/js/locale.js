@@ -60,6 +60,8 @@ const STRINGS = {
     "learn.relatesTo": "Relates to:",
     "learn.verified": "verified",
     "learn.sources": "Sources",
+    "catalogue.groupBottle": "For this bottle:",
+    "catalogue.groupNote": "For the editorial note:",
     "untranslated.note": "Part of this content is shown in English because a reviewed Spanish translation is not yet available.",
   },
   es: {
@@ -114,6 +116,8 @@ const STRINGS = {
     "learn.relatesTo": "Relacionado con:",
     "learn.verified": "verificado",
     "learn.sources": "Fuentes",
+    "catalogue.groupBottle": "Para esta botella:",
+    "catalogue.groupNote": "Para la nota editorial:",
     "untranslated.note": "Parte de este contenido se muestra en ingl\u00e9s porque a\u00fan no hay una traducci\u00f3n al espa\u00f1ol revisada.",
   },
 };

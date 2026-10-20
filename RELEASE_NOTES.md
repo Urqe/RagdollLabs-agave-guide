@@ -715,3 +715,18 @@ evidence consistency.
 Verified in a real-app jsdom boot: jumps stay on `#/learn`, all cards
 render, zero raw source lists outside disclosures, Spanish summaries
 translate. All 59 test suites passing.
+
+### UX hotfix — merged source disclosures (owner-reported)
+
+**Issue:** catalogue entries with editorial notes showed two
+unexplained "Sources" dropdowns (e.g. Cielo Rojo: one with 3, one with
+2). The two groups are meaningful \u2014 the bottle's own reviews vs the
+references backing the profile-relative editorial note \u2014 but the
+presentation read as a bug.
+
+**Fix:** one merged disclosure per entry ("Sources (5)") with small
+labeled subgroups inside: "For this bottle:" and "For the editorial
+note:" ("Para esta botella:" / "Para la nota editorial:" in Spanish).
+Entries without editorial notes keep a single group. Reviewer evidence
+and the app's editorial synthesis stay distinguishable \u2014 one click,
+clear provenance. Verified in a real-app boot; all 59 suites passing.
