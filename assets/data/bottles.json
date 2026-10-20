@@ -292,6 +292,137 @@
         "mezcalreviews-9guardianes-anejo",
         "backalley-comiteco"
       ]
+    },
+    {
+      "id": "el-tesoro-extra-anejo",
+      "brand": "El Tesoro",
+      "producer": "La Alteña Distillery (Camarena family, Carlos Camarena), Jalisco highlands",
+      "expression": "Extra Añejo Tequila",
+      "abv": 40,
+      "spirit": "tequila",
+      "place": "Jalisco highlands (La Alteña, near Arandas), Jalisco",
+      "batch": "Aged 4-5 years in American oak ex-bourbon barrels — longer than the 3-year legal minimum",
+      "profileId": "tequila-extra-anejo-highland-jalisco",
+      "reviewSummary": "Drinkhacker notes that where most extra añejos are caramel-vanilla bombs, this one keeps the agave clearly in the frame — an herbal nose of rosemary, pepper and allspice that could pass for a reposado, over deep oak.",
+      "sourceIds": [
+        "drinkhacker-eltesoro-xa"
+      ]
+    },
+    {
+      "id": "ilegal-mezcal-reposado",
+      "brand": "Ilegal",
+      "producer": "Ilegal Mezcal (Tlacolula valley producers; brand by John Rexer), Oaxaca",
+      "expression": "Mezcal Reposado",
+      "abv": 40,
+      "spirit": "mezcal",
+      "place": "Tlacolula, Oaxaca",
+      "batch": "Joven espadín rested about 4-6 months in American oak (ex-whiskey casks per brand notes)",
+      "profileId": "mezcal-reposado-espadin-oaxaca",
+      "reviewSummary": "BBC Good Food describes a smooth spirit with a subtle straw-like aroma, hints of citrus and candy sweetness, vanilla and citrus on the palate with spice and earth, and a sweet, smooth finish; Bourbon Banter notes clove and butterscotch with the smoke carrying from nose to a smoky-butterscotch finish.",
+      "sourceIds": [
+        "bbcgoodfood-ilegal-reposado",
+        "bourbonbanter-ilegal"
+      ]
+    },
+    {
+      "id": "ilegal-mezcal-anejo",
+      "brand": "Ilegal",
+      "producer": "Ilegal Mezcal (Tlacolula valley producers; brand by John Rexer), Oaxaca",
+      "expression": "Mezcal Añejo",
+      "abv": 40,
+      "spirit": "mezcal",
+      "place": "Tlacolula, Oaxaca",
+      "batch": "Joven espadín rested about 14 months in American oak, beyond the 1-year añejo minimum",
+      "profileId": "mezcal-reposado-espadin-oaxaca",
+      "reviewSummary": "The Tequila Whisperer found it one of the most pleasing aged-mezcal surprises he had tasted; Bourbon Banter describes leaning further into caramel and spicier wood notes than the reposado, with less of the joven's smoke.",
+      "sourceIds": [
+        "bourbonbanter-ilegal"
+      ]
+    },
+    {
+      "id": "montelobos-tobala",
+      "brand": "Montelobos",
+      "producer": "Montelobos (mezcalero Iván Saldaña; Santiago Matatlán area production), Oaxaca",
+      "expression": "Montelobos Tobalá",
+      "abv": null,
+      "abvNote": "ABV varies by lot; the cited review lists lot-specific notes — check your bottle",
+      "spirit": "mezcal",
+      "place": "Santiago Matatlán, Oaxaca",
+      "batch": "100% cultivated tobalá (no wild-harvest), pit-roasted; sustainability-focused production",
+      "profileId": "mezcal-tobala-sierra-oaxaca",
+      "reviewSummary": "Mezcal Reviews describes aromas of lemon, green pepper and pear, with citrus, basil, roasted fig, macadamia and truffle on the palate; member notes also mention bubblegum and fresh-cut grass across lots.",
+      "sourceIds": [
+        "mezcalreviews-montelobos-tobala"
+      ]
+    },
+    {
+      "id": "macurichos-ancestral-tobala",
+      "brand": "Macurichos",
+      "producer": "Macurichos (maestro mezcalero Gonzalo Martinez), Santiago Matatlán, Oaxaca",
+      "expression": "Ancestral Tobalá",
+      "abv": null,
+      "abvNote": "Small-batch ABV varies (a cited member review lists a 47.54% batch); check your bottle",
+      "spirit": "mezcal",
+      "place": "Santiago Matatlán, Oaxaca",
+      "batch": "Ancestral production: earthen-oven cooked, tahona-milled, wooden-vat fermented, clay pot stills; family also reforests wild populations",
+      "profileId": "mezcal-tobala-sierra-oaxaca",
+      "reviewSummary": "Mezcal Reviews describes it as herbal with notes of dry soil, thyme, coriander and a touch of rosemary; a member review found it soft and delicate with solid sweetness throughout.",
+      "sourceIds": [
+        "mezcalreviews-macurichos-tobala"
+      ]
+    },
+    {
+      "id": "del-maguey-pechuga",
+      "brand": "Del Maguey",
+      "producer": "Del Maguey Single Village (Florencio Carlos Sarmiento et al.), Minas de Real del Peñón (Sierra Norte), Oaxaca",
+      "expression": "Pechuga",
+      "abv": null,
+      "abvNote": "ABV varies by batch (a cited retail listing shows 49%); check your bottle",
+      "spirit": "mezcal",
+      "place": "Minas de Real del Peñón, Oaxaca",
+      "batch": "Triple-distilled; the third distillation passes vapor through wild mountain fruits, almonds, rice and a suspended raw chicken breast (pechuga); seasonal, limited production",
+      "profileId": "mezcal-espadin-valles-centrales",
+      "reviewSummary": "Mezcal Reviews members describe black licorice, anise and clove with fruit, a Scotch-like smokiness and — yes — a taste of chicken; others find basil, lemon, ocean and fruit on the nose. Difford's describes smoky roast chicken skin, paprika and sea salt. A festival-production style, not an everyday class.",
+      "editorialNote": "Pechuga is a production style (third distillation over fruit and poultry), not a legal age class or separate spirit; it is contextual to mezcal tradition rather than a new category here.",
+      "noteProfileId": "mezcal-espadin-valles-centrales",
+      "noteSourceIds": [
+        "mezcalreviews-del-maguey-pechuga"
+      ],
+      "sourceIds": [
+        "mezcalreviews-del-maguey-pechuga"
+      ]
+    },
+    {
+      "id": "siete-pozos-tuxca",
+      "brand": "Siete Pozos",
+      "producer": "Siete Pozos Taberna (maestro tabernero Refugio Pineda Cruz; brand owner Luis Velasco), Zapotitlán de Vadillo, Jalisco",
+      "expression": "Tuxca Ixteco Amarillo / Lineño",
+      "abv": null,
+      "abvNote": "Small-batch production; ABV varies (a retail listing shows 45%) — check your bottle",
+      "spirit": "tuxca",
+      "place": "Zapotitlán de Vadillo, Jalisco",
+      "batch": "Wild ixtero amarillo and lineño agaves, pit-roasted, volcanic-stone fermented, copper distilled; one of the producers actively pushing for a tuxca denomination of origin",
+      "profileId": "tuxca-lineno-cimarron-jalisco-colima",
+      "reviewSummary": "A Mezcal Reviews member (batch 03) found a sweet floral fragrance with light sandalwood, a lactic palate with green peppers and sweet minerality, and an agave-rich finish.",
+      "sourceIds": [
+        "mezcalreviews-siete-pozos-tuxca"
+      ]
+    },
+    {
+      "id": "indio-alonso-tuxca",
+      "brand": "Indio Alonso",
+      "producer": "Indio Alonso (fifth-generation tuxquero David Benítez Venegas), Zapotitlán de Vadillo, Jalisco",
+      "expression": "Tuxca Cimarrón / Salmiana",
+      "abv": null,
+      "abvNote": "Small-batch production; ABV not documented in the cited source — check your bottle",
+      "spirit": "tuxca",
+      "place": "Zapotitlán de Vadillo, Jalisco",
+      "batch": "Wild cimarrón (Agave angustifolia), cuaquizoca and salmiana (Agave inaequidens) agaves, pit-roasted, volcanic-stone-pit fermented, copper double-distilled; another producer pushing for a tuxca denomination of origin",
+      "profileId": "tuxca-lineno-cimarron-jalisco-colima",
+      "reviewSummary": "The cited Mezcal Reviews entry documents the multi-agave composition (cimarrón, cuaquizoca, salmiana) and the volcanic-stone-pit fermentation; tasting notes for this specific batch are not yet documented, so no flavor character is claimed here.",
+      "sourceIds": [
+        "mezcalreviews-indio-alonso-tuxca"
+      ]
     }
   ]
 }

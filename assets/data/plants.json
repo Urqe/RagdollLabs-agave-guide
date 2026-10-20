@@ -139,6 +139,29 @@
         "mexicanspiritsbible-tuxca",
         "mezcalistas-balancan-tasting"
       ]
+    },
+    {
+      "id": "agave-potatorum",
+      "species": "Agave potatorum",
+      "commonNames": [
+        {
+          "name": "tobalá",
+          "region": "Oaxaca, Puebla (Sierra Norte)"
+        },
+        {
+          "name": "maguey de mesa",
+          "region": "Oaxaca"
+        }
+      ],
+      "cultivation": "mostly wild-harvested at high altitude; seed-only reproduction makes cultivation slow, so wild populations are under pressure — some producers now cultivate or reforest (the cited Montelobos entry is 100% cultivated)",
+      "uncertainty": "Wild vs cultivated tobalá can taste noticeably different; flavor variation between batches is documented and genuine",
+      "profileIds": [
+        "mezcal-tobala-sierra-oaxaca"
+      ],
+      "sourceIds": [
+        "mezcalreviews-tobala-category",
+        "mezcalreviews-montelobos-tobala"
+      ]
     }
   ]
 }

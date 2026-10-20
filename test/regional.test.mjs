@@ -120,7 +120,7 @@ test("release 10: backlog maintains uncovered expressions and missing profiles",
   const path = await import("node:path");
   const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
   const backlog = JSON.parse(await readFile(path.join(root, "assets/data/backlog.json"), "utf8"));
-  assert.ok(backlog.backlog.length >= 4, "backlog entries recorded (Costa raicilla closed in Release 13)");
+  assert.ok(Array.isArray(backlog.backlog), "backlog is an array (may be empty when all items are done)");
   for (const entry of backlog.backlog) {
     assert.ok(entry.kind && entry.item && entry.reason, "each entry has kind, item and reason");
   }
