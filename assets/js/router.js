@@ -41,7 +41,8 @@ export function parseHash(hash) {
     const [profileId, query = ""] = segments[1].split("?");
     const params = new URLSearchParams(query);
     const from = params.get("from");
-    return { name: "profile", params: { profileId, ...(from ? { from } : {}) } };
+    const origin = params.get("origin");
+    return { name: "profile", params: { profileId, ...(from ? { from } : {}), ...(origin ? { origin } : {}) } };
   }
   return { name: "notFound", params: {} };
 }
@@ -61,9 +62,7 @@ export function buildHash(route) {
     case "compare":
       return `#/compare${route.params.compareIds ? `/${route.params.compareIds.split(",").map(encodeURIComponent).join(",")}` : ""}`;
     case "profile":
-      return `#/profile/${encodeURIComponent(route.params.profileId)}${
-        route.params.from ? `?from=${encodeURIComponent(route.params.from)}` : ""
-      }`;
+      return `#/profile/${encodeURIComponent(route.params.profileId)}${buildProfileQuery(route.params)}`;
     default:
       return "#/";
   }
@@ -73,6 +72,14 @@ export function buildHash(route) {
  * Navigate without adding a duplicate entry when the target hash equals the
  * current one. Returns true when the location actually changed.
  */
+function buildProfileQuery(params) {
+  const query = new URLSearchParams();
+  if (params.from) query.set("from", params.from);
+  if (params.origin) query.set("origin", params.origin);
+  const s = query.toString();
+  return s ? `?${s}` : "";
+}
+
 export function navigateTo(route) {
   const hash = buildHash(route);
   if (window.location.hash === hash) return false;

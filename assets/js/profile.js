@@ -60,13 +60,14 @@ function collapsibleBottleSources(sources, bottle, t) {
  * Profile view: title, place/style context, description, body, taste notes,
  * smoke (where relevant), finish, one example bottle card and source links.
  */
-export function renderProfile(container, { profile, bottle, sources, returnTo = null, allProfiles = [], allBottles = [], locale = null }) {
+export function renderProfile(container, { profile, bottle, sources, returnTo = null, origin = null, compareSelection = [], allProfiles = [], allBottles = [], locale = null }) {
   clear(container);
   const section = el("section", { class: "profile-view", "aria-labelledby": "profile-title" });
 
   const t = (key) => (locale ? locale.t(key) : key);
-  const backHref = returnTo ? `#/explore/${encodeURIComponent(returnTo)}` : "#/explore";
-  const back = el("a", { href: backHref, class: "back-link" }, t("profile.backExplore"));
+  const fromCatalogue = origin === "catalogue";
+  const backHref = fromCatalogue ? "#/catalogue" : returnTo ? `#/explore/${encodeURIComponent(returnTo)}` : "#/explore";
+  const back = el("a", { href: backHref, class: "back-link" }, fromCatalogue ? t("profile.backCatalogue") : t("profile.backExplore"));
   section.appendChild(back);
 
   section.appendChild(el("h1", { id: "profile-title" }, profile.title));
@@ -223,7 +224,19 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   if (profile.plant) identity.appendChild(el("p", { class: "profile-plant-summary" }, ui(locale, "plant") + ": " + profile.plant));
   const core = el("div", { class: "profile-core" });
   core.append(sensoryOverview(profile, locale), factsNode);
-  const action = el("a", { class: "secondary-button compare-profile-link", href: "#/compare/" + encodeURIComponent(profile.id) }, ui(locale, "compareThis") + " ↗");
+  const isSelected = compareSelection.includes(profile.id);
+  const isFull = compareSelection.length >= 3 && !isSelected;
+  // "Compare this style" adds to the existing selection (capped at three);
+  // when the style is already in — or the comparison is full — the link
+  // reopens the current selection instead.
+  const targetIds = isSelected || isFull
+    ? [...compareSelection]
+    : [...compareSelection, profile.id].slice(0, 3);
+  const action = el("a", {
+    class: "secondary-button compare-profile-link" + (isSelected ? " is-selected" : "") + (isFull ? " is-full" : ""),
+    href: "#/compare/" + targetIds.map(encodeURIComponent).join(","),
+    "aria-pressed": isSelected ? "true" : null,
+  }, isSelected ? ui(locale, "compareSelected") : isFull ? ui(locale, "compareFull") : ui(locale, "compareThis") + " ↗");
   const details = el("details", { class: "profile-learning" });
   details.appendChild(el("summary", {}, ui(locale, "details")));
   for (const node of detailNodes) details.appendChild(node);

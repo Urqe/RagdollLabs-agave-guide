@@ -152,29 +152,54 @@ test("explore view shows covered profiles, empty state and search", async () => 
   const groupLabels = [...container.querySelectorAll(".profile-group-label")].map((g) => g.textContent);
   assert.ok(groupLabels.length >= 2, "spirit group labels render");
 
-  // Search: by spirit (accent/case-insensitive), with a reason.
+  // Combined search + filters narrow one results collection with a count.
   const searchInput = container.querySelector(".search-input");
+  const resultLinks = () => [...container.querySelectorAll(".state-results .profile-link")];
+  const count = () => container.querySelector(".results-count");
+
+  // Search: by spirit (accent/case-insensitive).
   searchInput.value = "Raicilla";
   searchInput.dispatchEvent(new window.Event("input", { bubbles: true }));
-  const searchLinks = container.querySelectorAll(".search-result-link");
-  assert.ok(searchLinks.length >= 1);
-  assert.ok(searchLinks[0].getAttribute("href").includes("raicilla"), "top result is a raicilla profile");
-  assert.ok(container.querySelector(".search-result-reason").textContent.length > 0);
+  assert.ok(resultLinks().length >= 1);
+  assert.ok(resultLinks().every((l) => l.getAttribute("href").includes("raicilla")), "results are raicilla profiles");
+  assert.ok(count() && /^\d+ profile/.test(count().textContent.trim()), "result count renders");
+
+  // Filters combine with search on the full collection (leave the state view).
+  api.setState(null);
+  searchInput.value = "";
+  searchInput.dispatchEvent(new window.Event("input", { bubbles: true }));
+  const tradition = container.querySelector("#spirit-filter");
+  tradition.value = "mezcal";
+  tradition.dispatchEvent(new window.Event("change", { bubbles: true }));
+  assert.ok(resultLinks().length >= 1);
+  assert.ok(resultLinks().length < profiles.profiles.length, "tradition filter narrows the collection");
+  assert.ok(resultLinks().every((l) => l.querySelector(".profile-link-spirit").textContent === "Mezcal"));
 
   // Search: by agave alias without accent.
+  tradition.value = "";
+  tradition.dispatchEvent(new window.Event("change", { bubbles: true }));
   searchInput.value = "espadin";
   searchInput.dispatchEvent(new window.Event("input", { bubbles: true }));
-  assert.ok(container.querySelector('.search-result-link[href*="mezcal-espadin-valles-centrales"]'));
+  assert.ok(container.querySelector('.state-results a[href*="mezcal-espadin-valles-centrales"]'));
 
   // Search: by place.
   searchInput.value = "sonora";
   searchInput.dispatchEvent(new window.Event("input", { bubbles: true }));
-  assert.ok(container.querySelector('.search-result-link[href*="bacanora-pacifica-sierra-sonora"]'));
+  assert.ok(container.querySelector('.state-results a[href*="bacanora-pacifica-sierra-sonora"]'));
 
-  // Search: no match message.
+  // Search: no match message in the shared results area.
   searchInput.value = "zzz-unknown";
   searchInput.dispatchEvent(new window.Event("input", { bubbles: true }));
-  assert.ok(container.querySelector(".search-empty").textContent.includes("No profiles match"));
+  assert.ok(container.querySelector(".empty-state").textContent.includes("No profiles match"));
+
+  // Clear all resets the query and every filter.
+  searchInput.value = "zzz-unknown";
+  tradition.value = "mezcal";
+  container.querySelector("#mood-filter").value = [...container.querySelector("#mood-filter").options].slice(1).map((o) => o.value).find((v) => v) || "";
+  container.querySelector(".discovery-controls button").click();
+  assert.equal(searchInput.value, "");
+  assert.equal(container.querySelector("#spirit-filter").value, "");
+  assert.equal(container.querySelector("#mood-filter").value, "");
 
   // Sonora is covered now (bacanora) and carries its state context in links.
   api.setState("son");
