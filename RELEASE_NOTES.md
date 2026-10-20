@@ -223,3 +223,49 @@ optional-data failures and small-screen profile readability.
 - Native-device rendering still unverified in this environment.
 - Advanced search (multi-term, fuzzy) and comparison remain backlog
   (Release 5+).
+
+## Release 5 — Find Your Flavor
+
+### Scope delivered
+
+- **Comparison view** (`#/compare`, `#/compare/<ids>`): pick two or
+  three profiles side by side, with explicit remove controls per column
+  and picker buttons that disable at three. Selections are carried in
+  the route, so they survive reload, sharing and Back/Forward.
+- **Disclosed editorial sensory dimensions** (8): smoke, herbal/vegetal,
+  fruit/floral, perceived sweetness, pepper/spice, body, oak, finish —
+  each an authored editorial level (none/low/medium/high), never a
+  number. The view states plainly that perceived sweetness is not
+  measured sugar, smoke is not peat content, and ABV stays factual.
+- **Biggest-differences view** ordered by gap size, plus plant/process
+  context lines so cross-tradition differences (tequila steam-cook vs
+  mezcal pit-roast) read clearly.
+- **Flavor moods** on every profile ("Smoke-forward", "Clean & herbal",
+  "Round & fruity", "Peppery & savory", "Long finish", "Desert garden"),
+  derived only from supported attributes.
+- **"If you like this, try…"** on every profile with a reason naming the
+  shared documented dimensions; candidates without documented overlap
+  are never suggested.
+- **Missing data is explicit:** unknown is a first-class level; unknown
+  cells read "Not documented", unknown dimensions are excluded from
+  differences and listed in a visible note; no unknown-as-zero anywhere.
+- **Pure comparison engine** (`assets/js/compare.js`) with explanation
+  invariants covered by deterministic fixtures, not by the current data
+  ranking.
+
+### Checks run
+
+- `npm run validate` — schema (sensory levels validated) plus 24
+  node:test/jsdom suites, including 8 new fixture-based invariant tests
+  (unknown never coerced, gap ordering determinism, explicit missing
+  dimensions, moods from supported data only, suggestion
+  incompatibility, no bottle-measurement claims) and DOM workflow tests
+  (picker, table, remove controls, unknown cells). All passing.
+- Live-data smoke check: compare view renders 8 dimension rows,
+  differences and plant context for the two seed profiles.
+
+### Remaining issues / deferred
+
+- Native-device rendering still unverified in this environment.
+- Moods and suggestions are deliberately conservative; richer
+  explanation and more moods grow with more profiles.

@@ -52,6 +52,15 @@ for (const p of profiles) {
   if (p.process !== undefined && typeof p.process !== "string") fail(`${label}: process must be a string when present`);
   if (p.category !== undefined && typeof p.category !== "string") fail(`${label}: category must be a string when present`);
   if (p.beginnerNote !== undefined && typeof p.beginnerNote !== "string") fail(`${label}: beginnerNote must be a string when present`);
+  if (p.sensory !== undefined) {
+    if (typeof p.sensory !== "object" || Array.isArray(p.sensory)) fail(`${label}: sensory must be an object when present`);
+    else {
+      const VALID_LEVELS = new Set(["none", "low", "medium", "high", null]);
+      for (const [dim, level] of Object.entries(p.sensory)) {
+        if (!VALID_LEVELS.has(level)) fail(`${label}: sensory.${dim} must be none, low, medium, high or null (unknown), got ${JSON.stringify(level)}`);
+      }
+    }
+  }
   if (!p.finish || typeof p.finish !== "string") fail(`${label}: finish required`);
   if (!bottleIds.has(p.exampleBottleId)) fail(`${label}: exampleBottleId ${p.exampleBottleId} not in bottles.json`);
   if (!Array.isArray(p.sourceIds) || p.sourceIds.length === 0) fail(`${label}: sourceIds required`);

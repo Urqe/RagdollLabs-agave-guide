@@ -3,6 +3,7 @@ import { parseHash, startRouter } from "./router.js";
 import { loadAppData } from "./data-loader.js";
 import { renderExplore } from "./explore.js";
 import { renderProfile, renderProfileNotFound } from "./profile.js";
+import { renderCompare } from "./compare-view.js";
 
 const state = {
   data: null,
@@ -58,6 +59,15 @@ async function renderRoute(container, route) {
     return;
   }
 
+  if (route.name === "compare") {
+    state.exploreApi = null;
+    renderCompare(container, {
+      profiles,
+      compareIds: route.params.compareIds || "",
+      onSelectionChange: (ids) => navigateTo({ name: "compare", params: { compareIds: ids.join(",") } }),
+    });
+    return;
+  }
   if (route.name === "profile") {
     state.exploreApi = null;
     const profile = profiles.find((p) => p.id === route.params.profileId);
@@ -66,7 +76,7 @@ async function renderRoute(container, route) {
       return;
     }
     const bottle = bottles.find((b) => b.id === profile.exampleBottleId) || null;
-    renderProfile(container, { profile, bottle, sources, returnTo: route.params.from || null });
+    renderProfile(container, { profile, bottle, sources, returnTo: route.params.from || null, allProfiles: profiles });
     return;
   }
 

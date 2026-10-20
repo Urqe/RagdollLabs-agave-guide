@@ -84,6 +84,11 @@ test/                       node:test suites (jsdom)
 - Basic search covers spirits, agave plants, places, producers, brands and
   bottles; accents and case are normalized and common aliases are supported
   (e.g. “espadin” finds espadín).
+- Compare (`#/compare`) shows two or three editorial profiles side by side
+  across eight sensory dimensions, with a biggest-differences view, flavor
+  moods and “If you like this, try…” suggestions. Sensory levels are
+  editorial impressions; unknown data is labeled “Not documented”, never
+  treated as zero.
 - Legal category/class terms (denominations of origin, classes like blanco or
   joven) are kept distinct from editorial style groupings (e.g. Sierra vs
   Costa raicilla).

@@ -401,6 +401,107 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   .search-input { font-size: 1rem; }
 }
 
+.compare-picker { margin: 1rem 0; }
+
+.compare-picker-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.compare-pick-button {
+  min-height: var(--tap);
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--cream-dark);
+  border-radius: var(--radius);
+  background: #fffdf6;
+  color: var(--charcoal);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.compare-pick-button[aria-pressed="true"] {
+  border-color: var(--agave-green);
+  background: #eef3ea;
+  font-weight: 700;
+}
+
+.compare-pick-button:disabled {
+  color: #9b938a;
+  cursor: not-allowed;
+  background: #f4efe4;
+}
+
+.compare-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 52rem;
+  background: #fffdf6;
+  border: 1px solid var(--cream-dark);
+  border-radius: var(--radius);
+}
+
+.compare-table th, .compare-table td {
+  border: 1px solid var(--cream-dark);
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.compare-table thead th { vertical-align: top; }
+
+.compare-table tbody th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.compare-unknown { color: var(--charcoal-soft); font-style: italic; }
+
+.compare-remove-button {
+  display: block;
+  margin-top: 0.35rem;
+  min-height: 36px;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--terracotta);
+  border-radius: var(--radius);
+  background: #fffdf6;
+  color: var(--terracotta);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.compare-remove-button:hover { background: #f9e9df; }
+
+.compare-diff-list { max-width: 46rem; }
+
+.compare-empty { color: var(--charcoal-soft); }
+
+.compare-craft { margin-top: 1.25rem; }
+
+.mood-line { max-width: 46rem; }
+
+.suggestion-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+  max-width: 46rem;
+}
+
+.suggestion-link {
+  color: var(--agave-blue);
+  font-weight: 600;
+}
+
+@media (max-width: 52rem) {
+  .compare-table th, .compare-table td { font-size: 0.85rem; padding: 0.45rem 0.5rem; }
+  .compare-picker-list { flex-direction: column; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }

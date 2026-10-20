@@ -29,7 +29,16 @@
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
       "process": "Steam-cooked (oven/autoclave), tahona or roller-mill extraction, fermented in open tanks, double distilled, unaged (blanco)",
       "category": "Tequila — spirit with its own Denomination of Origin; blanco is an unaged legal class",
-      "beginnerNote": "New to tequila? A blanco is the unaged version — the purest read on cooked agave, before any oak influence."
+      "beginnerNote": "New to tequila? A blanco is the unaged version — the purest read on cooked agave, before any oak influence.",
+      "sensory": {
+        "smoke": "none",
+        "herbal": "high",
+        "fruit": "low",
+        "sweetness": "low",
+        "pepper": "medium",
+        "oak": "none",
+        "finishLength": "medium"
+      }
     },
     {
       "id": "mezcal-espadin-valles-centrales",
@@ -60,7 +69,16 @@
       "plant": "Agave angustifolia (espadín, cultivated)",
       "process": "Earthen-pit roast, tahona or horse-drawn mill, wild-yeast fermentation, double distilled, joven (unaged)",
       "category": "Mezcal — spirit with its own Denomination of Origin; joven/abocado is an unaged legal class",
-      "beginnerNote": "New to mezcal? The smoke comes from roasting the agave underground — it is a character of the process, not an added flavor."
+      "beginnerNote": "New to mezcal? The smoke comes from roasting the agave underground — it is a character of the process, not an added flavor.",
+      "sensory": {
+        "smoke": "medium",
+        "herbal": "medium",
+        "fruit": "medium",
+        "sweetness": "low",
+        "pepper": "low",
+        "oak": "none",
+        "finishLength": "high"
+      }
     },
     {
       "id": "bacanora-pacifica-sierra-sonora",
@@ -90,7 +108,16 @@
         "sunora-bacanora",
         "mezcalistas-tepua-tasting",
         "mezcalreviews-tepua-blanco"
-      ]
+      ],
+      "sensory": {
+        "smoke": "low",
+        "herbal": "high",
+        "fruit": "low",
+        "sweetness": "low",
+        "pepper": "medium",
+        "oak": "none",
+        "finishLength": "medium"
+      }
     },
     {
       "id": "raicilla-maximiliana-sierra-jalisco",
@@ -120,7 +147,16 @@
         "wikipedia-raicilla",
         "casaendemica-brands",
         "mezcalreviews-lavenenosa-tabernas"
-      ]
+      ],
+      "sensory": {
+        "smoke": "low",
+        "herbal": "medium",
+        "fruit": "medium",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "none",
+        "finishLength": "medium"
+      }
     }
   ]
 }

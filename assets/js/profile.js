@@ -1,5 +1,6 @@
 import { el, safeLink, clear } from "./dom-utils.js";
 import { STATE_NAMES } from "./map.js";
+import { flavorMoods, ifYouLikeThis } from "./compare.js";
 
 const BODY_LABELS = { light: "Light body", medium: "Medium body", full: "Full body" };
 
@@ -45,7 +46,7 @@ function exampleBottleCard(bottle, sources) {
  * Profile view: title, place/style context, description, body, taste notes,
  * smoke (where relevant), finish, one example bottle card and source links.
  */
-export function renderProfile(container, { profile, bottle, sources, returnTo = null }) {
+export function renderProfile(container, { profile, bottle, sources, returnTo = null, allProfiles = [] }) {
   clear(container);
   const section = el("section", { class: "profile-view", "aria-labelledby": "profile-title" });
 
@@ -87,6 +88,14 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     section.appendChild(el("p", { class: "beginner-note" }, profile.beginnerNote));
   }
 
+  const moods = flavorMoods(profile);
+  if (moods.length > 0) {
+    const moodLine = el("p", { class: "mood-line" });
+    moodLine.appendChild(el("strong", {}, "Flavor moods: "));
+    moodLine.appendChild(document.createTextNode(moods.join(", ") + "."));
+    section.appendChild(moodLine);
+  }
+
   const facts = el("dl", { class: "profile-facts" });
   facts.appendChild(el("dt", {}, "Body"));
   facts.appendChild(el("dd", { class: "profile-body" }, BODY_LABELS[profile.body] || profile.body));
@@ -105,6 +114,21 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   section.appendChild(facts);
 
   if (bottle) section.appendChild(exampleBottleCard(bottle, sources));
+
+  const suggestions = ifYouLikeThis(profile, allProfiles);
+  if (suggestions.length > 0) {
+    const suggHeading = el("h3", { class: "sources-heading" }, "If you like this, try…");
+    section.appendChild(suggHeading);
+    const suggList = el("ul", { class: "suggestion-list" });
+    for (const { profile: other, reason } of suggestions) {
+      const item = el("li");
+      const link = el("a", { href: `#/profile/${encodeURIComponent(other.id)}`, class: "suggestion-link" }, other.title);
+      item.appendChild(link);
+      item.appendChild(el("span", { class: "search-result-reason" }, ` — ${reason}`));
+      suggList.appendChild(item);
+    }
+    section.appendChild(suggList);
+  }
 
   const srcHeading = el("h3", { class: "sources-heading" }, "Sources for this profile");
   section.appendChild(srcHeading);
