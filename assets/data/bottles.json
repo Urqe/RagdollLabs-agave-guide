@@ -1,0 +1,28 @@
+{
+  "bottles": [
+    {
+      "id": "fortaleza-blanco",
+      "brand": "Fortaleza",
+      "expression": "Blanco Tequila",
+      "abv": 40,
+      "reviewSummary": "Reviewers call this a benchmark lowland blanco: a savory, assertive expression of cooked agave with olive brine and pepper, showing more complexity than most in its category.",
+      "sourceIds": [
+        "tequilafortaleza-blanco",
+        "diffords-fortaleza-blanco",
+        "liquor-com-fortaleza-blanco-review"
+      ]
+    },
+    {
+      "id": "lost-explorer-espadin",
+      "brand": "The Lost Explorer",
+      "expression": "Mezcal Espadín (joven)",
+      "abv": 42,
+      "reviewSummary": "Reviewers describe a welcoming, gently smoky espadín: herbaceous and delicately sweet on the palate with a long, dry, smoky finish that fades to earthy herbs.",
+      "sourceIds": [
+        "thelostexplorer-our-craft",
+        "diffords-lost-explorer-espadin",
+        "drinkhacker-lost-explorer-review"
+      ]
+    }
+  ]
+}

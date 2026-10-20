@@ -1,0 +1,58 @@
+{
+  "profiles": [
+    {
+      "id": "tequila-blanco-valley-jalisco",
+      "title": "Blanco tequila, Tequila Valley style",
+      "spirit": "tequila",
+      "stateId": "jal",
+      "stateName": "Jalisco",
+      "context": "Unaged tequila from 100% blue agave, centered on the town of Tequila and the surrounding valley of Jalisco. Valley agave tends to be smaller and more herbaceous than highland agave, and many valley blancos read savory and vegetal rather than sweet.",
+      "description": "A blanco (also called silver or plata) is tequila that is bottled without oak aging, so what you taste is the distilled character of the cooked agave itself: roasted piña, citrus, pepper and fresh vegetal notes. Traditional valley producers often crush the cooked agave with a tahona stone wheel and ferment in open tanks, which adds texture and a savory, earthy edge that is typical of the region. This is editorial style guidance, not a rating of any specific bottle.",
+      "body": "light",
+      "tasteNotes": [
+        "cooked agave",
+        "citrus peel",
+        "black pepper",
+        "olive brine",
+        "fresh herbs"
+      ],
+      "smoke": null,
+      "finish": "Clean and peppery, with citrus and a gentle vegetal warmth that fades steadily.",
+      "exampleBottleId": "fortaleza-blanco",
+      "sourceIds": [
+        "diffords-tequila-made",
+        "diffords-tequila-category",
+        "diffords-fortaleza-blanco",
+        "liquor-com-fortaleza-blanco-review",
+        "tequilafortaleza-blanco"
+      ]
+    },
+    {
+      "id": "mezcal-espadin-valles-centrales",
+      "title": "Espadín mezcal, Valles Centrales style",
+      "spirit": "mezcal",
+      "stateId": "oax",
+      "stateName": "Oaxaca",
+      "context": "Artisanal joven mezcal made from espadín agave (Agave angustifolia) in the Valles Centrales around Oaxaca. Mezcal production is traditionally small-scale, with agave hearts roasted in earthen pit ovens, which gives the spirit its signature smoke. Espadín is the most widely planted mezcal agave and is often described as the most approachable of the common varieties.",
+      "description": "Mezcal is a distilled spirit made from the roasted hearts of many agave species, not just blue agave. Roasting the piñas underground gives mezcal its characteristic smoke, layered over fruit, herb and mineral notes that vary with the agave variety, the village and the maestro mezcalero. This profile describes the style of a typical Valles Centrales espadín joven; individual bottles vary widely. This is editorial style guidance, not a rating of any specific bottle.",
+      "body": "medium",
+      "tasteNotes": [
+        "roasted agave",
+        "green apple",
+        "citrus",
+        "fresh herbs",
+        "mineral"
+      ],
+      "smoke": "Gentle to moderate smoke from the pit-roast, woven through the fruit and herb notes rather than dominating them.",
+      "finish": "Long and dry, with smoke that lingers softly and fades into earthy herbs.",
+      "exampleBottleId": "lost-explorer-espadin",
+      "sourceIds": [
+        "diffords-mezcal-what-it-is",
+        "diffords-lost-explorer-espadin",
+        "thelostexplorer-our-craft",
+        "drinkhacker-lost-explorer-review",
+        "diffords-lost-explorer-palenque"
+      ]
+    }
+  ]
+}
