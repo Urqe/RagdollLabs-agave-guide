@@ -125,3 +125,70 @@ test("release 10: backlog maintains uncovered expressions and missing profiles",
   // Costa raicilla gap is tracked (its bottle exists without a profile).
   assert.ok(backlog.backlog.some((e) => e.item.includes("Costa raicilla")));
 });
+
+test("release 11: learn datasets validate and link to real profiles", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const path = await import("node:path");
+  const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+  const plants = JSON.parse(await readFile(path.join(root, "assets/data/plants.json"), "utf8")).plants;
+  const processes = JSON.parse(await readFile(path.join(root, "assets/data/processes.json"), "utf8")).processes;
+  const glossary = JSON.parse(await readFile(path.join(root, "assets/data/glossary.json"), "utf8")).glossary;
+
+  assert.ok(plants.length >= 6, "plant pages exist");
+  const profileIds = new Set(profiles.map((p) => p.id));
+  for (const plant of plants) {
+    assert.ok(plant.species, "scientific identity recorded");
+    assert.ok(plant.commonNames.length > 0, "common names with regions");
+    for (const pid of plant.profileIds || []) assert.ok(profileIds.has(pid), `plant ${plant.id} links a real profile`);
+  }
+  // Uncertainty is honest, not guessed: the Pacifica/espadin debate is preserved.
+  const angustifolia = plants.find((p) => p.id === "agave-angustifolia");
+  assert.ok(angustifolia.uncertainty.includes("debated"), "botanical uncertainty preserved");
+
+  assert.ok(processes.length >= 8, "process explanations exist");
+  for (const proc of processes) assert.ok(proc.sourceIds.length > 0, "process explanations are sourced");
+
+  const terms = glossary.map((g) => g.term);
+  for (const expected of ["pechuga", "ensamble", "cristalino", "NOM"]) {
+    assert.ok(terms.some((t) => t.includes(expected)), `${expected} explained in context`);
+  }
+});
+
+test("release 11: pairings are optional editorial guidance, never guarantees", () => {
+  for (const profile of profiles) {
+    if (!profile.pairing) continue;
+    assert.ok(profile.pairing.serving.toLowerCase().match(/editorial|suggestion/), `${profile.id} serving guidance labeled editorial`);
+    assert.ok(Array.isArray(profile.pairing.foods), "foods are a list");
+    // No universal age-to-flavor claims in serving guidance.
+    assert.ok(!/older is better|aged is better/i.test(profile.pairing.serving), "no age ladder claims");
+  }
+});
+
+test("release 11: learn view renders plants, processes and glossary", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const path = await import("node:path");
+  const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+  const plants = JSON.parse(await readFile(path.join(root, "assets/data/plants.json"), "utf8")).plants;
+  const processes = JSON.parse(await readFile(path.join(root, "assets/data/processes.json"), "utf8")).processes;
+  const glossary = JSON.parse(await readFile(path.join(root, "assets/data/glossary.json"), "utf8")).glossary;
+  const { renderLearn } = await import("../assets/js/learn-view.js");
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  renderLearn(container, { plants, processes, glossary, profiles, bottles, sources });
+  assert.equal(container.querySelectorAll(".learn-card").length, plants.length + processes.length + glossary.length);
+  assert.ok(container.textContent.includes("Uncertainty"), "uncertainty shown where it exists");
+  assert.ok(container.querySelectorAll(".source-link").length > 10, "claims carry references");
+  container.remove();
+});
+
+test("release 11: profile pairing section renders with editorial label", () => {
+  const profile = profiles.find((p) => p.id === "bacanora-pacifica-sierra-sonora");
+  const bottle = bottles.find((b) => b.id === profile.exampleBottleId);
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles });
+  assert.ok(container.querySelector(".profile-pairing"), "pairing section present");
+  assert.ok(container.textContent.includes("Serving & pairings (editorial)"), "labeled editorial");
+  assert.ok(container.textContent.includes("carne asada"), "food suggestions listed");
+  container.remove();
+});

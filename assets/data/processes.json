@@ -1,0 +1,80 @@
+{
+  "processes": [
+    {
+      "id": "pit-roast",
+      "name": "Earthen pit roast",
+      "stage": "cooking",
+      "explanation": "Agave hearts are roasted in rock-lined pits with wood fire, sometimes for days. This is the classic mezcal/bacanora/tuxca cook; it can contribute smoke, but how much varies with wood, time and pit — smoke is not guaranteed by the method alone.",
+      "sourceIds": [
+        "diffords-mezcal-what-it-is",
+        "mezcalistas-bacanora-tradition"
+      ]
+    },
+    {
+      "id": "steam-cook",
+      "name": "Steam cooking (hornos and autoclaves)",
+      "stage": "cooking",
+      "explanation": "Tequila's piñas are typically steam-cooked in stone ovens or autoclaves. No fire contacts the agave, which is why tequila reads vegetal rather than smoky.",
+      "sourceIds": [
+        "diffords-tequila-made"
+      ]
+    },
+    {
+      "id": "sap-collection",
+      "name": "Sap collection (aguamiel)",
+      "stage": "raw material",
+      "explanation": "In the comiteco and pulque traditions, the living agave is scraped and its sap (aguamiel) collected daily; the piña is never cooked. This makes them sap-derived spirits with no roast character.",
+      "sourceIds": [
+        "backalley-comiteco",
+        "mezcalistas-juerte"
+      ]
+    },
+    {
+      "id": "wild-fermentation",
+      "name": "Wild/open fermentation",
+      "stage": "fermentation",
+      "explanation": "Most small-batch agave spirits ferment in open vessels with ambient yeasts — wooden vats, stainless tanks or volcanic craters. Vessel and local yeasts can shape texture and savory notes; the effect is traditional, not standardized.",
+      "sourceIds": [
+        "diffords-mezcal-what-it-is",
+        "mezcalistas-tepua-tasting"
+      ]
+    },
+    {
+      "id": "distillation-methods",
+      "name": "Still types",
+      "stage": "distillation",
+      "explanation": "Copper alembics, stainless pot stills, clay pots and wooden Filipino stills each shape the spirit; tuxca's Filipino stills, for example, are part of its regional definition. Still type is a fact of method — it does not by itself guarantee a flavor.",
+      "sourceIds": [
+        "mexicanspiritsbible-tuxca",
+        "mezcalistas-balancan-tasting"
+      ]
+    },
+    {
+      "id": "glass-resting",
+      "name": "Glass resting (madurado en vidrio)",
+      "stage": "resting",
+      "explanation": "Some producers rest unaged spirits in glass for months or years to round them. Glass resting is resting, not wood maturation — it adds no oak character.",
+      "sourceIds": [
+        "mezcalreviews-raicilla-category"
+      ]
+    },
+    {
+      "id": "wood-maturation",
+      "name": "Wood maturation",
+      "stage": "resting",
+      "explanation": "Reposado and añejo classes rest in wood for defined minimum periods depending on the spirit's own rules. Wood influence depends on wood type, size, age and time — there is no universal 'older is better' ladder, and most bottles in this app are unaged by design.",
+      "sourceIds": [
+        "diffords-tequila-category"
+      ]
+    },
+    {
+      "id": "filtration",
+      "name": "Filtration",
+      "stage": "finishing",
+      "explanation": "Some spirits are filtered for clarity. Filtration can remove character along with cloudiness; cristalino products take this furthest (see the glossary note).",
+      "sourceIds": [
+        "diffords-tequila-category"
+      ]
+    }
+  ]
+}

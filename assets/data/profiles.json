@@ -43,6 +43,14 @@
         "lat": 20.9,
         "lon": -103.84,
         "precision": "town (Tequila, Jalisco); approximate"
+      },
+      "pairing": {
+        "serving": "Neat in a small glass or with a lime wheel; also the classic Margarita and Paloma base. Editorial suggestion, not a rule.",
+        "foods": [
+          "tacos al pastor",
+          "ceviche",
+          "queso fresco with chile"
+        ]
       }
     },
     {
@@ -88,6 +96,14 @@
         "lat": 16.86,
         "lon": -96.12,
         "precision": "municipality (Santiago Matatlán area); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat at room temperature; smoke opens up in a wide glass. Editor's suggestion only.",
+        "foods": [
+          "tlayudas",
+          "grilled meats",
+          "roasted vegetables"
+        ]
       }
     },
     {
@@ -132,6 +148,14 @@
         "lat": 29.79,
         "lon": -110.16,
         "precision": "municipality (Aconchi, Sonora); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat, Sonoran-style with lime and a pinch of sal de chapulín; editorial suggestion.",
+        "foods": [
+          "carne asada",
+          "sonoran cheese (queso cocido)",
+          "chiltepin-sauced dishes"
+        ]
       }
     },
     {
@@ -176,6 +200,14 @@
         "lat": 20.09,
         "lon": -104.58,
         "precision": "region (Sierra Occidental, Jalisco); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat; its gentle funk also works in a Negroni-style serve (editorial suggestion).",
+        "foods": [
+          "birria",
+          "mole",
+          "aged cheeses"
+        ]
       }
     },
     {
@@ -223,6 +255,14 @@
         "lat": 19.87,
         "lon": -103.58,
         "precision": "municipality (Tuxcacuesco, Jalisco); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat alongside water; lean and mineral, it suits slow sipping (editorial suggestion).",
+        "foods": [
+          "pescado a la talla",
+          "fresh cheese with tortillas",
+          "colimense seafood"
+        ]
       }
     },
     {
@@ -267,6 +307,14 @@
         "lat": 16.25,
         "lon": -92.13,
         "precision": "municipality (Comitán de Domínguez, Chiapas); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat; traditionally a small-occasion spirit — editorial suggestion only.",
+        "foods": [
+          "chiapaneco tamales",
+          "smoked cheeses",
+          "coffee-adjacent desserts"
+        ]
       }
     },
     {
@@ -314,6 +362,14 @@
         "lat": 19.31,
         "lon": -98.23,
         "precision": "municipality (Nanacamilpa, Tlaxcala); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat, chilled slightly; its lactic tang suits an open mind (editorial suggestion).",
+        "foods": [
+          "barbacoa",
+          "mixiotes",
+          "corn-forward dishes"
+        ]
       }
     }
   ]

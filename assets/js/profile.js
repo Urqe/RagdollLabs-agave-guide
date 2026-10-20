@@ -153,6 +153,20 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     section.appendChild(details);
   }
 
+  if (profile.pairing) {
+    const pairing = el("div", { class: "profile-pairing" });
+    pairing.appendChild(el("h3", { class: "sources-heading" }, "Serving & pairings (editorial)"));
+    pairing.appendChild(el("p", {}, profile.pairing.serving));
+    if (profile.pairing.foods && profile.pairing.foods.length > 0) {
+      pairing.appendChild(el("p", {}, "Foods to try: " + profile.pairing.foods.join(", ") + "."));
+    }
+    section.appendChild(pairing);
+  }
+  const learnLink = el("a", { href: "#/learn", class: "back-link" }, "Learn about the agaves, methods and label terms →");
+  const learnLine = el("p", {});
+  learnLine.appendChild(learnLink);
+  section.appendChild(learnLine);
+
   const suggestions = ifYouLikeThis(profile, allProfiles);
   if (suggestions.length > 0) {
     const suggHeading = el("h3", { class: "sources-heading" }, "If you like this, try…");

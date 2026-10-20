@@ -1,0 +1,143 @@
+{
+  "plants": [
+    {
+      "id": "agave-tequilana",
+      "species": "Agave tequilana Weber var. azul",
+      "commonNames": [
+        {
+          "name": "blue weber agave",
+          "region": "international"
+        },
+        {
+          "name": "agave azul",
+          "region": "Jalisco, México"
+        }
+      ],
+      "cultivation": "cultivated (the only agave legally permitted for tequila)",
+      "uncertainty": null,
+      "profileIds": [
+        "tequila-blanco-valley-jalisco"
+      ],
+      "sourceIds": [
+        "diffords-tequila-made",
+        "diffords-tequila-category"
+      ]
+    },
+    {
+      "id": "agave-angustifolia",
+      "species": "Agave angustifolia",
+      "commonNames": [
+        {
+          "name": "espadín",
+          "region": "Oaxaca"
+        },
+        {
+          "name": "Pacifica / Yaquiana",
+          "region": "Sonora (bacanora)"
+        },
+        {
+          "name": "chico aguiar",
+          "region": "coastal Jalisco (raicilla)"
+        }
+      ],
+      "cultivation": "cultivated in Oaxaca; wild and cultivated elsewhere",
+      "uncertainty": "Whether Pacifica/Yaquiana in Sonora is the same plant as espadín or a distinct local variety is debated; the app preserves the regional names without settling the botany.",
+      "profileIds": [
+        "mezcal-espadin-valles-centrales",
+        "bacanora-pacifica-sierra-sonora"
+      ],
+      "sourceIds": [
+        "diffords-mezcal-what-it-is",
+        "mezcalistas-bacanora-tradition",
+        "mezcalistas-tepua-tasting"
+      ]
+    },
+    {
+      "id": "agave-maximiliana",
+      "species": "Agave maximiliana",
+      "commonNames": [
+        {
+          "name": "maximiliana",
+          "region": "Sierra de Jalisco"
+        },
+        {
+          "name": "lechuguilla",
+          "region": "Jalisco highlands (local usage; unrelated to the Sonoran lechuguilla, Agave shrevei)"
+        }
+      ],
+      "cultivation": "wild-harvested",
+      "uncertainty": "Local name overlaps with other species in other regions; common names are not globally unique identifiers.",
+      "profileIds": [
+        "raicilla-maximiliana-sierra-jalisco"
+      ],
+      "sourceIds": [
+        "mezcalreviews-raicilla-category",
+        "wikipedia-raicilla"
+      ]
+    },
+    {
+      "id": "agave-atrovirens",
+      "species": "Agave atrovirens",
+      "commonNames": [
+        {
+          "name": "maguey Comiteco",
+          "region": "Comitán, Chiapas"
+        }
+      ],
+      "cultivation": "cultivated; sap collected from the living plant (no cooking)",
+      "uncertainty": null,
+      "profileIds": [
+        "comiteco-aguamiel-chiapas"
+      ],
+      "sourceIds": [
+        "backalley-comiteco"
+      ]
+    },
+    {
+      "id": "agave-salmiana",
+      "species": "Agave salmiana (incl. var. salmiana/'Manso' usage)",
+      "commonNames": [
+        {
+          "name": "maguey pulquero",
+          "region": "Tlaxcala and central Mexico"
+        }
+      ],
+      "cultivation": "cultivated in pulque tradition; sap collected from the living plant",
+      "uncertainty": "Sources vary on subspecies naming (Manso/Salmiana); the app records the genus-level identity without resolving the subspecies debate.",
+      "profileIds": [
+        "destilado-de-pulque-salmiana-tlaxcala"
+      ],
+      "sourceIds": [
+        "mezcalistas-juerte",
+        "skurnik-estancia"
+      ]
+    },
+    {
+      "id": "tuxca-wild-agaves",
+      "species": "Agave angustifolia and local relatives (identity varies by vinatero)",
+      "commonNames": [
+        {
+          "name": "Liñeno",
+          "region": "Jalisco–Colima borderlands"
+        },
+        {
+          "name": "Cimarrón",
+          "region": "Jalisco–Colima borderlands"
+        },
+        {
+          "name": "ixtero / lechuguilla",
+          "region": "Southern Jalisco (trade usage)"
+        }
+      ],
+      "cultivation": "wild-harvested; ensambles vary by batch",
+      "uncertainty": "Tuxca batches may blend several wild agaves; species composition is recorded only when a source documents the actual batch.",
+      "profileIds": [
+        "tuxca-lineno-cimarron-jalisco-colima"
+      ],
+      "sourceIds": [
+        "mexicanspiritsbible-tuxca",
+        "mezcalistas-balancan-tasting"
+      ]
+    }
+  ]
+}

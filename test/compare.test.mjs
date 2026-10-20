@@ -250,6 +250,9 @@ test("end-to-end: real app boots and compare selection updates the route and tab
     "profiles.json": await readFile(path.join(root, "assets/data/profiles.json"), "utf8"),
     "bottles.json": await readFile(path.join(root, "assets/data/bottles.json"), "utf8"),
     "sources.json": await readFile(path.join(root, "assets/data/sources.json"), "utf8"),
+    "plants.json": await readFile(path.join(root, "assets/data/plants.json"), "utf8"),
+    "processes.json": await readFile(path.join(root, "assets/data/processes.json"), "utf8"),
+    "glossary.json": await readFile(path.join(root, "assets/data/glossary.json"), "utf8"),
   };
   const prevFetch = globalThis.fetch;
   globalThis.fetch = async (url) => {

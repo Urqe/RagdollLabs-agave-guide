@@ -787,6 +787,29 @@ a { color: var(--blue); }
 .more-bottles .catalogue-list { padding: 0.9rem 1.1rem; gap: 0.8rem; }
 .more-bottle-item .source-link { margin-right: 0.6rem; }
 
+.learn-view h3 { margin-top: 1.75rem; }
+
+.learn-card {
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  max-width: 46rem;
+  margin-bottom: 0.9rem;
+  box-shadow: var(--shadow-1);
+}
+
+.learn-card h4 { margin: 0 0 0.4rem; font-family: var(--display); font-size: 1.02rem; }
+.learn-names, .learn-cultivation, .learn-term-context { color: var(--text-soft); font-size: 0.92rem; }
+
+.profile-pairing {
+  margin-top: 1.5rem;
+  max-width: 46rem;
+  border: 1px dashed var(--agave-line);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+}
+
 /* ---------- focus & motion ---------- */
 
 a:focus-visible, button:focus-visible, [tabindex]:focus-visible, summary:focus-visible {

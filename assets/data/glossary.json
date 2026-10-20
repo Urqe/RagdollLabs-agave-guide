@@ -1,0 +1,88 @@
+{
+  "glossary": [
+    {
+      "term": "blanco / plata / silver",
+      "context": "tequila (legal class)",
+      "definition": "An unaged tequila class. In other spirits the same words can mean different classes or nothing legal at all; class terms are spirit-specific.",
+      "sourceIds": [
+        "diffords-tequila-category"
+      ]
+    },
+    {
+      "term": "joven / abocado",
+      "context": "mezcal (legal class)",
+      "definition": "Mezcal's unaged class; joven can also be used informally elsewhere (this app marks non-legal uses as editorial labels).",
+      "sourceIds": [
+        "diffords-mezcal-what-it-is"
+      ]
+    },
+    {
+      "term": "reposado / añejo",
+      "context": "spirit-specific classes",
+      "definition": "Wood-rested classes with spirit-specific minimums; tequila rules do not transfer to mezcal or raicilla.",
+      "sourceIds": [
+        "diffords-tequila-category",
+        "wikipedia-raicilla"
+      ]
+    },
+    {
+      "term": "pechuga",
+      "context": "mezcal production tradition",
+      "definition": "A mezcal made with fruit and/or a raw chicken or turkey breast suspended during a (usually third) distillation — a specific production tradition, not a spirit category of its own.",
+      "sourceIds": [
+        "diffords-mezcal-what-it-is"
+      ]
+    },
+    {
+      "term": "ensamble",
+      "context": "mezcal production",
+      "definition": "A batch made from multiple agave species, typically harvested and fermented together. An ensamble needs composition evidence; it is not simply a post-distillation blend, and it is not a separate spirit family.",
+      "sourceIds": [
+        "mexicanspiritsbible-tuxca"
+      ]
+    },
+    {
+      "term": "cristalino",
+      "context": "finishing/marketing",
+      "definition": "An aged spirit filtered (often through charcoal) to remove color while keeping some wood character. It is a finishing choice, not a legal class in most categories.",
+      "sourceIds": [
+        "diffords-tequila-category"
+      ]
+    },
+    {
+      "term": "NOM",
+      "context": "producer identifier",
+      "definition": "The Norma Oficial Mexicana number on the label identifying the certified producer. NOMs identify the maker; absence of a NOM (as with uncertified tuxca) means uncertified, not lower quality.",
+      "sourceIds": [
+        "mezcalistas-tepua-tasting",
+        "mezcalistas-balancan-tasting"
+      ]
+    },
+    {
+      "term": "vinata / taberna / palenque",
+      "context": "producer vocabulary",
+      "definition": "Regional words for a small distillery: vinata in Sonora, taberna in Jalisco raicilla country, palenque in Oaxaca. Same function, different tradition.",
+      "sourceIds": [
+        "mezcalistas-tepua-tasting",
+        "mezcalreviews-lavenenosa-tabernas",
+        "mezcalistas-balancan-tasting"
+      ]
+    },
+    {
+      "term": "lote / batch",
+      "context": "batch labels",
+      "definition": "Small producers label batches; batch details (agave mix, ABV, maker) can differ materially between bottles of the same brand. Batch-specific facts must not silently become brand-wide facts.",
+      "sourceIds": [
+        "mezcalistas-tepua-tasting"
+      ]
+    },
+    {
+      "term": "100% de agave",
+      "context": "composition claim",
+      "definition": "A composition claim about fermentables. It is distinct from quality and from eligibility for this app: agave-based traditions with disclosed non-agave fermentables (some comiteco) are included honestly.",
+      "sourceIds": [
+        "backalley-comiteco"
+      ]
+    }
+  ]
+}

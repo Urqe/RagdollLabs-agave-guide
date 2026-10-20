@@ -559,3 +559,49 @@ precision, uncovered expressions and recommendation regressions.
 
 - Native-device rendering still unverified in this environment.
 - Backlog items land in future content increments.
+
+## Release 11 — Plants, Process & Pairings
+
+### Scope delivered
+
+- **Learn view** (`#/learn`, "Learn" nav link): three sections \u2014 the
+  agaves, how the spirits are made, and label vocabulary \u2014 all with
+  direct source links, linked from every profile page.
+- **Plant pages** (`assets/data/plants.json`, 6 entries): scientific
+  identity where established, regional common names (espad\u00edn / Pacifica
+  / chico aguiar; Li\u00f1eno / Cimarr\u00f3n; maguey Comiteco; maguey
+  pulquero), cultivation status, honest uncertainty statements (the
+  Pacifica-vs-espad\u00edn debate is preserved, not settled), and links to
+  the profiles that use each plant.
+- **Process explanations** (`assets/data/processes.json`, 8): pit roast,
+  steam cooking, sap collection, wild fermentation, still types (incl.
+  tuxca's Filipino stills), glass resting, wood maturation, filtration \u2014
+  each sourced and explicitly non-guaranteeing ("smoke is not guaranteed
+  by the method alone"; no universal age-to-flavor ladder).
+- **Label glossary** (`assets/data/glossary.json`, 10 terms): pechuga,
+  ensamble, cristalino, blanco/joven/reposado classes (with
+  spirit-specific scope), NOM, vinata/taberna/palenque, lote/batch, and
+  100% de agave \u2014 each in its proper context, with class terms marked
+  spirit-specific and non-legal uses labeled editorial.
+- **Serving & pairings** on every profile: concise serving guidance and
+  optional food suggestions, all labeled editorial; the validator
+  requires the editorial/suggestion wording and tests forbid
+  "older is better" style claims.
+- Educational honesty gates: descriptions do not guarantee flavor from
+  geography, species or age; plant age at harvest stays separate from
+  spirit maturation.
+
+### Checks run
+
+- `npm run validate` \u2014 schema (plants/processes/glossary/pairing rules)
+  plus 53 node:test/jsdom suites (4 new learn tests). All passing.
+- Real-app boot smoke: Learn renders 24 cards (6 plants, 8 processes, 10
+  glossary terms) with working profile links; profile pages render the
+  pairing section and the Learn link (a DOM-helper misuse \u2014 anchor
+  passed as text \u2014 was caught by the boot smoke and fixed).
+
+### Remaining issues / deferred
+
+- Native-device rendering still unverified; sourced illustrations or
+  diagrams for process steps deferred (text-first per the plan's
+  dependency-light rules).

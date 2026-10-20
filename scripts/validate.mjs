@@ -207,6 +207,65 @@ for (const [name, arr] of [["profiles", profiles], ["bottles", bottles], ["sourc
   if (dupes.length) fail(`${name}: duplicate ids ${[...new Set(dupes)].join(", ")}`);
 }
 
+// Plants, processes and glossary datasets.
+const { plants } = await readJson("assets/data/plants.json");
+const { processes } = await readJson("assets/data/processes.json");
+const { glossary } = await readJson("assets/data/glossary.json");
+if (!Array.isArray(plants) || plants.length === 0) fail("plants.json must contain a non-empty plants array");
+if (!Array.isArray(processes) || processes.length === 0) fail("processes.json must contain a non-empty processes array");
+if (!Array.isArray(glossary) || glossary.length === 0) fail("glossary.json must contain a non-empty glossary array");
+for (const plant of plants) {
+  const label = `plant ${plant.id ?? "(missing id)"}`;
+  if (!plant.id || !ID_PATTERN.test(plant.id)) fail(`${label}: id must be kebab-case`);
+  if (!plant.species || typeof plant.species !== "string") fail(`${label}: species required`);
+  if (!Array.isArray(plant.commonNames) || plant.commonNames.length === 0) {
+    fail(`${label}: at least one common name with region required`);
+  } else {
+    for (const name of plant.commonNames) {
+      if (!name.name || !name.region) fail(`${label}: common names need name and region`);
+    }
+  }
+  if (plant.uncertainty !== null && plant.uncertainty !== undefined && typeof plant.uncertainty !== "string") {
+    fail(`${label}: uncertainty must be a string or null`);
+  }
+  for (const pid of plant.profileIds || []) {
+    if (!profileIds.has(pid)) fail(`${label}: profileId ${pid} not in profiles.json`);
+  }
+  for (const sid of plant.sourceIds || []) {
+    if (!sourceIds.has(sid)) fail(`${label}: sourceId ${sid} not in sources.json`);
+  }
+}
+for (const proc of processes) {
+  const label = `process ${proc.id ?? "(missing id)"}`;
+  if (!proc.id || !ID_PATTERN.test(proc.id)) fail(`${label}: id must be kebab-case`);
+  if (!proc.name || !proc.explanation || !proc.stage) fail(`${label}: name, stage and explanation required`);
+  for (const sid of proc.sourceIds || []) {
+    if (!sourceIds.has(sid)) fail(`${label}: sourceId ${sid} not in sources.json`);
+  }
+}
+for (const term of glossary) {
+  const label = `glossary term ${term.term ?? "(missing)"}`;
+  if (!term.term || !term.context || !term.definition) fail(`${label}: term, context and definition required`);
+  for (const sid of term.sourceIds || []) {
+    if (!sourceIds.has(sid)) fail(`${label}: sourceId ${sid} not in sources.json`);
+  }
+}
+// Pairings (optional) on profiles: serving text required when present.
+for (const p2 of profiles) {
+  if (p2.pairing !== undefined) {
+    if (!p2.pairing.serving || typeof p2.pairing.serving !== "string") {
+      fail(`profile ${p2.id}: pairing requires a serving string`);
+    }
+    if (p2.pairing.foods !== undefined && !Array.isArray(p2.pairing.foods)) {
+      fail(`profile ${p2.id}: pairing.foods must be an array when present`);
+    }
+    const text = (p2.pairing.serving || "").toLowerCase();
+    if (!text.includes("editorial") && !text.includes("suggestion")) {
+      fail(`profile ${p2.id}: serving guidance must be labeled editorial/suggestion`);
+    }
+  }
+}
+
 // SVG sanity: 32 state paths with data-state.
 const svg = await readFile(path.join(root, "assets/geo/mexico-states.svg"), "utf8");
 const svgStates = [...svg.matchAll(/data-state="([a-z]+)"/g)].map((m) => m[1]);

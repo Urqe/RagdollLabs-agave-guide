@@ -5,6 +5,7 @@ import { renderExplore } from "./explore.js";
 import { renderProfile, renderProfileNotFound } from "./profile.js";
 import { renderCompare } from "./compare-view.js";
 import { renderCatalogue } from "./catalogue-view.js";
+import { renderLearn } from "./learn-view.js";
 
 const state = {
   data: null,
@@ -61,6 +62,16 @@ async function renderRoute(container, route) {
     return;
   }
 
+  if (route.name === "learn") {
+    state.exploreApi = null;
+    renderLearn(container, {
+      plants: state.data.plants,
+      processes: state.data.processes,
+      glossary: state.data.glossary,
+      profiles, bottles, sources,
+    });
+    return;
+  }
   if (route.name === "catalogue") {
     state.exploreApi = null;
     renderCatalogue(container, { bottles, profiles, sources });
