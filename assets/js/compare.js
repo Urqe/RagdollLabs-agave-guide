@@ -20,8 +20,14 @@ export const DIMENSIONS = [
 
 const LEVEL_ORDER = { none: 0, low: 1, medium: 2, high: 3 };
 
+const BODY_LEVEL_MAP = { light: "low", medium: "medium", full: "high" };
+
 export function levelOf(profile, dimKey) {
-  if (dimKey === "bodyLevel") return profile.body ?? profile.sensory?.body ?? null;
+  if (dimKey === "bodyLevel") {
+    const raw = profile.body ?? profile.sensory?.body ?? null;
+    if (raw === null || raw === undefined) return null;
+    return BODY_LEVEL_MAP[raw] ?? raw;
+  }
   return profile.sensory?.[dimKey] ?? null;
 }
 

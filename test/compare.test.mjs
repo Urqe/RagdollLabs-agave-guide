@@ -230,3 +230,51 @@ test("release 6: focus restores to the acted-on picker button", () => {
   assert.equal(focused && focused.dataset ? focused.dataset.profileId : null, "a");
   container.remove();
 });
+
+test("end-to-end: real app boots and compare selection updates the route and table", async () => {
+  // Separate jsdom window: this test imports the real app module, which
+  // was the blind spot of the callback-injected tests.
+  const { readFile } = await import("node:fs/promises");
+  const path = await import("node:path");
+  const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+  const bootDom = new JSDOM("<!doctype html><html><body><div id='app'></div></body></html>", {
+    url: "https://example.test/RagdollLabs-agave-guide/#/compare",
+    pretendToBeVisual: true,
+  });
+  const prevWindow = globalThis.window;
+  const prevDocument = globalThis.document;
+  globalThis.window = bootDom.window;
+  globalThis.document = bootDom.window.document;
+
+  const files = {
+    "profiles.json": await readFile(path.join(root, "assets/data/profiles.json"), "utf8"),
+    "bottles.json": await readFile(path.join(root, "assets/data/bottles.json"), "utf8"),
+    "sources.json": await readFile(path.join(root, "assets/data/sources.json"), "utf8"),
+  };
+  const prevFetch = globalThis.fetch;
+  globalThis.fetch = async (url) => {
+    const rel = new URL(url).pathname.split("/").pop();
+    if (rel in files) return { ok: true, json: async () => JSON.parse(files[rel]), text: async () => files[rel] };
+    return { ok: false, status: 404 };
+  };
+
+  try {
+    await import(path.join(root, "assets/js/app.js"));
+    await new Promise((r) => setTimeout(r, 50));
+    const buttons = () => [...bootDom.window.document.querySelectorAll(".compare-pick-button")];
+    assert.equal(buttons().length, 4, "picker renders all four profiles");
+
+    buttons().find((b) => b.dataset.profileId === "tequila-blanco-valley-jalisco").click();
+    await new Promise((r) => setTimeout(r, 30));
+    assert.ok(bootDom.window.location.hash.includes("tequila-blanco-valley-jalisco"), "first pick updates the route");
+
+    buttons().find((b) => b.dataset.profileId === "mezcal-espadin-valles-centrales").click();
+    await new Promise((r) => setTimeout(r, 30));
+    assert.ok(bootDom.window.document.querySelector(".compare-table"), "second pick renders the comparison");
+    assert.ok(bootDom.window.location.hash.includes(","), "route keeps both ids");
+  } finally {
+    globalThis.window = prevWindow;
+    globalThis.document = prevDocument;
+    globalThis.fetch = prevFetch;
+  }
+});

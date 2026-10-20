@@ -38,7 +38,7 @@ export function buildHash(route) {
     case "state":
       return `#/explore/${encodeURIComponent(route.params.stateId)}`;
     case "compare":
-      return `#/compare${route.params.compareIds ? `/${encodeURIComponent(route.params.compareIds)}` : ""}`;
+      return `#/compare${route.params.compareIds ? `/${route.params.compareIds.split(",").map(encodeURIComponent).join(",")}` : ""}`;
     case "profile":
       return `#/profile/${encodeURIComponent(route.params.profileId)}${
         route.params.from ? `?from=${encodeURIComponent(route.params.from)}` : ""

@@ -1,5 +1,5 @@
 import { el, clear } from "./dom-utils.js";
-import { parseHash, startRouter } from "./router.js";
+import { parseHash, startRouter, navigateTo } from "./router.js";
 import { loadAppData } from "./data-loader.js";
 import { renderExplore } from "./explore.js";
 import { renderProfile, renderProfileNotFound } from "./profile.js";

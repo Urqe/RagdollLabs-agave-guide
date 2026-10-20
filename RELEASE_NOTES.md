@@ -315,3 +315,30 @@ navigation.
 ### Remaining issues / deferred
 
 - Native-device rendering still unverified in this environment.
+
+### Release 6 hotfix — comparison selection failure (owner-reported)
+
+**Defect:** on the live site only one profile could ever be selected;
+picking a second did nothing.
+
+**Root cause:** `assets/js/app.js` called `navigateTo` in the compare
+selection handler without importing it from `router.js` — the compare
+route never updated, so the comparison never rendered. The Release 6
+tests injected their own selection callback and never booted the real
+app, which is why CI stayed green while the feature was broken.
+
+**Fixes:**
+- Import `navigateTo` in `app.js`.
+- Body levels now map onto the compare scale (light→low, medium→medium,
+  full→high); previously the Body row read "not documented" for every
+  profile because the compare engine did not understand the profile
+  `body` vocabulary.
+- Compare route ids are joined with literal commas instead of `%2C`
+  for readable, shareable URLs.
+- New end-to-end regression test boots the real `app.js` with stubbed
+  fetch and asserts pick → route → table rendering, closing the
+  callback-injection blind spot.
+
+**Verified:** real-app jsdom run confirms pick 1 → `#/compare/<id>`,
+pick 2 renders the table with differences, pick 3 adds a column, remove
+drops one. `npm run validate`: 29 suites passing.
