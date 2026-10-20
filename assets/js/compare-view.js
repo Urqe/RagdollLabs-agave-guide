@@ -6,15 +6,9 @@ import {
   missingDimensions,
   levelOf,
 } from "./compare.js";
+import { SPIRIT_LABELS } from "./spirit-labels.js";
 
 const MAX_SLOTS = 3;
-
-const SPIRIT_LABELS = {
-  tequila: "Tequila",
-  mezcal: "Mezcal",
-  bacanora: "Bacanora",
-  raicilla: "Raicilla",
-};
 
 
 function parseIds(raw) {

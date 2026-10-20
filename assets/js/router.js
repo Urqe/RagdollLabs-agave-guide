@@ -6,9 +6,20 @@
  *   #/profile/:id profile view
  */
 
+function safeDecode(segment) {
+  try {
+    return decodeURIComponent(segment);
+  } catch (error) {
+    // Malformed percent-encoding (e.g. a mangled shared URL) must not crash
+    // the app on load; the raw segment flows on as an id and simply renders
+    // the existing not-found view.
+    return segment;
+  }
+}
+
 export function parseHash(hash) {
   const raw = (hash || "").replace(/^#/, "");
-  const segments = raw.split("/").filter((s) => s.length > 0).map(decodeURIComponent);
+  const segments = raw.split("/").filter((s) => s.length > 0).map(safeDecode);
   if (segments.length === 0) return { name: "home", params: {} };
   if (segments[0] === "explore") {
     if (segments.length === 1) return { name: "explore", params: {} };
