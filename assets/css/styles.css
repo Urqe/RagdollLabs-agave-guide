@@ -121,8 +121,16 @@ h1, h2, h3, .brand, .cta-link, button {
 }
 .mexico-map path[data-state] {
   color: var(--cream-dark);
-  cursor: pointer;
   outline: none;
+}
+
+.mexico-map path[data-state].is-selectable {
+  cursor: pointer;
+}
+
+.mexico-map path[data-state].is-inert {
+  cursor: default;
+  pointer-events: none;
 }
 .mexico-map path[data-state].is-covered { color: var(--agave-green); }
 .mexico-map path[data-state].is-selected { color: var(--terracotta); }

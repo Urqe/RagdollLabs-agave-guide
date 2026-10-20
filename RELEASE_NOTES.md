@@ -72,3 +72,53 @@ Live URL: <https://urqe.github.io/RagdollLabs-agave-guide/>
 - Map geometry is a repositioned composite of per-state INEGI-derived outlines;
   small coastal/island detail is simplified.
 - Only two states have profiles; all other states show the empty state by design.
+
+## Release 2 — Foundation Review & Fixes
+
+Maintenance release per the Release Plan, incorporating the owner's
+structural feedback on Release 1.
+
+### Findings and fixes
+
+- **Map states did not form the map of Mexico.** Root cause: the
+  Release 1 source (midir99/mexico-states-in-svg) draws each state in
+  its own normalized coordinate system (every state scaled to fill its
+  own square viewBox), so no compositing of those shapes can be
+  geographically correct — all 32 states stacked near the canvas
+  origin after the bbox-to-origin translation in `build-map.py`.
+- **Fix:** rebuilt `assets/geo/mexico-states.svg` from Natural Earth
+  10m admin-1 boundaries (public domain), Mexico subset, with a simple
+  equirectangular projection (`scripts/build-map.py` rewritten; the
+  old per-state compositing is gone). The map now shows Mexico with all
+  32 states in true relative positions; verified by rendering the SVG
+  geometry and checking positions (Baja peninsula west, Yucatán east,
+  wide north, narrow south; no overlaps).
+- **Owner feedback — limit selectable states to covered ones.** All 32
+  states remain visible on the map for geographic context, but only
+  states that actually have profiles are interactive: uncovered states
+  have no pointer cursor, are `pointer-events: none`, are not
+  focusable, are `aria-hidden`, and no longer appear in the state list
+  (previously all 32 were listed/selectable). The map-load fallback list
+  also shows only covered states.
+- Copy updated to explain that only shaded states are selectable, and
+  that the full map is shown for context.
+- `assets/geo/README.md`, `README.md` and the SVG check in
+  `scripts/validate.mjs` updated for the new geometry source and
+  selection semantics.
+
+### Checks run
+
+- `npm run validate` — schema/reference checks plus 14 node:test/jsdom
+  suites, all passing. The map test now asserts: 32 visible states,
+  exactly the covered states selectable/focusable/listed, uncovered
+  states inert and not announced, and selection sync preserved.
+- Deployment verified via the Pages workflow on `main`.
+
+### Remaining issues / deferred
+
+- Native-device rendering (iOS Safari, touch) still unverified in this
+  environment; map was verified geometrically and via jsdom behavior.
+- Natural Earth 10m boundary detail is modest (small islands/coastal
+  detail simplified); adequate for state selection.
+- Content unchanged: two seed profiles, two example bottles (Release 3
+  scope).

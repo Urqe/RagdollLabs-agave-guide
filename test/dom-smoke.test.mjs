@@ -72,7 +72,7 @@ test("navigateTo does not duplicate history entry for same hash", () => {
   assert.equal(window.location.hash, "#/");
 });
 
-test("map renders 32 states and syncs selection between map and list", async () => {
+test("map renders 32 states; only covered states are selectable", async () => {
   const container = document.createElement("div");
   document.body.appendChild(container);
   const selections = [];
@@ -80,8 +80,13 @@ test("map renders 32 states and syncs selection between map and list", async () 
     coveredStateIds: ["jal", "oax"],
     onSelect: (id) => selections.push(id),
   });
+  // All 32 states stay visible on the map.
   assert.equal(container.querySelectorAll("path[data-state]").length, 32);
-  assert.equal(container.querySelectorAll(".state-list-button").length, 32);
+  // Only covered states are interactive on the map.
+  assert.equal(container.querySelectorAll("path[data-state].is-selectable").length, 2);
+  assert.equal(container.querySelectorAll("path[data-state][tabindex]").length, 2);
+  // Only covered states appear in the list.
+  assert.equal(container.querySelectorAll(".state-list-button").length, 2);
 
   const jalPath = container.querySelector('path[data-state="jal"]');
   jalPath.dispatchEvent(new window.Event("click", { bubbles: true }));
@@ -101,10 +106,19 @@ test("map renders 32 states and syncs selection between map and list", async () 
   jalButton.dispatchEvent(new window.Event("click", { bubbles: true }));
   assert.equal(jalPath.getAttribute("aria-pressed"), "true");
 
+  // Uncovered states are not selectable and not announced.
+  const sonPath = container.querySelector('path[data-state="son"]');
+  sonPath.dispatchEvent(new window.Event("click", { bubbles: true }));
+  assert.deepEqual(selections, ["jal", "oax", "jal"]);
+  assert.equal(sonPath.getAttribute("role"), null);
+  assert.equal(sonPath.getAttribute("aria-hidden"), "true");
+  assert.equal(container.querySelector('.state-list-button[data-state="son"]'), null);
+
   // Coverage shading.
   shadeCovered(container, ["jal", "oax"]);
   assert.ok(jalPath.classList.contains("is-covered"));
-  assert.ok(!container.querySelector('path[data-state="son"]').classList.contains("is-covered"));
+  assert.ok(!sonPath.classList.contains("is-covered"));
+  assert.ok(sonPath.classList.contains("is-inert"));
 
   container.remove();
 });

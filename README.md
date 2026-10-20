@@ -80,6 +80,8 @@ test/                       node:test suites (jsdom)
 - Mexican agave-based distilled spirits only; sotol and other non-agave spirits
   are excluded.
 - Map shading shows **app coverage**, not legal production boundaries.
+- All 32 states are shown on the map for context, but only states with
+  style profiles are selectable (on the map and in the state list).
 - The map geometry comes from
-  [midir99/mexico-states-in-svg](https://github.com/midir99/mexico-states-in-svg)
-  (MIT), drawn from INEGI maps; see `assets/geo/README.md`.
+  [Natural Earth](https://www.naturalearthdata.com/) 10m admin-1
+  boundaries (public domain); see `assets/geo/README.md`.

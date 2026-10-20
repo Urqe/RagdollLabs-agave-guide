@@ -30,7 +30,7 @@ export async function renderExplore(container, { profiles, selectedStateId, mapU
   const section = el("section", { class: "explore-view", "aria-labelledby": "explore-heading" });
   section.appendChild(el("h2", { id: "explore-heading" }, "Explore by state"));
   const intro = el("p", { class: "view-intro" },
-    "Shaded states have style profiles in this app. Shading shows app coverage only — it is not a legal production boundary map. Select a state to see its profiles.");
+    "Shaded states have style profiles in this app; the full map of México is shown for context. Shading shows app coverage only — it is not a legal production boundary map. Only states with profiles can be selected.");
   section.appendChild(intro);
 
   const mapHolder = el("div", { class: "map-holder" });
@@ -47,7 +47,7 @@ export async function renderExplore(container, { profiles, selectedStateId, mapU
     clear(results);
     if (!stateId) {
       results.appendChild(el("p", { class: "state-results-hint" },
-        "Select a state on the map or in the list to see covered profiles."));
+        "Select one of the shaded states with profiles to see their style profiles."));
       return;
     }
     const name = STATE_NAMES[stateId] || stateId;
@@ -75,10 +75,11 @@ export async function renderExplore(container, { profiles, selectedStateId, mapU
     mapHolder.appendChild(el("p", { class: "error-state", role: "alert" },
       "The map could not be loaded. You can still use the state list below."));
     // Fallback: render the list standalone so the view stays usable.
-    const list = el("ul", { class: "state-list state-list-fallback", "aria-label": "States of Mexico" });
-    for (const [code, name] of Object.entries(STATE_NAMES)) {
+    const list = el("ul", { class: "state-list state-list-fallback", "aria-label": "States with profiles" });
+    for (const code of coveredStateIds) {
+      const name = STATE_NAMES[code] || code;
       const item = el("li");
-      const button = el("button", { type: "button", class: "state-list-button", dataset: { state: code } }, name);
+      const button = el("button", { type: "button", class: "state-list-button is-covered", dataset: { state: code } }, name);
       button.addEventListener("click", () => navigateTo({ name: "state", params: { stateId: code } }));
       item.appendChild(button);
       list.appendChild(item);
