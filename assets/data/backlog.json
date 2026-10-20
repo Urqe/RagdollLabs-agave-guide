@@ -1,12 +1,6 @@
 {
   "backlog": [
     {
-      "kind": "uncovered-expression",
-      "spirit": "comiteco",
-      "item": "D'Antaño (aguamiel + cane spirit)",
-      "reason": "agave-based with disclosed cane composition; would be a factual catalogue entry with composition disclosure"
-    },
-    {
       "kind": "missing-profile",
       "spirit": "tuxca",
       "item": "Additional tuxca producers (Siete Pozos, Indio Alonso)",
@@ -19,22 +13,10 @@
       "reason": "plant/process expansion deferred per plan; pechuga/ensamble need contextual treatment, not new categories"
     },
     {
-      "kind": "uncovered-expression",
-      "spirit": "destilado-de-pulque",
-      "item": "Juerte destilado de pulque",
-      "reason": "second expression in an existing profile; defer to a content increment"
-    },
-    {
       "kind": "missing-profile",
       "spirit": "mezcal",
       "item": "Mezcal reposado/añejo (dormido) variants",
       "reason": "legal aged classes exist; audit found every profile unaged; defer per one-tradition-at-a-time expansion"
-    },
-    {
-      "kind": "missing-profile",
-      "spirit": "raicilla",
-      "item": "Raicilla reposado/añejo variants",
-      "reason": "legally defined aged classes (Wikipedia DO source already cited); defer to a content increment"
     },
     {
       "kind": "missing-profile",

@@ -68,7 +68,8 @@
       "cultivation": "wild-harvested",
       "uncertainty": "Local name overlaps with other species in other regions; common names are not globally unique identifiers.",
       "profileIds": [
-        "raicilla-maximiliana-sierra-jalisco"
+        "raicilla-maximiliana-sierra-jalisco",
+        "raicilla-reposado-jalisco"
       ],
       "sourceIds": [
         "mezcalreviews-raicilla-category",

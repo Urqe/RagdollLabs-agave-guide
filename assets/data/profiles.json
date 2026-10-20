@@ -655,6 +655,61 @@
         "backalley-comiteco",
         "mezcalreviews-9guardianes-anejo"
       ]
+    },
+    {
+      "id": "raicilla-reposado-jalisco",
+      "title": "Raicilla reposado, barrel-rested style (Jalisco)",
+      "spirit": "raicilla",
+      "stateId": "jal",
+      "stateName": "Jalisco",
+      "context": "Raicilla is a denomination-of-origin agave spirit from Jalisco, and unlike comiteco or destilado de pulque it does carry legally defined aged classes: reposado means a rest in wood. This profile covers the young-rested end of that range — short rests of a few months that round the spirit without pushing the agave out of the frame.",
+      "description": "A short barrel rest (the example bottle lists 3 months) takes the fruity, floral, delicately smoky raicilla character and adds a light wood halo: vanilla, caramel and soft fruit sweetness around — rather than instead of — the agave. Reviewers of the example bottle describe sherry-cask influence with plum, raisin and sweet tobacco, and note the agave can be overpowered by cask character; that risk of wood masking the spirit is part of this style's honest picture. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Varies by bottling (the example bottle lists Angustifolia and Maximiliana); linked to the Maximiliana plant page as the Sierra tradition's signature agave — check the bottle, batches differ",
+      "process": "Fermented and distilled (the example bottle lists steel), then rested in wooden barrels about 3 months",
+      "category": "Raicilla reposado — a legally defined aged class under the raicilla denomination of origin (minimum 2 months in wood per the cited DO source)",
+      "beginnerNote": "New to aged raicilla? Expect the fruit and florals of the joven with a light caramel-vanilla halo from a short rest — closer to its unaged self than to tequila reposado.",
+      "aliases": [
+        "raicilla reposado",
+        "aged raicilla"
+      ],
+      "body": "medium",
+      "tasteNotes": [
+        "stone fruit (plum, raisin)",
+        "vanilla",
+        "caramel",
+        "floral agave"
+      ],
+      "smoke": "A delicate smokiness can persist from production; the example bottle's reviewer notes campfire smoke on the finish.",
+      "finish": "Medium to long, with sweet fruit, cinnamon-adjacent spice and a soft smoke fade.",
+      "sensory": {
+        "smoke": "low",
+        "herbal": "low",
+        "fruit": "high",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "low",
+        "finishLength": "high"
+      },
+      "exampleBottleId": "la-venenosa-tabernas-reposado",
+      "placeCoords": {
+        "lat": 20.5,
+        "lon": -103.9,
+        "precision": "state (Jalisco, batch varies); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat; a short-rested raicilla also works where a fruity reposado is called for (editorial suggestion).",
+        "foods": [
+          "fruit-forward salsas",
+          "caramelized pork",
+          "flan"
+        ]
+      },
+      "sourceIds": [
+        "wikipedia-raicilla",
+        "mezcalreviews-raicilla-category",
+        "mezcalreviews-lavenenosa-tabernas-reposado"
+      ],
+      "plantId": "agave-maximiliana"
     }
   ]
 }

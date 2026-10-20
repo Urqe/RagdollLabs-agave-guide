@@ -265,6 +265,20 @@
       "url": "https://www.mezcalreviews.com/mezcal/9-guardianes-comiteco-anejo/",
       "kind": "review",
       "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-juerte",
+      "title": "Mezcal Reviews — Juerte Destilado de Pulque",
+      "url": "https://www.mezcalreviews.com/mezcal/juerte-destilado-de-pulque/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "mezcalreviews-lavenenosa-tabernas-reposado",
+      "title": "Mezcal Reviews — La Venenosa Raicilla Tabernas Reposado",
+      "url": "https://www.mezcalreviews.com/mezcal/la-venenosa-raicilla-tabernas-reposado/",
+      "kind": "review",
+      "verified": "2026-10-20"
     }
   ]
 }
