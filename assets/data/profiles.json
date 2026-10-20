@@ -157,6 +157,129 @@
         "oak": "none",
         "finishLength": "medium"
       }
+    },
+    {
+      "id": "tuxca-lineno-cimarron-jalisco-colima",
+      "title": "Tuxca, Liñeno/Cimarrón style (Jalisco–Colima borderlands)",
+      "spirit": "tuxca",
+      "stateId": "jal",
+      "stateName": "Jalisco",
+      "context": "Tuxca is a traditional agave distillate of the southern-Jalisco/northern-Colima borderlands, named for the municipality of Tuxcacuesco below the Volcán de Colima. There is no formal denomination of origin: the name is a regional tradition, not a legal category like tequila or mezcal, and definitions are loose — a working description centers production on the Río Almería valley near Tuxcacuesco, with Zapotitlán de Vadillo and Tolimán forming the historical heartland.",
+      "description": "Tuxca is defined less by a legal category than by its method: wild agaves (often Liñeno/Cimarrón, i.e. Agave angustifolia and relatives) roasted in cylindrical pits, hand-mashed, fermented in volcanic stone craters, and distilled in wooden Filipino stills. The result is lean, spicy and mineral rather than smoky-sweet. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Wild agaves, often Liñeno/Cimarrón (Agave angustifolia and local relatives); ensambles vary by vinatero",
+      "process": "Cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation",
+      "category": "Tuxca — a regional tradition with no denomination of origin; legal status is not equivalent to tequila or mezcal",
+      "beginnerNote": "New to tuxca? Expect an uncertified, deeply traditional borderlands spirit — leaner and more mineral than most mezcal, with spice instead of smoke.",
+      "aliases": [
+        "tuxca",
+        "vino de mezcal tuxca"
+      ],
+      "body": "light",
+      "tasteNotes": [
+        "lime zest",
+        "black pepper",
+        "mineral",
+        "fresh herbs",
+        "cooked agave"
+      ],
+      "smoke": "Usually light: the pit roast is shorter and the wooden stills read herbal-spicy rather than smoky.",
+      "finish": "Dry and spicy, with lime and pepper fading to volcanic mineral.",
+      "sensory": {
+        "smoke": "low",
+        "herbal": "high",
+        "fruit": "low",
+        "sweetness": "low",
+        "pepper": "high",
+        "oak": "none",
+        "finishLength": "medium"
+      },
+      "exampleBottleId": "balancan-tuxca",
+      "sourceIds": [
+        "mexicanspiritsbible-tuxca",
+        "mezcalistas-balancan-tasting",
+        "mezcalreviews-balancan-tuxca"
+      ]
+    },
+    {
+      "id": "comiteco-aguamiel-chiapas",
+      "title": "Comiteco, aguamiel style (Comitán, Chiapas)",
+      "spirit": "comiteco",
+      "stateId": "chis",
+      "stateName": "Chiapas",
+      "context": "Comiteco comes from the municipality of Comitán de Domínguez, Chiapas, and is a sap-derived agave spirit: instead of cooking harvested agave hearts, producers collect the fresh sap (aguamiel) of the living maguey Comiteco (Agave atrovirens), ferment it, and distill it. Some comiteco includes an additional cane-based sugar source; a proposal to define the category sets a minimum of agave content rather than requiring 100% agave. Whether a specific bottle is 100% agave is a separate fact from its eligibility for this app — agave-based traditions with verified, clearly disclosed non-agave ingredients are included honestly.",
+      "description": "Because the agave is never cooked, comiteco lacks the roast and smoke of pit-roasted spirits and instead shows a green, lactic, gently herbal character carried over from the fermented sap — closer in character to a distilled pulque than to mezcal, though it is its own tradition. This profile describes the style generally; compositions vary between producers and are disclosed per bottle. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Maguey Comiteco (Agave atrovirens), cultivated; sap collected from the living plant",
+      "process": "Sap-derived: aguamiel collected from the living plant, fermented, distilled — no cooking of the piña",
+      "category": "Comiteco — a regional tradition from Comitán, Chiapas; not a spirit with a denomination of origin, and not legally equivalent to tequila or mezcal",
+      "beginnerNote": "New to comiteco? Forget smoke: this is a sap spirit — think green, lactic and herbal, from uncooked agave.",
+      "aliases": [
+        "comiteco"
+      ],
+      "body": "medium",
+      "tasteNotes": [
+        "green herbs",
+        "lactic freshness",
+        "earthy notes",
+        "soft sweetness"
+      ],
+      "smoke": null,
+      "finish": "Smooth and herbal, with a light earthy fade and no roast character.",
+      "sensory": {
+        "smoke": "none",
+        "herbal": "high",
+        "fruit": "low",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "none",
+        "finishLength": "medium"
+      },
+      "exampleBottleId": "nine-guardianes-comiteco-blanco",
+      "sourceIds": [
+        "backalley-comiteco",
+        "mezcalreviews-9guardianes-blanco"
+      ]
+    },
+    {
+      "id": "destilado-de-pulque-salmiana-tlaxcala",
+      "title": "Destilado de pulque, Salmiana style (Tlaxcala)",
+      "spirit": "destilado-de-pulque",
+      "stateId": "tlax",
+      "stateName": "Tlaxcala",
+      "context": "Destilado de pulque is a distilled agave-sap spirit: producers of the pulque tradition in Tlaxcala ferment the aguamiel of the maguey pulquero (Agave salmiana) into pulque, then distill it — the agave is never cooked. Tlaxcala is not part of the mezcal denomination, and destilado de pulque is not a certified category; it is a regional tradition, sold under destilado labels. Fermented pulque itself (undistilled) is not part of this spirit catalogue.",
+      "description": "Distilling a fermented sap rather than a cooked agave mash gives destilado de pulque its signature: fresh, green, lactic and faintly wild, with the vegetal, slightly tangy character of pulque carried into the glass rather than roast or smoke. Reviews note everything from steamed grass and sour-candy acidity to creamed-corn sweetness — a broad, unusual range. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Maguey pulquero (Agave salmiana); sap collected daily from the living plant",
+      "process": "Sap-derived: aguamiel fermented into pulque (about 48 hours), then distilled; the piña is never cooked",
+      "category": "Destilado de pulque — a regional tradition; no denomination of origin, and explicitly not mezcal (fermented pulque is not a spirit and is not catalogued here)",
+      "beginnerNote": "New to destilado de pulque? It is distilled pulque — uncooked agave sap, so expect lactic, green, gently sour character unlike any cooked-agave spirit.",
+      "aliases": [
+        "destilado de pulque",
+        "distilled pulque",
+        "pulque distillate"
+      ],
+      "body": "light",
+      "tasteNotes": [
+        "fresh pulque",
+        "green vegetal",
+        "lactic tang",
+        "sweet corn"
+      ],
+      "smoke": null,
+      "finish": "Light and tangy, with lactic and green notes that fade quickly.",
+      "sensory": {
+        "smoke": "none",
+        "herbal": "high",
+        "fruit": "low",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "none",
+        "finishLength": "low"
+      },
+      "exampleBottleId": "estancia-destilado-de-pulque",
+      "sourceIds": [
+        "skurnik-estancia",
+        "mezcalreviews-estancia-pulque",
+        "mezcalistas-juerte"
+      ]
     }
   ]
 }

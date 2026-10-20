@@ -122,6 +122,52 @@
         "casaendemica-brands"
       ],
       "coverageNote": "Coastal raicilla is a distinct editorial tradition from the Sierra profile in this app: coastal producers cook agave (angustifolia, rhodacantha) in underground pits rather than above-ground adobe ovens, so it is not covered by the Sierra profile. Listed here as a factual catalogue entry."
+    },
+    {
+      "id": "balancan-tuxca",
+      "brand": "Balancán",
+      "producer": "Ignacio Juárez (vinatero, Tuxcacuesco region), Laika Spirits bottling",
+      "expression": "Tuxca Artesanal",
+      "abv": null,
+      "spirit": "tuxca",
+      "place": "Tuxcacuesco region, southern Jalisco (Jalisco–Colima borderlands)",
+      "profileId": "tuxca-lineno-cimarron-jalisco-colima",
+      "reviewSummary": "Mezcalistas' tasting notes describe a rich nose with spicy, pickle-juice and tangy keywords; Mezcal Reviews members find lime zest, hay, peppercorn and agave with a straightforward, mineral palate.",
+      "sourceIds": [
+        "mezcalistas-balancan-tasting",
+        "mezcalreviews-balancan-tuxca"
+      ]
+    },
+    {
+      "id": "nine-guardianes-comiteco-blanco",
+      "brand": "9 Guardianes",
+      "producer": "Comiteco Córdova & Guillén (Comitán de Domínguez, Chiapas)",
+      "expression": "Comiteco Blanco",
+      "abv": null,
+      "spirit": "comiteco",
+      "place": "Comitán de Domínguez, Chiapas",
+      "profileId": "comiteco-aguamiel-chiapas",
+      "composition": "Distilled from fermented agave sap (aguamiel); the broader comiteco category permits an additional cane-based sugar source — whether this specific bottle is 100% agave is not documented in the cited sources",
+      "reviewSummary": "Mezcal Reviews lists 9 Guardianes Comiteco Blanco from maguey Comitlán sap fermented and distilled in copper; tasting-note detail for this specific expression is not yet documented.",
+      "sourceIds": [
+        "backalley-comiteco",
+        "mezcalreviews-9guardianes-blanco"
+      ]
+    },
+    {
+      "id": "estancia-destilado-de-pulque",
+      "brand": "Estancia",
+      "producer": "Razo family / Rodolfo de Razo (Rancho San Isidro collective, Nanacamilpa, Tlaxcala)",
+      "expression": "Destilado de Pulque",
+      "abv": 46,
+      "spirit": "destilado-de-pulque",
+      "place": "Nanacamilpa, Tlaxcala",
+      "profileId": "destilado-de-pulque-salmiana-tlaxcala",
+      "reviewSummary": "Importer notes describe a green, vegetal spirit with curious notes of cardamom, lemongrass, peppercorn, sharp cheddar and sorrel, double-distilled from 48-hour fermented Salmiana sap in a short copper column.",
+      "sourceIds": [
+        "skurnik-estancia",
+        "mezcalreviews-estancia-pulque"
+      ]
     }
   ]
 }

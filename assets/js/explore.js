@@ -10,6 +10,9 @@ const SPIRIT_LABELS = {
   mezcal: "Mezcal",
   bacanora: "Bacanora",
   raicilla: "Raicilla",
+  tuxca: "Tuxca",
+  comiteco: "Comiteco",
+  "destilado-de-pulque": "Destilado de pulque",
 };
 
 function profilesForState(profiles, stateId) {

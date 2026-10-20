@@ -24,7 +24,7 @@ const VALID_STATES = new Set([
   "yuc", "zac",
 ]);
 
-const VALID_SPIRITS = new Set(["tequila", "mezcal", "bacanora", "raicilla"]);
+const VALID_SPIRITS = new Set(["tequila", "mezcal", "bacanora", "raicilla", "tuxca", "comiteco", "destilado-de-pulque"]);
 const VALID_BODIES = new Set(["light", "medium", "full"]);
 const VALID_KINDS = new Set(["style", "producer", "review"]);
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -52,6 +52,11 @@ for (const p of profiles) {
   if (p.process !== undefined && typeof p.process !== "string") fail(`${label}: process must be a string when present`);
   if (p.category !== undefined && typeof p.category !== "string") fail(`${label}: category must be a string when present`);
   if (p.beginnerNote !== undefined && typeof p.beginnerNote !== "string") fail(`${label}: beginnerNote must be a string when present`);
+  if (p.aliases !== undefined) {
+    if (!Array.isArray(p.aliases) || p.aliases.some((a) => typeof a !== "string" || !a.trim())) {
+      fail(`${label}: aliases must be an array of non-empty strings when present`);
+    }
+  }
   if (p.sensory !== undefined) {
     if (typeof p.sensory !== "object" || Array.isArray(p.sensory)) fail(`${label}: sensory must be an object when present`);
     else {
@@ -104,6 +109,10 @@ for (const b of bottles) {
   if (b.profileId != null && !profileIds.has(b.profileId)) fail(`${label}: profileId ${b.profileId} not in profiles.json`);
   if (b.profileId === undefined) fail(`${label}: profileId is required (null means no profile coverage yet)`);
   if (b.batch !== undefined && typeof b.batch !== "string") fail(`${label}: batch must be a string when present`);
+  if (b.composition !== undefined && typeof b.composition !== "string") fail(`${label}: composition must be a string when present`);
+  if (b.spirit === "comiteco" && !b.composition) {
+    fail(`${label}: comiteco bottles must carry a composition disclosure (agave vs cane-source facts)`);
+  }
   const VALID_COVERAGE = new Set(["tasting-not-documented", "profile-not-covered"]);
   if (b.coverage !== undefined) {
     if (!Array.isArray(b.coverage)) fail(`${label}: coverage must be an array when present`);

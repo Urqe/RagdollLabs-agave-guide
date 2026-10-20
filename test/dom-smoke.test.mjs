@@ -258,7 +258,7 @@ test("release 4 maintenance: overlapping state coverage, alias ranking, producer
     mapUrl: "https://example.test/RagdollLabs-agave-guide/assets/geo/mexico-states.svg",
   });
   const jalLinks = container.querySelectorAll('.state-results a[href*="#/profile/"]');
-  assert.equal(jalLinks.length, 2);
+  assert.equal(jalLinks.length, profiles.profiles.filter((p) => p.stateId === "jal").length);
   container.remove();
 
   const { searchProfiles, applyAliases } = await import("../assets/js/search.js");

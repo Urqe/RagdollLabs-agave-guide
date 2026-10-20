@@ -262,7 +262,8 @@ test("end-to-end: real app boots and compare selection updates the route and tab
     await import(path.join(root, "assets/js/app.js"));
     await new Promise((r) => setTimeout(r, 50));
     const buttons = () => [...bootDom.window.document.querySelectorAll(".compare-pick-button")];
-    assert.equal(buttons().length, 4, "picker renders all four profiles");
+    const expected = JSON.parse(files["profiles.json"]).profiles.length;
+    assert.equal(buttons().length, expected, "picker renders every profile");
 
     buttons().find((b) => b.dataset.profileId === "tequila-blanco-valley-jalisco").click();
     await new Promise((r) => setTimeout(r, 30));

@@ -131,6 +131,54 @@
       "title": "Puntagave — Cielo Rojo Bacanora (producer)",
       "url": "https://www.puntagave.com/bacanora",
       "kind": "producer"
+    },
+    {
+      "id": "mexicanspiritsbible-tuxca",
+      "title": "Mexican Spirits Bible — Tuxca (category and production definition)",
+      "url": "https://mexicanspiritsbible.com/en/spirits/tuxca",
+      "kind": "style"
+    },
+    {
+      "id": "mezcalistas-balancan-tasting",
+      "title": "Mezcalistas — Balancán Tuxca Artesanal tasting notes",
+      "url": "https://www.mezcalistas.com/balancan-tuxca-artesanal-tasting-notes/",
+      "kind": "review"
+    },
+    {
+      "id": "mezcalreviews-balancan-tuxca",
+      "title": "Mezcal Reviews — Balancan Tuxca (member tasting notes)",
+      "url": "https://www.mezcalreviews.com/mezcal/balancan-tuxca/",
+      "kind": "review"
+    },
+    {
+      "id": "backalley-comiteco",
+      "title": "Back Alley Imports — Comiteco and Chiapas (category, history, production)",
+      "url": "https://www.backalleyimports.com/comiteco-and-chiapas/",
+      "kind": "style"
+    },
+    {
+      "id": "mezcalreviews-9guardianes-blanco",
+      "title": "Mezcal Reviews — 9 Guardianes Comiteco Blanco",
+      "url": "https://www.mezcalreviews.com/mezcal/9-guardianes-comiteco-blanco/",
+      "kind": "review"
+    },
+    {
+      "id": "skurnik-estancia",
+      "title": "Skurnik Wines & Spirits — Destilado de Pulque, Estancia Distillery (producer facts and tasting notes)",
+      "url": "https://www.skurnik.com/sku/destilado-de-pulque-estancia-distillery/",
+      "kind": "producer"
+    },
+    {
+      "id": "mezcalreviews-estancia-pulque",
+      "title": "Mezcal Reviews — Estancia Destilado de Pulque",
+      "url": "https://www.mezcalreviews.com/mezcal/estancia-destilado-de-pulque/",
+      "kind": "review"
+    },
+    {
+      "id": "mezcalistas-juerte",
+      "title": "Mezcalistas — Juerte tasting notes (destilado de pulque category context)",
+      "url": "https://www.mezcalistas.com/juerte-tasting-notes/",
+      "kind": "style"
     }
   ]
 }

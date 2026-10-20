@@ -10,6 +10,9 @@ const SPIRIT_LABELS = {
   mezcal: "Mezcal",
   bacanora: "Bacanora",
   raicilla: "Raicilla",
+  tuxca: "Tuxca",
+  comiteco: "Comiteco",
+  "destilado-de-pulque": "Destilado de pulque",
 };
 
 function sourceLinks(sources, sourceIds) {
@@ -36,6 +39,7 @@ function exampleBottleCard(bottle, sources) {
   card.appendChild(name);
   if (bottle.producer) card.appendChild(el("p", { class: "bottle-producer" }, bottle.producer));
   if (bottle.place) card.appendChild(el("p", { class: "bottle-place" }, bottle.place));
+  if (bottle.composition) card.appendChild(el("p", { class: "bottle-composition editorial-note" }, `Composition: ${bottle.composition}`));
   card.appendChild(el("p", { class: "bottle-review" }, bottle.reviewSummary));
   const linksLabel = el("p", { class: "bottle-links-label" }, "Sources for this bottle:");
   card.appendChild(linksLabel);

@@ -7,6 +7,9 @@ const SPIRIT_LABELS = {
   mezcal: "Mezcal",
   bacanora: "Bacanora",
   raicilla: "Raicilla",
+  tuxca: "Tuxca",
+  comiteco: "Comiteco",
+  "destilado-de-pulque": "Destilado de pulque",
 };
 
 const COVERAGE_LABELS = {
@@ -50,6 +53,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
   if (bottle.producer) facts.appendChild(el("li", {}, `Producer: ${bottle.producer}`));
   if (bottle.place) facts.appendChild(el("li", {}, `Place: ${bottle.place}`));
   if (bottle.batch) facts.appendChild(el("li", {}, `Batch/version: ${bottle.batch}`));
+  if (bottle.composition) facts.appendChild(el("li", {}, `Composition: ${bottle.composition}`));
   article.appendChild(facts);
 
   // Coverage disclosures first: factual entry without borrowed character.

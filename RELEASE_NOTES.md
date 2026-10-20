@@ -455,3 +455,52 @@ expansion.
 ### Remaining issues / deferred
 
 - Native-device rendering still unverified in this environment.
+
+## Release 9 — Regional Agave Traditions
+
+### Scope delivered
+
+- **3 new profiles, one example bottle each (7 profiles / 10 bottles / 30
+  sources total):**
+  - **Tuxca, Li\u00f1eno/Cimarr\u00f3n style (Jalisco\u2013Colima borderlands)** \u2014
+    cylindrical pit roast, volcanic crater fermentation, wooden Filipino
+    stills; example: Balanc\u00e1n Tuxca Artesanal (Ignacio Ju\u00e1rez /
+    Tuxcacuesco; Mezcalistas + Mezcal Reviews). No DO exists for tuxca:
+    category text says so explicitly.
+  - **Comiteco, aguamiel style (Comit\u00e1n, Chiapas)** \u2014 sap-derived (uncooked
+    aguamiel of maguey Comiteco); example: 9 Guardianes Comiteco Blanco.
+    Composition disclosure: the category permits a cane-based sugar
+    source and whether this bottle is 100% agave is not documented in the
+    cited sources \u2014 eligibility for the app is kept distinct from a
+    100%-agave claim, and the validator now requires comiteco bottles to
+    carry a composition disclosure.
+  - **Destilado de pulque, Salmiana style (Tlaxcala)** \u2014 distilled pulque
+    (fermented sap, never cooked); example: Estancia Destilado de Pulque
+    (46% ABV, Razo family / Rancho San Isidro; Skurnik + Mezcal Reviews).
+    Fermented pulque itself is explicitly excluded from the catalogue.
+- **Identity honesty:** each regional category field states its actual
+  legal status (no DO / not equivalent to tequila or mezcal); aliases
+  recorded per profile (tuxca, vino de mezcal tuxca, distilled pulque\u2026).
+- **Cooked-heart vs sap-derived explained** without inferring universal
+  taste: process fields state which is which; taste text stays sourced.
+- **Map coverage:** Chiapas and Tlaxcala now covered/selectable (5
+  covered states); same map/data/UX gates as existing content, verified
+  by tests.
+- Bounded research: one blocked source (TasteAtlas) replaced once;
+  9 Guardianes tasting-note detail is thin and its summary says so
+  rather than inventing notes.
+
+### Checks run
+
+- `npm run validate` \u2014 schema (new spirits, composition requirement for
+  comiteco, aliases) plus 45 node:test/jsdom suites (7 new regional
+  tests). All passing.
+- Real-app boot smoke: 5 covered states; catalogue renders 10 entries
+  with the composition disclosure; comiteco profile shows composition
+  and sap-derived process.
+
+### Remaining issues / deferred
+
+- Native-device rendering still unverified in this environment.
+- Backlog: Costa raicilla profile; more tuxca producers; D'Anta\u00f1o
+  (aguamiel + cane) as a disclosed-composition catalogue entry.
