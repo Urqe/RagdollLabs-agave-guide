@@ -18,8 +18,11 @@ const state = {
   error: null,
   exploreApi: null,
   catalogueActive: false,
+  intraExploreMove: false,
+  lastExploreState: null,
   consumedRestore: null,
   lastComparePick: null,
+  lastCompareQuery: null,
 };
 
 function baseUrl() {
@@ -51,13 +54,27 @@ async function renderRoute(container, route) {
 
   if (route.name === "home") {
     state.exploreApi = null;
+    state.intraExploreMove = false;
+    state.lastExploreState = null;
     renderHome(container, { profiles, locale });
     return;
   }
 
   if (route.name === "explore" || route.name === "state") {
     const selectedStateId = route.name === "state" ? route.params.stateId : null;
-    const restore = takeView("explore");
+    // A state selection (or a locale re-render) rebuilds the view; keep the
+    // active query and filters instead of discarding them. Intra-explore
+    // carries come from the in-memory snapshot (no scroll restore); profile
+    // returns come from the captured snapshot (with scroll). A bare
+    // #/explore is an explicit return to the whole collection, so a carried
+    // state restriction must not resurrect itself there.
+    let restore = null;
+    if (state.intraExploreMove) {
+      restore = state.lastExploreState;
+    } else {
+      restore = takeView("explore");
+    }
+    if (restore && route.name === "explore") restore = { ...restore, stateId: null };
     state.consumedRestore = restore;
     state.exploreApi = await renderExplore(container, {
       profiles,
@@ -67,6 +84,7 @@ async function renderRoute(container, route) {
       mapUrl: new URL("assets/geo/mexico-states.svg", baseUrl()).href,
       ...(restore ? { restore } : {}),
     });
+    state.lastExploreState = null;
     return;
   }
 
@@ -105,7 +123,9 @@ async function renderRoute(container, route) {
       locale,
       compareIds: ids.join(","),
       focusProfileId: state.lastComparePick,
-      onSelectionChange: (nextIds) => {
+      keepPickerQuery: state.lastCompareQuery,
+      onSelectionChange: (nextIds, pickerQuery) => {
+        state.lastCompareQuery = pickerQuery;
         setCompareSelection(nextIds);
         state.lastComparePick = state.lastComparePick && nextIds.includes(state.lastComparePick)
           ? state.lastComparePick
@@ -178,9 +198,10 @@ async function boot() {
   const root = document.getElementById("app");
   const main = el("main", { id: "main", class: "app-main", tabindex: "-1" });
   root.appendChild(main);
+  let onLocaleSwitch = null;
   wireThemeToggle();
   wireLocaleToggle(() => {
-    handleRoute();
+    if (onLocaleSwitch) onLocaleSwitch();
   });
 
   try {
@@ -205,21 +226,32 @@ async function boot() {
   // Leaving a list view for a profile captures its query, filters and
   // scroll so the return trip reopens exactly where the user left off.
   const rememberListViews = (route) => {
-    if (route.name !== "profile") return;
-    if (state.exploreApi && typeof state.exploreApi.capture === "function") state.exploreApi.capture();
-    if (state.catalogueActive) {
+    // Only leaving for a profile captures the durable snapshot (with
+    // scroll); intra-explore moves use the in-memory snapshot instead.
+    if (route.name === "profile" && state.exploreApi && typeof state.exploreApi.capture === "function") {
+      state.exploreApi.capture();
+    }
+    if (route.name === "profile" && state.catalogueActive) {
       const input = document.getElementById("catalogue-search");
       captureView("catalogue", { query: input ? input.value : "" });
     }
   };
 
-  let lastRouteName = null;
+  let lastRouteKey = null;
 
   const handleRoute = async () => {
     const route = parseHash(window.location.hash);
+    const previousRouteKey = lastRouteKey;
+    const previousWasExplore = ["explore", "state"].includes((previousRouteKey || "").split(":")[0]);
+    const intraExploreMove = ["state", "explore"].includes(route.name) && previousWasExplore;
     rememberListViews(route);
-    const routeChanged = route.name !== lastRouteName;
-    lastRouteName = route.name;
+    if (intraExploreMove && state.exploreApi && typeof state.exploreApi.snapshot === "function") {
+      state.lastExploreState = state.exploreApi.snapshot();
+    }
+    state.intraExploreMove = intraExploreMove;
+    const routeKey = route.name + ":" + (route.params.profileId || route.params.stateId || route.params.compareIds || "");
+    const routeChanged = routeKey !== lastRouteKey;
+    lastRouteKey = routeKey;
     state.consumedRestore = null;
     state.catalogueActive = route.name === "catalogue";
     syncCompareNav(route);
@@ -258,6 +290,7 @@ async function boot() {
   };
 
   // Render the initial route without pushing a duplicate history entry.
+  onLocaleSwitch = handleRoute;
   await handleRoute();
   startRouter(handleRoute);
 }

@@ -8,12 +8,16 @@
 const STORAGE_KEY = "agave-compare-selection";
 export const MAX_SLOTS = 3;
 
+// In-page fallback so selections survive navigation even when storage is
+// unavailable or throws (private mode, quota, disabled cookies).
+let memorySelection = [];
+
 function readStored() {
   try {
     const raw = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    return Array.isArray(raw) ? raw : [];
+    return Array.isArray(raw) ? raw : memorySelection;
   } catch (error) {
-    return [];
+    return memorySelection;
   }
 }
 
@@ -35,10 +39,11 @@ export function getCompareSelection() {
 
 export function setCompareSelection(ids) {
   const next = normalize(ids);
+  memorySelection = [...next];
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
   } catch (error) {
-    /* storage unavailable: keep the in-page behavior only */
+    /* storage unavailable: the in-memory selection keeps working */
   }
   return [...next];
 }
