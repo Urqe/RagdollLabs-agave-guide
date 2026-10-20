@@ -434,6 +434,173 @@
         "wikipedia-raicilla",
         "casaendemica-brands"
       ]
+    },
+    {
+      "id": "tequila-reposado-valley-jalisco",
+      "title": "Reposado tequila, Tequila Valley style",
+      "spirit": "tequila",
+      "stateId": "jal",
+      "stateName": "Jalisco",
+      "context": "Reposado ('rested') is a legal tequila class: the spirit rests in oak for a minimum of two months, with no maximum. In practice most producers rest it two months to a year. This profile describes a traditionally made Tequila Valley reposado — the same style as this app's blanco profile, plus oak.",
+      "description": "Reposado is where tequila first meets wood: the vegetal, peppery blanco character takes on vanilla, caramel and baking-spice notes from the barrel while the cooked agave stays at the center. In traditionally made reposados the oak is a seasoning, not the dish — reviewers of the example bottle consistently note the agave remains forward. There is no universal age-to-flavor ladder: a 2-month reposado can read leaner than a blanco from another producer, and 'more oak' is not 'better'. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
+      "plantId": "agave-tequilana",
+      "process": "Steam-cooked, fermented, double distilled, then rested in oak barrels (legal minimum 2 months; typically 2–12 months)",
+      "category": "Tequila — spirit with its own Denomination of Origin; reposado is a legal class (oak-rested, 2-month minimum)",
+      "beginnerNote": "New to reposado? Think of it as the same spirit as blanco, briefly rested in oak: the agave stays, vanilla and spice join.",
+      "aliases": [
+        "reposado",
+        "rested tequila"
+      ],
+      "body": "medium",
+      "tasteNotes": [
+        "cooked agave",
+        "vanilla",
+        "caramel",
+        "baking spice",
+        "citrus"
+      ],
+      "smoke": null,
+      "finish": "Medium, with gentle wood spice and a caramel-agave fade.",
+      "sensory": {
+        "smoke": "none",
+        "herbal": "medium",
+        "fruit": "low",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "medium",
+        "finishLength": "medium"
+      },
+      "placeCoords": {
+        "lat": 20.9,
+        "lon": -103.84,
+        "precision": "town (Tequila, Jalisco); approximate"
+      },
+      "exampleBottleId": "fortaleza-reposado",
+      "pairing": {
+        "serving": "Sipped neat; also the classic Margarita upgrade for those who want a rounder base (editorial suggestion).",
+        "foods": [
+          "tacos",
+          "grilled meats",
+          "aged cheeses"
+        ]
+      },
+      "sourceIds": [
+        "diffords-tequila-category",
+        "lilou-fortaleza-reposado",
+        "88bamboo-fortaleza-reposado"
+      ]
+    },
+    {
+      "id": "tequila-anejo-valley-jalisco",
+      "title": "Añejo tequila, Tequila Valley style",
+      "spirit": "tequila",
+      "stateId": "jal",
+      "stateName": "Jalisco",
+      "context": "Añejo ('aged') is a legal tequila class: oak rest of at least one year, in barrels of no more than 600 liters. Extra añejo (at least three years) exists as a further class. This profile describes a traditionally made Valley añejo of roughly 18 months — the middle of the legal range.",
+      "description": "A year or more of oak turns tequila darker, rounder and sweeter-perceived: the barrel contributes vanilla, dried fruit and cocoa-adjacent notes while the fresh vegetal edge of the blanco recedes. A well-made añejo keeps cooked agave in the frame rather than disappearing into wood; the example bottle's reviewers describe exactly that balance. 'Older is better' is marketing, not a rule — wood influence depends on barrel type, size, age and climate, and many drinkers prefer blanco or reposado. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
+      "plantId": "agave-tequilana",
+      "process": "Steam-cooked, fermented, double distilled, then aged in oak at least one year (typically ex-bourbon casks)",
+      "category": "Tequila — spirit with its own Denomination of Origin; añejo is a legal class (oak-aged, 1-year minimum)",
+      "beginnerNote": "New to añejo? Expect the roundest, darkest tequila expression: oak-driven vanilla and dried fruit around the agave — closest to whiskey in feel, still tequila at heart.",
+      "aliases": [
+        "anejo",
+        "aged tequila",
+        "extra anejo"
+      ],
+      "body": "full",
+      "tasteNotes": [
+        "cooked agave",
+        "vanilla",
+        "dried fruit",
+        "oak",
+        "honeyed sweetness"
+      ],
+      "smoke": null,
+      "finish": "Long and rounded, with oak spice, sweet agave and a gentle dry fade.",
+      "sensory": {
+        "smoke": "none",
+        "herbal": "low",
+        "fruit": "medium",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "high",
+        "finishLength": "high"
+      },
+      "placeCoords": {
+        "lat": 20.9,
+        "lon": -103.84,
+        "precision": "town (Tequila, Jalisco); approximate"
+      },
+      "exampleBottleId": "fortaleza-anejo",
+      "pairing": {
+        "serving": "Sipped neat, ideally in a small glass to concentrate the aroma (editorial suggestion).",
+        "foods": [
+          "dark chocolate",
+          "mole",
+          "grilled steak"
+        ]
+      },
+      "sourceIds": [
+        "diffords-tequila-category",
+        "whiskeyshelf-fortaleza-anejo"
+      ]
+    },
+    {
+      "id": "tequila-cristalino-style",
+      "title": "Cristalino tequila style",
+      "spirit": "tequila",
+      "stateId": "jal",
+      "stateName": "Jalisco",
+      "context": "Cristalino is not a legal class: it is an aged tequila (usually reposado or añejo) filtered — typically through wood charcoal — to remove the color the barrel gave it. Nearly every major brand now makes one. The category is commercially booming and critically debated: bartenders and writers are divided over whether it is innovation or a marketing-driven dilution of tradition.",
+      "description": "A cristalino looks like a blanco in the glass but carries softened barrel character: rounder, creamier and often sweeter-perceived than either a blanco or its unfiltered aged base, with gentler acidity and agave bite. Filtration removes color and, with it, some flavor — what remains is by design smooth and approachable. The category is prone to additive use to restore sweetness and body, which critics flag; the base spirit and the producer matter more than the style name. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
+      "plantId": "agave-tequilana",
+      "process": "Made as reposado or añejo, then charcoal-filtered clear; a finishing choice, not a legal class",
+      "category": "Cristalino — a finishing/marketing style on top of a legal class, not a legal class itself; disclosure of the aged base varies by brand",
+      "beginnerNote": "New to cristalino? It is an aged tequila with the color filtered out — clear like a blanco, rounder like an añejo, and the subject of honest debate.",
+      "aliases": [
+        "cristalino",
+        "crystal tequila",
+        "clear aged tequila"
+      ],
+      "body": "medium",
+      "tasteNotes": [
+        "creamy vanilla",
+        "soft agave",
+        "light oak",
+        "gentle citrus"
+      ],
+      "smoke": null,
+      "finish": "Smooth and short-to-medium; engineered for easy sipping.",
+      "sensory": {
+        "smoke": "none",
+        "herbal": "low",
+        "fruit": "medium",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "low",
+        "finishLength": "medium"
+      },
+      "placeCoords": {
+        "lat": 20.67,
+        "lon": -103.35,
+        "precision": "region (Jalisco, highlands/valley varies by producer); approximate"
+      },
+      "exampleBottleId": "patron-anejo-cristalino",
+      "pairing": {
+        "serving": "Served neat or over ice; often positioned as an entry to aged tequila (editorial suggestion).",
+        "foods": [
+          "light appetizers",
+          "fresh fruit desserts"
+        ]
+      },
+      "sourceIds": [
+        "patron-what-is-cristalino",
+        "tastings-patron-cristalino",
+        "tequilareport-patron-cristalino"
+      ]
     }
   ]
 }

@@ -240,3 +240,45 @@ test("release 12: profiles link both ways to the plant pages", () => {
     container.remove();
   }
 });
+
+test("tequila aged-class profiles: reposado, a\u00f1ejo, cristalino with honest class framing", () => {
+  const reposado = profiles.find((p) => p.id === "tequila-reposado-valley-jalisco");
+  const anejo = profiles.find((p) => p.id === "tequila-anejo-valley-jalisco");
+  const cristalino = profiles.find((p) => p.id === "tequila-cristalino-style");
+  assert.ok(reposado && anejo && cristalino, "all three profiles exist");
+
+  // Legal classes stated as legal; cristalino stated as NOT a legal class.
+  assert.ok(reposado.category.includes("legal class"));
+  assert.ok(anejo.category.includes("legal class"));
+  assert.ok(cristalino.category.includes("not a legal class"), "cristalino honestly framed");
+
+  // Oak maturation now represented in sensory data.
+  assert.notEqual(reposado.sensory.oak, "none");
+  assert.equal(anejo.sensory.oak, "high");
+  assert.equal(cristalino.sensory.oak, "low", "filtration reduces oak");
+
+  // No age-to-flavor ladder claims.
+  assert.ok(!/older is better/i.test(anejo.description) || anejo.description.includes("'Older is better' is marketing"), "age ladder only appears to refute it");
+  assert.ok(anejo.description.includes("not a rule") || anejo.description.includes("marketing"), "a\u00f1ejo refutes the ladder");
+
+  // Each has its example bottle, mapped back.
+  for (const prof of [reposado, anejo, cristalino]) {
+    const bottle = bottles.find((b) => b.id === prof.exampleBottleId);
+    assert.ok(bottle && bottle.profileId === prof.id, `${prof.id} bottle linked`);
+    assert.ok(bottle.reviewSummary.length > 40, "review evidence present");
+  }
+
+  // Cristalino discloses the additive debate and filtration trade-off.
+  assert.ok(cristalino.description.includes("additive") || cristalino.description.includes("critics"), "additive debate disclosed");
+  assert.ok(cristalino.description.includes("removes color and, with it, some flavor"), "filtration trade-off stated");
+});
+
+test("tequila aged variants surface in compare with oak dimension", async () => {
+  const { biggestDifferences } = await import("../assets/js/compare.js");
+  const blanco = profiles.find((p) => p.id === "tequila-blanco-valley-jalisco");
+  const anejo = profiles.find((p) => p.id === "tequila-anejo-valley-jalisco");
+  const diffs = biggestDifferences([blanco, anejo]);
+  const oak = diffs.find((d) => d.key === "oak");
+  assert.ok(oak, "oak is a biggest-difference between blanco and a\u00f1ejo");
+  assert.equal(oak.gap, 3, "oak gap is maximal (none vs high)");
+});

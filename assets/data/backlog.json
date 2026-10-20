@@ -23,6 +23,30 @@
       "spirit": "destilado-de-pulque",
       "item": "Juerte destilado de pulque",
       "reason": "second expression in an existing profile; defer to a content increment"
+    },
+    {
+      "kind": "missing-profile",
+      "spirit": "mezcal",
+      "item": "Mezcal reposado/añejo (dormido) variants",
+      "reason": "legal aged classes exist; audit found every profile unaged; defer per one-tradition-at-a-time expansion"
+    },
+    {
+      "kind": "missing-profile",
+      "spirit": "raicilla",
+      "item": "Raicilla reposado/añejo variants",
+      "reason": "legally defined aged classes (Wikipedia DO source already cited); defer to a content increment"
+    },
+    {
+      "kind": "missing-profile",
+      "spirit": "comiteco",
+      "item": "Comiteco añejo (9 Guardianes makes one; producer source already cited)",
+      "reason": "aged variant exists with an already-covered producer; candidate for next content increment"
+    },
+    {
+      "kind": "missing-profile",
+      "spirit": "tequila",
+      "item": "Extra añejo (3-year class)",
+      "reason": "legal class beyond añejo; small step once añejo is reviewed by owner"
     }
   ]
 }

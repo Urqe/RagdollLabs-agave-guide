@@ -808,3 +808,49 @@ learners; content unchanged, presentation only:
 Also: the end-to-end boot test now clears its jsdom localStorage,
 fixing cross-file test interference (a locale preference persisted by
 another test file could flip the e2e run to Spanish).
+
+## Content increment — Tequila maturation classes (owner-requested)
+
+Owner request: tequila profiles explaining reposado, a\u00f1ejo and
+cristalino. Pre-implementation audit (owner-requested): every profile
+in the app \u2014 all 8, across all 7 traditions \u2014 was an unaged
+expression, so wood maturation could not be taught at all. The audit
+identified aged-class gaps in mezcal, raicilla and comiteco too; those
+were recorded in the backlog for future increments rather than
+expanded all at once (per the plan's content-increment rules).
+
+### Added (11 profiles / 13 bottles / 37 sources total)
+
+- **Reposado tequila, Tequila Valley style** \u2014 legal class (2-month oak
+  minimum); example: Fortaleza Reposado (Long Island Lou + 88 Bamboo
+  reviews). Explicitly refutes age-to-flavor ladders.
+- **A\u00f1ejo tequila, Tequila Valley style** \u2014 legal class (1-year
+  minimum); example: Fortaleza A\u00f1ejo, ~18 months in ex-bourbon
+  (The Whiskey Shelf). "Older is better" framed as marketing, not a
+  rule.
+- **Cristalino tequila style** \u2014 honestly framed as a finishing/marketing
+  style, NOT a legal class; example: PATR\u00d3N A\u00f1ejo Cristalino
+  (Tastings.com + Tequila Report + producer page). The profile discloses
+  the filtration trade-off ("removes color and, with it, some flavor")
+  and the category's additive-use debate.
+
+### Learner value
+
+- The oak dimension of the compare view is now meaningful: blanco vs
+  a\u00f1ejo shows the maximal oak gap (None vs High) in "Biggest
+  differences"; reposado (medium) and cristalino (low, filtered) slot
+  between them.
+- Beginner notes explain each class in one sentence; aliases added
+  (reposado, anejo, extra anejo, cristalino).
+- Backlog now records the cross-tradition aged-class gaps found by the
+  audit (mezcal reposado/dormido, raicilla aged classes, comiteco
+  a\u00f1ejo, tequila extra a\u00f1ejo).
+
+### Checks
+
+- `npm run validate` \u2014 schema + 63 suites (2 new: honest class framing
+  incl. cristalino's non-legal status and additive debate; oak gap in
+  compare). All passing.
+- Boot smoke: Jalisco lists 7 profiles; cristalino profile renders
+  with honest category and PATR\u00d3N example; compare shows Oak None vs
+  High as a biggest-difference.

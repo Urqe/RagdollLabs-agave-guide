@@ -209,6 +209,55 @@
       "url": "https://www.mezcalistas.com/juerte-tasting-notes/",
       "kind": "style",
       "verified": "2026-10-20"
+    },
+    {
+      "id": "lilou-fortaleza-reposado",
+      "title": "Long Island Lou Tequila — Fortaleza Reposado review",
+      "url": "https://longislandloutequila.com/fortaleza-reposado-review/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "88bamboo-fortaleza-reposado",
+      "title": "88 Bamboo — Taste Testing Fortaleza Blanco & Reposado",
+      "url": "https://88bamboo.co/blogs/tequila-mezcal-reviews/taste-testing-tequila-fortaleza-blanco-reposado",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "whiskeyshelf-fortaleza-anejo",
+      "title": "The Whiskey Shelf — Fortaleza Añejo Tequila review",
+      "url": "https://www.thewhiskeyshelf.com/fortaleza-anejo-tequila-review/",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "tastings-patron-cristalino",
+      "title": "Tastings.com — Patrón Añejo Cristalino spirits review",
+      "url": "https://www.tastings.com/Spirits-Review/Patron-Anejo-Cristalino-Tequila-Mexico-11-02-2024.aspx",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "tequilareport-patron-cristalino",
+      "title": "Tequila Report — Patrón Cristalino Añejo review",
+      "url": "https://www.tequilareport.com/p/patron-cristalino-anejo-tequila-review",
+      "kind": "review",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "patron-cristalino-product",
+      "title": "PATRÓN TEQUILA — Cristalino (product page)",
+      "url": "https://www.patrontequila.com/products/patron-cristalino.html",
+      "kind": "producer",
+      "verified": "2026-10-20"
+    },
+    {
+      "id": "patron-what-is-cristalino",
+      "title": "PATRÓN TEQUILA — What is cristalino tequila",
+      "url": "https://www.patrontequila.com/stories/what-is-cristalino-tequila.html",
+      "kind": "style",
+      "verified": "2026-10-20"
     }
   ]
 }
