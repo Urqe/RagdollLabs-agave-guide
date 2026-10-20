@@ -38,12 +38,6 @@
     },
     {
       "kind": "missing-profile",
-      "spirit": "comiteco",
-      "item": "Comiteco añejo (9 Guardianes makes one; producer source already cited)",
-      "reason": "aged variant exists with an already-covered producer; candidate for next content increment"
-    },
-    {
-      "kind": "missing-profile",
       "spirit": "tequila",
       "item": "Extra añejo (3-year class)",
       "reason": "legal class beyond añejo; small step once añejo is reviewed by owner"

@@ -601,6 +601,60 @@
         "tastings-patron-cristalino",
         "tequilareport-patron-cristalino"
       ]
+    },
+    {
+      "id": "comiteco-anejo-comitan-chiapas",
+      "title": "Comiteco añejo, glass-rested with oak branches (Comitán, Chiapas)",
+      "spirit": "comiteco",
+      "stateId": "chis",
+      "stateName": "Chiapas",
+      "context": "Comiteco is a sap-derived agave spirit from the municipality of Comitán de Domínguez, Chiapas, produced by fermenting and distilling the fresh sap (aguamiel) of the living maguey Comiteco (Agave atrovirens) without cooking the plant. This profile covers the aged expression of that tradition. Unlike tequila or mezcal añejo, comiteco añejo is not a legally defined class: the añejo of the example producer rests in glass with branches of white oak rather than in barrels, so its wood character comes from oak contact in glass, not barrel maturation. The broader category has no denomination of origin, though a state request for DO protection has been in process.",
+      "description": "Glass resting on white-oak branches gives this style a soft wood influence without the vanilla-heavy roundness of barrel-aged spirits: the green, lactic, herbal sap character of comiteco stays in the frame while oak contributes gentle spice and a touch of color. Compared with the unaged comiteco profile, expect a slightly rounder, warmer version of the same tradition rather than a whiskey-adjacent profile. This is editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Maguey Comiteco (Agave atrovirens), cultivated; sap collected from the living plant",
+      "plantId": "agave-atrovirens",
+      "process": "Sap-derived: aguamiel collected from the living plant, fermented, distilled in copper, then rested in glass with branches of white oak (no barrel maturation, no cooking of the piña)",
+      "category": "Comiteco añejo — a regional tradition from Comitán, Chiapas; not a spirit with a denomination of origin, and añejo here is a producer expression, not a legal class as it is in tequila",
+      "beginnerNote": "New to comiteco añejo? Do not expect tequila añejo: the wood comes from oak branches resting in glass, so it is gentler — think warm spice over the same green, lactic sap character.",
+      "aliases": [
+        "comiteco anejo",
+        "aged comiteco"
+      ],
+      "body": "medium",
+      "tasteNotes": [
+        "green herbs",
+        "lactic freshness",
+        "soft oak spice",
+        "gentle sweetness"
+      ],
+      "smoke": null,
+      "finish": "Medium-length and herbal, with a soft oak-spice fade and no roast character.",
+      "sensory": {
+        "smoke": "none",
+        "herbal": "high",
+        "fruit": "low",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "low",
+        "finishLength": "medium"
+      },
+      "exampleBottleId": "nine-guardianes-comiteco-anejo",
+      "placeCoords": {
+        "lat": 16.25,
+        "lon": -92.13,
+        "precision": "municipality (Comitán de Domínguez, Chiapas); approximate"
+      },
+      "pairing": {
+        "serving": "Sipped neat to let the gentle oak spice carry the herbal sap character (editorial suggestion).",
+        "foods": [
+          "chiapaneco tamales",
+          "aged cheeses",
+          "cinnamon-adjacent desserts"
+        ]
+      },
+      "sourceIds": [
+        "backalley-comiteco",
+        "mezcalreviews-9guardianes-anejo"
+      ]
     }
   ]
 }

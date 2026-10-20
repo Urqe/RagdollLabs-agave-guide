@@ -222,6 +222,23 @@
         "tequilareport-patron-cristalino",
         "patron-cristalino-product"
       ]
+    },
+    {
+      "id": "nine-guardianes-comiteco-anejo",
+      "brand": "9 Guardianes",
+      "producer": "Comiteco Córdova & Guillén (Comitán de Domínguez, Chiapas)",
+      "expression": "Comiteco Añejo",
+      "abv": 42,
+      "spirit": "comiteco",
+      "place": "Comitán de Domínguez, Chiapas",
+      "batch": "Rested in glass with branches of white oak",
+      "profileId": "comiteco-anejo-comitan-chiapas",
+      "composition": "Distilled from fermented agave sap (aguamiel); the broader comiteco category permits an additional cane-based sugar source — whether this specific bottle is 100% agave is not documented in the cited sources",
+      "reviewSummary": "Mezcal Reviews lists 9 Guardianes Comiteco Añejo at 42% ABV, from maguey Comitlán sap fermented and distilled in copper, then aged; the site lists no tasting notes for this expression, so its flavor description stays editorial in this app.",
+      "sourceIds": [
+        "mezcalreviews-9guardianes-anejo",
+        "backalley-comiteco"
+      ]
     }
   ]
 }

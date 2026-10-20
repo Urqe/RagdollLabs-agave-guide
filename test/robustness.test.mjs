@@ -67,14 +67,15 @@ test("compare picker labels every supported spirit, never a raw id", async () =>
   // The picker shows the human label, not the raw spirit id.
   const container = document.createElement("div");
   document.body.appendChild(container);
+  const regional = profiles.filter((p) => ["tuxca", "comiteco", "destilado-de-pulque"].includes(p.spirit));
   renderCompare(container, {
-    profiles: profiles.filter((p) => ["tuxca", "comiteco", "destilado-de-pulque"].includes(p.spirit)),
+    profiles: regional,
     locale: enLocale,
     compareIds: "",
     onSelectionChange: () => {},
   });
   const labels = [...container.querySelectorAll(".compare-pick-button")].map((b) => b.textContent);
-  assert.equal(labels.length, 3, "all three regional spirits render in the picker");
+  assert.equal(labels.length, regional.length, "every regional-spirit profile renders in the picker");
   for (const label of labels) {
     const shown = label.split(" \u2014 ")[1];
     assert.ok(
