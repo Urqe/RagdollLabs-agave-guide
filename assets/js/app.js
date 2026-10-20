@@ -213,9 +213,13 @@ async function boot() {
     }
   };
 
+  let lastRouteName = null;
+
   const handleRoute = async () => {
     const route = parseHash(window.location.hash);
     rememberListViews(route);
+    const routeChanged = route.name !== lastRouteName;
+    lastRouteName = route.name;
     state.consumedRestore = null;
     state.catalogueActive = route.name === "catalogue";
     syncCompareNav(route);
@@ -244,8 +248,9 @@ async function boot() {
       : null;
     if (restoreScroll != null) {
       window.scrollTo(0, restoreScroll);
-    } else {
-      // New pages start at their heading.
+    } else if (routeChanged) {
+      // New pages start at their heading; same-route re-renders (e.g. the
+      // language toggle) keep the user's scroll position.
       const heading = main.querySelector("h1, h2");
       if (heading && typeof heading.scrollIntoView === "function") heading.scrollIntoView({ block: "start" });
     }

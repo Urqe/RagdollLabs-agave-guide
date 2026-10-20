@@ -177,8 +177,6 @@ export function createLocale() {
       const bundle = STRINGS[current] || STRINGS.en;
       return bundle[key] ?? STRINGS.en[key] ?? key;
     },
-    /** True when the active locale lacks reviewed strings (for disclosure). */
-    hasMissing() { return current !== "en" && missing.size > 0; },
     /** Translate an editorial mood label ("Smoke-forward" etc.). */
     mood(name) {
       const key = "mood." + String(name).toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "");

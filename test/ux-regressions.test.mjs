@@ -72,7 +72,7 @@ test("issue 1: profile compare action adds to the selection with selected and fu
   render([profiles[0].id, profiles[2].id]);
   link = root.querySelector(".compare-profile-link");
   assert.ok(link.classList.contains("is-selected"));
-  assert.equal(link.getAttribute("aria-pressed"), "true");
+  assert.ok(link.textContent.includes("In your comparison"), "selected state is labeled");
   assert.equal(link.getAttribute("href"), `#/compare/${profiles[0].id},${profiles[2].id}`);
 
   // Full comparison: the link reopens the selection instead of overflowing.
@@ -92,13 +92,18 @@ test("issue 2: explore captures query, filters and origin; returning restores th
     const api = await renderExplore(root, {
       profiles, bottles, locale, mapUrl: "https://example.test/map.svg",
     });
-    root.querySelector("#profile-search").value = "mezcal";
-    root.querySelector("#spirit-filter").value = "mezcal";
+    const { flavorMoods } = await import("../assets/js/compare.js");
+    const moodProfile = profiles.find((p) => flavorMoods(p).length > 0);
+    const aMood = flavorMoods(moodProfile)[0];
+    root.querySelector("#profile-search").value = "";
+    root.querySelector("#spirit-filter").value = moodProfile.spirit;
+    root.querySelector("#mood-filter").value = aMood;
     api.capture();
     const snapshot = takeView("explore");
     assert.ok(snapshot, "explore snapshot captured");
-    assert.equal(snapshot.query, "mezcal");
-    assert.equal(snapshot.spirit, "mezcal");
+    assert.equal(snapshot.query, "");
+    assert.equal(snapshot.spirit, moodProfile.spirit);
+    assert.equal(snapshot.mood, aMood, "flavour filter captured");
     assert.ok(typeof snapshot.scrollY === "number");
 
     // A fresh render with the snapshot restores the view.
@@ -107,8 +112,9 @@ test("issue 2: explore captures query, filters and origin; returning restores th
       profiles, bottles, locale, mapUrl: "https://example.test/map.svg",
       restore: snapshot,
     });
-    assert.equal(root2.querySelector("#profile-search").value, "mezcal", "query restored");
-    assert.equal(root2.querySelector("#spirit-filter").value, "mezcal", "tradition filter restored");
+    assert.equal(root2.querySelector("#profile-search").value, "", "query restored");
+    assert.equal(root2.querySelector("#spirit-filter").value, moodProfile.spirit, "tradition filter restored");
+    assert.equal(root2.querySelector("#mood-filter").value, aMood, "flavour filter restored");
     assert.ok(root2.querySelector(".results-count"), "result count restored with the view");
     assert.ok(root2.querySelectorAll(".state-results .profile-link").length >= 1);
 
@@ -128,6 +134,15 @@ test("issue 2: catalogue origin is preserved in routes and back links", () => {
     "#/profile/x?origin=catalogue",
     "shareable routes keep the origin"
   );
+  const both = parseHash("#/profile/sotol-chihuahua?from=chih&origin=catalogue");
+  assert.equal(both.params.profileId, "sotol-chihuahua");
+  assert.equal(both.params.from, "chih");
+  assert.equal(both.params.origin, "catalogue", "from and origin coexist");
+  assert.equal(
+    buildHash({ name: "profile", params: { profileId: "sotol-chihuahua", from: "chih", origin: "catalogue" } }),
+    "#/profile/sotol-chihuahua?from=chih&origin=catalogue",
+    "round-trip preserves both params"
+  );
 
   const root = document.createElement("div");
   const profile = profiles[0];
@@ -138,6 +153,24 @@ test("issue 2: catalogue origin is preserved in routes and back links", () => {
   });
   assert.equal(root.querySelector(".back-link").getAttribute("href"), "#/catalogue",
     "back link returns to the catalogue when the profile came from there");
+
+  // In-page suggestion links keep the origin for a second hop.
+  const suggestions = [...root.querySelectorAll(".suggestion-link")];
+  assert.ok(suggestions.length >= 1, "profile offers suggestions");
+  for (const link of suggestions) {
+    assert.ok(link.getAttribute("href").includes("origin=catalogue"),
+      "suggestion links keep the catalogue origin");
+  }
+
+  // Without an origin, suggestion links stay clean shareable routes.
+  const root2 = document.createElement("div");
+  renderProfile(root2, {
+    profile, bottle, sources: sourceList,
+    allProfiles: profiles, allBottles: bottles, locale,
+  });
+  for (const link of root2.querySelectorAll(".suggestion-link")) {
+    assert.ok(!link.getAttribute("href").includes("origin="), "no origin param without catalogue context");
+  }
 });
 
 test("issue 3: search and filters feed one results collection with a count and Clear all", async () => {

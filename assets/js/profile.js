@@ -191,7 +191,10 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     const suggList = el("ul", { class: "suggestion-list" });
     for (const { profile: other, reason } of suggestions) {
       const item = el("li");
-      const link = el("a", { href: `#/profile/${encodeURIComponent(other.id)}`, class: "suggestion-link" }, other.title);
+      const link = el("a", {
+        href: `#/profile/${encodeURIComponent(other.id)}` + (fromCatalogue ? "?origin=catalogue" : ""),
+        class: "suggestion-link",
+      }, other.title);
       item.appendChild(link);
       item.appendChild(el("span", { class: "search-result-reason" }, ` — ${reason}`));
       suggList.appendChild(item);
@@ -235,7 +238,6 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const action = el("a", {
     class: "secondary-button compare-profile-link" + (isSelected ? " is-selected" : "") + (isFull ? " is-full" : ""),
     href: "#/compare/" + targetIds.map(encodeURIComponent).join(","),
-    "aria-pressed": isSelected ? "true" : null,
   }, isSelected ? ui(locale, "compareSelected") : isFull ? ui(locale, "compareFull") : ui(locale, "compareThis") + " ↗");
   const details = el("details", { class: "profile-learning" });
   details.appendChild(el("summary", {}, ui(locale, "details")));
