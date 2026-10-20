@@ -5,8 +5,6 @@ import { bottlesForProfile } from "./catalogue.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 import { ui, sensoryOverview } from "./presentation.js";
 
-const BODY_LABELS = { light: "Light body", medium: "Medium body", full: "Full body" };
-
 function sourceLinks(sources, sourceIds) {
   const list = el("ul", { class: "source-list" });
   for (const id of sourceIds) {
@@ -222,6 +220,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const sourceNodes = [...section.children].filter(node => node.classList.contains("source-list") || node === srcHeading);
   const identity = el("header", { class: "profile-heading" });
   identity.append(titleNode, placeNode);
+  if (profile.plant) identity.appendChild(el("p", { class: "profile-plant-summary" }, ui(locale, "plant") + ": " + profile.plant));
   const core = el("div", { class: "profile-core" });
   core.append(sensoryOverview(profile, locale), factsNode);
   const action = el("a", { class: "secondary-button compare-profile-link", href: "#/compare/" + encodeURIComponent(profile.id) }, ui(locale, "compareThis") + " ↗");
