@@ -90,7 +90,12 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   }
   if (profile.plant) {
     craft.appendChild(el("dt", {}, "Agave"));
-    craft.appendChild(el("dd", { class: "profile-plant" }, profile.plant));
+    const plantDd = el("dd", { class: "profile-plant" }, profile.plant);
+    if (profile.plantId) {
+      plantDd.appendChild(document.createTextNode(" "));
+      plantDd.appendChild(el("a", { href: "#/learn", class: "plant-learn-link" }, "About this agave →"));
+    }
+    craft.appendChild(plantDd);
   }
   if (profile.process) {
     craft.appendChild(el("dt", {}, "Process"));

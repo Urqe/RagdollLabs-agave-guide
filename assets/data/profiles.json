@@ -51,7 +51,8 @@
           "ceviche",
           "queso fresco with chile"
         ]
-      }
+      },
+      "plantId": "agave-tequilana"
     },
     {
       "id": "mezcal-espadin-valles-centrales",
@@ -104,7 +105,8 @@
           "grilled meats",
           "roasted vegetables"
         ]
-      }
+      },
+      "plantId": "agave-angustifolia"
     },
     {
       "id": "bacanora-pacifica-sierra-sonora",
@@ -156,7 +158,8 @@
           "sonoran cheese (queso cocido)",
           "chiltepin-sauced dishes"
         ]
-      }
+      },
+      "plantId": "agave-angustifolia"
     },
     {
       "id": "raicilla-maximiliana-sierra-jalisco",
@@ -208,7 +211,8 @@
           "mole",
           "aged cheeses"
         ]
-      }
+      },
+      "plantId": "agave-maximiliana"
     },
     {
       "id": "tuxca-lineno-cimarron-jalisco-colima",
@@ -263,7 +267,8 @@
           "fresh cheese with tortillas",
           "colimense seafood"
         ]
-      }
+      },
+      "plantId": "tuxca-wild-agaves"
     },
     {
       "id": "comiteco-aguamiel-chiapas",
@@ -315,7 +320,8 @@
           "smoked cheeses",
           "coffee-adjacent desserts"
         ]
-      }
+      },
+      "plantId": "agave-atrovirens"
     },
     {
       "id": "destilado-de-pulque-salmiana-tlaxcala",
@@ -370,7 +376,8 @@
           "mixiotes",
           "corn-forward dishes"
         ]
-      }
+      },
+      "plantId": "agave-salmiana"
     }
   ]
 }

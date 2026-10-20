@@ -212,6 +212,13 @@ const { plants } = await readJson("assets/data/plants.json");
 const { processes } = await readJson("assets/data/processes.json");
 const { glossary } = await readJson("assets/data/glossary.json");
 if (!Array.isArray(plants) || plants.length === 0) fail("plants.json must contain a non-empty plants array");
+// Profiles link to a real plant entry (guide-to-profile routing + drift guard).
+const plantIdSet = new Set(plants.map((x) => x.id));
+for (const p3 of profiles) {
+  if (p3.plantId !== undefined && !plantIdSet.has(p3.plantId)) {
+    fail(`profile ${p3.id}: plantId ${p3.plantId} not in plants.json`);
+  }
+}
 if (!Array.isArray(processes) || processes.length === 0) fail("processes.json must contain a non-empty processes array");
 if (!Array.isArray(glossary) || glossary.length === 0) fail("glossary.json must contain a non-empty glossary array");
 for (const plant of plants) {

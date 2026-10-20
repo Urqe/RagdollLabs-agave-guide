@@ -605,3 +605,49 @@ precision, uncovered expressions and recommendation regressions.
 - Native-device rendering still unverified; sourced illustrations or
   diagrams for process steps deferred (text-first per the plan's
   dependency-light rules).
+
+## Release 12 — Learning Review & Fixes
+
+Maintenance release per the plan: audit of cognitive load, jargon,
+panel length, source discoverability, semantic headings, mobile
+reading, keyboard navigation and guide-to-profile routing, plus
+evidence consistency.
+
+### Findings and fixes
+
+- **Guide-to-profile routing (defect found):** learning content linked
+  out from profiles but not back \u2014 process and glossary cards were
+  dead ends. Method cards now show "Seen in:" links to the profiles
+  whose traditions use them (e.g. pit roast \u2192 mezcal, bacanora,
+  tuxca), and glossary terms link "Relates to:" profiles where the
+  class applies. 38 routing links render across the Learn page.
+- **Cognitive load / panel length (improved):** the 24-card Learn wall
+  now opens with three jump links (The agaves / How they are made /
+  Label vocabulary) to anchored section headings with scroll offset
+  under the sticky header.
+- **Source discoverability (improved):** every reference line in the
+  Learn view now shows its verification date ("review source, verified
+  2026-10-20") alongside the kind label.
+- **Evidence consistency (defect found):** profile `plant` free text
+  could drift from the plants.json taxonomy without notice. Profiles
+  now carry a `plantId` link validated against plants.json, and each
+  profile's Agave row links "About this agave \u2192" to the Learn page \u2014
+  the two layers reference each other instead of duplicating blindly.
+- **Semantic headings (verified, no defect):** h2 \u2192 h3 sections \u2192 h4
+  cards with aria-labelledby on every card.
+- **Mobile reading & keyboard (verified, no defect):** single-column
+  learn cards under the existing media query; jump links are real
+  anchors; focus styles apply to all interactive elements.
+- **Jargon (verified, no defect):** glossary definitions define terms
+  in context; processes avoid undefined vocabulary.
+
+### Checks run
+
+- `npm run validate` \u2014 schema (plantId cross-reference rule) plus 55
+  node:test/jsdom suites (2 new learn-maintenance tests). All passing.
+- Real-app boot smoke: 3 jump links, verified dates visible, 38
+  guide-to-profile routing links, profile\u2192plant link and pairing render.
+
+### Remaining issues / deferred
+
+- Native-device rendering still unverified in this environment.

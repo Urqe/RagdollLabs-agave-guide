@@ -1,5 +1,20 @@
 import { el, clear, safeLink } from "./dom-utils.js";
 
+function relevantTo(profile, proc) {
+  const text = (profile.process || "").toLowerCase();
+  const keywords = {
+    "pit-roast": ["pit roast", "pit-roasted", "roasted in earthen", "cylindrical pit"],
+    "steam-cook": ["steam-cooked", "steam cooked", "oven/autoclave"],
+    "sap-collection": ["sap-derived", "sap collected", "aguamiel collected"],
+    "wild-fermentation": ["wild-yeast", "wild yeast", "open fermentation"],
+    "distillation-methods": ["distilled", "still"],
+    "glass-resting": ["glass resting", "madurado"],
+    "wood-maturation": ["wood", "rested in wood", "añejo"],
+    "filtration": ["filtered", "filtration"],
+  };
+  return (keywords[proc.id] || []).some((k) => text.includes(k));
+}
+
 function sourceLinks(sources, sourceIds) {
   const list = el("ul", { class: "source-list" });
   for (const id of sourceIds || []) {
@@ -7,7 +22,7 @@ function sourceLinks(sources, sourceIds) {
     if (!source) continue;
     const item = el("li");
     item.appendChild(safeLink(source.url, source.title, { class: "source-link" }));
-    item.appendChild(el("span", { class: "source-kind" }, ` — ${source.kind} source`));
+    item.appendChild(el("span", { class: "source-kind" }, ` — ${source.kind} source${source.verified ? `, verified ${source.verified}` : ""}`));
     list.appendChild(item);
   }
   return list;
@@ -22,11 +37,16 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
   clear(container);
   const section = el("section", { class: "learn-view", "aria-labelledby": "learn-heading" });
   section.appendChild(el("h2", { id: "learn-heading" }, "Learn"));
+  const jumps = el("nav", { class: "learn-jumps", "aria-label": "Learn sections" });
+  for (const [href, label] of [["#learn-plants", "The agaves"], ["#learn-processes", "How they are made"], ["#learn-terms", "Label vocabulary"]]) {
+    jumps.appendChild(el("a", { href, class: "nav-link learn-jump" }, label));
+  }
+  section.appendChild(jumps);
   section.appendChild(el("p", { class: "view-intro" },
     "Agave plants, production methods and label vocabulary behind the profiles. Educational descriptions do not guarantee flavor from geography, species or age; where the botany is genuinely unsettled, we say so instead of guessing."));
 
   // --- Plants ---
-  section.appendChild(el("h3", {}, "The agaves"));
+  section.appendChild(el("h3", { id: "learn-plants" }, "The agaves"));
   for (const plant of plants) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `plant-${plant.id}` });
     card.appendChild(el("h4", { id: `plant-${plant.id}` }, plant.species));
@@ -52,17 +72,25 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
   }
 
   // --- Processes ---
-  section.appendChild(el("h3", {}, "How the spirits are made"));
+  section.appendChild(el("h3", { id: "learn-processes" }, "How the spirits are made"));
   for (const proc of processes) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `process-${proc.id}` });
     card.appendChild(el("h4", { id: `process-${proc.id}` }, `${proc.name} — ${proc.stage}`));
     card.appendChild(el("p", {}, proc.explanation));
+    const usedBy = profiles.filter((pr) => (pr.process || "").toLowerCase().includes(proc.stage === "cooking" ? "roast" : "") || relevantTo(pr, proc));
+    if (usedBy.length > 0) {
+      const line = el("p", { class: "learn-usedby" }, "Seen in: ");
+      for (const pr of usedBy.slice(0, 4)) {
+        line.appendChild(el("a", { href: `#/profile/${encodeURIComponent(pr.id)}`, class: "catalogue-profile-link" }, `${pr.title}; `));
+      }
+      card.appendChild(line);
+    }
     card.appendChild(sourceLinks(sources, proc.sourceIds));
     section.appendChild(card);
   }
 
   // --- Glossary ---
-  section.appendChild(el("h3", {}, "Label vocabulary"));
+  section.appendChild(el("h3", { id: "learn-terms" }, "Label vocabulary"));
   section.appendChild(el("p", { class: "view-intro" },
     "Class terms are spirit-specific: tequila's rules do not transfer to mezcal or raicilla. Where a term is not a legal class, that is stated."));
   for (const term of glossary) {
@@ -70,6 +98,14 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
     card.appendChild(el("h4", { id: `term-${term.term.replace(/\s+/g, "-")}` }, term.term));
     card.appendChild(el("p", { class: "learn-term-context" }, `Context: ${term.context}`));
     card.appendChild(el("p", {}, term.definition));
+    const related = profiles.filter((pr) => (pr.category || "").toLowerCase().includes(term.term.split(" ")[0].toLowerCase()));
+    if (related.length > 0) {
+      const line = el("p", { class: "learn-usedby" }, "Relates to: ");
+      for (const pr of related.slice(0, 4)) {
+        line.appendChild(el("a", { href: `#/profile/${encodeURIComponent(pr.id)}`, class: "catalogue-profile-link" }, `${pr.title}; `));
+      }
+      card.appendChild(line);
+    }
     card.appendChild(sourceLinks(sources, term.sourceIds));
     section.appendChild(card);
   }

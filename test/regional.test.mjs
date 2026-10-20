@@ -192,3 +192,45 @@ test("release 11: profile pairing section renders with editorial label", () => {
   assert.ok(container.textContent.includes("carne asada"), "food suggestions listed");
   container.remove();
 });
+
+test("release 12: learn view has section jumps, verified dates and profile routing", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const path = await import("node:path");
+  const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+  const plants = JSON.parse(await readFile(path.join(root, "assets/data/plants.json"), "utf8")).plants;
+  const processes = JSON.parse(await readFile(path.join(root, "assets/data/processes.json"), "utf8")).processes;
+  const glossary = JSON.parse(await readFile(path.join(root, "assets/data/glossary.json"), "utf8")).glossary;
+  const { renderLearn } = await import("../assets/js/learn-view.js");
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  renderLearn(container, { plants, processes, glossary, profiles, bottles, sources });
+
+  // Cognitive load: jump navigation targets exist.
+  const jumps = [...container.querySelectorAll(".learn-jump")];
+  assert.equal(jumps.length, 3, "three section jumps");
+  for (const jump of jumps) {
+    const targetId = jump.getAttribute("href").slice(1);
+    assert.ok(container.querySelector(`#${targetId}`), `jump target #${targetId} exists`);
+  }
+
+  // Source discoverability: verified dates shown.
+  assert.ok(container.textContent.includes("verified 20"), "verified dates visible");
+
+  // Guide-to-profile routing from process and glossary cards.
+  const usedByLinks = container.querySelectorAll(".learn-usedby a[href*='#/profile/']");
+  assert.ok(usedByLinks.length >= 5, "method/term cards route back to profiles");
+
+  container.remove();
+});
+
+test("release 12: profiles link both ways to the plant pages", () => {
+  for (const profile of profiles) {
+    assert.ok(profile.plantId, `${profile.id} has a plantId`);
+    const bottle = bottles.find((b) => b.id === profile.exampleBottleId);
+    const container = document.createElement("div");
+    document.body.appendChild(container);
+    renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles });
+    assert.ok(container.querySelector(".plant-learn-link"), `${profile.id} links to the plant page`);
+    container.remove();
+  }
+});
