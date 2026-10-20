@@ -410,3 +410,48 @@ sun/moon toggle in the header (persisted in localStorage, applied
 before first paint to avoid flashes). Dark is the default for new
 visitors. No DOM contract changes; all 36 suites pass; the toggle was
 verified end-to-end in a real-app jsdom boot.
+
+## Release 8 — Catalogue Review & Fixes
+
+Maintenance release per the plan: audit of duplicate/ambiguous bottle
+names, batch matching, maker attribution, source integrity, evidence
+gaps, mobile list density, alphabetical ordering and focus after
+expansion.
+
+### Findings and fixes
+
+- **Context-preserving navigation (defect found):** catalogue search
+  results were anchors to the current route that scrolled without
+  focusing, leaving keyboard users stranded at the page top. Result
+  links now prevent the default navigation, scroll to the entry and
+  move focus to the entry title (`tabindex="-1"`), with an explicit
+  aria-label.
+- **Duplicate DOM ids (defect found):** the catalogue entry `<article>`
+  and its `<h3>` shared `bottle-<id>`, so `getElementById` returned the
+  wrong element. Titles now use `bottle-<id>-title` and the article's
+  `aria-labelledby` follows.
+- **`scrollIntoView` guard:** wrapped in a typeof check (jsdom/older
+  browsers), so focus is never skipped when scrolling is unavailable.
+- **Validator integrity rules (added):** duplicate brand+expression
+  combinations are rejected; every bottle requires a producer or place
+  for maker attribution; `profile-not-covered` may not coexist with a
+  linked `profileId`.
+- **Mobile list density (improved):** catalogue entries, titles, fact
+  lists and brand directory tighten paddings, gaps and font sizes below
+  52rem.
+- **Audit, no defects found:** no duplicate or ambiguous bottle names
+  in the data; alphabetical ordering correct (brand, then expression);
+  all sourceIds and noteSourceIds resolve; batch/version recorded where
+  material (Cielo Rojo); evidence gaps properly disclosed
+  (la-venenosa-costa) rather than masked.
+
+### Checks run
+
+- `npm run validate` — schema (with new integrity rules) plus 38
+  node:test/jsdom suites (2 new: context-preserving search navigation
+  with focus, and a validator test that injects a duplicate bottle name
+  and asserts rejection). All passing.
+
+### Remaining issues / deferred
+
+- Native-device rendering still unverified in this environment.

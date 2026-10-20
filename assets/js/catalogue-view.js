@@ -34,11 +34,14 @@ function sourceLinks(sources, sourceIds) {
  * visually and semantically distinguishable.
  */
 export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = true } = {}) {
-  const article = el("article", { class: "catalogue-entry", "aria-labelledby": `bottle-${bottle.id}` });
+  const article = el("article", { class: "catalogue-entry", "aria-labelledby": `bottle-${bottle.id}-title` });
   article.id = `bottle-${bottle.id}`;
 
-  const name = el("h3", { id: `bottle-${bottle.id}`, class: "catalogue-entry-title" },
-    `${bottle.brand} \u2014 ${bottle.expression}`);
+  const name = el("h3", {
+    id: `bottle-${bottle.id}-title`,
+    class: "catalogue-entry-title",
+    tabindex: "-1",
+  }, `${bottle.brand} \u2014 ${bottle.expression}`);
   article.appendChild(name);
 
   const facts = el("ul", { class: "catalogue-facts" });
@@ -135,15 +138,26 @@ export function renderCatalogue(container, { bottles, profiles, sources, returnT
     const list = el("ul", { class: "search-result-list" });
     for (const bottle of matches) {
       const item = el("li");
-      const link = el("a", { href: `#/${returnTo}`, class: "search-result-link" });
+      const link = el("a", {
+        href: `#/${returnTo}`,
+        class: "search-result-link",
+        "aria-label": `Jump to ${bottle.brand} ${bottle.expression} in the catalogue`,
+      });
       link.appendChild(el("span", { class: "profile-link-title" }, `${bottle.brand} \u2014 ${bottle.expression}`));
       link.appendChild(el("span", { class: "search-result-reason" },
         `${SPIRIT_LABELS[bottle.spirit] || bottle.spirit}${bottle.place ? ` \u00b7 ${bottle.place}` : ""}`));
       item.appendChild(link);
-      // Context-preserving: clicking scrolls to the entry inside the catalogue.
-      link.addEventListener("click", () => {
-        const target = document.getElementById(`bottle-${bottle.id}`);
-        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Context-preserving navigation: stay on the catalogue, scroll to the
+      // entry and move focus to its title so keyboard users land on it.
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const target = document.getElementById(`bottle-${bottle.id}-title`);
+        if (target) {
+          if (typeof target.scrollIntoView === "function") {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+          target.focus({ preventScroll: true });
+        }
       });
       list.appendChild(item);
     }

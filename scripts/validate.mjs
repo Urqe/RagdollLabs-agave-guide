@@ -155,6 +155,27 @@ for (const s of sources) {
   if (s.date !== undefined && typeof s.date !== "string") fail(`${label}: date must be a string when present`);
 }
 
+// Duplicate or ambiguous bottle names: brand + expression must be unique
+// so catalogue entries can never collide ambiguously.
+const bottleNames = bottles.map((b) => `${b.brand}||${b.expression}`.toLowerCase());
+const nameDupes = bottleNames.filter((n, i) => bottleNames.indexOf(n) !== i);
+if (nameDupes.length) {
+  fail(`bottles: duplicate brand+expression combinations: ${[...new Set(nameDupes)].join(", ")}`);
+}
+// Maker attribution: a bottle must have either a producer or a place.
+for (const b of bottles) {
+  if (!b.producer && !b.place) {
+    fail(`bottle ${b.id}: requires a producer or a place for maker attribution`);
+  }
+}
+// Coverage consistency: profile-not-covered requires profileId null and
+// vice versa: a mapped profile bottle may not carry profile-not-covered.
+for (const b of bottles) {
+  if ((b.coverage || []).includes("profile-not-covered") && b.profileId != null) {
+    fail(`bottle ${b.id}: marked profile-not-covered but links profileId ${b.profileId}`);
+  }
+}
+
 // Duplicated ids.
 for (const [name, arr] of [["profiles", profiles], ["bottles", bottles], ["sources", sources]]) {
   const ids = arr.map((x) => x.id);

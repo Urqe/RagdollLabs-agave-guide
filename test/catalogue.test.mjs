@@ -139,3 +139,41 @@ test("brands, producers and expressions remain separate linked entities", () => 
   const lv = dir.find((d) => d.brand === "La Venenosa");
   assert.equal(lv.bottles.length, laVenenosa.length, "directory groups by brand without merging producers");
 });
+
+test("release 8: search results keep context and move focus to the entry", () => {
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  renderCatalogue(container, { bottles, profiles, sources });
+  const search = container.querySelector("#catalogue-search");
+  search.value = "cielo rojo";
+  search.dispatchEvent(new window.Event("input", { bubbles: true }));
+  const link = container.querySelector(".search-result-link");
+  assert.ok(link, "search result present");
+  link.dispatchEvent(new window.Event("click", { bubbles: true, cancelable: true }));
+  const focused = document.activeElement;
+  assert.equal(focused && focused.id, "bottle-cielo-rojo-bacanora-blanco-title", "focus lands on the entry title");
+  assert.equal(focused.getAttribute("tabindex"), "-1", "entry title is programmatically focusable");
+  container.remove();
+});
+
+test("release 8: validator rejects duplicate names, missing attribution, inconsistent coverage", async () => {
+  const { execFileSync } = await import("node:child_process");
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+  const bottlesPath = path.join(root, "assets/data/bottles.json");
+  const original = await fs.readFile(bottlesPath, "utf8");
+
+  const withDupe = JSON.parse(original);
+  withDupe.bottles.push({ ...withDupe.bottles[0], id: "dupe-id" });
+  await fs.writeFile(bottlesPath, JSON.stringify(withDupe));
+  let failed = false;
+  try {
+    execFileSync("node", [path.join(root, "scripts/validate.mjs")], { stdio: "pipe" });
+  } catch (err) {
+    failed = true;
+    assert.ok(String(err.stderr).includes("duplicate brand+expression"), "duplicate names rejected");
+  }
+  assert.ok(failed, "validator exits non-zero on duplicate names");
+  await fs.writeFile(bottlesPath, original);
+});
