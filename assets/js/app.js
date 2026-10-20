@@ -9,6 +9,7 @@ const state = {
   data: null,
   error: null,
   exploreApi: null,
+  lastComparePick: null,
 };
 
 function baseUrl() {
@@ -64,7 +65,13 @@ async function renderRoute(container, route) {
     renderCompare(container, {
       profiles,
       compareIds: route.params.compareIds || "",
-      onSelectionChange: (ids) => navigateTo({ name: "compare", params: { compareIds: ids.join(",") } }),
+      focusProfileId: state.lastComparePick,
+      onSelectionChange: (ids) => {
+        state.lastComparePick = state.lastComparePick && ids.includes(state.lastComparePick)
+          ? state.lastComparePick
+          : ids[ids.length - 1] || null;
+        navigateTo({ name: "compare", params: { compareIds: ids.join(",") } });
+      },
     });
     return;
   }
@@ -97,8 +104,20 @@ async function boot() {
     return;
   }
 
+  const syncCompareNav = (route) => {
+    const navCompare = document.getElementById("nav-compare");
+    if (!navCompare) return;
+    const target = route.name === "compare" && route.params.compareIds
+      ? `#/compare/${encodeURIComponent(route.params.compareIds)}`
+      : "#/compare";
+    if (navCompare.getAttribute("href") !== target) {
+      navCompare.setAttribute("href", target);
+    }
+  };
+
   const handleRoute = async () => {
     const route = parseHash(window.location.hash);
+    syncCompareNav(route);
     clear(main);
     main.appendChild(el("p", { class: "loading-note" }, "Loading…"));
     try {

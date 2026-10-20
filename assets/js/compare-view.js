@@ -24,7 +24,17 @@ const LEVEL_LABELS = {
 };
 
 function parseIds(raw) {
-  return (raw || "").split(",").map((s) => s.trim()).filter(Boolean).slice(0, MAX_SLOTS);
+  const seen = new Set();
+  return (raw || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .filter((id) => {
+      if (seen.has(id)) return false; // dedupe: one column per profile
+      seen.add(id);
+      return true;
+    })
+    .slice(0, MAX_SLOTS);
 }
 
 function slotSelector(profiles, selectedIds, onPick) {
@@ -61,11 +71,17 @@ function levelCell(profile, dimKey) {
  * missing-data notes. Selections live in the route (#/compare/a,b,c) so
  * they survive reload, sharing and Back/Forward.
  */
-export function renderCompare(container, { profiles, compareIds, onSelectionChange }) {
+export function renderCompare(container, { profiles, compareIds, onSelectionChange, focusProfileId = null }) {
   clear(container);
   const byId = new Map(profiles.map((p) => [p.id, p]));
-  const selectedIds = parseIds(compareIds);
+  const parsedIds = parseIds(compareIds);
+  const selectedIds = parsedIds.filter((id) => byId.has(id)); // prune unknown ids
   const selected = selectedIds.map((id) => byId.get(id)).filter(Boolean);
+
+  // Pruned or duplicated ids in the route are canonicalized once, silently.
+  if (selectedIds.length !== parsedIds.length && onSelectionChange) {
+    onSelectionChange(selectedIds);
+  }
 
   const section = el("section", { class: "compare-view", "aria-labelledby": "compare-heading" });
   section.appendChild(el("h2", { id: "compare-heading" }, "Compare styles"));
@@ -73,27 +89,43 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
     "Compare two or three editorial style profiles side by side. Sensory levels are editorial impressions — perceived sweetness is not measured sugar, smoke is not peat content, and ABV stays a factual property. Choosing an example bottle never turns these profile levels into bottle measurements."));
 
   // Picker
+  const status = el("p", { class: "compare-status", role: "status", "aria-live": "polite" });
+  section.appendChild(status);
+  const announce = (message) => {
+    clear(status);
+    status.appendChild(document.createTextNode(message));
+  };
+
   const pickerHolder = el("div", { class: "compare-picker" });
   const pick = (profileId) => {
-    const next = selectedIds.includes(profileId)
+    const removing = selectedIds.includes(profileId);
+    const next = removing
       ? selectedIds.filter((id) => id !== profileId)
       : [...selectedIds, profileId].slice(0, MAX_SLOTS);
+    const name = byId.get(profileId)?.title || profileId;
+    announce(removing ? `Removed ${name}. ${next.length} profile${next.length === 1 ? "" : "s"} selected.` : `Added ${name}. ${next.length} profile${next.length === 1 ? "" : "s"} selected.`);
     if (onSelectionChange) onSelectionChange(next);
   };
   pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick));
   section.appendChild(pickerHolder);
 
   if (selected.length === 0) {
+    announce("No profiles selected.");
     section.appendChild(el("p", { class: "compare-empty" }, "Pick at least two profiles to compare."));
     container.appendChild(section);
+    restoreFocus(pickerHolder, focusProfileId);
     return;
   }
 
   if (selected.length === 1) {
+    announce(`1 profile selected: ${selected[0].title}.`);
     section.appendChild(el("p", { class: "compare-empty" }, "One more pick starts the comparison."));
     container.appendChild(section);
+    restoreFocus(pickerHolder, focusProfileId);
     return;
   }
+
+  announce(`Comparing ${selected.length} profiles: ${selected.map((p) => p.title).join(", ")}.`);
 
   // Sensory table
   const table = el("table", { class: "compare-table" });
@@ -162,11 +194,22 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   }
 
   container.appendChild(section);
-  return {
-    /** Restore focus to the picker for a given profile after a re-render. */
-    focusProfile(profileId) {
-      const button = pickerHolder.querySelector(`[data-profile-id="${profileId}"]`);
-      if (button) button.focus();
-    },
-  };
+  restoreFocus(pickerHolder, focusProfileId);
+}
+
+/**
+ * After a route-driven re-render, put focus back on the picker button for
+ * the profile the user just acted on, so keyboard users never lose their
+ * place. Falls back to the first enabled picker button.
+ */
+function restoreFocus(pickerHolder, focusProfileId) {
+  if (focusProfileId) {
+    const button = pickerHolder.querySelector(`[data-profile-id="${focusProfileId}"]`);
+    if (button && !button.disabled) {
+      button.focus();
+      return;
+    }
+  }
+  const firstEnabled = pickerHolder.querySelector(".compare-pick-button:not([disabled])");
+  if (firstEnabled) firstEnabled.focus();
 }

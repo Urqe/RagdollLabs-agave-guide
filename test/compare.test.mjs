@@ -158,3 +158,75 @@ test("compare view: missing sensory data renders explicit unknown cells", () => 
   assert.ok([...unknownCells].some((c) => c.textContent.includes("Not documented")));
   container.remove();
 });
+
+test("release 6: dedupe, invalid-id pruning and route canonicalization", () => {
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  const profiles = [
+    fixture({ id: "a", title: "Profile A" }),
+    fixture({ id: "b", title: "Profile B", sensory: { smoke: "high" } }),
+  ];
+  const changes = [];
+  renderCompare(container, { profiles, compareIds: "a,a,not-a-profile", onSelectionChange: (ids) => changes.push(ids) });
+  // Duplicates collapse and unknown ids are pruned, canonicalizing the route once.
+  assert.deepEqual(changes[changes.length - 1], ["a"]);
+  assert.equal(container.querySelector(".compare-table"), null, "no table with one valid profile");
+  assert.equal(container.textContent.includes("One more pick"), true);
+  container.remove();
+});
+
+test("release 6: duplicate route ids never render duplicate columns", () => {
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  const profiles = [
+    fixture({ id: "a", title: "Profile A" }),
+    fixture({ id: "b", title: "Profile B", sensory: { smoke: "high" } }),
+  ];
+  renderCompare(container, { profiles, compareIds: "a,a,b", onSelectionChange: () => {} });
+  const columns = container.querySelectorAll("thead th[scope]");
+  assert.equal(columns.length - 1, 2, "exactly two columns for a,a,b");
+  const titles = [...columns].slice(1).map((c) => c.textContent);
+  assert.equal(new Set(titles).size, titles.length, "no duplicate column titles");
+  container.remove();
+});
+
+test("release 6: live announcements on add and remove", () => {
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  const profiles = [
+    fixture({ id: "a", title: "Profile A" }),
+    fixture({ id: "b", title: "Profile B", sensory: { smoke: "high" } }),
+  ];
+  const changes = [];
+  renderCompare(container, { profiles, compareIds: "a", onSelectionChange: (ids) => changes.push(ids) });
+  const status = container.querySelector(".compare-status");
+  assert.equal(status.getAttribute("role"), "status");
+
+  const addButton = [...container.querySelectorAll(".compare-pick-button")].find((b) => b.dataset.profileId === "b");
+  addButton.dispatchEvent(new window.Event("click", { bubbles: true }));
+  assert.ok(status.textContent.includes("Added Profile B"), "announces adds");
+
+  // After re-render with the new route, removing announces too.
+  container.textContent = "";
+  renderCompare(container, { profiles, compareIds: "a,b", onSelectionChange: (ids) => changes.push(ids) });
+  const status2 = container.querySelector(".compare-status");
+  const removeButton = container.querySelector(".compare-remove-button");
+  removeButton.dispatchEvent(new window.Event("click", { bubbles: true }));
+  assert.ok(status2.textContent.includes("Removed"), "announces removes");
+  container.remove();
+});
+
+test("release 6: focus restores to the acted-on picker button", () => {
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  const profiles = [
+    fixture({ id: "a", title: "Profile A" }),
+    fixture({ id: "b", title: "Profile B", sensory: { smoke: "high" } }),
+  ];
+  // After removing profile A, its picker button is enabled again and focus
+  // lands on it, so keyboard users keep their place.
+  renderCompare(container, { profiles, compareIds: "b", focusProfileId: "a", onSelectionChange: () => {} });
+  const focused = document.activeElement;
+  assert.equal(focused && focused.dataset ? focused.dataset.profileId : null, "a");
+  container.remove();
+});

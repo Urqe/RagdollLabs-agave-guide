@@ -269,3 +269,49 @@ optional-data failures and small-screen profile readability.
 - Native-device rendering still unverified in this environment.
 - Moods and suggestions are deliberately conservative; richer
   explanation and more moods grow with more profiles.
+
+## Release 6 — Comparison Review & Fixes
+
+Maintenance release per the plan: audit of comparison state,
+deduplication, slot promotion, missing data, mood predicates,
+explanation truthfulness, focus, live announcements and persistent
+navigation.
+
+### Findings and fixes
+
+- **Deduplication (defect found):** a crafted `#/compare/a,a,...` route
+  rendered duplicate columns. Route ids are now deduplicated — one
+  column per profile, verified by test.
+- **Invalid ids (defect found):** unknown ids in a crafted route silently
+  consumed slots and disabled the picker. Unknown ids are now pruned and
+  the route canonicalizes once via the selection callback.
+- **Focus (defect found):** after Add/Remove the route re-render moved
+  focus to `<main>`, losing the keyboard user's place. Focus now
+  restores to the acted-on picker button (or the first enabled one);
+  `app.js` tracks the last acted-on profile across renders.
+- **Live announcements (defect found):** screen readers got no feedback
+  on selection changes. A polite `role="status"` region now announces
+  adds, removes and the current comparison state.
+- **Persistent navigation (improved):** the header "Compare" link now
+  mirrors the current selection instead of resetting it when you leave
+  and return to the view.
+- **Slot promotion (verified, no defect):** removing a profile frees its
+  slot and re-enables its picker button; the three-slot limit is
+  enforced by disabling, not by silent drops.
+- **Missing data (verified, no defect):** "Not documented" cells, the
+  explicit unknown note and unknown-exclusion from differences all
+  behave as built in Release 5.
+- **Mood predicates and explanation truthfulness (verified, no defect):**
+  all mood/suggestion logic remains in the pure module with fixture
+  tests; reasons only name documented shared dimensions and never claim
+  bottle measurements.
+
+### Checks run
+
+- `npm run validate` — schema plus 28 node:test/jsdom suites (4 new
+  regression tests: dedupe/prune + canonicalization, no duplicate
+  columns, add/remove announcements, focus restoration). All passing.
+
+### Remaining issues / deferred
+
+- Native-device rendering still unverified in this environment.
