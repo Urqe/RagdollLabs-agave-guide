@@ -202,12 +202,12 @@ test("R25: new bottles carry classification, plant composition and honest covera
     assert.ok(b.reviewSummary, `${id} has an attributed review`);
     assert.ok(b.sourceIds.length >= 2, `${id} cites producer and review`);
   }
-  // Highland blancos stay honestly uncovered rather than mis-mapped to the valley profile.
+  // Highland blancos now map to the highland blanco profile (added post-Release 26).
   for (const id of ["don-julio-blanco", "patron-silver"]) {
     const b = bottles.find((x) => x.id === id);
-    assert.equal(b.profileId, null, `${id} not forced onto a valley profile`);
-    assert.ok(b.coverage.includes("profile-not-covered"), `${id} discloses missing profile coverage`);
-    assert.equal(b.regionIds.length, 0, `${id} carries no region claims while uncovered`);
+    assert.equal(b.profileId, "tequila-blanco-highland-jalisco", `${id} maps to the highland blanco profile`);
+    assert.ok(!(b.coverage || []).includes("profile-not-covered"), `${id} no longer discloses missing coverage`);
+    assert.deepEqual(b.regionIds, ["tequila-highlands-jal"], `${id} claims its highland region`);
   }
 });
 
@@ -287,4 +287,24 @@ test("R26: every translated bottle field has a Spanish entry (no silent gaps)", 
     }
   }
   assert.deepEqual(gaps, [], `untranslated fields must be listed explicitly, got: ${gaps.join(", ")}`);
+});
+
+test("R27: highland blanco profile exists, is sourced and covers the highland bottles", () => {
+  const profile = profiles.find((p) => p.id === "tequila-blanco-highland-jalisco");
+  assert.ok(profile, "highland blanco profile exists");
+  assert.equal(profile.traditionId, "tequila");
+  assert.deepEqual(profile.regionIds, ["tequila-highlands-jal"]);
+  assert.ok(profile.sourceIds.length >= 4, "profile cites style and category sources");
+  assert.ok(profile.whyItTastes.includes("blind tasting panel"), "the weaker-than-folklore caveat is stated honestly");
+  assert.equal(profile.exampleBottleId, "don-julio-blanco");
+  const featured = bottles.find((b) => b.id === profile.exampleBottleId);
+  assert.ok(featured, "featured example exists");
+  // Both formerly-uncovered highland bottles now resolve to the new profile.
+  for (const id of ["don-julio-blanco", "patron-silver"]) {
+    const b = bottles.find((x) => x.id === id);
+    assert.equal(b.profileId, profile.id);
+  }
+  // The plant back-links the profile.
+  const plant = plants.find((p) => p.id === "agave-tequilana");
+  assert.ok(plant.profileIds.includes(profile.id), "plant links back to the profile");
 });

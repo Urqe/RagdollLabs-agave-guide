@@ -150,9 +150,10 @@ test("R15: routes unchanged — profile ids survive the migration", () => {
     "mezcal-reposado-espadin-oaxaca",
     "mezcal-tobala-sierra-oaxaca",
     "sotol-chihuahua",
+    "tequila-blanco-highland-jalisco",
   ];
   assert.deepEqual(profiles.map((p) => p.id).sort(), [...expected].sort());
-  assert.equal(profiles.length, 17);
+  assert.equal(profiles.length, 18);
 });
 
 test("R15: data loader exposes the new entities", async () => {

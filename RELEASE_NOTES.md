@@ -1516,3 +1516,50 @@ scope-description accuracy and discovery regressions.
 - Highland tequila blanco still lacks its own style profile (carried
   from Release 25).
 - Native Safari/VoiceOver checks still unverified in this environment.
+
+## Content increment — Highland blanco tequila profile (Los Altos)
+
+First increment of the post-roadmap backlog pair established at
+Release 26: the deferred highland tequila blanco style profile.
+
+### What changed
+
+- **New style profile `tequila-blanco-highland-jalisco`** — the
+  highland (Los Altos) reading of the unaged blanco class: sweeter
+  cooked agave, citrus and tropical/stone fruit, delicate florals and
+  gentle spice in a softer body, explicitly framed as a cultural and
+  agronomic distinction rather than a legal class. Sourced against a
+  Food & Wine highlands-vs-valleys explainer, the existing tequila
+  category references, and the Difford's Don Julio review.
+- **Honest uncertainty kept:** the why-it-tastes section states that a
+  blind tasting panel found the regional pattern weaker than folklore
+  suggests, citing that panel source — a tendency, never a guarantee.
+- **The two formerly-uncovered highland bottles now map to the new
+  profile:** Don Julio Blanco (featured example) and PATRÓN Silver
+  moved from `profile-not-covered` to full coverage with their
+  highland region claims restored; their editorial notes now explain
+  the highland-vs-valley relation within the covered profile.
+- **Full Spanish edition of the new profile** (title, context,
+  description, beginner note, category, process, finish, pairing,
+  why-it-tastes), plus the plant back-link (agave-tequilana lists the
+  new profile) and two new style sources with verification dates.
+- The R15 migration pins and the R25 honest-coverage test updated to
+  the new reality (18 profiles; highland bottles covered, not
+  disclosed as uncovered).
+
+### Checks run
+
+- `npm run validate` — schema plus 214 node:test/jsdom suites (1 new
+  increment test: profile existence, sourcing, the honest caveat,
+  bottle mapping and the plant back-link). All passing.
+- DOM smoke of the new profile in English and Spanish: correct
+  titles, translated why-it-tastes with no raw keys leaking, featured
+  bottle card rendering, and explore-next links present.
+
+### Remaining issues / deferred
+
+- The explore-next threads now link the valley and highland blancos
+  (same plant, different region) — comparison perspectives should
+  pick this pair up automatically; a dedicated pairing review belongs
+  to the next maintenance pass.
+- Native-device checks still unverified in this environment.
