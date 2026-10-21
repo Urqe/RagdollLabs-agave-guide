@@ -6,6 +6,7 @@ import { renderProfile, renderProfileNotFound } from "./profile.js";
 import { renderCompare } from "./compare-view.js";
 import { renderCatalogue } from "./catalogue-view.js";
 import { renderLearn } from "./learn-view.js";
+import { renderDiscover } from "./discovery-view.js";
 import { createLocale } from "./locale.js";
 import { renderHome, ui } from "./presentation.js";
 import { getCompareSelection, setCompareSelection } from "./compare-selection.js";
@@ -89,6 +90,19 @@ async function renderRoute(container, route) {
     return;
   }
 
+  if (route.name === "discover") {
+    state.exploreApi = null;
+    renderDiscover(container, {
+      kind: route.params.kind || null,
+      id: route.params.id || null,
+      plants: state.data.plants,
+      regions: state.data.regions,
+      traditions: state.data.traditions,
+      profiles, bottles,
+      locale,
+    });
+    return;
+  }
   if (route.name === "learn") {
     state.exploreApi = null;
     renderLearn(container, {
@@ -263,7 +277,9 @@ async function boot() {
     for (const link of document.querySelectorAll(".nav-link")) {
       const name = link.dataset.view;
       link.textContent = locale.t("nav." + name);
-      const active = name === route.name || (name === "explore" && (route.name === "state" || route.name === "profile"));
+      const active = name === route.name
+        || (name === "explore" && (route.name === "state" || route.name === "profile"))
+        || (name === "discover" && route.name === "discover");
       if (active) link.setAttribute("aria-current", "page");
       else link.removeAttribute("aria-current");
     }
