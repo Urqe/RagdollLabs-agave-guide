@@ -15,12 +15,23 @@
       ],
       "cultivation": "cultivated (the only agave legally permitted for tequila)",
       "uncertainty": null,
-      "profileIds": [
-        "tequila-blanco-valley-jalisco"
-      ],
       "sourceIds": [
         "diffords-tequila-made",
         "diffords-tequila-category"
+      ],
+      "traditionIds": [
+        "tequila"
+      ],
+      "regionIds": [
+        "tequila-valley-jal",
+        "tequila-highlands-jal"
+      ],
+      "profileIds": [
+        "tequila-blanco-valley-jalisco",
+        "tequila-reposado-valley-jalisco",
+        "tequila-anejo-valley-jalisco",
+        "tequila-cristalino-style",
+        "tequila-extra-anejo-highland-jalisco"
       ]
     },
     {
@@ -42,14 +53,26 @@
       ],
       "cultivation": "cultivated in Oaxaca; wild and cultivated elsewhere",
       "uncertainty": "Whether Pacifica/Yaquiana in Sonora is the same plant as espadín or a distinct local variety is debated; the app preserves the regional names without settling the botany.",
-      "profileIds": [
-        "mezcal-espadin-valles-centrales",
-        "bacanora-pacifica-sierra-sonora"
-      ],
       "sourceIds": [
         "diffords-mezcal-what-it-is",
         "mezcalistas-bacanora-tradition",
         "mezcalistas-tepua-tasting"
+      ],
+      "traditionIds": [
+        "mezcal",
+        "bacanora",
+        "raicilla"
+      ],
+      "regionIds": [
+        "valles-centrales-oax",
+        "sierra-sonora",
+        "costa-sur-jal"
+      ],
+      "profileIds": [
+        "mezcal-espadin-valles-centrales",
+        "bacanora-pacifica-sierra-sonora",
+        "raicilla-costa-jalisco",
+        "mezcal-reposado-espadin-oaxaca"
       ]
     },
     {
@@ -67,13 +90,19 @@
       ],
       "cultivation": "wild-harvested",
       "uncertainty": "Local name overlaps with other species in other regions; common names are not globally unique identifiers.",
-      "profileIds": [
-        "raicilla-maximiliana-sierra-jalisco",
-        "raicilla-reposado-jalisco"
-      ],
       "sourceIds": [
         "mezcalreviews-raicilla-category",
         "wikipedia-raicilla"
+      ],
+      "traditionIds": [
+        "raicilla"
+      ],
+      "regionIds": [
+        "sierra-occidental-jal"
+      ],
+      "profileIds": [
+        "raicilla-maximiliana-sierra-jalisco",
+        "raicilla-reposado-jalisco"
       ]
     },
     {
@@ -87,11 +116,18 @@
       ],
       "cultivation": "cultivated; sap collected from the living plant (no cooking)",
       "uncertainty": null,
-      "profileIds": [
-        "comiteco-aguamiel-chiapas"
-      ],
       "sourceIds": [
         "backalley-comiteco"
+      ],
+      "traditionIds": [
+        "comiteco"
+      ],
+      "regionIds": [
+        "comitan-chiapas"
+      ],
+      "profileIds": [
+        "comiteco-aguamiel-chiapas",
+        "comiteco-anejo-comitan-chiapas"
       ]
     },
     {
@@ -105,12 +141,18 @@
       ],
       "cultivation": "cultivated in pulque tradition; sap collected from the living plant",
       "uncertainty": "Sources vary on subspecies naming (Manso/Salmiana); the app records the genus-level identity without resolving the subspecies debate.",
-      "profileIds": [
-        "destilado-de-pulque-salmiana-tlaxcala"
-      ],
       "sourceIds": [
         "mezcalistas-juerte",
         "skurnik-estancia"
+      ],
+      "traditionIds": [
+        "destilado-de-pulque"
+      ],
+      "regionIds": [
+        "tlaxcala-central"
+      ],
+      "profileIds": [
+        "destilado-de-pulque-salmiana-tlaxcala"
       ]
     },
     {
@@ -132,12 +174,18 @@
       ],
       "cultivation": "wild-harvested; ensambles vary by batch",
       "uncertainty": "Tuxca batches may blend several wild agaves; species composition is recorded only when a source documents the actual batch.",
-      "profileIds": [
-        "tuxca-lineno-cimarron-jalisco-colima"
-      ],
       "sourceIds": [
         "mexicanspiritsbible-tuxca",
         "mezcalistas-balancan-tasting"
+      ],
+      "traditionIds": [
+        "tuxca"
+      ],
+      "regionIds": [
+        "jalisco-colima-borderlands"
+      ],
+      "profileIds": [
+        "tuxca-lineno-cimarron-jalisco-colima"
       ]
     },
     {
@@ -155,12 +203,18 @@
       ],
       "cultivation": "mostly wild-harvested at high altitude; seed-only reproduction makes cultivation slow, so wild populations are under pressure — some producers now cultivate or reforest (the cited Montelobos entry is 100% cultivated)",
       "uncertainty": "Wild vs cultivated tobalá can taste noticeably different; flavor variation between batches is documented and genuine",
-      "profileIds": [
-        "mezcal-tobala-sierra-oaxaca"
-      ],
       "sourceIds": [
         "mezcalreviews-tobala-category",
         "mezcalreviews-montelobos-tobala"
+      ],
+      "traditionIds": [
+        "mezcal"
+      ],
+      "regionIds": [
+        "sierra-norte-oax"
+      ],
+      "profileIds": [
+        "mezcal-tobala-sierra-oaxaca"
       ]
     },
     {
@@ -178,12 +232,47 @@
       ],
       "cultivation": "wild-harvested after 8-12 years; a single plant yields roughly one bottle, so sustainable harvest (roots left to regrow) and conservation programs matter",
       "uncertainty": "Not an agave: Dasylirion is a related genus in the Asparagaceae family. This page keeps that distinction explicit.",
-      "profileIds": [
-        "sotol-chihuahua"
-      ],
       "sourceIds": [
         "wikipedia-sotol",
         "mezcalreviews-clande-yellow"
+      ],
+      "traditionIds": [
+        "sotol"
+      ],
+      "regionIds": [
+        "chihuahua-norte"
+      ],
+      "profileIds": [
+        "sotol-chihuahua"
+      ]
+    },
+    {
+      "id": "agave-rhodacantha",
+      "species": "Agave rhodacantha",
+      "commonNames": [
+        {
+          "name": "agave rhodacantha",
+          "region": "coastal Jalisco (raicilla)"
+        },
+        {
+          "name": "papalote / amarillo",
+          "region": "regional usage (varies by taberna)"
+        }
+      ],
+      "cultivation": "wild and cultivated; used in Costa raicilla alongside chico aguiar",
+      "uncertainty": "Common names for coastal Jalisco agaves vary by locality and taberna; the app preserves regional names without resolving species debates.",
+      "traditionIds": [
+        "raicilla"
+      ],
+      "regionIds": [
+        "costa-sur-jal"
+      ],
+      "profileIds": [
+        "raicilla-costa-jalisco"
+      ],
+      "sourceIds": [
+        "mezcalreviews-raicilla-category",
+        "wikipedia-raicilla"
       ]
     }
   ]

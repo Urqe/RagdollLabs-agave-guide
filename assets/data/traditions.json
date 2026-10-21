@@ -1,0 +1,108 @@
+{
+  "traditions": [
+    {
+      "id": "tequila",
+      "name": "Tequila",
+      "origin": "Born in and around the town of Tequila, Jalisco; the modern industry grew from valley and highland haciendas.",
+      "history": "One of México's oldest regulated spirits; the denomination of origin is limited to designated municipalities, mainly in Jalisco.",
+      "legalStatus": "Spirit with its own Denomination of Origin; blanco, reposado, añejo and extra añejo are legal classes with oak-resting minimums. Cristalino is a finishing/marketing style, not a legal class.",
+      "materials": "Blue weber agave (Agave tequilana), cultivated; 100% agave tequila uses only agave sugars.",
+      "practices": "Steam cooking in hornos or autoclaves, tahona or roller-mill extraction, fermentation, double distillation, optional oak resting.",
+      "diversity": "Valley and highland agave read editorially distinct (savory/vegetal vs sweeter/floral); class terms are spirit-specific.",
+      "plantIds": ["agave-tequilana"],
+      "regionIds": ["tequila-valley-jal", "tequila-highlands-jal"],
+      "sourceIds": ["diffords-tequila-made", "diffords-tequila-category", "wikipedia-tequila"]
+    },
+    {
+      "id": "mezcal",
+      "name": "Mezcal",
+      "origin": "Deeply rooted in Oaxaca, with production across several states.",
+      "history": "The denomination of origin permits any agave species; the category spans everything from cultivated espadín to rare wild agaves.",
+      "legalStatus": "Spirit with its own Denomination of Origin; joven/abocado, reposado and añejo are legal classes whose minimums differ from tequila's. Tobalá is a wild agave category under sustainability pressure, not a legal class of its own.",
+      "materials": "Any agave species permitted by the denomination: cultivated espadín (Agave angustifolia), wild and cultivated tobalá (Agave potatorum), among many others.",
+      "practices": "Earthen-pit roast, tahona or horse-drawn mill, wild-yeast fermentation, double distillation; clay pot stills in ancestral production, copper in artisanal; pechuga is a specific distillation tradition.",
+      "diversity": "Batch variation is genuine and large; ensambles need composition evidence; smoke depends on the cook, not the category.",
+      "plantIds": ["agave-angustifolia", "agave-potatorum"],
+      "regionIds": ["valles-centrales-oax", "sierra-norte-oax"],
+      "sourceIds": ["diffords-mezcal-what-it-is", "diffords-mezcal-categories", "mezcalreviews-tobala-category"]
+    },
+    {
+      "id": "bacanora",
+      "name": "Bacanora",
+      "origin": "A Sonoran distilling tradition from the Sierra (mountain country) of Sonora.",
+      "history": "Long a regional practice; it was legalized and protected as a denomination of origin in 2000.",
+      "legalStatus": "Spirit with its own Denomination of Origin (Sonora, since 2000); official coverage is municipal within Sonora, not the whole state.",
+      "materials": "Wild and cultivated Agave angustifolia, known locally as Pacifica or Yaquiana.",
+      "practices": "Pit roast (often mesquite-fueled), wild-yeast fermentation, double distillation in vinatas.",
+      "diversity": "Wild-harvested silvestre batches coexist with cultivated expressions; local plant names are preserved without settling the botany.",
+      "plantIds": ["agave-angustifolia"],
+      "regionIds": ["sierra-sonora"],
+      "sourceIds": ["mezcalistas-bacanora-tradition"]
+    },
+    {
+      "id": "raicilla",
+      "name": "Raicilla",
+      "origin": "A Jalisco tradition with editorially distinct Sierra and Costa styles.",
+      "history": "Historically a clandestine rural spirit in Jalisco's mountains; protected as a denomination of origin in 2019.",
+      "legalStatus": "Spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019); the declaration names specific municipalities. Costa vs Sierra is an editorial tradition split, not a legal class; reposado is a legally defined aged class under the DO.",
+      "materials": "Several agaves: maximiliana (Sierra signature), angustifolia/chico aguiar, rhodacantha and others (Costa).",
+      "practices": "Adobe-oven or pit roast, open wild-yeast fermentation in wooden vats, small-batch distillation; taberna is the local word for a small distillery.",
+      "diversity": "Sierra and Costa bottlings differ in plant, roast and still; batches vary by taberna.",
+      "plantIds": ["agave-maximiliana", "agave-angustifolia", "agave-rhodacantha"],
+      "regionIds": ["sierra-occidental-jal", "costa-sur-jal"],
+      "sourceIds": ["mezcalreviews-raicilla-category", "wikipedia-raicilla"]
+    },
+    {
+      "id": "tuxca",
+      "name": "Tuxca",
+      "origin": "A regional tradition of the Jalisco–Colima borderlands around Tuxcacuesco.",
+      "history": "A vinatero tradition predating modern categories; made in small batches from wild agaves.",
+      "legalStatus": "A regional tradition with no denomination of origin; its legal status is not equivalent to tequila or mezcal, and absence of a NOM does not mean inauthentic.",
+      "materials": "Wild agaves, often Liñeño/Cimarrón (Agave angustifolia and local relatives); ensambles vary by vinatero and batch.",
+      "practices": "Cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation.",
+      "diversity": "Batch composition is genuinely variable; species composition is recorded only when a source documents the actual batch.",
+      "plantIds": ["tuxca-wild-agaves"],
+      "regionIds": ["jalisco-colima-borderlands"],
+      "sourceIds": ["mexicanspiritsbible-tuxca"]
+    },
+    {
+      "id": "comiteco",
+      "name": "Comiteco",
+      "origin": "A sap-derived tradition from Comitán, Chiapas.",
+      "history": "Made from aguamiel collected from cultivated maguey comiteco (Agave atrovirens); the piña is never cooked.",
+      "legalStatus": "A regional tradition; not a spirit with a denomination of origin, and not legally equivalent to tequila or mezcal. Añejo here is a producer expression, not a legal class.",
+      "materials": "Aguamiel from the living Agave atrovirens; disclosed bottlings may include cane sugars — composition is verified per bottle, never assumed 100% agave.",
+      "practices": "Sap collection, fermentation, distillation in copper; blanco unaged, añejo rested in glass with white oak branches (no barrel maturation).",
+      "diversity": "Composition disclosure varies by bottling; the app records it per bottle rather than as a category claim.",
+      "plantIds": ["agave-atrovirens"],
+      "regionIds": ["comitan-chiapas"],
+      "sourceIds": ["backalley-comiteco"]
+    },
+    {
+      "id": "destilado-de-pulque",
+      "name": "Destilado de pulque",
+      "origin": "A Tlaxcala and central-México tradition rooted in the pulque heartland.",
+      "history": "Aguamiel is fermented into pulque (about 48 hours) and then distilled; the piña is never cooked.",
+      "legalStatus": "A regional tradition; no denomination of origin, and explicitly not mezcal. Fermented pulque itself is not a spirit and is not catalogued.",
+      "materials": "Aguamiel from cultivated maguey pulquero (Agave salmiana), collected daily from the living plant.",
+      "practices": "Sap collection, pulque fermentation, distillation.",
+      "diversity": "Small-producer batches; bottle-specific documentation is the rule.",
+      "plantIds": ["agave-salmiana"],
+      "regionIds": ["tlaxcala-central"],
+      "sourceIds": ["mezcalistas-juerte"]
+    },
+    {
+      "id": "sotol",
+      "name": "Sotol",
+      "origin": "A northern tradition of the Chihuahuan desert, centered in Chihuahua.",
+      "history": "Made from Dasylirion (desert spoon), a related genus in the Asparagaceae family — explicitly not an agave, though agave-adjacent.",
+      "legalStatus": "Spirit with its own Denomination of Origin (Chihuahua, Coahuila, Durango, since 2002); included here as an agave-adjacent northern tradition with its botanical distinction kept explicit.",
+      "materials": "Wild-harvested Dasylirion (commonly wheeleri, cedrosanum or leiophyllum) after 8–12 years; a single plant yields roughly one bottle.",
+      "practices": "Piña pit roast in conical ovens (or steam cooking by larger producers), wild fermentation, distillation in copper or clay; roots can be left intact so the plant regrows.",
+      "diversity": "Sustainability of harvest and conservation programs matter; the app never misclassifies Dasylirion as an agave.",
+      "plantIds": ["dasylirion-desert-spoon"],
+      "regionIds": ["chihuahua-norte"],
+      "sourceIds": ["wikipedia-sotol"]
+    }
+  ]
+}

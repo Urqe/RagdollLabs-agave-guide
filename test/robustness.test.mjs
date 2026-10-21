@@ -20,6 +20,8 @@ const profiles = (await readJson("assets/data/profiles.json")).profiles;
 const bottles = (await readJson("assets/data/bottles.json")).bottles;
 const sources = (await readJson("assets/data/sources.json")).sources;
 const plants = (await readJson("assets/data/plants.json")).plants;
+const traditions = (await readJson("assets/data/traditions.json")).traditions;
+const regions = (await readJson("assets/data/regions.json")).regions;
 const processes = (await readJson("assets/data/processes.json")).processes;
 const glossary = (await readJson("assets/data/glossary.json")).glossary;
 
@@ -153,6 +155,8 @@ test("data-loader rejects with one clear error when a file fails", async () => {
     "plants.json": JSON.stringify({ plants }),
     "processes.json": JSON.stringify({ processes }),
     "glossary.json": JSON.stringify({ glossary }),
+    "traditions.json": JSON.stringify({ traditions }),
+    "regions.json": JSON.stringify({ regions }),
   };
   const baseUrl = new URL("https://example.test/RagdollLabs-agave-guide/");
   const prevFetch = globalThis.fetch;

@@ -52,7 +52,19 @@
           "queso fresco with chile"
         ]
       },
-      "plantId": "agave-tequilana"
+      "plantId": "agave-tequilana",
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
+      ],
+      "processIds": [
+        "steam-cook",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "agave-tequilana"
+      ]
     },
     {
       "id": "mezcal-espadin-valles-centrales",
@@ -106,7 +118,19 @@
           "roasted vegetables"
         ]
       },
-      "plantId": "agave-angustifolia"
+      "plantId": "agave-angustifolia",
+      "traditionId": "mezcal",
+      "regionIds": [
+        "valles-centrales-oax"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "agave-angustifolia"
+      ]
     },
     {
       "id": "bacanora-pacifica-sierra-sonora",
@@ -159,7 +183,19 @@
           "chiltepin-sauced dishes"
         ]
       },
-      "plantId": "agave-angustifolia"
+      "plantId": "agave-angustifolia",
+      "traditionId": "bacanora",
+      "regionIds": [
+        "sierra-sonora"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "agave-angustifolia"
+      ]
     },
     {
       "id": "raicilla-maximiliana-sierra-jalisco",
@@ -212,7 +248,18 @@
           "aged cheeses"
         ]
       },
-      "plantId": "agave-maximiliana"
+      "plantId": "agave-maximiliana",
+      "traditionId": "raicilla",
+      "regionIds": [
+        "sierra-occidental-jal"
+      ],
+      "processIds": [
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "agave-maximiliana"
+      ]
     },
     {
       "id": "tuxca-lineno-cimarron-jalisco-colima",
@@ -268,7 +315,19 @@
           "colimense seafood"
         ]
       },
-      "plantId": "tuxca-wild-agaves"
+      "plantId": "tuxca-wild-agaves",
+      "traditionId": "tuxca",
+      "regionIds": [
+        "jalisco-colima-borderlands"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "tuxca-wild-agaves"
+      ]
     },
     {
       "id": "comiteco-aguamiel-chiapas",
@@ -321,7 +380,19 @@
           "coffee-adjacent desserts"
         ]
       },
-      "plantId": "agave-atrovirens"
+      "plantId": "agave-atrovirens",
+      "traditionId": "comiteco",
+      "regionIds": [
+        "comitan-chiapas"
+      ],
+      "processIds": [
+        "sap-collection",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "agave-atrovirens"
+      ]
     },
     {
       "id": "destilado-de-pulque-salmiana-tlaxcala",
@@ -377,7 +448,19 @@
           "corn-forward dishes"
         ]
       },
-      "plantId": "agave-salmiana"
+      "plantId": "agave-salmiana",
+      "traditionId": "destilado-de-pulque",
+      "regionIds": [
+        "tlaxcala-central"
+      ],
+      "processIds": [
+        "sap-collection",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "agave-salmiana"
+      ]
     },
     {
       "id": "raicilla-costa-jalisco",
@@ -433,6 +516,19 @@
         "mezcalreviews-raicilla-category",
         "wikipedia-raicilla",
         "casaendemica-brands"
+      ],
+      "traditionId": "raicilla",
+      "regionIds": [
+        "costa-sur-jal"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "agave-angustifolia",
+        "agave-rhodacantha"
       ]
     },
     {
@@ -489,6 +585,19 @@
         "diffords-tequila-category",
         "lilou-fortaleza-reposado",
         "88bamboo-fortaleza-reposado"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
+      ],
+      "processIds": [
+        "steam-cook",
+        "wild-fermentation",
+        "distillation-methods",
+        "wood-maturation"
+      ],
+      "plantIds": [
+        "agave-tequilana"
       ]
     },
     {
@@ -545,6 +654,19 @@
       "sourceIds": [
         "diffords-tequila-category",
         "whiskeyshelf-fortaleza-anejo"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
+      ],
+      "processIds": [
+        "steam-cook",
+        "wild-fermentation",
+        "distillation-methods",
+        "wood-maturation"
+      ],
+      "plantIds": [
+        "agave-tequilana"
       ]
     },
     {
@@ -600,6 +722,20 @@
         "patron-what-is-cristalino",
         "tastings-patron-cristalino",
         "tequilareport-patron-cristalino"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
+      ],
+      "processIds": [
+        "steam-cook",
+        "wild-fermentation",
+        "distillation-methods",
+        "wood-maturation",
+        "filtration"
+      ],
+      "plantIds": [
+        "agave-tequilana"
       ]
     },
     {
@@ -654,6 +790,19 @@
       "sourceIds": [
         "backalley-comiteco",
         "mezcalreviews-9guardianes-anejo"
+      ],
+      "traditionId": "comiteco",
+      "regionIds": [
+        "comitan-chiapas"
+      ],
+      "processIds": [
+        "sap-collection",
+        "wild-fermentation",
+        "distillation-methods",
+        "glass-resting"
+      ],
+      "plantIds": [
+        "agave-atrovirens"
       ]
     },
     {
@@ -709,7 +858,19 @@
         "mezcalreviews-raicilla-category",
         "mezcalreviews-lavenenosa-tabernas-reposado"
       ],
-      "plantId": "agave-maximiliana"
+      "plantId": "agave-maximiliana",
+      "traditionId": "raicilla",
+      "regionIds": [
+        "sierra-occidental-jal"
+      ],
+      "processIds": [
+        "wild-fermentation",
+        "distillation-methods",
+        "wood-maturation"
+      ],
+      "plantIds": [
+        "agave-maximiliana"
+      ]
     },
     {
       "id": "tequila-extra-anejo-highland-jalisco",
@@ -766,6 +927,19 @@
         "wikipedia-tequila",
         "diffords-tequila-category",
         "drinkhacker-eltesoro-xa"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-highlands-jal"
+      ],
+      "processIds": [
+        "steam-cook",
+        "wild-fermentation",
+        "distillation-methods",
+        "wood-maturation"
+      ],
+      "plantIds": [
+        "agave-tequilana"
       ]
     },
     {
@@ -822,6 +996,19 @@
         "diffords-mezcal-categories",
         "bbcgoodfood-ilegal-reposado",
         "bourbonbanter-ilegal"
+      ],
+      "traditionId": "mezcal",
+      "regionIds": [
+        "valles-centrales-oax"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods",
+        "wood-maturation"
+      ],
+      "plantIds": [
+        "agave-angustifolia"
       ]
     },
     {
@@ -878,6 +1065,18 @@
         "mezcalreviews-tobala-category",
         "mezcalreviews-montelobos-tobala",
         "mezcalreviews-macurichos-tobala"
+      ],
+      "traditionId": "mezcal",
+      "regionIds": [
+        "sierra-norte-oax"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "agave-potatorum"
       ]
     },
     {
@@ -933,7 +1132,19 @@
         "wikipedia-sotol",
         "mezcalreviews-clande-yellow"
       ],
-      "plantId": "dasylirion-desert-spoon"
+      "plantId": "dasylirion-desert-spoon",
+      "traditionId": "sotol",
+      "regionIds": [
+        "chihuahua-norte"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "dasylirion-desert-spoon"
+      ]
     }
   ]
 }

@@ -14,7 +14,11 @@
       "producer": "Tequila Fortaleza (Fortaleza distillery, Tequila, Jalisco)",
       "place": "Tequila, Jalisco",
       "spirit": "tequila",
-      "profileId": "tequila-blanco-valley-jalisco"
+      "profileId": "tequila-blanco-valley-jalisco",
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
+      ]
     },
     {
       "id": "lost-explorer-espadin",
@@ -30,7 +34,11 @@
       "producer": "The Lost Explorer (produced at its Oaxaca palenque)",
       "place": "Valles Centrales, Oaxaca",
       "spirit": "mezcal",
-      "profileId": "mezcal-espadin-valles-centrales"
+      "profileId": "mezcal-espadin-valles-centrales",
+      "traditionId": "mezcal",
+      "regionIds": [
+        "valles-centrales-oax"
+      ]
     },
     {
       "id": "rancho-tepua-bacanora",
@@ -45,7 +53,11 @@
         "mezcalreviews-tepua-blanco"
       ],
       "spirit": "bacanora",
-      "profileId": "bacanora-pacifica-sierra-sonora"
+      "profileId": "bacanora-pacifica-sierra-sonora",
+      "traditionId": "bacanora",
+      "regionIds": [
+        "sierra-sonora"
+      ]
     },
     {
       "id": "la-venenosa-tabernas",
@@ -60,7 +72,11 @@
         "casaendemica-brands"
       ],
       "spirit": "raicilla",
-      "profileId": "raicilla-maximiliana-sierra-jalisco"
+      "profileId": "raicilla-maximiliana-sierra-jalisco",
+      "traditionId": "raicilla",
+      "regionIds": [
+        "sierra-occidental-jal"
+      ]
     },
     {
       "id": "cielo-rojo-bacanora-blanco",
@@ -83,6 +99,10 @@
         "mezcalreviews-cielo-rojo",
         "tequilanet-cielo-rojo",
         "puntagave-cielo-rojo"
+      ],
+      "traditionId": "bacanora",
+      "regionIds": [
+        "sierra-sonora"
       ]
     },
     {
@@ -102,6 +122,10 @@
       ],
       "sourceIds": [
         "mezcalreviews-kilinga"
+      ],
+      "traditionId": "bacanora",
+      "regionIds": [
+        "sierra-sonora"
       ]
     },
     {
@@ -125,6 +149,10 @@
       "noteProfileId": "raicilla-costa-jalisco",
       "noteSourceIds": [
         "casaendemica-brands"
+      ],
+      "traditionId": "raicilla",
+      "regionIds": [
+        "costa-sur-jal"
       ]
     },
     {
@@ -141,7 +169,11 @@
         "mezcalistas-balancan-tasting",
         "mezcalreviews-balancan-tuxca"
       ],
-      "abvNote": "ABV not documented in cited sources"
+      "abvNote": "ABV not documented in cited sources",
+      "traditionId": "tuxca",
+      "regionIds": [
+        "jalisco-colima-borderlands"
+      ]
     },
     {
       "id": "nine-guardianes-comiteco-blanco",
@@ -158,7 +190,11 @@
         "backalley-comiteco",
         "mezcalreviews-9guardianes-blanco"
       ],
-      "abvNote": "ABV not documented in cited sources"
+      "abvNote": "ABV not documented in cited sources",
+      "traditionId": "comiteco",
+      "regionIds": [
+        "comitan-chiapas"
+      ]
     },
     {
       "id": "estancia-destilado-de-pulque",
@@ -173,6 +209,10 @@
       "sourceIds": [
         "skurnik-estancia",
         "mezcalreviews-estancia-pulque"
+      ],
+      "traditionId": "destilado-de-pulque",
+      "regionIds": [
+        "tlaxcala-central"
       ]
     },
     {
@@ -189,6 +229,10 @@
       "sourceIds": [
         "lilou-fortaleza-reposado",
         "88bamboo-fortaleza-reposado"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
       ]
     },
     {
@@ -204,6 +248,10 @@
       "reviewSummary": "The Whiskey Shelf describes white sugar and honey sweetness, pineapple, green grape and vegetal agave over gentle barrel fruitiness — darker and rounder than the blanco, with oak woven in rather than dominant.",
       "sourceIds": [
         "whiskeyshelf-fortaleza-anejo"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
       ]
     },
     {
@@ -221,6 +269,10 @@
         "tastings-patron-cristalino",
         "tequilareport-patron-cristalino",
         "patron-cristalino-product"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
       ]
     },
     {
@@ -238,6 +290,10 @@
       "sourceIds": [
         "mezcalreviews-9guardianes-anejo",
         "backalley-comiteco"
+      ],
+      "traditionId": "comiteco",
+      "regionIds": [
+        "comitan-chiapas"
       ]
     },
     {
@@ -255,6 +311,10 @@
       "sourceIds": [
         "mezcalreviews-lavenenosa-tabernas-reposado",
         "casaendemica-brands"
+      ],
+      "traditionId": "raicilla",
+      "regionIds": [
+        "sierra-occidental-jal"
       ]
     },
     {
@@ -271,6 +331,10 @@
       "sourceIds": [
         "mezcalistas-juerte",
         "mezcalreviews-juerte"
+      ],
+      "traditionId": "destilado-de-pulque",
+      "regionIds": [
+        "tlaxcala-central"
       ]
     },
     {
@@ -291,7 +355,9 @@
       "sourceIds": [
         "mezcalreviews-9guardianes-anejo",
         "backalley-comiteco"
-      ]
+      ],
+      "traditionId": "comiteco",
+      "regionIds": []
     },
     {
       "id": "el-tesoro-extra-anejo",
@@ -306,6 +372,10 @@
       "reviewSummary": "Drinkhacker notes that where most extra añejos are caramel-vanilla bombs, this one keeps the agave clearly in the frame — an herbal nose of rosemary, pepper and allspice that could pass for a reposado, over deep oak.",
       "sourceIds": [
         "drinkhacker-eltesoro-xa"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-highlands-jal"
       ]
     },
     {
@@ -322,6 +392,10 @@
       "sourceIds": [
         "bbcgoodfood-ilegal-reposado",
         "bourbonbanter-ilegal"
+      ],
+      "traditionId": "mezcal",
+      "regionIds": [
+        "valles-centrales-oax"
       ]
     },
     {
@@ -337,6 +411,10 @@
       "reviewSummary": "The Tequila Whisperer found it one of the most pleasing aged-mezcal surprises he had tasted; Bourbon Banter describes leaning further into caramel and spicier wood notes than the reposado, with less of the joven's smoke.",
       "sourceIds": [
         "bourbonbanter-ilegal"
+      ],
+      "traditionId": "mezcal",
+      "regionIds": [
+        "valles-centrales-oax"
       ]
     },
     {
@@ -353,6 +431,10 @@
       "reviewSummary": "Mezcal Reviews describes aromas of lemon, green pepper and pear, with citrus, basil, roasted fig, macadamia and truffle on the palate; member notes also mention bubblegum and fresh-cut grass across lots.",
       "sourceIds": [
         "mezcalreviews-montelobos-tobala"
+      ],
+      "traditionId": "mezcal",
+      "regionIds": [
+        "sierra-norte-oax"
       ]
     },
     {
@@ -369,6 +451,10 @@
       "reviewSummary": "Mezcal Reviews describes it as herbal with notes of dry soil, thyme, coriander and a touch of rosemary; a member review found it soft and delicate with solid sweetness throughout.",
       "sourceIds": [
         "mezcalreviews-macurichos-tobala"
+      ],
+      "traditionId": "mezcal",
+      "regionIds": [
+        "sierra-norte-oax"
       ]
     },
     {
@@ -390,6 +476,10 @@
       ],
       "sourceIds": [
         "mezcalreviews-del-maguey-pechuga"
+      ],
+      "traditionId": "mezcal",
+      "regionIds": [
+        "valles-centrales-oax"
       ]
     },
     {
@@ -406,6 +496,10 @@
       "reviewSummary": "A Mezcal Reviews member (batch 03) found a sweet floral fragrance with light sandalwood, a lactic palate with green peppers and sweet minerality, and an agave-rich finish.",
       "sourceIds": [
         "mezcalreviews-siete-pozos-tuxca"
+      ],
+      "traditionId": "tuxca",
+      "regionIds": [
+        "jalisco-colima-borderlands"
       ]
     },
     {
@@ -422,6 +516,10 @@
       "reviewSummary": "The cited Mezcal Reviews entry documents the multi-agave composition (cimarrón, cuaquizoca, salmiana) and the volcanic-stone-pit fermentation; tasting notes for this specific batch are not yet documented, so no flavor character is claimed here.",
       "sourceIds": [
         "mezcalreviews-indio-alonso-tuxca"
+      ],
+      "traditionId": "tuxca",
+      "regionIds": [
+        "jalisco-colima-borderlands"
       ]
     },
     {
@@ -439,6 +537,10 @@
       "sourceIds": [
         "mezcalreviews-clande-yellow",
         "wikipedia-sotol"
+      ],
+      "traditionId": "sotol",
+      "regionIds": [
+        "chihuahua-norte"
       ]
     },
     {
@@ -456,6 +558,10 @@
       "sourceIds": [
         "mezcalreviews-hacienda-chihuahua-anejo",
         "wikipedia-sotol"
+      ],
+      "traditionId": "sotol",
+      "regionIds": [
+        "chihuahua-norte"
       ]
     },
     {
@@ -472,6 +578,10 @@
       "reviewSummary": "A Mezcal Reviews member describes wet grass after a rainstorm, woody sweetness and minerality on the nose; the palate shifts between a sweet mesquite-oak note with a minty finish and a peppery cookies-and-cream note — a souvenir-worthy bottle they now save for special occasions.",
       "sourceIds": [
         "mezcalreviews-bacatt"
+      ],
+      "traditionId": "bacanora",
+      "regionIds": [
+        "sierra-sonora"
       ]
     },
     {
@@ -488,6 +598,10 @@
       "reviewSummary": "Mezcal Reviews members describe jalapeño, watermelon and cream cheese with roasted agave piña and sourdough on the nose; grilled artichoke, charred asparagus, wet stone and turkey-jerky meatiness on the palate with a light earthy smoke — a solid introduction to the category.",
       "sourceIds": [
         "mezcalreviews-sunora-blanco"
+      ],
+      "traditionId": "bacanora",
+      "regionIds": [
+        "sierra-sonora"
       ]
     },
     {
@@ -504,6 +618,10 @@
       "reviewSummary": "Mezcal Reviews describes it as briny and viscous with fruit and agave sugar; a member found cotton candy on the nose with orange fancy-toothpaste and buttercream notes and a slight sour finish.",
       "sourceIds": [
         "mezcalreviews-la-nina-bacanora"
+      ],
+      "traditionId": "bacanora",
+      "regionIds": [
+        "sierra-sonora"
       ]
     },
     {
@@ -520,6 +638,10 @@
       "sourceIds": [
         "tastings-el-acabo-raicilla",
         "forbes-bti-2025"
+      ],
+      "traditionId": "raicilla",
+      "regionIds": [
+        "sierra-occidental-jal"
       ]
     }
   ]

@@ -211,6 +211,10 @@ for (const [name, arr] of [["profiles", profiles], ["bottles", bottles], ["sourc
 const { plants } = await readJson("assets/data/plants.json");
 const { processes } = await readJson("assets/data/processes.json");
 const { glossary } = await readJson("assets/data/glossary.json");
+const { regions } = await readJson("assets/data/regions.json");
+const { traditions } = await readJson("assets/data/traditions.json");
+const regionIdSet = new Set(regions.map((r) => r.id));
+const traditionIdSet = new Set(VALID_SPIRITS);
 if (!Array.isArray(plants) || plants.length === 0) fail("plants.json must contain a non-empty plants array");
 // Profiles link to a real plant entry (guide-to-profile routing + drift guard).
 const plantIdSet = new Set(plants.map((x) => x.id));
@@ -249,6 +253,127 @@ for (const proc of processes) {
   for (const sid of proc.sourceIds || []) {
     if (!sourceIds.has(sid)) fail(`${label}: sourceId ${sid} not in sources.json`);
   }
+}
+// Plants: normalized cross-references (Release 15 interconnected model).
+const processIdSet = new Set(processes.map((x) => x.id));
+for (const plant of plants) {
+  const label = `plant ${plant.id}`;
+  for (const tid of plant.traditionIds || []) {
+    if (!VALID_SPIRITS.has(tid)) fail(`${label}: traditionId ${tid} is not a known tradition id`);
+  }
+  for (const rid of plant.regionIds || []) {
+    if (!regionIdSet.has(rid)) fail(`${label}: regionId ${rid} not in regions.json`);
+  }
+}
+// Profiles: normalized cross-references must point at real entities.
+for (const p of profiles) {
+  const label = `profile ${p.id}`;
+  if (!traditionIdSet.has(p.traditionId)) fail(`${label}: traditionId ${p.traditionId} not in traditions.json`);
+  if (!Array.isArray(p.regionIds) || p.regionIds.length === 0) fail(`${label}: regionIds required`);
+  for (const rid of p.regionIds) {
+    if (!regionIdSet.has(rid)) fail(`${label}: regionId ${rid} not in regions.json`);
+  }
+  if (!Array.isArray(p.processIds) || p.processIds.length === 0) fail(`${label}: processIds required`);
+  for (const pid of p.processIds) {
+    if (!processIdSet.has(pid)) fail(`${label}: processId ${pid} not in processes.json`);
+  }
+  if (!Array.isArray(p.plantIds) || p.plantIds.length === 0) fail(`${label}: plantIds required`);
+  for (const pid of p.plantIds) {
+    if (!plantIdSet.has(pid)) fail(`${label}: plantId ${pid} not in plants.json`);
+  }
+  // Profile regions must belong to the same state as the profile.
+  for (const rid of p.regionIds) {
+    const region = regions.find((r) => r.id === rid);
+    if (region && region.stateId !== p.stateId) {
+      fail(`${label}: region ${rid} is in ${region.stateId}, profile claims ${p.stateId}`);
+    }
+  }
+  // Regions must practice the profile's tradition.
+  for (const rid of p.regionIds) {
+    const region = regions.find((r) => r.id === rid);
+    if (region && !region.traditionIds.includes(p.traditionId)) {
+      fail(`${label}: region ${rid} does not list tradition ${p.traditionId}`);
+    }
+  }
+}
+// Bottles: normalized cross-references.
+for (const b of bottles) {
+  const label = `bottle ${b.id}`;
+  if (!traditionIdSet.has(b.traditionId)) fail(`${label}: traditionId ${b.traditionId} not in traditions.json`);
+  if (!Array.isArray(b.regionIds)) fail(`${label}: regionIds required (may be empty when no profile is covered)`);
+  for (const rid of b.regionIds) {
+    if (!regionIdSet.has(rid)) fail(`${label}: regionId ${rid} not in regions.json`);
+  }
+  // A bottle's tradition must match its mapped profile's tradition.
+  if (b.profileId != null) {
+    const prof = profiles.find((p) => p.id === b.profileId);
+    if (prof && prof.traditionId !== b.traditionId) {
+      fail(`${label}: tradition ${b.traditionId} disagrees with profile ${prof.id} tradition ${prof.traditionId}`);
+    }
+    const profRegionSet = new Set(prof.regionIds);
+    for (const rid of b.regionIds) {
+      if (!profRegionSet.has(rid)) fail(`${label}: region ${rid} is not one of profile ${prof.id}'s regions`);
+    }
+  }
+}
+// Regions: valid state ids, known traditions/plants/processes, no state-level
+// whole-state legal-zone claims.
+for (const region of regions) {
+  const label = `region ${region.id ?? "(missing id)"}`;
+  if (!region.id || !ID_PATTERN.test(region.id)) fail(`${label}: id must be kebab-case`);
+  if (!VALID_STATES.has(region.stateId)) fail(`${label}: unknown stateId ${region.stateId}`);
+  if (region.type !== "state" && region.type !== "subregion" && region.type !== "municipality") {
+    fail(`${label}: type must be state, subregion or municipality`);
+  }
+  if (region.type === "state" && !/\bnot a legal|whole state\b/i.test(region.distinctions || "")) {
+    // states are acceptable only with explicit non-legal framing; nothing today
+  }
+  for (const tid of region.traditionIds || []) {
+    if (!VALID_SPIRITS.has(tid)) fail(`${label}: traditionId ${tid} not a known tradition`);
+  }
+  for (const pid of region.plantIds || []) {
+    if (!plantIdSet.has(pid)) fail(`${label}: plantId ${pid} not in plants.json`);
+  }
+  for (const pid of region.processIds || []) {
+    if (!processIdSet.has(pid)) fail(`${label}: processId ${pid} not in processes.json`);
+  }
+}
+// Traditions: stable ids matching the spirit vocabulary, real plants/regions/sources.
+for (const trad of traditions) {
+  const label = `tradition ${trad.id ?? "(missing id)"}`;
+  if (!trad.id || !ID_PATTERN.test(trad.id)) fail(`${label}: id must be kebab-case`);
+  if (!VALID_SPIRITS.has(trad.id)) fail(`${label}: id must be a known spirit id`);
+  if (!trad.name || typeof trad.name !== "string") fail(`${label}: name required`);
+  for (const field of ["origin", "history", "legalStatus", "materials", "practices", "diversity"]) {
+    if (!trad[field] || typeof trad[field] !== "string") fail(`${label}: ${field} required`);
+  }
+  for (const pid of trad.plantIds || []) {
+    if (!plantIdSet.has(pid)) fail(`${label}: plantId ${pid} not in plants.json`);
+  }
+  for (const rid of trad.regionIds || []) {
+    if (!regionIdSet.has(rid)) fail(`${label}: regionId ${rid} not in regions.json`);
+  }
+  for (const sid of trad.sourceIds || []) {
+    if (!sourceIds.has(sid)) fail(`${label}: sourceId ${sid} not in sources.json`);
+  }
+}
+// Tradition coverage: every VALID_SPIRIT used by a profile must have a tradition entity.
+for (const p of profiles) {
+  if (!traditions.some((t) => t.id === p.traditionId)) fail(`profile ${p.id}: no tradition entity for ${p.traditionId}`);
+}
+// Duplicate ids for the new entity files.
+for (const [name, arr] of [["regions", regions], ["traditions", traditions]]) {
+  const ids = arr.map((x) => x.id);
+  const dupes = ids.filter((id, i) => ids.indexOf(id) !== i);
+  if (dupes.length) fail(`${name}: duplicate ids ${[...new Set(dupes)].join(", ")}`);
+}
+// No duplicated descriptions across data files: tradition legal-status text
+// must not be copied verbatim into any profile or bottle field.
+for (const trad of traditions) {
+  const snippet = (trad.legalStatus || "").slice(0, 60);
+  if (snippet.length < 30) continue;
+  const blob = JSON.stringify([...profiles, ...bottles]);
+  if (blob.includes(snippet)) fail(`tradition ${trad.id}: legalStatus text duplicated in profiles/bottles`);
 }
 for (const term of glossary) {
   const label = `glossary term ${term.term ?? "(missing)"}`;
