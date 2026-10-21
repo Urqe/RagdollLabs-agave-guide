@@ -61,7 +61,8 @@
       "sourceIds": [
         "diffords-mezcal-what-it-is",
         "mezcalistas-bacanora-tradition",
-        "mezcalistas-tepua-tasting"
+        "mezcalistas-tepua-tasting",
+        "mezcalistas-wild-agave-sustainability"
       ],
       "traditionIds": [
         "mezcal",
@@ -83,7 +84,7 @@
       "whereItGrows": "Valles Centrales of Oaxaca (cultivated), the Sierra de Sonora (wild), and coastal Jalisco (wild and cultivated).",
       "harvestProduction": "Cultivated at scale in Oaxaca; wild-harvested in Sonora. Cooked (pit roast or steam), never sap-collected.",
       "sensoryTendencies": "Editorial guidance: espadín mezcals read roast-forward; bacanora's Pacifica adds Sonoran herbality; flavors differ by place and process, not by the name alone.",
-      "sustainability": "Whether Sonora's Pacifica/Yaquiana is the same plant as espadín or a distinct local variety is debated; this guide preserves the regional names without settling the botany."
+      "sustainability": "Wild harvest pressures vary sharply by region: Sonora's bacanora depends on wild yaquiana/Pacifica populations, and mezcal's growth has increased demand on wild-harvested angustifolia relatives elsewhere. Where espadín is cultivated at scale (Oaxaca) the pressure is far lower. Whether Sonora's Pacifica/Yaquiana is the same plant as espadín or a distinct local variety remains debated; this guide preserves the regional names without settling the botany. (Sustainability reporting on wild agave harvest is an active topic in the category press, e.g. Mezcalistas, reviewed 2026-10-21.)"
     },
     {
       "id": "agave-maximiliana",
@@ -102,7 +103,8 @@
       "uncertainty": "Local name overlaps with other species in other regions; common names are not globally unique identifiers.",
       "sourceIds": [
         "mezcalreviews-raicilla-category",
-        "wikipedia-raicilla"
+        "wikipedia-raicilla",
+        "mezcalistas-wild-agave-sustainability"
       ],
       "traditionIds": [
         "raicilla"
@@ -118,7 +120,7 @@
       "whereItGrows": "Mountain country of Jalisco's Sierra Occidental, around La Vieja and the Sierra de Talpa.",
       "harvestProduction": "Wild-harvested; roasted in above-ground adobe ovens, fermented with wild yeasts, distilled in small batches.",
       "sensoryTendencies": "Editorial guidance: Sierra raicilla reads herbal and rustic; wild harvest means genuine batch variation.",
-      "sustainability": "Wild-harvested; local name overlaps with other species in other regions, which is why this guide records names with their regions."
+      "sustainability": "Wild-harvested in Jalisco's Sierra Occidental; raicilla's growing demand puts pressure on wild maximiliana populations, and some producers report replanting programs, though documented evidence is limited. Treated here as a wild-harvest sustainability concern, not a verified producer claim."
     },
     {
       "id": "agave-atrovirens",
@@ -235,7 +237,8 @@
       "uncertainty": "Wild vs cultivated tobalá can taste noticeably different; flavor variation between batches is documented and genuine",
       "sourceIds": [
         "mezcalreviews-tobala-category",
-        "mezcalreviews-montelobos-tobala"
+        "mezcalreviews-montelobos-tobala",
+        "mezcalistas-wild-agave-sustainability"
       ],
       "traditionIds": [
         "mezcal"
@@ -250,7 +253,7 @@
       "whereItGrows": "High mountains of Oaxaca's Sierra Norte (and beyond); 12–15 year maturity at altitude.",
       "harvestProduction": "Wild-harvested traditionally; some producers now cultivate or reforest. Pit roast, stone mill, wild fermentation; clay or copper stills.",
       "sensoryTendencies": "Editorial guidance: typically lighter and more floral than espadín; a cited blind tasting of eight tobalás found no single common thread — wild and cultivated batches taste noticeably different.",
-      "sustainability": "Seed-only reproduction makes cultivation slow, so wild populations are under pressure; some producers cultivate or reforest (the cited Montelobos entry is 100% cultivated)."
+      "sustainability": "Seed-only reproduction makes cultivation slow, so wild populations are under pressure from tobalá demand; some producers cultivate or reforest (the cited Montelobos entry is 100% cultivated). As a wild-harvested species with a long maturation cycle, tobala is one of the most-discussed sustainability cases in agave spirits (category reporting reviewed 2026-10-21)."
     },
     {
       "id": "dasylirion-desert-spoon",

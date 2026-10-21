@@ -404,11 +404,11 @@ Applied (see Release 24 notes in RELEASE_NOTES.md). Audit comparison summary acc
 
 Goal: deepen coverage where it adds educational value, prioritizing evidence quality over catalogue size.
 
-- [ ] Expand representative plant, region and spirit tradition coverage; each new entry must add meaningful insight or improve discovery, not just quantity.
-- [ ] Add deeper production, historical and sustainability content with proper attribution; sustainability claims require specific dated evidence.
-- [ ] Improve bottle-specific information where credible documentation exists: brand, expression, actual producer, origin, classification, documented plant composition, production/batch details, ABV, bottle-specific tasting notes with disclosure when unavailable, and relationship to the style profile.
-- [ ] Link bottles to their plants, regions and traditions; keep the catalogue educational rather than commercial.
-- [ ] Keep application scope descriptions consistent with actual coverage, including non-agave spirits.
+- [x] Expand representative plant, region and spirit tradition coverage; each new entry must add meaningful insight or improve discovery, not just quantity.
+- [x] Add deeper production, historical and sustainability content with proper attribution; sustainability claims require specific dated evidence.
+- [x] Improve bottle-specific information where credible documentation exists: brand, expression, actual producer, origin, classification, documented plant composition, production/batch details, ABV, bottle-specific tasting notes with disclosure when unavailable, and relationship to the style profile.
+- [x] Link bottles to their plants, regions and traditions; keep the catalogue educational rather than commercial.
+- [x] Keep application scope descriptions consistent with actual coverage, including non-agave spirits.
 
 Acceptance: new content passes the same evidence and editorial gates as existing content; the catalogue remains distinct from editorial style profiles.
 

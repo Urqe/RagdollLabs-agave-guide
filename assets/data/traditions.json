@@ -9,9 +9,19 @@
       "materials": "Blue weber agave (Agave tequilana), cultivated; 100% agave tequila uses only agave sugars.",
       "practices": "Steam cooking in hornos or autoclaves, tahona or roller-mill extraction, fermentation, double distillation, optional oak resting.",
       "diversity": "Valley and highland agave read editorially distinct (savory/vegetal vs sweeter/floral); class terms are spirit-specific.",
-      "plantIds": ["agave-tequilana"],
-      "regionIds": ["tequila-valley-jal", "tequila-highlands-jal"],
-      "sourceIds": ["diffords-tequila-made", "diffords-tequila-category", "wikipedia-tequila"]
+      "plantIds": [
+        "agave-tequilana"
+      ],
+      "regionIds": [
+        "tequila-valley-jal",
+        "tequila-highlands-jal"
+      ],
+      "sourceIds": [
+        "diffords-tequila-made",
+        "diffords-tequila-category",
+        "wikipedia-tequila"
+      ],
+      "sustainability": "Agave tequilana is cultivated at scale, so tequila does not share the wild-population pressure of wild-harvested traditions; documented industry concerns center on agave price cycles and the push for faster industrial cooking rather than species pressure."
     },
     {
       "id": "mezcal",
@@ -22,9 +32,20 @@
       "materials": "Any agave species permitted by the denomination: cultivated espadín (Agave angustifolia), wild and cultivated tobalá (Agave potatorum), among many others.",
       "practices": "Earthen-pit roast, tahona or horse-drawn mill, wild-yeast fermentation, double distillation; clay pot stills in ancestral production, copper in artisanal; pechuga is a specific distillation tradition.",
       "diversity": "Batch variation is genuine and large; ensambles need composition evidence; smoke depends on the cook, not the category.",
-      "plantIds": ["agave-angustifolia", "agave-potatorum"],
-      "regionIds": ["valles-centrales-oax", "sierra-norte-oax"],
-      "sourceIds": ["diffords-mezcal-what-it-is", "diffords-mezcal-categories", "mezcalreviews-tobala-category"]
+      "plantIds": [
+        "agave-angustifolia",
+        "agave-potatorum"
+      ],
+      "regionIds": [
+        "valles-centrales-oax",
+        "sierra-norte-oax"
+      ],
+      "sourceIds": [
+        "diffords-mezcal-what-it-is",
+        "diffords-mezcal-categories",
+        "mezcalreviews-tobala-category"
+      ],
+      "sustainability": "Mezcal spans cultivated espadín and many wild-harvested species; sustainability pressure concentrates on the wild-harvested end of the range (see the plant pages for species-level detail)."
     },
     {
       "id": "bacanora",
@@ -35,9 +56,17 @@
       "materials": "Wild and cultivated Agave angustifolia, known locally as Pacifica or Yaquiana.",
       "practices": "Pit roast (often mesquite-fueled), wild-yeast fermentation, double distillation in vinatas.",
       "diversity": "Wild-harvested silvestre batches coexist with cultivated expressions; local plant names are preserved without settling the botany.",
-      "plantIds": ["agave-angustifolia"],
-      "regionIds": ["sierra-sonora"],
-      "sourceIds": ["mezcalistas-bacanora-tradition"]
+      "plantIds": [
+        "agave-angustifolia"
+      ],
+      "regionIds": [
+        "sierra-sonora"
+      ],
+      "sourceIds": [
+        "mezcalistas-bacanora-tradition",
+        "mezcalistas-wild-agave-sustainability"
+      ],
+      "sustainability": "Bacanora relies on wild yaquiana/Pacifica populations in the Sonoran Sierra; harvest pressure on wild agave is the tradition's main sustainability topic (category reporting reviewed 2026-10-21)."
     },
     {
       "id": "raicilla",
@@ -48,9 +77,21 @@
       "materials": "Several agaves: maximiliana (Sierra signature), angustifolia/chico aguiar, rhodacantha and others (Costa).",
       "practices": "Adobe-oven or pit roast, open wild-yeast fermentation in wooden vats, small-batch distillation; taberna is the local word for a small distillery.",
       "diversity": "Sierra and Costa bottlings differ in plant, roast and still; batches vary by taberna.",
-      "plantIds": ["agave-maximiliana", "agave-angustifolia", "agave-rhodacantha"],
-      "regionIds": ["sierra-occidental-jal", "costa-sur-jal"],
-      "sourceIds": ["mezcalreviews-raicilla-category", "wikipedia-raicilla"]
+      "plantIds": [
+        "agave-maximiliana",
+        "agave-angustifolia",
+        "agave-rhodacantha"
+      ],
+      "regionIds": [
+        "sierra-occidental-jal",
+        "costa-sur-jal"
+      ],
+      "sourceIds": [
+        "mezcalreviews-raicilla-category",
+        "wikipedia-raicilla",
+        "mezcalistas-wild-agave-sustainability"
+      ],
+      "sustainability": "Parts of the raicilla range depend on wild-harvested maximiliana and related species; sustainability claims vary by producer and are presented only where documented."
     },
     {
       "id": "tuxca",
@@ -61,9 +102,15 @@
       "materials": "Wild agaves, often Liñeño/Cimarrón (Agave angustifolia and local relatives); ensambles vary by vinatero and batch.",
       "practices": "Cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation.",
       "diversity": "Batch composition is genuinely variable; species composition is recorded only when a source documents the actual batch.",
-      "plantIds": ["tuxca-wild-agaves"],
-      "regionIds": ["jalisco-colima-borderlands"],
-      "sourceIds": ["mexicanspiritsbible-tuxca"]
+      "plantIds": [
+        "tuxca-wild-agaves"
+      ],
+      "regionIds": [
+        "jalisco-colima-borderlands"
+      ],
+      "sourceIds": [
+        "mexicanspiritsbible-tuxca"
+      ]
     },
     {
       "id": "comiteco",
@@ -74,9 +121,15 @@
       "materials": "Aguamiel from the living Agave atrovirens; disclosed bottlings may include cane sugars — composition is verified per bottle, never assumed 100% agave.",
       "practices": "Sap collection, fermentation, distillation in copper; blanco unaged, añejo rested in glass with white oak branches (no barrel maturation).",
       "diversity": "Composition disclosure varies by bottling; the app records it per bottle rather than as a category claim.",
-      "plantIds": ["agave-atrovirens"],
-      "regionIds": ["comitan-chiapas"],
-      "sourceIds": ["backalley-comiteco"]
+      "plantIds": [
+        "agave-atrovirens"
+      ],
+      "regionIds": [
+        "comitan-chiapas"
+      ],
+      "sourceIds": [
+        "backalley-comiteco"
+      ]
     },
     {
       "id": "destilado-de-pulque",
@@ -87,9 +140,15 @@
       "materials": "Aguamiel from cultivated maguey pulquero (Agave salmiana), collected daily from the living plant.",
       "practices": "Sap collection, pulque fermentation, distillation.",
       "diversity": "Small-producer batches; bottle-specific documentation is the rule.",
-      "plantIds": ["agave-salmiana"],
-      "regionIds": ["tlaxcala-central"],
-      "sourceIds": ["mezcalistas-juerte"]
+      "plantIds": [
+        "agave-salmiana"
+      ],
+      "regionIds": [
+        "tlaxcala-central"
+      ],
+      "sourceIds": [
+        "mezcalistas-juerte"
+      ]
     },
     {
       "id": "sotol",
@@ -100,9 +159,15 @@
       "materials": "Wild-harvested Dasylirion (commonly wheeleri, cedrosanum or leiophyllum) after 8–12 years; a single plant yields roughly one bottle.",
       "practices": "Piña pit roast in conical ovens (or steam cooking by larger producers), wild fermentation, distillation in copper or clay; roots can be left intact so the plant regrows.",
       "diversity": "Sustainability of harvest and conservation programs matter; the app never misclassifies Dasylirion as an agave.",
-      "plantIds": ["dasylirion-desert-spoon"],
-      "regionIds": ["chihuahua-norte"],
-      "sourceIds": ["wikipedia-sotol"]
+      "plantIds": [
+        "dasylirion-desert-spoon"
+      ],
+      "regionIds": [
+        "chihuahua-norte"
+      ],
+      "sourceIds": [
+        "wikipedia-sotol"
+      ]
     }
   ]
 }

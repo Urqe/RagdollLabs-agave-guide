@@ -93,7 +93,8 @@ test/                       node:test suites (jsdom)
   bottles; accents and case are normalized and common aliases are supported
   (e.g. “espadin” finds espadín).
 - Catalogue (`#/catalogue`) lists every bottle with brand, producer and
-  expression as separate facts, exact-expression-first search, a brand
+  expression as separate facts, plus label classification and documented
+  plant composition where verified; exact-expression-first search, a brand
   directory, and explicit "not yet documented" labels on entries without
   review or profile coverage. Profiles keep one featured example; extra
   bottles sit behind a "See more bottles" expansion.

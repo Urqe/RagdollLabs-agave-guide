@@ -412,6 +412,83 @@
       "url": "https://www.forbes.com/sites/joemicallef/2025/06/18/the-worlds-top-mezcal-according-to-the-beverage-testing-institute/",
       "kind": "style",
       "verified": "2026-10-20"
+    },
+    {
+      "id": "bacanoraaguamiel-producer",
+      "title": "Aguamiel Bacanora — producer site (Suaqui Grande, Sonora; DO and production)",
+      "url": "https://www.bacanoraaguamiel.com/en",
+      "kind": "producer",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "mezcalreviews-aguamiel-bacanora",
+      "title": "Mezcal Reviews — Aguamiel Bacanora Blanco (member tasting notes)",
+      "url": "https://www.mezcalreviews.com/mezcal/aguamiel-bacanora-blanco/",
+      "kind": "review",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "diffords-don-julio-blanco",
+      "title": "Difford's Guide — Don Julio Blanco 100% agave tequila",
+      "url": "https://www.diffordsguide.com/beer-wine-spirits/1318/don-julio-blanco",
+      "kind": "review",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "donjulio-producer",
+      "title": "Don Julio — brand site (Atotonilco el Alto distillery history)",
+      "url": "https://www.donjulio.com/",
+      "kind": "producer",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "rumhowler-cuervo-tradicional-reposado",
+      "title": "The Rum Howler Blog — Jose Cuervo Tradicional Reposado review",
+      "url": "https://therumhowlerblog.com/tequila-reviews-2/jose-cuervo-tradicional-reposado-2/",
+      "kind": "review",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "cuervo-tradicional-producer",
+      "title": "Jose Cuervo Tradicional — brand site (La Rojeña, 1795 heritage)",
+      "url": "https://www.cuervo.com/en/tradicional",
+      "kind": "producer",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "liquorcom-patron-silver",
+      "title": "Liquor.com — Patrón Silver Tequila Review",
+      "url": "https://www.liquor.com/patron-silver-tequila-review-5219171",
+      "kind": "review",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "diffords-patron-silver",
+      "title": "Difford's Guide — Patrón Silver tequila (NOM 1492, Atotonilco el Alto)",
+      "url": "https://www.diffordsguide.com/beer-wine-spirits/204/patron-silver-tequila",
+      "kind": "producer",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "bevvy-casa-dragones-blanco",
+      "title": "Bevvy — Casa Dragones Blanco Tequila Review",
+      "url": "https://bevvy.co/articles/casa-dragones-blanco-tequila-review/10385",
+      "kind": "review",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "casadragones-producer",
+      "title": "Casa Dragones — brand site (small-batch tequila, Maestra Tequilera)",
+      "url": "https://casadragones.com/",
+      "kind": "producer",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "mezcalistas-wild-agave-sustainability",
+      "title": "Mezcalistas — wild agave harvesting and sustainability reporting",
+      "url": "https://www.mezcalistas.com/sustainability/",
+      "kind": "style",
+      "verified": "2026-10-21"
     }
   ]
 }

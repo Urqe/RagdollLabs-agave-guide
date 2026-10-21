@@ -1393,3 +1393,61 @@ preservation, and focus after view changes.
 - Perspective ranking for cross-tradition trios (carried over from
   Release 23).
 - Native Safari/VoiceOver checks still unverified in this environment.
+
+## Release 25 — Editorial Enrichment & Bottle Depth
+
+Feature/content release per the plan: deeper coverage where it adds
+educational value, prioritizing evidence quality over catalogue size.
+
+### What changed
+
+- **Five new bottles, each with one producer page and one credible
+  expression-matched review** (per the review-provenance rules):
+  - **Aguamiel Bacanora Blanco** (41% ABV, Suaqui Grande, Sonora;
+    wild yaquiana/Pacifica agave) — the owner-backlog request,
+    mapped to the bacanora profile.
+  - **Don Julio Blanco** (38% ABV, Atotonilco el Alto highlands) —
+    review by Difford's Guide; honestly marked profile-not-covered
+    rather than mis-mapped onto the Tequila Valley blanco profile.
+  - **Jose Cuervo Tradicional Reposado** (40% ABV, La Rojeña, Tequila)
+    — review by The Rum Howler (a dated 2022 re-review noting held-back
+    character); mapped to the valley reposado profile.
+  - **PATRÓN Silver** (40% ABV, Hacienda Patrón NOM 1492, highlands) —
+    review by Liquor.com; profile-not-covered (highlands), with the
+    brand spelling matched to the existing cristalino entry.
+  - **Casa Dragones Blanco** (40% ABV, Tequila) — review by Bevvy;
+    mapped to the valley blanco profile. Contested process claims
+    (diffuser vs. brand account) are omitted per the editorial policy.
+- **New bottle data fields, rendered in the catalogue and validated:**
+  `classification` (legal category/class) and `plantComposition`
+  (documented agave composition), with full EN/ES locale support and
+  validator rules. Highland blancos carry explicit profile-not-covered
+  disclosures rather than borrowed character.
+- **Deeper sustainability content with dated evidence:** the wild-harvested
+  plant pages (angustifolia, potatorum, maximiliana) now explain
+  region-specific harvest pressure and cite a category sustainability
+  source (reviewed 2026-10-21); tradition pages (tequila, bacanora,
+  mezcal, raicilla) gained a Sustainability section distinguishing
+  cultivated-scale from wild-harvest pressure, in EN and ES.
+- **Backlog maintained:** the Aguamiel item is fulfilled and removed;
+  the Don Julio/Cuervo/Casa Dragones producer entries are marked
+  partially covered with remaining expressions still gated on
+  expression-matched reviews.
+- README catalogue description now mentions the classification and
+  plant-composition facts.
+
+### Checks run
+
+- `npm run validate` — schema plus 210 node:test/jsdom suites (4 new
+  Release 25 tests: bottle field coverage, honest uncovered highlands,
+  rendered classification/plant facts, sustainability sourcing, and ES
+  translation completeness). All passing.
+- Validator additions: `classification`, `plantComposition` and
+  tradition `sustainability` contracts enforced.
+
+### Remaining issues / deferred
+
+- Highland tequila blanco remains without its own style profile; the
+  two highland bottles carry explicit coverage disclosures until a
+  profile is authored.
+- Native-device rendering still unverified in this environment.

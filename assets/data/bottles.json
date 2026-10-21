@@ -643,6 +643,125 @@
       "regionIds": [
         "sierra-occidental-jal"
       ]
+    },
+    {
+      "id": "aguamiel-bacanora-blanco",
+      "brand": "Aguamiel",
+      "producer": "Aguamiel Bacanora (Quintana family vináta, Suaqui Grande, Sonora)",
+      "expression": "Bacanora Blanco",
+      "abv": 41,
+      "spirit": "bacanora",
+      "place": "Suaqui Grande, Sonora",
+      "classification": "Bacanora — blanco (unaged); Sonora denomination of origin",
+      "plantComposition": "100% wild agave yaquiana/Pacifica (the Sonoran form of Agave angustifolia), per the producer",
+      "profileId": "bacanora-pacifica-sierra-sonora",
+      "reviewSummary": "A Mezcal Reviews member tasting describes warm agave with vanilla cake and slight fruit (pineapple, banana cream) on the nose, then a sweet, juicy palate with whipped-cream, cake-batter and custard notes against slight grass, smoke and salinity.",
+      "sourceIds": [
+        "bacanoraaguamiel-producer",
+        "mezcalreviews-aguamiel-bacanora"
+      ],
+      "traditionId": "bacanora",
+      "regionIds": [
+        "sierra-sonora"
+      ]
+    },
+    {
+      "id": "don-julio-blanco",
+      "brand": "Don Julio",
+      "producer": "Don Julio (Tequila Tres Magueyes, Atotonilco el Alto, Jalisco)",
+      "expression": "Blanco Tequila",
+      "abv": 38,
+      "spirit": "tequila",
+      "place": "Atotonilco el Alto, Jalisco (highlands)",
+      "classification": "Tequila — 100% agave blanco, unaged",
+      "plantComposition": "100% blue weber agave (Agave tequilana)",
+      "profileId": null,
+      "reviewSummary": "Difford's Guide describes it as un-aged, briefly rested in inert containers before bottling — a highland blanco in the modern premium style.",
+      "editorialNote": "A highlands blanco rather than a Tequila Valley one: expect the brighter, fruitier highland reading of the same legal class.",
+      "noteProfileId": "tequila-blanco-valley-jalisco",
+      "noteSourceIds": [
+        "diffords-don-julio-blanco",
+        "donjulio-producer"
+      ],
+      "sourceIds": [
+        "donjulio-producer",
+        "diffords-don-julio-blanco"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [],
+      "coverage": [
+        "profile-not-covered"
+      ]
+    },
+    {
+      "id": "jose-cuervo-tradicional-reposado",
+      "brand": "Jose Cuervo",
+      "producer": "Jose Cuervo (La Rojeña distillery, Tequila, Jalisco)",
+      "expression": "Tradicional Reposado",
+      "abv": 40,
+      "spirit": "tequila",
+      "place": "Tequila, Jalisco",
+      "classification": "Tequila — 100% agave reposado (oak-rested)",
+      "plantComposition": "100% blue weber agave (Agave tequilana)",
+      "profileId": "tequila-reposado-valley-jalisco",
+      "reviewSummary": "The Rum Howler finds the fruitiness, spice and pepper held back compared with earlier bottlings — still a pleasant, easy reposado, but with less punchy agave than the reviewer wants in a sipped tequila.",
+      "sourceIds": [
+        "cuervo-tradicional-producer",
+        "rumhowler-cuervo-tradicional-reposado"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
+      ]
+    },
+    {
+      "id": "patron-silver",
+      "brand": "PATRÓN",
+      "producer": "PATRÓN (Hacienda Patrón, Atotonilco el Alto, Jalisco)",
+      "expression": "Silver Tequila",
+      "abv": 40,
+      "spirit": "tequila",
+      "place": "Atotonilco el Alto, Jalisco (highlands)",
+      "classification": "Tequila — 100% agave blanco, unaged",
+      "plantComposition": "100% blue weber agave (Agave tequilana)",
+      "profileId": null,
+      "reviewSummary": "Liquor.com finds a lovely vegetal aroma of cooked agave — grass, green peppers, a little earth and eucalyptus — with flavors of agave, eucalyptus and white pepper leading to a smooth, savory finish; fine neat and in cocktails, if priced as a premium.",
+      "editorialNote": "A highlands blanco: the same unaged class as the featured valley example, with the highlands' fruitier, more citric reading.",
+      "noteProfileId": "tequila-blanco-valley-jalisco",
+      "noteSourceIds": [
+        "liquorcom-patron-silver",
+        "diffords-patron-silver"
+      ],
+      "sourceIds": [
+        "diffords-patron-silver",
+        "liquorcom-patron-silver"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [],
+      "coverage": [
+        "profile-not-covered"
+      ]
+    },
+    {
+      "id": "casa-dragones-blanco",
+      "brand": "Casa Dragones",
+      "producer": "Casa Dragones (small-batch distilling, Tequila, Jalisco)",
+      "expression": "Blanco Tequila",
+      "abv": 40,
+      "spirit": "tequila",
+      "place": "Tequila, Jalisco",
+      "classification": "Tequila — 100% blue agave blanco, unaged",
+      "plantComposition": "100% blue weber agave (Agave tequilana), per the brand",
+      "profileId": "tequila-blanco-valley-jalisco",
+      "reviewSummary": "Bevvy's review finds fresh grapefruit and green apple on the nose, agave forward on the sip with black pepper, cloves, mint and juicy tropical fruit, finishing light and bright with grapefruit, pepper and cooling herbs.",
+      "sourceIds": [
+        "casadragones-producer",
+        "bevvy-casa-dragones-blanco"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
+      ]
     }
   ]
 }
