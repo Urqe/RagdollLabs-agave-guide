@@ -196,3 +196,47 @@ test("same-route re-render (language toggle) does not scroll to the heading", as
     app.cleanup();
   }
 });
+
+test("switching language keeps expanded disclosures open", async () => {
+  const app = await bootApp("#/profile/bacanora-pacifica-sierra-sonora", { withHeader: true });
+  try {
+    // Open the "See more bottles" disclosure (this profile has 5 more).
+    const more = app.document.querySelector("details.more-bottles");
+    assert.ok(more, "more-bottles disclosure renders");
+    more.open = true;
+    // Also open a source disclosure to test multiple simultaneous restores.
+    const sources = app.document.querySelector("details.profile-learning");
+    if (sources) sources.open = true;
+
+    app.scrollCalls.length = 0;
+    const toggle = app.document.getElementById("locale-toggle");
+    toggle.click();
+    await new Promise((r) => setTimeout(r, 100));
+
+    assert.equal(app.document.documentElement.lang, "es", "language switched");
+    assert.ok(app.document.querySelector("details.more-bottles")?.open,
+      "more-bottles stays open after the language switch");
+    const learnings = app.document.querySelectorAll("details.profile-learning");
+    const wasOpen = sources ? [...learnings].some((d) => d.open) : true;
+    assert.ok(wasOpen, "profile-learning disclosures restore their open state");
+    // The re-render localized the content too.
+    assert.ok(app.document.body.textContent.includes("Fuentes"), "rendered in Spanish");
+  } finally {
+    app.cleanup();
+  }
+});
+
+test("switching language collapses nothing: explore map disclosure stays open", async () => {
+  const app = await bootApp("#/explore", { withHeader: true });
+  try {
+    const map = app.document.querySelector("details.place-disclosure");
+    assert.ok(map, "map disclosure renders");
+    map.open = true;
+    app.document.getElementById("locale-toggle").click();
+    await new Promise((r) => setTimeout(r, 100));
+    assert.ok(app.document.querySelector("details.place-disclosure")?.open,
+      "map disclosure stays open after the language switch");
+  } finally {
+    app.cleanup();
+  }
+});
