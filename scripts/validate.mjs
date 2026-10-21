@@ -460,6 +460,22 @@ for (const ch of chapters) {
     }
   }
 }
+// Release 20: reference-section Spanish parity — plant cultivation and
+// process explanations must ship translations (they render on Learn).
+const esPlants = contentEsAll.plants || {};
+for (const plant of plants) {
+  const entry = esPlants[plant.id];
+  if (!entry || typeof entry.cultivation !== "string" || !entry.cultivation.trim()) {
+    fail(`content-es.json: plant ${plant.id} cultivation missing Spanish translation`);
+  }
+}
+const esProcesses = contentEsAll.processes || {};
+for (const proc of processes) {
+  const entry = esProcesses[proc.id];
+  if (!entry || typeof entry.explanation !== "string" || !entry.explanation.trim()) {
+    fail(`content-es.json: process ${proc.id} explanation missing Spanish translation`);
+  }
+}
 const esTerms = contentEsAll.terms || {};
 for (const term of glossary) {
   const entry = esTerms[term.term];

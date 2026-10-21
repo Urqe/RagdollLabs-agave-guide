@@ -367,7 +367,7 @@ Acceptance: a beginner can understand the fundamentals from the chapters alone; 
 
 ### Release 20 — Learning Journey Review & Fixes
 
-Apply the maintenance protocol. Audit chapter flow, jargon, example links, glossary wiring, Spanish learning parity, mobile reading, keyboard navigation and cognitive load. Deploy corrections.
+Applied (see Release 20 notes in RELEASE_NOTES.md). Audit chapter flow, jargon, example links, glossary wiring, Spanish learning parity, mobile reading, keyboard navigation and cognitive load. Deploy corrections.
 
 ### Release 21 — Richer Profiles
 

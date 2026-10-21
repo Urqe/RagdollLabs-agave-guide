@@ -1111,3 +1111,53 @@ Spanish learning materials.
 - Chapter-specific illustrations and a Spanish-search glossary are
   Release 20 (Learning Journey Review) scope.
 - Native-device rendering still unverified in this environment.
+
+## Release 20 — Learning Journey Review & Fixes
+
+Maintenance release per the plan's protocol: audit of the Release 19
+learning journey — chapter flow, jargon, example links, glossary
+wiring, Spanish learning parity, mobile reading, keyboard navigation
+and cognitive load.
+
+### Findings and fixes
+
+- **Dead-end contextual links (defect found):** chapter term chips and
+  process chips linked to `#/learn` — a self-link that does nothing
+  when you are already on Learn — and the profile's "See the label
+  vocabulary" link landed at the page top, not the glossary. Fixed:
+  term chips now smooth-scroll and focus the actual glossary card;
+  process chips scroll to the process reference card; new
+  `#/learn/terms|plants|processes` deep-link routes land and focus the
+  requested section; the profile link targets `#/learn/terms`.
+- **Unusable glossary anchors (defect found):** glossary card ids
+  contained raw slashes (`term-blanco-/-plata-/-silver`), making them
+  invalid fragment targets. Ids are now accent-stripped, slug-safe
+  (`term-blanco-plata-silver`) and the headings are focusable.
+- **Spanish parity gap in reference sections (defect found):** plant
+  cultivation text and process explanations rendered in English in ES
+  mode. The empty `plants`/`processes` ES buckets are now filled (9
+  plant cultivation notes, 8 process explanations), the Learn view
+  renders them localized, and the validator rejects any missing plant
+  or process translation — closing the "core learning usable without
+  English" acceptance criterion.
+- **Chapter flow and jargon (verified, no defect):** chapters stay
+  non-sequential with a 10-target jump nav; reading density measured
+  acceptable (one reference-heavy block in Explore Deeper is
+  enthusiast material behind no false claims).
+- **Example links (verified, no defect):** every chapter example chip
+  resolves to a real profile/plant/process/term — enforced by
+  validation since Release 19.
+
+### Checks run
+
+- `npm run validate` — schema plus 175 node:test/jsdom suites (6 new
+  Release 20 regression tests, including a validator-rejection test
+  for missing process translations). All passing.
+- Real-app boot smoke: `#/learn/terms` deep link renders and focuses
+  the glossary; ES mode renders plant cultivation and process text in
+  Spanish.
+
+### Remaining issues / deferred
+
+- Chapter illustrations and glossary search remain backlog items.
+- Native-device rendering still unverified in this environment.

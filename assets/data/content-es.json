@@ -434,8 +434,61 @@
       "batch": "Plata sin crianza de la taberna Taberna 3 Gallos; homenaje a las celebraciones de cosecha de la Hacienda de Ahuacatepec"
     }
   },
-  "processes": {},
-  "plants": {},
+  "processes": {
+    "pit-roast": {
+      "explanation": "Los corazones de agave se asan en pozos revestidos de piedra con fuego de leña, a veces durante días. Es la cocción clásica del mezcal, la bacanora y el tuxca; puede aportar humo, pero cuánto varía con la leña, el tiempo y el pozo — el método por sí solo no garantiza humo."
+    },
+    "steam-cook": {
+      "explanation": "Los corazones de agave se cocinan al vapor en hornos de mampostería (hornos) o autoclaves. Es la cocción típica del tequila: limpia, sin humo de leña."
+    },
+    "sap-collection": {
+      "explanation": "El aguamiel — la savia dulce del agave — se recolecta de la planta viva, raspanado la quiota diariamente. Es la base del comiteco y del destilado de pulque: no se cocina la piña."
+    },
+    "wild-fermentation": {
+      "explanation": "La fermentación ocurre en tinas abiertas con levaduras silvestres del entorno, aportando carácter local y variación genuina entre productores y lotes."
+    },
+    "distillation-methods": {
+      "explanation": "El alambique moldea el destilado: cobre en producción artesanal, barro en la ancestral, y madera estilo filipino en el occidente. El tipo de alambique y el corte dejan huella en la textura y el sabor."
+    },
+    "glass-resting": {
+      "explanation": "El reposo en vidrio (madurado en vidrio) suaviza el destilado sin influencia de madera — una opción tradicional que muchas categorías no exigen."
+    },
+    "wood-maturation": {
+      "explanation": "La maduración en madera aporta color, especias de roble y suavidad. Los mínimos legales son específicos de cada destilado: las reglas del tequila no se transfieren a otras categorías."
+    },
+    "filtration": {
+      "explanation": "El filtrado (a menudo con carbón) retira el color de un destilado con crianza, como en el cristalino — una elección de acabado, no una clase legal."
+    }
+  },
+  "plants": {
+    "agave-tequilana": {
+      "cultivation": "cultivado (el único agave permitido legalmente para el tequila)"
+    },
+    "agave-angustifolia": {
+      "cultivation": "cultivado en Oaxaca; silvestre y cultivado en otras regiones"
+    },
+    "agave-maximiliana": {
+      "cultivation": "cosecha silvestre"
+    },
+    "agave-atrovirens": {
+      "cultivation": "cultivado; savia recolectada de la planta viva (sin cocción)"
+    },
+    "agave-salmiana": {
+      "cultivation": "cultivado en la tradición pulquera; savia recolectada de la planta viva"
+    },
+    "tuxca-wild-agaves": {
+      "cultivation": "cosecha silvestre; los ensambles varían por lote"
+    },
+    "agave-potatorum": {
+      "cultivation": "mayormente silvestre en altitud; la reproducción solo por semilla hace lento el cultivo, por lo que las poblaciones silvestres están bajo presión — algunos productores ya cultivan o reforestan (la entrada citada de Montelobos es 100% cultivada)"
+    },
+    "dasylirion-desert-spoon": {
+      "cultivation": "cosecha silvestre tras 8–12 años; una sola planta rinde aproximadamente una botella, así que la cosecha sostenible (raíces dejadas para rebrotar) y los programas de conservación importan"
+    },
+    "agave-rhodacantha": {
+      "cultivation": "silvestre y cultivado; usado en la raicilla de la Costa junto al chico aguiar"
+    }
+  },
   "terms": {
     "blanco / plata / silver": {
       "definition": "Una clase de tequila sin crianza. En otros destilados las mismas palabras pueden significar clases distintas o nada legal; los términos de clase son específicos de cada destilado."
