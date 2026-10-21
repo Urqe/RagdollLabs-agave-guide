@@ -69,8 +69,14 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
 
   const t = (key) => (locale ? locale.t(key) : key);
   const fromCatalogue = origin === "catalogue";
-  const backHref = fromCatalogue ? "#/catalogue" : returnTo ? `#/explore/${encodeURIComponent(returnTo)}` : "#/explore";
-  const back = el("a", { href: backHref, class: "back-link" }, fromCatalogue ? t("profile.backCatalogue") : t("profile.backExplore"));
+  const fromDiscovery = origin != null && !fromCatalogue;
+  const backHref = fromCatalogue
+    ? "#/catalogue"
+    : fromDiscovery && origin.includes(":")
+      ? `#/discover/${encodeURIComponent(origin.split(":")[0])}/${encodeURIComponent(origin.split(":")[1])}`
+      : returnTo ? `#/explore/${encodeURIComponent(returnTo)}` : "#/explore";
+  const backLabel = fromCatalogue ? t("profile.backCatalogue") : fromDiscovery ? t("profile.backDiscover") : t("profile.backExplore");
+  const back = el("a", { href: backHref, class: "back-link" }, backLabel);
   section.appendChild(back);
 
   section.appendChild(el("h1", { id: "profile-title" }, fieldEs("profile", profile.id, "title", locale) || profile.title));

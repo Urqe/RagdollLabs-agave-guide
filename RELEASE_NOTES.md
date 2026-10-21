@@ -1010,3 +1010,55 @@ reading the same Release 15 normalized entities.
 - Deep-link and focus-restoration polish across discovery navigation is
   Release 18 (Discovery Review) scope.
 - Native-device rendering still unverified in this environment.
+
+## Release 18 — Discovery Review & Fixes
+
+Maintenance release per the plan's protocol: audit of the Release 17
+discovery surfaces — coverage labelling, region list accessibility,
+plant search aliases, flavour explanations, result navigation, state
+preservation and mobile layouts.
+
+### Findings and fixes
+
+- **Raw id chips (defect found):** plant pages showed region chips as
+  raw ids (`sierra-occidental-jal`) and region pages showed plant chips
+  as raw ids (`agave-maximiliana`). Both now display real names
+  (region name, species), falling back to the id only if an entity is
+  missing.
+- **Dead-end back navigation (defect found):** profiles reached from a
+  discovery page showed "Back to explore" pointing at the explore view
+  — losing the discovery context. The back link now reads
+  "Back to discovery" and returns to the exact originating page
+  (plant/region/spirit/flavour) via the existing `origin` param.
+- **Plant search alias gaps (defect found):** regional common names
+  that exist in plants.json were unsearchable — papalote/amarillo
+  (rhodacantha), Pacifica/Yaquiana (bacanora's agave), agave azul,
+  maguey de mesa, ixtero, liñeno. All now resolve through the alias
+  map. A regression test walks every common name in plants.json and
+  asserts it finds at least one linked profile.
+- **Coverage-vs-designation labelling (verified, no defect):** the
+  region hub intro and each region page state that coverage means app
+  coverage, not legal boundaries; bacanora keeps municipal framing;
+  no whole-state legal zones exist in regions.json.
+- **Flavour explanations (verified, no defect):** every flavour match
+  carries a per-profile why-it-matches reason plus the editorial
+  tendency disclaimer.
+- **State preservation (verified, no defect):** discovery links carry
+  `origin` params through to profiles, and profile back-links restore
+  the source page; the explore view's existing restore mechanism is
+  untouched.
+- **Mobile/touch (verified, no defect):** chips meet the 44px tap
+  target with visible focus; the chip list wraps responsively.
+
+### Checks run
+
+- `npm run validate` — schema plus 158 node:test/jsdom suites (5 new
+  Release 18 regression tests). All passing.
+- Real-app boot smoke on a plant detail page: region chips render
+  names, profile links carry the discovery origin, back navigation
+  resolves.
+
+### Remaining issues / deferred
+
+- Dedicated per-entity page layouts remain Release 21 scope.
+- Native-device rendering still unverified in this environment.

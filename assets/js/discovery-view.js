@@ -129,7 +129,7 @@ function renderHub(container, { plants, regions, traditions, profiles, locale })
 }
 
 /** Explore by Plant detail. */
-function renderPlant(container, { plant, plants, profiles, locale }) {
+function renderPlant(container, { plant, plants, regions, profiles, locale }) {
   const section = el("section", { class: "discover-view", "aria-labelledby": "discover-heading" });
   section.appendChild(backToDiscover(locale));
   section.appendChild(el("p", { class: "eyebrow" }, ui(locale, "discoverByPlant")));
@@ -148,9 +148,13 @@ function renderPlant(container, { plant, plants, profiles, locale }) {
 
   const regionsBlock = el("section", { class: "discover-block", "aria-labelledby": "plant-regions" });
   regionsBlock.appendChild(sectionHeader("plant-regions", ui(locale, "whereItGrows")));
+  const regionName = (id) => {
+    const r = (regions || []).find((x) => x.id === id);
+    return r ? r.name : id;
+  };
   regionsBlock.appendChild(linkChips(
     (plant.regionIds || []).map((id) => ({ id })),
-    "region", (r) => r.id, locale));
+    "region", (r) => regionName(r.id), locale));
   section.appendChild(regionsBlock);
 
   const expr = profiles.filter((p) => (p.plantIds || []).includes(plant.id));
@@ -171,7 +175,7 @@ function renderPlant(container, { plant, plants, profiles, locale }) {
 }
 
 /** Explore by Region detail. */
-function renderRegion(container, { region, profiles, locale }) {
+function renderRegion(container, { region, plants, profiles, locale }) {
   const section = el("section", { class: "discover-view", "aria-labelledby": "discover-heading" });
   section.appendChild(backToDiscover(locale));
   section.appendChild(el("p", { class: "eyebrow" }, ui(locale, "discoverByRegion")));
@@ -188,9 +192,13 @@ function renderRegion(container, { region, profiles, locale }) {
 
   const plantsBlock = el("section", { class: "discover-block", "aria-labelledby": "region-plants" });
   plantsBlock.appendChild(sectionHeader("region-plants", ui(locale, "plantsHere")));
+  const plantName = (id) => {
+    const pl = (plants || []).find((x) => x.id === id);
+    return pl ? pl.species : id;
+  };
   plantsBlock.appendChild(linkChips(
     (region.plantIds || []).map((id) => ({ id })),
-    "plant", (p) => p.id, locale));
+    "plant", (p) => plantName(p.id), locale));
   section.appendChild(plantsBlock);
 
   const expr = profiles.filter((p) => (p.regionIds || []).includes(region.id));
@@ -296,11 +304,11 @@ export function renderDiscover(container, { kind = null, id = null, plants, regi
   clear(container);
   if (kind === "plant") {
     const plant = plants.find((p) => p.id === id);
-    if (plant) return renderPlant(container, { plant, plants, profiles, locale });
+    if (plant) return renderPlant(container, { plant, plants, regions, profiles, locale });
   }
   if (kind === "region") {
     const region = regions.find((r) => r.id === id);
-    if (region) return renderRegion(container, { region, profiles, locale });
+    if (region) return renderRegion(container, { region, plants, profiles, locale });
   }
   if (kind === "spirit") {
     const tradition = traditions.find((t) => t.id === id);
