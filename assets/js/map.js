@@ -72,7 +72,8 @@ export async function renderMap(container, mapUrl, { selectedStateId = null, cov
     } else {
       path.setAttribute("aria-hidden", "true");
       path.setAttribute("focusable", "false");
-      path.removeChild(path.querySelector("title"));
+      const title = path.querySelector("title");
+      if (title) path.removeChild(title);
     }
   }
 
