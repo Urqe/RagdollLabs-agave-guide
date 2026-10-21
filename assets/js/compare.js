@@ -105,3 +105,84 @@ export function ifYouLikeThis(anchor, candidates, { maxSuggestions = 2 } = {}) {
   }
   return suggestions.slice(0, maxSuggestions);
 }
+
+/**
+ * Release 23 — Comparison Intelligence.
+ *
+ * Perspective detection and plain-language summaries, derived strictly
+ * from documented entity relationships (plant/tradition/process/
+ * region ids) and documented sensory levels. Where the data cannot
+ * support a statement, none is made — perspectives simply don't
+ * appear, and the summary falls back to the biggest-difference facts.
+ */
+
+const WOOD_PROCESS = "wood-maturation";
+
+/** True when any of the profiles has documented wood maturation. */
+const isWoodRested = (p) => (p.processIds || []).includes(WOOD_PROCESS);
+
+/**
+ * Detect meaningful comparison perspectives for two or three profiles.
+ * Each perspective carries the evidence behind it so the view can
+ * explain *why* it applies — never just label it.
+ */
+export function comparisonPerspectives(profiles) {
+  if (profiles.length < 2) return [];
+  const out = [];
+  const sharedPlantIds = profiles[0].plantIds || [];
+  const allSharePlant = profiles.every((p) => sharedPlantIds.some((pid) => (p.plantIds || []).includes(pid)));
+  const sameTradition = profiles.every((p) => p.traditionId === profiles[0].traditionId);
+  const sameRegion = profiles.every((p) => (p.regionIds || [])[0] === (profiles[0].regionIds || [])[0]);
+  const allWood = profiles.every(isWoodRested);
+  const noneWood = profiles.every((p) => !isWoodRested);
+  const woodMix = !allWood && !noneWood && profiles.some(isWoodRested);
+  const woodProfile = profiles.find(isWoodRested);
+  const unagedProfile = profiles.find((p) => !isWoodRested(p));
+
+  if (allSharePlant && !sameRegion) {
+    out.push({
+      id: "samePlantDifferentRegion",
+      plant: (sharedPlantIds[0] || "").replace(/-/g, " "),
+      evidence: "plantIds",
+    });
+  }
+  if (sameTradition && !allSharePlant) {
+    out.push({ id: "sameTraditionDifferentPlant", tradition: profiles[0].traditionId, evidence: "traditionId" });
+  }
+  if (sameTradition && allSharePlant) {
+    const methodSets = profiles.map((p) => [...(p.processIds || [])].sort().join(","));
+    if (new Set(methodSets).size > 1) {
+      out.push({ id: "sameTraditionDifferentMethod", tradition: profiles[0].traditionId, evidence: "processIds" });
+    }
+  }
+  if (!sameTradition) {
+    const anchorMoods = flavorMoods(profiles[0]).map((m) => m);
+    const othersMoods = profiles.slice(1).map((p) => flavorMoods(p));
+    const shared = anchorMoods.filter((m) => othersMoods.every((list) => list.includes(m)));
+    if (shared.length > 0) {
+      out.push({ id: "similarFlavoursAcrossTraditions", moods: shared, evidence: "sensory" });
+    }
+  }
+  if (woodMix && woodProfile && unagedProfile) {
+    out.push({ id: "unagedVersusWoodRested", wood: woodProfile.id, unaged: unagedProfile.id, evidence: "processIds" });
+  }
+  return out;
+}
+
+/**
+ * Plain-language summary of the primary differences, for rendering above
+ * the detailed comparison. Returns structured facts (never pre-joined
+ * strings) so the view can localize. Falls back to the biggest
+ * documented difference; if nothing is documented enough to say, says
+ * so instead of manufacturing a statement.
+ */
+export function comparisonSummary(profiles, { maxDiffs = 2 } = {}) {
+  if (profiles.length < 2) return { perspectives: [], differences: [], comparable: false };
+  const perspectives = comparisonPerspectives(profiles);
+  const differences = biggestDifferences(profiles, { limit: maxDiffs }).map((d) => ({
+    key: d.key,
+    levels: d.levels,
+    gap: d.gap,
+  }));
+  return { perspectives, differences, comparable: true };
+}

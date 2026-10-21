@@ -1268,3 +1268,57 @@ and disclosure behaviour.
 - Plant illustrations remain backlog (no reliable licensed artwork
   identified; not invented).
 - Native-device rendering still unverified in this environment.
+
+## Release 23 — Comparison Intelligence
+
+Feature release per the plan: comparisons explain meaningful
+differences rather than merely displaying scores.
+
+### What changed
+
+- **Plain-language summary above the detailed comparison:** every
+  comparison now opens with "What this comparison tells you" —
+  perspective chips naming the variable at play, then the biggest
+  documented differences in one sentence with per-profile levels. When
+  the data cannot support a statement, none is manufactured: no
+  perspectives detected and no differences documented yields the
+  existing honest "no documented differences" line, and undocumented
+  attributes stay excluded from difference claims (verified by tests
+  with null-sensory fixtures).
+- **Five meaningful comparison perspectives**, each detected from
+  documented entity relationships and carrying its evidence: same
+  plant different region (plantIds), same tradition different plant
+  (traditionId), same tradition different method (processIds),
+  similar flavours across traditions (shared documented flavor moods),
+  and unaged versus wood-rested (wood-maturation process). Example:
+  blanco vs reposado tequila reads "Same tradition (Tequila),
+  different production methods — the method is the variable here" and
+  "Wood-rested … versus unaged … — oak influence is the variable here".
+- **Recommendation relevance retained and verified:** if-you-like
+  suggestions keep naming their shared attributes; a regression test
+  pins that every suggestion carries its relevance.
+- Full EN/ES coverage for the new summary strings; chips respect the
+  44px tap-target rule.
+
+### Notable fix during development
+
+The unaged-vs-wood perspective initially never fired: the profile
+finder was written as `find((p) => !isWoodRested)` — negating the
+function instead of calling it, so `find` never matched. Caught by
+debug-tracing the engine against the blanco/reposado pair, fixed, and
+pinned by a dedicated test.
+
+### Checks run
+
+- `npm run validate` — schema plus 204 node:test/jsdom suites (13 new
+  Release 23 tests covering all five perspectives, evidence fields,
+  no-invention cases, null-sensory honesty, DOM order, Spanish
+  rendering and recommendation relevance). All passing.
+- Real-app boot smoke on a two-profile compare: summary renders above
+  the table with correct perspective chips and difference line.
+
+### Remaining issues / deferred
+
+- Cross-tradition trio comparisons could rank perspectives; current
+  detection is binary (present/absent) per perspective.
+- Native-device rendering still unverified in this environment.

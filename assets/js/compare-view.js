@@ -6,6 +6,7 @@ import {
   biggestDifferences,
   missingDimensions,
   levelOf,
+  comparisonSummary,
 } from "./compare.js";
 import { SPIRIT_LABELS, groupProfilesBySpirit } from "./spirit-labels.js";
 import { dimensionLabel, dimensionHint } from "./presentation.js";
@@ -234,6 +235,49 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
     tbody.appendChild(row);
   }
   table.appendChild(tbody);
+  // Release 23: plain-language interpretation above the detail — what
+  // differs and possibly why, or an honest statement when the data
+  // cannot support one.
+  const summary = comparisonSummary(selected);
+  const summaryBlock = el("section", { class: "compare-summary", "aria-labelledby": "compare-summary-heading" });
+  summaryBlock.appendChild(el("h3", { id: "compare-summary-heading" }, t("compare.summaryHeading")));
+  if (summary.perspectives.length > 0) {
+    const persList = el("ul", { class: "compare-perspectives" });
+    for (const perspective of summary.perspectives) {
+      const item = el("li", {});
+      let text = "";
+      if (perspective.id === "samePlantDifferentRegion") {
+        text = t("compare.perspective.samePlant").replace("{plant}", perspective.plant);
+      } else if (perspective.id === "sameTraditionDifferentPlant") {
+        text = t("compare.perspective.sameTraditionPlant").replace("{tradition}", SPIRIT_LABELS[perspective.tradition] || perspective.tradition);
+      } else if (perspective.id === "sameTraditionDifferentMethod") {
+        text = t("compare.perspective.sameTraditionMethod").replace("{tradition}", SPIRIT_LABELS[perspective.tradition] || perspective.tradition);
+      } else if (perspective.id === "similarFlavoursAcrossTraditions") {
+        const moods = perspective.moods.map((m) => (locale ? locale.mood(m) : m)).join(", ");
+        text = t("compare.perspective.similarFlavours").replace("{moods}", moods);
+      } else if (perspective.id === "unagedVersusWoodRested") {
+        const woodName = title(byId.get(perspective.wood) || { title: "" });
+        const unagedName = title(byId.get(perspective.unaged) || { title: "" });
+        text = t("compare.perspective.woodVsUnaged").replace("{wood}", woodName).replace("{unaged}", unagedName);
+      }
+      item.appendChild(el("span", { class: "compare-perspective-chip" }, text));
+      persList.appendChild(item);
+    }
+    summaryBlock.appendChild(persList);
+  }
+  if (summary.differences.length > 0) {
+    const diffLine = el("p", { class: "compare-summary-line" });
+    const parts = summary.differences.map((d) => {
+      const labels = d.levels.map((l, i) => `${title(selected[i])}: ${t(`level.${l}`) || t("compare.notDocumented")}`);
+      return `${dimLabel(d.key)} (${labels.join(" vs ")})`;
+    });
+    diffLine.appendChild(document.createTextNode(t("compare.summaryDifferences") + " " + parts.join("; ") + "."));
+    summaryBlock.appendChild(diffLine);
+  } else {
+    summaryBlock.appendChild(el("p", { class: "compare-summary-line" }, t("compare.noDiffs")));
+  }
+  section.appendChild(summaryBlock);
+
   const scrollHint = el("p", { id: "compare-scroll-hint", class: "sensory-note compare-scroll-hint" }, ui(locale, "scroll"));
   section.appendChild(scrollHint);
   const scroll = el("div", { class: "comparison-scroll", tabindex: "0", role: "region", "aria-label": ui(locale, "choices"), "aria-describedby": "compare-scroll-hint" });

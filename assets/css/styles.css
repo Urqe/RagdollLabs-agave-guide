@@ -1107,3 +1107,13 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .discovery-matches li { display: grid; gap: 0.25rem; }
 .discovery-reason { color: var(--muted, inherit); font-size: 0.9rem; margin: 0; }
 .discovery-grid .discovery-card { min-height: 44px; }
+
+/* Release 23 — comparison intelligence summary */
+.compare-summary { display: grid; gap: 0.55rem; margin-block-start: 0.6rem; }
+.compare-perspectives { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; padding: 0; }
+.compare-perspective-chip {
+  display: inline-flex; align-items: center; padding: 0.45rem 0.8rem;
+  border-radius: 999px; border: 1px solid var(--line, rgba(128, 120, 100, 0.35));
+  background: var(--surface-2, transparent); font-size: 0.95rem; min-height: 44px;
+}
+.compare-summary-line { margin: 0; }
