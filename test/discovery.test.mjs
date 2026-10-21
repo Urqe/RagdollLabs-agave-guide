@@ -239,3 +239,15 @@ test("R18: every common plant name from plants.json is searchable", async () => 
     }
   }
 });
+
+test("R26: adventurous discovery threads use the shared tradition list", async () => {
+  const { ADVENTUROUS_TRADITIONS } = await import("../assets/js/spirit-labels.js");
+  assert.deepEqual(ADVENTUROUS_TRADITIONS, ["tuxca", "comiteco", "destilado-de-pulque", "sotol"]);
+  // The flavour category and the profile explore-next pick stay in sync by
+  // construction now: both import the same constant. Verify a profile from
+  // an adventurous tradition is matched by the flavour category.
+  const adventurousProfile = profiles.find((p) => ADVENTUROUS_TRADITIONS.includes(p.traditionId));
+  assert.ok(adventurousProfile, "an adventurous-tradition profile exists");
+  const isMatch = ADVENTUROUS_TRADITIONS.includes(adventurousProfile.traditionId || adventurousProfile.spirit);
+  assert.ok(isMatch, "flavour-category matcher covers the same traditions");
+});

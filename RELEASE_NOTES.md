@@ -1451,3 +1451,68 @@ educational value, prioritizing evidence quality over catalogue size.
   two highland bottles carry explicit coverage disclosures until a
   profile is authored.
 - Native-device rendering still unverified in this environment.
+
+## Release 26 — Editorial Standards Review & Fixes
+
+Maintenance release per the plan's protocol: audit of the Release 25
+editorial enrichment — evidence quality and provenance, sensory-claim
+discipline, legal/cultural framing, Spanish/English parity,
+scope-description accuracy and discovery regressions.
+
+### Findings and fixes
+
+- **Missing Spanish parity on the new bottle fields (defect found):**
+  the five Release 25 bottles carried `classification` and
+  `plantComposition` with no Spanish entries, so both rendered in
+  English inside the Spanish UI without any disclosure. All ten
+  translations added; a strict regression test now renders every new
+  bottle in Spanish and fails if raw English appears, plus a
+  no-silent-gaps test asserting every translated field of every bottle
+  has an ES entry.
+- **Unattributed editorial framing inside a review summary (defect
+  found):** the Don Julio Blanco reviewSummary ended "a highland
+  blanco in the modern premium style" — the app's framing presented as
+  Difford's observation. Re-verified against the actual Difford's page
+  (sampled 2011) and rewritten to attribute only what the review says:
+  peppery/mineral nose with lemon, pink grapefruit and pastry aromas,
+  fudge/pastry palate, long dry peppery finish; the un-aged/inert-rest
+  fact kept. Spanish translation updated to match.
+- **Shared adventurous-tradition list (improvement, deferred from
+  Release 24):** the "more adventurous" tradition list was hardcoded in
+  both profile.js and discovery-view.js and would silently drift when a
+  tradition is added. Extracted to a single
+  `ADVENTUROUS_TRADITIONS` constant in spirit-labels.js with a pinning
+  test.
+- **Evidence provenance (verified, no defect):** the
+  mezcalistas-wild-agave-sustainability source was fetched and
+  confirmed on-topic (Mezcalistas' sustainability series index); the
+  Rum Howler Cuervo review verified as a dated 2022 re-review (80.5/100)
+  whose held-back-character finding the summary paraphrases faithfully;
+  all 11 new sources are https with verification dates.
+- **Sensory-claim discipline and framing (verified, no defect):**
+  sustainability texts state scoped concerns and label producer claims
+  as unverified where evidence is limited; cultivated-vs-wild and
+  legal-vs-cultural distinctions hold in the new content; contested
+  Casa Dragones process claims remain omitted.
+- **Scope accuracy (verified, no defect):** data spirits, tradition
+  entities and the README's eight-tradition description agree; search
+  finds all five new bottles including accent-normalized "patron".
+- **Backlog requiring action (reviewed):** the four remaining items are
+  producer expansions (Don Julio, Jose Cuervo, Patrón, Casa Dragones)
+  whose remaining expressions stay evidence-gated on exact label facts
+  plus one expression-matched review each; they remain correctly parked
+  in backlog.json with their gates, not silently droppable. No other
+  backlog items exist.
+
+### Checks run
+
+- `npm run validate` — schema plus 213 node:test/jsdom suites (3 new
+  Release 26 tests). All passing.
+- Manual web verification of the two sources behind the corrected
+  review summaries (Difford's Don Julio page, Rum Howler Cuervo page).
+
+### Remaining issues / deferred
+
+- Highland tequila blanco still lacks its own style profile (carried
+  from Release 25).
+- Native Safari/VoiceOver checks still unverified in this environment.
