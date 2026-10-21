@@ -10,7 +10,11 @@
       "finish": "Limpio y picante, con cítricos y una calidez vegetal suave que se desvanece de forma constante.",
       "pairing": {
         "serving": "Solo, en copa pequeña o con una rodaja de lima; también la base clásica de la Margarita y la Paloma. Sugerencia editorial, no una regla.",
-        "foods": ["tacos al pastor", "ceviche", "queso fresco con chile"]
+        "foods": [
+          "tacos al pastor",
+          "ceviche",
+          "queso fresco con chile"
+        ]
       }
     },
     "mezcal-espadin-valles-centrales": {
@@ -24,7 +28,11 @@
       "finish": "Largo y seco, con un humo que perdura suavemente y se desvanece en hierbas terrosas.",
       "pairing": {
         "serving": "Se bebe solo a temperatura ambiente; el humo se abre en una copa ancha. Solo una sugerencia editorial.",
-        "foods": ["tlayudas", "carnes asadas", "verduras asadas"]
+        "foods": [
+          "tlayudas",
+          "carnes asadas",
+          "verduras asadas"
+        ]
       }
     },
     "bacanora-pacifica-sierra-sonora": {
@@ -38,7 +46,11 @@
       "finish": "Seco y herbáceo, con un hilo suave de humo y un final mineral y picante.",
       "pairing": {
         "serving": "Se bebe solo, al estilo sonorense con lima y una pizca de sal de chapulín; sugerencia editorial.",
-        "foods": ["carne asada", "queso sonorense (queso cocido)", "platillos con salsa de chiltepín"]
+        "foods": [
+          "carne asada",
+          "queso sonorense (queso cocido)",
+          "platillos con salsa de chiltepín"
+        ]
       }
     },
     "raicilla-maximiliana-sierra-jalisco": {
@@ -52,7 +64,11 @@
       "finish": "Medio-largo, suavemente rústico, con fruta de huerto y un final suave de agave dulce.",
       "pairing": {
         "serving": "Se bebe solo; su frescor rústico también funciona en un trago estilo Negroni (sugerencia editorial).",
-        "foods": ["birria", "mole", "quesos madurados"]
+        "foods": [
+          "birria",
+          "mole",
+          "quesos madurados"
+        ]
       }
     },
     "tuxca-lineno-cimarron-jalisco-colima": {
@@ -66,7 +82,11 @@
       "finish": "Seco y especiado, con lima y pimienta que se desvanecen hacia lo mineral volcánico.",
       "pairing": {
         "serving": "Se bebe solo acompañado de agua; magro y mineral, invita a beber despacio (sugerencia editorial).",
-        "foods": ["pescado a la talla", "queso fresco con tortillas", "mariscos colimenses"]
+        "foods": [
+          "pescado a la talla",
+          "queso fresco con tortillas",
+          "mariscos colimenses"
+        ]
       }
     },
     "comiteco-aguamiel-chiapas": {
@@ -79,7 +99,11 @@
       "finish": "Suave y herbal, con un final terroso ligero y sin carácter de asado.",
       "pairing": {
         "serving": "Se bebe solo; tradicionalmente es un destilado de ocasiones pequeñas — solo sugerencia editorial.",
-        "foods": ["tamales chiapanecos", "quesos ahumados", "postres con café"]
+        "foods": [
+          "tamales chiapanecos",
+          "quesos ahumados",
+          "postres con café"
+        ]
       }
     },
     "destilado-de-pulque-salmiana-tlaxcala": {
@@ -92,7 +116,11 @@
       "finish": "Ligero y ácido, con notas lácticas y verdes que se desvanecen rápido.",
       "pairing": {
         "serving": "Se bebe solo, ligeramente frío; su acidez láctica pide una mente abierta (sugerencia editorial).",
-        "foods": ["barbacoa", "mixiotes", "platillos con maíz"]
+        "foods": [
+          "barbacoa",
+          "mixiotes",
+          "platillos con maíz"
+        ]
       }
     },
     "raicilla-costa-jalisco": {
@@ -106,7 +134,11 @@
       "finish": "Medio-largo, ahumado y sabroso con un final cítrico.",
       "pairing": {
         "serving": "Se bebe solo; el humo invita a beber despacio por la noche (sugerencia editorial).",
-        "foods": ["pescado asado", "mariscos con chile", "cocina costera"]
+        "foods": [
+          "pescado asado",
+          "mariscos con chile",
+          "cocina costera"
+        ]
       }
     },
     "tequila-reposado-valley-jalisco": {
@@ -119,7 +151,11 @@
       "finish": "Medio, con especias suaves de madera y un final de caramelo y agave.",
       "pairing": {
         "serving": "Se bebe solo; también es la evolución clásica de la Margarita para quien busca una base más redonda (sugerencia editorial).",
-        "foods": ["tacos", "carnes asadas", "quesos madurados"]
+        "foods": [
+          "tacos",
+          "carnes asadas",
+          "quesos madurados"
+        ]
       }
     },
     "tequila-anejo-valley-jalisco": {
@@ -132,7 +168,11 @@
       "finish": "Largo y redondo, con especias de roble, agave dulce y un final seco suave.",
       "pairing": {
         "serving": "Se bebe solo, idealmente en copa pequeña para concentrar el aroma (sugerencia editorial).",
-        "foods": ["chocolate oscuro", "mole", "bistec asado"]
+        "foods": [
+          "chocolate oscuro",
+          "mole",
+          "bistec asado"
+        ]
       }
     },
     "tequila-cristalino-style": {
@@ -145,7 +185,10 @@
       "finish": "Suave y de corta a media duración; diseñado para beberse fácil.",
       "pairing": {
         "serving": "Se sirve solo o con hielo; suele posicionarse como entrada al tequila envejecido (sugerencia editorial).",
-        "foods": ["botanas ligeras", "postres de fruta fresca"]
+        "foods": [
+          "botanas ligeras",
+          "postres de fruta fresca"
+        ]
       }
     },
     "comiteco-anejo-comitan-chiapas": {
@@ -158,7 +201,11 @@
       "finish": "De duración media y herbal, con un suave final de especias de roble y sin carácter de asado.",
       "pairing": {
         "serving": "Se bebe solo para que el suave especiado de roble acompañe el carácter herbal de la savia (sugerencia editorial).",
-        "foods": ["tamales chiapanecos", "quesos madurados", "postres con canela"]
+        "foods": [
+          "tamales chiapanecos",
+          "quesos madurados",
+          "postres con canela"
+        ]
       }
     },
     "raicilla-reposado-jalisco": {
@@ -172,7 +219,11 @@
       "finish": "De media a larga duración, con fruta dulce, especias afines a la canela y un final suave de humo.",
       "pairing": {
         "serving": "Se bebe solo; su fruta y su humo suave también funcionan en un trago estilo Negroni (sugerencia editorial).",
-        "foods": ["quesos suaves", "fruta fresca", "platillos con mole suave"]
+        "foods": [
+          "quesos suaves",
+          "fruta fresca",
+          "platillos con mole suave"
+        ]
       }
     },
     "tequila-extra-anejo-highland-jalisco": {
@@ -185,7 +236,11 @@
       "finish": "Largo y de roble, con chocolate, especias suaves y un final lento de agave.",
       "pairing": {
         "serving": "Se bebe solo después de cenar, en copa estilo balón (sugerencia editorial).",
-        "foods": ["chocolate oscuro", "postres para acompañar puros", "queso madurado"]
+        "foods": [
+          "chocolate oscuro",
+          "postres para acompañar puros",
+          "queso madurado"
+        ]
       }
     },
     "mezcal-reposado-espadin-oaxaca": {
@@ -199,7 +254,11 @@
       "finish": "Medio, ahumado-dulce, con un final afín al dulce de leche.",
       "pairing": {
         "serving": "Se bebe solo; también funciona en margaritas donde se agradece un reposado ahumado (sugerencia editorial).",
-        "foods": ["quesos suaves", "carnitas", "elote asado"]
+        "foods": [
+          "quesos suaves",
+          "carnitas",
+          "elote asado"
+        ]
       }
     },
     "mezcal-tobala-sierra-oaxaca": {
@@ -213,7 +272,11 @@
       "finish": "Medio y sedoso, con dulzor de fruta y un final mineral suave.",
       "pairing": {
         "serving": "Se bebe solo en una copita pequeña; las florales del tobalá se pierden en coctelería (sugerencia editorial).",
-        "foods": ["quesos frescos", "salsas de fruta", "tostadas de mariscos"]
+        "foods": [
+          "quesos frescos",
+          "salsas de fruta",
+          "tostadas de mariscos"
+        ]
       }
     },
     "sotol-chihuahua": {
@@ -227,11 +290,150 @@
       "finish": "Medio, herbal y ligeramente picante, con un final mineral.",
       "pairing": {
         "serving": "Se bebe solo en copa pequeña; también va bien con agua mineral con gas (sugerencia editorial).",
-        "foods": ["quesos asadero", "platillos norteños de tortilla de harina", "verduras asadas"]
+        "foods": [
+          "quesos asadero",
+          "platillos norteños de tortilla de harina",
+          "verduras asadas"
+        ]
       }
     }
   },
-  "bottles": {},
+  "bottles": {
+    "fortaleza-blanco": {
+      "reviewSummary": "Los reseñistas lo llaman un blanco de valero de referencia: una expresión sabrosa y firme de agave cocido con salmuera de aceituna y pimienta, con más complejidad que la mayoría de su categoría."
+    },
+    "lost-explorer-espadin": {
+      "reviewSummary": "Los reseñistas describen un espadín acogedor y suavemente ahumado: herbáceo y delicadamente dulce en el paladar, con un final largo, seco y ahumado que se desvanece en hierbas terrosas."
+    },
+    "rancho-tepua-bacanora": {
+      "reviewSummary": "Las notas de cata de Mezcalistas describen un destilado mineral impulsado por el agave asado: sándalo, canela, limoncillo y un toque mineral alrededor de un centro de agave asado, con una nariz rica de agave dulce."
+    },
+    "la-venenosa-tabernas": {
+      "reviewSummary": "Los miembros de Mezcal Reviews describen una raicilla rústica y accesible: manzana ácida y un ligero vinagre en la nariz, agave dulce y un agradable matiz fermentado en el paladar, ligera y fácil de beber o mezclar."
+    },
+    "cielo-rojo-bacanora-blanco": {
+      "reviewSummary": "TEQUILA.net describe un agave dulce y herbáceo con un toque de humo y cítricos, un cuerpo medio-ligero, con el humo avanzando y notas herbáceas y terrosas superando el dulzor inicial; Mezcal Reviews la llama una bacanora agradable y vibrante.",
+      "editorialNote": "De la misma viñata de la familia Contreras que la botella de ejemplo de este perfil — espera un carácter mineral y de asado en horno similar, con la reseña de Tequila.net señalando un humo más adelantado que el del perfil típico.",
+      "batch": "Lotes pequeños; la primera bacanora premium importada legalmente a EE. UU."
+    },
+    "kilinga-bacanora-silvestre": {
+      "reviewSummary": "Mezcal Reviews describe notas de flores silvestres, cítricos y la acidez de la manzana verde, con un suave final violeta — una bacanora aromática y moderadamente compleja.",
+      "editorialNote": "Una lectura más afrutada y floral de la bacanora que la que describe este perfil — la acidez de manzana verde y el final violeta quedan fuera del centro mineral y sabroso del ejemplo de Rancho Tepúa."
+    },
+    "la-venenosa-costa": {
+      "editorialNote": "El perfil de raicilla de la costa de esta app: estilo costero cocido en horno subterráneo. Las notas de cata de esta expresión específica aún no están documentadas; la entrada es factual.",
+      "abvNote": "Graduación alcohólica no documentada en las fuentes citadas"
+    },
+    "balancan-tuxca": {
+      "reviewSummary": "Las notas de cata de Mezcalistas describen una nariz rica con descriptores especiado, jugo de pepinillos y ácido; los miembros de Mezcal Reviews encuentran ralladura de lima, heno, pimienta en grano y agave con un paladar directo y mineral.",
+      "abvNote": "Graduación alcohólica no documentada en las fuentes citadas"
+    },
+    "nine-guardianes-comiteco-blanco": {
+      "reviewSummary": "Mezcal Reviews lista 9 Guardianes Comiteco Blanco de savia de maguey Comitlán fermentada y destilada en cobre; el detalle de notas de cata de esta expresión específica aún no está documentado.",
+      "abvNote": "Graduación alcohólica no documentada en las fuentes citadas",
+      "composition": "Destilado de savia de agave fermentada (aguamiel); la categoría comiteco más amplia permite una fuente adicional de azúcar de caña — si esta botella específica es 100% agave no está documentado en las fuentes citadas"
+    },
+    "estancia-destilado-de-pulque": {
+      "reviewSummary": "Las notas del importador describen un destilado verde y vegetal con notas curiosas de cardamomo, limoncillo, pimienta en grano, cheddar añejo y acedera, doble destilado de savia Salmiana fermentada 48 horas en una columna corta de cobre."
+    },
+    "fortaleza-reposado": {
+      "reviewSummary": "Long Island Lou describe un paladar terroso, de canela, caramelo y cítricos con notas de aceituna y mantequilla de 6–8 meses en roble americano; 88 Bamboo encuentra el agave limpio del blanco intacto, acentuado por una suave madera y especias de roble.",
+      "batch": "Envejecido en roble americano; los lotes varían"
+    },
+    "fortaleza-anejo": {
+      "reviewSummary": "The Whiskey Shelf describe un dulzor de azúcar blanca y miel, piña, uva verde y agave vegetal sobre una frutalidad suave de barrica — más oscuro y redondo que el blanco, con el roble entretejido en lugar de dominante.",
+      "batch": "Envejecido unos 18 meses en barricas ex-bourbon"
+    },
+    "patron-anejo-cristalino": {
+      "reviewSummary": "Tastings.com encuentra aromas y sabores redondos y cremosos — vainilla, carbón de roble, crema de limón, piña tostada — con una acidez y un agave más suaves que un blanco; Tequila Report lo llama un perfil fácil de beber, de agave ligero, roble, canela y vainilla.",
+      "batch": "Añejo envejecido en roble americano y francés, luego filtrado con carbón hasta dejarlo claro"
+    },
+    "nine-guardianes-comiteco-anejo": {
+      "reviewSummary": "Mezcal Reviews lista 9 Guardianes Comiteco Añejo al 42% de graduación, de savia de maguey Comitlán fermentada y destilada en cobre, luego envejecido; el sitio no lista notas de cata de esta expresión, así que su descripción de sabor sigue siendo editorial en esta app.",
+      "batch": "Reposado en vidrio con ramas de encino blanco",
+      "composition": "Destilado de savia de agave fermentada (aguamiel); la categoría comiteco más amplia permite una fuente adicional de azúcar de caña — si esta botella específica es 100% agave no está documentado en las fuentes citadas"
+    },
+    "la-venenosa-tabernas-reposado": {
+      "reviewSummary": "Un miembro de Mezcal Reviews describe vainilla, caramelo, cuero, tabaco dulce y ciruela en la nariz; ciruela, pasa, cereza luxardo, vainilla y cuero en el paladar, con un final de humo de fogata dulce, canela y tabaco — señalando que la influencia de la barrica de jerez es divertida pero opaca un poco el agave.",
+      "batch": "Reposado unos 3 meses en barricas de madera (jerez); cada lote de Tabernas Edición difiere — revisa tu botella",
+      "abvNote": "La graduación varía por lote (la fuente de la reseña lista un lote al 44,8%; un rango de 40–46% está documentado) — revisa la botella"
+    },
+    "juerte-destilado-de-pulque": {
+      "reviewSummary": "Mezcalistas describe una nariz cautivadora de tepache ligeramente fermentado, mango y una riqueza de melaza; en el paladar, toques de regaliz e hinojo con una explosión láctica, y una tensión fantástica entre lo dulce y lo salado.",
+      "batch": "Destilación única en acero inoxidable; aguamiel fermentado alrededor de una semana con pulque madre"
+    },
+    "dantano-aguamiel-cane": {
+      "batch": "Destilado de aguamiel y caña; según la fuente de la reseña, esta etiqueta es un destilado de aguamiel y caña, a diferencia de la etiqueta 100% savia 9 Guardianes",
+      "composition": "Destilado de savia de agave fermentada (aguamiel) mezclado con destilado de caña; el componente no agave está divulgado en la etiqueta y por la fuente citada — incluido como entrada factual, no como perfil de estilo comiteco"
+    },
+    "el-tesoro-extra-anejo": {
+      "reviewSummary": "Drinkhacker señala que, donde la mayoría de los extra añejos son bombas de caramelo y vainilla, este mantiene el agave claramente en el encuadre — una nariz herbácea de romero, pimienta y pimienta de Jamaica que podría pasar por un reposado, sobre un roble profundo.",
+      "batch": "Envejecido 4-5 años en barricas americanas ex-bourbon — más allá del mínimo legal de 3 años"
+    },
+    "ilegal-mezcal-reposado": {
+      "reviewSummary": "BBC Good Food describe un destilado suave con un aroma sutil a paja, toques de cítricos y dulzor de caramelo, vainilla y cítricos en el paladar con especias y tierra, y un final dulce y suave; Bourbon Banter nota clavo y dulce de leche con el humo que va de la nariz a un final ahumado con dulzor de leche.",
+      "batch": "Espadín joven reposado unos 4-6 meses en roble americano (barricas ex-whisky según notas de la marca)"
+    },
+    "ilegal-mezcal-anejo": {
+      "reviewSummary": "The Tequila Whisperer lo encontró una de las sorpresas de mezcal envejecido más placenteras que había probado; Bourbon Banter describe un giro más pronunciado hacia el caramelo y las notas de madera más especiadas que el reposado, con menos del humo del joven.",
+      "batch": "Espadín joven reposado unos 14 meses en roble americano, más allá del mínimo de 1 año del añejo"
+    },
+    "montelobos-tobala": {
+      "reviewSummary": "Mezcal Reviews describe aromas de limón, pimiento verde y pera, con cítricos, albahaca, higo asado, macadamia y trufa en el paladar; las notas de miembros también mencionan chicle y pasto recién cortado entre lotes.",
+      "batch": "100% tobalá cultivado (sin recolección silvestre), asado en horno; producción enfocada en sostenibilidad",
+      "abvNote": "La graduación varía por lote; la reseña citada lista notas específicas de lote — revisa tu botella"
+    },
+    "macurichos-ancestral-tobala": {
+      "reviewSummary": "Mezcal Reviews lo describe como herbáceo con notas de tierra seca, tomillo, cilantro y un toque de romero; una reseña de miembro lo encontró suave y delicado con un buen dulzor de principio a fin.",
+      "batch": "Producción ancestral: cocido en horno de barro, molido con tahona, fermentado en tinas de madera, alambiques de barro; la familia también reforesta poblaciones silvestres",
+      "abvNote": "La graduación de los lotes pequeños varía (una reseña de miembro citada lista un lote al 47,54%); revisa tu botella"
+    },
+    "del-maguey-pechuga": {
+      "reviewSummary": "Los miembros de Mezcal Reviews describen regaliz negro, anís y clavo con fruta, un ahumado afín al whisky y —sí— un sabor a pollo; otros encuentran albahaca, limón, océano y fruta en la nariz. Difford's describe piel de pollo asado ahumada, pimentón y sal de mar. Un estilo de producción para festivales, no una clase cotidiana.",
+      "editorialNote": "La pechuga es un estilo de producción (tercera destilación sobre fruta y aves), no una clase legal de edad ni un destilado aparte; es contextual a la tradición del mezcal más que una categoría nueva aquí.",
+      "batch": "Triple destilado; la tercera destilación pasa el vapor por frutas de montaña silvestres, almendras, arroz y una pechuga de pollo cruda suspendida; producción estacional y limitada",
+      "abvNote": "La graduación varía por lote (una lista minorista citada muestra 49%); revisa tu botella"
+    },
+    "siete-pozos-tuxca": {
+      "reviewSummary": "Un miembro de Mezcal Reviews (lote 03) encontró una fragancia floral dulce con un sándalo ligero, un paladar láctico con pimientos verdes y mineralidad dulce, y un final rico en agave.",
+      "batch": "Agaves silvestres ixtero amarillo y lineño, asados en horno, fermentados en piedra volcánica, destilados en cobre; uno de los productores que impulsan activamente una denominación de origen para la tuxca",
+      "abvNote": "Producción en lotes pequeños; la graduación varía (una lista minorista muestra 45%) — revisa tu botella"
+    },
+    "indio-alonso-tuxca": {
+      "reviewSummary": "La entrada citada de Mezcal Reviews documenta la composición multi-agave (cimarrón, cuaquizoca, salmiana) y la fermentación en horno de piedra volcánica; las notas de cata de este lote específico aún no están documentadas, así que aquí no se afirma ningún carácter de sabor.",
+      "batch": "Agaves silvestres cimarrón (Agave angustifolia), cuaquizoca y salmiana (Agave inaequidens), asados en horno, fermentados en horno de piedra volcánica, doble destilación en cobre; otro productor que impulsa una denominación de origen para la tuxca",
+      "abvNote": "Producción en lotes pequeños; graduación no documentada en la fuente citada — revisa tu botella"
+    },
+    "clande-sotol-yellow": {
+      "reviewSummary": "Los miembros de Mezcal Reviews llaman al Yellow su favorito de la línea Clande — magia pura en aroma y sabor, y para un reseñista su sotol favorito probado hasta ahora; el proyecto de terruño de la marca apoya a pequeños productores locales y la conservación del Dasylirion.",
+      "batch": "Lotes pequeños de Dasylirion silvestre; las etiquetas codificadas por color de Clande marcan cada una a un sotolero distinto — la etiqueta amarilla es Bienvenido Fernandez",
+      "abvNote": "La graduación varía por lote (una reseña de miembro citada lista 46,5% para un lote de marzo de 2018); revisa tu botella"
+    },
+    "hacienda-de-chihuahua-sotol-anejo": {
+      "reviewSummary": "Un miembro de Mezcal Reviews encuentra un carácter medicinal-herbal con azúcar moreno y anís y un final apenas amargo — un sorbo ligero de verano comparable a añejos finos de tequila pero más profundo; el productor mantiene un programa de conservación de Dasylirion.",
+      "batch": "100% Dasylirion de recolección silvestre, cocido al vapor, triple destilado en cobre de doble columna, luego envejecido 2 años en encino blanco francés nuevo; certificado orgánico USDA y Kosher",
+      "abvNote": "Graduación no indicada en la página de la reseña citada; la línea envejecida del productor es de menor graduación según notas de miembros — revisa tu botella"
+    },
+    "bacatt-bacanora": {
+      "reviewSummary": "Un miembro de Mezcal Reviews describe pasto húmedo después de la lluvia, un dulzor maderoso y mineralidad en la nariz; el paladar alterna entre una nota dulce de mezquite-roble con un final mentolado y una nota picante de galletas con crema — una botella digna de recuerdo que ya reservan para ocasiones especiales.",
+      "batch": "Maguey pacifica asado en horno subterráneo tradicional; lote 2305, botella 242 de la corrida citada",
+      "abvNote": "Producción de lote pequeño; la graduación varía (la reseña citada es del lote 2305) — revisa tu botella"
+    },
+    "sunora-bacanora-blanco": {
+      "reviewSummary": "Los miembros de Mezcal Reviews describen jalapeño, sandía y queso crema con piña de agave asada y masa madre en la nariz; alcachofa asada, espárrago carbonizado, piedra húmeda y un carnoso afín a cecina de pavo en el paladar con un humo terroso ligero — una sólida introducción a la categoría.",
+      "batch": "Maguey pacifica asado 48 horas en hornos subterráneos (mallas), molido con piedra, fermentado 6-12 días, triple destilado",
+      "abvNote": "Graduación no documentada en la página de la reseña citada — revisa tu botella"
+    },
+    "la-nina-del-mezcal-bacanora": {
+      "reviewSummary": "Mezcal Reviews la describe como salada y viscosa con fruta y azúcar de agave; un miembro encontró algodón de azúcar en la nariz con notas de pasta dental de naranja y crema de mantequilla y un final apenas ácido.",
+      "batch": "Lotes pequeños artesanales de agave pacifica; lote citado B002, botella 909/1000",
+      "abvNote": "Producción en lotes pequeños; la graduación varía (la reseña citada lista 48% para el lote B002) — revisa tu botella"
+    },
+    "el-acabo-plata-raicilla": {
+      "reviewSummary": "Tastings.com la calificó 97/100 en mayo de 2025 y Forbes reporta que fue el destilado de agave mejor clasificado en el concurso 2025 del Beverage Testing Institute, uno de solo dos premios Platinum; los jueces describen una aromática brillante de pimiento verde y pasto con jalapeño y pimiento rojo, y un paladar de agave, manzana verde y jalapeño guiado por lo verde.",
+      "batch": "Plata sin crianza de la taberna Taberna 3 Gallos; homenaje a las celebraciones de cosecha de la Hacienda de Ahuacatepec"
+    }
+  },
   "processes": {},
   "plants": {},
   "terms": {}

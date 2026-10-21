@@ -188,3 +188,50 @@ test("source classifications translate: productor, reseña, estilo", async () =>
     "source kind is translated");
   assert.ok(!/fuente (producer|review|style)\b/.test(text), "no mixed source classifications");
 });
+
+test("bottle prose translates: reviews, notes, batch, ABV notes, composition", async () => {
+  const { bottleEntry } = await import("../assets/js/catalogue-view.js");
+  const counts = { reviewSummary: 0, batch: 0, abvNote: 0, composition: 0, editorialNote: 0 };
+  for (const bottle of bottles) {
+    const entry = bottleEntry(bottle, { sources: sourceList, profiles, locale: es });
+    const text = entry.textContent;
+    if (bottle.reviewSummary) {
+      counts.reviewSummary++;
+      assert.ok(!text.includes(bottle.reviewSummary.slice(0, 30)), `${bottle.id} review renders in Spanish`);
+      assert.ok(text.includes(contentEs.bottles[bottle.id].reviewSummary.slice(0, 30)),
+        `${bottle.id} shows the Spanish review`);
+    }
+    if (bottle.batch) {
+      counts.batch++;
+      assert.ok(!text.includes(bottle.batch.slice(0, 25)), `${bottle.id} batch is Spanish`);
+    }
+    if (bottle.abvNote) {
+      counts.abvNote++;
+      assert.ok(!text.includes("not documented in cited sources"), `${bottle.id} ABV note is Spanish`);
+    }
+    if (bottle.composition) {
+      counts.composition++;
+      assert.ok(!text.includes("cane-based sugar source"), `${bottle.id} composition is Spanish`);
+    }
+    if (bottle.editorialNote) {
+      counts.editorialNote++;
+      assert.ok(!text.includes(bottle.editorialNote.slice(0, 25)), `${bottle.id} editorial note is Spanish`);
+    }
+  }
+  assert.ok(counts.reviewSummary >= 29 && counts.batch >= 22 && counts.abvNote >= 14,
+    "every prose field exercised");
+});
+
+test("the reported case: Patrón Añejo Cristalino card is Spanish end to end", async () => {
+  const { renderProfile } = await import("../assets/js/profile.js");
+  const cristalino = profiles.find((p) => p.id === "tequila-cristalino-style");
+  const patron = bottles.find((b) => b.id === "patron-anejo-cristalino");
+  const root = document.createElement("div");
+  renderProfile(root, { profile: cristalino, bottle: patron, sources: sourceList, allProfiles: profiles, allBottles: bottles, locale: es });
+  const cardText = root.querySelector(".bottle-card").textContent;
+  assert.ok(cardText.includes("Tastings.com encuentra aromas y sabores redondos y cremosos"),
+    "review summary is Spanish");
+  assert.ok(!cardText.includes("round, creamy aromas"), "no English review text remains");
+  assert.ok(!/Reviewers|describes a|finds\b/.test(cardText) || cardText.includes("encuentra"),
+    "review prose is translated, reviewer names preserved");
+});

@@ -21,6 +21,7 @@ function sourceLinks(sources, sourceIds, locale = null) {
 }
 
 function exampleBottleCard(bottle, sources, t, locale = null) {
+  const L = (field, english) => fieldEs("bottle", bottle.id, field, locale) || english;
   const card = el("article", { class: "bottle-card", "aria-labelledby": "bottle-card-heading" });
   card.appendChild(el("h3", { id: "bottle-card-heading", class: "bottle-card-title" }, t("profile.exampleBottle")));
   const name = el("p", { class: "bottle-name" });
@@ -29,13 +30,13 @@ function exampleBottleCard(bottle, sources, t, locale = null) {
         name.appendChild(el("span", { class: "bottle-abv" }, ` \u00b7 ${bottle.abv}% ${ui(locale, "factAbvLong")}`));
   }
   if (bottle.abv == null && bottle.abvNote) {
-    name.appendChild(el("span", { class: "bottle-abv" }, ` \u00b7 ${bottle.abvNote}`));
+    name.appendChild(el("span", { class: "bottle-abv" }, ` \u00b7 ${L("abvNote", bottle.abvNote)}`));
   }
   card.appendChild(name);
   if (bottle.producer) card.appendChild(el("p", { class: "bottle-producer" }, bottle.producer));
   if (bottle.place) card.appendChild(el("p", { class: "bottle-place" }, bottle.place));
-  if (bottle.composition) card.appendChild(el("p", { class: "bottle-composition editorial-note" }, `${ui(locale, "factComposition")}: ${bottle.composition}`));
-  card.appendChild(el("p", { class: "bottle-review" }, bottle.reviewSummary));
+  if (bottle.composition) card.appendChild(el("p", { class: "bottle-composition editorial-note" }, `${ui(locale, "factComposition")}: ${L("composition", bottle.composition)}`));
+  card.appendChild(el("p", { class: "bottle-review" }, L("reviewSummary", bottle.reviewSummary)));
   const linksLabel = el("p", { class: "bottle-links-label" }, t("profile.sourcesBottle"));
   card.appendChild(linksLabel);
   card.appendChild(collapsibleBottleSources(sources, bottle, t, locale));
@@ -170,8 +171,8 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     for (const other of others) {
       const item = el("li", { class: "more-bottle-item" });
       item.appendChild(el("strong", {}, `${other.brand} — ${other.expression}`));
-      if (other.reviewSummary) item.appendChild(el("p", { class: "bottle-review" }, other.reviewSummary));
-      if (other.editorialNote) item.appendChild(el("p", { class: "editorial-note" }, other.editorialNote));
+      if (other.reviewSummary) item.appendChild(el("p", { class: "bottle-review" }, fieldEs("bottle", other.id, "reviewSummary", locale) || other.reviewSummary));
+      if (other.editorialNote) item.appendChild(el("p", { class: "editorial-note" }, fieldEs("bottle", other.id, "editorialNote", locale) || other.editorialNote));
       const src = el("p", {});
       for (const sid of other.sourceIds || []) {
         const source = sources.find((x) => x.id === sid);
