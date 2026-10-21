@@ -24,7 +24,14 @@ const normalize = (text) =>
  * matching. Values are compared normalized too, so accented targets
  * like "espadín" are written here accent-stripped.
  */
-const ALIASES = new Map([
+const normalizeAliasKey = (text) =>
+  (text || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+
+const ALIAS_ENTRIES = [
   ["tequilana weber", "tequilana"],
   ["blue agave", "tequilana"],
   ["weber azul", "tequilana"],
@@ -34,26 +41,21 @@ const ALIASES = new Map([
   ["mountain raicilla", "sierra raicilla"],
   ["coastal raicilla", "costa"],
   ["raicilla de la costa", "costa"],
-  ["destilado", "destilado"],
-  ["humo", "smoke"],
-  ["dulce", "sweetness"],
   ["bacanorero", "bacanora"],
   ["tabernero", "taberna"],
-  // Spanish descriptors resolve to the English note vocabulary.
-  ["humo", "smoke"],
   ["humo de mezquite", "mesquite smoke"],
+  ["humo", "smoke"],
   ["pimienta", "pepper"],
   ["caramelo", "caramel"],
   ["vainilla", "vanilla"],
   ["citricos", "citrus"],
-  ["cítricos", "citrus"],
   ["agave cocido", "cooked agave"],
   ["agave asado", "roasted agave"],
   ["roble", "oak"],
   ["hierbas", "herbs"],
   ["florales", "floral"],
   ["mineral", "mineral"],
-  ["dulce", "sweet"],
+  ["dulce", "sweetness"],
   // Spanish descriptors for common English style terms.
   ["altos", "highland"],
   ["barrica", "barrel"],
@@ -63,11 +65,14 @@ const ALIASES = new Map([
   ["ahumado", "smoky"],
   ["con crianza", "aged"],
   ["envejecido", "aged"],
-]);
+];
 
-export function applyAliases(normalizedQuery) {
-  const mapped = ALIASES.get(normalizedQuery);
-  return mapped || normalizedQuery;
+const ALIASES = new Map(ALIAS_ENTRIES.map(([key, value]) => [normalizeAliasKey(key), value]));
+
+export function applyAliases(query) {
+  const normalized = normalizeAliasKey(query);
+  const mapped = ALIASES.get(normalized);
+  return mapped ? normalizeAliasKey(mapped) : normalized;
 }
 
 function profileSearchTerms(profile) {
@@ -123,10 +128,11 @@ export function searchProfiles({ profiles, bottles, query }) {
   return results;
 }
 
-function reasonFor(profile, example, q) {
+function reasonFor(profile, example, q, esNoteHit = false) {
   if (normalize(profile.spirit) === q) return `Matches the spirit “${profile.spirit}”.`;
   if (example && normalize(example.brand).includes(q)) return `Example bottle brand matches: ${example.brand}.`;
   if (example && normalize(example.producer || "").includes(q)) return `Producer matches: ${example.producer}.`;
+  if (esNoteHit) return `Taste note matches: “${q}”.`;
   if (profile.tasteNotes.some((n) => normalize(n).includes(q))) return `Taste note matches: “${q}”.`;
   if (normalize(profile.plant || "").includes(q)) return `Agave plant matches: ${profile.plant}.`;
   if (normalize(profile.stateName).includes(q)) return `Place matches: ${profile.stateName}.`;

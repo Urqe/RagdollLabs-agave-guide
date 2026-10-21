@@ -277,6 +277,13 @@ for (const p2 of profiles) {
 const svg = await readFile(path.join(root, "assets/geo/mexico-states.svg"), "utf8");
 const svgStates = [...svg.matchAll(/data-state="([a-z]+)"/g)].map((m) => m[1]);
 if (svgStates.length !== 32) fail(`mexico-states.svg should have 32 state paths, found ${svgStates.length}`);
+
+// Each state path must carry exactly one <title> so map.js can strip it
+// from uncovered states without a null removeChild crash.
+for (const m of svg.matchAll(/<path[^>]*data-state="([a-z]+)"[^>]*>\s*(<title>.*?<\/title>)?/gs)) {
+  const titles = (m[0].match(/<title>/g) || []).length;
+  if (titles !== 1) fail(`mexico-states.svg path ${m[1]} should have exactly one <title>, found ${titles}`);
+}
 for (const p of profiles) {
   if (!svgStates.includes(p.stateId)) fail(`profile stateId ${p.stateId} has no path in mexico-states.svg`);
 }
