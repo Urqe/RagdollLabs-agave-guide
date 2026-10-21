@@ -2,7 +2,7 @@ import { el, safeLink, clear } from "./dom-utils.js";
 import { STATE_NAMES } from "./map.js";
 import { flavorMoods, ifYouLikeThis } from "./compare.js";
 import { bottlesForProfile } from "./catalogue.js";
-import { SPIRIT_LABELS } from "./spirit-labels.js";
+import { SPIRIT_LABELS, ADVENTUROUS_TRADITIONS } from "./spirit-labels.js";
 import { ui, sensoryOverview, dimensionLabel } from "./presentation.js";
 import { tasteNote } from "./taste-notes.js";
 import { editorialText, fieldEs, fieldEsAny, localizedTitle, sourceKindLabel } from "./editorial.js";
@@ -76,7 +76,7 @@ function exploreNextLinks(profile, allProfiles, locale) {
   const similar = ifYouLikeThis(profile, allProfiles, { maxSuggestions: 1 }).map((x) => x.profile)[0];
   if (similar) out.push({ label: t("profile.exploreSimilar"), profile: similar, reason: title(similar) });
   // More adventurous (different tradition entirely)
-  const adventurous = allProfiles.find((p) => p.id !== profile.id && p.traditionId !== profile.traditionId && ["tuxca", "comiteco", "destilado-de-pulque", "sotol"].includes(p.traditionId) && !out.some((x) => x.profile.id === p.id));
+  const adventurous = allProfiles.find((p) => p.id !== profile.id && p.traditionId !== profile.traditionId && ADVENTUROUS_TRADITIONS.includes(p.traditionId) && !out.some((x) => x.profile.id === p.id));
   if (adventurous) out.push({ label: t("profile.exploreAdventurous"), profile: adventurous, reason: title(adventurous) });
   return out;
 }

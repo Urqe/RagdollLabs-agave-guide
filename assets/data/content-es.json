@@ -451,21 +451,31 @@
       "batch": "Plata sin crianza de la taberna Taberna 3 Gallos; homenaje a las celebraciones de cosecha de la Hacienda de Ahuacatepec"
     },
     "aguamiel-bacanora-blanco": {
-      "reviewSummary": "Una cata de miembro de Mezcal Reviews describe agave cálido con pastel de vainilla y ligera fruta (piña, crema de plátano) en nariz, y un paladar dulce y jugoso con notas de crema batida, masa de pastel y natillas contra ligeras notas herbáceas, de humo y salinas."
+      "reviewSummary": "Una cata de miembro de Mezcal Reviews describe agave cálido con pastel de vainilla y ligera fruta (piña, crema de plátano) en nariz, y un paladar dulce y jugoso con notas de crema batida, masa de pastel y natillas contra ligeras notas herbáceas, de humo y salinas.",
+      "classification": "Bacanora — blanco (sin añejar); denominación de origen de Sonora",
+      "plantComposition": "100% agave silvestre yaquiana/Pacifica (la forma sonorense de Agave angustifolia), según el productor"
     },
     "don-julio-blanco": {
-      "reviewSummary": "La guía Difford's lo describe como un tequila sin añejamiento, reposado brevemente en recipientes inertes antes del embotellado — un blanco de alturas en el estilo premium moderno.",
-      "editorialNote": "Un blanco de los Altos y no del Valle de Tequila: espera la lectura más brillante y frutal de la misma clase legal."
+      "reviewSummary": "La guía Difford's (catada en 2011) encuentra una nariz especiada y mineral con limón vivaz y toronja rosada y sutiles aromas de masa con levadura; el paladar limpio y mineral ofrece dulce de leche, masa y delicados sabores herbales, cerrando con un final largo y seco con notas vegetales y pimienta negra especiada. La botella es sin añejar, reposada brevemente en recipientes inertes antes del embotellado.",
+      "editorialNote": "Un blanco de los Altos y no del Valle de Tequila: espera la lectura más brillante y frutal de la misma clase legal.",
+      "classification": "Tequila — blanco 100% de agave, sin añejar",
+      "plantComposition": "100% agave azul weber (Agave tequilana)"
     },
     "jose-cuervo-tradicional-reposado": {
-      "reviewSummary": "The Rum Howler encuentra la frutosidad, la especia y la pimienta contenidas frente a embotellados anteriores — sigue siendo un reposado agradable y fácil, pero con menos agave contundente del que el reseñista busca en un tequila de sorbo."
+      "reviewSummary": "The Rum Howler encuentra la frutosidad, la especia y la pimienta contenidas frente a embotellados anteriores — sigue siendo un reposado agradable y fácil, pero con menos agave contundente del que el reseñista busca en un tequila de sorbo.",
+      "classification": "Tequila — reposado 100% de agave (con reposo en roble)",
+      "plantComposition": "100% agave azul weber (Agave tequilana)"
     },
     "patron-silver": {
       "reviewSummary": "Liquor.com encuentra un encantador aroma vegetal de agave cocido — pasto, pimientos verdes, algo de tierra y eucalipto — con sabores de agave, eucalipto y pimienta blanca que llevan a un final suave y sabroso; fino solo y en cócteles, con precio premium.",
-      "editorialNote": "Un blanco de los Altos: la misma clase sin añejar del ejemplo del valle, con la lectura más frutal y cítrica de los Altos."
+      "editorialNote": "Un blanco de los Altos: la misma clase sin añejar del ejemplo del valle, con la lectura más frutal y cítrica de los Altos.",
+      "classification": "Tequila — blanco 100% de agave, sin añejar",
+      "plantComposition": "100% agave azul weber (Agave tequilana)"
     },
     "casa-dragones-blanco": {
-      "reviewSummary": "La reseña de Bevvy encuentra toronja fresca y manzana verde en nariz, agave protagonista en el sorbo con pimienta negra, clavo, menta y fruta tropical jugosa, y un final ligero y brillante con toronja, pimienta y hierbas refrescantes."
+      "reviewSummary": "La reseña de Bevvy encuentra toronja fresca y manzana verde en nariz, agave protagonista en el sorbo con pimienta negra, clavo, menta y fruta tropical jugosa, y un final ligero y brillante con toronja, pimienta y hierbas refrescantes.",
+      "classification": "Tequila — blanco 100% de agave azul, sin añejar",
+      "plantComposition": "100% agave azul weber (Agave tequilana), según la marca"
     }
   },
   "processes": {

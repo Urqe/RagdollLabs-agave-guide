@@ -2,7 +2,7 @@ import { el, clear } from "./dom-utils.js";
 import { navigateTo } from "./router.js";
 import { ui } from "./presentation.js";
 import { localizedTitle } from "./editorial.js";
-import { SPIRIT_LABELS } from "./spirit-labels.js";
+import { SPIRIT_LABELS, ADVENTUROUS_TRADITIONS } from "./spirit-labels.js";
 import { flavorMoods } from "./compare.js";
 
 /**
@@ -46,7 +46,7 @@ const FLAVOUR_CATEGORIES = [
   { id: "smoky-earthly", match: (p) => p.sensory?.smoke === "high" || p.sensory?.smoke === "medium" },
   { id: "peppery-spicy", match: (p) => p.sensory?.pepper === "high" || p.sensory?.pepper === "medium" },
   { id: "rich-oak", match: (p) => p.sensory?.oak === "high" || p.sensory?.oak === "medium" },
-  { id: "adventurous", match: (p) => ["tuxca", "comiteco", "destilado-de-pulque", "sotol"].includes(p.traditionId || p.spirit) },
+  { id: "adventurous", match: (p) => ADVENTUROUS_TRADITIONS.includes(p.traditionId || p.spirit) },
 ];
 
 function profileLinkRow(profile, locale, origin) {

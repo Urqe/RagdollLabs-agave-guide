@@ -32,6 +32,13 @@ export const SPIRIT_GROUP_ORDER = [
 ];
 
 /**
+ * Traditions the discovery threads treat as "more adventurous" picks —
+ * the lesser-known regional traditions. Shared by the flavour-category
+ * matcher and the profile explore-next links so the list cannot drift.
+ */
+export const ADVENTUROUS_TRADITIONS = ["tuxca", "comiteco", "destilado-de-pulque", "sotol"];
+
+/**
  * Group profiles by spirit in a logical order (tequila together, raicilla
  * together, …) so related styles read as neighbors instead of interleaving
  * by encounter order. Stable within each group by title.

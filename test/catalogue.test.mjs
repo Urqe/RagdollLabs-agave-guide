@@ -256,3 +256,35 @@ test("R25: new bottles have complete Spanish translations", async () => {
   esLocale.set("en");
   setContentEs({});
 });
+
+test("R26: classification and plantComposition render in Spanish, never raw English", async () => {
+  const { setContentEs } = await import("../assets/js/editorial.js");
+  setContentEs((await readJson("assets/data/content-es.json")));
+  const esLocale = createLocale();
+  esLocale.set("es");
+  const newIds = ["aguamiel-bacanora-blanco", "don-julio-blanco", "jose-cuervo-tradicional-reposado", "patron-silver", "casa-dragones-blanco"];
+  for (const id of newIds) {
+    const b = bottles.find((x) => x.id === id);
+    const container = document.createElement("div");
+    document.body.appendChild(container);
+    const entry = bottleEntry(b, { sources, profiles, locale: esLocale });
+    container.appendChild(entry);
+    assert.ok(!entry.textContent.includes(b.classification), `${id} classification is translated`);
+    assert.ok(!entry.textContent.includes(b.plantComposition), `${id} plantComposition is translated`);
+    container.remove();
+  }
+  esLocale.set("en");
+  setContentEs({});
+});
+
+test("R26: every translated bottle field has a Spanish entry (no silent gaps)", async () => {
+  const contentEs = await readJson("assets/data/content-es.json");
+  const gaps = [];
+  for (const b of bottles) {
+    const es = contentEs.bottles[b.id] || {};
+    for (const f of ["reviewSummary", "editorialNote", "abvNote", "batch", "composition", "classification", "plantComposition"]) {
+      if (b[f] && !es[f]) gaps.push(`${b.id}:${f}`);
+    }
+  }
+  assert.deepEqual(gaps, [], `untranslated fields must be listed explicitly, got: ${gaps.join(", ")}`);
+});

@@ -414,7 +414,7 @@ Acceptance: new content passes the same evidence and editorial gates as existing
 
 ### Release 26 — Editorial Standards Review & Fixes
 
-Apply the maintenance protocol. Audit evidence quality and provenance across the new entities, sensory-claim discipline, distinction between legal and cultural framing, Spanish/English parity across all new content, scope-description accuracy and discovery regressions. Deploy corrections and establish the next feature/maintenance pair from the backlog.
+Applied (see Release 26 notes in RELEASE_NOTES.md). Audit evidence quality and provenance across the new entities, sensory-claim discipline, distinction between legal and cultural framing, Spanish/English parity across all new content, scope-description accuracy and discovery regressions. Deploy corrections and establish the next feature/maintenance pair from the backlog.
 
 ### Mandatory protocol for every maintenance release
 
