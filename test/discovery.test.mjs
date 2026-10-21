@@ -183,3 +183,59 @@ test("R17: search surfaces discovery paths (profile search indexes plants and pl
   const place = searchProfiles({ profiles, bottles: [], query: "Sonora" }).map((r) => r.profile.id);
   assert.ok(place.includes("bacanora-pacifica-sierra-sonora"), "place finds the Sonora profile");
 });
+
+test("R18: plant page region chips show region names, not raw ids", () => {
+  const view = render({ kind: "plant", id: "agave-maximiliana" });
+  const chips = [...view.querySelectorAll('a[href^="#/discover/region/"]')].map((a) => a.textContent);
+  assert.ok(chips.includes("Sierra Occidental de Jalisco"), `region chip uses the region name, got: ${chips.join(", ")}`);
+  assert.ok(!chips.includes("sierra-occidental-jal"), "no raw region id leaks");
+});
+
+test("R18: region page plant chips show species names, not raw ids", () => {
+  const view = render({ kind: "region", id: "sierra-occidental-jal" });
+  const chips = [...view.querySelectorAll('a[href^="#/discover/plant/"]')].map((a) => a.textContent);
+  assert.ok(chips.includes("Agave maximiliana"), `plant chip uses the species name, got: ${chips.join(", ")}`);
+  assert.ok(!chips.some((t) => t === "agave-maximiliana"), "no raw plant id leaks");
+});
+
+test("R18: profile back link returns to the discovery origin page", async () => {
+  const { renderProfile } = await import("../assets/js/profile.js");
+  const { sources } = await readJson("assets/data/sources.json");
+  const profile = profiles.find((p) => p.id === "raicilla-maximiliana-sierra-jalisco");
+  const bottle = bottles.find((b) => b.id === profile.exampleBottleId);
+  container.innerHTML = "";
+  const { createLocale } = await import("../assets/js/locale.js");
+  renderProfile(container, {
+    profile, bottle, sources,
+    origin: "plant:agave-maximiliana",
+    allProfiles: profiles, allBottles: bottles,
+    locale: createLocale(),
+  });
+  const back = container.querySelector(".back-link");
+  assert.equal(back.getAttribute("href"), "#/discover/plant/agave-maximiliana", "back link returns to the plant page");
+  assert.ok(back.textContent.includes("discovery"), "back link is labeled for discovery");
+});
+
+test("R18: regional plant-name aliases find their profiles", async () => {
+  const { searchProfiles } = await import("../assets/js/search.js");
+  const papalote = searchProfiles({ profiles, bottles: [], query: "papalote" }).map((r) => r.profile.id);
+  assert.ok(papalote.includes("raicilla-costa-jalisco"), "papalote (rhodacantha alias) finds the Costa profile");
+  const yaquiana = searchProfiles({ profiles, bottles: [], query: "yaquiana" }).map((r) => r.profile.id);
+  assert.ok(yaquiana.includes("bacanora-pacifica-sierra-sonora"), "yaquiana (bacanora agave) finds the bacanora profile");
+  const pacifico = searchProfiles({ profiles, bottles: [], query: "pacifico" }).map((r) => r.profile.id);
+  assert.ok(pacifico.includes("bacanora-pacifica-sierra-sonora"), "pacifico alias finds the bacanora profile");
+});
+
+test("R18: every common plant name from plants.json is searchable", async () => {
+  const { searchProfiles } = await import("../assets/js/search.js");
+  for (const plant of plants) {
+    for (const name of plant.commonNames || []) {
+      const q = name.name.toLowerCase();
+      const matches = searchProfiles({ profiles, bottles: [], query: q });
+      const viaPlantIds = profiles.filter((p) => p.plantIds.includes(plant.id));
+      if (viaPlantIds.length) {
+        assert.ok(matches.length > 0, `common name "${name.name}" of ${plant.id} finds at least one profile`);
+      }
+    }
+  }
+});
