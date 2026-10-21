@@ -3,7 +3,7 @@ import { navigateTo } from "./router.js";
 import { searchBottles, brandDirectory } from "./catalogue.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 import { ui } from "./presentation.js";
-import { sourceKindLabel } from "./editorial.js";
+import { sourceKindLabel, fieldEs } from "./editorial.js";
 
 const COVERAGE_LABELS = {
   "tasting-not-documented": "Tasting notes not yet documented",
@@ -69,14 +69,15 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
   }, `${bottle.brand} \u2014 ${bottle.expression}`);
   article.appendChild(name);
 
+  const L = (field, english) => fieldEs("bottle", bottle.id, field, locale) || english;
   const facts = el("ul", { class: "catalogue-facts" });
   facts.appendChild(el("li", {}, `${ui(locale, "factSpirit")}: ${SPIRIT_LABELS[bottle.spirit] || bottle.spirit || ui(locale, "notDocumented")}`));
   if (bottle.abv != null) facts.appendChild(el("li", {}, `${ui(locale, "factAbvLong")}: ${bottle.abv}% (${ui(locale, "labelFact")})`));
-  if (bottle.abv == null && bottle.abvNote) facts.appendChild(el("li", {}, `${ui(locale, "factAbv")}: ${bottle.abvNote}`));
+  if (bottle.abv == null && bottle.abvNote) facts.appendChild(el("li", {}, `${ui(locale, "factAbv")}: ${L("abvNote", bottle.abvNote)}`));
   if (bottle.producer) facts.appendChild(el("li", {}, `${ui(locale, "factProducer")}: ${bottle.producer}`));
   if (bottle.place) facts.appendChild(el("li", {}, `${ui(locale, "factPlace")}: ${bottle.place}`));
-  if (bottle.batch) facts.appendChild(el("li", {}, `${ui(locale, "factBatch")}: ${bottle.batch}`));
-  if (bottle.composition) facts.appendChild(el("li", {}, `${ui(locale, "factComposition")}: ${bottle.composition}`));
+  if (bottle.batch) facts.appendChild(el("li", {}, `${ui(locale, "factBatch")}: ${L("batch", bottle.batch)}`));
+  if (bottle.composition) facts.appendChild(el("li", {}, `${ui(locale, "factComposition")}: ${L("composition", bottle.composition)}`));
   article.appendChild(facts);
 
   // Coverage disclosures first: factual entry without borrowed character.
@@ -87,7 +88,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
 
   // Reviewer impressions (attributed).
   if (bottle.reviewSummary) {
-    article.appendChild(el("p", { class: "bottle-review" }, bottle.reviewSummary));
+    article.appendChild(el("p", { class: "bottle-review" }, L("reviewSummary", bottle.reviewSummary)));
   }
 
   // The app's synthesis, explicitly profile-relative and sourced.
@@ -97,7 +98,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
     const prefix = profile
       ? ui(locale, "fitsPrefix").replace("{title}", profile.title)
       : ui(locale, "fitsPrefixPlain");
-    note.appendChild(document.createTextNode(prefix + bottle.editorialNote));
+    note.appendChild(document.createTextNode(prefix + L("editorialNote", bottle.editorialNote)));
     article.appendChild(note);
   }
 
