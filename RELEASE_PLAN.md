@@ -351,7 +351,7 @@ Acceptance: a user can start from a plant, a region, or a spirit and reach meani
 
 ### Release 18 — Discovery Review & Fixes
 
-Apply the maintenance protocol. Audit map coverage-versus-designation labelling, region list accessibility, plant search aliases, flavour-category explanations, result navigation, state preservation and mobile layouts. Deploy corrections.
+Applied (see Release 18 notes in RELEASE_NOTES.md). Audit map coverage-versus-designation labelling, region list accessibility, plant search aliases, flavour-category explanations, result navigation, state preservation and mobile layouts. Deploy corrections.
 
 ### Release 19 — Progressive Learning Journey
 
