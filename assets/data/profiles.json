@@ -679,7 +679,7 @@
       "description": "A cristalino looks like a blanco in the glass but carries softened barrel character: rounder, creamier and often sweeter-perceived than either a blanco or its unfiltered aged base, with gentler acidity and agave bite. Filtration removes color and, with it, some flavor — what remains is by design smooth and approachable. The category is prone to additive use to restore sweetness and body, which critics flag; the base spirit and the producer matter more than the style name. This is editorial style guidance, not a rating of any specific bottle.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
       "plantId": "agave-tequilana",
-      "process": "Made as reposado or añejo, then charcoal-filtered clear; a finishing choice, not a legal class",
+      "process": "Made as oak-rested reposado or añejo, then charcoal-filtered clear; a finishing choice, not a legal class",
       "category": "Cristalino — a finishing/marketing style on top of a legal class, not a legal class itself; disclosure of the aged base varies by brand",
       "beginnerNote": "New to cristalino? It is an aged tequila with the color filtered out — clear like a blanco, rounder like an añejo, and the subject of honest debate.",
       "aliases": [
@@ -1139,6 +1139,7 @@
       ],
       "processIds": [
         "pit-roast",
+        "steam-cook",
         "wild-fermentation",
         "distillation-methods"
       ],

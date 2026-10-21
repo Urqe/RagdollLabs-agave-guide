@@ -325,8 +325,11 @@ for (const region of regions) {
   if (region.type !== "state" && region.type !== "subregion" && region.type !== "municipality") {
     fail(`${label}: type must be state, subregion or municipality`);
   }
-  if (region.type === "state" && !/\bnot a legal|whole state\b/i.test(region.distinctions || "")) {
-    // states are acceptable only with explicit non-legal framing; nothing today
+  if (!Array.isArray(region.sourceIds) || region.sourceIds.length === 0) {
+    fail(`${label}: sourceIds required (regions carry legal/geographic claims that must stay source-backed)`);
+  }
+  for (const sid of region.sourceIds || []) {
+    if (!sourceIds.has(sid)) fail(`${label}: sourceId ${sid} not in sources.json`);
   }
   for (const tid of region.traditionIds || []) {
     if (!VALID_SPIRITS.has(tid)) fail(`${label}: traditionId ${tid} not a known tradition`);
@@ -336,6 +339,14 @@ for (const region of regions) {
   }
   for (const pid of region.processIds || []) {
     if (!processIdSet.has(pid)) fail(`${label}: processId ${pid} not in processes.json`);
+  }
+  for (const p of profiles) {
+    if (!p.regionIds.includes(region.id)) continue;
+    for (const pid of p.plantIds) {
+      if (!region.plantIds.includes(pid)) {
+        fail(`region ${region.id}: profile ${p.id} lists plant ${pid} but the region does not`);
+      }
+    }
   }
 }
 // Traditions: stable ids matching the spirit vocabulary, real plants/regions/sources.

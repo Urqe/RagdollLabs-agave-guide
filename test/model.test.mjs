@@ -21,6 +21,7 @@ const { plants } = await readJson("assets/data/plants.json");
 const { processes } = await readJson("assets/data/processes.json");
 const { regions } = await readJson("assets/data/regions.json");
 const { traditions } = await readJson("assets/data/traditions.json");
+const { sources: sourceList } = await readJson("assets/data/sources.json");
 
 const profileIds = new Set(profiles.map((p) => p.id));
 const regionIds = new Set(regions.map((r) => r.id));
@@ -189,4 +190,61 @@ test("R15: sotol's Dasylirion is never classified as an agave", () => {
   assert.ok(sotol.traditionIds.includes("sotol"));
   assert.ok(!sotol.traditionIds.includes("mezcal"), "Dasylirion never linked to an agave-category tradition");
   assert.ok(sotol.id.startsWith("dasylirion"), "id namespace keeps the genus distinct");
+});
+
+test("R16: regions are source-backed (data contract)", () => {
+  const sourceIds = new Set(sourceList.map((s) => s.id));
+  for (const r of regions) {
+    assert.ok(Array.isArray(r.sourceIds) && r.sourceIds.length > 0, `${r.id} has sourceIds`);
+    for (const sid of r.sourceIds) assert.ok(sourceIds.has(sid), `${r.id} source ${sid} exists`);
+  }
+});
+
+test("R16: region plant lists agree with their profiles (no drift)", () => {
+  for (const r of regions) {
+    for (const p of profiles) {
+      if (!p.regionIds.includes(r.id)) continue;
+      for (const pid of p.plantIds) {
+        assert.ok(r.plantIds.includes(pid), `region ${r.id} missing plant ${pid} claimed by profile ${p.id}`);
+      }
+    }
+  }
+});
+
+test("R16: processIds agree with the process prose (migration fidelity)", () => {
+  for (const p of profiles) {
+    const ids = new Set(p.processIds);
+    // Wood maturation must be present exactly when the prose mentions oak/barrel resting.
+    const oakProse = /\boak|barrels?\b/i.test(p.process) && !/unaged|no barrel/i.test(p.process);
+    assert.equal(ids.has("wood-maturation"), oakProse, `${p.id}: wood-maturation presence disagrees with prose`);
+    // Cristalino must carry filtration; nothing else may.
+    if (p.id === "tequila-cristalino-style") {
+      assert.ok(ids.has("filtration"), "cristalino lists filtration");
+    } else {
+      assert.ok(!ids.has("filtration"), `${p.id} must not claim filtration`);
+    }
+    // Sap traditions carry sap-collection; cooked-heart traditions do not.
+    if (/sap-derived|aguamiel/i.test(p.process)) {
+      assert.ok(ids.has("sap-collection"), `${p.id} lists sap-collection`);
+    } else {
+      assert.ok(!ids.has("sap-collection"), `${p.id} must not claim sap-collection`);
+    }
+    // Pit roast only for pit-roast prose; steam cook only for steam prose.
+    if (/steam/i.test(p.process)) assert.ok(ids.has("steam-cook"), `${p.id} lists steam-cook`);
+    if (/pit roast|pit-roasted/i.test(p.process)) assert.ok(ids.has("pit-roast"), `${p.id} lists pit-roast`);
+  }
+});
+
+test("R16: tradition entity set exactly matches spirits used by profiles and bottles", () => {
+  const used = new Set([...profiles.map((p) => p.traditionId), ...bottles.map((b) => b.traditionId)]);
+  assert.deepEqual([...used].sort(), [...traditionIds].sort());
+});
+
+test("R16: identifier stability — plant/tradition/region ids are unique and kebab-case", () => {
+  const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+  for (const [name, arr, key] of [["plants", plants, "id"], ["regions", regions, "id"], ["traditions", traditions, "id"]]) {
+    const ids = arr.map((x) => x[key]);
+    assert.equal(new Set(ids).size, ids.length, `${name} ids unique`);
+    for (const id of ids) assert.match(id, ID_PATTERN, `${name} id ${id} kebab-case`);
+  }
 });

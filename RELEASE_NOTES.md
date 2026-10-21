@@ -909,3 +909,54 @@ expressions) with validated cross-references — no interface redesign.
 - Spanish translations for the new tradition/region editorial text are
   not yet authored; entity content remains authored-language by design.
 - Native-device rendering still unverified in this environment.
+
+## Release 16 — Model Review & Fixes
+
+Maintenance release per the plan's protocol: audit of the Release 15
+normalized model — entity boundaries, relationship cardinality,
+identifier stability, migration fidelity, data contracts and the new
+validation rules.
+
+### Findings and fixes
+
+- **Region source contract (defect found):** all 11 region records
+  carried legal/geographic claims (e.g. bacanora's municipal DO scope,
+  designation dates) with no `sourceIds`. Every region now cites its
+  supporting sources, and the validator requires region `sourceIds` —
+  closing the data contract so regions stay source-backed like every
+  other entity.
+- **Migration fidelity — processIds vs prose (defect found):** the sotol
+  profile's prose documents steam cooking as an alternative method but
+  `processIds` omitted `steam-cook`. Fixed. The cristalino profile said
+  "Made as reposado or añejo" without naming the oak its `wood-maturation`
+  id claims; the prose (English and Spanish) now says "oak-rested".
+  A regression test pins process-id/prose agreement for wood
+  maturation, filtration, sap collection, pit roast and steam cooking.
+- **Dead validator branch (defect found):** the `type: "state"` region
+  check was a no-op placeholder. Replaced with two real rules: region
+  `sourceIds` required, and region↔profile plant consistency (a region
+  must list every plant its linked profiles claim, so future region
+  cards can never miss a documented plant).
+- **Relationship cardinality (verified, no defect):** tradition entity
+  set exactly matches the spirits used by profiles and bottles; plant
+  `traditionIds` agree with the traditions reachable through linked
+  profiles; bottle regions are exact subsets of their profile's regions;
+  uncovered bottles carry no region claims.
+- **Identifier stability (verified, no defect):** all plant, region and
+  tradition ids unique and kebab-case; no duplicate or dangling
+  references anywhere in the new entities.
+- **State consistency (verified, no defect):** every profile region
+  lives in the profile's own state and lists the profile's tradition.
+
+### Checks run
+
+- `npm run validate` — schema plus 141 node:test/jsdom suites (5 new
+  Release 16 regression tests). All passing.
+- Spanish editorial parity re-checked for the changed cristalino prose
+  (ES translation updated to match).
+
+### Remaining issues / deferred
+
+- Regions/traditions remain data-only entities; discovery surfaces for
+  them are Release 17 (Three Discovery Paths) scope.
+- Native-device rendering still unverified in this environment.
