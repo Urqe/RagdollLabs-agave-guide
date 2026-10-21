@@ -389,10 +389,10 @@ Applied (see Release 22 notes in RELEASE_NOTES.md). Audit profile hierarchy, cau
 
 Goal: make comparisons explain meaningful differences rather than merely displaying scores.
 
-- [ ] Add a concise plain-language interpretation above the detailed comparison, explaining the primary differences and possibly why.
-- [ ] Support meaningful comparison perspectives: same plant different region; same tradition different plant; same tradition different production method; similar flavours across traditions; unaged versus wood-rested.
-- [ ] Where evidence cannot support a distinction, state it rather than manufacturing one; keep the existing explicit treatment of undocumented attributes.
-- [ ] Refine related-expression recommendations (same plant/region/method/sensory threads) with short relevance explanations.
+- [x] Add a concise plain-language interpretation above the detailed comparison, explaining the primary differences and possibly why.
+- [x] Support meaningful comparison perspectives: same plant different region; same tradition different plant; same tradition different production method; similar flavours across traditions; unaged versus wood-rested.
+- [x] Where evidence cannot support a distinction, state it rather than manufacturing one; keep the existing explicit treatment of undocumented attributes.
+- [x] Refine related-expression recommendations (same plant/region/method/sensory threads) with short relevance explanations.
 
 Acceptance: comparisons communicate what differs and why, respecting uncertainty; no invented distinctions.
 
