@@ -313,6 +313,24 @@
         ]
       },
       "whyItTastes": "El Dasylirion (no un agave) se cosecha silvestre tras 8–12 años, se asa en pozos cónicos y se fermenta con levaduras silvestres: el carácter terroso, ahumado-herbal sigue de la planta y la cocción del desierto. Las raíces dejadas intactas dejan la planta rebrotar — la cosecha puede ser sostenible por diseño."
+    },
+    "tequila-blanco-highland-jalisco": {
+      "title": "Tequila blanco de los Altos, estilo Los Altos (Jalisco)",
+      "context": "El blanco es la clase legal sin añejar del tequila — y los Altos (alrededor de Atotonilco el Alto y Arandas) lo leen de forma muy distinta al Valle de Tequila. Los suelos minerales ricos en hierro, la mayor elevación y las noches más frescas producen agaves más grandes y dulces, así que un blanco de los Altos tiende a lo brillante, afrutado y floral donde el valle tiende a lo terroso y sabroso. Es una distinción cultural y agronómica, no una clase legal: ambos son simplemente tequila blanco.",
+      "description": "La lectura alteña del tequila sin añejar: agave cocido más dulce con cítricos (piel de naranja, toronja), fruta tropical y de hueso, florales delicados y una especia suave, en un cuerpo más blando y redondo que el estilo del valle. Guía editorial de estilo, no una calificación de ninguna botella específica.",
+      "beginnerNote": "¿Nuevo en el tequila? Un blanco de los Altos es el punto de partida más amable: suave, dulce y afrutado, sin el filo sabroso del valle. Pruébalo junto al blanco del valle para saborear lo que el lugar le hace a la misma planta.",
+      "category": "Tequila — destilado con su propia Denominación de Origen; el blanco es una clase legal sin añejar",
+      "process": "Cocido al vapor (o asado en piedra según algunos tradicionalistas), fermentado, doble destilado, sin añejar (blanco)",
+      "finish": "Suave y afrutado, con un lento desvanecer de agave dulce y un leve repunte de pimienta al final.",
+      "pairing": {
+        "serving": "Solo en copa pequeña, o en un Margarita/Paloma donde su fruta juega bien con los cítricos. Sugerencia editorial, no una regla.",
+        "foods": [
+          "salsas afrutadas",
+          "carnitas",
+          "queso fresco con miel"
+        ]
+      },
+      "whyItTastes": "El agave de Los Altos crece a mayor elevación en suelos rojos ricos en hierro con noches más frescas, y los productores dicen que esas condiciones producen piñas más grandes y dulces — por eso el destilado sin añejar tiende a lo afrutado, floral y brillante en cítricos en vez de lo terroso. Nótese la reserva honesta: un panel de cata a ciegas encontró el patrón regional más débil de lo que sugiere el folclore, así que trátalo como una tendencia, nunca una garantía."
     }
   },
   "bottles": {

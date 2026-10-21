@@ -675,7 +675,7 @@
       "place": "Atotonilco el Alto, Jalisco (highlands)",
       "classification": "Tequila — 100% agave blanco, unaged",
       "plantComposition": "100% blue weber agave (Agave tequilana)",
-      "profileId": null,
+      "profileId": "tequila-blanco-highland-jalisco",
       "reviewSummary": "Difford's Guide (sampled 2011) finds a peppery, mineral nose with zesty lemon and pink grapefruit and subtle yeasty pastry aromas; the clean, mineral palate offers fudge, pastry and delicate herbal flavours, ending in a long, dry finish with vegetal notes and spicy black pepper. The bottle is un-aged, rested briefly in inert containers before bottling.",
       "editorialNote": "A highlands blanco rather than a Tequila Valley one: expect the brighter, fruitier highland reading of the same legal class.",
       "noteProfileId": "tequila-blanco-valley-jalisco",
@@ -688,9 +688,8 @@
         "diffords-don-julio-blanco"
       ],
       "traditionId": "tequila",
-      "regionIds": [],
-      "coverage": [
-        "profile-not-covered"
+      "regionIds": [
+        "tequila-highlands-jal"
       ]
     },
     {
@@ -724,7 +723,7 @@
       "place": "Atotonilco el Alto, Jalisco (highlands)",
       "classification": "Tequila — 100% agave blanco, unaged",
       "plantComposition": "100% blue weber agave (Agave tequilana)",
-      "profileId": null,
+      "profileId": "tequila-blanco-highland-jalisco",
       "reviewSummary": "Liquor.com finds a lovely vegetal aroma of cooked agave — grass, green peppers, a little earth and eucalyptus — with flavors of agave, eucalyptus and white pepper leading to a smooth, savory finish; fine neat and in cocktails, if priced as a premium.",
       "editorialNote": "A highlands blanco: the same unaged class as the featured valley example, with the highlands' fruitier, more citric reading.",
       "noteProfileId": "tequila-blanco-valley-jalisco",
@@ -737,9 +736,8 @@
         "liquorcom-patron-silver"
       ],
       "traditionId": "tequila",
-      "regionIds": [],
-      "coverage": [
-        "profile-not-covered"
+      "regionIds": [
+        "tequila-highlands-jal"
       ]
     },
     {

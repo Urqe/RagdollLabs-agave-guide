@@ -1163,6 +1163,78 @@
         "dasylirion-desert-spoon"
       ],
       "whyItTastes": "Dasylirion (not an agave) wild-harvested after 8–12 years, pit-roasted in conical ovens and wild-fermented: the earthy, smoky-herbal character follows from the plant and the desert cook. Roots left intact let the plant regrow — the harvest can be sustainable by design."
+    },
+    {
+      "id": "tequila-blanco-highland-jalisco",
+      "title": "Highland blanco tequila, Los Altos style (Jalisco)",
+      "spirit": "tequila",
+      "stateId": "jal",
+      "stateName": "Jalisco",
+      "context": "Blanco is the unaged legal class of tequila — and the highlands (Los Altos) around Atotonilco el Alto and Arandas read it very differently from the Tequila Valley. Red iron-rich mineral soils, higher elevation and cooler nights grow bigger, sweeter agave, so a highland blanco leans bright, fruity and floral where the valley leans earthy and savory. This is a cultural and agronomic distinction, not a legal class: both are simply tequila blanco.",
+      "description": "The highland take on unaged tequila: sweeter cooked agave with citrus (orange peel, grapefruit), tropical and stone fruit, delicate florals and a gentle spice, in a softer, rounder body than the valley style. Editorial style guidance, not a rating of any specific bottle.",
+      "plant": "Agave tequilana Weber azul (blue weber agave, cultivated; highland red mineral soils)",
+      "plantId": "agave-tequilana",
+      "process": "Steam-cooked (or stone-roasted by some traditionalists), fermented, double distilled, unaged (blanco)",
+      "category": "Tequila — spirit with its own Denomination of Origin; blanco is an unaged legal class",
+      "beginnerNote": "New to tequila? A highland blanco is the friendliest starting point: soft, sweet and fruity, with none of the valley's savory edge. Try it beside the valley blanco to taste what place does to the same plant.",
+      "aliases": [
+        "highland blanco",
+        "altos blanco",
+        "los altos tequila"
+      ],
+      "body": "light",
+      "tasteNotes": [
+        "sweet cooked agave",
+        "citrus peel",
+        "tropical fruit",
+        "florals",
+        "gentle spice"
+      ],
+      "smoke": null,
+      "finish": "Soft and fruity, with a slow sweet-agave fade and a light peppery lift at the end.",
+      "sensory": {
+        "smoke": "none",
+        "herbal": "medium",
+        "fruit": "high",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "none",
+        "finishLength": "medium"
+      },
+      "exampleBottleId": "don-julio-blanco",
+      "placeCoords": {
+        "lat": 20.06,
+        "lon": -102.1,
+        "precision": "town (Atotonilco el Alto area, Los Altos); approximate"
+      },
+      "pairing": {
+        "serving": "Neat in a small glass, or in a Margarita/Paloma where its fruit plays well with citrus. Editorial suggestion, not a rule.",
+        "foods": [
+          "fruit-forward salsas",
+          "carnitas",
+          "fresh cheese with honey"
+        ]
+      },
+      "sourceIds": [
+        "foodandwine-highland-valley",
+        "diffords-tequila-category",
+        "wikipedia-tequila",
+        "diffords-don-julio-blanco",
+        "tastetequila-highlands-blind-tasting"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-highlands-jal"
+      ],
+      "processIds": [
+        "steam-cook",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "plantIds": [
+        "agave-tequilana"
+      ],
+      "whyItTastes": "Los Altos agave grows at higher elevation in red iron-rich soils with cooler nights, and growers say those conditions produce bigger, sweeter piñas — so the unaged spirit leans fruity, floral and citrus-bright rather than earthy. Note the honest caveat: one blind tasting panel found the regional pattern weaker than folklore suggests, so treat this as a tendency, never a guarantee."
     }
   ]
 }
