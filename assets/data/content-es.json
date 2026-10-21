@@ -436,5 +436,93 @@
   },
   "processes": {},
   "plants": {},
-  "terms": {}
+  "terms": {
+    "blanco / plata / silver": {
+      "definition": "Una clase de tequila sin crianza. En otros destilados las mismas palabras pueden significar clases distintas o nada legal; los términos de clase son específicos de cada destilado."
+    },
+    "joven / abocado": {
+      "definition": "La clase sin crianza del mezcal; joven también se usa informalmente en otros contextos (esta app marca los usos no legales como etiquetas editoriales)."
+    },
+    "reposado / añejo": {
+      "definition": "Clases con reposo en madera y mínimos específicos de cada destilado; las reglas del tequila no se transfieren al mezcal ni a la raicilla."
+    },
+    "pechuga": {
+      "definition": "Un mezcal elaborado con fruta y/o una pechuga de pollo o pavo suspendida durante una (usualmente tercera) destilación — una tradición de producción específica, no una categoría de destilado propia."
+    },
+    "ensamble": {
+      "definition": "Un lote hecho de varias especies de agave, típicamente cosechadas y fermentadas juntas. Un ensamble necesita evidencia de composición; no es simplemente una mezcla posdestilación, ni una familia de destilados aparte."
+    },
+    "cristalino": {
+      "definition": "Un destilado con crianza filtrado (a menudo con carbón) para quitar el color conservando parte del carácter de madera. Es una elección de acabado, no una clase legal en la mayoría de las categorías."
+    },
+    "NOM": {
+      "definition": "El número de Norma Oficial Mexicana en la etiqueta que identifica al productor certificado. Los NOM identifican al fabricante; la ausencia de NOM (como en el tuxca no certificado) es un dato legal, no un sello de autenticidad."
+    },
+    "vinata / taberna / palenque": {
+      "definition": "Palabras regionales para una pequeña destilería: viñata en Sonora, taberna en el país raicillero de Jalisco, palenque en Oaxaca. Misma función, tradición distinta."
+    },
+    "lote / batch": {
+      "definition": "Los pequeños productores etiquetan lotes; los datos del lote (mezcla de agaves, graduación, fabricante) pueden diferir materialmente entre botellas de la misma marca. Los datos del lote deben quedarse con el lote."
+    },
+    "100% de agave": {
+      "definition": "Una afirmación de composición sobre los fermentables. Es distinta de la calidad y de la elegibilidad para esta app: tradiciones basadas en agave con fermentables no agave declarados siguen siendo honestas sobre lo que son."
+    }
+  },
+  "chapters": {
+    "discover-mexican-spirits": {
+      "title": "Descubre los destilados mexicanos",
+      "intro": "México destila muchos destilados de agave — y algunos de plantas emparentadas. Este capítulo presenta las tradiciones cubiertas en esta guía y qué hace distinta a cada una.",
+      "block0": "El tequila, el mezcal, la bacanora y la raicilla son destilados de agave con denominación de origen propia: nombres legalmente protegidos, ligados a lugares y reglas específicas. Cada uno sabe distinto porque la planta, el lugar y la producción difieren — no porque una categoría sea inherentemente mejor.",
+      "block1": "Más allá de los nombres grandes, México tiene tradiciones regionales sin denominación de origen — el tuxca en la frontera Jalisco–Colima, el comiteco de Chiapas (elaborado con aguamiel y, en algunas botellas, con azúcar de caña declarada), el destilado de pulque del corazón pulquero. Su estatus legal difiere del tequila, y esta guía nunca lo trata como un juicio de autenticidad.",
+      "block2": "El sotol se incluye como una tradición norteña emparentada con el agave, pero no es un destilado de agave: el sotol viene del Dasylirion, un género emparentado. Mantener la distinción con precisión importa más que forzarlo dentro de la familia del agave.",
+      "block2deeper": "Botánicamente, el Dasylirion y el Agave están en la familia Asparagaceae, pero compartir familia no es compartir género — el sotol es tan poco agave como un puerro es una cebolla."
+    },
+    "meet-the-plants": {
+      "title": "Conoce las plantas",
+      "intro": "Todo destilado de agave empieza como planta. Este capítulo cubre las especies detrás de los perfiles de la guía, sus nombres regionales y cómo la cosecha y el cultivo moldean lo que llega a la copa.",
+      "block0": "El agave azul es el único agave permitido legalmente en el tequila; el espadín es el caballo de batalla del mezcal, cultivado a escala. Otros agaves — la maximiliana en la Sierra de Jalisco, el tobalá en las montañas de Oaxaca — suelen cosecharse silvestres, lo que moldea tanto el sabor como la sostenibilidad.",
+      "block1": "Los nombres comunes son regionales, no científicos: la lechuguilla del altiplano de Jalisco es un nombre local para la maximiliana, mientras que la lechuguilla sonorense es una planta distinta. Donde la botánica está genuinamente sin resolver — como con la Pacifica/Yaquiana de Sonora — esta guía registra los nombres sin zanjar el debate.",
+      "block2": "No todo destilado de esta guía cocina la piña. El comiteco y el destilado de pulque recolectan aguamiel — la savia extraída de la planta viva — y la fermentan en su lugar. Las tradiciones de savia se saltan el asado por completo, y por eso su camino de sabor difiere de los destilados de piña cocida.",
+      "block2deeper": "Un agave maduro florece una sola vez y luego muere. Cosechar antes de la floración redirige los azúcares hacia la piña; las tradiciones de savia, en cambio, mantienen viva la planta y cosechan sus azúcares repetidamente."
+    },
+    "from-plant-to-glass": {
+      "title": "De la planta a la copa",
+      "intro": "¿Cómo se convierte una planta espinosa en un destilado? Este capítulo recorre la secuencia de producción — y por qué cada etapa deja una huella que puedes saborear.",
+      "block0": "La cocción convierte los carbohidratos complejos del agave en azúcares fermentables. Los asados en pozo de tierra (mezcal, bacanora, tuxca, sotol) pueden aportar humo; la cocción al vapor en hornos o autoclaves (tequila) cocina limpio. Ningún método garantiza un sabor — la leña, el tiempo y la técnica deciden.",
+      "block1": "La extracción, la fermentación y la destilación importan cada una. Las fermentaciones silvestres y abiertas acarrean levaduras locales y carácter local; el alambique — de cobre, barro o madera estilo filipino — moldea la textura final. Los pequeños productores embotellan lote por lote, así que dos botellas de la misma marca pueden diferir genuinamente.",
+      "block2": "La mayoría de estos destilados reposan: en vidrio o en roble. La maduración en madera (clases reposado, añejo) aporta color, especias de roble y suavidad, con mínimos legales específicos de cada destilado. El reposo en vidrio (madurado en vidrio) suaviza sin influencia de madera — una opción que muchos consumidores nunca escuchan.",
+      "block2deeper": "Las tradiciones de savia invierten la secuencia: sin asado, sin piña — el aguamiel fermenta primero (en pulque, para el destilado de pulque) y la destilación sigue, y por eso tanto la categoría regulatoria como el sabor divergen de los destilados de piña cocida."
+    },
+    "understanding-flavour": {
+      "title": "Entender el sabor",
+      "intro": "¿Qué estás saboreando realmente? Este capítulo separa el vocabulario del sabor — y muestra cada concepto en un perfil real de la guía.",
+      "block0": "El cuerpo es cómo se siente el destilado en la boca — ligero, medio o completo. El humo, cuando está presente, suele venir del asado en pozo. Las notas herbales y vegetales vienen de la planta y de una cocción limpia; las notas frutales y florales suelen subir con el agave del altiplano y los asados suaves. El dulzor aquí significa dulzor percibido, no azúcar medida.",
+      "block1": "El roble — del reposo en madera — aporta vainilla, caramelo y especias. La longitud del final es cuánto persiste el sabor después de tragar. Ninguno de estos niveles es una calificación de calidad: son descripciones editoriales de estilo, y las botellas dentro de un estilo varían.",
+      "block2": "La vista de comparación pone estas dimensiones lado a lado: un blanco contra un añejo muestra el mayor contraste de roble; un blanco del valle contra una expresión del altiplano muestra cómo se lee el lugar en la copa.",
+      "block2deeper": "La química del sabor es genuinamente compleja: los compuestos del asado, los ésteres de la fermentación y el corte del alambique contribuyen cada uno. Esta guía atribuye carácter al proceso solo donde las fuentes documentan el vínculo — nunca a partir de una sola nota de cata."
+    },
+    "understanding-labels": {
+      "title": "Entender las etiquetas",
+      "intro": "Una etiqueta mexicana lleva términos legales, datos del productor y marketing — a veces en la misma palabra. Este capítulo los decodifica, y nunca aplica las reglas de una tradición a otra.",
+      "block0": "Los términos de clase son específicos de cada destilado: blanco es una clase legal del tequila, joven es la clase sin crianza del mezcal, y los mínimos de reposado difieren entre tequila, mezcal y raicilla. El cristalino es una elección de acabado, no una clase legal. Cuando un término no es una clase legal, esta guía lo dice.",
+      "block1": "El NOM en una etiqueta de tequila o mezcal identifica al productor certificado. Las botellas de tuxca no llevan NOM — un hecho legal, no un juicio de autenticidad. Los términos de lote importan para los pequeños productores: los datos del lote se quedan con el lote.",
+      "block2": "Las afirmaciones de composición son datos sobre los fermentables, no grados de calidad. «100% de agave» describe qué se fermentó; el comiteco con azúcar de caña declarada es igualmente honesto sobre lo que es. La declaración de composición es lectura obligatoria en cada botella."
+    },
+    "choosing-and-enjoying": {
+      "title": "Elegir y disfrutar",
+      "intro": "No hay una manera incorrecta de disfrutar estos destilados — pero sí maneras honestas de elegir. Este capítulo favorece tu propio paladar sobre el precio, la edad o la rareza.",
+      "block0": "Empieza por lo que ya te gusta: blancos frescos y herbales, mezcales con humo, añejos con roble, o algo fuera de lo común. Los caminos de descubrimiento de esta guía agrupan perfiles por sabor para que sigas tu propio gusto, y cada perfil nombra su estilo sensorial con honestidad.",
+      "block1": "El servicio es simple: una copa pequeña a temperatura ambiente deja abrir los aromas; un chorrito de agua puede suavizar graduaciones altas. Los cócteles no son un compromiso — una margarita o una paloma son una forma legítima de conocer un blanco. Los maridajes de cada perfil son sugerencias editoriales, nunca reglas.",
+      "block2": "Cuidado con las escaleras de marketing: más viejo no es automáticamente mejor, más graduación no es automáticamente mejor, y la rareza no es un sabor. Un blanco accesible de un buen productor puede superar a una botella trofeo. Esta guía perfila estilos, no trofeos.",
+      "block2deeper": "Técnica de cata: mira, gira, huele suavemente, sorbe, y atiende el final. Compara dos perfiles parecidos lado a lado — la vista de comparación existe precisamente para eso."
+    },
+    "explore-deeper": {
+      "title": "Explora más profundo",
+      "intro": "Material de referencia para entusiastas: las páginas completas de plantas, procesos y vocabulario de etiqueta detrás de los capítulos — con fuentes honestas.",
+      "block0": "Las páginas de referencia de plantas registran identidad científica, nombres comunes regionales, cultivo, incertidumbre botánica honesta y fuentes. Las páginas de procesos explican cada etapa de producción con los perfiles que la usan. El glosario define cada término de etiqueta en contexto.",
+      "block1": "La sostenibilidad importa para los agaves silvestres: la reproducción lenta del tobalá hace vulnerables a las poblaciones silvestres, y la larga madurez del sotol hace decisiva la práctica de cosecha. Las afirmaciones de sostenibilidad específicas de productor en esta guía siempre trazan a fuentes fechadas.",
+      "block2": "Las denominaciones evolucionan: la protección de la bacanora data de 2000, la de la raicilla de 2019, la del sotol de 2002. Esta guía registra fechas de verificación con cada fuente y revisa enmiendas antes de publicar resúmenes legales — una URL alcanzable nunca prueba una afirmación por sí sola.",
+      "block2deeper": "La geografía legal es municipal, no estatal: la denominación de la bacanora cubre municipios seleccionados de Sonora, y la de la raicilla nombra municipios específicos de Jalisco y Nayarit. El sombreado del mapa en esta app siempre significa cobertura, nunca límites legales."
+    }
+  }
 }

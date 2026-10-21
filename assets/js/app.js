@@ -106,6 +106,7 @@ async function renderRoute(container, route) {
   if (route.name === "learn") {
     state.exploreApi = null;
     renderLearn(container, {
+      chapters: state.data.chapters,
       plants: state.data.plants,
       processes: state.data.processes,
       glossary: state.data.glossary,

@@ -409,6 +409,65 @@ for (const p2 of profiles) {
   }
 }
 
+// Release 19: progressive learning chapters with valid cross-references.
+const { chapters } = await readJson("assets/data/chapters.json");
+if (!Array.isArray(chapters) || chapters.length !== 7) fail("chapters.json must contain exactly 7 chapters");
+const termTexts = new Set(glossary.map((x) => x.term));
+const chapterIds = new Set();
+for (const ch of chapters) {
+  const label = `chapter ${ch.id ?? "(missing id)"}`;
+  if (!ch.id || !ID_PATTERN.test(ch.id)) fail(`${label}: id must be kebab-case`);
+  if (chapterIds.has(ch.id)) fail(`${label}: duplicate chapter id`);
+  chapterIds.add(ch.id);
+  if (!ch.title || !ch.intro) fail(`${label}: title and intro required`);
+  if (!Array.isArray(ch.blocks) || ch.blocks.length === 0) fail(`${label}: blocks required`);
+  for (const [bi, block] of (ch.blocks || []).entries()) {
+    if (!block.text || typeof block.text !== "string") fail(`${label}: block ${bi} text required`);
+    for (const pid of block.exampleProfileIds || []) {
+      if (!profileIds.has(pid)) fail(`${label}: block ${bi} example profile ${pid} not in profiles.json`);
+    }
+    for (const pid of block.plantIds || []) {
+      if (!plantIdSet.has(pid)) fail(`${label}: block ${bi} plant ${pid} not in plants.json`);
+    }
+    for (const pid of block.processIds || []) {
+      if (!processIdSet.has(pid)) fail(`${label}: block ${bi} process ${pid} not in processes.json`);
+    }
+    for (const tid of block.termIds || []) {
+      if (!termTexts.has(tid)) fail(`${label}: block ${bi} term "${tid}" not in glossary.json`);
+    }
+  }
+}
+// Spanish learning completeness: every chapter and glossary term must ship a
+// reviewed translation — missing translations are a validation failure.
+const contentEsAll = await readJson("assets/data/content-es.json");
+const esChapters = contentEsAll.chapters || {};
+for (const ch of chapters) {
+  const entry = esChapters[ch.id];
+  if (!entry) fail(`content-es.json: missing Spanish chapter ${ch.id}`);
+  else {
+    for (const field of ["title", "intro"]) {
+      if (typeof entry[field] !== "string" || !entry[field].trim()) {
+        fail(`content-es.json: chapter ${ch.id} ${field} missing Spanish translation`);
+      }
+    }
+    for (const [bi, block] of (ch.blocks || []).entries()) {
+      if (typeof entry["block" + bi] !== "string" || !entry["block" + bi].trim()) {
+        fail(`content-es.json: chapter ${ch.id} block${bi} missing Spanish translation`);
+      }
+      if (block.deeper && (typeof entry["block" + bi + "deeper"] !== "string" || !entry["block" + bi + "deeper"].trim())) {
+        fail(`content-es.json: chapter ${ch.id} block${bi}deeper missing Spanish translation`);
+      }
+    }
+  }
+}
+const esTerms = contentEsAll.terms || {};
+for (const term of glossary) {
+  const entry = esTerms[term.term];
+  if (!entry || typeof entry.definition !== "string" || !entry.definition.trim()) {
+    fail(`content-es.json: glossary term "${term.term}" missing Spanish definition`);
+  }
+}
+
 // SVG sanity: 32 state paths with data-state.
 const svg = await readFile(path.join(root, "assets/geo/mexico-states.svg"), "utf8");
 const svgStates = [...svg.matchAll(/data-state="([a-z]+)"/g)].map((m) => m[1]);
