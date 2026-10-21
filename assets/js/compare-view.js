@@ -8,7 +8,8 @@ import {
   levelOf,
 } from "./compare.js";
 import { SPIRIT_LABELS, groupProfilesBySpirit } from "./spirit-labels.js";
-import { dimensionLabel } from "./presentation.js";
+import { dimensionLabel, dimensionHint } from "./presentation.js";
+import { editorialText, localizedTitle } from "./editorial.js";
 
 const MAX_SLOTS = 3;
 
@@ -35,7 +36,7 @@ const normalize = (text) =>
     .trim();
 
 /** Picker button for one profile. */
-function pickButton(profile, isSelected, disabled, onPick) {
+function pickButton(profile, isSelected, disabled, onPick, titleFn) {
   const button = el("button", {
     type: "button",
     class: "compare-pick-button",
@@ -43,7 +44,7 @@ function pickButton(profile, isSelected, disabled, onPick) {
     "aria-pressed": isSelected ? "true" : "false",
     disabled: disabled ? "true" : null,
   },
-    `${profile.title} — ${SPIRIT_LABELS[profile.spirit] || profile.spirit}`);
+    `${titleFn(profile)} — ${SPIRIT_LABELS[profile.spirit] || profile.spirit}`);
   button.addEventListener("click", () => onPick(profile.id));
   return button;
 }
@@ -54,7 +55,7 @@ function pickButton(profile, isSelected, disabled, onPick) {
  * selected profiles always stay visible (so they can be deselected) even
  * when they fall outside the current filter.
  */
-function slotSelector(profiles, selectedIds, onPick, { locale = null, initialQuery = "" } = {}) {
+function slotSelector(profiles, selectedIds, onPick, { locale = null, initialQuery = "", titleFn = (p) => p.title } = {}) {
   const t = (key) => (locale ? locale.t(key) : key);
   const compare = locale ? (a, b) => locale.compare(a, b) : null;
   const holder = el("div", { class: "compare-picker-search" });
@@ -81,7 +82,7 @@ function slotSelector(profiles, selectedIds, onPick, { locale = null, initialQue
     const matches = q.length < 2
       ? profiles
       : profiles.filter((p) =>
-          normalize([p.title, p.spirit, SPIRIT_LABELS[p.spirit] || ""].join(" ")).includes(q));
+          normalize([titleFn(p), p.title, p.spirit, SPIRIT_LABELS[p.spirit] || ""].join(" ")).includes(q));
     // Keep selected profiles visible regardless of the filter.
     const visible = q.length < 2
       ? matches
@@ -103,7 +104,7 @@ function slotSelector(profiles, selectedIds, onPick, { locale = null, initialQue
       }
       const isSelected = selectedIds.includes(profile.id);
       const disabled = isSelected || (selectedIds.length >= MAX_SLOTS && !isSelected);
-      item.appendChild(pickButton(profile, isSelected, disabled, onPick));
+      item.appendChild(pickButton(profile, isSelected, disabled, onPick, titleFn));
       list.appendChild(item);
     }
     results.appendChild(list);
@@ -142,6 +143,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
 
   const section = el("section", { class: "compare-view", "aria-labelledby": "compare-heading" });
   const t = (key) => (locale ? locale.t(key) : key);
+  const title = (p) => localizedTitle("profile", p.id, p.title, locale);
   section.appendChild(el("h1", { id: "compare-heading" }, t("compare.heading")));
   section.appendChild(el("p", { class: "view-intro" }, t("compare.intro")));
 
@@ -162,7 +164,8 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
     const next = removing
       ? selectedIds.filter((id) => id !== profileId)
       : [...selectedIds, profileId].slice(0, MAX_SLOTS);
-    const name = byId.get(profileId)?.title || profileId;
+    const profile = byId.get(profileId);
+    const name = profile ? title(profile) : profileId;
     announce(removing
       ? `${ui(locale, "removedFrom").replace("{name}", name)} ${total(next.length)}.`
       : `${ui(locale, "addedTo").replace("{name}", name)} ${total(next.length)}.`);
@@ -173,7 +176,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   const selectionList = el("div", { class: "selection-list" });
   for (const profile of selected) {
     const chip = el("div", { class: "selection-chip" });
-    chip.appendChild(el("span", {}, profile.title));
+    chip.appendChild(el("span", {}, title(profile)));
     const remove = el("button", { type: "button", class: "selection-remove", "aria-label": ui(locale, "remove") + ": " + profile.title }, ui(locale, "remove") + " ×");
     remove.addEventListener("click", () => pick(profile.id));
     chip.appendChild(remove);
@@ -181,7 +184,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   }
   selections.appendChild(selectionList);
   section.appendChild(selections);
-  pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick, { locale, initialQuery: keepPickerQuery || "" }));
+  pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick, { locale, initialQuery: keepPickerQuery || "", titleFn: title }));
   section.appendChild(pickerHolder);
 
   if (selected.length === 0) {
@@ -193,14 +196,14 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   }
 
   if (selected.length === 1) {
-    announce(`${ui(locale, "oneSelected")}: ${selected[0].title}.`);
+    announce(`${ui(locale, "oneSelected")}: ${title(selected[0])}.`);
     section.appendChild(el("p", { class: "compare-empty" }, t("compare.oneMore")));
     container.appendChild(section);
     restoreFocus(pickerHolder, focusProfileId);
     return;
   }
 
-  announce(`${ui(locale, "comparing")} ${total(selected.length)}: ${selected.map((p) => p.title).join(", ")}.`);
+  announce(`${ui(locale, "comparing")} ${total(selected.length)}: ${selected.map((p) => title(p)).join(", ")}.`);
 
   // Sensory table
   const table = el("table", { class: "compare-table" });
@@ -208,12 +211,12 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   const headRow = el("tr", {});
   headRow.appendChild(el("th", { scope: "col" }, ui(locale, "dimension")));
   for (const profile of selected) {
-    const th = el("th", { scope: "col" }, profile.title);
+    const th = el("th", { scope: "col" }, title(profile));
     const removeButton = el("button", {
       type: "button",
       class: "compare-remove-button",
       dataset: { profileId: profile.id },
-      "aria-label": `${t("compare.removeLabel")}: ${profile.title}`,
+      "aria-label": `${t("compare.removeLabel")}: ${title(profile)}`,
     }, t("compare.removeLabel"));
     removeButton.addEventListener("click", () => pick(profile.id));
     th.appendChild(removeButton);
@@ -225,7 +228,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   const tbody = el("tbody", {});
   for (const { key } of DIMENSIONS) {
     const row = el("tr", {});
-    const th = el("th", { scope: "row", title: ui(locale, "hint" + key.charAt(0).toUpperCase() + key.slice(1)) }, dimLabel(key));
+    const th = el("th", { scope: "row", title: dimensionHint(key, locale) }, dimLabel(key));
     row.appendChild(th);
     for (const profile of selected) row.appendChild(levelCell(profile, key, t));
     tbody.appendChild(row);
@@ -239,10 +242,10 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
 
   // Plant/process context (cross-tradition differences shown clearly)
   const craft = el("dl", { class: "profile-facts compare-craft" });
-  craft.appendChild(el("dt", {}, "Agave"));
-  craft.appendChild(el("dd", {}, selected.map((p) => `${p.title}: ${p.plant || "not documented"}`).join(" · ")));
-  craft.appendChild(el("dt", {}, "Process"));
-  craft.appendChild(el("dd", {}, selected.map((p) => `${p.title}: ${p.process || "not documented"}`).join(" · ")));
+  craft.appendChild(el("dt", {}, ui(locale, "plant")));
+  craft.appendChild(el("dd", {}, selected.map((p) => `${title(p)}: ${p.plant || ui(locale, "notDocumented")}`).join(" · ")));
+  craft.appendChild(el("dt", {}, ui(locale, "process")));
+  craft.appendChild(el("dd", {}, selected.map((p) => `${title(p)}: ${editorialText("profile", p.id, "process", p.process || ui(locale, "notDocumented"), locale).text}`).join(" · ")));
   section.appendChild(craft);
 
   // Biggest differences
@@ -255,7 +258,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
       const item = el("li", {});
       item.appendChild(el("strong", {}, `${dimLabel(diff.key)}: `));
       item.appendChild(document.createTextNode(
-        selected.map((p, i) => `${p.title} — ${t(`level.${diff.levels[i]}`) || t("compare.notDocumented")}`).join("; ")
+        selected.map((p, i) => `${title(p)} — ${t(`level.${diff.levels[i]}`) || t("compare.notDocumented")}`).join("; ")
       ));
       diffList.appendChild(item);
     }
@@ -268,7 +271,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   const missing = missingDimensions(selected);
   if (missing.length > 0) {
     const note = el("p", { class: "editorial-note" },
-      `Not compared because the data is not documented: ${missing.map((m) => m.label).join(", ")}. Unknown means not documented, never zero.`);
+      ui(locale, "missingData").replace("{list}", missing.map((m) => dimLabel(m.key)).join(", ")));
     section.appendChild(note);
   }
 

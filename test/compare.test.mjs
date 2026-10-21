@@ -84,7 +84,7 @@ test("if-you-like suggestions name shared documented attributes and skip incompa
   const suggestedIds = suggestions.map((x) => x.profile.id);
   assert.ok(!suggestedIds.includes("c"), "incompatible profile is never suggested");
   assert.ok(suggestedIds.includes("b"), "profile sharing documented attributes is suggested");
-  for (const s of suggestions) assert.ok(s.sharedDimensions.length >= 1, "suggestion names its shared dimensions");
+  for (const s of suggestions) assert.ok(s.sharedDimensionKeys.length >= 1, "suggestion names its shared dimension keys");
   assert.ok(ifYouLikeThis(anchor, [different]).length === 0);
 
   // Unknown anchor dimensions never generate suggestions.
@@ -99,7 +99,7 @@ test("suggestion reasons never claim bottle measurements", () => {
   const anchor = fixture({ id: "a" });
   const other = fixture({ id: "b" });
   for (const s of ifYouLikeThis(anchor, [other])) {
-    assert.ok(!/abv|bottle|score|rating/i.test((s.sharedDimensions || []).join(" ")), "reasons stay editorial");
+    assert.ok(!/abv|bottle|score|rating/i.test((s.sharedDimensionKeys || []).join(" ")), "reasons stay editorial");
   }
 });
 

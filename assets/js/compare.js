@@ -91,15 +91,15 @@ export function ifYouLikeThis(anchor, candidates, { maxSuggestions = 2 } = {}) {
   for (const candidate of candidates) {
     if (candidate.id === anchor.id) continue;
     const shared = [];
-    for (const { key, label } of DIMENSIONS) {
+    for (const { key } of DIMENSIONS) {
       const a = levelOf(anchor, key);
       const c = levelOf(candidate, key);
-      if (isKnown(a) && a === c && a !== "none") shared.push(label.toLowerCase());
+      if (isKnown(a) && a === c && a !== "none") shared.push(key);
     }
     if (shared.length > 0) {
       suggestions.push({
         profile: candidate,
-        sharedDimensions: shared.slice(0, 2),
+        sharedDimensionKeys: shared.slice(0, 2),
       });
     }
   }

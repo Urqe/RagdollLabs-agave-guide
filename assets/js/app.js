@@ -140,7 +140,7 @@ async function renderRoute(container, route) {
     state.exploreApi = null;
     const profile = profiles.find((p) => p.id === route.params.profileId);
     if (!profile) {
-      renderProfileNotFound(container, route.params.profileId);
+      renderProfileNotFound(container, route.params.profileId, locale);
       return;
     }
     const bottle = bottles.find((b) => b.id === profile.exampleBottleId) || null;
@@ -158,7 +158,7 @@ async function renderRoute(container, route) {
     return;
   }
   state.exploreApi = null;
-  renderProfileNotFound(container, "");
+  renderProfileNotFound(container, "", locale);
 }
 
 function wireLocaleToggle(refresh) {
@@ -167,7 +167,8 @@ function wireLocaleToggle(refresh) {
   const render = () => {
     const next = locale.get() === "en" ? "es" : "en";
     button.textContent = next.toUpperCase();
-    button.setAttribute("aria-label", locale.get() === "en" ? "Cambiar idioma" : "Switch language");
+    button.setAttribute("aria-label", ui(locale, next === "en" ? "switchToEn" : "switchToEs"));
+    button.title = button.getAttribute("aria-label");
   };
   button.addEventListener("click", () => {
     locale.set(locale.get() === "en" ? "es" : "en");
@@ -183,7 +184,8 @@ function wireThemeToggle() {
   const render = () => {
     const theme = document.documentElement.getAttribute("data-theme") || "dark";
     button.textContent = theme === "dark" ? "\u2600" : "\u263e";
-    button.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+    button.setAttribute("aria-label", ui(locale, theme === "dark" ? "toLight" : "toDark"));
+    button.title = ui(locale, "switchTheme");
   };
   button.addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme") || "dark";
@@ -269,6 +271,23 @@ async function boot() {
     if (brand) brand.setAttribute("aria-label", ui(locale, "home"));
     const footer = document.querySelector(".app-footer p");
     if (footer) footer.textContent = ui(locale, "footer");
+    const skip = document.querySelector(".skip-link");
+    if (skip) skip.textContent = ui(locale, "skipToContent");
+    const nav = document.querySelector("nav[aria-label]");
+    if (nav) nav.setAttribute("aria-label", ui(locale, "mainNav"));
+    const prefs = document.querySelector(".header-preferences");
+    if (prefs) prefs.setAttribute("aria-label", ui(locale, "preferences"));
+    document.title = ui(locale, "docTitle");
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", ui(locale, "docDescription"));
+    const product = document.querySelector(".brand-product");
+    if (product) product.textContent = ui(locale, "brandProduct");
+    const themeButton = document.getElementById("theme-toggle");
+    if (themeButton) {
+      const theme = document.documentElement.getAttribute("data-theme") || "dark";
+      themeButton.setAttribute("aria-label", ui(locale, theme === "dark" ? "toLight" : "toDark"));
+      themeButton.title = ui(locale, "switchTheme");
+    }
     clear(main);
     main.appendChild(el("p", { class: "loading-note" }, "Loading…"));
     try {

@@ -1,5 +1,6 @@
 import { el, clear, safeLink } from "./dom-utils.js";
 import { ui } from "./presentation.js";
+import { sourceKindLabel } from "./editorial.js";
 
 /** Sources stay available but out of the reading flow. */
 function collapsibleSources(sources, sourceIds, t, locale = null) {
@@ -41,7 +42,7 @@ function sourceLinks(sources, sourceIds, locale = null) {
     if (!source) continue;
     const item = el("li");
     item.appendChild(safeLink(source.url, source.title, { class: "source-link" }));
-    item.appendChild(el("span", { class: "source-kind" }, ` — ${ui(locale, "kindSource").replace("{kind}", source.kind)}${source.verified ? `, ${ui(locale, "verifiedAs").replace("{date}", source.verified)}` : ""}`));
+    item.appendChild(el("span", { class: "source-kind" }, ` — ${ui(locale, "kindSource").replace("{kind}", sourceKindLabel(source.kind, locale, ui))}${source.verified ? `, ${ui(locale, "verifiedAs").replace("{date}", source.verified)}` : ""}`));
     list.appendChild(item);
   }
   return list;
@@ -57,7 +58,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
   const section = el("section", { class: "learn-view", "aria-labelledby": "learn-heading" });
   const t = (key) => (locale ? locale.t(key) : key);
   section.appendChild(el("h2", { id: "learn-heading" }, t("learn.heading")));
-  const jumps = el("nav", { class: "learn-jumps", "aria-label": "Learn sections" });
+  const jumps = el("nav", { class: "learn-jumps", "aria-label": ui(locale, "learnSections") });
   for (const [id, label] of [["learn-plants", t("learn.plants")], ["learn-processes", t("learn.processes")], ["learn-terms", t("learn.terms")]]) {
     const jump = el("button", { type: "button", class: "nav-link learn-jump" }, label);
     jump.addEventListener("click", () => {

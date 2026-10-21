@@ -1,5 +1,6 @@
 import { el, clear } from "./dom-utils.js";
 import { tasteNote } from "./taste-notes.js";
+import { localizedTitle } from "./editorial.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 import { DIMENSIONS, levelOf } from "./compare.js";
 
@@ -36,19 +37,28 @@ const COPY = {
     disclosure: "Editorial content and some reference labels are currently in English.",
     partialDisclosure: "This section is available in English.",
     notDocumented: "not documented", labelFact: "label fact",
-    factSpirit: "Spirit", factAbv: "ABV", factProducer: "Producer", factPlace: "Place",
+    factSpirit: "Spirit", factAbv: "ABV", factAbvLong: "Alcohol by volume", factProducer: "Producer", factPlace: "Place",
     factBatch: "Batch/version", factComposition: "Composition",
     fitsPrefix: "How it fits the \u201c{title}\u201d profile (editorial): ", fitsPrefixPlain: "How it fits the reference profile (editorial): ",
     catalogueEmpty: "No bottles match \u201c{query}\u201d. Try a brand (Fortaleza), an expression (Blanco Tequila) or a place (Sonora).",
     jumpTo: "Jump to {name} in the catalogue",
     kindSource: "{kind} source", verifiedAs: "verified {date}",
+    kindProducer: "producer", kindReview: "review", kindStyle: "style",
     contextPrefix: "Context: ",
     classTerms: "Class terms are spirit-specific: tequila's rules do not transfer to mezcal or raicilla. Where a term is not a legal class, that is stated.",
     missingData: "Not compared because the data is not documented: {list}. Unknown means not documented, never zero.",
     loading: "Loading\u2026", errorTitle: "Something went wrong", reload: "Reload the page",
+    skipToContent: "Skip to content", mainNav: "Main", preferences: "Preferences",
+    switchTheme: "Switch theme", toLight: "Switch to light theme", toDark: "Switch to dark theme",
+    switchToEs: "Cambiar a espa\u00f1ol", switchToEn: "Switch to English",
+    learnSections: "Learn sections", statesWithProfiles: "States with profiles",
+    docTitle: "RagDollLabs \u00b7 Agave Guide", docDescription: "A small guide to the body and taste of Mexican agave spirits \u2014 tequila, mezcal, bacanora and raicilla style profiles with example bottles.",
+    noScript: "This app needs JavaScript to load its local data files. Esta aplicaci\u00f3n necesita JavaScript para cargar sus datos locales.",
+    brandProduct: "Agave Guide",
     mapFailed: "The map could not be loaded. You can still use the state list below.",
     notFoundTitle: "Profile not found", notFoundBody: "No profile exists with the id \u201c{id}\u201d.", backToExplore: "\u2190 Back to explore",
-    sharesWith: "Shares {list} with this profile.", reasonSpirit: "Matches the spirit \u201c{spirit}\u201d.",
+    coordsNote: "Approximate location: {lat}, {lon} \u2014 precision: {precision}. This is a place reference, not a legal boundary.",
+    sharesWith: "Shares {list} with this profile.", seeStyleProfile: "See the {spirit} style profile \u2192", reasonSpirit: "Matches the spirit \u201c{spirit}\u201d.",
     reasonBrand: "Example bottle brand matches: {brand}.", reasonProducer: "Producer matches: {producer}.",
     reasonNote: "Taste note matches: \u201c{note}\u201d.", reasonPlant: "Agave plant matches: {plant}.",
     reasonPlace: "Place matches: {place}.", reasonGeneral: "Matches \u201c{query}\u201d in this profile.",
@@ -95,19 +105,28 @@ const COPY = {
     disclosure: "El contenido editorial y algunas etiquetas de referencia están actualmente en inglés.",
     partialDisclosure: "Esta secci\u00f3n est\u00e1 disponible en ingl\u00e9s.",
     notDocumented: "no documentado", labelFact: "dato de etiqueta",
-    factSpirit: "Destilado", factAbv: "ABV", factProducer: "Productor", factPlace: "Lugar",
+    factSpirit: "Destilado", factAbv: "Graduaci\u00f3n alcoh\u00f3lica", factAbvLong: "Graduaci\u00f3n alcoh\u00f3lica (% Alc. Vol.)", factProducer: "Productor", factPlace: "Lugar",
     factBatch: "Lote/versi\u00f3n", factComposition: "Composici\u00f3n",
     fitsPrefix: "C\u00f3mo encaja con el perfil \u00ab{title}\u00bb (editorial): ", fitsPrefixPlain: "C\u00f3mo encaja con el perfil de referencia (editorial): ",
     catalogueEmpty: "Ninguna botella coincide con \u00ab{query}\u00bb. Prueba una marca (Fortaleza), una expresi\u00f3n (Blanco Tequila) o un lugar (Sonora).",
     jumpTo: "Ir a {name} en el cat\u00e1logo",
     kindSource: "fuente {kind}", verifiedAs: "verificado {date}",
+    kindProducer: "productor", kindReview: "rese\u00f1a", kindStyle: "estilo",
     contextPrefix: "Contexto: ",
     classTerms: "Los t\u00e9rminos de clase son espec\u00edficos de cada destilado: las reglas del tequila no se transfieren al mezcal ni a la raicilla. Cuando un t\u00e9rmino no es una clase legal, se indica.",
     missingData: "No comparado porque el dato no est\u00e1 documentado: {list}. \u201cNo documentado\u201d nunca significa cero.",
     loading: "Cargando\u2026", errorTitle: "Algo sali\u00f3 mal", reload: "Recargar la p\u00e1gina",
+    skipToContent: "Saltar al contenido", mainNav: "Principal", preferences: "Preferencias",
+    switchTheme: "Cambiar tema", toLight: "Cambiar al tema claro", toDark: "Cambiar al tema oscuro",
+    switchToEs: "Cambiar a espa\u00f1ol", switchToEn: "Cambiar a ingl\u00e9s",
+    learnSections: "Secciones de aprendizaje", statesWithProfiles: "Estados con perfiles",
+    docTitle: "RagDollLabs \u00b7 Gu\u00eda del Agave", docDescription: "Una peque\u00f1a gu\u00eda del cuerpo y el sabor de los destilados mexicanos de agave \u2014 perfiles de estilo de tequila, mezcal, bacanora y raicilla con botellas de ejemplo.",
+    noScript: "Esta aplicaci\u00f3n necesita JavaScript para cargar sus datos locales. This app needs JavaScript to load its local data files.",
+    brandProduct: "Gu\u00eda del Agave",
     mapFailed: "No se pudo cargar el mapa. Todav\u00eda puedes usar la lista de estados.",
     notFoundTitle: "Perfil no encontrado", notFoundBody: "No existe ning\u00fan perfil con el id \u00ab{id}\u00bb.", backToExplore: "\u2190 Volver a explorar",
-    sharesWith: "Comparte {list} con este perfil.", reasonSpirit: "Coincide con el destilado \u00ab{spirit}\u00bb.",
+    coordsNote: "Ubicaci\u00f3n aproximada: {lat}, {lon} \u2014 precisi\u00f3n: {precision}. Es una referencia de lugar, no un l\u00edmite legal.",
+    sharesWith: "Comparte {list} con este perfil.", seeStyleProfile: "Ver el perfil de estilo de {spirit} \u2192", reasonSpirit: "Coincide con el destilado \u00ab{spirit}\u00bb.",
     reasonBrand: "La marca de la botella de ejemplo coincide: {brand}.", reasonProducer: "El productor coincide: {producer}.",
     reasonNote: "La nota de cata coincide: \u00ab{note}\u00bb.", reasonPlant: "La planta de agave coincide: {plant}.",
     reasonPlace: "El lugar coincide: {place}.", reasonGeneral: "Coincide con \u00ab{query}\u201d en este perfil.",
@@ -131,7 +150,7 @@ export function ui(locale, key) {
 export function discoveryCard(profile, locale = null) {
   const link = el("a", { class: "discovery-card", href: "#/profile/" + encodeURIComponent(profile.id) });
   link.appendChild(el("span", { class: "eyebrow" }, SPIRIT_LABELS[profile.spirit] || profile.spirit));
-  link.appendChild(el("strong", {}, profile.title));
+  link.appendChild(el("strong", {}, localizedTitle("profile", profile.id, profile.title, locale)));
   link.appendChild(el("span", { class: "discovery-place" }, profile.stateName + ", México"));
   link.appendChild(el("span", { class: "discovery-notes" },
     (profile.tasteNotes || []).slice(0, 3).map((n) => tasteNote(n, locale)).join(" · ")));
@@ -178,7 +197,7 @@ export function renderHome(container, { profiles, locale }) {
   const cards = el("div", { class: "discovery-grid featured-grid" });
   const ids = ["tequila-blanco-valley-jalisco", "mezcal-espadin-valles-centrales", "bacanora-pacifica-sierra-sonora"];
   const picks = ids.map(id => profiles.find(p => p.id === id)).filter(Boolean);
-  for (const profile of picks.length ? picks : profiles.slice(0, 3)) cards.appendChild(discoveryCard(profile));
+  for (const profile of picks.length ? picks : profiles.slice(0, 3)) cards.appendChild(discoveryCard(profile, locale));
   featured.appendChild(cards);
   featured.appendChild(el("a", { class: "text-action", href: "#/explore" }, ui(locale, "all") + " →"));
   section.appendChild(featured);
@@ -187,9 +206,15 @@ export function renderHome(container, { profiles, locale }) {
 
 /** Localized label for a comparison/sensory dimension key. */
 export function dimensionLabel(key, locale) {
-  const keys = { bodyLevel: "body", finishLength: "finish" };
-  return ui(locale, keys[key] || key);
+  return ui(locale, DIMENSION_KEY_LABELS[key] || key);
 }
+
+/** Localized hint/tooltip for a dimension key. */
+export function dimensionHint(key, locale) {
+  return ui(locale, "hint" + (DIMENSION_KEY_LABELS[key] || key).replace(/^./, (c) => c.toUpperCase()));
+}
+
+const DIMENSION_KEY_LABELS = { bodyLevel: "body", finishLength: "finish" };
 
 export function sensoryOverview(profile, locale) {
   const section = el("section", { class: "sensory-overview", "aria-labelledby": "sensory-heading" });

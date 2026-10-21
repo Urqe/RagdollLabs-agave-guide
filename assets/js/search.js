@@ -9,6 +9,7 @@
  * them; unknown keys fall back to a general match phrase.
  */
 import { ES_NOTES } from "./taste-notes.js";
+import { fieldEs } from "./editorial.js";
 
 const normalize = (text) =>
   (text || "")
@@ -53,6 +54,15 @@ const ALIASES = new Map([
   ["florales", "floral"],
   ["mineral", "mineral"],
   ["dulce", "sweet"],
+  // Spanish descriptors for common English style terms.
+  ["altos", "highland"],
+  ["barrica", "barrel"],
+  ["sin crianza", "unaged"],
+  ["reposado en barrica", "barrel-rested"],
+  ["con humo", "smoky"],
+  ["ahumado", "smoky"],
+  ["con crianza", "aged"],
+  ["envejecido", "aged"],
 ]);
 
 export function applyAliases(normalizedQuery) {
@@ -93,6 +103,7 @@ export function searchProfiles({ profiles, bottles, query }) {
     });
     const haystack = normalize([
       ...profileSearchTerms(profile),
+      fieldEs("profile", profile.id, "title") || "",
       ...(profile.tasteNotes || []).map((n) => ES_NOTES[n] || ""),
       example ? example.brand : "",
       example ? example.expression : "",

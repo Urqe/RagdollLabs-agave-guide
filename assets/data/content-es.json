@@ -1,1 +1,238 @@
-{"profiles":{},"bottles":{},"processes":{},"plants":{},"terms":{}}
+{
+  "profiles": {
+    "tequila-blanco-valley-jalisco": {
+      "title": "Tequila blanco, estilo Valle de Tequila",
+      "context": "Tequila sin crianza de 100% agave azul, centrado en el pueblo de Tequila y el valle circundante de Jalisco. El agave del valle suele ser más pequeño y herbáceo que el de los altos, y muchos blancos del valle se perciben sabrosos y vegetales en lugar de dulces.",
+      "description": "Un blanco (también llamado silver o plata) es un tequila embotellado sin crianza en roble, así que lo que se prueba es el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas. Los productores tradicionales del valle suelen moler el agave cocido con tahona de piedra y fermentar en tinas abiertas, lo que añade textura y un filo sabroso y terroso típico de la región. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el tequila? Un blanco es la versión sin crianza — la lectura más pura del agave cocido, antes de cualquier influencia de roble.",
+      "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal sin crianza",
+      "process": "Cocción al vapor (horno/autoclave), extracción con tahona o molino de rodillos, fermentación en tinas abiertas, doble destilación, sin crianza (blanco)",
+      "finish": "Limpio y picante, con cítricos y una calidez vegetal suave que se desvanece de forma constante.",
+      "pairing": {
+        "serving": "Solo, en copa pequeña o con una rodaja de lima; también la base clásica de la Margarita y la Paloma. Sugerencia editorial, no una regla.",
+        "foods": ["tacos al pastor", "ceviche", "queso fresco con chile"]
+      }
+    },
+    "mezcal-espadin-valles-centrales": {
+      "title": "Mezcal de espadín, estilo Valles Centrales",
+      "context": "Mezcal artesanal joven hecho con agave espadín (Agave angustifolia) en los Valles Centrales de Oaxaca. La producción de mezcal es tradicionalmente a pequeña escala, con corazones de agave asados en hornos subterráneos, lo que le da al destilado su humo característico. El espadín es el agave de mezcal más cultivado y a menudo se le describe como el más accesible de las variedades comunes.",
+      "description": "El mezcal es un destilado hecho de los corazones asados de muchas especies de agave, no solo del agave azul. Asar las piñas bajo tierra le da al mezcal su humo característico, superpuesto a notas de fruta, hierba y minerales que varían según la variedad de agave, el pueblo y el maestro mezcalero. Este perfil describe el estilo de un espadín joven típico de los Valles Centrales; cada botella varía considerablemente. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el mezcal? El humo proviene de asar el agave bajo tierra — es un carácter del proceso, no un sabor añadido.",
+      "category": "Mezcal — destilado con Denominación de Origen propia; el joven/abocado es una clase legal sin crianza",
+      "process": "Asado en horno subterráneo, tahona o molino de tracción animal, fermentación con levaduras silvestres, doble destilación, joven (sin crianza)",
+      "smoke": "Humo suave a moderado del asado en horno, entretejido con las notas de fruta y hierba en lugar de dominarlas.",
+      "finish": "Largo y seco, con un humo que perdura suavemente y se desvanece en hierbas terrosas.",
+      "pairing": {
+        "serving": "Se bebe solo a temperatura ambiente; el humo se abre en una copa ancha. Solo una sugerencia editorial.",
+        "foods": ["tlayudas", "carnes asadas", "verduras asadas"]
+      }
+    },
+    "bacanora-pacifica-sierra-sonora": {
+      "title": "Bacanora, estilo Agave Pacifica (Sierra de Sonora)",
+      "context": "La bacanora es un destilado sonorense de agave con denominación de origen que cubre 35 municipios de Sonora. Se destila de Agave angustifolia pacifica (llamada localmente Pacifica o Yaquiana), un agave de recolección silvestre de la Sierra Madre de Sonora. Su producción estuvo prohibida durante gran parte del siglo XX (1915–1992) y continuó de manera clandestina; la DO data del año 2000.",
+      "description": "La bacanora tradicional asa los corazones de agave en hornos subterráneos, a menudo con leña de mezquite, fermenta con levaduras silvestres y destila dos veces, dando un destilado que se ubica estilísticamente entre el tequila y el mezcal oaxaqueño: agave asado en el centro con un humo generalmente más suave que el del mezcal, más hierbas del desierto y un filo mineral de la sierra. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en la bacanora? Piénsala como la prima sonorense del mezcal: mismo corazón de agave asado, normalmente un poco menos humo, a menudo más ligera y herbácea.",
+      "category": "Bacanora — destilado con Denominación de Origen propia (Sonora, desde 2000)",
+      "process": "Asado en horno (a menudo con mezquite), fermentación con levaduras silvestres, doble destilación",
+      "smoke": "Presente pero generalmente más suave que el mezcal oaxaqueño: el asado en horno da un humo magro y sabroso en lugar de dominante.",
+      "finish": "Seco y herbáceo, con un hilo suave de humo y un final mineral y picante.",
+      "pairing": {
+        "serving": "Se bebe solo, al estilo sonorense con lima y una pizca de sal de chapulín; sugerencia editorial.",
+        "foods": ["carne asada", "queso sonorense (queso cocido)", "platillos con salsa de chiltepín"]
+      }
+    },
+    "raicilla-maximiliana-sierra-jalisco": {
+      "title": "Raicilla de la sierra, estilo Maximiliana (Jalisco)",
+      "context": "Raicilla artesanal de la sierra hecha con Agave maximiliana en el suroeste de Jalisco. La tradición de la raicilla es anterior a las leyes modernas del tequila y durante décadas se destiló informalmente; recibió su denominación de origen en 2019. La variante de la sierra usa agaves de las tierras altas asados en hornos de adobe sobre el suelo.",
+      "description": "La raicilla es un destilado de agave de Jalisco históricamente destilado en alambiques de madera y barro. El estilo de la sierra asa corazones de agave maximiliana en hornos de adobe sobre el suelo, fermenta con levaduras silvestres en tinas de madera y destila en pequeños lotes, dando un destilado afrutado y con frecuencia con un matiz rústico, más ligero de humo que la mayoría de los mezcales. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en la raicilla? Espera un destilado de agave a menudo más rústico y afrutado que el tequila, y normalmente con menos humo que el mezcal — especialmente las versiones de la sierra.",
+      "category": "Raicilla — destilado con Denominación de Origen propia (Jalisco y Bahía de Banderas, Nayarit, desde 2019)",
+      "process": "Asado en horno de adobe sobre el suelo, fermentación silvestre abierta en tinas de madera, destilación en pequeños lotes",
+      "smoke": "Generalmente ligero en el estilo de la sierra: los hornos sobre el suelo dan una nota de asado tenue en lugar de humo de horno subterráneo.",
+      "finish": "Medio-largo, suavemente rústico, con fruta de huerto y un final suave de agave dulce.",
+      "pairing": {
+        "serving": "Se bebe solo; su frescor rústico también funciona en un trago estilo Negroni (sugerencia editorial).",
+        "foods": ["birria", "mole", "quesos madurados"]
+      }
+    },
+    "tuxca-lineno-cimarron-jalisco-colima": {
+      "title": "Tuxca, estilo Liñeno/Cimarrón (frontera Jalisco–Colima)",
+      "context": "La tuxca es una tradición destilada de los municipios fronterizos de Jalisco y Colima, elaborada con agaves Liñeno y Cimarrón (Agave angustifolia y Agave rhodacantha) en hornos cilíndricos y alambiques de madera filipinos. No tiene denominación de origen; su estatus legal no equivale al del tequila ni al del mezcal.",
+      "description": "La tuxca se asa en hornos cilíndricos, se muele a mano, fermenta en cráteres volcánicos recubiertos y se destila en alambiques de madera de tradición filipina. El resultado es un destilado magro, especiado y mineral muy tradicional de las tierras fronterizas del volcán de Colima. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en la tuxca? Espera un destilado fronterizo profundamente tradicional y sin certificación — más magro y mineral que la mayoría de los mezcales, con especias en lugar de humo.",
+      "category": "Tuxca — una tradición regional sin denominación de origen; su estatus legal no equivale al del tequila ni al del mezcal",
+      "process": "Asado en horno cilíndrico, molienda a mano, fermentación en cráter volcánico, destilación en alambique de madera filipino",
+      "smoke": "Generalmente ligero: el asado en horno es más corto y los alambiques de madera se perciben herbáceo-especiados en lugar de ahumados.",
+      "finish": "Seco y especiado, con lima y pimienta que se desvanecen hacia lo mineral volcánico.",
+      "pairing": {
+        "serving": "Se bebe solo acompañado de agua; magro y mineral, invita a beber despacio (sugerencia editorial).",
+        "foods": ["pescado a la talla", "queso fresco con tortillas", "mariscos colimenses"]
+      }
+    },
+    "comiteco-aguamiel-chiapas": {
+      "title": "Comiteco, estilo aguamiel (Comitán, Chiapas)",
+      "context": "El comiteco es una tradición de Comitán, Chiapas, destilada del aguamiel — la savia dulce recolectada de Agave americana viva — en lugar de corazones asados. No es un destilado con denominación de origen ni legalmente equivalente al tequila o al mezcal.",
+      "description": "El comiteco fermenta y destila el aguamiel recolectado de la planta viva, sin cocinar la piña. El resultado es un destilado verde, láctico y herbal, sin carácter de asado, con una suavidad característica de la savia fresca. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el comiteco? Olvídate del humo: es un destilado de savia — piensa verde, láctico y herbal, de agave sin cocinar.",
+      "category": "Comiteco — una tradición regional de Comitán, Chiapas; no es un destilado con denominación de origen ni legalmente equivalente al tequila o al mezcal",
+      "process": "Derivado de savia: aguamiel recolectado de la planta viva, fermentado, destilado — sin cocción de la piña",
+      "finish": "Suave y herbal, con un final terroso ligero y sin carácter de asado.",
+      "pairing": {
+        "serving": "Se bebe solo; tradicionalmente es un destilado de ocasiones pequeñas — solo sugerencia editorial.",
+        "foods": ["tamales chiapanecos", "quesos ahumados", "postres con café"]
+      }
+    },
+    "destilado-de-pulque-salmiana-tlaxcala": {
+      "title": "Destilado de pulque, estilo Salmiana (Tlaxcala)",
+      "context": "El destilado de pulque se elabora destilando pulque fermentado — el aguamiel de Agave salmiana fermentado durante unas 48 horas — en los estados de Hidalgo y Tlaxcala. La piña nunca se cocina. No tiene denominación de origen y explícitamente no es mezcal: el pulque fermentado no es un destilado y no se cataloga aquí como tal.",
+      "description": "A diferencia de los destilados de agave cocido, el destilado de pulque parte de savia sin cocinar fermentada en pulque, que luego se destila. El resultado es ligero, láctico y verde, con una acidez suave completamente distinta al carácter asado de los destilados de agave cocido. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el destilado de pulque? Es pulque destilado — savia de agave sin cocinar, así que espera un carácter láctico, verde y suavemente ácido, distinto de cualquier destilado de agave cocido.",
+      "category": "Destilado de pulque — una tradición regional; sin denominación de origen, y explícitamente no es mezcal (el pulque fermentado no es un destilado y no se cataloga aquí)",
+      "process": "Derivado de savia: aguamiel fermentado en pulque (unas 48 horas), luego destilado; la piña nunca se cocina",
+      "finish": "Ligero y ácido, con notas lácticas y verdes que se desvanecen rápido.",
+      "pairing": {
+        "serving": "Se bebe solo, ligeramente frío; su acidez láctica pide una mente abierta (sugerencia editorial).",
+        "foods": ["barbacoa", "mixiotes", "platillos con maíz"]
+      }
+    },
+    "raicilla-costa-jalisco": {
+      "title": "Raicilla de la costa, estilo costero (Jalisco)",
+      "context": "La raicilla de la costa se elabora en los municipios costeros del suroeste de Jalisco con agaves asados en hornos subterráneos. Bajo la denominación de origen de la raicilla, la costa es una división editorial de tradiciones, no una clase legal.",
+      "description": "El estilo costero de la raicilla asa los corazones de agave bajo tierra, dándole un humo sabroso más presente que en la variante de la sierra, entretejido con cítricos y hierbas. Comparte la denominación de origen con toda la raicilla; la diferencia está en la cocción. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en la raicilla costera? Piénsala como la prima marítima y más ahumada de la raicilla de la sierra: misma DO, distinta cocción.",
+      "category": "Raicilla — destilado con Denominación de Origen propia (Jalisco y Bahía de Banderas, Nayarit, desde 2019); la costa es una división editorial de tradiciones, no una clase legal",
+      "process": "Asado en horno subterráneo, fermentación con levaduras silvestres, destilación en pequeños lotes",
+      "smoke": "Más presente que en la raicilla de la sierra: la cocción bajo tierra da un humo sabroso entretejido con cítricos y hierbas.",
+      "finish": "Medio-largo, ahumado y sabroso con un final cítrico.",
+      "pairing": {
+        "serving": "Se bebe solo; el humo invita a beber despacio por la noche (sugerencia editorial).",
+        "foods": ["pescado asado", "mariscos con chile", "cocina costera"]
+      }
+    },
+    "tequila-reposado-valley-jalisco": {
+      "title": "Tequila reposado, estilo Valle de Tequila",
+      "context": "El tequila reposado descansa en barricas de roble entre dos meses y un año tras la destilación, lo que suaviza el blanco con notas de vainilla y especias suaves. Este perfil sigue la tradición del valle: agave más herbáceo, reposado breve.",
+      "description": "Un reposado es el mismo tequila que el blanco, reposado brevemente en roble: el agave permanece y se le unen vainilla y especias. En el estilo del valle el reposado suele ser breve — dos a doce meses — para no cubrir el carácter herbáceo del agave. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el reposado? Piénsalo como el mismo destilado que el blanco, reposado brevemente en roble: el agave permanece, la vainilla y las especias se suman.",
+      "category": "Tequila — destilado con Denominación de Origen propia; el reposado es una clase legal (reposado en roble, mínimo 2 meses)",
+      "process": "Cocción al vapor, fermentación, doble destilación y reposo en barricas de roble (mínimo legal 2 meses; típicamente 2–12 meses)",
+      "finish": "Medio, con especias suaves de madera y un final de caramelo y agave.",
+      "pairing": {
+        "serving": "Se bebe solo; también es la evolución clásica de la Margarita para quien busca una base más redonda (sugerencia editorial).",
+        "foods": ["tacos", "carnes asadas", "quesos madurados"]
+      }
+    },
+    "tequila-anejo-valley-jalisco": {
+      "title": "Tequila añejo, estilo Valle de Tequila",
+      "context": "El tequila añejo envejece en roble al menos un año, típicamente en barricas ex-bourbon. Este perfil sigue la tradición del valle: el roble profundo envuelve el agave herbáceo del valle.",
+      "description": "Un añejo es tequila envejecido en roble un año o más: vainilla, fruta seca y especias de madera rodean el agave. Es la expresión más redonda y oscura del tequila, la más cercana al whisky en sensación, aunque sigue siendo tequila en esencia. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el añejo? Espera la expresión más redonda y oscura del tequila: vainilla de roble y fruta seca alrededor del agave — la más cercana al whisky en sensación, aunque sigue siendo tequila en esencia.",
+      "category": "Tequila — destilado con Denominación de Origen propia; el añejo es una clase legal (envejecido en roble, mínimo 1 año)",
+      "process": "Cocción al vapor, fermentación, doble destilación y envejecimiento en roble al menos un año (típicamente barricas ex-bourbon)",
+      "finish": "Largo y redondo, con especias de roble, agave dulce y un final seco suave.",
+      "pairing": {
+        "serving": "Se bebe solo, idealmente en copa pequeña para concentrar el aroma (sugerencia editorial).",
+        "foods": ["chocolate oscuro", "mole", "bistec asado"]
+      }
+    },
+    "tequila-cristalino-style": {
+      "title": "Tequila cristalino, estilo",
+      "context": "El cristalino es un tequila añejo o reposado filtrado con carbón para eliminar el color. Es un estilo de acabado y de marketing sobre una clase legal, no una clase legal en sí; la divulgación de la base envejecida varía según la marca.",
+      "description": "Un cristalino se elabora como reposado o añejo y luego se filtra con carbón hasta dejarlo claro: transparente como un blanco, más redondo como un añejo. Es objeto de debate honesto — algunos valoran la accesibilidad, otros prefieren los destilados sin filtrar. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el cristalino? Es un tequila envejecido con el color filtrado — claro como un blanco, más redondo como un añejo, y objeto de debate honesto.",
+      "category": "Cristalino — un estilo de acabado/marketing sobre una clase legal, no una clase legal en sí; la divulgación de la base envejecida varía según la marca",
+      "process": "Elaborado como reposado o añejo, luego filtrado con carbón hasta dejarlo claro; una elección de acabado, no una clase legal",
+      "finish": "Suave y de corta a media duración; diseñado para beberse fácil.",
+      "pairing": {
+        "serving": "Se sirve solo o con hielo; suele posicionarse como entrada al tequila envejecido (sugerencia editorial).",
+        "foods": ["botanas ligeras", "postres de fruta fresca"]
+      }
+    },
+    "comiteco-anejo-comitan-chiapas": {
+      "title": "Comiteco añejo, reposado en vidrio con ramas de encino (Comitán, Chiapas)",
+      "context": "El comiteco añejo descansa en recipientes de vidrio con ramas de encino blanco — sin barrica ni cocción de la piña. Es una tradición regional de Comitán, Chiapas: el añejo aquí es una expresión del productor, no una clase legal como en el tequila.",
+      "description": "El comiteco añejo fermenta y destila aguamiel de la planta viva en cobre y luego lo reposa en vidrio con ramas de encino blanco. El resultado conserva el carácter verde, láctico y herbal del comiteco con un suave especiado de roble. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el comiteco añejo? No esperes un tequila añejo: la madera viene de ramas de encino reposadas en vidrio, así que es más suave — piensa en un especiado tibio sobre el mismo carácter de savia verde y láctico.",
+      "category": "Comiteco añejo — una tradición regional de Comitán, Chiapas; no es un destilado con denominación de origen, y el añejo aquí es una expresión del productor, no una clase legal como en el tequila",
+      "process": "Derivado de savia: aguamiel recolectado de la planta viva, fermentado, destilado en cobre y reposado en vidrio con ramas de encino blanco (sin crianza en barrica, sin cocción de la piña)",
+      "finish": "De duración media y herbal, con un suave final de especias de roble y sin carácter de asado.",
+      "pairing": {
+        "serving": "Se bebe solo para que el suave especiado de roble acompañe el carácter herbal de la savia (sugerencia editorial).",
+        "foods": ["tamales chiapanecos", "quesos madurados", "postres con canela"]
+      }
+    },
+    "raicilla-reposado-jalisco": {
+      "title": "Raicilla reposado, estilo reposado en barrica (Jalisco)",
+      "context": "La raicilla reposado es una clase envejecida legalmente definida bajo la denominación de origen de la raicilla: mínimo dos meses en madera según la fuente DO citada. El reposo suele ser breve, conservando el carácter afrutado del joven.",
+      "description": "Una raicilla reposado descansa en barricas de madera unos tres meses tras la destilación: la fruta y las florales del joven quedan con un halo ligero de caramelo y vainilla. Queda más cerca de su versión joven que de un tequila reposado. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en la raicilla envejecida? Espera la fruta y las florales del joven con un halo ligero de caramelo y vainilla de un reposo breve — más cerca de su versión joven que de un tequila reposado.",
+      "category": "Raicilla reposado — una clase envejecida legalmente definida bajo la denominación de origen de la raicilla (mínimo 2 meses en madera según la fuente DO citada)",
+      "process": "Fermentado y destilado (la botella de ejemplo indica acero inoxidable), luego reposado en barricas de madera unos 3 meses",
+      "smoke": "Puede persistir un ahumado delicado de la producción; el reseñista de la botella de ejemplo describe humo de fogata en el final.",
+      "finish": "De media a larga duración, con fruta dulce, especias afines a la canela y un final suave de humo.",
+      "pairing": {
+        "serving": "Se bebe solo; su fruta y su humo suave también funcionan en un trago estilo Negroni (sugerencia editorial).",
+        "foods": ["quesos suaves", "fruta fresca", "platillos con mole suave"]
+      }
+    },
+    "tequila-extra-anejo-highland-jalisco": {
+      "title": "Tequila extra añejo, estilo de los altos (Jalisco)",
+      "context": "El tequila extra añejo envejece en roble tres años o más, en barricas de hasta 600 litros. Este perfil sigue la tradición de los altos de Jalisco: agave más grande y dulce, capaz de sostener un envejecimiento largo.",
+      "description": "Un extra añejo es tequila envejecido tres años o más: el roble domina con chocolate, café y especias, y el agave de los altos — más dulce y frutal — sostiene la estructura. Es el tequila más cercano al whisky en carácter. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el extra añejo? Es el tequila en su versión más cercana al whisky: espera roble, chocolate y café — los buenos todavía saben a agave debajo.",
+      "category": "Tequila — destilado con Denominación de Origen propia; el extra añejo es una clase legal (envejecido en roble, mínimo 3 años, barricas de hasta 600 litros)",
+      "process": "Cocción al vapor (o asado en piedra para algunos tradicionalistas), fermentación, doble destilación y envejecimiento de al menos tres años en roble (típicamente barricas americanas ex-bourbon)",
+      "finish": "Largo y de roble, con chocolate, especias suaves y un final lento de agave.",
+      "pairing": {
+        "serving": "Se bebe solo después de cenar, en copa estilo balón (sugerencia editorial).",
+        "foods": ["chocolate oscuro", "postres para acompañar puros", "queso madurado"]
+      }
+    },
+    "mezcal-reposado-espadin-oaxaca": {
+      "title": "Mezcal reposado, estilo espadín con reposo breve en barrica (Valles Centrales, Oaxaca)",
+      "context": "El mezcal reposado descansa en roble entre dos meses y un año bajo la denominación de origen del mezcal. Este perfil describe el estilo de los Valles Centrales: el humo del espadín persiste a través del reposo.",
+      "description": "Un mezcal reposado combina el humo del joven con vainilla y caramelo del reposo en roble. En el estilo de los Valles Centrales el reposo suele ser breve — el ejemplo indica 4–6 meses en roble americano — para que el humo del espadín siga presente de la nariz al final. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el mezcal reposado? Espera el humo de un joven suavizado con vainilla y caramelo — una entrada más amable a los destilados de agave ahumados.",
+      "category": "Mezcal — destilado con denominación de origen propia; el reposado es una clase legal (reposado en roble, de 2 meses a 1 año)",
+      "process": "Asado en horno, molienda en piedra, fermentación silvestre, destilación y reposo en roble de 2 a 12 meses (la botella de ejemplo indica 4–6 meses en roble americano)",
+      "smoke": "El humo del asado del espadín persiste tras el reposo; los reseñistas lo describen de la nariz al final.",
+      "finish": "Medio, ahumado-dulce, con un final afín al dulce de leche.",
+      "pairing": {
+        "serving": "Se bebe solo; también funciona en margaritas donde se agradece un reposado ahumado (sugerencia editorial).",
+        "foods": ["quesos suaves", "carnitas", "elote asado"]
+      }
+    },
+    "mezcal-tobala-sierra-oaxaca": {
+      "title": "Mezcal de tobalá, estilo Agave potatorum silvestre (Sierra, Oaxaca)",
+      "context": "El tobalá es un mezcal de agave silvestre (Agave potatorum) dentro de la denominación de origen del mezcal. Es una categoría bajo presión de sostenibilidad: el agave es pequeño, de crecimiento lento y se recolecta silvestre, no una clase legal propia.",
+      "description": "El tobalá se asa en horno, se muele en piedra, fermenta silvestre y se destila — en alambiques de barro en las producciones ancestrales, de cobre en las artesanales. El resultado es un mezcal más floral y afrutado que el espadín, con fruta dulce sobre un asado suave y un final mineral. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el tobalá? Espera la prima más amable y floral del mezcal: cítricos dulces y fruta tropical sobre un asado suave — más caro porque el agave es pequeño, lento y escaso.",
+      "category": "Mezcal — el tobalá está dentro de la denominación de origen del mezcal; es una categoría de agave silvestre bajo presión de sostenibilidad, no una clase legal propia",
+      "process": "Asado en horno, molienda en piedra, fermentación silvestre, destilación (alambiques de barro en producciones ancestrales, de cobre en artesanales)",
+      "smoke": "Un carácter de asado suave en lugar de humo pesado; los lotes ancestrales de barro pueden mostrar más.",
+      "finish": "Medio y sedoso, con dulzor de fruta y un final mineral suave.",
+      "pairing": {
+        "serving": "Se bebe solo en una copita pequeña; las florales del tobalá se pierden en coctelería (sugerencia editorial).",
+        "foods": ["quesos frescos", "salsas de fruta", "tostadas de mariscos"]
+      }
+    },
+    "sotol-chihuahua": {
+      "title": "Sotol, estilo desierto chihuahuense",
+      "context": "El sotol es un destilado con Denominación de Origen propia (Chihuahua, Coahuila y Durango, desde 2002), elaborado con Dasylirion — la sotol o sereque — y no con agave. Se incluye aquí como una tradición norteña afín al agave.",
+      "description": "El sotol asa la piña de Dasylirion en hornos cónicos (o la cuece al vapor los productores más grandes), fermenta silvestre y destila en cobre o barro. El resultado es un destilado herbal, fresco y ligeramente picante, más verde y salvaje que el tequila, con un humo generalmente más ligero que el del mezcal. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
+      "beginnerNote": "¿Nuevo en el sotol? Espera frescura herbácea y de pasto húmedo sobre un humo suave — más cercano a un primo verde y salvaje del mezcal que al tequila.",
+      "category": "Sotol — destilado con Denominación de Origen propia (Chihuahua, Coahuila, Durango, desde 2002); explícitamente no es un destilado de agave, incluido aquí como una tradición norteña afín",
+      "process": "Piña asada en hornos cónicos (o cocción al vapor en productores grandes), fermentación silvestre, destilación en cobre o barro; la cosecha puede dejar las raíces para que la planta rebrote",
+      "smoke": "Un humo suave, generalmente más ligero que el del mezcal, del asado en horno; depende del lote y del productor.",
+      "finish": "Medio, herbal y ligeramente picante, con un final mineral.",
+      "pairing": {
+        "serving": "Se bebe solo en copa pequeña; también va bien con agua mineral con gas (sugerencia editorial).",
+        "foods": ["quesos asadero", "platillos norteños de tortilla de harina", "verduras asadas"]
+      }
+    }
+  },
+  "bottles": {},
+  "processes": {},
+  "plants": {},
+  "terms": {}
+}

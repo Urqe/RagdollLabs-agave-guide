@@ -7,6 +7,7 @@ import { flavorMoods } from "./compare.js";
 import { SPIRIT_LABELS, groupProfilesBySpirit } from "./spirit-labels.js";
 import { captureView } from "./view-memory.js";
 import { tasteNote } from "./taste-notes.js";
+import { localizedTitle } from "./editorial.js";
 
 function profilesForState(profiles, stateId) {
   return profiles.filter((profile) => profile.stateId === stateId);
@@ -26,7 +27,7 @@ function profileList(profiles, stateId = null, locale = null) {
     }
     const suffix = stateId ? `?from=${encodeURIComponent(stateId)}` : "";
     const link = el("a", { href: `#/profile/${encodeURIComponent(profile.id)}${suffix}`, class: "profile-link" });
-    link.appendChild(el("span", { class: "profile-link-title" }, profile.title));
+    link.appendChild(el("span", { class: "profile-link-title" }, localizedTitle("profile", profile.id, profile.title, locale)));
     link.appendChild(el("span", { class: "profile-link-spirit" }, SPIRIT_LABELS[profile.spirit] || profile.spirit));
     link.appendChild(el("span", { class: "discovery-place" }, profile.stateName));
     link.appendChild(el("span", { class: "discovery-notes" },
@@ -148,7 +149,7 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
     clear(mapHolder);
     mapHolder.appendChild(el("p", { class: "error-state", role: "alert" }, ui(locale, "mapFailed")));
     // Fallback: render the list standalone so the view stays usable.
-    const list = el("ul", { class: "state-list state-list-fallback", "aria-label": "States with profiles" });
+    const list = el("ul", { class: "state-list state-list-fallback", "aria-label": ui(locale, "statesWithProfiles") });
     for (const code of coveredStateIds) {
       const name = STATE_NAMES[code] || code;
       const item = el("li");
