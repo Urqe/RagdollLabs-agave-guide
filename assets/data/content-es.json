@@ -449,6 +449,23 @@
     "el-acabo-plata-raicilla": {
       "reviewSummary": "Tastings.com la calificó 97/100 en mayo de 2025 y Forbes reporta que fue el destilado de agave mejor clasificado en el concurso 2025 del Beverage Testing Institute, uno de solo dos premios Platinum; los jueces describen una aromática brillante de pimiento verde y pasto con jalapeño y pimiento rojo, y un paladar de agave, manzana verde y jalapeño guiado por lo verde.",
       "batch": "Plata sin crianza de la taberna Taberna 3 Gallos; homenaje a las celebraciones de cosecha de la Hacienda de Ahuacatepec"
+    },
+    "aguamiel-bacanora-blanco": {
+      "reviewSummary": "Una cata de miembro de Mezcal Reviews describe agave cálido con pastel de vainilla y ligera fruta (piña, crema de plátano) en nariz, y un paladar dulce y jugoso con notas de crema batida, masa de pastel y natillas contra ligeras notas herbáceas, de humo y salinas."
+    },
+    "don-julio-blanco": {
+      "reviewSummary": "La guía Difford's lo describe como un tequila sin añejamiento, reposado brevemente en recipientes inertes antes del embotellado — un blanco de alturas en el estilo premium moderno.",
+      "editorialNote": "Un blanco de los Altos y no del Valle de Tequila: espera la lectura más brillante y frutal de la misma clase legal."
+    },
+    "jose-cuervo-tradicional-reposado": {
+      "reviewSummary": "The Rum Howler encuentra la frutosidad, la especia y la pimienta contenidas frente a embotellados anteriores — sigue siendo un reposado agradable y fácil, pero con menos agave contundente del que el reseñista busca en un tequila de sorbo."
+    },
+    "patron-silver": {
+      "reviewSummary": "Liquor.com encuentra un encantador aroma vegetal de agave cocido — pasto, pimientos verdes, algo de tierra y eucalipto — con sabores de agave, eucalipto y pimienta blanca que llevan a un final suave y sabroso; fino solo y en cócteles, con precio premium.",
+      "editorialNote": "Un blanco de los Altos: la misma clase sin añejar del ejemplo del valle, con la lectura más frutal y cítrica de los Altos."
+    },
+    "casa-dragones-blanco": {
+      "reviewSummary": "La reseña de Bevvy encuentra toronja fresca y manzana verde en nariz, agave protagonista en el sorbo con pimienta negra, clavo, menta y fruta tropical jugosa, y un final ligero y brillante con toronja, pimienta y hierbas refrescantes."
     }
   },
   "processes": {
@@ -492,7 +509,7 @@
       "whereItGrows": "Valles Centrales de Oaxaca (cultivado), la Sierra de Sonora (silvestre) y la costa de Jalisco (silvestre y cultivado).",
       "harvestProduction": "Cultivado a escala en Oaxaca; de cosecha silvestre en Sonora. Cocido (pozo o vapor), nunca por savia.",
       "sensoryTendencies": "Orientación editorial: los mezcales de espadín se leen con asado; la Pacifica de la bacanora aporta herbalidad sonorense; los sabores difieren por lugar y proceso, no por el nombre.",
-      "sustainability": "Si la Pacifica/Yaquiana sonorense es la misma planta que el espadín o una variedad local distinta se debate; esta guía conserva los nombres regionales sin zanjar la botánica."
+      "sustainability": "Las presiones de cosecha silvestre varían mucho por región: el bacanora sonorense depende de poblaciones silvestres de yaquiana/Pacifica, y el crecimiento del mezcal ha aumentado la demanda sobre parientes angustifolia de cosecha silvestre en otras partes. Donde el espadín se cultiva a escala (Oaxaca) la presión es mucho menor. Si la Pacifica/Yaquiana sonorense es la misma planta que el espadín o una variedad local distinta sigue en debate; esta guía conserva los nombres regionales sin zanjar la botánica. (El reporte sobre cosecha de agave silvestre es un tema activo en la prensa de la categoría, p. ej. Mezcalistas, revisado el 21-10-2026.)"
     },
     "agave-maximiliana": {
       "cultivation": "cosecha silvestre",
@@ -500,7 +517,7 @@
       "whereItGrows": "El país de las montañas de la Sierra Occidental de Jalisco, alrededor de La Vieja y la Sierra de Talpa.",
       "harvestProduction": "Cosecha silvestre; asado en hornos de adobe sobre el suelo, fermentación con levaduras silvestres, destilación en pequeños lotes.",
       "sensoryTendencies": "Orientación editorial: la raicilla de la Sierra se lee herbal y rústica; la cosecha silvestre implica variación genuina entre lotes.",
-      "sustainability": "De cosecha silvestre; el nombre local se solapa con otras especies en otras regiones, por eso esta guía registra los nombres con sus regiones."
+      "sustainability": "De cosecha silvestre en la Sierra Occidental de Jalisco; la creciente demanda de raicilla pone presión sobre las poblaciones silvestres de maximiliana, y algunos productores reportan programas de replantación, aunque la evidencia documentada es limitada. Se trata aquí como una preocupación de sostenibilidad de cosecha silvestre, no como una afirmación verificada del productor."
     },
     "agave-atrovirens": {
       "cultivation": "cultivado; savia recolectada de la planta viva (sin cocción)",
@@ -532,7 +549,7 @@
       "whereItGrows": "Las montañas altas de la Sierra Norte de Oaxaca (y más allá); madurez de 12–15 años en altitud.",
       "harvestProduction": "De cosecha silvestre tradicionalmente; algunos productores ya cultivan o reforestan. Asado en pozo, molienda de piedra, fermentación silvestre; alambiques de barro o cobre.",
       "sensoryTendencies": "Orientación editorial: típicamente más ligero y floral que el espadín; una cata ciega citada de ocho tobalás no encontró un solo hilo común — los lotes silvestres y cultivados se saben notablemente distintos.",
-      "sustainability": "La reproducción solo por semilla hace lento el cultivo, así que las poblaciones silvestres están bajo presión; algunos productores cultivan o reforestan (la entrada citada de Montelobos es 100% cultivada)."
+      "sustainability": "La reproducción única por semilla hace lento el cultivo, por lo que las poblaciones silvestres están bajo presión por la demanda de tobalá; algunos productores cultivan o reforestan (la entrada de Montelobos citada es 100% cultivada). Como especie de cosecha silvestre con ciclo de maduración largo, el tobalá es uno de los casos de sostenibilidad más discutidos en los destilados de agave (reporte de categoría revisado el 21-10-2026)."
     },
     "dasylirion-desert-spoon": {
       "cultivation": "cosecha silvestre tras 8–12 años; una sola planta rinde aproximadamente una botella, así que la cosecha sostenible (raíces dejadas para rebrotar) y los programas de conservación importan",
@@ -638,6 +655,20 @@
       "block1": "La sostenibilidad importa para los agaves silvestres: la reproducción lenta del tobalá hace vulnerables a las poblaciones silvestres, y la larga madurez del sotol hace decisiva la práctica de cosecha. Las afirmaciones de sostenibilidad específicas de productor en esta guía siempre trazan a fuentes fechadas.",
       "block2": "Las denominaciones evolucionan: la protección de la bacanora data de 2000, la de la raicilla de 2019, la del sotol de 2002. Esta guía registra fechas de verificación con cada fuente y revisa enmiendas antes de publicar resúmenes legales — una URL alcanzable nunca prueba una afirmación por sí sola.",
       "block2deeper": "La geografía legal es municipal, no estatal: la denominación de la bacanora cubre municipios seleccionados de Sonora, y la de la raicilla nombra municipios específicos de Jalisco y Nayarit. El sombreado del mapa en esta app siempre significa cobertura, nunca límites legales."
+    }
+  },
+  "traditions": {
+    "tequila": {
+      "sustainability": "El Agave tequilana se cultiva a gran escala, así que el tequila no comparte la presión sobre poblaciones silvestres de las tradiciones de cosecha silvestre; las preocupaciones documentadas de la industria se centran en los ciclos de precio del agave y el avance de la cocción industrial rápida."
+    },
+    "bacanora": {
+      "sustainability": "El bacanora depende de poblaciones silvestres de yaquiana/Pacifica en la Sierra sonorense; la presión de cosecha sobre el agave silvestre es el principal tema de sostenibilidad de la tradición (reporte de categoría revisado el 21-10-2026)."
+    },
+    "mezcal": {
+      "sustainability": "El mezcal abarca desde el espadín cultivado hasta muchas especies de cosecha silvestre; la presión de sostenibilidad se concentra en el extremo de cosecha silvestre (véanse las páginas de planta para el detalle por especie)."
+    },
+    "raicilla": {
+      "sustainability": "Parte del rango de la raicilla depende de maximiliana y especies afines de cosecha silvestre; las afirmaciones de sostenibilidad varían por productor y solo se presentan cuando están documentadas."
     }
   }
 }

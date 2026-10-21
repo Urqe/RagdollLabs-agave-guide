@@ -149,6 +149,11 @@ export function renderTraditionPage(container, { tradition, traditions, regions,
   section.appendChild(el("h2", {}, t("tradition.distinctions")));
   section.appendChild(el("p", {}, tradition.diversity));
 
+  if (tradition.sustainability) {
+    section.appendChild(el("h2", {}, t("plant.sustainability")));
+    section.appendChild(el("p", {}, fieldEs("tradition", tradition.id, "sustainability", locale) || tradition.sustainability));
+  }
+
   section.appendChild(el("h2", {}, t("tradition.regionalVariations")));
   if ((tradition.regionIds || []).length) {
     const row = el("p", { class: "learn-usedby" });

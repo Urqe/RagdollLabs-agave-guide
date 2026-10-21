@@ -78,6 +78,8 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
   if (bottle.place) facts.appendChild(el("li", {}, `${ui(locale, "factPlace")}: ${bottle.place}`));
   if (bottle.batch) facts.appendChild(el("li", {}, `${ui(locale, "factBatch")}: ${L("batch", bottle.batch)}`));
   if (bottle.composition) facts.appendChild(el("li", {}, `${ui(locale, "factComposition")}: ${L("composition", bottle.composition)}`));
+  if (bottle.classification) facts.appendChild(el("li", {}, `${ui(locale, "factClassification")}: ${L("classification", bottle.classification)}`));
+  if (bottle.plantComposition) facts.appendChild(el("li", {}, `${ui(locale, "factPlantComposition")}: ${L("plantComposition", bottle.plantComposition)}`));
   article.appendChild(facts);
 
   // Coverage disclosures first: factual entry without borrowed character.

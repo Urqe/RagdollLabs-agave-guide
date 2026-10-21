@@ -19,6 +19,8 @@ const readJson = async (rel) => JSON.parse(await readFile(path.join(root, rel), 
 const bottles = (await readJson("assets/data/bottles.json")).bottles;
 const profiles = (await readJson("assets/data/profiles.json")).profiles;
 const sources = (await readJson("assets/data/sources.json")).sources;
+const plants = (await readJson("assets/data/plants.json")).plants;
+const traditions = (await readJson("assets/data/traditions.json")).traditions;
 
 const { searchBottles, bottlesForProfile, brandDirectory, applyVariants } =
   await import("../assets/js/catalogue.js");
@@ -120,8 +122,10 @@ test("profile view keeps one featured example and hides extras behind See more b
   assert.equal(tag, "details", "native disclosure element: keyboard accessible");
   container.remove();
 
-  // A profile without extra bottles has no expansion control.
-  const teq = profiles.find((p) => p.id === "tequila-blanco-valley-jalisco");
+  // A profile without extra bottles has no expansion control. (Since
+  // Release 25 the valley blanco profile carries a second bottle, so this
+  // check uses the single-bottle extra añejo profile.)
+  const teq = profiles.find((p) => p.id === "tequila-extra-anejo-highland-jalisco");
   const container2 = document.createElement("div");
   document.body.appendChild(container2);
   renderProfile(container2, {
@@ -181,4 +185,74 @@ test("release 8: validator rejects duplicate names, missing attribution, inconsi
   }
   assert.ok(failed, "validator exits non-zero on duplicate names");
   await fs.writeFile(bottlesPath, original);
+});
+
+test("R25: new bottles carry classification, plant composition and honest coverage", () => {
+  const expected = [
+    ["aguamiel-bacanora-blanco", "bacanora-pacifica-sierra-sonora"],
+    ["jose-cuervo-tradicional-reposado", "tequila-reposado-valley-jalisco"],
+    ["casa-dragones-blanco", "tequila-blanco-valley-jalisco"],
+  ];
+  for (const [id, profileId] of expected) {
+    const b = bottles.find((x) => x.id === id);
+    assert.ok(b, `${id} exists`);
+    assert.equal(b.profileId, profileId, `${id} maps to its profile`);
+    assert.ok(b.classification, `${id} has a classification`);
+    assert.ok(b.plantComposition, `${id} documents plant composition`);
+    assert.ok(b.reviewSummary, `${id} has an attributed review`);
+    assert.ok(b.sourceIds.length >= 2, `${id} cites producer and review`);
+  }
+  // Highland blancos stay honestly uncovered rather than mis-mapped to the valley profile.
+  for (const id of ["don-julio-blanco", "patron-silver"]) {
+    const b = bottles.find((x) => x.id === id);
+    assert.equal(b.profileId, null, `${id} not forced onto a valley profile`);
+    assert.ok(b.coverage.includes("profile-not-covered"), `${id} discloses missing profile coverage`);
+    assert.equal(b.regionIds.length, 0, `${id} carries no region claims while uncovered`);
+  }
+});
+
+test("R25: catalogue entries render classification and plant composition facts", () => {
+  const aguamiel = bottles.find((b) => b.id === "aguamiel-bacanora-blanco");
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  const entry = bottleEntry(aguamiel, { sources, profiles, locale: enLocale });
+  container.appendChild(entry);
+  const facts = entry.querySelector(".catalogue-facts").textContent;
+  assert.ok(facts.includes("Classification:"), "classification fact rendered");
+  assert.ok(facts.includes("Plant composition:"), "plant composition rendered");
+  assert.ok(facts.includes("yaquiana"), "wild plant documented");
+  assert.ok(entry.querySelector(".bottle-review").textContent.includes("Mezcal Reviews"), "review attributed");
+  container.remove();
+});
+
+test("R25: wild-harvest sustainability content is documented with sources", () => {
+  const byId = (id) => plants.find((p) => p.id === id);
+  for (const pid of ["agave-angustifolia", "agave-potatorum", "agave-maximiliana"]) {
+    const plant = byId(pid);
+    assert.ok(plant.sustainability.length > 80, `${pid} sustainability deepened`);
+    assert.ok(plant.sourceIds.includes("mezcalistas-wild-agave-sustainability"), `${pid} cites the sustainability source`);
+  }
+  const tequila = traditions.find((t) => t.id === "tequila");
+  assert.ok(tequila.sustainability, "tradition sustainability present");
+  const bacanora = traditions.find((t) => t.id === "bacanora");
+  assert.ok(bacanora.sourceIds.includes("mezcalistas-wild-agave-sustainability"), "bacanora tradition cites sustainability source");
+});
+
+test("R25: new bottles have complete Spanish translations", async () => {
+  const { setContentEs } = await import("../assets/js/editorial.js");
+  setContentEs((await readJson("assets/data/content-es.json")));
+  const esLocale = createLocale();
+  esLocale.set("es");
+  for (const id of ["aguamiel-bacanora-blanco", "don-julio-blanco", "jose-cuervo-tradicional-reposado", "patron-silver", "casa-dragones-blanco"]) {
+    const b = bottles.find((x) => x.id === id);
+    const container = document.createElement("div");
+    document.body.appendChild(container);
+    const entry = bottleEntry(b, { sources, profiles, locale: esLocale });
+    container.appendChild(entry);
+    assert.ok(entry.querySelector(".bottle-review").textContent.length > 0, `${id} review renders`);
+    assert.ok(!entry.textContent.includes(b.reviewSummary), `${id} review is translated, not English`);
+    container.remove();
+  }
+  esLocale.set("en");
+  setContentEs({});
 });

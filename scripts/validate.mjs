@@ -120,6 +120,8 @@ for (const b of bottles) {
   if (b.profileId === undefined) fail(`${label}: profileId is required (null means no profile coverage yet)`);
   if (b.batch !== undefined && typeof b.batch !== "string") fail(`${label}: batch must be a string when present`);
   if (b.composition !== undefined && typeof b.composition !== "string") fail(`${label}: composition must be a string when present`);
+  if (b.classification !== undefined && typeof b.classification !== "string") fail(`${label}: classification must be a string when present`);
+  if (b.plantComposition !== undefined && typeof b.plantComposition !== "string") fail(`${label}: plantComposition must be a string when present`);
   if (b.abv == null && !b.abvNote) fail(`${label}: missing ABV requires an abvNote saying it is not documented`);
   if (b.abv != null && b.abvNote) fail(`${label}: abvNote must be omitted when the ABV is documented`);
   if (b.spirit === "comiteco" && !b.composition) {
@@ -358,6 +360,7 @@ for (const trad of traditions) {
   for (const field of ["origin", "history", "legalStatus", "materials", "practices", "diversity"]) {
     if (!trad[field] || typeof trad[field] !== "string") fail(`${label}: ${field} required`);
   }
+  if (trad.sustainability !== undefined && typeof trad.sustainability !== "string") fail(`${label}: sustainability must be a string when present`);
   for (const pid of trad.plantIds || []) {
     if (!plantIdSet.has(pid)) fail(`${label}: plantId ${pid} not in plants.json`);
   }
