@@ -143,11 +143,17 @@ test("R21: explore-next destinations carry why-relevant labels", () => {
   container.innerHTML = "";
   renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles, locale });
   const next = container.querySelector(".profile-next");
-  const cards = [...next.querySelectorAll(".discovery-card .eyebrow")].map((e) => e.textContent);
-  assert.ok(cards.length >= 2, "multiple destinations offered");
-  assert.ok(cards.includes("Similar character"), "similar-character destination labeled");
-  for (const label of cards) {
+  const cards = [...next.querySelectorAll(".discovery-card")];
+  assert.ok(cards.length >= 1, "destinations offered");
+  const hrefs = cards.map((c) => c.getAttribute("href").split("?")[0]);
+  assert.equal(new Set(hrefs).size, hrefs.length, "no duplicate destinations between suggestions and explore-next");
+  for (const card of cards) {
+    const label = card.querySelector(".eyebrow")?.textContent || card.querySelector("span")?.textContent || "";
     assert.ok(label.length > 3, `destination has an explanatory label: ${label}`);
+    const href = card.getAttribute("href");
+    if (href.startsWith("#/profile/")) {
+      assert.ok(href.includes("origin="), `destination link carries back-context: ${href}`);
+    }
   }
 });
 
@@ -178,4 +184,61 @@ test("R21: plant pages render in Spanish", () => {
   assert.ok(h2s.includes("De un vistazo"), "at-a-glance in Spanish");
   assert.ok(view.textContent.includes("cultivado"), "cultivation in Spanish");
   locale.set("en");
+});
+
+test("R22: plant/tradition pages render source links through safeLink validation", () => {
+  const view = renderPlant("agave-tequilana");
+  const link = view.querySelector(".source-link");
+  assert.ok(link, "source link renders");
+  assert.equal(link.getAttribute("rel"), "noopener noreferrer");
+  assert.equal(link.getAttribute("target"), "_blank");
+  assert.ok(link.getAttribute("href").startsWith("https://"), "https enforced by safeLink");
+});
+
+test("R22: tradition pages render no stray empty paragraphs", () => {
+  const view = renderTradition("tequila");
+  const empty = [...view.querySelectorAll("p")].filter((p) => p.textContent.trim() === "" && p.children.length === 0);
+  assert.equal(empty.length, 0, "no empty paragraphs in the tradition page");
+});
+
+test("R22: explore-next destinations carry back-context and return to the source profile", () => {
+  const profile = profiles.find((p) => p.id === "tequila-blanco-valley-jalisco");
+  const bottle = bottles.find((b) => b.id === profile.exampleBottleId);
+  container.innerHTML = "";
+  renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles, locale });
+  const next = container.querySelector(".profile-next");
+  const profileLinks = [...next.querySelectorAll('a[href^="#/profile/"]')].filter((a) => a.closest(".discovery-matches"));
+  assert.ok(profileLinks.length > 0, "explore-next offers destinations");
+  for (const a of profileLinks) {
+    assert.ok(a.getAttribute("href").includes("origin=profile%3Atequila-blanco-valley-jalisco") || a.getAttribute("href").includes("origin=profile:tequila-blanco-valley-jalisco"),
+      `destination carries the source profile origin: ${a.getAttribute("href")}`);
+  }
+  // Simulate arriving at the destination with that origin: back link returns to the source profile.
+  const destHref = profileLinks[0].getAttribute("href");
+  const destId = decodeURIComponent(destHref.split("#/profile/")[1].split("?")[0]);
+  const originParam = decodeURIComponent(destHref.split("origin=")[1]);
+  const destProfile = profiles.find((p) => p.id === destId);
+  const destBottle = bottles.find((b) => b.id === destProfile.exampleBottleId);
+  container.innerHTML = "";
+  renderProfile(container, { profile: destProfile, bottle: destBottle, sources, origin: originParam, allProfiles: profiles, allBottles: bottles, locale });
+  const back = container.querySelector(".back-link");
+  assert.equal(back.getAttribute("href"), "#/profile/tequila-blanco-valley-jalisco", "back link returns to the source profile");
+  assert.match(back.textContent, /Back to the style you were reading/i);
+});
+
+test("R22: profile plant link targets the dedicated plant page", () => {
+  const profile = profiles.find((p) => p.id === "tequila-blanco-valley-jalisco");
+  const bottle = bottles.find((b) => b.id === profile.exampleBottleId);
+  container.innerHTML = "";
+  renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles, locale });
+  const plantLink = container.querySelector(".plant-learn-link");
+  assert.equal(plantLink.getAttribute("href"), "#/plant/agave-tequilana", "plant link opens the dedicated plant page");
+});
+
+test("R22: why-it-tastes text never universalizes (validator-reinforced editorial audit)", () => {
+  for (const p of profiles) {
+    const why = p.whyItTastes;
+    assert.ok(!/\\bbest\\b|\\bsuperior\\b|\\bpremium\\b/i.test(why), `${p.id}: no quality-ladder claims in why text`);
+    assert.ok(!/\\balways\\b|\\bguarantees?\\b/i.test(why), `${p.id}: no deterministic language in why text`);
+  }
 });

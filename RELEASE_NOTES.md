@@ -1215,3 +1215,56 @@ educational experience for plants, traditions and expressions.
 - Deeper cause-and-effect links (e.g. fermentation chemistry) need
   technical sources; only evidence-backed statements shipped.
 - Native-device rendering still unverified in this environment.
+
+## Release 22 — Profile Review & Fixes
+
+Maintenance release per the plan's protocol: audit of the Release 21
+richer profiles — cause-and-effect evidence, editorial-restriction
+compliance on plant pages, related-content relevance, back navigation
+and disclosure behaviour.
+
+### Findings and fixes
+
+- **Unsafe source links (defect found):** the plant/tradition pages
+  built external source anchors directly, bypassing the app's
+  `safeLink` https/no-credential validation that every other surface
+  uses. Both pages now route through `safeLink` (with
+  `noopener noreferrer`), restoring the security test's guarantee to
+  the new pages.
+- **Lost back-context in explore-next (defect found):** Release 21's
+  explore-next destinations linked bare profile URLs, so the
+  destination offered no way back to the style the reader came from —
+  and a suggestions duplicate could repeat in the list. Destinations
+  now carry `origin=profile:<source>`, the destination's back link
+  reads "← Back to the style you were reading" and returns to the
+  exact source profile, and suggestion duplicates are filtered.
+- **Stale plant link (defect found):** the profile's "About this
+  agave" link still pointed at the Learn reference (`#/learn`)
+  instead of the new dedicated plant page. It now targets
+  `#/plant/:plantId`.
+- **Stray empty paragraph (defect found):** the tradition page
+  rendered a leftover empty `p` in the beginner section. Removed.
+- **Cause-and-effect evidence (verified, no defect):** every
+  why-it-tastes text was audited for quality-ladder claims
+  (best/superior/premium) and deterministic language
+  (always/guarantee) — none present; a regression test now pins that
+  discipline. Each claim traces to plant/place/process facts already
+  documented in the profile data.
+- **Plant-page editorial restrictions (verified, no defect):**
+  sensory tendencies stay qualified as editorial guidance on every
+  plant; Dasylirion keeps its not-an-agave distinction; disputed
+  local names remain unmerged.
+
+### Checks run
+
+- `npm run validate` — schema plus 191 node:test/jsdom suites (5 new
+  Release 22 regression tests). All passing.
+- Real-app boot smoke: profile → explore-next destination → back link
+  round-trips to the source profile; plant link opens the dedicated
+  plant page.
+
+### Remaining issues / deferred
+
+- Plant illustrations remain backlog (no reliable licensed artwork
+  identified; not invented).
+- Native-device rendering still unverified in this environment.

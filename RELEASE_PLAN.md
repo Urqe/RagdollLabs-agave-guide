@@ -383,7 +383,7 @@ Acceptance: every documented expression explains its character and the influence
 
 ### Release 22 — Profile Review & Fixes
 
-Apply the maintenance protocol. Audit profile hierarchy, cause-and-effect evidence for every "why it tastes this way" claim, editorial-restriction compliance on plant pages, related-content relevance and back navigation, focus order, and disclosure behaviour. Deploy corrections.
+Applied (see Release 22 notes in RELEASE_NOTES.md). Audit profile hierarchy, cause-and-effect evidence for every "why it tastes this way" claim, editorial-restriction compliance on plant pages, related-content relevance and back navigation, focus order, and disclosure behaviour. Deploy corrections.
 
 ### Release 23 — Comparison Intelligence
 

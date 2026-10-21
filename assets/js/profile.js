@@ -92,12 +92,20 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const t = (key) => (locale ? locale.t(key) : key);
   const fromCatalogue = origin === "catalogue";
   const fromDiscovery = origin != null && !fromCatalogue;
+  const originKind = fromDiscovery && origin.includes(":") ? origin.split(":")[0] : null;
+  const originId = fromDiscovery && origin.includes(":") ? origin.split(":")[1] : null;
   const backHref = fromCatalogue
     ? "#/catalogue"
-    : fromDiscovery && origin.includes(":")
-      ? `#/discover/${encodeURIComponent(origin.split(":")[0])}/${encodeURIComponent(origin.split(":")[1])}`
-      : returnTo ? `#/explore/${encodeURIComponent(returnTo)}` : "#/explore";
-  const backLabel = fromCatalogue ? t("profile.backCatalogue") : fromDiscovery ? t("profile.backDiscover") : t("profile.backExplore");
+    : originKind === "profile"
+      ? `#/profile/${encodeURIComponent(originId)}`
+      : originKind === "plant" || originKind === "region" || originKind === "spirit" || originKind === "flavour"
+        ? `#/discover/${encodeURIComponent(originKind)}/${encodeURIComponent(originId)}`
+        : returnTo ? `#/explore/${encodeURIComponent(returnTo)}` : "#/explore";
+  const backLabel = fromCatalogue
+    ? t("profile.backCatalogue")
+    : originKind === "profile"
+      ? t("profile.backProfile")
+      : fromDiscovery ? t("profile.backDiscover") : t("profile.backExplore");
   const back = el("a", { href: backHref, class: "back-link" }, backLabel);
   section.appendChild(back);
 
@@ -151,7 +159,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     const plantDd = el("dd", { class: "profile-plant" }, profile.plant);
     if (profile.plantId) {
       plantDd.appendChild(document.createTextNode(" "));
-      plantDd.appendChild(el("a", { href: "#/learn", class: "plant-learn-link" }, t("profile.aboutPlant")));
+      plantDd.appendChild(el("a", { href: `#/plant/${encodeURIComponent(profile.plantId)}`, class: "plant-learn-link" }, t("profile.aboutPlant")));
     }
     craft.appendChild(plantDd);
   }
@@ -332,12 +340,13 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     const nextBlock = el("section", { class: "profile-next", "aria-labelledby": "next-heading" });
     nextBlock.appendChild(el("h2", { id: "next-heading" }, t("profile.exploreNext")));
     if (suggestionsNode) nextBlock.appendChild(suggestionsNode);
-    const destinations = exploreNextLinks(profile, allProfiles, locale);
+    const suggestedIds = new Set((suggestions || []).map((x) => x.profile.id));
+    const destinations = exploreNextLinks(profile, allProfiles, locale).filter((d) => !suggestedIds.has(d.profile.id));
     if (destinations.length) {
       const list = el("ul", { class: "discovery-matches" });
       for (const d of destinations) {
         const li = el("li");
-        const a = el("a", { class: "discovery-card", href: d.profile ? `#/profile/${encodeURIComponent(d.profile.id)}` : "#" });
+        const a = el("a", { class: "discovery-card", href: `#/profile/${encodeURIComponent(d.profile.id)}?origin=${encodeURIComponent("profile:" + profile.id)}` });
         a.appendChild(el("span", { class: "eyebrow" }, d.label));
         a.appendChild(el("strong", {}, d.reason));
         li.appendChild(a);

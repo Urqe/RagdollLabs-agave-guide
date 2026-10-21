@@ -1,4 +1,4 @@
-import { el, clear } from "./dom-utils.js";
+import { el, clear, safeLink } from "./dom-utils.js";
 import { ui } from "./presentation.js";
 import { localizedTitle, fieldEs } from "./editorial.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
@@ -21,7 +21,7 @@ function sourcesBlock(sources, sourceIds, t, locale) {
     const source = sources.find((s) => s.id === id);
     if (!source) continue;
     const li = el("li");
-    li.appendChild(el("a", { href: source.url, target: "_blank", rel: "noopener noreferrer", class: "source-link" }, source.title));
+    li.appendChild(safeLink(source.url, source.title, { class: "source-link" }));
     li.appendChild(el("span", { class: "source-kind" }, ` — ${source.verified ? `${ui(locale, "verifiedAs").replace("{date}", source.verified)}` : ""}`));
     list.appendChild(li);
   }
@@ -169,7 +169,6 @@ export function renderTraditionPage(container, { tradition, traditions, regions,
   if (traditionProfiles.length) {
     const beginner = traditionProfiles.find((p) => p.beginnerNote) || traditionProfiles[0];
     section.appendChild(el("p", { class: "beginner-note" }, beginner.beginnerNote || ""));
-    section.appendChild(el("p", { class: "learn-usedby" }));
     const startRow = el("p", { class: "learn-usedby" });
     startRow.appendChild(el("a", { class: "discovery-chip", href: `#/profile/${encodeURIComponent(beginner.id)}?origin=${encodeURIComponent(`spirit:${tradition.id}`)}` }, localizedTitle("profile", beginner.id, beginner.title, locale)));
     section.appendChild(startRow);
