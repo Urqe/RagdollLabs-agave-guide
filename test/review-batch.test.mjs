@@ -295,9 +295,10 @@ test("search: Spanish note labels from the full dictionary find their profiles",
 test("editorial mechanism: ES field when translated, English plus disclosure when not", async () => {
   const { setContentEs, fieldEs, editorialText } = await import("../assets/js/editorial.js");
   setContentEs({ profiles: { "some-id": { description: "Descripción en español." } } });
-  assert.equal(fieldEs("profile", "some-id", "description"), "Descripción en español.");
-  assert.equal(fieldEs("profile", "some-id", "context"), null, "missing field yields null");
-  assert.equal(fieldEs("profile", "other-id", "description"), null, "missing entity yields null");
+  assert.equal(fieldEs("profile", "some-id", "description", es), "Descripción en español.");
+  assert.equal(fieldEs("profile", "some-id", "context", es), null, "missing field yields null");
+  assert.equal(fieldEs("profile", "other-id", "description", es), null, "missing entity yields null");
+  assert.equal(fieldEs("profile", "some-id", "description", locale), null, "English locale ignores ES content");
 
   const translated = editorialText("profile", "some-id", "description", "English text", es);
   assert.deepEqual(translated, { text: "Descripción en español.", translated: true });

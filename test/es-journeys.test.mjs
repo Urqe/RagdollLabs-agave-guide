@@ -235,3 +235,34 @@ test("the reported case: Patrón Añejo Cristalino card is Spanish end to end", 
   assert.ok(!/Reviewers|describes a|finds\b/.test(cardText) || cardText.includes("encuentra"),
     "review prose is translated, reviewer names preserved");
 });
+
+test("English mode never shows Spanish content (locale gate regression)", async () => {
+  const { bottleEntry } = await import("../assets/js/catalogue-view.js");
+  const { renderProfile } = await import("../assets/js/profile.js");
+
+  // Catalogue entries.
+  for (const bottle of bottles) {
+    const entry = bottleEntry(bottle, { sources: sourceList, profiles, locale: en });
+    if (bottle.reviewSummary) {
+      assert.ok(entry.textContent.includes(bottle.reviewSummary.slice(0, 30)),
+        `${bottle.id} shows the English review in English mode`);
+    }
+    if (bottle.batch) {
+      assert.ok(entry.textContent.includes(bottle.batch.slice(0, 25)),
+        `${bottle.id} shows the English batch in English mode`);
+    }
+  }
+
+  // Profile view: English fields, no Spanish leakage.
+  const profile = profiles[0];
+  const bottle = bottles.find((b) => b.id === profile.exampleBottleId);
+  const root = document.createElement("div");
+  renderProfile(root, { profile, bottle, sources: sourceList, allProfiles: profiles, allBottles: bottles, locale: en });
+  assert.equal(root.querySelector("#profile-title").textContent, profile.title, "English title");
+  assert.ok(root.querySelector(".profile-context").textContent.includes("Unaged tequila"),
+    "English context");
+  assert.ok(root.querySelector(".bottle-review").textContent.includes("benchmark"),
+    "English bottle review");
+  assert.ok(!/encuentra|Comparte|Graduaci/.test(root.textContent),
+    "no Spanish strings leak into the English view");
+});
