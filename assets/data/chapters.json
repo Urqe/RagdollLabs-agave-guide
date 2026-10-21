@@ -1,0 +1,74 @@
+{
+  "chapters": [
+    {
+      "id": "discover-mexican-spirits",
+      "title": "Discover Mexican Spirits",
+      "intro": "Mexico distills many spirits from agave — and a few from related plants. This chapter introduces the traditions covered in this guide and what makes each distinct.",
+      "blocks": [
+        { "text": "Tequila, mezcal, bacanora and raicilla are all agave spirits with their own denominations of origin: legally protected names tied to specific places and rules. Each tastes different because the plant, the place and the production differ — not because one category is inherently better.", "exampleProfileIds": ["tequila-blanco-valley-jalisco", "mezcal-espadin-valles-centrales", "bacanora-pacifica-sierra-sonora", "raicilla-maximiliana-sierra-jalisco"] },
+        { "text": "Beyond the big names, Mexico has regional traditions with no denomination of origin — tuxca in the Jalisco–Colima borderlands, comiteco from Chiapas (made from sap, with disclosed cane sugar in some bottlings), destilado de pulque from the pulque heartland. Their legal status differs from tequila's, and this guide never treats that as a judgment of authenticity.", "exampleProfileIds": ["tuxca-lineno-cimarron-jalisco-colima", "comiteco-aguamiel-chiapas", "destilado-de-pulque-salmiana-tlaxcala"] },
+        { "text": "Sotol is included as an agave-adjacent northern tradition, but it is not an agave spirit: sotol comes from Dasylirion, a related genus. Keeping the distinction accurate matters more than forcing it into the agave family.", "exampleProfileIds": ["sotol-chihuahua"], "deeper": "Botanically, Dasylirion and Agave both sit in the Asparagaceae family, but a shared family is not a shared genus — sotol is no more an agave than a leek is an onion." }
+      ]
+    },
+    {
+      "id": "meet-the-plants",
+      "title": "Meet the Plants",
+      "intro": "Every agave spirit starts as a plant. This chapter covers the species behind the guide's profiles, their regional names, and how harvest and cultivation shape what ends up in the glass.",
+      "blocks": [
+        { "text": "Blue weber agave is the only agave legally permitted in tequila; espadín is mezcal's workhorse, cultivated at scale. Other agaves — maximiliana in the Sierra de Jalisco, tobalá in Oaxaca's mountains — are often wild-harvested, which shapes both flavor and sustainability.", "exampleProfileIds": ["tequila-blanco-valley-jalisco", "mezcal-espadin-valles-centrales", "raicilla-maximiliana-sierra-jalisco", "mezcal-tobala-sierra-oaxaca"], "plantIds": ["agave-tequilana", "agave-angustifolia", "agave-maximiliana", "agave-potatorum"] },
+        { "text": "Common names are regional, not scientific: lechuguilla in the Jalisco highlands is a local name for maximiliana, while the Sonoran lechuguilla is a different plant entirely. Where the botany is genuinely unsettled — as with Sonora's Pacifica/Yaquiana — this guide records the names without settling the debate.", "plantIds": ["agave-maximiliana", "agave-angustifolia"] },
+        { "text": "Not every spirit here cooks the piña. Comiteco and destilado de pulque collect aguamiel — sap drawn from the living plant — and ferment that instead. Sap-derived traditions skip the roast entirely, which is why their flavor path differs from cooked-heart spirits.", "exampleProfileIds": ["comiteco-aguamiel-chiapas", "destilado-de-pulque-salmiana-tlaxcala"], "deeper": "A mature agave flowers once, then dies. Harvesting before flowering redirects sugars into the piña; sap traditions instead keep the plant alive and harvest its sugars repeatedly." }
+      ]
+    },
+    {
+      "id": "from-plant-to-glass",
+      "title": "From Plant to Glass",
+      "intro": "How does a spiky plant become a spirit? This chapter walks the production sequence — and why each stage leaves a trace you can taste.",
+      "blocks": [
+        { "text": "Cooking converts the agave's complex carbohydrates into fermentable sugars. Earthen pit roasts (mezcal, bacanora, tuxca, sotol) can lend smoke; steam cooking in hornos or autoclaves (tequila) cooks clean. Neither method guarantees a flavor — wood, time and technique decide.", "processIds": ["pit-roast", "steam-cook"] },
+        { "text": "Extraction, fermentation and distillation each matter. Wild open fermentations carry local yeasts and local character; the still — copper, clay, or Filipino-style wood — shapes the final texture. Small producers bottle batch by batch, so two bottles of the same brand can genuinely differ.", "processIds": ["wild-fermentation", "distillation-methods"] },
+        { "text": "Most agave spirits rest: in glass, or in oak. Wood maturation (reposado, añejo classes) adds color, oak spice and softness, with spirit-specific legal minimums. Glass resting (madurado en vidrio) mellows without wood influence — an option many consumers never hear about.", "processIds": ["wood-maturation", "glass-resting"], "deeper": "Sap-derived traditions invert the sequence: no roast, no piña — aguamiel ferments first (into pulque for destilado de pulque) and distillation follows, which is why the regulatory category and the flavor both diverge from cooked-heart spirits." }
+      ]
+    },
+    {
+      "id": "understanding-flavour",
+      "title": "Understanding Flavour",
+      "intro": "What are you actually tasting? This chapter separates the vocabulary of flavor — and shows each concept on a real profile from the guide.",
+      "blocks": [
+        { "text": "Body is how the spirit feels in the mouth — light, medium or full. Smoke, when present, usually comes from the pit roast. Herbal and vegetal notes come from the plant and a clean cook; fruit and floral notes often rise with highland agave and gentle roasts. Sweetness here means perceived sweetness, not measured sugar.", "exampleProfileIds": ["tequila-blanco-valley-jalisco", "bacanora-pacifica-sierra-sonora", "mezcal-tobala-sierra-oaxaca"] },
+        { "text": "Oak — from wood resting — contributes vanilla, caramel and spice. Finish length is how long the flavor persists after swallowing. None of these levels is a quality score: they are editorial descriptions of style, and bottles within a style vary.", "exampleProfileIds": ["tequila-anejo-valley-jalisco", "tequila-reposado-valley-jalisco"] },
+        { "text": "The compare view puts these dimensions side by side: a blanco against an añejo shows the largest oak gap; a valley blanco against a highland expression shows how place reads in the glass.", "deeper": "Flavor chemistry is genuinely complex: roast compounds, fermentation esters and still cut each contribute. This guide attributes character to process only where sources document the link — never from a tasting note alone." }
+      ]
+    },
+    {
+      "id": "understanding-labels",
+      "title": "Understanding Labels",
+      "intro": "A Mexican spirit label carries legal terms, producer facts and marketing — sometimes in the same word. This chapter decodes them, and never applies one tradition's rules to another.",
+      "blocks": [
+        { "text": "Class terms are spirit-specific: blanco is a legal tequila class, joven is mezcal's unaged class, and reposado minimums differ between tequila, mezcal and raicilla. Cristalino is a finishing choice, not a legal class. When a term is not a legal class, this guide says so.", "termIds": ["blanco / plata / silver", "joven / abocado", "reposado / añejo", "cristalino"] },
+        { "text": "The NOM on a tequila or mezcal label identifies the certified producer. Tuxca bottles carry no NOM — a legal fact, not an authenticity judgment. Batch terms (lote) matter for small producers: batch facts stay with the batch.", "termIds": ["NOM", "lote / batch", "vinata / taberna / palenque"] },
+        { "text": "Composition claims are facts about fermentables, not quality grades. 100% de agave describes what was fermented; comiteco with disclosed cane sugar is equally honest about what it is. Composition disclosure is required reading on every bottle.", "termIds": ["100% de agave"], "exampleProfileIds": ["comiteco-aguamiel-chiapas", "tequila-blanco-valley-jalisco"] }
+      ]
+    },
+    {
+      "id": "choosing-and-enjoying",
+      "title": "Choosing and Enjoying",
+      "intro": "There is no wrong way to enjoy these spirits — but there are honest ways to choose. This chapter favors your own palate over price, age or rarity.",
+      "blocks": [
+        { "text": "Start from what you already like: fresh and herbal blancos, smoky mezcals, oak-rich añejos, or something off the beaten path. The discovery paths in this guide group profiles by flavor so you can follow your own taste, and every profile names its sensory style honestly.", "exampleProfileIds": ["tequila-blanco-valley-jalisco", "mezcal-espadin-valles-centrales", "tequila-anejo-valley-jalisco"] },
+        { "text": "Serving is simple: a small glass at room temperature lets aromatics open; a splash of water can soften high ABV. Cocktails are not a compromise — a margarita or paloma is a legitimate way to meet a blanco. Pairings on each profile are editorial suggestions, never rules.", "exampleProfileIds": ["bacanora-pacifica-sierra-sonora", "raicilla-costa-jalisco"] },
+        { "text": "Beware marketing ladders: older is not automatically better, higher ABV is not automatically better, and rarity is not a flavor. A $30 blanco from a good producer can outshine a trophy bottle. The guide profiles styles, not trophies.", "deeper": "Tasting technique: look, swirl, nose gently, sip, and note the finish. Compare two similar profiles side by side — the compare view exists precisely for this." }
+      ]
+    },
+    {
+      "id": "explore-deeper",
+      "title": "Explore Deeper",
+      "intro": "Reference material for enthusiasts: the full plant, process and label vocabulary behind the chapters — kept honest with sources.",
+      "blocks": [
+        { "text": "The plant reference pages record scientific identity, regional common names, cultivation, honest botanical uncertainty and sources. The process pages explain each production stage with the profiles that use it. The glossary defines every label term in context.", "plantIds": ["agave-tequilana", "agave-angustifolia", "agave-maximiliana", "agave-atrovirens", "agave-salmiana", "tuxca-wild-agaves", "agave-potatorum", "dasylirion-desert-spoon", "agave-rhodacantha"] },
+        { "text": "Sustainability matters for wild-harvested agaves: tobalá's slow reproduction makes wild populations vulnerable, and sotol's long maturity makes harvest practice decisive. Producer-specific sustainability claims in this guide always trace to dated sources.", "exampleProfileIds": ["mezcal-tobala-sierra-oaxaca", "sotol-chihuahua"] },
+        { "text": "Designations evolve: bacanora's protection dates to 2000, raicilla's to 2019, sotol's to 2002. This guide records verification dates with each source and checks amendments before shipping legal summaries — a reachable URL never proves a claim by itself.", "deeper": "Legal geography is municipal, not whole-state: bacanora's designation covers selected Sonoran municipalities, and raicilla's names specific municipalities in Jalisco and Nayarit. Map shading in this app always means coverage, never legal boundaries." }
+      ]
+    }
+  ]
+}

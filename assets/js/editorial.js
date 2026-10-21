@@ -13,7 +13,7 @@
 let contentEs = {};
 
 // Entity names used by callers map to the plural buckets in content-es.json.
-const BUCKET = { profile: "profiles", bottle: "bottles", process: "processes", plant: "plants", term: "terms" };
+const BUCKET = { profile: "profiles", bottle: "bottles", process: "processes", plant: "plants", term: "terms", chapter: "chapters" };
 
 export function setContentEs(data) {
   contentEs = data && typeof data === "object" ? data : {};

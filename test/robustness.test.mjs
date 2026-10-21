@@ -156,6 +156,7 @@ test("data-loader rejects with one clear error when a file fails", async () => {
     "processes.json": JSON.stringify({ processes }),
     "glossary.json": JSON.stringify({ glossary }),
     "traditions.json": JSON.stringify({ traditions }),
+    "chapters.json": JSON.stringify({ chapters: [] }),
     "regions.json": JSON.stringify({ regions }),
   };
   const baseUrl = new URL("https://example.test/RagdollLabs-agave-guide/");

@@ -24,6 +24,7 @@ const files = {
   "glossary.json": await read("assets/data/glossary.json"),
   "content-es.json": await read("assets/data/content-es.json"),
   "traditions.json": await read("assets/data/traditions.json"),
+  "chapters.json": await read("assets/data/chapters.json"),
   "regions.json": await read("assets/data/regions.json"),
 };
 

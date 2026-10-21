@@ -1,6 +1,8 @@
 import { el, clear, safeLink } from "./dom-utils.js";
 import { ui } from "./presentation.js";
-import { sourceKindLabel } from "./editorial.js";
+import { sourceKindLabel, fieldEs } from "./editorial.js";
+import { localizedTitle } from "./editorial.js";
+import { SPIRIT_LABELS } from "./spirit-labels.js";
 
 /** Sources stay available but out of the reading flow. */
 function collapsibleSources(sources, sourceIds, t, locale = null) {
@@ -48,18 +50,41 @@ function sourceLinks(sources, sourceIds, locale = null) {
   return list;
 }
 
+function profileExampleLink(profile, locale) {
+  return el("a", { href: `#/profile/${encodeURIComponent(profile.id)}`, class: "catalogue-profile-link" },
+    `${localizedTitle("profile", profile.id, profile.title, locale)} (${SPIRIT_LABELS[profile.spirit] || profile.spirit}) →`);
+}
+
+/** A block's example chips: real profiles, linked with honest framing. */
+function exampleRow(label, profiles, locale) {
+  if (!profiles.length) return null;
+  const row = el("p", { class: "learn-usedby" }, `${label} `);
+  for (const p of profiles) {
+    row.appendChild(profileExampleLink(p, locale));
+    row.appendChild(document.createTextNode(" "));
+  }
+  return row;
+}
+
 /**
- * Learn view: plant pages (with regional common names, scientific
- * identity, honest uncertainty, and links to the profiles/bottles that
- * use them), production explanations, and a label-terms glossary.
+ * Learn view — Release 19 progressive learning journey. Seven
+ * non-sequential chapters (basic to advanced within each), followed by
+ * the preserved reference sections: plants, processes, glossary. Every
+ * chapter links to real profiles/plants/processes/terms; direct access
+ * to reference sections is preserved through the jump nav.
  */
-export function renderLearn(container, { plants, processes, glossary, profiles, bottles, sources, locale = null }) {
+export function renderLearn(container, { chapters = [], plants, processes, glossary, profiles, bottles, sources, locale = null }) {
   clear(container);
   const section = el("section", { class: "learn-view", "aria-labelledby": "learn-heading" });
   const t = (key) => (locale ? locale.t(key) : key);
   section.appendChild(el("h2", { id: "learn-heading" }, t("learn.heading")));
+  section.appendChild(el("p", { class: "view-intro" }, t("learn.intro")));
+
   const jumps = el("nav", { class: "learn-jumps", "aria-label": ui(locale, "learnSections") });
-  for (const [id, label] of [["learn-plants", t("learn.plants")], ["learn-processes", t("learn.processes")], ["learn-terms", t("learn.terms")]]) {
+  const jumpTargets = [];
+  for (const ch of chapters) jumpTargets.push([`chapter-${ch.id}`, (fieldEs("chapter", ch.id, "title", locale) || ch.title)]);
+  jumpTargets.push(["learn-plants", t("learn.plants")], ["learn-processes", t("learn.processes")], ["learn-terms", t("learn.terms")]);
+  for (const [id, label] of jumpTargets) {
     const jump = el("button", { type: "button", class: "nav-link learn-jump" }, label);
     jump.addEventListener("click", () => {
       const target = section.querySelector(`#${id}`);
@@ -71,10 +96,64 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
     jumps.appendChild(jump);
   }
   section.appendChild(jumps);
-  section.appendChild(el("p", { class: "view-intro" },
-    t("learn.intro")));
 
-  // --- Plants ---
+  const profileById = new Map(profiles.map((p) => [p.id, p]));
+  const plantById = new Map((plants || []).map((p) => [p.id, p]));
+  const processById = new Map((processes || []).map((p) => [p.id, p]));
+  const terms = glossary || [];
+  const termByTerm = new Map(terms.map((x) => [x.term, x]));
+
+  for (const [index, ch] of chapters.entries()) {
+    const card = el("article", { class: "learn-card learn-chapter", "aria-labelledby": `chapter-${ch.id}` });
+    card.appendChild(el("h3", { id: `chapter-${ch.id}`, tabindex: "-1" },
+      `${index + 1}. ${fieldEs("chapter", ch.id, "title", locale) || ch.title}`));
+    card.appendChild(el("p", { class: "view-intro" }, fieldEs("chapter", ch.id, "intro", locale) || ch.intro));
+    for (const block of ch.blocks || []) {
+      const bi = ch.blocks.indexOf(block);
+      const text = fieldEs("chapter", ch.id, "block" + bi, locale) || block.text;
+      card.appendChild(el("p", { class: "learn-block" }, text));
+      const exampleProfiles = (block.exampleProfileIds || []).map((id) => profileById.get(id)).filter(Boolean);
+      const examples = exampleRow(t("learn.seenIn"), exampleProfiles, locale);
+      if (examples) card.appendChild(examples);
+      const plantProfiles = (block.plantIds || []).map((id) => plantById.get(id)).filter(Boolean);
+      if (plantProfiles.length) {
+        const row = el("p", { class: "learn-usedby" }, `${t("learn.plants")}: `);
+        for (const pl of plantProfiles) {
+          row.appendChild(el("a", { href: `#/discover/plant/${encodeURIComponent(pl.id)}`, class: "catalogue-profile-link" }, `${pl.species} →`));
+          row.appendChild(document.createTextNode(" "));
+        }
+        card.appendChild(row);
+      }
+      const blockProcesses = (block.processIds || []).map((id) => processById.get(id)).filter(Boolean);
+      if (blockProcesses.length) {
+        const row = el("p", { class: "learn-usedby" }, `${t("learn.processes")}: `);
+        for (const proc of blockProcesses) {
+          row.appendChild(el("a", { href: "#/learn", class: "catalogue-profile-link", onclick: null }, `${proc.name} (see process reference below) → `));
+          row.appendChild(document.createTextNode(" "));
+        }
+        card.appendChild(row);
+      }
+      const blockTerms = (block.termIds || []).map((id) => termByTerm.get(id)).filter(Boolean);
+      if (blockTerms.length) {
+        const row = el("p", { class: "learn-usedby" }, `${t("learn.terms")}: `);
+        for (const term of blockTerms) {
+          row.appendChild(el("a", { href: "#/learn", class: "term-link", dataset: { term: term.term } }, `${term.term} → `));
+          row.appendChild(document.createTextNode(" "));
+        }
+        card.appendChild(row);
+      }
+      if (block.deeper) {
+        const deeperText = fieldEs("chapter", ch.id, "block" + bi + "deeper", locale) || block.deeper;
+        const deeper = el("details", { class: "learn-deeper" });
+        deeper.appendChild(el("summary", {}, t("learn.deeper")));
+        deeper.appendChild(el("p", { class: "learn-block" }, deeperText));
+        card.appendChild(deeper);
+      }
+    }
+    section.appendChild(card);
+  }
+
+  // --- Plants reference (preserved direct access) ---
   section.appendChild(el("h3", { id: "learn-plants", tabindex: "-1" }, t("learn.plants")));
   for (const plant of plants) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `plant-${plant.id}` });
@@ -100,7 +179,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
     section.appendChild(card);
   }
 
-  // --- Processes ---
+  // --- Processes reference (preserved direct access) ---
   section.appendChild(el("h3", { id: "learn-processes", tabindex: "-1" }, t("learn.processes")));
   for (const proc of processes) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `process-${proc.id}` });
@@ -118,14 +197,14 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
     section.appendChild(card);
   }
 
-  // --- Glossary ---
+  // --- Glossary (preserved direct access; chapters link here) ---
   section.appendChild(el("h3", { id: "learn-terms", tabindex: "-1" }, t("learn.terms")));
   section.appendChild(el("p", { class: "view-intro" }, ui(locale, "classTerms")));
-  for (const term of glossary) {
+  for (const term of terms) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `term-${term.term.replace(/\s+/g, "-")}` });
     card.appendChild(el("h4", { id: `term-${term.term.replace(/\s+/g, "-")}` }, term.term));
     card.appendChild(el("p", { class: "learn-term-context" }, ui(locale, "contextPrefix") + term.context));
-    card.appendChild(el("p", {}, term.definition));
+    card.appendChild(el("p", {}, fieldEs("term", term.term, "definition", locale) || term.definition));
     const related = profiles.filter((pr) => (pr.category || "").toLowerCase().includes(term.term.split(" ")[0].toLowerCase()));
     if (related.length > 0) {
       const line = el("p", { class: "learn-usedby" }, `${t("learn.relatesTo")} `);

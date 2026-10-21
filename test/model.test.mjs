@@ -168,6 +168,7 @@ test("R15: data loader exposes the new entities", async () => {
     "content-es.json": "{}",
     "traditions.json": JSON.stringify({ traditions }),
     "regions.json": JSON.stringify({ regions }),
+    "chapters.json": JSON.stringify({ chapters: [] }),
   };
   globalThis.fetch = async (url) => {
     const rel = new URL(url).pathname.split("/").pop();

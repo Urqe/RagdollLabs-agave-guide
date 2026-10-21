@@ -1062,3 +1062,52 @@ preservation and mobile layouts.
 
 - Dedicated per-entity page layouts remain Release 21 scope.
 - Native-device rendering still unverified in this environment.
+
+## Release 19 — Progressive Learning Journey
+
+Feature release per the plan: Learn reorganized into a progressive
+educational journey with contextual glossary and completed Mexican
+Spanish learning materials.
+
+### What changed
+
+- **Seven progressive chapters** (`assets/data/chapters.json`):
+  1) Discover Mexican Spirits, 2) Meet the Plants, 3) From Plant to
+  Glass, 4) Understanding Flavour, 5) Understanding Labels,
+  6) Choosing and Enjoying, 7) Explore Deeper. Each opens with a short
+  intro, progresses basic to advanced, links to real profiles, plants,
+  processes and glossary terms, and offers optional "deeper"
+  explanations as collapsed disclosures for enthusiasts.
+- **Contextual glossary links:** the label chapter links its terms into
+  the glossary, and every profile's legal-category field now carries a
+  "See the label vocabulary →" link into Learn. Glossary definitions
+  render in Spanish when available.
+- **Non-sequential by design:** the jump nav lists chapters plus the
+  three reference sections (plants, processes, terms); direct access
+  to reference material is preserved and no completion is required.
+- **Complete Spanish learning coverage:** all 7 chapters and all 10
+  glossary terms ship natural Mexican Spanish translations (new
+  `chapters` and completed `terms` buckets in content-es.json). The
+  Learn view renders fully in Spanish.
+- **Validation for missing translations:** `validate.mjs` now fails if
+  any chapter block or glossary term lacks a Spanish translation, and
+  checks chapter cross-references (profiles, plants, processes,
+  terms) resolve.
+- Honest-content rules held: no price/age/rarity/ABV-as-quality claims
+  in the Choosing chapter; class terms stay spirit-specific; sotol's
+  Dasylirion distinction kept explicit; designation geography stays
+  municipal.
+
+### Checks run
+
+- `npm run validate` — schema plus 169 node:test/jsdom suites (11 new
+  Release 19 learning tests, including a validator-rejects-missing-
+  translation test). All passing.
+- Real-app boot smoke on `#/learn`: 7 chapters, 10 jump buttons, all
+  three reference sections, contextual term links render.
+
+### Remaining issues / deferred
+
+- Chapter-specific illustrations and a Spanish-search glossary are
+  Release 20 (Learning Journey Review) scope.
+- Native-device rendering still unverified in this environment.
