@@ -1,7 +1,7 @@
 # RagdollLabs Agave Guide — Release Plan
 
 Status: release roadmap; current implementation/deployment progress must be checked in the repository.  
-Updated: 2026-10-20  
+Updated: 2026-10-21  
 Confirmed repository name: `RagdollLabs-agave-guide`  
 Product subtitle: **Explore Mexico’s agave spirits**
 
@@ -166,6 +166,18 @@ Release numbers are sequencing identifiers, not dates. Assign semantic version t
 | 12 — Learning Review & Fixes | Maintenance | Educational content presentation, navigation and accessibility fixes |
 | 13 — Regional Depth & Spanish | Feature/content | Selected geographic depth and reviewed Spanish edition |
 | 14 — Localization Review & Fixes | Maintenance | Bilingual search, layout, source consistency and mobile UX fixes |
+| 15 — Interconnected Content Model | Feature | Normalized plant, region, tradition, method and expression entities with validated cross-references |
+| 16 — Model Review & Fixes | Maintenance | Data-contract, relationship and editorial-consistency corrections from Release 15 |
+| 17 — Three Discovery Paths | Feature | Explore by Plant, by Region and by Spirit, plus flavour-based discovery |
+| 18 — Discovery Review & Fixes | Maintenance | Map/region clarity, search, contextual navigation and mobile discovery UX fixes |
+| 19 — Progressive Learning Journey | Feature | Reorganized Learn chapters with contextual glossary and completed Spanish learning content |
+| 20 — Learning Journey Review & Fixes | Maintenance | Chapter flow, jargon, link integrity, translation completeness and accessibility fixes |
+| 21 — Richer Profiles | Feature | Dedicated plant and spirit-tradition pages, redesigned expression profiles, related-content navigation |
+| 22 — Profile Review & Fixes | Maintenance | Profile hierarchy, cause-and-effect evidence, cross-link context and back-navigation fixes |
+| 23 — Comparison Intelligence | Feature | Plain-language comparison summaries, meaningful comparison perspectives, refined recommendations |
+| 24 — Comparison & Navigation Review & Fixes | Maintenance | Comparison interpretation, recommendation relevance, contextual navigation and focus fixes |
+| 25 — Editorial Enrichment & Bottle Depth | Feature/content | Expanded representative plant/region/tradition coverage, deeper production history and sustainability content, improved bottle linkage |
+| 26 — Editorial Standards Review & Fixes | Maintenance | Evidence quality, sensory-claim discipline, bilingual parity and coverage-scope consistency fixes |
 
 Continue the same odd-feature/even-maintenance pattern for later work. If a feature is too large, split it into two feature deployments with a maintenance deployment between them. Urgent production fixes may ship immediately without cancelling the next planned maintenance review.
 
@@ -291,6 +303,118 @@ Acceptance: all language variants preserve source meaning and expression identit
 ### Release 14 — Localization Review & Fixes
 
 Apply the maintenance protocol. Audit Spanish terminology, translated layouts, search, sorting, missing translations, route stability, mobile readability and accessibility. Deploy fixes and establish the next feature/maintenance pair from the backlog.
+
+## 4.1 Content architecture and UX roadmap — Releases 15–26
+
+The releases below respond to the Agave Guide content architecture and UX improvement review. They transform the guide from a collection of individual spirit profiles into an interconnected, bilingual educational atlas of Mexican agave spirits and related traditional Mexican spirits serving both beginners and enthusiasts. The guide should answer three questions for every user: what am I drinking, why does it taste this way, and what should I explore next.
+
+Editorial rules that apply to every release in this roadmap:
+
+- Preserve the existing visual identity, bilingual support, lightweight static architecture, and source-backed editorial approach.
+- Structure content around five interconnected entities: plants, regions, spirit traditions, production methods, and spirit expressions. Entities reference each other by stable identifiers with many-to-many relationships; never duplicate descriptions across files. Never treat botanical common names as globally unique identifiers.
+- Maintain clear separation between legally defined categories, regional/cultural traditions, editorially defined style profiles, documented production methods, representative sensory impressions, and bottle-specific facts. A style profile never implies every bottle tastes identical; a bottle-specific note is never universalized.
+- Keep unknown information explicitly unknown; never infer it into a numerical value.
+- Distinguish established historical facts, contemporary practices, legal requirements, and editorial interpretation in the presentation.
+- Include non-agave plants such as sotol's Dasylirion with correct botanical classification, without misclassifying them as agaves; keep the catalogue's agave-based eligibility rules intact.
+- Preserve existing profile URLs wherever possible; provide redirects for any moved content.
+- Extend validation to cover valid cross-entity relationships, missing references, duplicate identifiers, missing translations, invalid navigation destinations, unsupported comparison attributes, undocumented sensory claims, broken source references, and search aliases.
+
+### Release 15 — Interconnected Content Model
+
+Goal: establish the normalized five-entity content model without a major interface redesign. Migrate existing content without losing information or breaking current routes.
+
+- [ ] Define stable identifiers and explicit many-to-many relationships for plants, regions, spirit traditions, production methods, and spirit expressions. One plant may serve multiple traditions; one expression may use multiple plants.
+- [ ] Migrate the existing profiles, places, spirits, plants, processes, bottles and sources data into the normalized entities without losing information; preserve existing profile URLs and provide redirects where paths change.
+- [ ] Record per-entity editorial structure: plants (botanical identity, regional names, cultivation, distribution, sensory tendencies where supported, sustainability, botanical uncertainty), regions (state/subregion, geography, traditions, plants, methods, legal-versus-cultural distinctions), spirit traditions (origin, history, legal status, materials, practices, diversity), production methods (harvest through finishing), and expressions (tradition + region + plant composition + production style + sensory + related expressions).
+- [ ] Separate identity, typical characteristics, and bottle-specific facts into distinct data structures so no later release can render a bottle note as a universal trait.
+- [ ] Add validation for cross-entity relationships, missing references, duplicate identifiers, and editorial consistency (no unsupported sensory claims, no misclassified non-agave plants).
+- [ ] No new interface redesign in this release; existing views continue to work against the new model.
+
+Acceptance: all existing content, routes and features work unchanged against the normalized model; validation passes; no duplicated descriptions across data files.
+
+### Release 16 — Model Review & Fixes
+
+Apply the maintenance protocol. Audit entity boundaries, relationship cardinality, identifier stability, migration fidelity, data contracts and the new validation rules. Refactor only with concrete benefit; deploy corrections before adding new discovery surfaces.
+
+### Release 17 — Three Discovery Paths
+
+Goal: provide three equally accessible exploration entry points plus flavour-based discovery, all feeding the same interconnected content.
+
+- [ ] Explore by Plant: browse agave species and other relevant plants, search botanical and regional common names, see distinguishing characteristics, where each plant is used, associated traditions, and linked regional expressions; support comparing expressions from the same plant.
+- [ ] Explore by Region: Mexico map or accessible region list with state and relevant subregion selection, regional production traditions, local plants and methods, representative expressions. Clearly distinguish application coverage from legally defined production territories.
+- [ ] Explore by Spirit: browse tequila, mezcal, bacanora, raicilla and other represented traditions with approachable introductions, distinguishing characteristics, regional/production diversity, and links to representative expressions and bottles.
+- [ ] Flavour-based discovery: approachable categories (fresh and herbal; fruity and floral; smoky and earthy; peppery and spicy; rich and oak-influenced; unusual and adventurous) reusing existing sensory metadata; show short explanations of why each expression matches; never promise every bottle in a tradition exhibits the selected characteristics.
+- [ ] Improve search across all three paths and strengthen contextual navigation between plants, regions, traditions and expressions.
+- [ ] Keep touch, keyboard and screen-reader access equivalent across all paths; no dead ends requiring a return to the homepage.
+
+Acceptance: a user can start from a plant, a region, or a spirit and reach meaningful related content; all three paths use the same underlying data.
+
+### Release 18 — Discovery Review & Fixes
+
+Apply the maintenance protocol. Audit map coverage-versus-designation labelling, region list accessibility, plant search aliases, flavour-category explanations, result navigation, state preservation and mobile layouts. Deploy corrections.
+
+### Release 19 — Progressive Learning Journey
+
+Goal: reorganize Learn into a progressive educational journey with contextual glossary and completed Spanish learning materials.
+
+- [ ] Restructure Learn into seven progressive, non-sequential chapters: 1) Discover Mexican Spirits (traditions, similarities, differences; agave versus related non-agave spirits), 2) Meet the Plants (species, regional names, cultivation, harvest; linked plant profiles), 3) From Plant to Glass (production sequence, why each stage matters, sap-derived exceptions), 4) Understanding Flavour (aroma vs taste, body, sweetness, smoke, vegetal/herbal, fruit/floral, spice, oak, finish; with real profile examples), 5) Understanding Labels (denominations, classes, NOM and certification, agave species, producer info, ABV, batch, marketing terms; category-specific rules never universalized), 6) Choosing and Enjoying (preference-based selection, serving, glassware, tasting technique, pairings; no price/age/rarity/ABV-as-quality claims), 7) Explore Deeper (botanical, regional, historical, equipment, terminology, sustainability and regulatory reference material).
+- [ ] Each chapter begins with a short explanation, progresses basic to advanced, uses approachable language, links to real examples, and offers optional deeper explanations for enthusiasts.
+- [ ] Add contextual glossary explanations linked from educational content and profiles.
+- [ ] Do not require sequential completion; preserve direct access to glossary and reference sections.
+- [ ] Complete Mexican Spanish coverage of all learning materials with natural (non-literal) translation; add validation to detect missing translations.
+
+Acceptance: a beginner can understand the fundamentals from the chapters alone; core learning content is usable without English; existing reference access is preserved.
+
+### Release 20 — Learning Journey Review & Fixes
+
+Apply the maintenance protocol. Audit chapter flow, jargon, example links, glossary wiring, Spanish learning parity, mobile reading, keyboard navigation and cognitive load. Deploy corrections.
+
+### Release 21 — Richer Profiles
+
+Goal: upgrade profile pages into the full educational experience for plants, traditions and expressions.
+
+- [ ] Dedicated plant profile pages with the structure: identity (scientific and common names, illustration where reliable), at a glance, where it grows, harvesting and production, characteristics (qualified sensory tendencies), regional expressions, sustainability, further reading. Never assume a universal sensory profile or silently merge disputed local names; distinguish cultivated from wild-harvested where evidence supports it.
+- [ ] Dedicated spirit tradition pages: what it is, origin, history and cultural significance, materials, traditional production, distinguishing traits, legal status, regional variations, beginner starting points, and expressions for exploration. Use plain introductory language with optional technical depth.
+- [ ] Redesign expression profiles into the layout: identity; what makes this expression special (visible, not hidden); character in the glass (body, smoke, herbal/vegetal, fruit/floral, sweetness, spice, oak, finish with contextual terminology); why does it taste this way (evidence-based cause-and-effect across plant, environment, cooking, fermentation, distillation, ageing — never deterministic); how to enjoy it; example bottles; explore next (same plant different region, same tradition different method, similar character, more adventurous alternative); technical details and sources in expandable sections.
+- [ ] Strengthen related-content navigation with short explanations of why each destination is relevant and a clear way back.
+- [ ] Retain existing sensory comparisons, tasting notes, example bottles, pairing guidance and source attribution.
+
+Acceptance: every documented expression explains its character and the influences behind it; beginners get the essentials immediately while enthusiasts reach technical depth on demand.
+
+### Release 22 — Profile Review & Fixes
+
+Apply the maintenance protocol. Audit profile hierarchy, cause-and-effect evidence for every "why it tastes this way" claim, editorial-restriction compliance on plant pages, related-content relevance and back navigation, focus order, and disclosure behaviour. Deploy corrections.
+
+### Release 23 — Comparison Intelligence
+
+Goal: make comparisons explain meaningful differences rather than merely displaying scores.
+
+- [ ] Add a concise plain-language interpretation above the detailed comparison, explaining the primary differences and possibly why.
+- [ ] Support meaningful comparison perspectives: same plant different region; same tradition different plant; same tradition different production method; similar flavours across traditions; unaged versus wood-rested.
+- [ ] Where evidence cannot support a distinction, state it rather than manufacturing one; keep the existing explicit treatment of undocumented attributes.
+- [ ] Refine related-expression recommendations (same plant/region/method/sensory threads) with short relevance explanations.
+
+Acceptance: comparisons communicate what differs and why, respecting uncertainty; no invented distinctions.
+
+### Release 24 — Comparison & Navigation Review & Fixes
+
+Apply the maintenance protocol. Audit comparison summary accuracy, perspective support, recommendation relevance and determinism, cross-link context preservation, and focus after view changes. Deploy corrections.
+
+### Release 25 — Editorial Enrichment & Bottle Depth
+
+Goal: deepen coverage where it adds educational value, prioritizing evidence quality over catalogue size.
+
+- [ ] Expand representative plant, region and spirit tradition coverage; each new entry must add meaningful insight or improve discovery, not just quantity.
+- [ ] Add deeper production, historical and sustainability content with proper attribution; sustainability claims require specific dated evidence.
+- [ ] Improve bottle-specific information where credible documentation exists: brand, expression, actual producer, origin, classification, documented plant composition, production/batch details, ABV, bottle-specific tasting notes with disclosure when unavailable, and relationship to the style profile.
+- [ ] Link bottles to their plants, regions and traditions; keep the catalogue educational rather than commercial.
+- [ ] Keep application scope descriptions consistent with actual coverage, including non-agave spirits.
+
+Acceptance: new content passes the same evidence and editorial gates as existing content; the catalogue remains distinct from editorial style profiles.
+
+### Release 26 — Editorial Standards Review & Fixes
+
+Apply the maintenance protocol. Audit evidence quality and provenance across the new entities, sensory-claim discipline, distinction between legal and cultural framing, Spanish/English parity across all new content, scope-description accuracy and discovery regressions. Deploy corrections and establish the next feature/maintenance pair from the backlog.
 
 ### Mandatory protocol for every maintenance release
 
