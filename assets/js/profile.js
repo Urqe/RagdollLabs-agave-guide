@@ -3,18 +3,18 @@ import { STATE_NAMES } from "./map.js";
 import { flavorMoods, ifYouLikeThis } from "./compare.js";
 import { bottlesForProfile } from "./catalogue.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
-import { ui, sensoryOverview } from "./presentation.js";
+import { ui, sensoryOverview, dimensionLabel } from "./presentation.js";
 import { tasteNote } from "./taste-notes.js";
-import { editorialText } from "./editorial.js";
+import { editorialText, fieldEs, fieldEsAny, localizedTitle, sourceKindLabel } from "./editorial.js";
 
-function sourceLinks(sources, sourceIds) {
+function sourceLinks(sources, sourceIds, locale = null) {
   const list = el("ul", { class: "source-list" });
   for (const id of sourceIds) {
     const source = sources.find((s) => s.id === id);
     if (!source) continue;
     const item = el("li");
     item.appendChild(safeLink(source.url, source.title, { class: "source-link" }));
-    item.appendChild(el("span", { class: "source-kind" }, ` — ${source.kind} source`));
+    item.appendChild(el("span", { class: "source-kind" }, ` — ${ui(locale, "kindSource").replace("{kind}", sourceKindLabel(source.kind, locale, ui))}`));
     list.appendChild(item);
   }
   return list;
@@ -26,7 +26,7 @@ function exampleBottleCard(bottle, sources, t, locale = null) {
   const name = el("p", { class: "bottle-name" });
   name.appendChild(el("strong", {}, `${bottle.brand} ${bottle.expression}`));
   if (bottle.abv != null) {
-    name.appendChild(el("span", { class: "bottle-abv" }, ` \u00b7 ${bottle.abv}% ABV`));
+        name.appendChild(el("span", { class: "bottle-abv" }, ` \u00b7 ${bottle.abv}% ${ui(locale, "factAbvLong")}`));
   }
   if (bottle.abv == null && bottle.abvNote) {
     name.appendChild(el("span", { class: "bottle-abv" }, ` \u00b7 ${bottle.abvNote}`));
@@ -72,7 +72,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const back = el("a", { href: backHref, class: "back-link" }, fromCatalogue ? t("profile.backCatalogue") : t("profile.backExplore"));
   section.appendChild(back);
 
-  section.appendChild(el("h1", { id: "profile-title" }, profile.title));
+  section.appendChild(el("h1", { id: "profile-title" }, fieldEs("profile", profile.id, "title", locale) || profile.title));
 
   
 
@@ -84,7 +84,10 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   if (profile.placeCoords) {
     const c = profile.placeCoords;
     section.appendChild(el("p", { class: "profile-coords editorial-note" },
-      `Approximate location: ${c.lat.toFixed(2)}, ${c.lon.toFixed(2)} \u2014 precision: ${c.precision}. This is a place reference, not a legal boundary.`));
+      ui(locale, "coordsNote")
+        .replace("{lat}", c.lat.toFixed(2))
+        .replace("{lon}", c.lon.toFixed(2))
+        .replace("{precision}", c.precision)));
   }
 
   const contextText = editorialText("profile", profile.id, "context", profile.context, locale);
@@ -99,7 +102,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   if (!descriptionText.translated) descriptionNode.appendChild(el("span", { class: "editorial-note untranslated-field" }, " " + ui(locale, "partialDisclosure")));
   section.appendChild(descriptionNode);
   if (profile.beginnerNote) {
-    section.appendChild(el("p", { class: "beginner-note" }, profile.beginnerNote));
+    section.appendChild(el("p", { class: "beginner-note" }, fieldEs("profile", profile.id, "beginnerNote", locale) || profile.beginnerNote));
   }
   const guidanceNote = el("p", { class: "editorial-note" },
     ui(locale, "guidance"));
@@ -108,7 +111,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const craft = el("dl", { class: "profile-facts profile-craft" });
   if (profile.category) {
     craft.appendChild(el("dt", {}, ui(locale, "legal")));
-    craft.appendChild(el("dd", { class: "profile-category" }, profile.category));
+    craft.appendChild(el("dd", { class: "profile-category" }, fieldEs("profile", profile.id, "category", locale) || profile.category));
   }
   if (profile.plant) {
     craft.appendChild(el("dt", {}, ui(locale, "plant")));
@@ -121,7 +124,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   }
   if (profile.process) {
     craft.appendChild(el("dt", {}, ui(locale, "process")));
-    craft.appendChild(el("dd", { class: "profile-process" }, profile.process));
+    craft.appendChild(el("dd", { class: "profile-process" }, fieldEs("profile", profile.id, "process", locale) || profile.process));
   }
   if (craft.childNodes.length > 0) section.appendChild(craft);
 
@@ -140,10 +143,10 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   facts.appendChild(notes);
   if (profile.smoke) {
     facts.appendChild(el("dt", {}, ui(locale, "smoke")));
-    facts.appendChild(el("dd", { class: "profile-smoke" }, profile.smoke));
+    facts.appendChild(el("dd", { class: "profile-smoke" }, fieldEs("profile", profile.id, "smoke", locale) || profile.smoke));
   }
   facts.appendChild(el("dt", {}, ui(locale, "finish")));
-  facts.appendChild(el("dd", { class: "profile-finish" }, profile.finish));
+  facts.appendChild(el("dd", { class: "profile-finish" }, fieldEs("profile", profile.id, "finish", locale) || profile.finish));
   section.appendChild(facts);
   const moods = flavorMoods(profile);
   if (moods.length > 0) {
@@ -184,9 +187,11 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   if (profile.pairing) {
     const pairing = el("div", { class: "profile-pairing" });
     pairing.appendChild(el("h3", { class: "sources-heading" }, t("profile.pairing")));
-    pairing.appendChild(el("p", {}, profile.pairing.serving));
-    if (profile.pairing.foods && profile.pairing.foods.length > 0) {
-      pairing.appendChild(el("p", {}, t("profile.pairingFoods") + " " + profile.pairing.foods.join(", ") + "."));
+    const esPairing = fieldEsAny("profile", profile.id, "pairing", locale);
+    pairing.appendChild(el("p", {}, (esPairing && esPairing.serving) || profile.pairing.serving));
+    const foods = (esPairing && esPairing.foods) || profile.pairing.foods;
+    if (foods && foods.length > 0) {
+      pairing.appendChild(el("p", {}, t("profile.pairingFoods") + " " + foods.join(", ") + "."));
     }
     section.appendChild(pairing);
   }
@@ -197,7 +202,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     const suggHeading = el("h3", { class: "suggestions-heading" }, t("profile.ifYouLike"));
     section.appendChild(suggHeading);
     const suggList = el("ul", { class: "suggestion-list" });
-    for (const { profile: other, sharedDimensions } of suggestions) {
+    for (const { profile: other, sharedDimensionKeys } of suggestions) {
       const item = el("li");
       const params = [];
       if (returnTo) params.push(`from=${encodeURIComponent(returnTo)}`);
@@ -205,10 +210,10 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
       const link = el("a", {
         href: `#/profile/${encodeURIComponent(other.id)}` + (params.length ? `?${params.join("&")}` : ""),
         class: "suggestion-link",
-      }, other.title);
+      }, localizedTitle("profile", other.id, other.title, locale));
       item.appendChild(link);
       item.appendChild(el("span", { class: "search-result-reason" },
-        ` — ${ui(locale, "sharesWith").replace("{list}", sharedDimensions.join(", "))}`));
+        ` — ${ui(locale, "sharesWith").replace("{list}", sharedDimensionKeys.map((k) => dimensionLabel(k, locale)).join(", "))}`));
       suggList.appendChild(item);
     }
     section.appendChild(suggList);

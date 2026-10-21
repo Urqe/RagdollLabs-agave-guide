@@ -242,7 +242,8 @@ test("profile view renders all sections and the example bottle card", () => {
 
   const card = container.querySelector(".bottle-card");
   assert.ok(card.textContent.includes("Fortaleza"));
-  assert.ok(card.textContent.includes("40% ABV"));
+  assert.ok(card.textContent.includes("40%"), "ABV value renders");
+  assert.ok(card.textContent.includes("Alcohol by volume"), "ABV is labeled");
   assert.ok(card.querySelector(".bottle-review").textContent.length > 0);
   assert.ok(card.querySelectorAll(".source-link").length >= 2);
 

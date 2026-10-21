@@ -3,6 +3,7 @@ import { navigateTo } from "./router.js";
 import { searchBottles, brandDirectory } from "./catalogue.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 import { ui } from "./presentation.js";
+import { sourceKindLabel } from "./editorial.js";
 
 const COVERAGE_LABELS = {
   "tasting-not-documented": "Tasting notes not yet documented",
@@ -17,7 +18,7 @@ function sourceLinks(sources, sourceIds, locale = null) {
     const item = el("li");
     item.appendChild(safeLink(source.url, source.title, { class: "source-link" }));
     item.appendChild(el("span", { class: "source-kind" },
-      ` \u2014 ${ui(locale, "kindSource").replace("{kind}", source.kind)}`));
+      ` \u2014 ${ui(locale, "kindSource").replace("{kind}", sourceKindLabel(source.kind, locale, ui))}`));
     list.appendChild(item);
   }
   return list;
@@ -70,7 +71,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
 
   const facts = el("ul", { class: "catalogue-facts" });
   facts.appendChild(el("li", {}, `${ui(locale, "factSpirit")}: ${SPIRIT_LABELS[bottle.spirit] || bottle.spirit || ui(locale, "notDocumented")}`));
-  if (bottle.abv != null) facts.appendChild(el("li", {}, `${ui(locale, "factAbv")}: ${bottle.abv}% (${ui(locale, "labelFact")})`));
+  if (bottle.abv != null) facts.appendChild(el("li", {}, `${ui(locale, "factAbvLong")}: ${bottle.abv}% (${ui(locale, "labelFact")})`));
   if (bottle.abv == null && bottle.abvNote) facts.appendChild(el("li", {}, `${ui(locale, "factAbv")}: ${bottle.abvNote}`));
   if (bottle.producer) facts.appendChild(el("li", {}, `${ui(locale, "factProducer")}: ${bottle.producer}`));
   if (bottle.place) facts.appendChild(el("li", {}, `${ui(locale, "factPlace")}: ${bottle.place}`));
@@ -112,7 +113,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
       article.appendChild(el("a", {
         href: `#/profile/${encodeURIComponent(profile.id)}?origin=catalogue`,
         class: "catalogue-profile-link",
-      }, `See the ${SPIRIT_LABELS[profile.spirit] || profile.spirit} style profile \u2192`));
+      }, ui(locale, "seeStyleProfile").replace("{spirit}", SPIRIT_LABELS[profile.spirit] || profile.spirit)));
     }
   }
 
