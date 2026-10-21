@@ -19,13 +19,14 @@ function fetchJson(url, timeoutMs) {
  */
 export async function loadAppData(baseUrl, timeoutMs = DEFAULT_TIMEOUT_MS) {
   try {
-    const [profiles, bottles, sources, plants, processes, glossary] = await Promise.all([
+    const [profiles, bottles, sources, plants, processes, glossary, contentEs] = await Promise.all([
       fetchJson(new URL("assets/data/profiles.json", baseUrl), timeoutMs),
       fetchJson(new URL("assets/data/bottles.json", baseUrl), timeoutMs),
       fetchJson(new URL("assets/data/sources.json", baseUrl), timeoutMs),
       fetchJson(new URL("assets/data/plants.json", baseUrl), timeoutMs),
       fetchJson(new URL("assets/data/processes.json", baseUrl), timeoutMs),
       fetchJson(new URL("assets/data/glossary.json", baseUrl), timeoutMs),
+      fetchJson(new URL("assets/data/content-es.json", baseUrl), timeoutMs),
     ]);
     return {
       profiles: profiles.profiles,
@@ -34,6 +35,7 @@ export async function loadAppData(baseUrl, timeoutMs = DEFAULT_TIMEOUT_MS) {
       plants: plants.plants || [],
       processes: processes.processes || [],
       glossary: glossary.glossary || [],
+      contentEs: contentEs || {},
     };
   } catch (error) {
     throw new Error(`Could not load app data: ${error.message}`);

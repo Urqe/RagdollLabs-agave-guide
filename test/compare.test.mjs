@@ -84,7 +84,7 @@ test("if-you-like suggestions name shared documented attributes and skip incompa
   const suggestedIds = suggestions.map((x) => x.profile.id);
   assert.ok(!suggestedIds.includes("c"), "incompatible profile is never suggested");
   assert.ok(suggestedIds.includes("b"), "profile sharing documented attributes is suggested");
-  for (const s of suggestions) assert.ok(s.reason.includes("Shares"));
+  for (const s of suggestions) assert.ok(s.sharedDimensions.length >= 1, "suggestion names its shared dimensions");
   assert.ok(ifYouLikeThis(anchor, [different]).length === 0);
 
   // Unknown anchor dimensions never generate suggestions.
@@ -99,7 +99,7 @@ test("suggestion reasons never claim bottle measurements", () => {
   const anchor = fixture({ id: "a" });
   const other = fixture({ id: "b" });
   for (const s of ifYouLikeThis(anchor, [other])) {
-    assert.ok(!/abv|bottle|score|rating/i.test(s.reason), "reasons stay editorial");
+    assert.ok(!/abv|bottle|score|rating/i.test((s.sharedDimensions || []).join(" ")), "reasons stay editorial");
   }
 });
 
@@ -256,6 +256,7 @@ test("end-to-end: real app boots and compare selection updates the route and tab
     "plants.json": await readFile(path.join(root, "assets/data/plants.json"), "utf8"),
     "processes.json": await readFile(path.join(root, "assets/data/processes.json"), "utf8"),
     "glossary.json": await readFile(path.join(root, "assets/data/glossary.json"), "utf8"),
+    "content-es.json": await readFile(path.join(root, "assets/data/content-es.json"), "utf8"),
   };
   const prevFetch = globalThis.fetch;
   globalThis.fetch = async (url) => {

@@ -1,12 +1,13 @@
 import { el, clear, safeLink } from "./dom-utils.js";
+import { ui } from "./presentation.js";
 
 /** Sources stay available but out of the reading flow. */
-function collapsibleSources(sources, sourceIds, t) {
+function collapsibleSources(sources, sourceIds, t, locale = null) {
   const details = el("details", { class: "source-details" });
   const label = t("learn.sources") || "Sources";
   const summary = el("summary", {}, `${label} (${(sourceIds || []).length})`);
   details.appendChild(summary);
-  details.appendChild(sourceLinks(sources, sourceIds));
+  details.appendChild(sourceLinks(sources, sourceIds, locale));
   return details;
 }
 
@@ -33,14 +34,14 @@ function relevantTo(profile, proc) {
   return (PROCESS_KEYWORDS[proc.id] || []).some((k) => k && text.includes(k));
 }
 
-function sourceLinks(sources, sourceIds) {
+function sourceLinks(sources, sourceIds, locale = null) {
   const list = el("ul", { class: "source-list" });
   for (const id of sourceIds || []) {
     const source = sources.find((s) => s.id === id);
     if (!source) continue;
     const item = el("li");
     item.appendChild(safeLink(source.url, source.title, { class: "source-link" }));
-    item.appendChild(el("span", { class: "source-kind" }, ` — ${source.kind} source${source.verified ? `, verified ${source.verified}` : ""}`));
+    item.appendChild(el("span", { class: "source-kind" }, ` — ${ui(locale, "kindSource").replace("{kind}", source.kind)}${source.verified ? `, ${ui(locale, "verifiedAs").replace("{date}", source.verified)}` : ""}`));
     list.appendChild(item);
   }
   return list;
@@ -94,7 +95,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
       }
     }
     card.appendChild(links);
-    card.appendChild(collapsibleSources(sources, plant.sourceIds, t));
+    card.appendChild(collapsibleSources(sources, plant.sourceIds, t, locale));
     section.appendChild(card);
   }
 
@@ -112,18 +113,17 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
       }
       card.appendChild(line);
     }
-    card.appendChild(collapsibleSources(sources, proc.sourceIds, t));
+    card.appendChild(collapsibleSources(sources, proc.sourceIds, t, locale));
     section.appendChild(card);
   }
 
   // --- Glossary ---
   section.appendChild(el("h3", { id: "learn-terms", tabindex: "-1" }, t("learn.terms")));
-  section.appendChild(el("p", { class: "view-intro" },
-    "Class terms are spirit-specific: tequila's rules do not transfer to mezcal or raicilla. Where a term is not a legal class, that is stated."));
+  section.appendChild(el("p", { class: "view-intro" }, ui(locale, "classTerms")));
   for (const term of glossary) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `term-${term.term.replace(/\s+/g, "-")}` });
     card.appendChild(el("h4", { id: `term-${term.term.replace(/\s+/g, "-")}` }, term.term));
-    card.appendChild(el("p", { class: "learn-term-context" }, `Context: ${term.context}`));
+    card.appendChild(el("p", { class: "learn-term-context" }, ui(locale, "contextPrefix") + term.context));
     card.appendChild(el("p", {}, term.definition));
     const related = profiles.filter((pr) => (pr.category || "").toLowerCase().includes(term.term.split(" ")[0].toLowerCase()));
     if (related.length > 0) {
@@ -133,7 +133,7 @@ export function renderLearn(container, { plants, processes, glossary, profiles, 
       }
       card.appendChild(line);
     }
-    card.appendChild(collapsibleSources(sources, term.sourceIds, t));
+    card.appendChild(collapsibleSources(sources, term.sourceIds, t, locale));
     section.appendChild(card);
   }
 

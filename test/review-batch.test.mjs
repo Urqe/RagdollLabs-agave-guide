@@ -239,3 +239,81 @@ test("F9: comparison selection survives when storage throws", async () => {
     globalThis.localStorage = storage;
   }
 });
+
+test("chrome localization: catalogue facts, editorial prefix and empty search localize", async () => {
+  const { bottleEntry, renderCatalogue } = await import("../assets/js/catalogue-view.js");
+  const bottle = bottles.find((b) => b.editorialNote);
+  const entry = bottleEntry(bottle, { sources: sourceList, profiles, locale: es });
+  const facts = entry.querySelector(".catalogue-facts").textContent;
+  assert.ok(facts.includes("Productor:"), "fact labels are Spanish");
+  assert.ok(facts.includes("dato de etiqueta"), "label-fact hint is Spanish");
+  const note = entry.querySelector(".editorial-note").textContent;
+  assert.ok(note.startsWith("Cómo encaja con el perfil"), "editorial prefix is Spanish");
+  assert.ok(entry.textContent.includes("fuente"), "source kind is Spanish");
+
+  const root = document.createElement("div");
+  renderCatalogue(root, { bottles, profiles, sources: sourceList, locale: es });
+  const search = root.querySelector("#catalogue-search");
+  search.value = "zzz-unknown";
+  search.dispatchEvent(new window.Event("input", { bubbles: true }));
+  const empty = root.querySelector(".search-empty").textContent;
+  assert.ok(empty.includes("Ninguna botella coincide"), "catalogue empty search is Spanish");
+});
+
+test("chrome localization: learn view, not-found and compare localize", async () => {
+  const { renderLearn } = await import("../assets/js/learn-view.js");
+  const { plants: plantData } = JSON.parse(await read("assets/data/plants.json"));
+  const { glossary } = JSON.parse(await read("assets/data/glossary.json"));
+  const root = document.createElement("div");
+  renderLearn(root, { plants: plantData, processes, glossary, profiles, bottles, sources: sourceList, locale: es });
+  assert.ok(root.textContent.includes("Contexto:"), "glossary context prefix is Spanish");
+  assert.ok(root.textContent.includes("Los términos de clase"), "glossary intro is Spanish");
+  assert.ok(root.textContent.includes("verificado"), "verified dates are Spanish");
+
+  const { renderProfileNotFound } = await import("../assets/js/profile.js");
+  const root2 = document.createElement("div");
+  renderProfileNotFound(root2, "no-existe");
+  assert.ok(root2.textContent.includes("Perfil no encontrado") || root2.textContent.includes("Profile not found"));
+
+  const { renderCompare } = await import("../assets/js/compare-view.js");
+  const root3 = document.createElement("div");
+  renderCompare(root3, { profiles: profiles.slice(0, 3), locale: es, compareIds: `${profiles[0].id},${profiles[1].id}`, onSelectionChange: () => {} });
+  const hints = [...root3.querySelectorAll(".compare-table tbody th")].map((th) => th.getAttribute("title"));
+  assert.ok(hints.some((h) => h && h.includes("Impresión editorial")), "row hints are Spanish");
+});
+
+test("search: Spanish note labels from the full dictionary find their profiles", async () => {
+  const { searchProfiles } = await import("../assets/js/search.js");
+  const cascara = searchProfiles({ profiles, bottles, query: "cascara" });
+  assert.ok(cascara.length >= 1, '"cáscara" (citrus peel) finds its profiles');
+  assert.ok(cascara.some((r) => (r.profile.tasteNotes || []).includes("citrus peel")),
+    "the match is a genuine citrus-peel profile");
+  const tierra = searchProfiles({ profiles, bottles, query: "tierra humeda" });
+  assert.ok(tierra.length >= 1, '"tierra húmeda" (wet earth) finds its profiles');
+});
+
+test("editorial mechanism: ES field when translated, English plus disclosure when not", async () => {
+  const { setContentEs, fieldEs, editorialText } = await import("../assets/js/editorial.js");
+  setContentEs({ profiles: { "some-id": { description: "Descripción en español." } } });
+  assert.equal(fieldEs("profile", "some-id", "description"), "Descripción en español.");
+  assert.equal(fieldEs("profile", "some-id", "context"), null, "missing field yields null");
+  assert.equal(fieldEs("profile", "other-id", "description"), null, "missing entity yields null");
+
+  const translated = editorialText("profile", "some-id", "description", "English text", es);
+  assert.deepEqual(translated, { text: "Descripción en español.", translated: true });
+  const fallback = editorialText("profile", "some-id", "context", "English context", es);
+  assert.deepEqual(fallback, { text: "English context", translated: false }, "English fallback flagged");
+  const english = editorialText("profile", "some-id", "description", "English text", locale);
+  assert.deepEqual(english, { text: "English text", translated: true }, "English locale ignores ES content");
+
+  // The profile view shows the per-section disclosure for untranslated fields.
+  const { renderProfile } = await import("../assets/js/profile.js");
+  const root = document.createElement("div");
+  const profile = profiles[0];
+  const bottle = bottles.find((b) => b.id === profile.exampleBottleId);
+  renderProfile(root, { profile, bottle, sources: sourceList, allProfiles: profiles, allBottles: bottles, locale: es });
+  assert.ok(root.querySelector(".profile-context").textContent.length > 0, "context renders");
+  assert.ok(root.textContent.includes("Esta sección está disponible en inglés"),
+    "untranslated context carries the per-section disclosure");
+  setContentEs({});
+});

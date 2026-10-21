@@ -22,6 +22,7 @@ const files = {
   "plants.json": await read("assets/data/plants.json"),
   "processes.json": await read("assets/data/processes.json"),
   "glossary.json": await read("assets/data/glossary.json"),
+  "content-es.json": await read("assets/data/content-es.json"),
 };
 
 const profileIds = JSON.parse(files["profiles.json"]).profiles.map((p) => p.id);

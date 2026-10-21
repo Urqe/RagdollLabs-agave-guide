@@ -10,6 +10,7 @@ import { createLocale } from "./locale.js";
 import { renderHome, ui } from "./presentation.js";
 import { getCompareSelection, setCompareSelection } from "./compare-selection.js";
 import { takeView, captureView } from "./view-memory.js";
+import { setContentEs } from "./editorial.js";
 
 const locale = createLocale();
 
@@ -206,6 +207,7 @@ async function boot() {
 
   try {
     state.data = await loadAppData(baseUrl());
+    setContentEs(state.data.contentEs || {});
   } catch (error) {
     state.error = error;
     renderError(main, error);
