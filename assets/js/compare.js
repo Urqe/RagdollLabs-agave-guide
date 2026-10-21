@@ -99,7 +99,7 @@ export function ifYouLikeThis(anchor, candidates, { maxSuggestions = 2 } = {}) {
     if (shared.length > 0) {
       suggestions.push({
         profile: candidate,
-        reason: `Shares ${shared.slice(0, 2).join(" and ")} with this profile.`,
+        sharedDimensions: shared.slice(0, 2),
       });
     }
   }

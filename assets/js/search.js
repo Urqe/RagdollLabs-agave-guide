@@ -4,7 +4,11 @@
  * common alternate spellings and regional names find their targets.
  * Exact spirit matches rank first, so querying "mezcal" surfaces the
  * mezcal profile above profiles that merely mention mezcal.
+ *
+ * Reasons are returned as { reasonKey, vars } so the view can localize
+ * them; unknown keys fall back to a general match phrase.
  */
+import { ES_NOTES } from "./taste-notes.js";
 
 const normalize = (text) =>
   (text || "")
@@ -83,8 +87,13 @@ export function searchProfiles({ profiles, bottles, query }) {
   const results = [];
   for (const profile of profiles) {
     const example = bottleById.get(profile.exampleBottleId);
+    const esNoteHit = (profile.tasteNotes || []).some((n) => {
+      const esLabel = ES_NOTES[n];
+      return esLabel ? normalize(esLabel).includes(q) : false;
+    });
     const haystack = normalize([
       ...profileSearchTerms(profile),
+      ...(profile.tasteNotes || []).map((n) => ES_NOTES[n] || ""),
       example ? example.brand : "",
       example ? example.expression : "",
       example ? example.producer || "" : "",
@@ -95,7 +104,7 @@ export function searchProfiles({ profiles, bottles, query }) {
         profile,
         exampleBottle: example || null,
         rank: rankFor(profile, q),
-        reason: reasonFor(profile, example, q),
+        reason: reasonFor(profile, example, q, esNoteHit),
       });
     }
   }

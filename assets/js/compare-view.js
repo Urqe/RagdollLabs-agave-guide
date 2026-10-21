@@ -223,9 +223,9 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   table.appendChild(thead);
 
   const tbody = el("tbody", {});
-  for (const { key, hint } of DIMENSIONS) {
+  for (const { key } of DIMENSIONS) {
     const row = el("tr", {});
-    const th = el("th", { scope: "row", title: hint }, dimLabel(key));
+    const th = el("th", { scope: "row", title: ui(locale, "hint" + key.charAt(0).toUpperCase() + key.slice(1)) }, dimLabel(key));
     row.appendChild(th);
     for (const profile of selected) row.appendChild(levelCell(profile, key, t));
     tbody.appendChild(row);

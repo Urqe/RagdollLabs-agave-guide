@@ -5,6 +5,7 @@ import { bottlesForProfile } from "./catalogue.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 import { ui, sensoryOverview } from "./presentation.js";
 import { tasteNote } from "./taste-notes.js";
+import { editorialText } from "./editorial.js";
 
 function sourceLinks(sources, sourceIds) {
   const list = el("ul", { class: "source-list" });
@@ -19,7 +20,7 @@ function sourceLinks(sources, sourceIds) {
   return list;
 }
 
-function exampleBottleCard(bottle, sources, t) {
+function exampleBottleCard(bottle, sources, t, locale = null) {
   const card = el("article", { class: "bottle-card", "aria-labelledby": "bottle-card-heading" });
   card.appendChild(el("h3", { id: "bottle-card-heading", class: "bottle-card-title" }, t("profile.exampleBottle")));
   const name = el("p", { class: "bottle-name" });
@@ -33,11 +34,11 @@ function exampleBottleCard(bottle, sources, t) {
   card.appendChild(name);
   if (bottle.producer) card.appendChild(el("p", { class: "bottle-producer" }, bottle.producer));
   if (bottle.place) card.appendChild(el("p", { class: "bottle-place" }, bottle.place));
-  if (bottle.composition) card.appendChild(el("p", { class: "bottle-composition editorial-note" }, `Composition: ${bottle.composition}`));
+  if (bottle.composition) card.appendChild(el("p", { class: "bottle-composition editorial-note" }, `${ui(locale, "factComposition")}: ${bottle.composition}`));
   card.appendChild(el("p", { class: "bottle-review" }, bottle.reviewSummary));
   const linksLabel = el("p", { class: "bottle-links-label" }, t("profile.sourcesBottle"));
   card.appendChild(linksLabel);
-  card.appendChild(collapsibleBottleSources(sources, bottle, t));
+  card.appendChild(collapsibleBottleSources(sources, bottle, t, locale));
   return card;
 }
 
@@ -45,14 +46,14 @@ function exampleBottleCard(bottle, sources, t) {
  * Bottle reference links stay available but collapsed out of the reading
  * flow, mirroring the catalogue's source disclosure pattern.
  */
-function collapsibleBottleSources(sources, bottle, t) {
+function collapsibleBottleSources(sources, bottle, t, locale = null) {
   const details = el("details", { class: "source-details" });
   const total = (bottle.sourceIds || []).length + (bottle.noteSourceIds || []).length;
   details.appendChild(el("summary", {}, `${t("learn.sources")} (${total})`));
-  details.appendChild(sourceLinks(sources, bottle.sourceIds));
+  details.appendChild(sourceLinks(sources, bottle.sourceIds, locale));
   if (bottle.noteSourceIds && bottle.noteSourceIds.length > 0) {
     details.appendChild(el("p", { class: "source-group-label" }, t("catalogue.groupNote")));
-    details.appendChild(sourceLinks(sources, bottle.noteSourceIds));
+    details.appendChild(sourceLinks(sources, bottle.noteSourceIds, locale));
   }
   return details;
 }
@@ -86,11 +87,17 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
       `Approximate location: ${c.lat.toFixed(2)}, ${c.lon.toFixed(2)} \u2014 precision: ${c.precision}. This is a place reference, not a legal boundary.`));
   }
 
-  section.appendChild(el("p", { class: "profile-context" }, profile.context));
+  const contextText = editorialText("profile", profile.id, "context", profile.context, locale);
+  const contextNode = el("p", { class: "profile-context" }, contextText.text);
+  if (!contextText.translated) contextNode.appendChild(el("span", { class: "editorial-note untranslated-field" }, " " + ui(locale, "partialDisclosure")));
+  section.appendChild(contextNode);
 
   
 
-  section.appendChild(el("p", { class: "profile-description" }, profile.description));
+  const descriptionText = editorialText("profile", profile.id, "description", profile.description, locale);
+  const descriptionNode = el("p", { class: "profile-description" }, descriptionText.text);
+  if (!descriptionText.translated) descriptionNode.appendChild(el("span", { class: "editorial-note untranslated-field" }, " " + ui(locale, "partialDisclosure")));
+  section.appendChild(descriptionNode);
   if (profile.beginnerNote) {
     section.appendChild(el("p", { class: "beginner-note" }, profile.beginnerNote));
   }
@@ -148,7 +155,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     section.appendChild(moodLine);
   }
 
-  if (bottle) section.appendChild(exampleBottleCard(bottle, sources, t));
+  if (bottle) section.appendChild(exampleBottleCard(bottle, sources, t, locale));
 
   // Optional expansion: other catalogue bottles mapped to this profile.
   const { others } = bottlesForProfile(allBottles, profile);
@@ -190,7 +197,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     const suggHeading = el("h3", { class: "suggestions-heading" }, t("profile.ifYouLike"));
     section.appendChild(suggHeading);
     const suggList = el("ul", { class: "suggestion-list" });
-    for (const { profile: other, reason } of suggestions) {
+    for (const { profile: other, sharedDimensions } of suggestions) {
       const item = el("li");
       const params = [];
       if (returnTo) params.push(`from=${encodeURIComponent(returnTo)}`);
@@ -200,7 +207,8 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
         class: "suggestion-link",
       }, other.title);
       item.appendChild(link);
-      item.appendChild(el("span", { class: "search-result-reason" }, ` — ${reason}`));
+      item.appendChild(el("span", { class: "search-result-reason" },
+        ` — ${ui(locale, "sharesWith").replace("{list}", sharedDimensions.join(", "))}`));
       suggList.appendChild(item);
     }
     section.appendChild(suggList);
@@ -211,7 +219,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
 
   const srcHeading = el("h3", { class: "sources-heading" }, t("profile.sources"));
   section.appendChild(srcHeading);
-  section.appendChild(sourceLinks(sources, profile.sourceIds));
+  section.appendChild(sourceLinks(sources, profile.sourceIds, locale));
 
   // Lead with sensory information; retain the original reference content in disclosures.
   const titleNode = section.querySelector("#profile-title");

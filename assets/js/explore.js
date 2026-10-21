@@ -146,8 +146,7 @@ export async function renderExplore(container, { profiles, bottles, selectedStat
     shadeCovered(mapHolder, coveredStateIds);
   } catch (error) {
     clear(mapHolder);
-    mapHolder.appendChild(el("p", { class: "error-state", role: "alert" },
-      "The map could not be loaded. You can still use the state list below."));
+    mapHolder.appendChild(el("p", { class: "error-state", role: "alert" }, ui(locale, "mapFailed")));
     // Fallback: render the list standalone so the view stays usable.
     const list = el("ul", { class: "state-list state-list-fallback", "aria-label": "States with profiles" });
     for (const code of coveredStateIds) {

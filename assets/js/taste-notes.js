@@ -6,7 +6,7 @@
  * content is in English.
  */
 
-const ES_NOTES = {
+export const ES_NOTES = {
   "baking spice": "especias de repostería",
   "black pepper": "pimienta negra",
   "caramel": "caramelo",
@@ -68,3 +68,6 @@ export function tasteNote(note, locale = null) {
   if (locale && locale.get() === "es") return ES_NOTES[note] || note;
   return note;
 }
+
+/** Reverse lookup: Spanish label -> English note (for search). */
+export const ES_NOTE_BY_LABEL = new Map(Object.entries(ES_NOTES).map(([en, es]) => [es, en]));
