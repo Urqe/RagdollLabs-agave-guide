@@ -854,3 +854,58 @@ expanded all at once (per the plan's content-increment rules).
 - Boot smoke: Jalisco lists 7 profiles; cristalino profile renders
   with honest category and PATR\u00d3N example; compare shows Oak None vs
   High as a biggest-difference.
+
+## Release 15 — Interconnected Content Model
+
+Feature release per the plan: the normalized five-entity content model
+(plants, regions, spirit traditions, production methods, spirit
+expressions) with validated cross-references — no interface redesign.
+
+### What changed
+
+- **New first-class entities:** `traditions.json` (8 traditions with
+  origin, history, legal status, materials, practices, diversity) and
+  `regions.json` (11 subregion/municipality records with state, type,
+  geography, traditions, plants, methods and explicit
+  legal-versus-cultural distinctions). Region records are never
+  whole-state legal zones; bacanora keeps its municipal framing and
+  raicilla's Costa/Sierra split stays an editorial tradition split.
+- **Profiles migrated:** every profile now carries `traditionId`,
+  `regionIds`, `processIds` and multi-plant `plantIds` (Costa raicilla
+  lists both angustifolia/chico aguiar and rhodacantha). Profile ids,
+  routes and all display fields are unchanged — no redirects were
+  needed because no path moved.
+- **Bottles migrated:** every bottle carries `traditionId` and
+  `regionIds`; uncovered bottles carry empty region lists rather than
+  inherited claims. A new test asserts a bottle's review summary can
+  never render as a profile-level (universal) trait.
+- **Plants migrated:** plants gained `traditionIds` and `regionIds`;
+  `agave-rhodacantha` was added as its own entity (it was previously
+  only prose inside the Costa profile). Dasylirion keeps its
+  not-an-agave classification, enforced by validation and tests.
+- **Many-to-many:** espadín links three traditions (mezcal, bacanora,
+  raicilla); one expression can list multiple plants; regions list the
+  traditions/plants/processes actually practiced there.
+- **Validation extended:** cross-entity reference resolution (profiles,
+  bottles, plants, regions, traditions), profile↔region state and
+  tradition consistency, bottle↔profile agreement, duplicate ids in the
+  new files, no verbatim duplication of tradition legal text into
+  profiles/bottles, and bottle-region subset checks.
+- **No UI redesign:** existing views run unchanged against the new
+  model; the data loader now also fetches the two new files.
+
+### Checks run
+
+- `npm run validate` — extended schema plus 136 node:test/jsdom suites
+  (12 new Release 15 model tests in `test/model.test.mjs`). All passing.
+- Migration fidelity test pins all 17 profile ids (no lost content, no
+  route changes); bidirectional plant↔profile linking is asserted.
+
+### Remaining issues / deferred
+
+- The new traditions and regions entities are data-only; discovery
+  surfaces for them (plant/region/tradition pages) are Release 17+
+  scope per the roadmap.
+- Spanish translations for the new tradition/region editorial text are
+  not yet authored; entity content remains authored-language by design.
+- Native-device rendering still unverified in this environment.

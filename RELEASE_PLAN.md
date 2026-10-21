@@ -323,12 +323,12 @@ Editorial rules that apply to every release in this roadmap:
 
 Goal: establish the normalized five-entity content model without a major interface redesign. Migrate existing content without losing information or breaking current routes.
 
-- [ ] Define stable identifiers and explicit many-to-many relationships for plants, regions, spirit traditions, production methods, and spirit expressions. One plant may serve multiple traditions; one expression may use multiple plants.
-- [ ] Migrate the existing profiles, places, spirits, plants, processes, bottles and sources data into the normalized entities without losing information; preserve existing profile URLs and provide redirects where paths change.
-- [ ] Record per-entity editorial structure: plants (botanical identity, regional names, cultivation, distribution, sensory tendencies where supported, sustainability, botanical uncertainty), regions (state/subregion, geography, traditions, plants, methods, legal-versus-cultural distinctions), spirit traditions (origin, history, legal status, materials, practices, diversity), production methods (harvest through finishing), and expressions (tradition + region + plant composition + production style + sensory + related expressions).
-- [ ] Separate identity, typical characteristics, and bottle-specific facts into distinct data structures so no later release can render a bottle note as a universal trait.
-- [ ] Add validation for cross-entity relationships, missing references, duplicate identifiers, and editorial consistency (no unsupported sensory claims, no misclassified non-agave plants).
-- [ ] No new interface redesign in this release; existing views continue to work against the new model.
+- [x] Define stable identifiers and explicit many-to-many relationships for plants, regions, spirit traditions, production methods, and spirit expressions. One plant may serve multiple traditions; one expression may use multiple plants.
+- [x] Migrate the existing profiles, places, spirits, plants, processes, bottles and sources data into the normalized entities without losing information; preserve existing profile URLs and provide redirects where paths change.
+- [x] Record per-entity editorial structure: plants (botanical identity, regional names, cultivation, distribution, sensory tendencies where supported, sustainability, botanical uncertainty), regions (state/subregion, geography, traditions, plants, methods, legal-versus-cultural distinctions), spirit traditions (origin, history, legal status, materials, practices, diversity), production methods (harvest through finishing), and expressions (tradition + region + plant composition + production style + sensory + related expressions).
+- [x] Separate identity, typical characteristics, and bottle-specific facts into distinct data structures so no later release can render a bottle note as a universal trait.
+- [x] Add validation for cross-entity relationships, missing references, duplicate identifiers, and editorial consistency (no unsupported sensory claims, no misclassified non-agave plants).
+- [x] No new interface redesign in this release; existing views continue to work against the new model.
 
 Acceptance: all existing content, routes and features work unchanged against the normalized model; validation passes; no duplicated descriptions across data files.
 
