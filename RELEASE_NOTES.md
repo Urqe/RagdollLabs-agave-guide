@@ -1161,3 +1161,57 @@ and cognitive load.
 
 - Chapter illustrations and glossary search remain backlog items.
 - Native-device rendering still unverified in this environment.
+
+## Release 21 — Richer Profiles
+
+Feature release per the plan: profile pages upgraded into the full
+educational experience for plants, traditions and expressions.
+
+### What changed
+
+- **Dedicated plant pages** (`#/plant/:id`, new
+  `plant-tradition-view.js`): identity (scientific + common names with
+  regions), at a glance, where it grows (with region chips),
+  harvesting and production, qualified sensory tendencies (always
+  framed as editorial guidance), regional expressions, sustainability,
+  and further reading (sources). Sotol's Dasylirion page states the
+  not-an-agave distinction up front; wild vs cultivated is
+  distinguished where evidence supports it; disputed local names stay
+  unmerged.
+- **Dedicated tradition pages** (`#/tradition/:id`): what it is,
+  origin, history and cultural significance, legal status, materials
+  (with plant-page links), traditional production, distinguishing
+  traits, regional variations, beginner starting points (surfacing the
+  beginner note), expressions for exploration, and further reading.
+- **Redesigned expression profiles:** a visible "Why does it taste this
+  way" section with evidence-based, non-deterministic cause-and-effect
+  text on every profile (plant, environment, cooking, fermentation,
+  distillation, ageing); "How to enjoy it" (the retained pairing
+  guidance); example bottles in their own section; and "Explore next"
+  destinations labeled with why each is relevant (same plant different
+  region, same tradition different method, similar character, more
+  adventurous). Technical detail and sources stay in expandable
+  sections; all existing sensory comparisons, tasting notes, example
+  bottles, suggestions and source attribution are retained.
+- **Full Spanish parity for the new content:** why-it-tastes text for
+  all 17 profiles and all five enriched plant fields for all 9 plants
+  ship reviewed Mexican Spanish translations; the new pages and
+  sections render fully localized.
+- **Validation extended:** every profile must carry whyItTastes (with
+  ES translation); every plant must carry the enriched page fields.
+
+### Checks run
+
+- `npm run validate` — schema plus 186 node:test/jsdom suites (11 new
+  Release 21 tests). All passing.
+- Real-app boot smoke: `#/plant/agave-potatorum` (7 sections),
+  `#/tradition/bacanora` (10 sections), and a redesigned profile all
+  render with the new structure.
+
+### Remaining issues / deferred
+
+- Plant illustrations ("where reliable") remain backlog — no reliable
+  licensed artwork identified yet; not invented.
+- Deeper cause-and-effect links (e.g. fermentation chemistry) need
+  technical sources; only evidence-backed statements shipped.
+- Native-device rendering still unverified in this environment.

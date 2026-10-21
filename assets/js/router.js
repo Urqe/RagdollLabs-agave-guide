@@ -33,6 +33,12 @@ export function parseHash(hash) {
     }
     return { name: "notFound", params: {} };
   }
+  if (segments[0] === "plant" && segments.length === 2) {
+    return { name: "plant", params: { plantId: segments[1] } };
+  }
+  if (segments[0] === "tradition" && segments.length === 2) {
+    return { name: "tradition", params: { traditionId: segments[1] } };
+  }
   if (segments[0] === "discover" && segments.length === 1) {
     return { name: "discover", params: {} };
   }
@@ -69,6 +75,10 @@ export function buildHash(route) {
       return `#/explore/${encodeURIComponent(route.params.stateId)}`;
     case "catalogue":
       return "#/catalogue";
+    case "plant":
+      return `#/plant/${encodeURIComponent(route.params.plantId)}`;
+    case "tradition":
+      return `#/tradition/${encodeURIComponent(route.params.traditionId)}`;
     case "discover":
       if (!route.params.kind) return "#/discover";
       return `#/discover/${encodeURIComponent(route.params.kind)}/${encodeURIComponent(route.params.id)}`;

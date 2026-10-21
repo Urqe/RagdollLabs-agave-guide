@@ -32,7 +32,12 @@
         "tequila-anejo-valley-jalisco",
         "tequila-cristalino-style",
         "tequila-extra-anejo-highland-jalisco"
-      ]
+      ],
+      "atAGlance": "The only agave legally permitted for tequila; cultivated at scale in Jalisco's valley and highlands.",
+      "whereItGrows": "Cultivated in the Tequila Valley and the Jalisco highlands (Los Altos), in volcanic and red mineral soils respectively.",
+      "harvestProduction": "Harvested at maturity (typically 5–7 years); the jimador trims the leaves to the piña, which is then steam-cooked — never sap-collected.",
+      "sensoryTendencies": "Editorial guidance: valley-grown reads savory and vegetal, highland-grown sweeter and more floral; this is place guidance, not a universal flavor.",
+      "sustainability": "Cultivated, so wild-population pressure is not the concern it is for wild-harvested agaves."
     },
     {
       "id": "agave-angustifolia",
@@ -73,7 +78,12 @@
         "bacanora-pacifica-sierra-sonora",
         "raicilla-costa-jalisco",
         "mezcal-reposado-espadin-oaxaca"
-      ]
+      ],
+      "atAGlance": "Mexico's great workhorse agave: espadín in Oaxaca's mezcal, Pacifica/Yaquiana in Sonora's bacanora, chico aguiar in coastal raicilla.",
+      "whereItGrows": "Valles Centrales of Oaxaca (cultivated), the Sierra de Sonora (wild), and coastal Jalisco (wild and cultivated).",
+      "harvestProduction": "Cultivated at scale in Oaxaca; wild-harvested in Sonora. Cooked (pit roast or steam), never sap-collected.",
+      "sensoryTendencies": "Editorial guidance: espadín mezcals read roast-forward; bacanora's Pacifica adds Sonoran herbality; flavors differ by place and process, not by the name alone.",
+      "sustainability": "Whether Sonora's Pacifica/Yaquiana is the same plant as espadín or a distinct local variety is debated; this guide preserves the regional names without settling the botany."
     },
     {
       "id": "agave-maximiliana",
@@ -103,7 +113,12 @@
       "profileIds": [
         "raicilla-maximiliana-sierra-jalisco",
         "raicilla-reposado-jalisco"
-      ]
+      ],
+      "atAGlance": "Sierra de Jalisco's signature raicilla agave, wild-harvested; locally also called lechuguilla (unrelated to the Sonoran plant of that name).",
+      "whereItGrows": "Mountain country of Jalisco's Sierra Occidental, around La Vieja and the Sierra de Talpa.",
+      "harvestProduction": "Wild-harvested; roasted in above-ground adobe ovens, fermented with wild yeasts, distilled in small batches.",
+      "sensoryTendencies": "Editorial guidance: Sierra raicilla reads herbal and rustic; wild harvest means genuine batch variation.",
+      "sustainability": "Wild-harvested; local name overlaps with other species in other regions, which is why this guide records names with their regions."
     },
     {
       "id": "agave-atrovirens",
@@ -128,7 +143,12 @@
       "profileIds": [
         "comiteco-aguamiel-chiapas",
         "comiteco-anejo-comitan-chiapas"
-      ]
+      ],
+      "atAGlance": "Maguey Comiteco, the sap agave of Comitán, Chiapas; the base of comiteco.",
+      "whereItGrows": "Cultivated in the highland plateau of central Chiapas around Comitán de Domínguez.",
+      "harvestProduction": "Cultivated; the living plant is scraped and its aguamiel collected daily — the piña is never cooked.",
+      "sensoryTendencies": "Editorial guidance: sap-derived comiteco skips roast character entirely; disclosed bottlings may include cane sugars, and composition stays a per-bottle fact.",
+      "sustainability": "Cultivated; the plant stays alive through sap harvest."
     },
     {
       "id": "agave-salmiana",
@@ -153,7 +173,12 @@
       ],
       "profileIds": [
         "destilado-de-pulque-salmiana-tlaxcala"
-      ]
+      ],
+      "atAGlance": "Maguey pulquero, the sap agave of the pulque heartland; the base of destilado de pulque.",
+      "whereItGrows": "Cultivated in Tlaxcala and the central-Mexico pulque highlands.",
+      "harvestProduction": "Cultivated; aguamiel is collected daily from the living plant, fermented into pulque (about 48 hours), then distilled — no cooking.",
+      "sensoryTendencies": "Editorial guidance: sap-derived, so no roast character; sources vary on subspecies naming (Manso/Salmiana), which this guide records without resolving.",
+      "sustainability": "Cultivated; the plant stays alive through sap harvest."
     },
     {
       "id": "tuxca-wild-agaves",
@@ -186,7 +211,12 @@
       ],
       "profileIds": [
         "tuxca-lineno-cimarron-jalisco-colima"
-      ]
+      ],
+      "atAGlance": "The wild agaves of the Jalisco–Colima borderlands — Liñeño, Cimarrón and local relatives — vinateros' raw material for tuxca.",
+      "whereItGrows": "Southern Jalisco river canyons around Tuxcacuesco and Zapotitlán de Vadillo, reaching toward Colima.",
+      "harvestProduction": "Wild-harvested; cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation. Ensambles vary by batch.",
+      "sensoryTendencies": "Editorial guidance: batches vary genuinely by vinatero and agave mix; species composition is recorded only when a source documents the actual batch.",
+      "sustainability": "Wild-harvested; batch composition is evidence-led, never assumed."
     },
     {
       "id": "agave-potatorum",
@@ -215,7 +245,12 @@
       ],
       "profileIds": [
         "mezcal-tobala-sierra-oaxaca"
-      ]
+      ],
+      "atAGlance": "Tobalá, the small high-altitude 'king of agaves' of Oaxaca's Sierra Norte — mostly wild, some cultivated.",
+      "whereItGrows": "High mountains of Oaxaca's Sierra Norte (and beyond); 12–15 year maturity at altitude.",
+      "harvestProduction": "Wild-harvested traditionally; some producers now cultivate or reforest. Pit roast, stone mill, wild fermentation; clay or copper stills.",
+      "sensoryTendencies": "Editorial guidance: typically lighter and more floral than espadín; a cited blind tasting of eight tobalás found no single common thread — wild and cultivated batches taste noticeably different.",
+      "sustainability": "Seed-only reproduction makes cultivation slow, so wild populations are under pressure; some producers cultivate or reforest (the cited Montelobos entry is 100% cultivated)."
     },
     {
       "id": "dasylirion-desert-spoon",
@@ -244,7 +279,12 @@
       ],
       "profileIds": [
         "sotol-chihuahua"
-      ]
+      ],
+      "atAGlance": "Desert spoon — sotol's plant. Not an agave: Dasylirion is a related genus in the Asparagaceae family.",
+      "whereItGrows": "The Chihuahuan desert of northern México (Chihuahua, Coahuila, Durango), 8–12 years to maturity.",
+      "harvestProduction": "Wild-harvested; piña pit-roasted in conical ovens (or steam-cooked by larger producers), wild-fermented, distilled in copper or clay. Roots can be left intact so the plant regrows.",
+      "sensoryTendencies": "Editorial guidance: earthy and smoky-herbal; the genus distinction means sotol is never presented as an agave spirit.",
+      "sustainability": "A single plant yields roughly one bottle, so sustainable harvest (roots left to regrow) and conservation programs matter."
     },
     {
       "id": "agave-rhodacantha",
@@ -273,7 +313,12 @@
       "sourceIds": [
         "mezcalreviews-raicilla-category",
         "wikipedia-raicilla"
-      ]
+      ],
+      "atAGlance": "A coastal-Jalisco raicilla agave, used alongside chico aguiar (angustifolia) in the Costa tradition.",
+      "whereItGrows": "Coastal mountains and canyons of southwestern Jalisco, around Cabo Corrientes.",
+      "harvestProduction": "Wild and cultivated; underground pit roast, wild-yeast fermentation, small-batch distillation.",
+      "sensoryTendencies": "Editorial guidance: contributes to Costa raicilla's profile alongside chico aguiar; common names for coastal Jalisco agaves vary by locality and taberna.",
+      "sustainability": "Mixed wild/cultivated; regional names are preserved without resolving species debates."
     }
   ]
 }
