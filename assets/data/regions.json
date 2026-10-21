@@ -6,10 +6,20 @@
       "type": "subregion",
       "stateId": "jal",
       "geography": "Low valley around the town of Tequila; volcanic soils, warmer and drier than the highlands.",
-      "traditionIds": ["tequila"],
-      "plantIds": ["agave-tequilana"],
-      "processIds": ["steam-cook"],
-      "distinctions": "Agave grows smaller and more herbaceous than highland agave; valley blancos read savory and vegetal in editorial guidance — a cultural description, not a legal boundary."
+      "traditionIds": [
+        "tequila"
+      ],
+      "plantIds": [
+        "agave-tequilana"
+      ],
+      "processIds": [
+        "steam-cook"
+      ],
+      "distinctions": "Agave grows smaller and more herbaceous than highland agave; valley blancos read savory and vegetal in editorial guidance — a cultural description, not a legal boundary.",
+      "sourceIds": [
+        "diffords-tequila-made",
+        "diffords-tequila-category"
+      ]
     },
     {
       "id": "tequila-highlands-jal",
@@ -17,10 +27,21 @@
       "type": "subregion",
       "stateId": "jal",
       "geography": "High plateau east of the valley (around Arandas and the La Alteña area); red mineral soils, cooler nights.",
-      "traditionIds": ["tequila"],
-      "plantIds": ["agave-tequilana"],
-      "processIds": ["steam-cook", "wood-maturation"],
-      "distinctions": "Highland agave reads sweeter and more floral in editorial guidance; some traditionalists stone-roast. A cultural/agronomic distinction, not a legal class."
+      "traditionIds": [
+        "tequila"
+      ],
+      "plantIds": [
+        "agave-tequilana"
+      ],
+      "processIds": [
+        "steam-cook",
+        "wood-maturation"
+      ],
+      "distinctions": "Highland agave reads sweeter and more floral in editorial guidance; some traditionalists stone-roast. A cultural/agronomic distinction, not a legal class.",
+      "sourceIds": [
+        "diffords-tequila-category",
+        "wikipedia-tequila"
+      ]
     },
     {
       "id": "valles-centrales-oax",
@@ -28,10 +49,21 @@
       "type": "subregion",
       "stateId": "oax",
       "geography": "Valley system around Oaxaca City, including Santiago Matatlán and Tlacolula.",
-      "traditionIds": ["mezcal"],
-      "plantIds": ["agave-angustifolia"],
-      "processIds": ["pit-roast", "wild-fermentation", "distillation-methods"],
-      "distinctions": "Heartland of palenque mezcal; pechuga is a specific distillation tradition here, not a category of its own."
+      "traditionIds": [
+        "mezcal"
+      ],
+      "plantIds": [
+        "agave-angustifolia"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "Heartland of palenque mezcal; pechuga is a specific distillation tradition here, not a category of its own.",
+      "sourceIds": [
+        "diffords-mezcal-what-it-is"
+      ]
     },
     {
       "id": "sierra-norte-oax",
@@ -39,10 +71,21 @@
       "type": "subregion",
       "stateId": "oax",
       "geography": "High mountains north of the valleys; high-altitude wild agave country.",
-      "traditionIds": ["mezcal"],
-      "plantIds": ["agave-potatorum"],
-      "processIds": ["pit-roast", "wild-fermentation", "distillation-methods"],
-      "distinctions": "Tobalá grows here and beyond; finding a mature tobalá is a matter of personal pride for a mezcalero — a cultural note, not a legal area."
+      "traditionIds": [
+        "mezcal"
+      ],
+      "plantIds": [
+        "agave-potatorum"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "Tobalá grows here and beyond; finding a mature tobalá is a matter of personal pride for a mezcalero — a cultural note, not a legal area.",
+      "sourceIds": [
+        "mezcalreviews-tobala-category"
+      ]
     },
     {
       "id": "sierra-sonora",
@@ -50,10 +93,21 @@
       "type": "subregion",
       "stateId": "son",
       "geography": "Mountain municipalities (Aconchi, Álamos, San Pedro de la Cueva, and neighbors) where bacanora vinatas work.",
-      "traditionIds": ["bacanora"],
-      "plantIds": ["agave-angustifolia"],
-      "processIds": ["pit-roast", "wild-fermentation", "distillation-methods"],
-      "distinctions": "Bacanora's official coverage is municipal within Sonora (since the 2000 DO), never the whole state."
+      "traditionIds": [
+        "bacanora"
+      ],
+      "plantIds": [
+        "agave-angustifolia"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "Bacanora's official coverage is municipal within Sonora (since the 2000 DO), never the whole state.",
+      "sourceIds": [
+        "mezcalistas-bacanora-tradition"
+      ]
     },
     {
       "id": "sierra-occidental-jal",
@@ -61,10 +115,21 @@
       "type": "subregion",
       "stateId": "jal",
       "geography": "Mountain country west of Guadalajara, around La Vieja and the Sierra de Talpa.",
-      "traditionIds": ["raicilla"],
-      "plantIds": ["agave-maximiliana"],
-      "processIds": ["wild-fermentation", "distillation-methods"],
-      "distinctions": "Sierra raicilla taberna country; the DO declaration names specific municipalities in Jalisco, so no whole-state shading."
+      "traditionIds": [
+        "raicilla"
+      ],
+      "plantIds": [
+        "agave-maximiliana"
+      ],
+      "processIds": [
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "Sierra raicilla taberna country; the DO declaration names specific municipalities in Jalisco, so no whole-state shading.",
+      "sourceIds": [
+        "mezcalreviews-raicilla-category",
+        "wikipedia-raicilla"
+      ]
     },
     {
       "id": "costa-sur-jal",
@@ -72,10 +137,22 @@
       "type": "subregion",
       "stateId": "jal",
       "geography": "Coastal mountains and canyons of southwestern Jalisco, around Cabo Corrientes.",
-      "traditionIds": ["raicilla"],
-      "plantIds": ["agave-angustifolia", "agave-rhodacantha"],
-      "processIds": ["pit-roast", "wild-fermentation", "distillation-methods"],
-      "distinctions": "Costa is an editorial tradition split of raicilla, not a legal class."
+      "traditionIds": [
+        "raicilla"
+      ],
+      "plantIds": [
+        "agave-angustifolia",
+        "agave-rhodacantha"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "Costa is an editorial tradition split of raicilla, not a legal class.",
+      "sourceIds": [
+        "mezcalreviews-raicilla-category"
+      ]
     },
     {
       "id": "jalisco-colima-borderlands",
@@ -83,10 +160,21 @@
       "type": "subregion",
       "stateId": "jal",
       "geography": "Southern Jalisco river canyons around Tuxcacuesco and Zapotitlán de Vadillo, reaching toward Colima.",
-      "traditionIds": ["tuxca"],
-      "plantIds": ["tuxca-wild-agaves"],
-      "processIds": ["pit-roast", "wild-fermentation", "distillation-methods"],
-      "distinctions": "Tuxca has no denomination of origin; vinatero practice is cultural, and bottles carry no NOM — that is a legal fact, not an authenticity judgment."
+      "traditionIds": [
+        "tuxca"
+      ],
+      "plantIds": [
+        "tuxca-wild-agaves"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "Tuxca has no denomination of origin; vinatero practice is cultural, and bottles carry no NOM — that is a legal fact, not an authenticity judgment.",
+      "sourceIds": [
+        "mexicanspiritsbible-tuxca"
+      ]
     },
     {
       "id": "comitan-chiapas",
@@ -94,10 +182,21 @@
       "type": "municipality",
       "stateId": "chis",
       "geography": "Highland plateau of central Chiapas around Comitán de Domínguez.",
-      "traditionIds": ["comiteco"],
-      "plantIds": ["agave-atrovirens"],
-      "processIds": ["sap-collection", "distillation-methods", "glass-resting"],
-      "distinctions": "Comiteco is a regional tradition without a DO; composition (agave vs cane sugars) is verified per bottle, never assumed."
+      "traditionIds": [
+        "comiteco"
+      ],
+      "plantIds": [
+        "agave-atrovirens"
+      ],
+      "processIds": [
+        "sap-collection",
+        "distillation-methods",
+        "glass-resting"
+      ],
+      "distinctions": "Comiteco is a regional tradition without a DO; composition (agave vs cane sugars) is verified per bottle, never assumed.",
+      "sourceIds": [
+        "backalley-comiteco"
+      ]
     },
     {
       "id": "tlaxcala-central",
@@ -105,10 +204,22 @@
       "type": "municipality",
       "stateId": "tlax",
       "geography": "Pulque heartland on the Tlaxcala–State of México highlands.",
-      "traditionIds": ["destilado-de-pulque"],
-      "plantIds": ["agave-salmiana"],
-      "processIds": ["sap-collection", "wild-fermentation", "distillation-methods"],
-      "distinctions": "Destilado de pulque is a regional tradition, explicitly not mezcal; fermented pulque itself is not a spirit and stays out of the catalogue."
+      "traditionIds": [
+        "destilado-de-pulque"
+      ],
+      "plantIds": [
+        "agave-salmiana"
+      ],
+      "processIds": [
+        "sap-collection",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "Destilado de pulque is a regional tradition, explicitly not mezcal; fermented pulque itself is not a spirit and stays out of the catalogue.",
+      "sourceIds": [
+        "mezcalistas-juerte",
+        "skurnik-estancia"
+      ]
     },
     {
       "id": "chihuahua-norte",
@@ -116,10 +227,21 @@
       "type": "subregion",
       "stateId": "chih",
       "geography": "Sierra and desert country of northern Chihuahua, from the Sierra to Delicias.",
-      "traditionIds": ["sotol"],
-      "plantIds": ["dasylirion-desert-spoon"],
-      "processIds": ["pit-roast", "wild-fermentation", "distillation-methods"],
-      "distinctions": "Sotol's DO (2002) covers Chihuahua, Coahuila and Durango; Dasylirion is not an agave, and the app keeps that explicit."
+      "traditionIds": [
+        "sotol"
+      ],
+      "plantIds": [
+        "dasylirion-desert-spoon"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "Sotol's DO (2002) covers Chihuahua, Coahuila and Durango; Dasylirion is not an agave, and the app keeps that explicit.",
+      "sourceIds": [
+        "wikipedia-sotol"
+      ]
     }
   ]
 }
