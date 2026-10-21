@@ -398,7 +398,7 @@ Acceptance: comparisons communicate what differs and why, respecting uncertainty
 
 ### Release 24 — Comparison & Navigation Review & Fixes
 
-Apply the maintenance protocol. Audit comparison summary accuracy, perspective support, recommendation relevance and determinism, cross-link context preservation, and focus after view changes. Deploy corrections.
+Applied (see Release 24 notes in RELEASE_NOTES.md). Audit comparison summary accuracy, perspective support, recommendation relevance and determinism, cross-link context preservation, and focus after view changes. Deploy corrections.
 
 ### Release 25 — Editorial Enrichment & Bottle Depth
 

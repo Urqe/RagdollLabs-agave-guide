@@ -77,12 +77,15 @@ test/                       node:test suites (jsdom)
 
 ## Scope notes
 
-- Mexican agave-based distilled spirits only; sotol and other non-agave spirits
-  are excluded.
-- Seven traditions covered: tequila, mezcal, bacanora (Sonora), raicilla
+- Mexican agave-based distilled spirits, plus sotol (Chihuahua) as the one
+  explicitly disclosed non-agave tradition: the app covers it as an
+  agave-adjacent tradition, and its Dasylirion plant page states the
+  not-an-agave distinction up front. Other non-agave spirits remain
+  excluded.
+- Eight traditions covered: tequila, mezcal, bacanora (Sonora), raicilla
   (Jalisco/Nayarit), tuxca (Jalisco–Colima borderlands), comiteco
-  (Chiapas) and destilado de pulque (Tlaxcala) — each a bounded style
-  profile with one example bottle. Regional traditions state their real
+  (Chiapas), destilado de pulque (Tlaxcala) and sotol (Chihuahua) — each a
+  bounded style profile with one example bottle. Regional traditions state their real
   legal status (several have no denomination of origin), sap-derived
   traditions are labeled as such, and comiteco carries an explicit
   composition disclosure.
