@@ -363,11 +363,12 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   return section;
 }
 
-export function renderProfileNotFound(container, profileId) {
+export function renderProfileNotFound(container, profileId, locale = null) {
   clear(container);
+  const t = (key, english) => (locale ? locale.t(key) : english);
   const section = el("section", { class: "profile-view" });
-  section.appendChild(el("a", { href: "#/explore", class: "back-link" }, "← Back to explore"));
-  section.appendChild(el("h2", {}, "Profile not found"));
-  section.appendChild(el("p", {}, `No profile exists with the id “${profileId}”.`));
+  section.appendChild(el("a", { href: "#/explore", class: "back-link" }, t("profile.backExplore", "← Back to explore")));
+  section.appendChild(el("h2", {}, t("profile.notFound", "Profile not found")));
+  section.appendChild(el("p", {}, t("profile.notFoundBody", "No profile exists with the id “{id}”.").replace("{id}", profileId)));
   container.appendChild(section);
 }

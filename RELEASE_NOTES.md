@@ -1322,3 +1322,74 @@ pinned by a dedicated test.
 - Cross-tradition trio comparisons could rank perspectives; current
   detection is binary (present/absent) per perspective.
 - Native-device rendering still unverified in this environment.
+
+## Release 24 — Comparison & Navigation Review & Fixes
+
+Maintenance release per the plan's protocol: audit of the Release 23
+comparison intelligence plus comparison interpretation,
+recommendation relevance and determinism, cross-link context
+preservation, and focus after view changes.
+
+### Findings and fixes
+
+- **Stale README scope note (defect found):** the README claimed
+  "sotol and other non-agave spirits are excluded" and listed seven
+  traditions, but the catalogue has carried an owner-approved sotol
+  profile (Chihuahua, Clande Yellow example) and a Dasylirion plant
+  page since the sotol policy change. The scope note now states the
+  actual coverage: eight traditions with sotol as the one explicitly
+  disclosed agave-adjacent tradition, other non-agave spirits still
+  excluded. A regression test pins the README against the sotol
+  profile in the data.
+- **Not-found view ignored its locale (defect found):** app.js passes
+  `locale` to `renderProfileNotFound`, but the function ignored it —
+  an unknown profile id rendered hardcoded English ("Profile not
+  found", "← Back to explore") inside the Spanish UI, and the old
+  locale-acceptance test had to allow either language. The view now
+  localizes via the standard string table (`profile.notFound`,
+  `profile.notFoundBody`, `profile.backExplore`), with English
+  defaults for direct callers without a locale. The Spanish check is
+  now strict (no English fallback allowed) and English behavior is
+  pinned separately.
+- **Comparison summary accuracy (verified, no defect):** the
+  summary's difference line uses `biggestDifferences` levels indexed
+  in the same order as the rendered columns; ties sort deterministically
+  by dimension key; profiles missing a sensory level are excluded
+  from difference claims (null-sensory tests still pass).
+- **Perspective support (verified, no defect):** all five Release 23
+  perspectives carry evidence and render in Spanish without raw keys
+  leaking; perspective claims are binary present/absent per the
+  honest no-invention rule.
+- **Recommendation determinism (verified, no defect):**
+  `ifYouLikeThis` iterates candidates in data order and slices to a
+  fixed maximum, so identical inputs produce identical suggestions;
+  every suggestion still names its shared attributes.
+- **Cross-link context preservation (verified, no defect):**
+  suggestion links keep `from`/`origin` params, explore-next links
+  carry `origin=profile:<id>`, and the back-link matrix
+  (catalogue/discover/profile/explore) is covered by existing
+  regression tests that still pass.
+- **Focus after view changes (verified, no defect):** comparison
+  picker focus restores to the acted-on button; list views restore
+  scroll from captured snapshots; `main` regains focus after each
+  route render. Same-route re-renders preserve expanded disclosures.
+- **Unverified concern, not acted on:** the explore-next
+  "adventurous" pick hardcodes the tradition list
+  (tuxca/comiteco/destilado-de-pulque/sotol) in two places
+  (profile.js, discovery-view.js). Behavior is correct for current
+  data; deferred deduplication since no defect was demonstrated and
+  Release 25 will touch discovery threads anyway.
+
+### Checks run
+
+- `npm run validate` — schema plus 206 node:test/jsdom suites (2 new
+  Release 24 tests). All passing.
+- Manual DOM audit of the compare view against the blanco/reposado
+  pair (perspectives, difference line, Spanish rendering) and of the
+  not-found route in both locales.
+
+### Remaining issues / deferred
+
+- Perspective ranking for cross-tradition trios (carried over from
+  Release 23).
+- Native Safari/VoiceOver checks still unverified in this environment.

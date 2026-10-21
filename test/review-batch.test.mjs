@@ -318,3 +318,29 @@ test("editorial mechanism: ES field when translated, English plus disclosure whe
     "untranslated context carries the per-section disclosure");
   setContentEs({});
 });
+
+test("R24: the not-found view localizes in Spanish", async () => {
+  const { renderProfileNotFound } = await import("../assets/js/profile.js");
+  const root = document.createElement("div");
+  renderProfileNotFound(root, "no-existe", es);
+  assert.ok(root.textContent.includes("Perfil no encontrado"), "heading is Spanish");
+  assert.ok(root.textContent.includes("no-existe"), "the unknown id is shown");
+  assert.ok(root.textContent.includes("Volver a explorar"), "back link is Spanish");
+  assert.ok(!root.textContent.includes("Profile not found"), "no English fallback leaks");
+
+  const enRoot = document.createElement("div");
+  renderProfileNotFound(enRoot, "does-not-exist", locale);
+  assert.ok(enRoot.textContent.includes("Profile not found"), "English still works");
+  assert.ok(enRoot.textContent.includes("Back to explore"), "English back link");
+});
+
+test("R24: the README scope note matches actual sotol coverage", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const readme = await readFile("README.md", "utf8");
+  assert.ok(!/sotol and other non-agave spirits\s+are excluded/.test(readme),
+    "stale blanket sotol exclusion removed");
+  assert.ok(/sotol \(Chihuahua\)/.test(readme), "sotol's disclosed coverage stated");
+  assert.ok(/not-an-agave/.test(readme), "Dasylirion distinction stated");
+  const hasSotolProfile = profiles.some((p) => p.traditionId === "sotol");
+  assert.ok(hasSotolProfile, "fixture sanity: sotol profile exists");
+});
