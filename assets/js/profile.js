@@ -59,6 +59,28 @@ function collapsibleBottleSources(sources, bottle, t, locale = null) {
   return details;
 }
 
+
+/** Release 21: related destinations with a short why-relevant explanation. */
+function exploreNextLinks(profile, allProfiles, locale) {
+  const t = (key) => (locale ? locale.t(key) : key);
+  const out = [];
+  const title = (p) => localizedTitle("profile", p.id, p.title, locale);
+  const href = (p) => `#/profile/${encodeURIComponent(p.id)}`;
+  // Same plant, different region
+  const samePlant = allProfiles.find((p) => p.id !== profile.id && (p.plantIds || []).some((pid) => (profile.plantIds || []).includes(pid)) && p.regionIds[0] !== profile.regionIds[0]);
+  if (samePlant) out.push({ label: t("profile.exploreSamePlant"), profile: samePlant, reason: title(samePlant) });
+  // Same tradition, different method (different processIds)
+  const sameTradition = allProfiles.find((p) => p.id !== profile.id && p.traditionId === profile.traditionId && JSON.stringify([...(p.processIds || [])].sort()) !== JSON.stringify([...(profile.processIds || [])].sort()));
+  if (sameTradition) out.push({ label: t("profile.exploreSameTradition"), profile: sameTradition, reason: title(sameTradition) });
+  // Similar character (sensory overlap)
+  const similar = ifYouLikeThis(profile, allProfiles, { maxSuggestions: 1 }).map((x) => x.profile)[0];
+  if (similar) out.push({ label: t("profile.exploreSimilar"), profile: similar, reason: title(similar) });
+  // More adventurous (different tradition entirely)
+  const adventurous = allProfiles.find((p) => p.id !== profile.id && p.traditionId !== profile.traditionId && ["tuxca", "comiteco", "destilado-de-pulque", "sotol"].includes(p.traditionId) && !out.some((x) => x.profile.id === p.id));
+  if (adventurous) out.push({ label: t("profile.exploreAdventurous"), profile: adventurous, reason: title(adventurous) });
+  return out;
+}
+
 /**
  * Profile view: title, place/style context, description, body, taste notes,
  * smoke (where relevant), finish, one example bottle card and source links.
@@ -276,11 +298,56 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   clear(section);
   section.append(back, identity, guidanceNote, core, action);
   if (beginnerNode) section.appendChild(beginnerNode);
-  if (pairingNode) section.appendChild(pairingNode);
-  if (bottleNode) section.appendChild(bottleNode);
-  if (moreNode) section.appendChild(moreNode);
-  if (suggestionsHeading) section.appendChild(suggestionsHeading);
-  if (suggestionsNode) section.appendChild(suggestionsNode);
+
+  // Release 21 redesign: visible "special" statement, character (the
+  // sensory overview already rendered in core), "why it tastes this way",
+  // "how to enjoy it", example bottles, then explore-next with reasons.
+  if (profile.whyItTastes) {
+    const whyBlock = el("section", { class: "profile-why", "aria-labelledby": "why-heading" });
+    whyBlock.appendChild(el("h2", { id: "why-heading" }, t("profile.why")));
+    const whyText = editorialText("profile", profile.id, "whyItTastes", profile.whyItTastes, locale);
+    const whyP = el("p", {}, whyText.text);
+    if (!whyText.translated) whyP.appendChild(el("span", { class: "editorial-note untranslated-field" }, " " + ui(locale, "partialDisclosure")));
+    whyBlock.appendChild(whyP);
+    whyBlock.appendChild(el("p", { class: "editorial-note" }, t("profile.whyNote")));
+    section.appendChild(whyBlock);
+  }
+
+  if (pairingNode) {
+    const enjoyBlock = el("section", { class: "profile-enjoy", "aria-labelledby": "enjoy-heading" });
+    enjoyBlock.appendChild(el("h2", { id: "enjoy-heading" }, t("profile.enjoy")));
+    enjoyBlock.appendChild(pairingNode);
+    section.appendChild(enjoyBlock);
+  }
+
+  if (bottleNode || moreNode) {
+    const bottlesBlock = el("section", { class: "profile-bottles", "aria-labelledby": "bottles-heading" });
+    bottlesBlock.appendChild(el("h2", { id: "bottles-heading" }, t("profile.exampleBottle")));
+    if (bottleNode) bottlesBlock.appendChild(bottleNode);
+    if (moreNode) bottlesBlock.appendChild(moreNode);
+    section.appendChild(bottlesBlock);
+  }
+
+  if (suggestionsHeading || suggestionsNode) {
+    const nextBlock = el("section", { class: "profile-next", "aria-labelledby": "next-heading" });
+    nextBlock.appendChild(el("h2", { id: "next-heading" }, t("profile.exploreNext")));
+    if (suggestionsNode) nextBlock.appendChild(suggestionsNode);
+    const destinations = exploreNextLinks(profile, allProfiles, locale);
+    if (destinations.length) {
+      const list = el("ul", { class: "discovery-matches" });
+      for (const d of destinations) {
+        const li = el("li");
+        const a = el("a", { class: "discovery-card", href: d.profile ? `#/profile/${encodeURIComponent(d.profile.id)}` : "#" });
+        a.appendChild(el("span", { class: "eyebrow" }, d.label));
+        a.appendChild(el("strong", {}, d.reason));
+        li.appendChild(a);
+        list.appendChild(li);
+      }
+      nextBlock.appendChild(list);
+    }
+    section.appendChild(nextBlock);
+  }
+
   section.append(details, references);
 
   container.appendChild(section);

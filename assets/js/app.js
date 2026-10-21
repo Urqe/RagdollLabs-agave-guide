@@ -7,6 +7,7 @@ import { renderCompare } from "./compare-view.js";
 import { renderCatalogue } from "./catalogue-view.js";
 import { renderLearn } from "./learn-view.js";
 import { renderDiscover } from "./discovery-view.js";
+import { renderPlantPage, renderTraditionPage } from "./plant-tradition-view.js";
 import { createLocale } from "./locale.js";
 import { renderHome, ui } from "./presentation.js";
 import { getCompareSelection, setCompareSelection } from "./compare-selection.js";
@@ -90,6 +91,43 @@ async function renderRoute(container, route) {
     return;
   }
 
+  if (route.name === "plant") {
+    state.exploreApi = null;
+    const plant = state.data.plants.find((x) => x.id === route.params.plantId);
+    if (plant) {
+      renderPlantPage(container, {
+        plant,
+        plants: state.data.plants,
+        regions: state.data.regions,
+        traditions: state.data.traditions,
+        profiles,
+        sources,
+        locale,
+      });
+    } else {
+      renderProfileNotFound(container, route.params.plantId, locale);
+    }
+    return;
+  }
+  if (route.name === "tradition") {
+    state.exploreApi = null;
+    const tradition = state.data.traditions.find((x) => x.id === route.params.traditionId);
+    if (tradition) {
+      renderTraditionPage(container, {
+        tradition,
+        traditions: state.data.traditions,
+        regions: state.data.regions,
+        plants: state.data.plants,
+        profiles,
+        bottles,
+        sources,
+        locale,
+      });
+    } else {
+      renderProfileNotFound(container, route.params.traditionId, locale);
+    }
+    return;
+  }
   if (route.name === "discover") {
     state.exploreApi = null;
     renderDiscover(container, {

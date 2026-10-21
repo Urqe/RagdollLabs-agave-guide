@@ -484,6 +484,25 @@ for (const term of glossary) {
   }
 }
 
+// Release 21: richer profiles — why-it-tastes text required on every
+// profile, ES parity for it, and the enriched plant structure.
+for (const p of profiles) {
+  if (!p.whyItTastes || typeof p.whyItTastes !== "string" || p.whyItTastes.length < 80) {
+    fail(`profile ${p.id}: whyItTastes (evidence-based cause-and-effect) required`);
+  }
+  const esEntry = (contentEsAll.profiles || {})[p.id];
+  if (!esEntry || typeof esEntry.whyItTastes !== "string" || !esEntry.whyItTastes.trim()) {
+    fail(`content-es.json: profile ${p.id} whyItTastes missing Spanish translation`);
+  }
+}
+for (const plant of plants) {
+  for (const field of ["atAGlance", "whereItGrows", "harvestProduction", "sensoryTendencies", "sustainability"]) {
+    if (!plant[field] || typeof plant[field] !== "string") {
+      fail(`plant ${plant.id}: ${field} required for the dedicated plant page`);
+    }
+  }
+}
+
 // SVG sanity: 32 state paths with data-state.
 const svg = await readFile(path.join(root, "assets/geo/mexico-states.svg"), "utf8");
 const svgStates = [...svg.matchAll(/data-state="([a-z]+)"/g)].map((m) => m[1]);

@@ -15,7 +15,8 @@
           "ceviche",
           "queso fresco con chile"
         ]
-      }
+      },
+      "whyItTastes": "El agave del valle crece más pequeño y más herbáceo que el del altiplano, y los productores tradicionales del valle muelen con tahona y fermentan en tinas abiertas — el filo salado y terroso sigue del lugar más el método, nunca de la edad ni del precio. Sin crianza por definición, así que el agave cocido mismo carga la copa."
     },
     "mezcal-espadin-valles-centrales": {
       "title": "Mezcal de espadín, estilo Valles Centrales",
@@ -33,7 +34,8 @@
           "carnes asadas",
           "verduras asadas"
         ]
-      }
+      },
+      "whyItTastes": "El asado en pozo de tierra cocina el espadín lentamente sobre leña — de ahí viene el carácter de asado (cuánto humo varía con la leña, el tiempo y el pozo). La fermentación con levaduras silvestres y la molienda en tahona aportan textura; joven significa que ningún roble se interpone entre tú y la cocción."
     },
     "bacanora-pacifica-sierra-sonora": {
       "title": "Bacanora, estilo Agave Pacifica (Sierra de Sonora)",
@@ -51,7 +53,8 @@
           "queso sonorense (queso cocido)",
           "platillos con salsa de chiltepín"
         ]
-      }
+      },
+      "whyItTastes": "Agave Pacifica/Yaquiana silvestre de la sierra sonorense, asado en pozo (a menudo sobre mezquite) y fermentado con levaduras silvestres — el carácter herbal y suavemente ahumado sigue de la cosecha silvestre más el asado en pozo. La doble destilación lo mantiene limpio sobre el asado."
     },
     "raicilla-maximiliana-sierra-jalisco": {
       "title": "Raicilla de la sierra, estilo Maximiliana (Jalisco)",
@@ -69,7 +72,8 @@
           "mole",
           "quesos madurados"
         ]
-      }
+      },
+      "whyItTastes": "Maximiliana silvestre de las montañas de Jalisco, asada en hornos de adobe sobre el suelo y no en pozos — menos humo que las tradiciones de pozo — luego fermentada al aire en tinas de madera y destilada en pequeños lotes. El filo herbal rústico sigue de la planta silvestre, el asado en horno y la escala de lote."
     },
     "tuxca-lineno-cimarron-jalisco-colima": {
       "title": "Tuxca, estilo Liñeno/Cimarrón (frontera Jalisco–Colima)",
@@ -87,7 +91,8 @@
           "queso fresco con tortillas",
           "mariscos colimenses"
         ]
-      }
+      },
+      "whyItTastes": "Agaves silvestres Liñeño/Cimarrón, asado en pozo cilíndrico, machacado a mano, fermentación en un filtro de cráter volcánico y alambique filipino de madera — una cadena de métodos inusualmente específica que deja un carácter cocido-silvestre distintivo, variando lote a lote con la mezcla de agaves."
     },
     "comiteco-aguamiel-chiapas": {
       "title": "Comiteco, estilo aguamiel (Comitán, Chiapas)",
@@ -104,7 +109,8 @@
           "quesos ahumados",
           "postres con café"
         ]
-      }
+      },
+      "whyItTastes": "Sin ningún asado: la savia (aguamiel) del maguey comiteco vivo se recolecta, fermenta y destila. Todo en la copa sigue de ese camino de savia — por eso el comiteco no se lee nada como un destilado de piña cocida."
     },
     "destilado-de-pulque-salmiana-tlaxcala": {
       "title": "Destilado de pulque, estilo Salmiana (Tlaxcala)",
@@ -121,7 +127,8 @@
           "mixiotes",
           "platillos con maíz"
         ]
-      }
+      },
+      "whyItTastes": "El aguamiel del maguey pulquero vivo se fermenta en pulque (~48 horas) y luego se destila; la piña nunca se cocina. El perfil sigue la savia, no el asado."
     },
     "raicilla-costa-jalisco": {
       "title": "Raicilla de la costa, estilo costero (Jalisco)",
@@ -139,7 +146,8 @@
           "mariscos con chile",
           "cocina costera"
         ]
-      }
+      },
+      "whyItTastes": "Agaves chico aguiar y rhodacantha de la costa, asado en pozo subterráneo y fermentación silvestre en los cañones de Cabo Corrientes — una mezcla de plantas y un asado distintos de la tradición de la Sierra, y por eso la raicilla de la Costa y la de la Sierra divergen."
     },
     "tequila-reposado-valley-jalisco": {
       "title": "Tequila reposado, estilo Valle de Tequila",
@@ -156,7 +164,8 @@
           "carnes asadas",
           "quesos madurados"
         ]
-      }
+      },
+      "whyItTastes": "La misma base del valle que el blanco, reposada en roble el mínimo legal de dos meses (típicamente 2–12): el roble suaviza el filo vegetal y aporta especias suaves, sin borrar el agave cocido debajo."
     },
     "tequila-anejo-valley-jalisco": {
       "title": "Tequila añejo, estilo Valle de Tequila",
@@ -173,7 +182,8 @@
           "mole",
           "bistec asado"
         ]
-      }
+      },
+      "whyItTastes": "Un año o más en roble (típicamente barricas ex-bourbon): la madera ahora habla claro — vainilla y caramelo sobre el agave — pero «más viejo es mejor» es marketing, no una regla de sabor."
     },
     "tequila-cristalino-style": {
       "title": "Tequila cristalino, estilo",
@@ -189,7 +199,8 @@
           "botanas ligeras",
           "postres de fruta fresca"
         ]
-      }
+      },
+      "whyItTastes": "Elaborado como reposado o añejo reposado en roble y luego filtrado con carbón hasta dejarlo claro: el filtrado retira el color y, con él, algo de sabor. Lo que queda lleva influencia de madera pero parece blanco — una elección de acabado, no una clase legal."
     },
     "comiteco-anejo-comitan-chiapas": {
       "title": "Comiteco añejo, reposado en vidrio con ramas de encino (Comitán, Chiapas)",
@@ -206,7 +217,8 @@
           "quesos madurados",
           "postres con canela"
         ]
-      }
+      },
+      "whyItTastes": "De savia como el blanco, luego reposado en vidrio con ramas de encino — un toque de madera suave sin maduración en barrica, y el añejo aquí es una expresión del productor, no una clase legal como la del tequila."
     },
     "raicilla-reposado-jalisco": {
       "title": "Raicilla reposado, estilo reposado en barrica (Jalisco)",
@@ -224,7 +236,8 @@
           "fruta fresca",
           "platillos con mole suave"
         ]
-      }
+      },
+      "whyItTastes": "Fermentado y destilado (la botella de ejemplo indica acero inoxidable), luego reposado en barricas de madera unos tres meses: un reposo corto del mínimo legal que redondea la raicilla sin convertirla en otra cosa."
     },
     "tequila-extra-anejo-highland-jalisco": {
       "title": "Tequila extra añejo, estilo de los altos (Jalisco)",
@@ -241,7 +254,8 @@
           "postres para acompañar puros",
           "queso madurado"
         ]
-      }
+      },
+      "whyItTastes": "El agave del altiplano, de suelos rojos minerales, se lee más dulce y floral que el del valle; tres años o más en roble (típicamente ex-bourbon americano) empujan el destilado firmemente hacia la madera mientras la fruta del altiplano se mantiene debajo."
     },
     "mezcal-reposado-espadin-oaxaca": {
       "title": "Mezcal reposado, estilo espadín con reposo breve en barrica (Valles Centrales, Oaxaca)",
@@ -259,7 +273,8 @@
           "carnitas",
           "elote asado"
         ]
-      }
+      },
+      "whyItTastes": "La misma base de espadín asado en pozo que el joven, reposada en roble de 2 a 12 meses (la botella de ejemplo indica 4–6 en roble americano): el asado queda, suavizado por la madera. Nota: el mínimo de reposado del mezcal difiere del tequila — las reglas no se transfieren."
     },
     "mezcal-tobala-sierra-oaxaca": {
       "title": "Mezcal de tobalá, estilo Agave potatorum silvestre (Sierra, Oaxaca)",
@@ -277,7 +292,8 @@
           "salsas de fruta",
           "tostadas de mariscos"
         ]
-      }
+      },
+      "whyItTastes": "El pequeño tobalá silvestre madura 12–15 años en altitud, dando rendimientos muy bajos y carácter concentrado; el asado en pozo y a menudo la destilación en ollas de barro mantienen la cocción suave. La variación entre lotes es genuina y grande — una cata ciega citada no encontró un solo hilo común."
     },
     "sotol-chihuahua": {
       "title": "Sotol, estilo desierto chihuahuense",
@@ -295,7 +311,8 @@
           "platillos norteños de tortilla de harina",
           "verduras asadas"
         ]
-      }
+      },
+      "whyItTastes": "El Dasylirion (no un agave) se cosecha silvestre tras 8–12 años, se asa en pozos cónicos y se fermenta con levaduras silvestres: el carácter terroso, ahumado-herbal sigue de la planta y la cocción del desierto. Las raíces dejadas intactas dejan la planta rebrotar — la cosecha puede ser sostenible por diseño."
     }
   },
   "bottles": {
@@ -462,31 +479,76 @@
   },
   "plants": {
     "agave-tequilana": {
-      "cultivation": "cultivado (el único agave permitido legalmente para el tequila)"
+      "cultivation": "cultivado (el único agave permitido legalmente para el tequila)",
+      "atAGlance": "El único agave permitido legalmente para el tequila; cultivado a escala en el valle y el altiplano de Jalisco.",
+      "whereItGrows": "Cultivado en el Valle de Tequila y el altiplano de Jalisco (Los Altos), en suelos volcánicos y rojos minerales respectivamente.",
+      "harvestProduction": "Cosechado en madurez (típicamente 5–7 años); el jimador recorta las hojas hasta la piña, que luego se cocina al vapor — nunca por savia.",
+      "sensoryTendencies": "Orientación editorial: el del valle se lee salado y vegetal, el del altiplano más dulce y floral; es orientación de lugar, no un sabor universal.",
+      "sustainability": "Cultivado, así que la presión sobre poblaciones silvestres no es la preocupación que es para agaves de cosecha silvestre."
     },
     "agave-angustifolia": {
-      "cultivation": "cultivado en Oaxaca; silvestre y cultivado en otras regiones"
+      "cultivation": "cultivado en Oaxaca; silvestre y cultivado en otras regiones",
+      "atAGlance": "El gran caballo de batalla de México: espadín en el mezcal de Oaxaca, Pacifica/Yaquiana en la bacanora sonorense, chico aguiar en la raicilla de la costa.",
+      "whereItGrows": "Valles Centrales de Oaxaca (cultivado), la Sierra de Sonora (silvestre) y la costa de Jalisco (silvestre y cultivado).",
+      "harvestProduction": "Cultivado a escala en Oaxaca; de cosecha silvestre en Sonora. Cocido (pozo o vapor), nunca por savia.",
+      "sensoryTendencies": "Orientación editorial: los mezcales de espadín se leen con asado; la Pacifica de la bacanora aporta herbalidad sonorense; los sabores difieren por lugar y proceso, no por el nombre.",
+      "sustainability": "Si la Pacifica/Yaquiana sonorense es la misma planta que el espadín o una variedad local distinta se debate; esta guía conserva los nombres regionales sin zanjar la botánica."
     },
     "agave-maximiliana": {
-      "cultivation": "cosecha silvestre"
+      "cultivation": "cosecha silvestre",
+      "atAGlance": "El agave insignia de la raicilla de la Sierra de Jalisco, de cosecha silvestre; localmente también llamado lechuguilla (sin relación con la planta sonorense de ese nombre).",
+      "whereItGrows": "El país de las montañas de la Sierra Occidental de Jalisco, alrededor de La Vieja y la Sierra de Talpa.",
+      "harvestProduction": "Cosecha silvestre; asado en hornos de adobe sobre el suelo, fermentación con levaduras silvestres, destilación en pequeños lotes.",
+      "sensoryTendencies": "Orientación editorial: la raicilla de la Sierra se lee herbal y rústica; la cosecha silvestre implica variación genuina entre lotes.",
+      "sustainability": "De cosecha silvestre; el nombre local se solapa con otras especies en otras regiones, por eso esta guía registra los nombres con sus regiones."
     },
     "agave-atrovirens": {
-      "cultivation": "cultivado; savia recolectada de la planta viva (sin cocción)"
+      "cultivation": "cultivado; savia recolectada de la planta viva (sin cocción)",
+      "atAGlance": "Maguey Comiteco, el agave de savia de Comitán, Chiapas; la base del comiteco.",
+      "whereItGrows": "Cultivado en el altiplano central de Chiapas, alrededor de Comitán de Domínguez.",
+      "harvestProduction": "Cultivado; la planta viva se raspa y su aguamiel se recolecta a diario — la piña nunca se cocina.",
+      "sensoryTendencies": "Orientación editorial: el comiteco, de savia, carece por completo de carácter de asado; algunas botellas declaradas incluyen azúcar de caña, y la composición sigue siendo un dato por botella.",
+      "sustainability": "Cultivado; la planta sigue viva tras la cosecha de savia."
     },
     "agave-salmiana": {
-      "cultivation": "cultivado en la tradición pulquera; savia recolectada de la planta viva"
+      "cultivation": "cultivado en la tradición pulquera; savia recolectada de la planta viva",
+      "atAGlance": "Maguey pulquero, el agave de savia del corazón pulquero; la base del destilado de pulque.",
+      "whereItGrows": "Cultivado en Tlaxcala y el altiplano pulquero del centro de México.",
+      "harvestProduction": "Cultivado; el aguamiel se recolecta a diario de la planta viva, se fermenta en pulque (~48 horas) y luego se destila — sin cocción.",
+      "sensoryTendencies": "Orientación editorial: al ser de savia, sin carácter de asado; las fuentes varían sobre la nomenclatura de subespecies (Manso/Salmiana), lo que esta guía registra sin resolver.",
+      "sustainability": "Cultivado; la planta sigue viva tras la cosecha de savia."
     },
     "tuxca-wild-agaves": {
-      "cultivation": "cosecha silvestre; los ensambles varían por lote"
+      "cultivation": "cosecha silvestre; los ensambles varían por lote",
+      "atAGlance": "Los agaves silvestres de la frontera Jalisco–Colima — Liñeño, Cimarrón y parientes locales — materia prima de los vinateros para el tuxca.",
+      "whereItGrows": "Los cañones fluviales del sur de Jalisco, alrededor de Tuxcacuesco y Zapotitlán de Vadillo, llegando hacia Colima.",
+      "harvestProduction": "Cosecha silvestre; asado en pozo cilíndrico, machacado a mano, fermentación en cráter volcánico, destilación en alambique filipino de madera. Los ensambles varían por lote.",
+      "sensoryTendencies": "Orientación editorial: los lotes varían genuinamente según el vinatero y la mezcla de agaves; la composición de especies se registra solo cuando una fuente documenta el lote real.",
+      "sustainability": "De cosecha silvestre; la composición del lote se rige por evidencia, nunca se asume."
     },
     "agave-potatorum": {
-      "cultivation": "mayormente silvestre en altitud; la reproducción solo por semilla hace lento el cultivo, por lo que las poblaciones silvestres están bajo presión — algunos productores ya cultivan o reforestan (la entrada citada de Montelobos es 100% cultivada)"
+      "cultivation": "mayormente silvestre en altitud; la reproducción solo por semilla hace lento el cultivo, por lo que las poblaciones silvestres están bajo presión — algunos productores ya cultivan o reforestan (la entrada citada de Montelobos es 100% cultivada)",
+      "atAGlance": "Tobalá, el pequeño «rey de los agaves» de la Sierra Norte de Oaxaca en altitud — mayormente silvestre, algo cultivado.",
+      "whereItGrows": "Las montañas altas de la Sierra Norte de Oaxaca (y más allá); madurez de 12–15 años en altitud.",
+      "harvestProduction": "De cosecha silvestre tradicionalmente; algunos productores ya cultivan o reforestan. Asado en pozo, molienda de piedra, fermentación silvestre; alambiques de barro o cobre.",
+      "sensoryTendencies": "Orientación editorial: típicamente más ligero y floral que el espadín; una cata ciega citada de ocho tobalás no encontró un solo hilo común — los lotes silvestres y cultivados se saben notablemente distintos.",
+      "sustainability": "La reproducción solo por semilla hace lento el cultivo, así que las poblaciones silvestres están bajo presión; algunos productores cultivan o reforestan (la entrada citada de Montelobos es 100% cultivada)."
     },
     "dasylirion-desert-spoon": {
-      "cultivation": "cosecha silvestre tras 8–12 años; una sola planta rinde aproximadamente una botella, así que la cosecha sostenible (raíces dejadas para rebrotar) y los programas de conservación importan"
+      "cultivation": "cosecha silvestre tras 8–12 años; una sola planta rinde aproximadamente una botella, así que la cosecha sostenible (raíces dejadas para rebrotar) y los programas de conservación importan",
+      "atAGlance": "Cuchara del desierto — la planta del sotol. No es un agave: Dasylirion es un género emparentado de la familia Asparagaceae.",
+      "whereItGrows": "El desierto chihuahuense del norte de México (Chihuahua, Coahuila, Durango), 8–12 años hasta la madurez.",
+      "harvestProduction": "Cosecha silvestre; piña asada en pozos cónicos (o cocida al vapor por productores grandes), fermentación silvestre, destilación en cobre o barro. Las raíces pueden dejarse intactas para que la planta rebrote.",
+      "sensoryTendencies": "Orientación editorial: terroso y ahumado-herbal; la distinción de género significa que el sotol nunca se presenta como un destilado de agave.",
+      "sustainability": "Una sola planta rinde aproximadamente una botella, así que la cosecha sostenible (raíces dejadas para rebrotar) y los programas de conservación importan."
     },
     "agave-rhodacantha": {
-      "cultivation": "silvestre y cultivado; usado en la raicilla de la Costa junto al chico aguiar"
+      "cultivation": "silvestre y cultivado; usado en la raicilla de la Costa junto al chico aguiar",
+      "atAGlance": "Un agave de la raicilla costera de Jalisco, usado junto al chico aguiar (angustifolia) en la tradición de la Costa.",
+      "whereItGrows": "Las montañas y cañones costeros del suroeste de Jalisco, alrededor de Cabo Corrientes.",
+      "harvestProduction": "Silvestre y cultivado; asado en pozo subterráneo, fermentación con levaduras silvestres, destilación en pequeños lotes.",
+      "sensoryTendencies": "Orientación editorial: contribuye al perfil de la raicilla de la Costa junto al chico aguiar; los nombres comunes de los agaves de la costa de Jalisco varían por localidad y taberna.",
+      "sustainability": "Misto silvestre/cultivado; los nombres regionales se conservan sin resolver debates de especies."
     }
   },
   "terms": {
