@@ -29,6 +29,14 @@ export function parseHash(hash) {
   if (segments[0] === "learn" && segments.length === 1) {
     return { name: "learn", params: {} };
   }
+  if (segments[0] === "discover" && segments.length === 1) {
+    return { name: "discover", params: {} };
+  }
+  if (segments[0] === "discover" && segments.length === 3) {
+    const supported = new Set(["plant", "region", "spirit", "flavour"]);
+    if (!supported.has(segments[1])) return { name: "notFound", params: {} };
+    return { name: "discover", params: { kind: segments[1], id: segments[2] } };
+  }
   if (segments[0] === "catalogue" && segments.length === 1) {
     return { name: "catalogue", params: {} };
   }
@@ -57,6 +65,9 @@ export function buildHash(route) {
       return `#/explore/${encodeURIComponent(route.params.stateId)}`;
     case "catalogue":
       return "#/catalogue";
+    case "discover":
+      if (!route.params.kind) return "#/discover";
+      return `#/discover/${encodeURIComponent(route.params.kind)}/${encodeURIComponent(route.params.id)}`;
     case "learn":
       return "#/learn";
     case "compare":

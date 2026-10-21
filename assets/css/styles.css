@@ -1086,3 +1086,24 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
   .welcome-actions, .discovery-controls { grid-template-columns: 1fr; }
   .welcome-copy { padding: 1.25rem; }
 }
+
+/* Release 17 — Three Discovery Paths */
+.discover-view { display: grid; gap: 1.4rem; }
+.discover-block { display: grid; gap: 0.55rem; padding-block: 0.4rem; }
+.discover-chip-list {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none;
+  margin: 0; padding: 0;
+}
+.discovery-chip {
+  display: inline-block; padding: 0.45rem 0.8rem; border-radius: 999px;
+  border: 1px solid var(--line, rgba(128, 120, 100, 0.35));
+  background: var(--surface-2, transparent); color: var(--text);
+  font-size: 0.95rem; min-height: 44px; display: inline-flex;
+  align-items: center; text-decoration: none;
+}
+.discovery-chip:hover { box-shadow: inset 0 -2px var(--anejo); }
+.discovery-chip:focus-visible { outline: 2px solid var(--accent, #d98e4a); outline-offset: 2px; }
+.discovery-matches { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.8rem; }
+.discovery-matches li { display: grid; gap: 0.25rem; }
+.discovery-reason { color: var(--muted, inherit); font-size: 0.9rem; margin: 0; }
+.discovery-grid .discovery-card { min-height: 44px; }

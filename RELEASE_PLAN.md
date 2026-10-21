@@ -340,12 +340,12 @@ Apply the maintenance protocol. Audit entity boundaries, relationship cardinalit
 
 Goal: provide three equally accessible exploration entry points plus flavour-based discovery, all feeding the same interconnected content.
 
-- [ ] Explore by Plant: browse agave species and other relevant plants, search botanical and regional common names, see distinguishing characteristics, where each plant is used, associated traditions, and linked regional expressions; support comparing expressions from the same plant.
-- [ ] Explore by Region: Mexico map or accessible region list with state and relevant subregion selection, regional production traditions, local plants and methods, representative expressions. Clearly distinguish application coverage from legally defined production territories.
-- [ ] Explore by Spirit: browse tequila, mezcal, bacanora, raicilla and other represented traditions with approachable introductions, distinguishing characteristics, regional/production diversity, and links to representative expressions and bottles.
-- [ ] Flavour-based discovery: approachable categories (fresh and herbal; fruity and floral; smoky and earthy; peppery and spicy; rich and oak-influenced; unusual and adventurous) reusing existing sensory metadata; show short explanations of why each expression matches; never promise every bottle in a tradition exhibits the selected characteristics.
-- [ ] Improve search across all three paths and strengthen contextual navigation between plants, regions, traditions and expressions.
-- [ ] Keep touch, keyboard and screen-reader access equivalent across all paths; no dead ends requiring a return to the homepage.
+- [x] Explore by Plant: browse agave species and other relevant plants, search botanical and regional common names, see distinguishing characteristics, where each plant is used, associated traditions, and linked regional expressions; support comparing expressions from the same plant.
+- [x] Explore by Region: Mexico map or accessible region list with state and relevant subregion selection, regional production traditions, local plants and methods, representative expressions. Clearly distinguish application coverage from legally defined production territories.
+- [x] Explore by Spirit: browse tequila, mezcal, bacanora, raicilla and other represented traditions with approachable introductions, distinguishing characteristics, regional/production diversity, and links to representative expressions and bottles.
+- [x] Flavour-based discovery: approachable categories (fresh and herbal; fruity and floral; smoky and earthy; peppery and spicy; rich and oak-influenced; unusual and adventurous) reusing existing sensory metadata; show short explanations of why each expression matches; never promise every bottle in a tradition exhibits the selected characteristics.
+- [x] Improve search across all three paths and strengthen contextual navigation between plants, regions, traditions and expressions.
+- [x] Keep touch, keyboard and screen-reader access equivalent across all paths; no dead ends requiring a return to the homepage.
 
 Acceptance: a user can start from a plant, a region, or a spirit and reach meaningful related content; all three paths use the same underlying data.
 

@@ -960,3 +960,53 @@ validation rules.
 - Regions/traditions remain data-only entities; discovery surfaces for
   them are Release 17 (Three Discovery Paths) scope.
 - Native-device rendering still unverified in this environment.
+
+## Release 17 — Three Discovery Paths
+
+Feature release per the plan: three equally accessible exploration
+entry points (plant, region, spirit) plus flavour-based discovery, all
+reading the same Release 15 normalized entities.
+
+### What changed
+
+- **New `#/discover` route** (`discovery-view.js`) with a hub listing
+  all 9 plants, 11 regions, 8 traditions and 6 flavour categories, and
+  detail pages per entity kind. A "Discover" nav link was added to the
+  header alongside Explore.
+- **Explore by Plant:** botanical identity, regional common names,
+  cultivation and botanical uncertainty; links to the traditions using
+  the plant, the regions where it grows, every profile made from it,
+  and other plants in the same traditions.
+- **Explore by Region:** geography and an explicit
+  coverage-vs-legal distinction (municipal framing preserved for
+  bacanora); traditions, plants and profiles of the region, plus a link
+  to the state map view.
+- **Explore by Spirit:** the tradition's origin, history, legal status,
+  materials, practices and diversity; all its style profiles and example
+  bottles with a catalogue link.
+- **Flavour-based discovery:** six approachable categories reusing the
+  existing `sensory` metadata (fresh-herbal, fruity-floral,
+  smoky-earthly, peppery-spicy, rich-oak, adventurous). Each match
+  carries a short why-it-matches explanation, and every page states
+  these are editorial tendencies — never a promise about every bottle.
+- **No dead ends:** every detail page links back to the hub and across
+  entity kinds; unknown ids render an honest not-found state with a
+  way back.
+- Full EN/ES string coverage for the new surfaces through the existing
+  `ui()` bundle; chips meet the 44px tap-target rule with visible focus
+  styles.
+
+### Checks run
+
+- `npm run validate` — schema plus 153 node:test/jsdom suites (12 new
+  Release 17 discovery tests). All passing.
+- Real-app boot smoke on `#/discover`: hub renders all four path
+  headings, nav shows the Discover link as the current page.
+
+### Remaining issues / deferred
+
+- Plant/region/spirit pages reuse the shared `discovery-card` styling;
+  dedicated per-entity layouts are Release 21 (Richer Profiles) scope.
+- Deep-link and focus-restoration polish across discovery navigation is
+  Release 18 (Discovery Review) scope.
+- Native-device rendering still unverified in this environment.
