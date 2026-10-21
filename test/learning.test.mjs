@@ -47,6 +47,24 @@ function render(locale = null) {
   return container;
 }
 
+function renderDeep(section) {
+  container.innerHTML = "";
+  renderLearn(container, {
+    chapters, plants, processes, glossary, profiles, bottles, sources,
+    locale: null, section,
+  });
+  return container;
+}
+
+function renderUnused(locale = null) {
+  container.innerHTML = "";
+  renderLearn(container, {
+    chapters, plants, processes, glossary, profiles, bottles, sources,
+    locale,
+  });
+  return container;
+}
+
 test("R19: seven progressive chapters render in order", () => {
   const view = render();
   const headings = [...view.querySelectorAll(".learn-chapter h3")].map((h) => h.textContent);
@@ -114,7 +132,7 @@ test("R19: profiles link contextually to the label vocabulary", async () => {
   renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles, locale });
   const termLink = container.querySelector(".profile-category .term-link");
   assert.ok(termLink, "category field links to the label vocabulary");
-  assert.equal(termLink.getAttribute("href"), "#/learn");
+  assert.equal(termLink.getAttribute("href"), "#/learn/terms");
   assert.match(termLink.textContent, /label vocabulary/i);
 });
 
@@ -193,4 +211,81 @@ test("R19: validation rejects a missing chapter translation", async () => {
   }
   const restore = await run("node", [path.join(root, "scripts/validate.mjs")], { cwd: root });
   assert.match(restore.stdout, /Validation passed/, "restored content passes validation");
+});
+
+test("R20: glossary card ids are slug-safe anchors (no slashes)", () => {
+  const view = render();
+  for (const term of glossary) {
+    const slug = term.term.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    const card = view.querySelector(`#term-${slug}`);
+    assert.ok(card, `glossary card anchor #term-${slug} exists for "${term.term}"`);
+    assert.ok(!slug.includes("/"), "slug contains no slash");
+  }
+});
+
+test("R20: chapter term chips scroll to the actual glossary card", () => {
+  const view = render();
+  const termChip = view.querySelector(".term-link");
+  assert.ok(termChip, "term chips render");
+  const slug = "blanco-plata-silver";
+  assert.ok(view.querySelector(`#term-${slug}`), "target card exists with a focusable anchor");
+  const target = view.querySelector(`#term-${slug}`);
+  assert.equal(target.tagName, "H4", "anchor is the card heading");
+  assert.equal(target.getAttribute("tabindex"), "-1", "glossary heading is focusable after scroll");
+});
+
+test("R20: #/learn/terms deep link focuses the glossary section", () => {
+  const view = renderDeep("terms");
+  assert.equal(document.activeElement && document.activeElement.id, "learn-terms", "focus lands on the glossary heading");
+});
+
+test("R20: profile label-vocabulary link targets the glossary section", async () => {
+  const { renderProfile } = await import("../assets/js/profile.js");
+  const { parseHash } = await import("../assets/js/router.js");
+  const route = parseHash("#/learn/terms");
+  assert.equal(route.name, "learn");
+  assert.equal(route.params.section, "terms");
+  const locale = createLocale();
+  const profile = profiles.find((p) => p.id === "tequila-blanco-valley-jalisco");
+  const bottle = bottles.find((b) => b.id === profile.exampleBottleId);
+  container.innerHTML = "";
+  renderProfile(container, { profile, bottle, sources, allProfiles: profiles, allBottles: bottles, locale });
+  const termLink = container.querySelector(".profile-category .term-link");
+  assert.equal(termLink.getAttribute("href"), "#/learn/terms", "profile link lands on the glossary, not the page top");
+});
+
+test("R20: plant and process reference text renders in Spanish", () => {
+  const locale = createLocale();
+  setContentEs(contentEs);
+  locale.set("es");
+  const view = render(locale);
+  const tequilanaCard = [...view.querySelectorAll("h4")].find((h) => h.textContent.includes("Agave tequilana")).parentElement;
+  assert.ok(tequilanaCard.textContent.includes("cultivado"), "plant cultivation renders in Spanish");
+  const pitCard = [...view.querySelectorAll("h4")].find((h) => h.textContent.includes("Earthen pit roast")).parentElement;
+  assert.ok(pitCard.textContent.includes("pozos"), "process explanation renders in Spanish");
+  locale.set("en");
+});
+
+test("R20: validator rejects a missing process translation", async () => {
+  const { execFile } = await import("node:child_process");
+  const { promisify } = await import("node:util");
+  const run = promisify(execFile);
+  const fs = await import("node:fs/promises");
+  const file = path.join(root, "assets/data/content-es.json");
+  const original = await fs.readFile(file, "utf8");
+  const broken = JSON.parse(original);
+  delete broken.processes["pit-roast"].explanation;
+  try {
+    await fs.writeFile(file, JSON.stringify(broken, null, 2) + "\n");
+    let failed = false;
+    try {
+      await run("node", [path.join(root, "scripts/validate.mjs")], { cwd: root });
+    } catch (error) {
+      failed = true;
+      assert.match(error.stderr, /process pit-roast explanation missing Spanish translation/);
+    }
+    assert.ok(failed, "validation must fail on a missing process translation");
+  } finally {
+    await fs.writeFile(file, original);
+  }
 });

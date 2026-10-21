@@ -1,4 +1,10 @@
 import { el, clear, safeLink } from "./dom-utils.js";
+
+/** URL/focus-safe slug for term anchors (no slashes or accents). */
+function termSlug(term) {
+  return term.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
 import { ui } from "./presentation.js";
 import { sourceKindLabel, fieldEs } from "./editorial.js";
 import { localizedTitle } from "./editorial.js";
@@ -73,7 +79,7 @@ function exampleRow(label, profiles, locale) {
  * chapter links to real profiles/plants/processes/terms; direct access
  * to reference sections is preserved through the jump nav.
  */
-export function renderLearn(container, { chapters = [], plants, processes, glossary, profiles, bottles, sources, locale = null }) {
+export function renderLearn(container, { chapters = [], plants, processes, glossary, profiles, bottles, sources, locale = null, section: deepSection = null }) {
   clear(container);
   const section = el("section", { class: "learn-view", "aria-labelledby": "learn-heading" });
   const t = (key) => (locale ? locale.t(key) : key);
@@ -128,7 +134,14 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
       if (blockProcesses.length) {
         const row = el("p", { class: "learn-usedby" }, `${t("learn.processes")}: `);
         for (const proc of blockProcesses) {
-          row.appendChild(el("a", { href: "#/learn", class: "catalogue-profile-link", onclick: null }, `${proc.name} (see process reference below) → `));
+          row.appendChild(el("a", { href: "#/learn", class: "catalogue-profile-link", onclick: (event) => {
+            event.preventDefault();
+            const target = section.querySelector(`#process-${proc.id}`);
+            if (target && typeof target.scrollIntoView === "function") {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            target?.focus?.({ preventScroll: true });
+          } }, `${proc.name} (see process reference below) → `));
           row.appendChild(document.createTextNode(" "));
         }
         card.appendChild(row);
@@ -137,7 +150,14 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
       if (blockTerms.length) {
         const row = el("p", { class: "learn-usedby" }, `${t("learn.terms")}: `);
         for (const term of blockTerms) {
-          row.appendChild(el("a", { href: "#/learn", class: "term-link", dataset: { term: term.term } }, `${term.term} → `));
+          row.appendChild(el("a", { href: `#/learn/terms`, class: "term-link", dataset: { term: term.term }, onclick: (event) => {
+            event.preventDefault();
+            const target = section.querySelector(`#term-${termSlug(term.term)}`);
+            if (target && typeof target.scrollIntoView === "function") {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            target?.focus?.({ preventScroll: true });
+          } }, `${term.term} → `));
           row.appendChild(document.createTextNode(" "));
         }
         card.appendChild(row);
@@ -163,7 +183,7 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
       t("learn.commonNames") + " " + plant.commonNames.map((n) => `${n.name} (${n.region})`).join(", ")
     ));
     card.appendChild(names);
-    card.appendChild(el("p", { class: "learn-cultivation" }, `${t("learn.harvest")} ${plant.cultivation}.`));
+    card.appendChild(el("p", { class: "learn-cultivation" }, `${t("learn.harvest")} ${fieldEs("plant", plant.id, "cultivation", locale) || plant.cultivation}.`));
     if (plant.uncertainty) {
       card.appendChild(el("p", { class: "editorial-note" }, `${t("learn.uncertainty")} ${plant.uncertainty}`));
     }
@@ -183,8 +203,8 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
   section.appendChild(el("h3", { id: "learn-processes", tabindex: "-1" }, t("learn.processes")));
   for (const proc of processes) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `process-${proc.id}` });
-    card.appendChild(el("h4", { id: `process-${proc.id}` }, `${proc.name} — ${proc.stage}`));
-    card.appendChild(el("p", {}, proc.explanation));
+    card.appendChild(el("h4", { id: `process-${proc.id}`, tabindex: "-1" }, `${proc.name} — ${proc.stage}`));
+    card.appendChild(el("p", {}, fieldEs("process", proc.id, "explanation", locale) || proc.explanation));
     const usedBy = profiles.filter((pr) => relevantTo(pr, proc));
     if (usedBy.length > 0) {
       const line = el("p", { class: "learn-usedby" }, `${t("learn.seenIn")} `);
@@ -201,8 +221,9 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
   section.appendChild(el("h3", { id: "learn-terms", tabindex: "-1" }, t("learn.terms")));
   section.appendChild(el("p", { class: "view-intro" }, ui(locale, "classTerms")));
   for (const term of terms) {
-    const card = el("article", { class: "learn-card", "aria-labelledby": `term-${term.term.replace(/\s+/g, "-")}` });
-    card.appendChild(el("h4", { id: `term-${term.term.replace(/\s+/g, "-")}` }, term.term));
+    const slug = termSlug(term.term);
+    const card = el("article", { class: "learn-card", "aria-labelledby": `term-${slug}` });
+    card.appendChild(el("h4", { id: `term-${slug}`, tabindex: "-1" }, term.term));
     card.appendChild(el("p", { class: "learn-term-context" }, ui(locale, "contextPrefix") + term.context));
     card.appendChild(el("p", {}, fieldEs("term", term.term, "definition", locale) || term.definition));
     const related = profiles.filter((pr) => (pr.category || "").toLowerCase().includes(term.term.split(" ")[0].toLowerCase()));
@@ -218,4 +239,16 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
   }
 
   container.appendChild(section);
+
+  // Deep links (#/learn/terms etc.) land on the requested reference
+  // section instead of the top of the page.
+  const SECTION_TARGETS = { terms: "learn-terms", plants: "learn-plants", processes: "learn-processes" };
+  const targetId = SECTION_TARGETS[deepSection] || null;
+  if (targetId) {
+    const target = section.querySelector(`#${targetId}`);
+    if (target && typeof target.scrollIntoView === "function") {
+      target.scrollIntoView({ block: "start" });
+    }
+    target?.focus?.({ preventScroll: true });
+  }
 }

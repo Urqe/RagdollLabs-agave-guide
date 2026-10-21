@@ -121,7 +121,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     const categoryDd = el("dd", { class: "profile-category" });
     categoryDd.appendChild(document.createTextNode(fieldEs("profile", profile.id, "category", locale) || profile.category));
     categoryDd.appendChild(document.createTextNode(" "));
-    categoryDd.appendChild(el("a", { href: "#/learn", class: "term-link" }, t("profile.categoryLearn")));
+    categoryDd.appendChild(el("a", { href: "#/learn/terms", class: "term-link" }, t("profile.categoryLearn")));
     craft.appendChild(categoryDd);
   }
   if (profile.plant) {

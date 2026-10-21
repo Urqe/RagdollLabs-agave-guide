@@ -26,8 +26,12 @@ export function parseHash(hash) {
     if (segments.length === 2) return { name: "state", params: { stateId: segments[1] } };
     return { name: "notFound", params: {} };
   }
-  if (segments[0] === "learn" && segments.length === 1) {
-    return { name: "learn", params: {} };
+  if (segments[0] === "learn") {
+    if (segments.length === 1) return { name: "learn", params: {} };
+    if (segments.length === 2 && ["terms", "plants", "processes"].includes(segments[1])) {
+      return { name: "learn", params: { section: segments[1] } };
+    }
+    return { name: "notFound", params: {} };
   }
   if (segments[0] === "discover" && segments.length === 1) {
     return { name: "discover", params: {} };
@@ -69,7 +73,7 @@ export function buildHash(route) {
       if (!route.params.kind) return "#/discover";
       return `#/discover/${encodeURIComponent(route.params.kind)}/${encodeURIComponent(route.params.id)}`;
     case "learn":
-      return "#/learn";
+      return route.params.section ? `#/learn/${route.params.section}` : "#/learn";
     case "compare":
       return `#/compare${route.params.compareIds ? `/${route.params.compareIds.split(",").map(encodeURIComponent).join(",")}` : ""}`;
     case "profile":
