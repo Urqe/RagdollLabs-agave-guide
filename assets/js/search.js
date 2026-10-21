@@ -9,7 +9,7 @@
  * them; unknown keys fall back to a general match phrase.
  */
 import { ES_NOTES } from "./taste-notes.js";
-import { fieldEs } from "./editorial.js";
+import { fieldEsAnyLocale } from "./editorial.js";
 
 const normalize = (text) =>
   (text || "")
@@ -103,7 +103,7 @@ export function searchProfiles({ profiles, bottles, query }) {
     });
     const haystack = normalize([
       ...profileSearchTerms(profile),
-      fieldEs("profile", profile.id, "title") || "",
+      fieldEsAnyLocale("profile", profile.id, "title") || "",
       ...(profile.tasteNotes || []).map((n) => ES_NOTES[n] || ""),
       example ? example.brand : "",
       example ? example.expression : "",

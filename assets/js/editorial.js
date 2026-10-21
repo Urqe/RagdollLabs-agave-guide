@@ -20,10 +20,24 @@ export function setContentEs(data) {
 }
 
 /**
- * Localized editorial field, or null when only English exists.
+ * Locale-independent lookup used by search indexing: the ES registry
+ * entries participate in matching regardless of the interface language,
+ * so a Spanish query finds its profile even from the English UI.
+ */
+export function fieldEsAnyLocale(entity, id, field) {
+  const bucket = contentEs[BUCKET[entity] || entity];
+  const entry = bucket && bucket[id];
+  const value = entry ? entry[field] : null;
+  return typeof value === "string" && value.trim() ? value : null;
+}
+
+/**
+ * Localized editorial field, or null when the locale is English (or only
+ * the English version exists).
  * entity: "profile" | "bottle" | "process" | "plant" | "term".
  */
-export function fieldEs(entity, id, field) {
+export function fieldEs(entity, id, field, locale = null) {
+  if (!locale || locale.get() !== "es") return null;
   const bucket = contentEs[BUCKET[entity] || entity];
   const entry = bucket && bucket[id];
   const value = entry ? entry[field] : null;
@@ -67,6 +81,6 @@ export function editorialText(entity, id, field, englishText, locale = null) {
   if (!locale || locale.get() !== "es") {
     return { text: englishText, translated: true };
   }
-  const es = fieldEs(entity, id, field);
+  const es = fieldEs(entity, id, field, locale);
   return es ? { text: es, translated: true } : { text: englishText, translated: false };
 }
