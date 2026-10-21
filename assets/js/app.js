@@ -288,13 +288,24 @@ async function boot() {
       themeButton.setAttribute("aria-label", ui(locale, theme === "dark" ? "toLight" : "toDark"));
       themeButton.title = ui(locale, "switchTheme");
     }
+    // Remember which disclosures were expanded so a same-route re-render
+    // (language or theme switch) does not collapse them.
+    const openDisclosures = routeChanged ? [] : [...main.querySelectorAll("details[open]")].map((node) => {
+      const first = (node.className || "details").split(" ")[0];
+      const sameClass = node.parentElement ? [...node.parentElement.querySelectorAll("details." + first)] : [node];
+      return { cls: first, index: Math.max(0, sameClass.indexOf(node)) };
+    });
     clear(main);
-    main.appendChild(el("p", { class: "loading-note" }, "Loading…"));
+    main.appendChild(el("p", { class: "loading-note" }, ui(locale, "loading")));
     try {
       await renderRoute(main, route);
       appendUntranslatedNote(main);
     } catch (error) {
       renderError(main, error);
+    }
+    for (const { cls, index } of openDisclosures) {
+      const candidates = [...main.querySelectorAll("details." + cls)];
+      if (candidates[index]) candidates[index].open = true;
     }
     const restoreScroll = state.consumedRestore && typeof state.consumedRestore.scrollY === "number"
       ? state.consumedRestore.scrollY
