@@ -1613,3 +1613,54 @@ profiles showed only one example bottle.
   costa raicilla and raicilla reposado (single documented producer
   lines), and highland extra añejo. All remain evidence-gated.
 - Native-device checks still unverified in this environment.
+
+## UX refinement — quiet navigation, immersive reading (owner-requested)
+
+Owner feedback: the highlighted links were competing with the
+meaningful content; the site should immerse the reader in the spirits
+and why they taste the way they do. Typographic differentiation
+between what deserves emphasis and what should be quietly mentioned.
+
+### What changed
+
+- **Reading hierarchy established:** editorial prose (why-it-tastes,
+  context, description) now reads at 1.12rem/1.75 line height with a
+  62ch measure — visually dominant; explore-next drops to a footnote
+  scale (1.05rem heading, soft color) under a hairline rule.
+- **Compare action demoted:** "Compare this style" is no longer a
+  boxed secondary button; it reads as a quiet inline link (0.9rem,
+  soft color, hairline underline), keeping the 44px tap target and
+  the selected/full states.
+- **Explore-next demoted:** the three destination cards no longer use
+  the result-card treatment in the profile tail — they render as
+  inline text links (0.95rem, soft color), with the eyebrow label at
+  caption size. Suggestion links likewise lost the bright añejo color
+  and boxed list items.
+- **Learn callout calmed:** no box, no soft-green background, no emoji
+  prefix, no hover lift — a single quiet inline link.
+- **Result grids untouched:** the discovery card treatment (borders,
+  padding, hover) remains for actual content results — the Explore
+  view, Discover by plant/region/spirit, and the catalogue brand
+  directory.
+- **Vocabulary:** a shared `.quiet-link` style (soft color, hairline
+  underline, calm hover) now backs the compare link; plant-learn
+  links in the facts block aligned to it, replacing the blue.
+- No content, links or destinations changed — only their visual
+  weight.
+
+### Checks run
+
+- `npm run validate` — schema plus 216 node:test/jsdom suites (1 new
+  design-regression test pinning the quiet vocabulary, the demoted
+  tail, the retained result-card treatment and the reading
+  hierarchy). All passing.
+- DOM verification: compare link renders as `compare-profile-link
+  quiet-link` (no `secondary-button`); explore-next cards and
+  suggestions present as inline links.
+
+### Remaining issues / deferred
+
+- Native-device rendering of the new hierarchy still unverified in
+  this environment (owner should eyeball the Pages site).
+- The owner-suggested producer-note evidence tier for remaining
+  single-example styles is a separate pending content increment.
