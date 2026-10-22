@@ -66,17 +66,17 @@ test("catalogue lists entries alphabetically and shows the brand directory", () 
 });
 
 test("factual entries disclose missing coverage instead of borrowing character", () => {
-  // Since the bottle-depth increment, the Costa entry carries a documented
-  // expression-matched review, so the tasting-not-documented disclosure is
-  // gone. Keep a factual-only entry pinned: the D'Antaño comiteco carries
-  // neither review nor borrowed character.
-  const dantano = bottles.find((b) => b.id === "dantano-aguamiel-cane");
-  assert.ok(dantano, "catalogue contains a factual no-review entry");
-  assert.ok(!dantano.reviewSummary, "no review summary on the factual entry");
+  // The Balam Raicilla Costa carries producer facts but honestly no tasting:
+  // the tasting-not-documented disclosure must stay, with no invented notes.
+  const balam = bottles.find((b) => b.id === "balam-raicilla-costa");
+  assert.ok(balam, "catalogue contains a factual no-review entry");
+  assert.ok(!balam.reviewSummary, "no review summary on the factual entry");
+  assert.ok(balam.coverage.includes("tasting-not-documented"), "undisclosed tasting disclosed");
+  assert.ok(balam.plantComposition, "producer facts still present");
 
   const container = document.createElement("div");
   document.body.appendChild(container);
-  const entry = bottleEntry(dantano, { sources, profiles, locale: enLocale });
+  const entry = bottleEntry(balam, { sources, profiles, locale: enLocale });
   container.appendChild(entry);
   const labels = [...entry.querySelectorAll(".coverage-label")].map((l) => l.textContent);
   assert.ok(labels.includes("Tasting notes not yet documented"), "undisclosed tasting stays disclosed");
@@ -121,10 +121,10 @@ test("profile view keeps one featured example and hides extras behind See more b
   assert.equal(tag, "details", "native disclosure element: keyboard accessible");
   container.remove();
 
-  // A profile without extra bottles has no expansion control. (Since
-  // Release 25 the valley blanco profile carries a second bottle, so this
-  // check uses the single-bottle extra añejo profile.)
-  const teq = profiles.find((p) => p.id === "tequila-extra-anejo-highland-jalisco");
+  // A profile without extra bottles has no expansion control. (Since the
+  // producer-note increment, the extra añejo profile carries a second bottle,
+  // so this check uses the still-single raicilla reposado profile.)
+  const teq = profiles.find((p) => p.id === "raicilla-reposado-jalisco");
   const container2 = document.createElement("div");
   document.body.appendChild(container2);
   renderProfile(container2, {
@@ -329,14 +329,33 @@ test("bottle-depth increment: single-example profiles gain documented second bot
   assert.ok(costa.reviewSummary, "costa review now documented");
   assert.ok(!(costa.coverage || []).includes("tasting-not-documented"), "disclosure removed");
   assert.ok(costa.sourceIds.includes("mezcalreviews-lavenenosa-costa"), "review source cited");
-  // No style profile regressed to a single bottle except the comiteco and
-  // extra-añejo profiles, whose candidates failed the region/label gates.
+  // Producer-note tier: Ocho's extra añejo is the second example for its
+  // profile, with the summary explicitly framed as producer notes.
+  const ocho = bottles.find((x) => x.id === "tequila-ocho-extra-anejo");
+  assert.ok(ocho.reviewSummary.includes("per the producer's own notes"), "producer attribution stated");
+  assert.equal(ocho.profileId, "tequila-extra-anejo-highland-jalisco");
+  // No style profile regressed to a single bottle except the comiteco pair
+  // and raicilla reposado, whose candidates failed the region/label gates.
   const singles = profiles.filter((p) => bottles.filter((b) => b.profileId === p.id).length === 1).map((p) => p.id);
   assert.deepEqual(singles.sort(), [
     "comiteco-aguamiel-chiapas",
     "comiteco-anejo-comitan-chiapas",
-    "raicilla-costa-jalisco",
     "raicilla-reposado-jalisco",
-    "tequila-extra-anejo-highland-jalisco",
   ].sort(), `unexpected single-example profiles: ${singles.join(", ")}`);
+});
+
+test("producer-note tier: producer descriptions carry explicit attribution", async () => {
+  // The owner-approved evidence tier: when no credible review exists, the
+  // producer's own description may stand in, but never reads as independent.
+  const ocho = bottles.find((b) => b.id === "tequila-ocho-extra-anejo");
+  assert.ok(ocho.reviewSummary.startsWith("No independent review"), "the review gap is stated up front");
+  assert.ok(ocho.reviewSummary.includes("per the producer's own notes"), "producer attribution inline");
+  assert.ok(ocho.sourceIds.includes("ochotequila-terroir"), "producer source cited");
+  // Producer facts on the comiteco entries name the claim's owner.
+  const anejo = bottles.find((b) => b.id === "nine-guardianes-comiteco-anejo");
+  assert.ok(anejo.plantComposition.includes("per the producer's US importer"), "importer attribution present");
+  // The Balam entry keeps honest discipline: producer facts, no tasting.
+  const balam = bottles.find((b) => b.id === "balam-raicilla-costa");
+  assert.ok(balam.plantComposition.includes("per the producer's listing"));
+  assert.ok(!balam.reviewSummary, "no invented tasting");
 });

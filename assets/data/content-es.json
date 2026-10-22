@@ -365,9 +365,11 @@
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas"
     },
     "nine-guardianes-comiteco-blanco": {
-      "reviewSummary": "Mezcal Reviews lista 9 Guardianes Comiteco Blanco de savia de maguey Comitlán fermentada y destilada en cobre; el detalle de notas de cata de esta expresión específica aún no está documentado.",
+      "classification": "Comiteco — joven (sin clases legales de añejamiento; 100% agave de solo savia, según el productor)",
+      "plantComposition": "Fermentado y doble destilado a partir de aguamiel fresco de maguey comiteco (Agave atrovirens); según el importador estadounidense del productor, reposado en vidrio unos seis meses antes del embotellado",
+      "reviewSummary": "Mezcal Reviews lista el 9 Guardianes Comiteco Blanco como fermentado de la savia del maguey Comitlán y destilado en Chiapas.",
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas",
-      "composition": "Destilado de savia de agave fermentada (aguamiel); la categoría comiteco más amplia permite una fuente adicional de azúcar de caña — si esta botella específica es 100% agave no está documentado en las fuentes citadas"
+      "composition": "Destilado de savia de agave fermentada (aguamiel); según la fuente citada, la categoría más amplia del comiteco permite azúcar de caña, y esta botella es de solo savia según el productor."
     },
     "estancia-destilado-de-pulque": {
       "reviewSummary": "Las notas del importador describen un destilado verde y vegetal con notas curiosas de cardamomo, limoncillo, pimienta en grano, cheddar añejo y acedera, doble destilado de savia Salmiana fermentada 48 horas en una columna corta de cobre."
@@ -385,9 +387,11 @@
       "batch": "Añejo envejecido en roble americano y francés, luego filtrado con carbón hasta dejarlo claro"
     },
     "nine-guardianes-comiteco-anejo": {
-      "reviewSummary": "Mezcal Reviews lista 9 Guardianes Comiteco Añejo al 42% de graduación, de savia de maguey Comitlán fermentada y destilada en cobre, luego envejecido; el sitio no lista notas de cata de esta expresión, así que su descripción de sabor sigue siendo editorial en esta app.",
-      "batch": "Reposado en vidrio con ramas de encino blanco",
-      "composition": "Destilado de savia de agave fermentada (aguamiel); la categoría comiteco más amplia permite una fuente adicional de azúcar de caña — si esta botella específica es 100% agave no está documentado en las fuentes citadas"
+      "classification": "Comiteco — añejo (sin clases legales de añejamiento; el carácter maderable viene del reposo en vidrio, según el productor)",
+      "plantComposition": "Fermentado y doble destilado a partir de aguamiel fresco de maguey comiteco (Agave atrovirens); según el importador estadounidense del productor, reposado en vidrio con ramas de roble blanco en lugar de barricas",
+      "reviewSummary": "Mezcal Reviews lista el 9 Guardianes Comiteco Añejo al 42% de alcohol, de savia de maguey Comitlán fermentada y destilada en Chiapas.",
+      "composition": "Destilado de savia de agave fermentada (aguamiel); según la fuente citada, la categoría más amplia del comiteco permite azúcar de caña, y esta botella es de solo savia según el productor.",
+      "batch": "Reposado en vidrio con ramas de roble blanco"
     },
     "la-venenosa-tabernas-reposado": {
       "reviewSummary": "Un miembro de Mezcal Reviews describe vainilla, caramelo, cuero, tabaco dulce y ciruela en la nariz; ciruela, pasa, cereza luxardo, vainilla y cuero en el paladar, con un final de humo de fogata dulce, canela y tabaco — señalando que la influencia de la barrica de jerez es divertida pero opaca un poco el agave.",
@@ -399,8 +403,9 @@
       "batch": "Destilación única en acero inoxidable; aguamiel fermentado alrededor de una semana con pulque madre"
     },
     "dantano-aguamiel-cane": {
-      "batch": "Destilado de aguamiel y caña; según la fuente de la reseña, esta etiqueta es un destilado de aguamiel y caña, a diferencia de la etiqueta 100% savia 9 Guardianes",
-      "composition": "Destilado de savia de agave fermentada (aguamiel) mezclado con destilado de caña; el componente no agave está divulgado en la etiqueta y por la fuente citada — incluido como entrada factual, no como perfil de estilo comiteco"
+      "reviewSummary": "Una cata de Tom Pynchon's Liquor Cabinet (2024) lo bebe solo y encuentra que sustituiría limpiamente al ron blanco en un mojito — de los dos destilados chiapanecos catados ese día, el reseñista prefiere el comiteco.",
+      "composition": "Destilado de savia de agave fermentada (aguamiel) mezclado con destilado de caña; la distinción se declara abiertamente y nunca se etiqueta como 100% de agave.",
+      "batch": "Destilado de aguamiel y caña; según la fuente de la reseña, esta etiqueta es un destilado de aguamiel y caña, a diferencia de la etiqueta 9 Guardianes de solo savia"
     },
     "el-tesoro-extra-anejo": {
       "reviewSummary": "Drinkhacker señala que, donde la mayoría de los extra añejos son bombas de caramelo y vainilla, este mantiene el agave claramente en el encuadre — una nariz herbácea de romero, pimienta y pimienta de Jamaica que podría pasar por un reposado, sobre un roble profundo.",
@@ -514,6 +519,16 @@
       "classification": "Tequila — añejo 100% de agave (14–16 meses en roble)",
       "plantComposition": "100% agave azul weber (Agave tequilana)",
       "batch": "Reposado 14–16 meses en roble americano bien curado (barricas con larga historia de maduración de tequila), según el importador estadounidense del productor"
+    },
+    "tequila-ocho-extra-anejo": {
+      "reviewSummary": "No hay reseña independiente documentada de la versión actual; según las notas del propio productor, el extra añejo presenta cerezas, anís, chocolate oscuro, jerez, roble y plátano en nariz, y roble, anís, fruta seca, cerezas, toffee, pimienta negra y canela en el paladar.",
+      "classification": "Tequila — extra añejo 100% de agave (3+ años en roble)",
+      "plantComposition": "100% agave azul weber (Agave tequilana), de finca única y con añada",
+      "batch": "Con añada de un solo rancho; añejado un mínimo de tres años en barricas usadas de whisky americano"
+    },
+    "balam-raicilla-costa": {
+      "classification": "Raicilla — joven (sin añejar); denominación de origen de Jalisco",
+      "plantComposition": "Agave Chino Aguiar / rhodacantha, según la ficha del productor; la composición varía por lote"
     }
   },
   "processes": {

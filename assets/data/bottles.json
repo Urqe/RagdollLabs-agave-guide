@@ -192,7 +192,9 @@
       "traditionId": "comiteco",
       "regionIds": [
         "comitan-chiapas"
-      ]
+      ],
+      "classification": "Comiteco — joven (no legal aging classes; sap-only 100% agave, per the producer)",
+      "plantComposition": "Fermented and double-distilled from fresh aguamiel of maguey comiteco (Agave atrovirens); per the producer's US importer, glass-rested about six months before bottling"
     },
     {
       "id": "estancia-destilado-de-pulque",
@@ -292,7 +294,9 @@
       "traditionId": "comiteco",
       "regionIds": [
         "comitan-chiapas"
-      ]
+      ],
+      "classification": "Comiteco — añejo (no legal aging classes; the wood character comes from glass-resting, per the producer)",
+      "plantComposition": "Fermented and double-distilled from fresh aguamiel of maguey comiteco (Agave atrovirens); per the producer's US importer, rested in glass with white-oak branches rather than barrels"
     },
     {
       "id": "la-venenosa-tabernas-reposado",
@@ -346,16 +350,17 @@
       "batch": "Aguamiel and cane spirit; per the review source this label is an aguamiel and cane spirit, unlike the 100%-sap 9 Guardianes label",
       "profileId": null,
       "coverage": [
-        "profile-not-covered",
-        "tasting-not-documented"
+        "profile-not-covered"
       ],
       "composition": "Distilled from fermented agave sap (aguamiel) blended with cane-based spirit; the non-agave component is disclosed on the label and by the cited source — included as a factual entry, not as a comiteco style profile",
       "sourceIds": [
         "mezcalreviews-9guardianes-anejo",
-        "backalley-comiteco"
+        "backalley-comiteco",
+        "drunkpynchon-dantano-comiteco"
       ],
       "traditionId": "comiteco",
-      "regionIds": []
+      "regionIds": [],
+      "reviewSummary": "A Tom Pynchon's Liquor Cabinet tasting (2024) drinks it neat and finds it would substitute cleanly for white rum in a mojito — of the two Chiapanecan spirits tasted that day, the reviewer prefers the comiteco."
     },
     {
       "id": "el-tesoro-extra-anejo",
@@ -824,6 +829,50 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-valley-jal"
+      ]
+    },
+    {
+      "id": "tequila-ocho-extra-anejo",
+      "brand": "Tequila Ocho",
+      "producer": "Tequila Ocho (Carlos Camarena, Tequilera Los Alambiques, NOM 1474, Arandas, Jalisco)",
+      "expression": "Extra Añejo (single estate)",
+      "abv": 40,
+      "spirit": "tequila",
+      "place": "Arandas, Jalisco (highlands)",
+      "classification": "Tequila — 100% agave extra añejo (oak-aged 3+ years)",
+      "plantComposition": "100% blue weber agave (Agave tequilana), single-estate and vintage-dated",
+      "batch": "Vintage-dated from a single rancho; aged a minimum of three years in ex-American whiskey barrels",
+      "profileId": "tequila-extra-anejo-highland-jalisco",
+      "reviewSummary": "No independent review of the current release is documented; per the producer's own notes, the extra añejo shows cherries, anise, dark chocolate, sherry, oak and plantain on the nose, and oak, anise, dried fruit, cherries, toffee, black pepper and cinnamon on the palate.",
+      "sourceIds": [
+        "ochotequila-terroir",
+        "liquorbarn-ocho-extra-anejo"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-highlands-jal"
+      ]
+    },
+    {
+      "id": "balam-raicilla-costa",
+      "brand": "Balam",
+      "producer": "Balam (Maestro Tabernero Don Rosalio Rodríguez, El Tuito, Cabo Corrientes, Jalisco)",
+      "expression": "Raicilla Costa (joven)",
+      "abv": 45,
+      "spirit": "raicilla",
+      "place": "El Tuito, coastal Jalisco",
+      "classification": "Raicilla — joven (unaged); Jalisco denomination of origin",
+      "plantComposition": "Agave Chino Aguiar / rhodacantha, per the producer's listing; batch composition varies",
+      "profileId": "raicilla-costa-jalisco",
+      "coverage": [
+        "tasting-not-documented"
+      ],
+      "sourceIds": [
+        "oldtowntequila-balam-costa"
+      ],
+      "traditionId": "raicilla",
+      "regionIds": [
+        "costa-sur-jal"
       ]
     }
   ]

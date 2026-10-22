@@ -552,6 +552,34 @@
       "url": "https://siptequila.com/products/cascahuin-anejo",
       "kind": "producer",
       "verified": "2026-10-21"
+    },
+    {
+      "id": "ochotequila-terroir",
+      "title": "Tequila Ocho — Terroir (producer's own tasting notes per expression)",
+      "url": "https://ochotequila.com/terroir/",
+      "kind": "producer",
+      "verified": "2026-10-22"
+    },
+    {
+      "id": "liquorbarn-ocho-extra-anejo",
+      "title": "The Liquor Barn — Tequila Ocho Extra Anejo (label facts: 40% ABV, NOM 1474, Arandas)",
+      "url": "https://theliquorbarn.com/products/tequila-ocho-extra-anejo-750ml",
+      "kind": "style",
+      "verified": "2026-10-22"
+    },
+    {
+      "id": "oldtowntequila-balam-costa",
+      "title": "Old Town Tequila — Balam Raicilla Costa de Jalisco (producer facts: Don Rosalio Rodriguez, El Tuito)",
+      "url": "https://www.oldtowntequila.com/raicilla/",
+      "kind": "producer",
+      "verified": "2026-10-22"
+    },
+    {
+      "id": "drunkpynchon-dantano-comiteco",
+      "title": "Tom Pynchon's Liquor Cabinet — Pox & Comiteco (D'Antaño Blanco Comiteco tasting)",
+      "url": "https://drunkpynchon.com/2024/04/13/pox-comiteco/",
+      "kind": "review",
+      "verified": "2026-10-22"
     }
   ]
 }
