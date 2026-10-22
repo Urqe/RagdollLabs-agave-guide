@@ -1664,3 +1664,60 @@ between what deserves emphasis and what should be quietly mentioned.
   this environment (owner should eyeball the Pages site).
 - The owner-suggested producer-note evidence tier for remaining
   single-example styles is a separate pending content increment.
+
+## Content increment — producer-note evidence tier (owner-approved)
+
+Owner policy: where no credible review exists, the producer's own
+description may stand in, as long as it is explicitly attributed to
+them. Applied to the remaining single-example styles.
+
+### What changed
+
+- **New evidence tier in practice:** Tequila Ocho Extra Añejo (40%,
+  single estate, Arandas, NOM 1474) joins the highland extra añejo
+  profile as its second example. No independent review of the current
+  release is documented, so the summary opens by saying exactly that
+  and then gives the producer's own tasting notes (cherries, anise,
+  dark chocolate, sherry, oak, plantain; oak, anise, dried fruit,
+  toffee, black pepper, cinnamon) with "per the producer's own notes"
+  attribution, citing the producer's terroir page.
+- **Balam Raicilla Costa** (Don Rosalío Rodríguez, El Tuito, 45%) joins
+  the costa raicilla profile as a second example on producer facts
+  only — classification, plant composition (Chino Aguiar/rhodacantha,
+  batch-varying) — with the tasting-not-documented disclosure kept:
+  producer facts fill identity gaps but never become invented tasting
+  notes.
+- **D'Antaño Comiteco** gained an exact-expression review (Tom
+  Pynchon's Liquor Cabinet, 2024): neat, would substitute cleanly for
+  white rum in a mojito. Its catalogue entry now shows a review while
+  staying honestly profile-not-covered.
+- **Comiteco entries deepened with importer-documented process facts:**
+  the blanco is glass-rested about six months before bottling and the
+  añejo takes its wood character from glass-resting with white-oak
+  branches rather than barrels — attributed to the producer's US
+  importer (Back Alley Imports), whose Comiteco page documents the
+  full production chain.
+- **Spanish parity:** the strict no-silent-gaps test (added in
+  Release 26) caught pre-existing untranslated fields on the comiteco
+  and D'Antaño entries; all are now translated along with every new
+  field.
+- Single-example profiles reduced from five to three (comiteco blanco
+  and añejo stay single — the Comitán-scoped candidates remain
+  evidence-gated; raicilla reposado stays single — no honest second
+  bottle exists yet).
+
+### Checks run
+
+- `npm run validate` — schema plus 217 node:test/jsdom suites (1 new
+  producer-note-tier test: up-front review-gap statement, inline
+  producer attribution, cited producer sources, and the Balam
+  entry's honest no-tasting discipline). All passing.
+- DOM smoke of the four touched entries in EN and ES: producer
+  attributions render, no raw English in the Spanish UI, Balam
+  correctly shows the disclosure instead of a review.
+
+### Remaining issues / deferred
+
+- Comiteco blanco/añejo and raicilla reposado remain single-example
+  profiles (candidates still fail the honest-mapping gates).
+- Native-device checks still unverified in this environment.
