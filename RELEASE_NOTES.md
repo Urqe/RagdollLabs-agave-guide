@@ -1827,3 +1827,47 @@ catalogue; backlog.json is empty.
   profile-not-covered until matching style profiles exist (highland
   aged styles; a joven profile gated on composition evidence).
 - Native-device checks still unverified in this environment.
+
+## Post-roadmap pair 3 — Learning Journey Refresh
+
+The Learn chapters now teach the content threads the app acquired
+since Release 19, with full Spanish parity.
+
+### What changed
+
+- **From Plant to Glass** — the resting block teaches the comiteco
+  third path: wood character from glass-resting with white-oak
+  branches rather than barrels, attributed to the producer's own
+  importer, framing resting traditions as more varied than the legal
+  classes suggest.
+- **Understanding Flavour** — the body/smoke block now teaches the
+  highland/valley terroir tendency ("valley agave trends earthy and
+  savory, Los Altos sweeter and fruitier") with the honest caveat
+  carried from the profiles: a blind tasting panel found the pattern
+  weaker than folklore suggests.
+- **Explore Deeper** — the sustainability block widened from
+  species-level cases (tobalá, sotol) to tradition-scale pressure
+  (bacanora and raicilla depend on wild-harvested agaves; cultivated
+  espadín and blue weber carry far less), with three example profiles
+  linked and the producer-claims-are-unverified discipline stated.
+- **Understanding Labels** — a new fourth block teaches the
+  evidence-tier distinction the app now models by example:
+  independent reviews vs producer notes vs editorial synthesis, and
+  the reading habit to carry away ("ask whose palate a tasting claim
+  came from").
+- Full Spanish translations for every changed and new block; the
+  validator's chapter-translation completeness rule covers the new
+  block automatically.
+
+### Checks run
+
+- `npm run validate` — schema plus 222 node:test/jsdom suites (1 new
+  pair-3 test pinning all four refreshed threads). All passing.
+- DOM smoke of the Learn view in English and Spanish: all four
+  threads render, no raw keys, no English leakage in the Spanish UI.
+
+### Remaining issues / deferred
+
+- Pair 4 (reviewed Spanish localization by a fluent reader) remains
+  the natural next pass over this and earlier editorial prose.
+- Native-device checks still unverified in this environment.

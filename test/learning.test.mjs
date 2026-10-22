@@ -289,3 +289,21 @@ test("R20: validator rejects a missing process translation", async () => {
     await fs.writeFile(file, original);
   }
 });
+
+test("pair 3: learning journey refreshed with the newer content threads", () => {
+  // Glass-resting block teaches the comiteco third path.
+  const ftg = chapters.find((c) => c.id === "from-plant-to-glass");
+  assert.ok(ftg.blocks[2].text.includes("branches of white oak"), "comiteco glass-resting case taught");
+  // The flavour chapter names the highland/valley tendency with its honest caveat.
+  const uf = chapters.find((c) => c.id === "understanding-flavour");
+  assert.ok(uf.blocks[0].text.includes("blind tasting panel"), "regional tendency stated honestly");
+  // Sustainability breadth now covers bacanora/raicilla tradition-scale pressure.
+  const ed = chapters.find((c) => c.id === "explore-deeper");
+  assert.ok(ed.blocks[1].text.includes("tradition scale"), "wild-harvest breadth taught");
+  assert.ok(ed.blocks[1].exampleProfileIds.length >= 3, "sustainability block cites its examples");
+  // The new evidence-tier block exists in the labels chapter.
+  const ul = chapters.find((c) => c.id === "understanding-labels");
+  const tierBlock = ul.blocks[3];
+  assert.ok(tierBlock, "evidence-tier block present");
+  assert.ok(tierBlock.text.includes("whose palate"), "teaches the evidence question");
+});

@@ -426,7 +426,7 @@ Applied (see the pair 2 notes in RELEASE_NOTES.md). Add the remaining expression
 
 ### Post-roadmap pair 3 — Learning Journey Refresh (feature/content)
 
-Weave the newer content into the Learn chapters: the highland/valley terroir distinction (single-estate and vintage-dated tequila), glass-resting as a maturation method (comiteco), the wild-harvest sustainability picture (added with Release 25 but not yet part of the education flow), and the evidence-tier distinction the app now teaches by example — independent reviews vs producer notes vs editorial synthesis. Spanish parity required for all new chapter material.
+Applied (see the pair 3 notes in RELEASE_NOTES.md). Weave the newer content into the Learn chapters: the highland/valley terroir distinction (single-estate and vintage-dated tequila), glass-resting as a maturation method (comiteco), the wild-harvest sustainability picture (added with Release 25 but not yet part of the education flow), and the evidence-tier distinction the app now teaches by example — independent reviews vs producer notes vs editorial synthesis. Spanish parity required for all new chapter material.
 
 ### Post-roadmap pair 4 — Reviewed Spanish Localization (maintenance)
 
