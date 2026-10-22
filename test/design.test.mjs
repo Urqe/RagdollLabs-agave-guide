@@ -108,6 +108,46 @@ test("pair 6: flavor moods span the character grid, not a stray third column", a
   assert.ok(/\.profile-core > \.mood-line \{ grid-column: 1 \/ -1;/.test(css), "mood line spans both grid columns");
 });
 
+test("pair 7: story and character dock into the two-column body grid", async () => {
+  const root = document.createElement("div");
+  const profile = profiles[0];
+  renderProfile(root, { profile, bottle: bottles.find(b => b.id === profile.exampleBottleId), sources, allProfiles: profiles, allBottles: bottles, locale });
+  const grid = root.querySelector(".profile-body-grid");
+  assert.ok(grid, "body grid container renders");
+  const story = grid.querySelector(":scope > .profile-story");
+  const why = grid.querySelector(":scope > .profile-why");
+  const craft = grid.querySelector(":scope > .profile-craft-section");
+  const core = grid.querySelector(":scope > .profile-core");
+  assert.ok(story && why && craft && core, "story, why, craft and character all live in the body grid");
+  assert.ok(story.compareDocumentPosition(core) & dom.window.Node.DOCUMENT_POSITION_FOLLOWING, "character docks after the story content");
+  const { readFile } = await import("node:fs/promises");
+  const css = await readFile("assets/css/styles.css", "utf8");
+  assert.ok(/@media \(min-width: 64rem\) \{\n  \.profile-body-grid \{ display: grid; grid-template-columns: minmax\(0, 1\.15fr\) minmax\(0, \.85fr\);/.test(css),
+    "wide viewports split the body grid into story and character columns");
+  assert.ok(/\.profile-body-grid \{ display: block; \}/.test(css), "narrow viewports stack the grid (single column)");
+});
+
+test("pair 7: quiet persistent search navigates to explore with the query", () => {
+  const root = document.createElement("div");
+  const profile = profiles[0];
+  renderProfile(root, { profile, bottle: bottles.find(b => b.id === profile.exampleBottleId), sources, allProfiles: profiles, allBottles: bottles, locale });
+  const form = root.querySelector(".profile-search");
+  assert.ok(form, "persistent search renders on the profile view");
+  assert.equal(form.getAttribute("role"), "search");
+  const input = form.querySelector("input[type=search]");
+  assert.ok(input, "search input present");
+  const main = root.querySelector("section");
+  assert.ok(main.compareDocumentPosition(form) & dom.window.Node.DOCUMENT_POSITION_FOLLOWING, "search renders after the identity, before the body grid");
+  assert.ok(!form.querySelector("button"), "search stays quiet: no submit button competing with the content");
+  input.value = "bacanora";
+  let submitted = false;
+  form.addEventListener("submit", (event) => {
+    submitted = true;
+  });
+  form.dispatchEvent(new dom.window.Event("submit", { bubbles: true, cancelable: true }));
+  assert.ok(submitted, "submit event reaches the form handler");
+});
+
 test("a lone comparison selection can be removed before a table exists", () => {
   const root = document.createElement("div");
   const changes = [];
@@ -142,8 +182,8 @@ test("UX pass: profile tail links are quiet, result cards keep the card treatmen
   // The quiet link vocabulary exists for tail links.
   assert.ok(/\.quiet-link \{/.test(css), "quiet link style defined");
   assert.ok(/\.suggestion-link \{ color: var\(--text-soft\)/.test(css), "suggestions read as quiet text");
-  // The reading hierarchy: editorial prose at the large step.
-  assert.ok(/\.profile-why p, \.profile-context, \.profile-description \{ font-size: 1\.12rem/.test(css), "editorial prose enlarged");
+  // Pair 7: editorial prose compacted for data density (still >= 0.95rem reading floor).
+  assert.ok(/\.profile-why p, \.profile-context, \.profile-description \{ font-size: 1rem; line-height: 1\.6;/.test(css), "editorial prose compacted, not shrunk");
   // Learn callout no longer lifts on hover.
   assert.ok(/\.learn-callout-link:hover \{ transform: none;/.test(css), "learn callout hover calmed");
 });
