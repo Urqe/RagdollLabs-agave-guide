@@ -100,3 +100,25 @@ test("release 14: moods translate via locale.mood and home via strings", () => {
   const en = createLocale();
   assert.equal(en.mood("Smoke-forward"), "Smoke-forward");
 });
+
+test("pair 4: Spanish terminology stays consistent with the glossary's canonical terms", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const es = JSON.parse(await readFile("assets/data/content-es.json", "utf8"));
+  const all = JSON.stringify(es);
+  // The glossary term is "100% de agave"; translations must not drift to "100% agave".
+  assert.equal((all.match(/100% agave/g) || []).length, 0, "no '100% agave' without the Spanish preposition");
+  assert.ok((all.match(/100% de agave/g) || []).length > 20, "canonical form used throughout");
+  // No English leakage beyond publication proper nouns.
+  const prose = all.toLowerCase();
+  for (const w of [" and ", " with ", " from ", " oak ", " wood ", " tasting note"]) {
+    assert.ok(!prose.includes(w), `English leakage: ${w.trim()}`);
+  }
+  // ' the ' may only appear inside publication names.
+  let idx = 0; let bad = null;
+  while ((idx = prose.indexOf(" the ", idx)) !== -1) {
+    const ctx = prose.slice(Math.max(0, idx - 20), idx + 24);
+    if (!/rum howler|tequila whisperer|whiskey shelf|daily pour|lost explorer/.test(ctx)) { bad = ctx; break; }
+    idx += 5;
+  }
+  assert.equal(bad, null, `unattributed English 'the' in ES content: ${bad}`);
+});

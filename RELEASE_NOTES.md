@@ -1871,3 +1871,48 @@ since Release 19, with full Spanish parity.
 - Pair 4 (reviewed Spanish localization by a fluent reader) remains
   the natural next pass over this and earlier editorial prose.
 - Native-device checks still unverified in this environment.
+
+## Post-roadmap pair 4 — Reviewed Spanish Localization
+
+Maintenance pass over the accumulated editorial translations (41
+bottles, 18 profiles, plant/tradition sustainability sections, seven
+learning chapters, all comparison perspectives), per the plan's
+localization-review scope. Machine-side review; the owner's
+native-reader eyeball remains recommended.
+
+### Findings and fixes
+
+- **Terminology drift (defect found):** 15 translated fields used
+  "100% agave" while 13 used the canonical Spanish legal phrasing
+  "100% de agave" — the form the app's own glossary defines as its
+  term. All 15 normalized to the canonical form (now 32 consistent
+  uses), and a regression test pins the canonical form plus a broader
+  English-leakage guard.
+- **Duplicated word (defect found):** the El Acabo batch text read
+  "de la taberna Taberna 3 Gallos" (and the English mirrored it: "the
+  Taberna 3 Gallos taberna") — the common noun duplicating the
+  producer's name. Both languages fixed to name the taberna once.
+- **Verified, no defect:** no English leakage anywhere in the
+  translated content beyond publication proper nouns (The Rum
+  Howler, Difford's, Wine Enthusiast) — every remaining " the "
+  occurrence is inside a cited publication name; no untranslated
+  chapter blocks (including pair 3's new evidence-tier block); no
+  decimal-point drift (Spanish comma separators used); attribution
+  phrasing ("según el productor / la marca / el importador") is
+  varied by claim owner, not inconsistent; the parenthetical English
+  class-name glosses in the reposado/añejo/extra-añejo contexts
+  ('rested', 'aged') are intentional glosses of legal-class English
+  names, kept. The UI string table (133 Spanish strings) scanned
+  clean.
+
+### Checks run
+
+- `npm run validate` — schema plus 223 node:test/jsdom suites (1 new
+  terminology-consistency test). All passing.
+
+### Remaining issues / deferred
+
+- A fluent native-reader pass would still add value beyond mechanical
+  review (naturalness, regional register) — flagged to the owner as
+  the plan intends.
+- Native-device checks still unverified in this environment.
