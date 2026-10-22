@@ -874,6 +874,136 @@
       "regionIds": [
         "costa-sur-jal"
       ]
+    },
+    {
+      "id": "don-julio-reposado",
+      "brand": "Don Julio",
+      "producer": "Don Julio (Tequila Tres Magueyes, Atotonilco el Alto, Jalisco)",
+      "expression": "Reposado Tequila",
+      "abv": 38,
+      "spirit": "tequila",
+      "place": "Atotonilco el Alto, Jalisco (highlands)",
+      "classification": "Tequila — 100% agave reposado (oak-rested 8 months, per the review)",
+      "plantComposition": "100% blue weber agave (Agave tequilana)",
+      "profileId": null,
+      "coverage": [
+        "profile-not-covered"
+      ],
+      "reviewSummary": "The Rum Howler (refreshed 2020, 87.5/100) finds smooth complexity throughout: a fade of butterscotch, nutty almond and a smattering of wood-spice and tea, with peppery spices building in the throat.",
+      "editorialNote": "A highlands reposado: the app's reposado profile describes the Tequila Valley reading, and this expression distills in Los Altos — covered here as a catalogue fact, not mapped onto the valley profile.",
+      "noteProfileId": "tequila-reposado-valley-jalisco",
+      "noteSourceIds": [
+        "rumhowler-don-julio-reposado"
+      ],
+      "sourceIds": [
+        "donjulio-producer",
+        "rumhowler-don-julio-reposado"
+      ],
+      "traditionId": "tequila",
+      "regionIds": []
+    },
+    {
+      "id": "don-julio-anejo",
+      "brand": "Don Julio",
+      "producer": "Don Julio (Tequila Tres Magueyes, Atotonilco el Alto, Jalisco)",
+      "expression": "Añejo Tequila",
+      "abv": 38,
+      "spirit": "tequila",
+      "place": "Atotonilco el Alto, Jalisco (highlands)",
+      "classification": "Tequila — 100% agave añejo (oak-aged 18 months, per the cited taste test)",
+      "plantComposition": "100% blue weber agave (Agave tequilana)",
+      "profileId": null,
+      "coverage": [
+        "profile-not-covered"
+      ],
+      "reviewSummary": "The Rum Howler (revised 2018, 90.5/100) finds mellow agave with mild white pepper and light caramel, a very mild oak presence and an appealing honey-like sweetness, with lime zest and apricot jam melded into the agave, oak and caramel.",
+      "editorialNote": "A highlands añejo: the app's añejo profile describes the Tequila Valley reading, and this expression distills in Los Altos — covered here as a catalogue fact, not mapped onto the valley profile.",
+      "noteProfileId": "tequila-anejo-valley-jalisco",
+      "noteSourceIds": [
+        "rumhowler-don-julio-anejo"
+      ],
+      "sourceIds": [
+        "donjulio-producer",
+        "rumhowler-don-julio-anejo"
+      ],
+      "traditionId": "tequila",
+      "regionIds": []
+    },
+    {
+      "id": "jose-cuervo-tradicional-plata",
+      "brand": "Jose Cuervo",
+      "producer": "Jose Cuervo (La Rojeña / Casa Cuervo, Tequila, Jalisco)",
+      "expression": "Tradicional Plata (Silver)",
+      "abv": 38,
+      "spirit": "tequila",
+      "place": "Tequila, Jalisco (central valley region)",
+      "classification": "Tequila — 100% agave blanco, unaged",
+      "plantComposition": "100% blue weber agave (Agave tequilana)",
+      "profileId": "tequila-blanco-valley-jalisco",
+      "reviewSummary": "The Rum Howler (2018, 82.5/100) notes it was released in 2011 as a true 100% blue agave tequila from the central lowland region; the review finds an easy-drinking silver with the valley's earthy, herbaceous character present but gentler than the category's punchiest examples.",
+      "sourceIds": [
+        "cuervo-tradicional-producer",
+        "rumhowler-cuervo-tradicional-silver"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
+      ]
+    },
+    {
+      "id": "patron-reposado",
+      "brand": "PATRÓN",
+      "producer": "PATRÓN (Hacienda Patrón, NOM 1492, Atotonilco el Alto, Jalisco)",
+      "expression": "Reposado Tequila",
+      "abv": 40,
+      "spirit": "tequila",
+      "place": "Atotonilco el Alto, Jalisco (highlands)",
+      "classification": "Tequila — 100% agave reposado (oak-rested, average about six months per the review)",
+      "plantComposition": "100% blue weber agave (Agave tequilana); a blend of tahona-crushed and roller-mill tequilas, per the producer profile",
+      "profileId": null,
+      "coverage": [
+        "profile-not-covered"
+      ],
+      "reviewSummary": "The Rum Howler describes a dichotomous spirit: honeyed caramel sweetness, soft earthy baked squash, sweet green peppers, hot white pepper, sandalwood and a hint of vanilla, changing direction on the first sip.",
+      "editorialNote": "A highlands reposado: the app's reposado profile describes the Tequila Valley reading, and this expression distills in Los Altos — covered here as a catalogue fact, not mapped onto the valley profile.",
+      "noteProfileId": "tequila-reposado-valley-jalisco",
+      "noteSourceIds": [
+        "rumhowler-patron-reposado",
+        "diffords-patron-reposado"
+      ],
+      "sourceIds": [
+        "diffords-patron-reposado",
+        "rumhowler-patron-reposado"
+      ],
+      "traditionId": "tequila",
+      "regionIds": []
+    },
+    {
+      "id": "casa-dragones-joven",
+      "brand": "Casa Dragones",
+      "producer": "Casa Dragones (small-batch master blend, Tequila, Jalisco)",
+      "expression": "Joven Sipping Tequila",
+      "abv": 40,
+      "spirit": "tequila",
+      "place": "Tequila, Jalisco",
+      "classification": "Tequila — joven (a master blend of silver with a hint of extra añejo, filtered to platinum clarity)",
+      "plantComposition": "100% blue weber agave (Agave tequilana), per the brand",
+      "profileId": null,
+      "coverage": [
+        "profile-not-covered"
+      ],
+      "reviewSummary": "Wine Enthusiast (96 points, blind tasted) finds it extraordinarily smooth, with a very sweet, fruity, almost wine-like nose and a bold, pure peppery flavor that finishes cleanly.",
+      "editorialNote": "A joven blend: the app has no joven tequila style profile yet (joven needs composition evidence, per the plan), so this entry is covered as a catalogue fact only.",
+      "noteProfileId": "tequila-cristalino-style",
+      "noteSourceIds": [
+        "wineenthusiast-casa-dragones-joven"
+      ],
+      "sourceIds": [
+        "casadragones-producer",
+        "wineenthusiast-casa-dragones-joven"
+      ],
+      "traditionId": "tequila",
+      "regionIds": []
     }
   ]
 }

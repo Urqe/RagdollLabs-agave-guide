@@ -422,7 +422,7 @@ Applied (see the maintenance notes in RELEASE_NOTES.md). Audit of the four incre
 
 ### Post-roadmap pair 2 — Producer Catalogue Expansion (feature/content)
 
-Add the remaining expressions for the owner-requested producers (Don Julio, Jose Cuervo, Patrón, Casa Dragones): reposados, añejos, joven and plata expressions across the existing style profiles. Each expression needs exact label facts plus one expression-matched review, or the owner-approved producer-note tier with explicit attribution where no review exists. Maintain the honest-mapping gates: a bottle maps only to a profile whose region, tradition and class genuinely match.
+Applied (see the pair 2 notes in RELEASE_NOTES.md). Add the remaining expressions for the owner-requested producers (Don Julio, Jose Cuervo, Patrón, Casa Dragones): reposados, añejos, joven and plata expressions across the existing style profiles. Each expression needs exact label facts plus one expression-matched review, or the owner-approved producer-note tier with explicit attribution where no review exists. Maintain the honest-mapping gates: a bottle maps only to a profile whose region, tradition and class genuinely match.
 
 ### Post-roadmap pair 3 — Learning Journey Refresh (feature/content)
 

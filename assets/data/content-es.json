@@ -529,6 +529,35 @@
     "balam-raicilla-costa": {
       "classification": "Raicilla — joven (sin añejar); denominación de origen de Jalisco",
       "plantComposition": "Agave Chino Aguiar / rhodacantha, según la ficha del productor; la composición varía por lote"
+    },
+    "don-julio-reposado": {
+      "reviewSummary": "La reseña de The Rum Howler (87.5/100, actualizada en 2020) encuentra complejidad suave de principio a fin: un dejo de dulce de leche, almendra y un toque de especia maderable y té, con especias picantes que crecen en la garganta.",
+      "editorialNote": "Un reposado de los Altos: el perfil de reposado de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
+      "classification": "Tequila — reposado 100% de agave (8 meses de reposo en roble, según la reseña)",
+      "plantComposition": "100% agave azul weber (Agave tequilana)"
+    },
+    "don-julio-anejo": {
+      "reviewSummary": "La reseña de The Rum Howler (90.5/100, revisada en 2018) encuentra agave suave con pimienta blanca moderada y caramelo claro, una presencia de roble muy leve y un dulzor agradable a la miel, con ralladura de lima y confitura de albaricoque fundidos en el agave, el roble y el caramelo.",
+      "editorialNote": "Un añejo de los Altos: el perfil de añejo de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
+      "classification": "Tequila — añejo 100% de agave (18 meses en roble, según la cata citada)",
+      "plantComposition": "100% agave azul weber (Agave tequilana)"
+    },
+    "jose-cuervo-tradicional-plata": {
+      "reviewSummary": "Según la reseña de The Rum Howler (82.5/100, 2018), se lanzó en 2011 como un verdadero tequila 100% de agave azul de la región central del valle; encuentra una plata fácil de beber con el carácter terroso y herbáceo del valle presente pero más suave que los ejemplos más contundentes de la categoría.",
+      "classification": "Tequila — blanco 100% de agave, sin añejar",
+      "plantComposition": "100% agave azul weber (Agave tequilana)"
+    },
+    "patron-reposado": {
+      "reviewSummary": "La reseña de The Rum Howler describe un destilado dicotómico: dulzor de caramelo a la miel, calabaza horneada suave y terrosa, pimientos verdes dulces, pimienta blanca picante, sándalo y un toque de vainilla, cambiando de dirección en el primer sorbo.",
+      "editorialNote": "Un reposado de los Altos: el perfil de reposado de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
+      "classification": "Tequila — reposado 100% de agave (reposo en roble, en promedio unos seis meses según la reseña)",
+      "plantComposition": "100% agave azul weber (Agave tequilana); una mezcla de tequilas de tahona y de molino de rodillos, según la ficha del productor"
+    },
+    "casa-dragones-joven": {
+      "reviewSummary": "Wine Enthusiast (96 puntos, cata a ciegas) lo encuentra extraordinariamente suave, con una nariz muy dulce, afrutada, casi vinosa y un sabor puro y contundente a pimienta que termina limpio.",
+      "editorialNote": "Una mezcla joven: la app aún no tiene un perfil de estilo tequila joven (el joven requiere evidencia de composición, según el plan), así que esta entrada se cubre solo como dato de catálogo.",
+      "classification": "Tequila — joven (una mezcla maestra de plata con un toque de extra añejo, filtrada hasta la claridad del platino)",
+      "plantComposition": "100% agave azul weber (Agave tequilana), según la marca"
     }
   },
   "processes": {
