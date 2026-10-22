@@ -81,6 +81,33 @@ test("profile leads with the warm story; data grids and disclosures follow", () 
   assert.equal(root.querySelectorAll(".taste-list li").length, profile.tasteNotes.length);
 });
 
+test("pair 6: no duplicated plant line and a clean heading hierarchy", () => {
+  const root = document.createElement("div");
+  const profile = profiles[0];
+  renderProfile(root, { profile, bottle: bottles.find(b => b.id === profile.exampleBottleId), sources, allProfiles: profiles, allBottles: bottles, locale });
+  assert.equal(root.querySelectorAll(".profile-plant-summary").length, 0, "identity plant summary removed; the craft section carries the plant once");
+  const craftPlants = root.querySelectorAll(".profile-craft .profile-plant");
+  assert.equal(craftPlants.length, 1, "plant appears exactly once");
+  const headings = [...root.querySelectorAll("h2")].map((h) => h.textContent);
+  const bottleTitles = headings.filter((t) => t === "Example bottle");
+  assert.equal(bottleTitles.length, 1, "the example-bottle heading renders once (section level)");
+  assert.ok(root.querySelector(".sensory-overview h2"), "character heading matches its sibling section level");
+  const sensory = root.querySelector(".sensory-overview");
+  const nextH2 = [...root.querySelectorAll("h2")].find((h) => h.textContent === "Character in the glass");
+  assert.ok(nextH2 === sensory.querySelector("h2"), "sensory heading lives inside the sensory overview");
+});
+
+test("pair 6: flavor moods span the character grid, not a stray third column", async () => {
+  const root = document.createElement("div");
+  const profile = profiles.find((p) => p.id === "mezcal-espadin-valles-centrales");
+  renderProfile(root, { profile, bottle: bottles.find(b => b.id === profile.exampleBottleId), sources, allProfiles: profiles, allBottles: bottles, locale });
+  const mood = root.querySelector(".profile-core > .mood-line");
+  assert.ok(mood, "mood line renders inside the character grid container");
+  const { readFile } = await import("node:fs/promises");
+  const css = await readFile("assets/css/styles.css", "utf8");
+  assert.ok(/\.profile-core > \.mood-line \{ grid-column: 1 \/ -1;/.test(css), "mood line spans both grid columns");
+});
+
 test("a lone comparison selection can be removed before a table exists", () => {
   const root = document.createElement("div");
   const changes = [];

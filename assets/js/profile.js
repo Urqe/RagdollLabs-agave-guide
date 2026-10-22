@@ -22,8 +22,7 @@ function sourceLinks(sources, sourceIds, locale = null) {
 
 function exampleBottleCard(bottle, sources, t, locale = null) {
   const L = (field, english) => fieldEs("bottle", bottle.id, field, locale) || english;
-  const card = el("article", { class: "bottle-card", "aria-labelledby": "bottle-card-heading" });
-  card.appendChild(el("h3", { id: "bottle-card-heading", class: "bottle-card-title" }, t("profile.exampleBottle")));
+  const card = el("article", { class: "bottle-card" });
   const name = el("p", { class: "bottle-name" });
   name.appendChild(el("strong", {}, `${bottle.brand} ${bottle.expression}`));
   if (bottle.abv != null) {
@@ -284,7 +283,6 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const sourceNodes = [...section.children].filter(node => node.classList.contains("source-list") || node === srcHeading);
   const identity = el("header", { class: "profile-heading" });
   identity.append(titleNode, placeNode);
-  if (profile.plant) identity.appendChild(el("p", { class: "profile-plant-summary" }, ui(locale, "plant") + ": " + profile.plant));
   const story = el("div", { class: "profile-story" });
   story.append(contextStoryNode, descriptionStoryNode);
   if (beginnerNode) story.appendChild(beginnerNode);

@@ -26,7 +26,7 @@ const COPY = {
     sensory: "Character in the glass",
     body: "Body", notes: "Typical notes", smoke: "Smoke", finish: "Finish",
     light: "Light body", medium: "Medium body", full: "Full body",
-    details: "Place, plant & craft", sources: "Sources & references",
+    sources: "Sources & references",
     legal: "Legal category", plant: "Plant", process: "Production",
     compareThis: "Compare this style", choices: "Your comparison",
     remove: "Remove", slots: "Choose up to three styles. Remove a selection to make room.",
@@ -126,7 +126,7 @@ const COPY = {
     sensory: "Carácter en la copa",
     body: "Cuerpo", notes: "Notas típicas", smoke: "Humo", finish: "Final",
     light: "Cuerpo ligero", medium: "Cuerpo medio", full: "Cuerpo pleno",
-    details: "Lugar, planta y elaboración", sources: "Fuentes y referencias",
+    sources: "Fuentes y referencias",
     legal: "Categoría legal", plant: "Planta", process: "Elaboración",
     compareThis: "Comparar este estilo", choices: "Tu comparación",
     remove: "Quitar", slots: "Elige hasta tres estilos. Quita uno para dejar espacio.",
@@ -282,7 +282,7 @@ const DIMENSION_KEY_LABELS = { bodyLevel: "body", finishLength: "finish" };
 
 export function sensoryOverview(profile, locale) {
   const section = el("section", { class: "sensory-overview", "aria-labelledby": "sensory-heading" });
-  section.appendChild(el("h3", { id: "sensory-heading" }, ui(locale, "sensory")));
+  section.appendChild(el("h2", { id: "sensory-heading" }, ui(locale, "sensory")));
   const list = el("dl", { class: "sensory-grid" });
   const keys = { bodyLevel: "body", finishLength: "finish" };
   for (const { key } of DIMENSIONS) {

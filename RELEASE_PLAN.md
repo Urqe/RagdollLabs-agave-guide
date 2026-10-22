@@ -446,6 +446,10 @@ Applied (see the pair 5 notes in RELEASE_NOTES.md). A UX/content review of the p
 
 Acceptance: a first-time visitor opening any profile sees the warm story before any disclaimer or data grid; the page no longer opens with a compliance note; hedging is consolidated; every profile context keeps the personal, proud regional voice while legal facts remain intact. Rerun the profile-rendering and UX regression suites in `test/` (jsdom) and repeat the manual mobile/desktop flows.
 
+### Post-roadmap pair 6 — Pair-5 Review & Fixes (maintenance)
+
+Applied (see the pair 6 notes in RELEASE_NOTES.md). Maintenance review of the pair-5 warm-storytelling implementation. Confirmed defects fixed: the profile identity header and the new visible craft section both displayed the plant line (removed the identity duplicate); "Character in the glass" was an h3 among h2 sibling sections (now h2, with the CSS selector updated); the example-bottle card carried a redundant internal "Example bottle" heading duplicating the section h2 (removed, along with its CSS rule); the flavor-mood line, moved inside the two-column character grid in pair 5, would land in a stray third grid cell (now spans both columns). Also removed the now-dead "Place, plant & craft" disclosure copy key (EN and ES) left over from the pair-5 reorder. Verified without defect: disclosure open-state persistence across language switches, ES rendering of the new hierarchy (no untranslated-field disclosures on translated profiles), search indexing (data-driven, unaffected), back-navigation origins, scroll-to-heading behavior, and robustness with missing optional profile fields. Two regression tests added pinning the no-duplicate-plant/heading-hierarchy and mood-line grid-span behaviors.
+
 ### Mandatory protocol for every maintenance release
 
 A maintenance release is implementation and deployment, not a findings-only report.
