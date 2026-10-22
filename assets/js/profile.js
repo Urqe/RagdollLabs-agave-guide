@@ -141,9 +141,6 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   if (profile.beginnerNote) {
     section.appendChild(el("p", { class: "beginner-note" }, fieldEs("profile", profile.id, "beginnerNote", locale) || profile.beginnerNote));
   }
-  const guidanceNote = el("p", { class: "editorial-note" },
-    ui(locale, "guidance"));
-  section.appendChild(guidanceNote);
 
   const craft = el("dl", { class: "profile-facts profile-craft" });
   if (profile.category) {
@@ -267,24 +264,33 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   section.appendChild(srcHeading);
   section.appendChild(sourceLinks(sources, profile.sourceIds, locale));
 
-  // Lead with sensory information; retain the original reference content in disclosures.
+  // Story first: context, description and beginner note stay in the reading
+  // flow near the top; data grids and disclosures follow, never lead.
   const titleNode = section.querySelector("#profile-title");
   const placeNode = section.querySelector(".profile-place");
+  const coordsNode = section.querySelector(".profile-coords");
+  const contextStoryNode = section.querySelector(".profile-context");
+  const descriptionStoryNode = section.querySelector(".profile-description");
+  const beginnerNode = section.querySelector(".beginner-note");
+  const craftNode = section.querySelector(".profile-craft");
   const factsNode = section.querySelector(".profile-facts:not(.profile-craft)");
+  const moodNode = section.querySelector(".mood-line");
   const bottleNode = section.querySelector(".bottle-card");
   const moreNode = section.querySelector(".more-bottles");
   const pairingNode = section.querySelector(".profile-pairing");
   const suggestionsHeading = section.querySelector(".suggestions-heading");
   const suggestionsNode = section.querySelector(".suggestion-list");
-  const beginnerNode = section.querySelector(".beginner-note");
-  const detailNodes = [".profile-context", ".profile-description", ".profile-craft", ".profile-coords", ".learn-callout-link"]
-    .map(selector => section.querySelector(selector)).filter(Boolean);
+  const learnLinkNode = section.querySelector(".learn-callout-link");
   const sourceNodes = [...section.children].filter(node => node.classList.contains("source-list") || node === srcHeading);
   const identity = el("header", { class: "profile-heading" });
   identity.append(titleNode, placeNode);
   if (profile.plant) identity.appendChild(el("p", { class: "profile-plant-summary" }, ui(locale, "plant") + ": " + profile.plant));
+  const story = el("div", { class: "profile-story" });
+  story.append(contextStoryNode, descriptionStoryNode);
+  if (beginnerNode) story.appendChild(beginnerNode);
   const core = el("div", { class: "profile-core" });
   core.append(sensoryOverview(profile, locale), factsNode);
+  if (moodNode) core.appendChild(moodNode);
   const isSelected = compareSelection.includes(profile.id);
   const isFull = compareSelection.length >= 3 && !isSelected;
   // "Compare this style" adds to the existing selection (capped at three);
@@ -297,19 +303,21 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     class: "compare-profile-link quiet-link" + (isSelected ? " is-selected" : "") + (isFull ? " is-full" : ""),
     href: "#/compare/" + targetIds.map(encodeURIComponent).join(","),
   }, isSelected ? ui(locale, "compareSelected") : isFull ? ui(locale, "compareFull") : ui(locale, "compareThis") + " ↗");
-  const details = el("details", { class: "profile-learning" });
-  details.appendChild(el("summary", {}, ui(locale, "details")));
-  for (const node of detailNodes) details.appendChild(node);
+  // Collapsed disclosures are for skip-this reference content only:
+  // sources and the place-coordinate reference. The story, craft facts
+  // and character are never hidden behind a disclosure widget.
   const references = el("details", { class: "profile-learning" });
   references.appendChild(el("summary", {}, ui(locale, "sources")));
   for (const node of sourceNodes) references.appendChild(node);
+  if (coordsNode) references.appendChild(coordsNode);
+  const guidanceNote = el("p", { class: "editorial-note profile-guidance" },
+    ui(locale, "guidance"));
   clear(section);
-  section.append(back, identity, guidanceNote, core, action);
-  if (beginnerNode) section.appendChild(beginnerNode);
+  section.append(back, identity, story);
 
-  // Release 21 redesign: visible "special" statement, character (the
-  // sensory overview already rendered in core), "why it tastes this way",
-  // "how to enjoy it", example bottles, then explore-next with reasons.
+  // Pair-5 reading order: what am I drinking (story) → why does it taste
+  // this way → how it is made (craft) → character in the glass → how to
+  // enjoy it → example bottles → explore next → compare action.
   if (profile.whyItTastes) {
     const whyBlock = el("section", { class: "profile-why", "aria-labelledby": "why-heading" });
     whyBlock.appendChild(el("h2", { id: "why-heading" }, t("profile.why")));
@@ -320,6 +328,15 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     whyBlock.appendChild(el("p", { class: "editorial-note" }, t("profile.whyNote")));
     section.appendChild(whyBlock);
   }
+
+  if (craftNode && craftNode.childNodes.length > 0) {
+    const craftBlock = el("section", { class: "profile-craft-section", "aria-labelledby": "craft-heading" });
+    craftBlock.appendChild(el("h2", { id: "craft-heading" }, t("profile.craft")));
+    craftBlock.appendChild(craftNode);
+    section.appendChild(craftBlock);
+  }
+
+  section.appendChild(core);
 
   if (pairingNode) {
     const enjoyBlock = el("section", { class: "profile-enjoy", "aria-labelledby": "enjoy-heading" });
@@ -357,7 +374,9 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     section.appendChild(nextBlock);
   }
 
-  section.append(details, references);
+  section.append(action, references);
+  if (learnLinkNode) section.appendChild(learnLinkNode);
+  section.appendChild(guidanceNote);
 
   container.appendChild(section);
   return section;

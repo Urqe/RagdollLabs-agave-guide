@@ -1916,3 +1916,54 @@ native-reader eyeball remains recommended.
   review (naturalness, regional register) — flagged to the owner as
   the plan intends.
 - Native-device checks still unverified in this environment.
+
+## Post-roadmap pair 5 — Warm Storytelling & Disclaimer Placement
+
+Scope per plan: restore the warm editorial story to the top of the
+profile reading flow, end the page-opening compliance note, consolidate
+hedging, and keep evidence attributed but out of the reading flow.
+
+### What changed
+
+- **Story first, disclosures last.** The profile view no longer moves
+  the warm `context`/`description` paragraphs into a collapsed
+  "Place, plant & craft" disclosure after building the page. New
+  reading order: identity → story (context, description, beginner
+  note) → why does it taste this way → how it is made (craft facts,
+  now visible) → character in the glass (sensory overview, facts,
+  flavor moods) → how to enjoy it → example bottles → explore next →
+  compare action → collapsed sources/coordinates → one small
+  editorial-guidance note at the very end.
+- **Disclaimer consolidation.** The "editorial style guidance" note
+  moved from above all content to the end of the profile; the 17
+  duplicated in-description guidance sentences (EN and ES) were
+  removed; the sensory overview's qualifier line was dropped (the
+  end-of-page note covers it); `coordsNote` no longer says
+  "approximate" twice and lives inside the collapsed sources
+  disclosure.
+- **Disclosure pattern reserved for skip-this content.** Collapsed
+  `<details>` now contains only sources and the place-coordinate
+  reference. Story, craft facts and character are never hidden.
+- **Voice pass (EN + ES).** Comiteco no longer discusses "eligibility
+  for this app" — the composition disclosure is delivered in the
+  narrator's voice ("an honest bottle always tells you what is in
+  it"); tuxca drops "a working description centers production on…"
+  for "Ask around Tuxcacuesco and they will point you…"; the valley
+  reposado no longer references "this app's blanco profile".
+- **Warmth pass (EN + ES).** Highland blanco gains alteño pride; the
+  espadín context closes with the Oaxacan family pouring it first for
+  a curious visitor.
+- The design test asserting the old collapsed-story hierarchy was
+  rewritten to pin the new one (story visible and before craft;
+  craft not collapsed; guidance after content, not before).
+
+### Checks run
+
+- `npm run validate` — schema plus 223 node:test/jsdom suites, all
+  passing.
+
+### Remaining issues / deferred
+
+- Native-device (iPhone/iPad Safari, VoiceOver) checks still
+  unverified in this environment; DOM-level hierarchy, disclosure
+  behavior and focus semantics are test-covered.

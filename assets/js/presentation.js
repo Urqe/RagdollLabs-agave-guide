@@ -23,7 +23,7 @@ const COPY = {
     compareSelected: "In your comparison \u2197", compareFull: "Comparison full \u2014 open your selection \u2197", removed: "Removed from your comparison.",
     noneSelected: "No profiles selected.", oneSelected: "1 profile selected",
     comparing: "Comparing", removedFrom: "Removed {name}.", addedTo: "Added {name}.", noMatches: "No profiles match these filters. Try another combination.",
-    sensory: "Character in the glass", sensoryNote: "Qualitative editorial guidance; individual bottles and batches vary.",
+    sensory: "Character in the glass",
     body: "Body", notes: "Typical notes", smoke: "Smoke", finish: "Finish",
     light: "Light body", medium: "Medium body", full: "Full body",
     details: "Place, plant & craft", sources: "Sources & references",
@@ -123,7 +123,7 @@ const COPY = {
     compareSelected: "En tu comparaci\u00f3n \u2197", compareFull: "Comparaci\u00f3n completa \u2014 abre tu selecci\u00f3n \u2197", removed: "Quitado de tu comparaci\u00f3n.",
     noneSelected: "Ning\u00fan perfil seleccionado.", oneSelected: "1 perfil seleccionado",
     comparing: "Comparando", removedFrom: "Quitado {name}.", addedTo: "A\u00f1adido {name}.", noMatches: "Ningún perfil coincide. Prueba otra combinación.",
-    sensory: "Carácter en la copa", sensoryNote: "Orientación editorial cualitativa; cada botella y lote puede variar.",
+    sensory: "Carácter en la copa",
     body: "Cuerpo", notes: "Notas típicas", smoke: "Humo", finish: "Final",
     light: "Cuerpo ligero", medium: "Cuerpo medio", full: "Cuerpo pleno",
     details: "Lugar, planta y elaboración", sources: "Fuentes y referencias",
@@ -158,7 +158,7 @@ const COPY = {
     brandProduct: "Gu\u00eda del Agave",
     mapFailed: "No se pudo cargar el mapa. Todav\u00eda puedes usar la lista de estados.",
     notFoundTitle: "Perfil no encontrado", notFoundBody: "No existe ning\u00fan perfil con el id \u00ab{id}\u00bb.", backToExplore: "\u2190 Volver a explorar",
-    coordsNote: "Ubicaci\u00f3n aproximada: {lat}, {lon} \u2014 precisi\u00f3n: {precision}. Es una referencia de lugar, no un l\u00edmite legal.",
+    coordsNote: "Referencia de lugar: {lat}, {lon} ({precision}) \u2014 cobertura de la gu\u00eda, no un l\u00edmite legal.",
     discoverHeading: "Tres caminos: planta, lugar o destilado",
     discoverIntro: "Comienza con un agave, una regi\u00f3n de M\u00e9xico, o una tradici\u00f3n \u2014 o sigue un sabor. Todos los caminos llevan a los mismos perfiles de estilo.",
     discoverByPlant: "Explora por planta", discoverByPlantIntro: "Especies de agave (y el Dasylirion del sotol) con sus nombres comunes regionales.",
@@ -283,7 +283,6 @@ const DIMENSION_KEY_LABELS = { bodyLevel: "body", finishLength: "finish" };
 export function sensoryOverview(profile, locale) {
   const section = el("section", { class: "sensory-overview", "aria-labelledby": "sensory-heading" });
   section.appendChild(el("h3", { id: "sensory-heading" }, ui(locale, "sensory")));
-  section.appendChild(el("p", { class: "sensory-note" }, ui(locale, "sensoryNote")));
   const list = el("dl", { class: "sensory-grid" });
   const keys = { bodyLevel: "body", finishLength: "finish" };
   for (const { key } of DIMENSIONS) {

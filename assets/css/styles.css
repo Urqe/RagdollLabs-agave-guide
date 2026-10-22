@@ -1005,6 +1005,11 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 /* ---------- profile hierarchy ---------- */
 .profile-view { max-width: 74rem; margin-inline: auto; }
 .profile-heading { padding-block: 1.3rem .5rem; }
+.profile-story { padding-block: .5rem .25rem; }
+.profile-story .beginner-note { margin-top: .75rem; }
+.profile-craft-section { padding-block: 1rem; }
+.profile-craft-section h2 { margin-bottom: .5rem; }
+.profile-guidance { margin-top: 1.25rem; }
 .profile-heading h1 { max-width: 27ch; }
 .profile-plant-summary { max-width: 60rem; color: var(--text-soft); font-size: .85rem; }
 .profile-core { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: start; padding-block: 1.5rem; }
