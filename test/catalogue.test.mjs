@@ -66,22 +66,21 @@ test("catalogue lists entries alphabetically and shows the brand directory", () 
 });
 
 test("factual entries disclose missing coverage instead of borrowing character", () => {
-  const costa = bottles.find((b) => b.id === "la-venenosa-costa");
-  assert.ok(costa, "catalogue contains a factual no-review entry");
-  assert.equal(costa.reviewSummary, null);
-  assert.ok(costa.coverage.includes("tasting-not-documented"));
-  // Release 13: profile covered now; only tasting notes remain undisclosed.
-  assert.equal(costa.profileId, "raicilla-costa-jalisco", "re-linked to the new Costa profile");
+  // Since the bottle-depth increment, the Costa entry carries a documented
+  // expression-matched review, so the tasting-not-documented disclosure is
+  // gone. Keep a factual-only entry pinned: the D'Antaño comiteco carries
+  // neither review nor borrowed character.
+  const dantano = bottles.find((b) => b.id === "dantano-aguamiel-cane");
+  assert.ok(dantano, "catalogue contains a factual no-review entry");
+  assert.ok(!dantano.reviewSummary, "no review summary on the factual entry");
 
   const container = document.createElement("div");
   document.body.appendChild(container);
-  const entry = bottleEntry(costa, { sources, profiles, locale: enLocale });
+  const entry = bottleEntry(dantano, { sources, profiles, locale: enLocale });
   container.appendChild(entry);
   const labels = [...entry.querySelectorAll(".coverage-label")].map((l) => l.textContent);
-  assert.ok(labels.includes("Tasting notes not yet documented"));
-  assert.ok(!labels.includes("Profile not yet covered"), "no longer marked profile-not-covered");
+  assert.ok(labels.includes("Tasting notes not yet documented"), "undisclosed tasting stays disclosed");
   assert.equal(entry.querySelector(".bottle-review"), null, "no invented tasting note");
-  assert.ok(entry.querySelector(".catalogue-profile-link"), "profile link present now that it is covered");
   container.remove();
 });
 
@@ -307,4 +306,37 @@ test("R27: highland blanco profile exists, is sourced and covers the highland bo
   // The plant back-links the profile.
   const plant = plants.find((p) => p.id === "agave-tequilana");
   assert.ok(plant.profileIds.includes(profile.id), "plant links back to the profile");
+});
+
+test("bottle-depth increment: single-example profiles gain documented second bottles", () => {
+  // Highland blanco, cristalino and valley añejo each gain a sourced bottle.
+  const expected = [
+    ["g4-blanco", "tequila-blanco-highland-jalisco"],
+    ["maestro-dobel-50-cristalino", "tequila-cristalino-style"],
+    ["cascahuin-anejo", "tequila-anejo-valley-jalisco"],
+  ];
+  for (const [id, profileId] of expected) {
+    const b = bottles.find((x) => x.id === id);
+    assert.ok(b, `${id} exists`);
+    assert.equal(b.profileId, profileId, `${id} maps to its profile`);
+    assert.ok(b.reviewSummary, `${id} has an attributed review`);
+    assert.ok(b.sourceIds.length >= 2, `${id} cites producer and review`);
+    const mapped = bottles.filter((x) => x.profileId === profileId);
+    assert.ok(mapped.length >= 2, `${profileId} now has more than one example`);
+  }
+  // The Costa raicilla entry's documented review replaced its disclosure.
+  const costa = bottles.find((x) => x.id === "la-venenosa-costa");
+  assert.ok(costa.reviewSummary, "costa review now documented");
+  assert.ok(!(costa.coverage || []).includes("tasting-not-documented"), "disclosure removed");
+  assert.ok(costa.sourceIds.includes("mezcalreviews-lavenenosa-costa"), "review source cited");
+  // No style profile regressed to a single bottle except the comiteco and
+  // extra-añejo profiles, whose candidates failed the region/label gates.
+  const singles = profiles.filter((p) => bottles.filter((b) => b.profileId === p.id).length === 1).map((p) => p.id);
+  assert.deepEqual(singles.sort(), [
+    "comiteco-aguamiel-chiapas",
+    "comiteco-anejo-comitan-chiapas",
+    "raicilla-costa-jalisco",
+    "raicilla-reposado-jalisco",
+    "tequila-extra-anejo-highland-jalisco",
+  ].sort(), `unexpected single-example profiles: ${singles.join(", ")}`);
 });

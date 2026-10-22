@@ -131,24 +131,22 @@
     {
       "id": "la-venenosa-costa",
       "brand": "La Venenosa",
-      "producer": "Jorge Armando Ramos (Casa Endémica bottling), coastal Jalisco",
+      "producer": "La Venenosa (Maestro Tabernero Don Alberto Hernández, El Tuito, Cabo Corrientes, Jalisco)",
       "expression": "Raicilla Costa (joven)",
       "abv": null,
       "spirit": "raicilla",
       "place": "Coastal Jalisco (Cabo Corrientes region)",
       "profileId": "raicilla-costa-jalisco",
-      "reviewSummary": null,
+      "reviewSummary": "A Mezcal Reviews member tasting (lote 32, 2021) calls it the most savory and smoky offering of the La Venenosa range — positively delicious at its price point, per the reviewer.",
       "sourceIds": [
-        "casaendemica-brands"
+        "casaendemica-brands",
+        "mezcalreviews-lavenenosa-costa"
       ],
       "abvNote": "ABV not documented in cited sources",
-      "coverage": [
-        "tasting-not-documented"
-      ],
-      "editorialNote": "The app's Costa raicilla profile: pit-cooked coastal style. This specific expression's tasting notes are not yet documented; the entry is factual.",
+      "editorialNote": "Fits the Costa profile's pit-cooked coastal reading: savory and smoky is exactly what the profile predicts for this style.",
       "noteProfileId": "raicilla-costa-jalisco",
       "noteSourceIds": [
-        "casaendemica-brands"
+        "mezcalreviews-lavenenosa-costa"
       ],
       "traditionId": "raicilla",
       "regionIds": [
@@ -755,6 +753,73 @@
       "sourceIds": [
         "casadragones-producer",
         "bevvy-casa-dragones-blanco"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
+      ]
+    },
+    {
+      "id": "g4-blanco",
+      "brand": "G4",
+      "producer": "G4 (Felipe Camarena, El Pandillo distillery, NOM 1579, Jesús María, Jalisco)",
+      "expression": "Blanco Tequila",
+      "abv": 40,
+      "spirit": "tequila",
+      "place": "Jesús María, Los Altos, Jalisco (highlands)",
+      "classification": "Tequila — 100% agave blanco, unaged",
+      "plantComposition": "100% blue weber agave (Agave tequilana), estate grown",
+      "batch": "Made with a 50/50 blend of rainwater and spring water; stone-oven cooked and tahona-crushed",
+      "profileId": "tequila-blanco-highland-jalisco",
+      "reviewSummary": "The Daily Pour finds it showcases the complex, savory delights of highland agave, oozing pepper and green olive notes; the producer's method — slow stone-oven cooking, a handmade metal tahona, double distillation in copper — keeps the agave front and center.",
+      "sourceIds": [
+        "siptequila-g4-blanco",
+        "thedailypour-g4-blanco"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-highlands-jal"
+      ]
+    },
+    {
+      "id": "maestro-dobel-50-cristalino",
+      "brand": "Maestro Dobel",
+      "producer": "Maestro Dobel (Jalisco)",
+      "expression": "Dobel 50 Cristalino Extra Añejo",
+      "abv": 40,
+      "spirit": "tequila",
+      "place": "Jalisco",
+      "classification": "Tequila — cristalino-style extra añejo (oak-aged 3+ years, filtered to remove color)",
+      "plantComposition": "100% blue weber agave (Agave tequilana), per the producer",
+      "batch": "Aged a minimum of three years in American and Eastern European oak, then charcoal-filtered clear",
+      "profileId": "tequila-cristalino-style",
+      "reviewSummary": "Tastings.com (2021 judging, 94 points) finds a smooth, complex cristalino: the oak's richness carries through the filtration, with the producer noting fig, quince, date, pineapple and pumpkin notes over cinnamon, vanilla and clove.",
+      "sourceIds": [
+        "maestrodobel-50-cristalino",
+        "tastings-maestro-dobel-50"
+      ],
+      "traditionId": "tequila",
+      "regionIds": [
+        "tequila-valley-jal"
+      ]
+    },
+    {
+      "id": "cascahuin-anejo",
+      "brand": "Cascahuín",
+      "producer": "Tequila Cascahuín (Rosales family, NOM 1123, El Arenal, Jalisco)",
+      "expression": "Añejo Tequila",
+      "abv": null,
+      "abvNote": "ABV not documented in the cited reviews; the distillery's standard bottling is around 40% — check your bottle",
+      "spirit": "tequila",
+      "place": "El Arenal, Jalisco (Tequila Valley region)",
+      "classification": "Tequila — 100% agave añejo (oak-aged 14–16 months)",
+      "plantComposition": "100% blue weber agave (Agave tequilana)",
+      "batch": "Rested 14–16 months in well-seasoned American oak (barrels with long tequila-maturation history), per the producer's US importer",
+      "profileId": "tequila-anejo-valley-jalisco",
+      "reviewSummary": "88 Bamboo's taste test of the Rosales family's distillery finds the añejo keeps cooked agave at the center with oak in support — the house's earthy, mineral valley character holding on under gentle barrel sweetness.",
+      "sourceIds": [
+        "siptequila-cascahuin-anejo",
+        "88bamboo-cascahuin-anejo"
       ],
       "traditionId": "tequila",
       "regionIds": [

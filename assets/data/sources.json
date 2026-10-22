@@ -503,6 +503,55 @@
       "url": "https://tastetequila.com/2015/highlands-vs-lowlands-tequila-does-it-matter/",
       "kind": "style",
       "verified": "2026-10-21"
+    },
+    {
+      "id": "mezcalreviews-lavenenosa-costa",
+      "title": "Mezcal Reviews — La Venenosa Raicilla Costa (member tasting notes)",
+      "url": "https://www.mezcalreviews.com/mezcal/la-venenosa-raicilla-costa/",
+      "kind": "review",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "thedailypour-g4-blanco",
+      "title": "The Daily Pour — G4 Tequila Blanco Review",
+      "url": "https://thedailypour.com/spirit/g4-tequila-blanco/",
+      "kind": "review",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "siptequila-g4-blanco",
+      "title": "Sip Tequila — G4 Blanco (producer facts: El Pandillo, NOM 1579, Jesús María)",
+      "url": "https://siptequila.com/products/g4-blanco",
+      "kind": "producer",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "maestrodobel-50-cristalino",
+      "title": "Maestro Dobel — Dobel 50 Cristalino Extra Añejo (product page)",
+      "url": "https://www.maestrodobel.com/products/dobel-50-cristalino-extra-anejo",
+      "kind": "producer",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "tastings-maestro-dobel-50",
+      "title": "Tastings.com — Maestro Dobel 50 Cristalino Tequila Extra Añejo (94 points, 2021 judging)",
+      "url": "https://www.tastings.com/Spirits-Review/Maestro-Dobel-50-Cristalino-Tequila-Extra-Anejo-Mexico-05-01-2021.aspx",
+      "kind": "review",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "88bamboo-cascahuin-anejo",
+      "title": "88 Bamboo — The Cascahuin Story; Taste Testing Cascahuin Reposado vs Añejo",
+      "url": "https://88bamboo.co/blogs/tequila-mezcal-reviews/the-cascahuin-story-protector-of-tequila-traditions-since-1904-taste-testing-cascahuin-reposado-vs-anejo-7",
+      "kind": "review",
+      "verified": "2026-10-21"
+    },
+    {
+      "id": "siptequila-cascahuin-anejo",
+      "title": "Sip Tequila — Cascahuin Añejo (producer facts: NOM 1123, El Arenal)",
+      "url": "https://siptequila.com/products/cascahuin-anejo",
+      "kind": "producer",
+      "verified": "2026-10-21"
     }
   ]
 }
