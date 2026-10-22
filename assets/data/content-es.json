@@ -356,7 +356,8 @@
       "editorialNote": "Una lectura más afrutada y floral de la bacanora que la que describe este perfil — la acidez de manzana verde y el final violeta quedan fuera del centro mineral y sabroso del ejemplo de Rancho Tepúa."
     },
     "la-venenosa-costa": {
-      "editorialNote": "El perfil de raicilla de la costa de esta app: estilo costero cocido en horno subterráneo. Las notas de cata de esta expresión específica aún no están documentadas; la entrada es factual.",
+      "reviewSummary": "Una cata de miembro de Mezcal Reviews (lote 32, 2021) la llama la oferta más sabrosa y ahumada del rango de La Venenosa — deliciosamente positiva en su punto de precio, según el reseñista.",
+      "editorialNote": "Encaja con la lectura costera de cocción en fosa del perfil Costa: sabroso y ahumado es exactamente lo que el perfil predice para este estilo.",
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas"
     },
     "balancan-tuxca": {
@@ -494,6 +495,25 @@
       "reviewSummary": "La reseña de Bevvy encuentra toronja fresca y manzana verde en nariz, agave protagonista en el sorbo con pimienta negra, clavo, menta y fruta tropical jugosa, y un final ligero y brillante con toronja, pimienta y hierbas refrescantes.",
       "classification": "Tequila — blanco 100% de agave azul, sin añejar",
       "plantComposition": "100% agave azul weber (Agave tequilana), según la marca"
+    },
+    "g4-blanco": {
+      "reviewSummary": "The Daily Pour encuentra que muestra las delicias complejas y sabrosas del agave de los Altos, rezumando pimienta y notas de aceituna verde; el método del productor — cocción lenta en horno de piedra, tahona metálica artesanal, doble destilación en cobre — mantiene el agave en primer plano.",
+      "classification": "Tequila — blanco 100% de agave, sin añejar",
+      "plantComposition": "100% agave azul weber (Agave tequilana), de cultivo propio",
+      "batch": "Elaborado con una mezcla 50/50 de agua de lluvia y de manantial; cocido en horno de piedra y molido con tahona"
+    },
+    "maestro-dobel-50-cristalino": {
+      "reviewSummary": "Tastings.com (cata de 2021, 94 puntos) encuentra un cristalino suave y complejo: la riqueza de la madera atraviesa la filtración, con el productor señalando notas de higo, membrillo, dátil, piña y calabaza sobre canela, vainilla y clavo.",
+      "classification": "Tequila — extra añejo estilo cristalino (3+ años en roble, filtrado para retirar el color)",
+      "plantComposition": "100% agave azul weber (Agave tequilana), según el productor",
+      "batch": "Añejado un mínimo de tres años en roble americano y de Europa del Este, luego filtrado con carbón hasta la claridad"
+    },
+    "cascahuin-anejo": {
+      "reviewSummary": "La cata de 88 Bamboo de la destilería de la familia Rosales encuentra que el añejo mantiene el agave cocido en el centro con el roble en apoyo — el carácter terroso y mineral del valle de la casa persiste bajo una dulzura suave de barril.",
+      "abvNote": "Graduación alcohólica no documentada en las reseñas citadas; el embotellado estándar de la destilería ronda el 40% — verifica tu botella",
+      "classification": "Tequila — añejo 100% de agave (14–16 meses en roble)",
+      "plantComposition": "100% agave azul weber (Agave tequilana)",
+      "batch": "Reposado 14–16 meses en roble americano bien curado (barricas con larga historia de maduración de tequila), según el importador estadounidense del productor"
     }
   },
   "processes": {

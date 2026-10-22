@@ -1563,3 +1563,53 @@ Release 26: the deferred highland tequila blanco style profile.
   pick this pair up automatically; a dedicated pairing review belongs
   to the next maintenance pass.
 - Native-device checks still unverified in this environment.
+
+## Content increment — more example bottles for single-example styles
+
+Second increment of the post-roadmap pair: catalogue depth where
+profiles showed only one example bottle.
+
+### What changed
+
+- **Three new bottles, each with one producer page and one credible
+  expression-matched review:**
+  - **G4 Blanco** (40% ABV, El Pandillo, NOM 1579, Jesús María, Los
+    Altos) — The Daily Pour review; second example for the highland
+    blanco profile, with the rainwater/spring-water and tahona
+    method documented in the batch field.
+  - **Maestro Dobel 50 Cristalino** (40% ABV, Jalisco) — Tastings.com
+    2021 judging (94 points) plus the producer page; second example
+    for the cristalino-style profile, oak-aged 3+ years then
+    filtered clear.
+  - **Cascahuín Añejo** (El Arenal, Tequila Valley region, NOM 1123)
+    — 88 Bamboo taste test; second example for the valley añejo
+    profile, 14–16 months in well-seasoned American oak. ABV left
+    undocumented with an honest note rather than guessed.
+- **La Venenosa Raicilla Costa gained its documented tasting:** an
+  expression-matched Mezcal Reviews member tasting (lote 32, 2021)
+  replaces the tasting-not-documented disclosure; producer detail
+  sharpened to the actual tabernero (Don Alberto Hernández, El Tuito)
+  rather than the bottler.
+- Single-example profiles reduced from eight to five. Candidates that
+  failed the honest-mapping gates were skipped, not forced: Tequila
+  Ocho (highlands, cannot map to valley añejo), Siete Leguas
+  (highlands distillery), Balam Comiteco (Amatenango, outside the
+  Comitán-scoped comiteco profiles).
+- Full Spanish translations for every new and changed bottle field,
+  including classification, plant composition and batch facts.
+
+### Checks run
+
+- `npm run validate` — schema plus 215 node:test/jsdom suites (1 new
+  increment test pinning the new mappings, the costa review swap and
+  the exact set of remaining single-example profiles). All passing.
+- DOM smoke of all four entries in English and Spanish: reviews
+  render, translations complete, no raw English in the Spanish UI.
+
+### Remaining issues / deferred
+
+- Still one example each: comiteco blanco/añejo (Comitán-scoped; the
+  documented alternatives are from Amatenango or cane-blended),
+  costa raicilla and raicilla reposado (single documented producer
+  lines), and highland extra añejo. All remain evidence-gated.
+- Native-device checks still unverified in this environment.
