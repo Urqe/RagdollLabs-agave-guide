@@ -1967,3 +1967,47 @@ hedging, and keep evidence attributed but out of the reading flow.
 - Native-device (iPhone/iPad Safari, VoiceOver) checks still
   unverified in this environment; DOM-level hierarchy, disclosure
   behavior and focus semantics are test-covered.
+
+## Post-roadmap pair 6 — Pair-5 Review & Fixes
+
+Maintenance review of the warm-storytelling release (pair 5), per the
+mandatory maintenance protocol.
+
+### Findings and fixes
+
+- **Duplicated plant line (defect found):** the identity header kept
+  its plant summary while the newly visible craft section also showed
+  the plant. The identity duplicate is removed; the plant now appears
+  exactly once, in "How it is made".
+- **Heading hierarchy (defect found):** "Character in the glass" was
+  an h3 among h2 sibling sections — now an h2. The example-bottle card
+  carried a redundant internal "Example bottle" h3 duplicating the
+  section h2 — removed (the section heading labels the card).
+- **Mood line in the character grid (defect found):** pair 5 moved the
+  flavor-mood line into the two-column `.profile-core` grid, where it
+  would occupy a stray third cell. It now spans both columns.
+- **Dead copy key (cleanup):** the "Place, plant & craft" disclosure
+  label (EN and ES) had no consumer after the pair-5 reorder; removed.
+
+### Verified, no defect
+
+- Disclosure open-state persistence across language/theme re-renders
+  (the collapsed sources disclosure restores correctly).
+- Spanish rendering of the new hierarchy: story, craft and character
+  all localize; no untranslated-field disclosures on translated
+  profiles; guidance note renders in Spanish.
+- Search indexing is data-driven, so the story text remains findable
+  regardless of DOM order.
+- Back-navigation origins, scroll-to-heading on route change, and
+  robustness with missing optional fields (no plant → no craft
+  section; no bottle → bottles section omitted cleanly).
+
+### Checks run
+
+- `npm run validate` — schema plus 225 node:test/jsdom suites (2 new
+  regression tests), all passing.
+
+### Remaining issues / deferred
+
+- Native-device (iPhone/iPad Safari, VoiceOver) checks still
+  unverified in this environment.

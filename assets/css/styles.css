@@ -521,6 +521,7 @@ a { color: var(--blue); }
 }
 
 .mood-line { max-width: 46rem; }
+.profile-core > .mood-line { grid-column: 1 / -1; margin: 0; }
 
 .bottle-card {
   margin-top: 1.5rem;
@@ -540,15 +541,6 @@ a { color: var(--blue); }
   inset: 0 auto 0 0;
   width: 3px;
   background: linear-gradient(180deg, var(--anejo), var(--terra));
-}
-
-.bottle-card-title {
-  margin: 0 0 0.55rem;
-  font-size: 0.74rem;
-  font-family: var(--body-font);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--anejo-bright);
 }
 
 .bottle-name { font-size: 1.15rem; margin-bottom: 0.4rem; font-weight: 700; font-family: var(--display); }
@@ -1011,9 +1003,8 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .profile-craft-section h2 { margin-bottom: .5rem; }
 .profile-guidance { margin-top: 1.25rem; }
 .profile-heading h1 { max-width: 27ch; }
-.profile-plant-summary { max-width: 60rem; color: var(--text-soft); font-size: .85rem; }
 .profile-core { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: start; padding-block: 1.5rem; }
-.sensory-overview h3 { margin: 0; font-size: 1.5rem; }
+.sensory-overview h2 { margin: 0; font-size: 1.5rem; }
 .sensory-note { color: var(--text-soft); font-size: .85rem; line-height: 1.6; }
 .sensory-grid { margin: 1.5rem 0 0; }
 .sensory-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; align-items: center; margin-bottom: .85rem; }
