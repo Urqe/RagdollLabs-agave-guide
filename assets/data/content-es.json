@@ -2,7 +2,7 @@
   "profiles": {
     "tequila-blanco-valley-jalisco": {
       "title": "Tequila blanco, estilo Valle de Tequila",
-      "context": "Tequila sin crianza de 100% agave azul, nacido en el pueblo de Tequila y en el valle que lleva su nombre. Pregúntale a cualquiera del valle: su agave crece más pequeño y más herbáceo que el de los altos, y sus blancos se leen sabrosos y vegetales en lugar de dulces — el sabor de esta tierra, y los del valle te lo dirán con orgullo.",
+      "context": "Tequila sin crianza de 100% de agave azul, nacido en el pueblo de Tequila y en el valle que lleva su nombre. Pregúntale a cualquiera del valle: su agave crece más pequeño y más herbáceo que el de los altos, y sus blancos se leen sabrosos y vegetales en lugar de dulces — el sabor de esta tierra, y los del valle te lo dirán con orgullo.",
       "description": "Un blanco (también llamado silver o plata) es un tequila embotellado sin crianza en roble, así que lo que se prueba es el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas. Los productores tradicionales del valle suelen moler el agave cocido con tahona de piedra y fermentar en tinas abiertas, lo que añade textura y un filo sabroso y terroso típico de la región. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
       "beginnerNote": "¿Nuevo en el tequila? Un blanco es la versión sin crianza — la lectura más pura del agave cocido, antes de cualquier influencia de roble. Aquí es donde cada tequilero quiere que su tierra hable primero.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal sin crianza",
@@ -96,7 +96,7 @@
     },
     "comiteco-aguamiel-chiapas": {
       "title": "Comiteco, estilo aguamiel (Comitán, Chiapas)",
-      "context": "El comiteco le pertenece a Comitán de Domínguez, Chiapas, y los comitecos hablan de él como de algo solo suyo: un destilado de savia en el que, en lugar de cocinar corazones de agave, los productores recolectan el aguamiel fresco del maguey Comiteco vivo (Agave atrovirens), lo fermentan y lo destilan. Algunos comitecos incluyen una fuente adicional de azúcar de caña; una propuesta para definir la categoría fija un mínimo de contenido de agave en lugar de exigir 100%. Que una botella específica sea 100% agave es un hecho aparte de su elegibilidad para esta app — las tradiciones agaveras con ingredientes no-agave verificados y claramente divulgados se incluyen con honestidad.",
+      "context": "El comiteco le pertenece a Comitán de Domínguez, Chiapas, y los comitecos hablan de él como de algo solo suyo: un destilado de savia en el que, en lugar de cocinar corazones de agave, los productores recolectan el aguamiel fresco del maguey Comiteco vivo (Agave atrovirens), lo fermentan y lo destilan. Algunos comitecos incluyen una fuente adicional de azúcar de caña; una propuesta para definir la categoría fija un mínimo de contenido de agave en lugar de exigir 100%. Que una botella específica sea 100% de agave es un hecho aparte de su elegibilidad para esta app — las tradiciones agaveras con ingredientes no-agave verificados y claramente divulgados se incluyen con honestidad.",
       "description": "El comiteco fermenta y destila el aguamiel recolectado de la planta viva, sin cocinar la piña. El resultado es un destilado verde, láctico y herbal, sin carácter de asado, con una suavidad característica de la savia fresca. Esta es orientación editorial sobre el estilo, no una calificación de ninguna botella en particular.",
       "beginnerNote": "¿Nuevo en el comiteco? Olvídate del humo: es un destilado de savia — piensa verde, láctico y herbal, de agave sin cocinar. La tradición de Comitán, sin parecido al norte.",
       "category": "Comiteco — una tradición regional de Comitán, Chiapas; no es un destilado con denominación de origen ni legalmente equivalente al tequila o al mezcal",
@@ -365,7 +365,7 @@
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas"
     },
     "nine-guardianes-comiteco-blanco": {
-      "classification": "Comiteco — joven (sin clases legales de añejamiento; 100% agave de solo savia, según el productor)",
+      "classification": "Comiteco — joven (sin clases legales de añejamiento; 100% de agave de solo savia, según el productor)",
       "plantComposition": "Fermentado y doble destilado a partir de aguamiel fresco de maguey comiteco (Agave atrovirens); según el importador estadounidense del productor, reposado en vidrio unos seis meses antes del embotellado",
       "reviewSummary": "Mezcal Reviews lista el 9 Guardianes Comiteco Blanco como fermentado de la savia del maguey Comitlán y destilado en Chiapas.",
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas",
@@ -472,58 +472,58 @@
     },
     "el-acabo-plata-raicilla": {
       "reviewSummary": "Tastings.com la calificó 97/100 en mayo de 2025 y Forbes reporta que fue el destilado de agave mejor clasificado en el concurso 2025 del Beverage Testing Institute, uno de solo dos premios Platinum; los jueces describen una aromática brillante de pimiento verde y pasto con jalapeño y pimiento rojo, y un paladar de agave, manzana verde y jalapeño guiado por lo verde.",
-      "batch": "Plata sin crianza de la taberna Taberna 3 Gallos; homenaje a las celebraciones de cosecha de la Hacienda de Ahuacatepec"
+      "batch": "Plata sin crianza de la Taberna 3 Gallos; homenaje a las celebraciones de cosecha de la Hacienda de Ahuacatepec"
     },
     "aguamiel-bacanora-blanco": {
       "reviewSummary": "Una cata de miembro de Mezcal Reviews describe agave cálido con pastel de vainilla y ligera fruta (piña, crema de plátano) en nariz, y un paladar dulce y jugoso con notas de crema batida, masa de pastel y natillas contra ligeras notas herbáceas, de humo y salinas.",
       "classification": "Bacanora — blanco (sin añejar); denominación de origen de Sonora",
-      "plantComposition": "100% agave silvestre yaquiana/Pacifica (la forma sonorense de Agave angustifolia), según el productor"
+      "plantComposition": "100% de agave silvestre yaquiana/Pacifica (la forma sonorense de Agave angustifolia), según el productor"
     },
     "don-julio-blanco": {
       "reviewSummary": "La guía Difford's (catada en 2011) encuentra una nariz especiada y mineral con limón vivaz y toronja rosada y sutiles aromas de masa con levadura; el paladar limpio y mineral ofrece dulce de leche, masa y delicados sabores herbales, cerrando con un final largo y seco con notas vegetales y pimienta negra especiada. La botella es sin añejar, reposada brevemente en recipientes inertes antes del embotellado.",
       "editorialNote": "Un blanco de los Altos y no del Valle de Tequila: espera la lectura más brillante y frutal de la misma clase legal.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
-      "plantComposition": "100% agave azul weber (Agave tequilana)"
+      "plantComposition": "100% de agave azul weber (Agave tequilana)"
     },
     "jose-cuervo-tradicional-reposado": {
       "reviewSummary": "The Rum Howler encuentra la frutosidad, la especia y la pimienta contenidas frente a embotellados anteriores — sigue siendo un reposado agradable y fácil, pero con menos agave contundente del que el reseñista busca en un tequila de sorbo.",
       "classification": "Tequila — reposado 100% de agave (con reposo en roble)",
-      "plantComposition": "100% agave azul weber (Agave tequilana)"
+      "plantComposition": "100% de agave azul weber (Agave tequilana)"
     },
     "patron-silver": {
       "reviewSummary": "Liquor.com encuentra un encantador aroma vegetal de agave cocido — pasto, pimientos verdes, algo de tierra y eucalipto — con sabores de agave, eucalipto y pimienta blanca que llevan a un final suave y sabroso; fino solo y en cócteles, con precio premium.",
       "editorialNote": "Un blanco de los Altos: la misma clase sin añejar del ejemplo del valle, con la lectura más frutal y cítrica de los Altos.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
-      "plantComposition": "100% agave azul weber (Agave tequilana)"
+      "plantComposition": "100% de agave azul weber (Agave tequilana)"
     },
     "casa-dragones-blanco": {
       "reviewSummary": "La reseña de Bevvy encuentra toronja fresca y manzana verde en nariz, agave protagonista en el sorbo con pimienta negra, clavo, menta y fruta tropical jugosa, y un final ligero y brillante con toronja, pimienta y hierbas refrescantes.",
       "classification": "Tequila — blanco 100% de agave azul, sin añejar",
-      "plantComposition": "100% agave azul weber (Agave tequilana), según la marca"
+      "plantComposition": "100% de agave azul weber (Agave tequilana), según la marca"
     },
     "g4-blanco": {
       "reviewSummary": "The Daily Pour encuentra que muestra las delicias complejas y sabrosas del agave de los Altos, rezumando pimienta y notas de aceituna verde; el método del productor — cocción lenta en horno de piedra, tahona metálica artesanal, doble destilación en cobre — mantiene el agave en primer plano.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
-      "plantComposition": "100% agave azul weber (Agave tequilana), de cultivo propio",
+      "plantComposition": "100% de agave azul weber (Agave tequilana), de cultivo propio",
       "batch": "Elaborado con una mezcla 50/50 de agua de lluvia y de manantial; cocido en horno de piedra y molido con tahona"
     },
     "maestro-dobel-50-cristalino": {
       "reviewSummary": "Tastings.com (cata de 2021, 94 puntos) encuentra un cristalino suave y complejo: la riqueza de la madera atraviesa la filtración, con el productor señalando notas de higo, membrillo, dátil, piña y calabaza sobre canela, vainilla y clavo.",
       "classification": "Tequila — extra añejo estilo cristalino (3+ años en roble, filtrado para retirar el color)",
-      "plantComposition": "100% agave azul weber (Agave tequilana), según el productor",
+      "plantComposition": "100% de agave azul weber (Agave tequilana), según el productor",
       "batch": "Añejado un mínimo de tres años en roble americano y de Europa del Este, luego filtrado con carbón hasta la claridad"
     },
     "cascahuin-anejo": {
       "reviewSummary": "La cata de 88 Bamboo de la destilería de la familia Rosales encuentra que el añejo mantiene el agave cocido en el centro con el roble en apoyo — el carácter terroso y mineral del valle de la casa persiste bajo una dulzura suave de barril.",
       "abvNote": "Graduación alcohólica no documentada en las reseñas citadas; el embotellado estándar de la destilería ronda el 40% — verifica tu botella",
       "classification": "Tequila — añejo 100% de agave (14–16 meses en roble)",
-      "plantComposition": "100% agave azul weber (Agave tequilana)",
+      "plantComposition": "100% de agave azul weber (Agave tequilana)",
       "batch": "Reposado 14–16 meses en roble americano bien curado (barricas con larga historia de maduración de tequila), según el importador estadounidense del productor"
     },
     "tequila-ocho-extra-anejo": {
       "reviewSummary": "No hay reseña independiente documentada de la versión actual; según las notas del propio productor, el extra añejo presenta cerezas, anís, chocolate oscuro, jerez, roble y plátano en nariz, y roble, anís, fruta seca, cerezas, toffee, pimienta negra y canela en el paladar.",
       "classification": "Tequila — extra añejo 100% de agave (3+ años en roble)",
-      "plantComposition": "100% agave azul weber (Agave tequilana), de finca única y con añada",
+      "plantComposition": "100% de agave azul weber (Agave tequilana), de finca única y con añada",
       "batch": "Con añada de un solo rancho; añejado un mínimo de tres años en barricas usadas de whisky americano"
     },
     "balam-raicilla-costa": {
@@ -534,30 +534,30 @@
       "reviewSummary": "La reseña de The Rum Howler (87.5/100, actualizada en 2020) encuentra complejidad suave de principio a fin: un dejo de dulce de leche, almendra y un toque de especia maderable y té, con especias picantes que crecen en la garganta.",
       "editorialNote": "Un reposado de los Altos: el perfil de reposado de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
       "classification": "Tequila — reposado 100% de agave (8 meses de reposo en roble, según la reseña)",
-      "plantComposition": "100% agave azul weber (Agave tequilana)"
+      "plantComposition": "100% de agave azul weber (Agave tequilana)"
     },
     "don-julio-anejo": {
       "reviewSummary": "La reseña de The Rum Howler (90.5/100, revisada en 2018) encuentra agave suave con pimienta blanca moderada y caramelo claro, una presencia de roble muy leve y un dulzor agradable a la miel, con ralladura de lima y confitura de albaricoque fundidos en el agave, el roble y el caramelo.",
       "editorialNote": "Un añejo de los Altos: el perfil de añejo de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
       "classification": "Tequila — añejo 100% de agave (18 meses en roble, según la cata citada)",
-      "plantComposition": "100% agave azul weber (Agave tequilana)"
+      "plantComposition": "100% de agave azul weber (Agave tequilana)"
     },
     "jose-cuervo-tradicional-plata": {
       "reviewSummary": "Según la reseña de The Rum Howler (82.5/100, 2018), se lanzó en 2011 como un verdadero tequila 100% de agave azul de la región central del valle; encuentra una plata fácil de beber con el carácter terroso y herbáceo del valle presente pero más suave que los ejemplos más contundentes de la categoría.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
-      "plantComposition": "100% agave azul weber (Agave tequilana)"
+      "plantComposition": "100% de agave azul weber (Agave tequilana)"
     },
     "patron-reposado": {
       "reviewSummary": "La reseña de The Rum Howler describe un destilado dicotómico: dulzor de caramelo a la miel, calabaza horneada suave y terrosa, pimientos verdes dulces, pimienta blanca picante, sándalo y un toque de vainilla, cambiando de dirección en el primer sorbo.",
       "editorialNote": "Un reposado de los Altos: el perfil de reposado de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
       "classification": "Tequila — reposado 100% de agave (reposo en roble, en promedio unos seis meses según la reseña)",
-      "plantComposition": "100% agave azul weber (Agave tequilana); una mezcla de tequilas de tahona y de molino de rodillos, según la ficha del productor"
+      "plantComposition": "100% de agave azul weber (Agave tequilana); una mezcla de tequilas de tahona y de molino de rodillos, según la ficha del productor"
     },
     "casa-dragones-joven": {
       "reviewSummary": "Wine Enthusiast (96 puntos, cata a ciegas) lo encuentra extraordinariamente suave, con una nariz muy dulce, afrutada, casi vinosa y un sabor puro y contundente a pimienta que termina limpio.",
       "editorialNote": "Una mezcla joven: la app aún no tiene un perfil de estilo tequila joven (el joven requiere evidencia de composición, según el plan), así que esta entrada se cubre solo como dato de catálogo.",
       "classification": "Tequila — joven (una mezcla maestra de plata con un toque de extra añejo, filtrada hasta la claridad del platino)",
-      "plantComposition": "100% agave azul weber (Agave tequilana), según la marca"
+      "plantComposition": "100% de agave azul weber (Agave tequilana), según la marca"
     }
   },
   "processes": {

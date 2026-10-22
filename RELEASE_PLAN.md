@@ -430,7 +430,7 @@ Applied (see the pair 3 notes in RELEASE_NOTES.md). Weave the newer content into
 
 ### Post-roadmap pair 4 — Reviewed Spanish Localization (maintenance)
 
-A dedicated review pass of the accumulated editorial translations (bottle summaries, profile prose, sustainability sections, comparison perspectives) by a fluent reader: catch translation drift, anglicisms and inconsistent terminology; keep the per-section English disclosure behaviour intact. The UI has been bilingual since Release 14, but the editorial prose has never had a reviewed pass.
+Applied (see the pair 4 notes in RELEASE_NOTES.md). A dedicated review pass of the accumulated editorial translations (bottle summaries, profile prose, sustainability sections, comparison perspectives) by a fluent reader: catch translation drift, anglicisms and inconsistent terminology; keep the per-section English disclosure behaviour intact. The UI has been bilingual since Release 14, but the editorial prose has never had a reviewed pass.
 
 ### Mandatory protocol for every maintenance release
 
