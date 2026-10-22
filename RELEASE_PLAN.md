@@ -1,7 +1,7 @@
 # RagdollLabs Agave Guide — Release Plan
 
 Status: release roadmap; current implementation/deployment progress must be checked in the repository.  
-Updated: 2026-10-21  
+Updated: 2026-10-22  
 Confirmed repository name: `RagdollLabs-agave-guide`  
 Product subtitle: **Explore Mexico’s agave spirits**
 
@@ -431,6 +431,20 @@ Applied (see the pair 3 notes in RELEASE_NOTES.md). Weave the newer content into
 ### Post-roadmap pair 4 — Reviewed Spanish Localization (maintenance)
 
 Applied (see the pair 4 notes in RELEASE_NOTES.md). A dedicated review pass of the accumulated editorial translations (bottle summaries, profile prose, sustainability sections, comparison perspectives) by a fluent reader: catch translation drift, anglicisms and inconsistent terminology; keep the per-section English disclosure behaviour intact. The UI has been bilingual since Release 14, but the editorial prose has never had a reviewed pass.
+
+### Post-roadmap pair 5 — Warm Storytelling & Disclaimer Placement (feature/UX)
+
+Planned. A UX/content review of the profile reading experience found that the warm editorial voice exists in the data but the rendering buries it. The profile view (`assets/js/profile.js`) builds the page with the warm `context` and `description` paragraphs in the reading flow, then reorders the DOM so they end up inside a collapsed "Place, plant & craft" disclosure, while an editorial-guidance disclaimer renders above all content (`profile.js` around the `section.append(back, identity, guidanceNote, core, action)` call). A first-time visitor therefore meets a compliance note and a sensory grid before the story, which reads encyclopedic rather than like a Mexican proudly describing the spirits of their state. Related findings, in priority order:
+
+- [ ] Put the profile `context` and `description` back in the visible reading flow near the top of the profile view, ahead of the sensory grid; move the "editorial style guidance" disclaimer to a small note at the end of the profile (or remove the top instance where the description text already carries it, e.g. the valley blanco profile).
+- [ ] Reorder the profile sections toward the journey the product promises: what am I drinking (context/description) → why does it taste this way → how it is made → character in the glass → example bottles → explore next. "Why it tastes this way" currently sits below the sensory grid and compare link.
+- [ ] Consolidate hedging: `sensoryNote`, `mapHint`, `flavourDisclaimer`, `reasonSuffix` and `coordsNote` (which says "approximate" twice) each read as legal qualifiers. Keep at most one unobtrusive qualifier per view and move the methodology disclosure to the Learn section.
+- [ ] Reserve the collapsed `<details>` pattern for skip-this content (sources). Using the same pattern for please-read-this content (the story) teaches users that expandable sections can be ignored.
+- [ ] Voice pass on profile `context` fields that drift into app-meta language: the comiteco profile discusses "eligibility for this app" instead of speaking as a proud chiapaneco; tuxca uses "a working description centers production on…". Keep the legal facts, deliver them in the narrator's voice.
+- [ ] Even out warmth across profiles: `tequila-blanco-highland-jalisco` and `mezcal-espadin-valles-centrales` are mostly agronomy; give every profile at least one moment of local pride to match bacanora, sotol and the valley profiles.
+- [ ] Do not change the source-citation approach: evidence stays attributed but collapsed out of the reading flow, with no leading exit links. This is confirmed as matching the product goal.
+
+Acceptance: a first-time visitor opening any profile sees the warm story before any disclaimer or data grid; the page no longer opens with a compliance note; hedging is consolidated; every profile context keeps the personal, proud regional voice while legal facts remain intact. Rerun the profile-rendering and UX regression suites in `test/` (jsdom) and repeat the manual mobile/desktop flows.
 
 ### Mandatory protocol for every maintenance release
 
