@@ -59,16 +59,24 @@ test("Explore starts with profiles and combines tradition and documented flavour
   }
 });
 
-test("profile leads with sensory information while retaining reference disclosures", () => {
+test("profile leads with the warm story; data grids and disclosures follow", () => {
   const root = document.createElement("div");
   const profile = profiles[0];
   renderProfile(root, { profile, bottle: bottles.find(b => b.id === profile.exampleBottleId), sources, allProfiles: profiles, allBottles: bottles, locale });
-  const sensory = root.querySelector(".profile-core");
+  const story = root.querySelector(".profile-story");
+  const core = root.querySelector(".profile-core");
   const craft = root.querySelector(".profile-craft");
-  assert.ok(sensory.compareDocumentPosition(craft) & dom.window.Node.DOCUMENT_POSITION_FOLLOWING);
-  assert.ok(craft.closest("details"));
-  assert.ok(root.querySelector(".profile-context").closest("details"));
-  assert.ok(root.querySelector(".profile-learning .source-list"));
+  const guidance = root.querySelector(".profile-guidance");
+  assert.ok(story, "story container renders in the reading flow");
+  assert.ok(story.querySelector(".profile-context"), "context stays visible in the story");
+  assert.ok(story.querySelector(".profile-description"), "description stays visible in the story");
+  assert.ok(!story.querySelector(".profile-context").closest("details"), "story is never hidden behind a disclosure");
+  assert.ok(!craft.closest("details"), "craft facts are visible, not collapsed");
+  assert.ok(story.compareDocumentPosition(craft) & dom.window.Node.DOCUMENT_POSITION_FOLLOWING, "craft follows the story");
+  assert.ok(craft.compareDocumentPosition(core) & dom.window.Node.DOCUMENT_POSITION_FOLLOWING, "character grid follows the craft facts");
+  assert.ok(root.querySelector(".profile-learning .source-list"), "sources stay in a collapsed disclosure");
+  assert.ok(root.querySelector(".profile-coords").closest("details"), "coordinate reference stays collapsed");
+  assert.ok(core.compareDocumentPosition(guidance) & dom.window.Node.DOCUMENT_POSITION_FOLLOWING, "editorial note sits after the content, not before it");
   assert.equal(root.querySelector(".compare-profile-link").getAttribute("href"), "#/compare/" + profile.id);
   assert.equal(root.querySelectorAll(".taste-list li").length, profile.tasteNotes.length);
 });
