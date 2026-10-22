@@ -2011,3 +2011,55 @@ mandatory maintenance protocol.
 
 - Native-device (iPhone/iPad Safari, VoiceOver) checks still
   unverified in this environment.
+
+## Post-roadmap pair 7 — Compact Data-Dense Layouts
+
+Scope per plan: present the warm story-first profile much more densely
+on laptop viewports, with the character block docked beside the story
+and a quiet persistent search — without changing content, reading
+order or the mobile layout.
+
+### What changed
+
+- **Two-column profile at ≥ 64rem.** New `.profile-body-grid` wraps
+  the story, why-it-tastes, craft facts and character core. On wide
+  viewports it splits into a story column (~1.15fr) and a character
+  column (~.85fr), so the full "Character in the glass" block (all
+  eight sensory sliders, taste facts, flavor moods) docks to the
+  right of the story in the same screen. Below 64rem the grid is a
+  plain block and the page stacks exactly as before.
+- **Typography density pass.** Editorial prose 1.12rem/1.75 → 1rem/1.6
+  (above the 0.95rem reading floor), global h1–h4 display sizes
+  reduced (h1 clamp 1.7–2.4rem), the 62ch prose cap lifts inside the
+  wide body grid so text fills its column, and section paddings/grid
+  gaps tightened throughout the profile view.
+- **Compact sensory sliders.** Sensory-row gap 1rem → .75rem and row
+  margin .85rem → .55rem; the character column also drops the facts
+  card padding at wide widths so all eight dimensions fit beside the
+  story.
+- **Persistent search on the profile view.** A quiet one-line search
+  field (no submit button, `role="search"`, after the identity header)
+  reuses the existing search plumbing: submitting captures an Explore
+  view-memory snapshot with the query and navigates to `#/explore`,
+  where the existing restore path seeds the results — no duplicated
+  search logic.
+- **Density on other views.** Discovery controls and cards tightened
+  (padding 1.5rem → 1.1rem on cards, 1.25rem → .9rem on the control
+  panel); learn-card padding and margins compacted; view intros
+  slightly wider and tighter.
+
+### Checks run
+
+- `npm run validate` — schema plus 227 node:test/jsdom suites (2 new
+  pair-7 tests: body-grid structure + wide/narrow CSS pins, and
+  persistent-search render/submit), all passing.
+- Manual flow simulated at DOM level: search submit navigates to
+  `#/explore` and the captured snapshot restores the query
+  (`sessionStorage` view-memory verified).
+
+### Remaining issues / deferred
+
+- Visual confirmation on a real laptop browser is owner-side; this
+  environment has no browser engine, so layout checks are
+  CSS-pinned. Native mobile (iPhone/iPad Safari, VoiceOver) checks
+  still unverified here.

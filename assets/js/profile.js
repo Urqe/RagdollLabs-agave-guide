@@ -1,4 +1,6 @@
 import { el, safeLink, clear } from "./dom-utils.js";
+import { navigateTo } from "./router.js";
+import { captureView } from "./view-memory.js";
 import { STATE_NAMES } from "./map.js";
 import { flavorMoods, ifYouLikeThis } from "./compare.js";
 import { bottlesForProfile } from "./catalogue.js";
@@ -310,12 +312,35 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   if (coordsNode) references.appendChild(coordsNode);
   const guidanceNote = el("p", { class: "editorial-note profile-guidance" },
     ui(locale, "guidance"));
+  // Pair 7: quiet persistent search — never the main stage; submitting
+  // seeds the Explore view with the query so the results page carries it.
+  const searchForm = el("form", { class: "profile-search", role: "search" });
+  const searchInput = el("input", {
+    type: "search",
+    class: "search-input",
+    id: "profile-view-search",
+    placeholder: ui(locale, "search"),
+    "aria-label": ui(locale, "search"),
+  });
+  searchForm.appendChild(searchInput);
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const query = searchInput.value.trim();
+    captureView("explore", { query, spirit: "", mood: "", stateId: null });
+    navigateTo({ name: "explore" });
+  });
+  // Pair 7: story left, character docked right on wide viewports.
+  const bodyGrid = el("div", { class: "profile-body-grid" });
+  bodyGrid.append(story);
   clear(section);
-  section.append(back, identity, story);
+  section.append(back, identity, searchForm, bodyGrid);
 
   // Pair-5 reading order: what am I drinking (story) → why does it taste
   // this way → how it is made (craft) → character in the glass → how to
   // enjoy it → example bottles → explore next → compare action.
+  // Pair 7: the why and craft sections flow under the story (left column
+  // of the body grid); the character core docks to the right on wide
+  // viewports and stacks below on narrow ones.
   if (profile.whyItTastes) {
     const whyBlock = el("section", { class: "profile-why", "aria-labelledby": "why-heading" });
     whyBlock.appendChild(el("h2", { id: "why-heading" }, t("profile.why")));
@@ -324,17 +349,17 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     if (!whyText.translated) whyP.appendChild(el("span", { class: "editorial-note untranslated-field" }, " " + ui(locale, "partialDisclosure")));
     whyBlock.appendChild(whyP);
     whyBlock.appendChild(el("p", { class: "editorial-note" }, t("profile.whyNote")));
-    section.appendChild(whyBlock);
+    bodyGrid.appendChild(whyBlock);
   }
 
   if (craftNode && craftNode.childNodes.length > 0) {
     const craftBlock = el("section", { class: "profile-craft-section", "aria-labelledby": "craft-heading" });
     craftBlock.appendChild(el("h2", { id: "craft-heading" }, t("profile.craft")));
     craftBlock.appendChild(craftNode);
-    section.appendChild(craftBlock);
+    bodyGrid.appendChild(craftBlock);
   }
 
-  section.appendChild(core);
+  bodyGrid.appendChild(core);
 
   if (pairingNode) {
     const enjoyBlock = el("section", { class: "profile-enjoy", "aria-labelledby": "enjoy-heading" });

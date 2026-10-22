@@ -99,15 +99,15 @@ h1, h2, h3, h4 {
   letter-spacing: 0.005em;
 }
 
-h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.025em; margin: 0 0 1rem; }
-h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); color: var(--text); }
-h3 { font-size: 1.2rem; }
-h4 { font-size: 1rem; }
+h1 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); line-height: 1.12; letter-spacing: -.025em; margin: 0 0 .75rem; }
+h2 { font-size: clamp(1.25rem, 2vw, 1.6rem); color: var(--text); }
+h3 { font-size: 1.05rem; }
+h4 { font-size: .95rem; }
 
 /* Typographic scale for the reading hierarchy: editorial prose reads at
    the large step, quiet supporting text (labels, hints, source notes) at
    the small step, and navigation-style links sit visually below prose. */
-.profile-why p, .profile-context, .profile-description { font-size: 1.12rem; line-height: 1.75; max-width: 62ch; }
+.profile-why p, .profile-context, .profile-description { font-size: 1rem; line-height: 1.6; max-width: 62ch; }
 .quiet-link { color: var(--text-soft); font-size: 0.88rem; font-weight: 550; text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 1px; transition: color 0.15s var(--ease), border-color 0.15s var(--ease); }
 .quiet-link:hover { color: var(--text); border-color: var(--anejo); }
 .quiet-link:focus-visible { outline: 2px solid var(--accent, #d98e4a); outline-offset: 2px; }
@@ -222,7 +222,7 @@ a { color: var(--blue); }
 
 /* ---------- shared ---------- */
 
-.view-intro { color: var(--text-soft); max-width: 46rem; margin-top: 0.5rem; }
+.view-intro { color: var(--text-soft); max-width: 52rem; margin-top: 0.4rem; line-height: 1.55; }
 
 .cta-link {
   display: inline-block;
@@ -815,15 +815,15 @@ a { color: var(--blue); }
   color: var(--text-dim);
 }
 .source-details .source-group-label:first-of-type { margin-top: 0.1rem; }
-.learn-view h3 { margin-top: 1.75rem; scroll-margin-top: 5rem; }
+.learn-view h3 { margin-top: 1.35rem; scroll-margin-top: 5rem; }
 
 .learn-card {
   background: var(--surface);
   border: 1px solid var(--line-soft);
   border-radius: var(--radius);
-  padding: 1rem 1.2rem;
+  padding: .8rem 1rem;
   max-width: 46rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.7rem;
   box-shadow: var(--shadow-1);
 }
 
@@ -952,7 +952,7 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .featured-section { margin-top: clamp(2rem, 5vw, 4rem); }
 .featured-section h2 { margin: .6rem 0; }
 .discovery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-.discovery-card { position: relative; display: flex; flex-direction: column; padding: 1.5rem; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--text); text-decoration: none; }
+.discovery-card { position: relative; display: flex; flex-direction: column; padding: 1.1rem; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--text); text-decoration: none; }
 .discovery-card:hover { border-color: var(--anejo); background: var(--surface-2); }
 .discovery-card > strong { font: 500 1.45rem/1.3 var(--display); margin: .8rem 0; padding-right: .5rem; }
 .discovery-place { color: var(--text-soft); font-size: .85rem; }
@@ -982,7 +982,7 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .leaf-6 { transform: rotate(76deg) scaleY(.9); }
 
 /* ---------- exploration ---------- */
-.discovery-controls { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr) auto; align-items: end; gap: 1rem; margin: 1.5rem 0; padding: 1.25rem; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.discovery-controls { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr) auto; align-items: end; gap: .8rem; margin: 1rem 0; padding: .9rem; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
 .search-holder .search-input { max-width: none; border-radius: 10px; min-height: 52px; }
 .profile-list > li { min-width: 0; display: flex; flex-direction: column; }
 .profile-list .profile-group-label { margin: 0 0 .5rem; color: var(--text-soft); }
@@ -996,18 +996,21 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 
 /* ---------- profile hierarchy ---------- */
 .profile-view { max-width: 74rem; margin-inline: auto; }
-.profile-heading { padding-block: 1.3rem .5rem; }
-.profile-story { padding-block: .5rem .25rem; }
-.profile-story .beginner-note { margin-top: .75rem; }
-.profile-craft-section { padding-block: 1rem; }
-.profile-craft-section h2 { margin-bottom: .5rem; }
-.profile-guidance { margin-top: 1.25rem; }
+.profile-heading { padding-block: .9rem .4rem; }
+.profile-story { padding-block: .35rem .2rem; }
+.profile-story .beginner-note { margin-top: .6rem; }
+.profile-craft-section { padding-block: .7rem; }
+.profile-craft-section h2 { margin-bottom: .4rem; }
+.profile-guidance { margin-top: 1rem; }
 .profile-heading h1 { max-width: 27ch; }
-.profile-core { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: start; padding-block: 1.5rem; }
-.sensory-overview h2 { margin: 0; font-size: 1.5rem; }
+/* Pair 7: wide viewports dock the character block beside the story so a
+   laptop screen fits both without scrolling; narrow screens stack. */
+.profile-body-grid { display: block; }
+.profile-core { display: grid; grid-template-columns: 1.1fr 1fr; gap: 1.25rem; align-items: start; padding-block: 1rem; }
+.sensory-overview h2 { margin: 0; font-size: 1.25rem; }
 .sensory-note { color: var(--text-soft); font-size: .85rem; line-height: 1.6; }
-.sensory-grid { margin: 1.5rem 0 0; }
-.sensory-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; align-items: center; margin-bottom: .85rem; }
+.sensory-grid { margin: .9rem 0 0; }
+.sensory-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .75rem; align-items: center; margin-bottom: .55rem; }
 .sensory-row dt { color: var(--text-soft); font-size: .9rem; }
 .sensory-row dd { margin: 0; }
 .sensory-value { display: block; font-size: .8rem; margin-bottom: .3rem; }
@@ -1017,8 +1020,16 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .level-low { width: 33.333%; }
 .level-medium { width: 66.667%; }
 .level-high { width: 100%; }
-.profile-core > .profile-facts { margin: 0; width: 100%; max-width: none; grid-template-columns: 1fr; padding: 1.5rem; gap: .5rem; }
-.profile-core > .profile-facts dd + dt { margin-top: 1rem; }
+.profile-core > .profile-facts { margin: 0; width: 100%; max-width: none; grid-template-columns: 1fr; padding: 1rem; gap: .4rem; }
+.profile-core > .profile-facts dd + dt { margin-top: .7rem; }
+@media (min-width: 64rem) {
+  .profile-body-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 1.75rem; align-items: start; }
+  .profile-body-grid > .profile-core { display: block; padding-block: 0; margin-top: .4rem; }
+  .profile-body-grid > .profile-core > .profile-facts { padding: .75rem; }
+  .profile-body-grid .profile-why, .profile-body-grid .profile-context, .profile-body-grid .profile-description { max-width: none; }
+}
+.profile-search { max-width: 22rem; margin: .25rem 0 .75rem; }
+.profile-search .search-input { min-height: 38px; }
 /* The compare action reads as a quiet inline link so the sensory and
    why-it-tastes narrative keeps the reader's focus. */
 .compare-profile-link { display: inline-block; min-height: 44px; line-height: 44px; margin-bottom: 1.5rem; padding: 0; border: none; border-bottom: 1px solid var(--line); background: transparent; color: var(--text-soft); font-size: 0.9rem; font-weight: 550; box-shadow: none; }
