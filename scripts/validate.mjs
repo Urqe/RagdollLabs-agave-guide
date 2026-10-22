@@ -62,6 +62,15 @@ for (const p of profiles) {
       fail(`${label}: placeCoords requires an honest precision label containing "approximate"`);
     }
   }
+  if (p.maturation !== undefined) {
+    const m = p.maturation;
+    if (typeof m !== "object" || Array.isArray(m) || !m.class || !m.duration) {
+      fail(`${label}: maturation requires class and duration when present`);
+    }
+    if (!p.processIds || !p.processIds.includes("wood-maturation")) {
+      fail(`${label}: maturation requires the wood-maturation process`);
+    }
+  }
   if (p.aliases !== undefined) {
     if (!Array.isArray(p.aliases) || p.aliases.some((a) => typeof a !== "string" || !a.trim())) {
       fail(`${label}: aliases must be an array of non-empty strings when present`);

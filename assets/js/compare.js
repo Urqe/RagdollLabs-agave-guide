@@ -166,6 +166,15 @@ export function comparisonPerspectives(profiles) {
   if (woodMix && woodProfile && unagedProfile) {
     out.push({ id: "unagedVersusWoodRested", wood: woodProfile.id, unaged: unagedProfile.id, evidence: "processIds" });
   }
+  // Two wood-rested profiles of the same tradition whose documented
+  // maturation classes differ (e.g. reposado vs añejo): the variable at
+  // play is maturation, even though the process id is identical.
+  if (allWood) {
+    const first = profiles[0].maturation;
+    if (first && profiles.every((p) => p.maturation) && profiles.some((p) => p.maturation.class !== first.class)) {
+      out.push({ id: "differentMaturation", classes: profiles.map((p) => p.maturation.class), evidence: "maturation" });
+    }
+  }
   return out;
 }
 
