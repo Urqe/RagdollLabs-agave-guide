@@ -607,7 +607,11 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "The same valley base as the blanco, rested in oak for the legal minimum of two months (typically 2–12): the oak softens the vegetal edge and adds gentle spice, without erasing the cooked agave underneath."
+      "whyItTastes": "The same valley base as the blanco, rested in oak for the legal minimum of two months (typically 2–12): the oak softens the vegetal edge and adds gentle spice, without erasing the cooked agave underneath.",
+      "maturation": {
+        "class": "reposado",
+        "duration": "2 months to 1 year in oak"
+      }
     },
     {
       "id": "tequila-anejo-valley-jalisco",
@@ -677,7 +681,11 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "One year or more in oak (typically ex-bourbon casks): the wood now speaks clearly — vanilla and caramel over the agave — but 'older is better' is marketing, not a rule of flavor."
+      "whyItTastes": "One year or more in oak (typically ex-bourbon casks): the wood now speaks clearly — vanilla and caramel over the agave — but 'older is better' is marketing, not a rule of flavor.",
+      "maturation": {
+        "class": "añejo",
+        "duration": "1 to 3 years in oak"
+      }
     },
     {
       "id": "tequila-cristalino-style",
@@ -747,7 +755,11 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "Made as an oak-rested reposado or añejo and then charcoal-filtered clear: the filtration removes color and, with it, some flavor. What remains is wood-influenced but visually blanco — a finishing choice, not a legal class."
+      "whyItTastes": "Made as an oak-rested reposado or añejo and then charcoal-filtered clear: the filtration removes color and, with it, some flavor. What remains is wood-influenced but visually blanco — a finishing choice, not a legal class.",
+      "maturation": {
+        "class": "cristalino-style (filtered aged base)",
+        "duration": "aged base (varies; typically añejo or extra añejo) then filtered"
+      }
     },
     {
       "id": "comiteco-anejo-comitan-chiapas",
@@ -883,7 +895,11 @@
       "plantIds": [
         "agave-maximiliana"
       ],
-      "whyItTastes": "Fermented and distilled (the example bottle lists steel), then rested in wooden barrels about three months: a short legal-minimum rest that rounds the raicilla without turning it into something else."
+      "whyItTastes": "Fermented and distilled (the example bottle lists steel), then rested in wooden barrels about three months: a short legal-minimum rest that rounds the raicilla without turning it into something else.",
+      "maturation": {
+        "class": "reposado",
+        "duration": "minimum 2 months in wood"
+      }
     },
     {
       "id": "tequila-extra-anejo-highland-jalisco",
@@ -954,7 +970,11 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "Highland agave from red mineral soils reads sweeter and more floral than valley agave; three-plus years in (typically American ex-bourbon) oak pushes the spirit firmly into wood territory while the highland fruit holds on underneath."
+      "whyItTastes": "Highland agave from red mineral soils reads sweeter and more floral than valley agave; three-plus years in (typically American ex-bourbon) oak pushes the spirit firmly into wood territory while the highland fruit holds on underneath.",
+      "maturation": {
+        "class": "extra añejo",
+        "duration": "3 years or more in oak"
+      }
     },
     {
       "id": "mezcal-reposado-espadin-oaxaca",
@@ -1024,7 +1044,11 @@
       "plantIds": [
         "agave-angustifolia"
       ],
-      "whyItTastes": "The same pit-roasted espadín base as the joven, rested in oak 2–12 months (the example bottle lists 4–6 in American oak): the roast stays, softened by wood. Note the mezcal reposado minimum differs from tequila's — the rules do not transfer."
+      "whyItTastes": "The same pit-roasted espadín base as the joven, rested in oak 2–12 months (the example bottle lists 4–6 in American oak): the roast stays, softened by wood. Note the mezcal reposado minimum differs from tequila's — the rules do not transfer.",
+      "maturation": {
+        "class": "reposado",
+        "duration": "2 months to 1 year in oak"
+      }
     },
     {
       "id": "mezcal-tobala-sierra-oaxaca",

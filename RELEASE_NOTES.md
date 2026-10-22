@@ -1721,3 +1721,63 @@ them. Applied to the remaining single-example styles.
 - Comiteco blanco/añejo and raicilla reposado remain single-example
   profiles (candidates still fail the honest-mapping gates).
 - Native-device checks still unverified in this environment.
+
+## Post-roadmap maintenance — comparison maturation perspective
+
+Maintenance pass over the four increments shipped after Release 26
+(highland blanco profile, bottle depth, quiet-navigation UX,
+producer-note evidence tier), per the plan's protocol. Also
+established the next post-roadmap pairs in the plan (producer
+catalogue expansion, learning journey refresh, reviewed Spanish
+localization).
+
+### Findings and fixes
+
+- **Missing maturation perspective (defect found):** reposado vs
+  añejo tequila — the most natural comparison in the catalogue —
+  produced no perspective at all, because both profiles carry the
+  same `wood-maturation` process id, so the engine had no documented
+  variable to name. Fixed with a structured `maturation` field
+  (class + duration, taken from each profile's own sourced category
+  text) on all six wood-rested profiles, and a new
+  `differentMaturation` perspective that fires only when the
+  documented classes genuinely differ. The compare view renders it
+  as "time in oak is the variable here" in English and Spanish, with
+  a validator rule enforcing that maturation claims require the
+  wood-maturation process.
+- **Producer-note attribution discipline (verified, no defect):**
+  every producer-derived tasting opens by stating the review gap and
+  attributes the notes inline; no entry phrases producer claims as
+  independent observations.
+- **ES parity (verified, no defect):** full sweep across all 41
+  bottles and 18 profiles found zero untranslated fields; the
+  newest comparison perspective ships in both languages.
+- **Source integrity (verified, no defect):** no dangling source
+  references; every source URL is https with a verification date.
+- **Discovery (verified, no defect):** the newest bottles are
+  findable by brand, expression and class ("Ocho", "Balam",
+  "cristalino", "Comiteco"); the valley-vs-highland blanco pair
+  correctly triggers the same-plant-different-region perspective
+  with fruit/herbal as the documented differences.
+- **UX spot check (verified in DOM, not on native devices):** the
+  quiet-link vocabulary renders as designed; the hierarchy test
+  still pins editorial prose above navigation.
+
+### Checks run
+
+- `npm run validate` — schema plus 220 node:test/jsdom suites (3 new
+  tests: the maturation perspective, its no-false-positive case,
+  and the Spanish rendering). All passing.
+
+### Remaining issues / deferred
+
+- Native Safari/VoiceOver verification of the quiet-link UX remains
+  an owner-side check.
+- The three single-example styles stay evidence-gated (comiteco
+  blanco/añejo, raicilla reposado).
+
+### Plan updates
+
+- Post-roadmap pairs 2–4 recorded in RELEASE_PLAN.md: producer
+  catalogue expansion (feature), learning journey refresh
+  (feature), reviewed Spanish localization (maintenance).

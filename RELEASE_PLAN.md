@@ -416,6 +416,22 @@ Acceptance: new content passes the same evidence and editorial gates as existing
 
 Applied (see Release 26 notes in RELEASE_NOTES.md). Audit evidence quality and provenance across the new entities, sensory-claim discipline, distinction between legal and cultural framing, Spanish/English parity across all new content, scope-description accuracy and discovery regressions. Deploy corrections and establish the next feature/maintenance pair from the backlog.
 
+### Post-roadmap pair 1 — Comparison Maturation Perspective (maintenance over the content increments)
+
+Applied (see the maintenance notes in RELEASE_NOTES.md). Audit of the four increments shipped after Release 26 (highland blanco profile, bottle depth, quiet-navigation UX, producer-note evidence tier). Confirmed defect fixed: wood-rested profiles of the same tradition (reposado vs añejo) shared identical processIds, so no comparison perspective fired even though maturation duration is the variable at play — added a structured `maturation` field to wood-rested profiles and a `differentMaturation` perspective with its evidence. Producer-note attribution discipline, ES parity, source integrity and search discoverability verified without defect.
+
+### Post-roadmap pair 2 — Producer Catalogue Expansion (feature/content)
+
+Add the remaining expressions for the owner-requested producers (Don Julio, Jose Cuervo, Patrón, Casa Dragones): reposados, añejos, joven and plata expressions across the existing style profiles. Each expression needs exact label facts plus one expression-matched review, or the owner-approved producer-note tier with explicit attribution where no review exists. Maintain the honest-mapping gates: a bottle maps only to a profile whose region, tradition and class genuinely match.
+
+### Post-roadmap pair 3 — Learning Journey Refresh (feature/content)
+
+Weave the newer content into the Learn chapters: the highland/valley terroir distinction (single-estate and vintage-dated tequila), glass-resting as a maturation method (comiteco), the wild-harvest sustainability picture (added with Release 25 but not yet part of the education flow), and the evidence-tier distinction the app now teaches by example — independent reviews vs producer notes vs editorial synthesis. Spanish parity required for all new chapter material.
+
+### Post-roadmap pair 4 — Reviewed Spanish Localization (maintenance)
+
+A dedicated review pass of the accumulated editorial translations (bottle summaries, profile prose, sustainability sections, comparison perspectives) by a fluent reader: catch translation drift, anglicisms and inconsistent terminology; keep the per-section English disclosure behaviour intact. The UI has been bilingual since Release 14, but the editorial prose has never had a reviewed pass.
+
 ### Mandatory protocol for every maintenance release
 
 A maintenance release is implementation and deployment, not a findings-only report.

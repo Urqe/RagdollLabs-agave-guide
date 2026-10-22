@@ -259,6 +259,9 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
         const woodName = title(byId.get(perspective.wood) || { title: "" });
         const unagedName = title(byId.get(perspective.unaged) || { title: "" });
         text = t("compare.perspective.woodVsUnaged").replace("{wood}", woodName).replace("{unaged}", unagedName);
+      } else if (perspective.id === "differentMaturation") {
+        const classes = perspective.classes.map((c) => c).join(" vs ");
+        text = t("compare.perspective.differentMaturation").replace("{classes}", classes);
       }
       item.appendChild(el("span", { class: "compare-perspective-chip" }, text));
       persList.appendChild(item);

@@ -161,3 +161,33 @@ test("R23: if-you-like suggestions keep their relevance reasons", async () => {
     assert.ok(s.sharedDimensionKeys.length > 0, "each suggestion names the shared attributes (its relevance)");
   }
 });
+
+test("R27 maintenance: reposado vs añejo gets the maturation perspective", () => {
+  const r = comparisonPerspectives([byId("tequila-reposado-valley-jalisco"), byId("tequila-anejo-valley-jalisco")]);
+  const p = r.find((x) => x.id === "differentMaturation");
+  assert.ok(p, "differentMaturation perspective detected");
+  assert.equal(p.evidence, "maturation", "carries its evidence");
+  assert.deepEqual(p.classes, ["reposado", "añejo"]);
+});
+
+test("R27 maintenance: same maturation class does not fire the perspective", () => {
+  const r = comparisonPerspectives([byId("tequila-reposado-valley-jalisco"), byId("mezcal-reposado-espadin-oaxaca")]);
+  assert.ok(!r.some((x) => x.id === "differentMaturation"), "same class, no maturation claim");
+});
+
+test("R27 maintenance: maturation requires wood maturation and renders in Spanish", async () => {
+  const { renderCompare } = await import("../assets/js/compare-view.js");
+  const es = createLocale();
+  es.set("es");
+  const container = document.getElementById("app");
+  container.innerHTML = "";
+  renderCompare(container, {
+    profiles,
+    compareIds: "tequila-reposado-valley-jalisco,tequila-anejo-valley-jalisco",
+    locale: es,
+    onSelectionChange: () => {},
+  });
+  const chips = [...container.querySelectorAll(".compare-perspective-chip")].map((c) => c.textContent);
+  assert.ok(chips.some((c) => /el tiempo en roble es la variable/i.test(c)), `maturation perspective in Spanish, got: ${chips.join(" | ")}`);
+  es.set("en");
+});
