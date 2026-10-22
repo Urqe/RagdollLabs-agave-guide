@@ -1781,3 +1781,49 @@ localization).
 - Post-roadmap pairs 2–4 recorded in RELEASE_PLAN.md: producer
   catalogue expansion (feature), learning journey refresh
   (feature), reviewed Spanish localization (maintenance).
+
+## Post-roadmap pair 2 — Producer Catalogue Expansion
+
+All four owner-requested producers are now fully covered in the
+catalogue; backlog.json is empty.
+
+### What changed
+
+- **Five new expressions, each with an independent dated review:**
+  - **Jose Cuervo Tradicional Plata** (38%, Casa Cuervo, central
+    valley) — The Rum Howler 2018 review; honestly mapped to the
+    valley blanco profile, giving it a third example.
+  - **Don Julio Reposado** (38%, 8 months oak, Rum Howler 2020,
+    87.5/100) and **Don Julio Añejo** (38%, 18 months oak, Rum Howler
+    2018, 90.5/100) — catalogue facts with `profile-not-covered`
+    disclosures: both distill in Los Altos, and the reposado/añejo
+    profiles describe the Tequila Valley reading. The editorial
+    notes explain exactly that relation rather than borrowing the
+    valley profiles' character.
+  - **PATRÓN Reposado** (40%, ~6 months oak, Rum Howler review; the
+    tahona/roller blend documented from Difford's producer profile) —
+    same honest highlands treatment.
+  - **Casa Dragones Joven** (40%, Wine Enthusiast 96 points, blind
+    tasted) — uncovered with the reason stated: the app has no joven
+    tequila profile (joven needs composition evidence per the plan);
+    the note ties it to the cristalino-style profile as the nearest
+    relative and explains why it is not one.
+- **Full Spanish translations** for every new field; one translation
+  was rephrased after the strict ES-parity test caught its opening
+  mirroring the English lead.
+- **Backlog cleared:** all four producer-expansion items fulfilled
+  and removed.
+
+### Checks run
+
+- `npm run validate` — schema plus 221 node:test/jsdom suites (1 new
+  expansion test: the plata mapping, the four honest-coverage entries
+  with their explanatory notes, and every new bottle carrying an
+  independent review). All passing.
+
+### Remaining issues / deferred
+
+- The highlands reposado/añejo and joven expressions stay
+  profile-not-covered until matching style profiles exist (highland
+  aged styles; a joven profile gated on composition evidence).
+- Native-device checks still unverified in this environment.

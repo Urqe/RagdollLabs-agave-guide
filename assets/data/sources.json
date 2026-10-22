@@ -580,6 +580,48 @@
       "url": "https://drunkpynchon.com/2024/04/13/pox-comiteco/",
       "kind": "review",
       "verified": "2026-10-22"
+    },
+    {
+      "id": "rumhowler-don-julio-reposado",
+      "title": "The Rum Howler Blog — Don Julio Reposado Tequila review (refreshed 2020)",
+      "url": "https://therumhowlerblog.com/tequila-reviews-2/don-julio-reposado-tequila/",
+      "kind": "review",
+      "verified": "2026-10-22"
+    },
+    {
+      "id": "rumhowler-don-julio-anejo",
+      "title": "The Rum Howler Blog — Don Julio Añejo Tequila review (revised 2018)",
+      "url": "https://therumhowlerblog.com/tequila-reviews-2/don-julio-anejo-tequila/",
+      "kind": "review",
+      "verified": "2026-10-22"
+    },
+    {
+      "id": "rumhowler-cuervo-tradicional-silver",
+      "title": "The Rum Howler Blog — Jose Cuervo Tradicional Silver review (2018)",
+      "url": "https://therumhowlerblog.com/tequila-reviews-2/jose-cuervo-tradicional-silver/",
+      "kind": "review",
+      "verified": "2026-10-22"
+    },
+    {
+      "id": "rumhowler-patron-reposado",
+      "title": "The Rum Howler Blog — Patrón Reposado Tequila review",
+      "url": "https://therumhowlerblog.com/tequila-reviews-2/patron-reposado-tequila/",
+      "kind": "review",
+      "verified": "2026-10-22"
+    },
+    {
+      "id": "diffords-patron-reposado",
+      "title": "Difford's Guide — Patrón Reposado tequila (tahona/roller blend, NOM 1492)",
+      "url": "https://www.diffordsguide.com/beer-wine-spirits/205/patron-reposado-tequila",
+      "kind": "producer",
+      "verified": "2026-10-22"
+    },
+    {
+      "id": "wineenthusiast-casa-dragones-joven",
+      "title": "Wine Enthusiast — Casa Dragones Tequila Joven Sipping Tequila rating and review",
+      "url": "https://www.wineenthusiast.com/buying-guide/casa-dragones-tequila-joven-sipping-tequila/",
+      "kind": "review",
+      "verified": "2026-10-22"
     }
   ]
 }

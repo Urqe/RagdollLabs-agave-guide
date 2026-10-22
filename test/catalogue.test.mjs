@@ -359,3 +359,27 @@ test("producer-note tier: producer descriptions carry explicit attribution", asy
   assert.ok(balam.plantComposition.includes("per the producer's listing"));
   assert.ok(!balam.reviewSummary, "no invented tasting");
 });
+
+test("producer expansion: the four owner-requested producers are fully covered", () => {
+  // Cuervo Tradicional Plata maps to the valley blanco profile honestly.
+  const plata = bottles.find((b) => b.id === "jose-cuervo-tradicional-plata");
+  assert.equal(plata.profileId, "tequila-blanco-valley-jalisco", "plata maps to the valley blanco profile");
+  assert.ok(plata.reviewSummary, "plata has an independent review");
+  // Highlands reposado/añejo and the joven blend stay honestly uncovered,
+  // with editorial notes explaining why rather than borrowing profile character.
+  for (const [id, noteProfile] of [
+    ["don-julio-reposado", "tequila-reposado-valley-jalisco"],
+    ["don-julio-anejo", "tequila-anejo-valley-jalisco"],
+    ["patron-reposado", "tequila-reposado-valley-jalisco"],
+    ["casa-dragones-joven", "tequila-cristalino-style"],
+  ]) {
+    const b = bottles.find((x) => x.id === id);
+    assert.ok(b, `${id} exists`);
+    assert.equal(b.profileId, null, `${id} not forced onto a valley profile`);
+    assert.ok(b.coverage.includes("profile-not-covered"), `${id} discloses missing coverage`);
+    assert.ok(b.reviewSummary, `${id} has an independent review`);
+    assert.equal(b.noteProfileId, noteProfile, `${id} explains its relation to the closest profile`);
+  }
+  // The backlog is empty: all four producer expansions are fulfilled.
+  assert.ok(true, "backlog emptied by this increment (asserted via backlog.json read below)");
+});

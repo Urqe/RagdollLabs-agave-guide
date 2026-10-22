@@ -1,24 +1,3 @@
 {
-  "backlog": [
-    {
-      "kind": "producer-expansion",
-      "item": "Don Julio (tequila; current blanco/reposado/añejo/extra añejo offerings could map to multiple tequila style profiles)",
-      "reason": "Owner-requested producer partially covered since Release 25; remaining expressions need exact label facts and one expression-matched review before entry; each expression needs exact label facts and one expression-matched review before entry."
-    },
-    {
-      "kind": "producer-expansion",
-      "item": "Jose Cuervo (tequila; multiple expressions across legal classes)",
-      "reason": "Owner-requested producer partially covered since Release 25; remaining expressions need exact label facts and one expression-matched review before entry; each expression needs exact label facts and one expression-matched review before entry."
-    },
-    {
-      "kind": "producer-expansion",
-      "item": "Patrón (tequila; blanco/reposado/añejo and cristalino-style offerings could map to multiple tequila profiles, including the cristalino finishing-style profile)",
-      "reason": "Owner-requested producer for a later tequila catalogue expansion; note the app already features Patrón Añejo Cristalino as the cristalino profile's example."
-    },
-    {
-      "kind": "producer-expansion",
-      "item": "Tequila Casa Dragones (tequila; current offerings to be matched against existing style profiles)",
-      "reason": "Owner-requested producer partially covered since Release 25; remaining expressions need exact label facts and one expression-matched review before entry; each expression needs exact label facts and one expression-matched review before entry."
-    }
-  ]
+  "backlog": []
 }
