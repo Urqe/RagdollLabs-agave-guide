@@ -294,7 +294,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     ? [...compareSelection]
     : [...compareSelection, profile.id].slice(0, 3);
   const action = el("a", {
-    class: "secondary-button compare-profile-link" + (isSelected ? " is-selected" : "") + (isFull ? " is-full" : ""),
+    class: "compare-profile-link quiet-link" + (isSelected ? " is-selected" : "") + (isFull ? " is-full" : ""),
     href: "#/compare/" + targetIds.map(encodeURIComponent).join(","),
   }, isSelected ? ui(locale, "compareSelected") : isFull ? ui(locale, "compareFull") : ui(locale, "compareThis") + " ↗");
   const details = el("details", { class: "profile-learning" });

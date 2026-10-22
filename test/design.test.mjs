@@ -94,3 +94,21 @@ test("new Spanish navigation paths and headings do not leak translation keys", (
   assert.ok(!root.textContent.includes("exploreHint"));
   es.set("en");
 });
+
+test("UX pass: profile tail links are quiet, result cards keep the card treatment", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const css = await readFile("assets/css/styles.css", "utf8");
+  // The profile compare action is no longer a boxed button.
+  assert.ok(!/secondary-button compare-profile-link/.test(css), "compare action not styled as a button");
+  // The profile tail demotes discovery cards to inline links.
+  assert.ok(/\.profile-next \.discovery-card \{ display: block; padding: 0; border: none;/.test(css), "explore-next cards demoted");
+  // Result grids keep the real card treatment.
+  assert.ok(/^\.discovery-card \{ position: relative; display: flex;/m.test(css), "result-grid card treatment retained");
+  // The quiet link vocabulary exists for tail links.
+  assert.ok(/\.quiet-link \{/.test(css), "quiet link style defined");
+  assert.ok(/\.suggestion-link \{ color: var\(--text-soft\)/.test(css), "suggestions read as quiet text");
+  // The reading hierarchy: editorial prose at the large step.
+  assert.ok(/\.profile-why p, \.profile-context, \.profile-description \{ font-size: 1\.12rem/.test(css), "editorial prose enlarged");
+  // Learn callout no longer lifts on hover.
+  assert.ok(/\.learn-callout-link:hover \{ transform: none;/.test(css), "learn callout hover calmed");
+});

@@ -104,6 +104,14 @@ h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); color: var(--text); }
 h3 { font-size: 1.2rem; }
 h4 { font-size: 1rem; }
 
+/* Typographic scale for the reading hierarchy: editorial prose reads at
+   the large step, quiet supporting text (labels, hints, source notes) at
+   the small step, and navigation-style links sit visually below prose. */
+.profile-why p, .profile-context, .profile-description { font-size: 1.12rem; line-height: 1.75; max-width: 62ch; }
+.quiet-link { color: var(--text-soft); font-size: 0.88rem; font-weight: 550; text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 1px; transition: color 0.15s var(--ease), border-color 0.15s var(--ease); }
+.quiet-link:hover { color: var(--text); border-color: var(--anejo); }
+.quiet-link:focus-visible { outline: 2px solid var(--accent, #d98e4a); outline-offset: 2px; }
+
 a { color: var(--blue); }
 
 ::selection { background: var(--anejo-soft); color: var(--anejo-bright); }
@@ -570,7 +578,8 @@ a { color: var(--blue); }
   max-width: 46rem;
 }
 
-.suggestion-link { color: var(--anejo-bright); font-weight: 650; }
+.suggestion-link { color: var(--text-soft); font-weight: 550; font-size: 0.95rem; text-decoration: none; border-bottom: 1px solid var(--line); }
+.suggestion-link:hover { color: var(--text); border-color: var(--anejo); }
 :root[data-theme="light"] .suggestion-link { color: var(--anejo); }
 
 /* ---------- compare ---------- */
@@ -878,7 +887,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, summary:focus-v
   * { transition: none !important; scroll-behavior: auto !important; }
 }
 
-.plant-learn-link { color: var(--blue); font-weight: 550; }
+.plant-learn-link { color: var(--text-soft); font-size: 0.88rem; font-weight: 550; text-decoration: none; border-bottom: 1px solid var(--line); }
+.plant-learn-link:hover { color: var(--text); border-color: var(--anejo); }
 
 .learn-callout-link {
   display: flex;
@@ -897,9 +907,20 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, summary:focus-v
   transition: box-shadow 0.15s var(--ease), transform 0.15s var(--ease);
 }
 
-.learn-callout-link::before { content: "\2753"; font-size: 1rem; }
-:root[data-theme="light"] .learn-callout-link::before { content: "\1F343"; }
-.learn-callout-link:hover { transform: translateY(-1px); box-shadow: var(--glow-agave); }
+/* The profile tail keeps reading calm: explore-next destinations use the
+   quiet inline link style, not the result-card treatment, so the editorial
+   narrative above stays the page's visual center. */
+.profile-next .discovery-card { display: block; padding: 0; border: none; background: transparent; }
+.profile-next .discovery-card:hover { border-color: transparent; background: transparent; }
+.profile-next .discovery-card > strong { display: block; font: 550 0.95rem/1.5 var(--body-font); margin: 0 0 .1rem; padding: 0; color: var(--text-soft); }
+.profile-next .discovery-card .eyebrow { font-size: .68rem; color: var(--text-dim); }
+.profile-next .discovery-matches { margin: 0.4rem 0 0; padding: 0; list-style: none; }
+.profile-next .discovery-matches li + li { margin-top: .55rem; }
+.profile-next .suggestion-link, .profile-next .discovery-card { display: inline-block; min-height: 44px; }
+.learn-callout-link { display: inline-flex; align-items: center; gap: 0.5rem; margin: 1.5rem 0 0.5rem; padding: 0; max-width: 46rem; border: none; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--text-soft); text-decoration: none; font-size: 0.88rem; font-weight: 550; min-height: var(--tap); transition: color 0.15s var(--ease), border-color 0.15s var(--ease); }
+.learn-callout-link::before { content: ""; }
+:root[data-theme="light"] .learn-callout-link::before { content: ""; }
+.learn-callout-link:hover { transform: none; box-shadow: none; color: var(--text); border-color: var(--anejo); }
 
 .suggestions-heading { margin: 1.75rem 0 0.4rem; font-size: 1.05rem; font-family: var(--display); }
 
@@ -1002,15 +1023,19 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .level-high { width: 100%; }
 .profile-core > .profile-facts { margin: 0; width: 100%; max-width: none; grid-template-columns: 1fr; padding: 1.5rem; gap: .5rem; }
 .profile-core > .profile-facts dd + dt { margin-top: 1rem; }
-.compare-profile-link { margin-bottom: 1.5rem; }
+/* The compare action reads as a quiet inline link so the sensory and
+   why-it-tastes narrative keeps the reader's focus. */
+.compare-profile-link { display: inline-block; min-height: 44px; line-height: 44px; margin-bottom: 1.5rem; padding: 0; border: none; border-bottom: 1px solid var(--line); background: transparent; color: var(--text-soft); font-size: 0.9rem; font-weight: 550; box-shadow: none; }
+.compare-profile-link:hover { border-color: var(--anejo); background: transparent; color: var(--text); }
 .profile-pairing, .bottle-card, .more-bottles, .suggestion-list { max-width: none; }
 .profile-pairing { border-style: solid; background: var(--surface); margin-top: .5rem; }
 .bottle-card { box-shadow: none; }
 .profile-learning { border-top: 1px solid var(--line); margin-top: 1.5rem; }
 .profile-learning > p, .profile-learning > dl { margin-block: 1rem; }
 .profile-learning > .source-list { margin-bottom: 1.5rem; }
-.suggestion-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.suggestion-list > li { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 1rem; }
+.suggestion-list { grid-template-columns: none; gap: .55rem; margin: .4rem 0 0; padding: 0; list-style: none; }
+.suggestion-list > li { border: none; border-radius: 0; background: transparent; padding: 0; }
+.suggestion-list .search-result-reason { font-size: 0.85rem; }
 .suggestion-link { display: inline-block; min-height: 44px; }
 
 /* ---------- comparison & catalogue ---------- */
@@ -1117,3 +1142,11 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
   background: var(--surface-2, transparent); font-size: 0.95rem; min-height: 44px;
 }
 .compare-summary-line { margin: 0; }
+
+/* ---------- profile tail reading hierarchy ---------- */
+/* Explore-next is a footnote to the page, not a second content grid: its
+   heading drops below the section scale and the section sits visually
+   after the editorial narrative, keeping the reader in the prose. */
+.profile-next { margin-top: 2.25rem; border-top: 1px solid var(--line-soft); padding-top: 1rem; }
+.profile-next h2 { font-size: 1.05rem; margin: 0 0 .5rem; color: var(--text-soft); }
+.profile-next .suggestions-heading { font-size: .95rem; color: var(--text-soft); margin: 1rem 0 .2rem; }
