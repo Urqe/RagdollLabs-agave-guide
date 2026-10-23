@@ -153,7 +153,7 @@ async function renderRoute(container, route) {
     // own inside the comparison; their own choices always win.
     if (state.savedBeforeLesson) {
       const current = getCompareSelection();
-      const prepared = state.lessonPreparedComparison || [];
+      const prepared = state.lessonPreparedSelection || [];
       const untouched = prepared.length > 0 &&
         current.length === prepared.length && current.every((id, i) => id === prepared[i]);
       if (untouched) setCompareSelection(state.savedBeforeLesson);
@@ -344,7 +344,14 @@ async function boot() {
     if (route.name === "profile" && state.catalogueActive) {
       const input = document.getElementById("catalogue-search");
       const filter = document.getElementById("catalogue-tradition");
-      captureView("catalogue", { query: input ? input.value : "", traditionId: filter ? filter.value : "" });
+      const snapshot = state.catalogueApi && typeof state.catalogueApi.snapshot === "function"
+        ? state.catalogueApi.snapshot()
+        : null;
+      captureView("catalogue", {
+        query: input ? input.value : "",
+        traditionId: filter ? filter.value : "",
+        ...(snapshot && snapshot.brandFilter ? { brandFilter: snapshot.brandFilter } : {}),
+      });
     }
   };
 

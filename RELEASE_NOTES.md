@@ -2719,3 +2719,82 @@ no native-device claim is made here.
 
 - Native Safari/VoiceOver/touch and live deployed verification remain
   pair-17 work (mandatory maintenance follow-up).
+
+## Post-roadmap pair 17 — Learning & Navigation Verification (2026-10-23)
+
+Maintenance review of the pair-16 release, executed as real-journey walks:
+the review boots the actual app (app.js, router, data loading) in jsdom and
+navigates by changing window.location.hash — homepage → all five lessons →
+the prepared comparison → back; lesson → the exact flavour chapter → back;
+deep links, reload-equivalent boots, browser Back/Forward, language
+switching mid-view, saved and user-edited comparison selections, the
+catalogue brand round trip and the honest-mapping framing — in both EN and
+ES. Automated checks: `npm run validate` passes (18 profiles, 46 bottles,
+92 sources); the full suite passes — 326 tests, including the 14 new
+pair-17 verification tests in `test/pair-17-verification.test.mjs`.
+
+### Confirmed defects found and fixed
+
+1. **Saved comparison selections were silently lost after a lesson
+   comparison (high).** `assets/js/app.js` set
+   `state.lessonPreparedSelection` when a lesson handed off to the
+   comparison, but the restore path read the never-set
+   `state.lessonPreparedComparison`, so the "reader's own saved selection
+   is restored on return" guarantee never fired: opening a prepared
+   comparison permanently replaced a saved selection even when the reader
+   never touched the picker. Fixed to read the field that is written;
+   pinned by "a saved comparison selection survives a prepared comparison
+   and returns" (and the companion user-edit-wins test).
+2. **The catalogue brand filter was lost when leaving for a profile
+   (medium; a regression of the pair-15 fix at the second capture path).**
+   The pair-15 snapshot/restore added `brandFilter` to the catalogue
+   restore, but the profile-departure capture in `rememberListViews`
+   captured only `query` and `traditionId` — so a brand-filtered catalogue
+   returned from a profile with its filter silently dropped. Fixed to
+   include the brand filter from the view's own snapshot API; pinned by
+   "catalogue brand filter survives a profile round trip".
+
+### Verified without defect
+
+- All five lessons render in EN and ES via real hash navigation, each with
+  a working back link to the hub; the active step is announced
+  (`aria-current="step"`) and the other steps remain keyboard-reachable
+  hash links, in both languages.
+- Lesson → prepared comparison → back to the lesson: the pair-16 teaching
+  order holds (explanation before the picker, secondary control collapsed),
+  and the back-to-lesson link is present in both languages.
+- Lesson → chapter deep link: the card carries the chapter's localized
+  title (never a generic Learn label), `#/learn/chapter-<id>` renders on a
+  direct boot, the lesson-origin back link survives a mid-view language
+  switch, and browser Back/Forward traverses lesson ↔ chapter ↔
+  comparison cleanly with no render errors.
+- One-selection (partial) comparison states render the honest one-more-pick
+  message with the picker directly reachable.
+- The language control names its editions ("Español (México)" / "English"),
+  exposes the current choice in its accessible label, persists it, sets
+  `es-MX` on the document, and keeps state and scroll behavior on switch.
+- The pair-16 basis line renders on profile example bottles in both
+  languages.
+- Pair-15 missing-string sweep re-run across ten routes in both languages:
+  no raw lookup keys leak.
+- Honest-mapping recheck: the uncovered mezcal añejo keeps its plain
+  relates-to framing and receives no style-profile link.
+
+### Environments actually tested, and honest limitations
+
+- **Tested:** jsdom (DOM structure, routes, focus attributes, aria state,
+  persisted storage) with the real module code and real hash navigation;
+  automated layout-token checks from the existing design suite.
+- **Not tested and not claimed:** live browser rendering on the deployed
+  Pages build (the pair-16 deployment has not been re-verified in a real
+  browser; the brand-filter defect above was found and fixed against the
+  local build), native iPhone/iPad Safari, VoiceOver, physical touch, text
+  enlargement and reduced-motion behavior on real devices. These remain
+  open items for the next owner-requested review; per the protocol, no
+  native-device check is recorded as passed.
+
+### Rollback reference
+
+Both fixes are in `assets/js/app.js` and are covered by the new
+pair-17 tests; reverting the pair-17 commit restores the prior (defective)
+behavior and the tests would fail again.
