@@ -130,7 +130,7 @@ function levelCell(profile, dimKey, t) {
  * missing-data notes. Selections live in the route (#/compare/a,b,c) so
  * they survive reload, sharing and Back/Forward.
  */
-export function renderCompare(container, { profiles, compareIds, onSelectionChange, focusProfileId = null, keepPickerQuery = "", locale = null }) {
+export function renderCompare(container, { profiles, compareIds, onSelectionChange, focusProfileId = null, keepPickerQuery = "", locale = null, from = null }) {
   clear(container);
   const byId = new Map(profiles.map((p) => [p.id, p]));
   const parsedIds = parseIds(compareIds);
@@ -145,6 +145,13 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   const section = el("section", { class: "compare-view", "aria-labelledby": "compare-heading" });
   const t = (key) => (locale ? locale.t(key) : key);
   const title = (p) => localizedTitle("profile", p.id, p.title, locale);
+  // Pair 9: a comparison opened from a lesson links back to it, above the
+  // heading so it reads as a return path, mirroring the profile back link.
+  if (from && from.startsWith("start:")) {
+    const lessonId = from.slice("start:".length);
+    section.appendChild(el("a", { href: `#/start/${encodeURIComponent(lessonId)}`, class: "back-link" },
+      t("compare.backToLesson")));
+  }
   section.appendChild(el("h1", { id: "compare-heading" }, t("compare.heading")));
   section.appendChild(el("p", { class: "view-intro" }, t("compare.intro")));
 

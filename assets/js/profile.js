@@ -122,14 +122,18 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const originId = fromDiscovery && origin.includes(":") ? origin.split(":")[1] : null;
   const backHref = fromCatalogue
     ? "#/catalogue"
-    : originKind === "profile"
+    : originKind === "start"
+      ? `#/start/${encodeURIComponent(originId)}`
+      : originKind === "profile"
       ? `#/profile/${encodeURIComponent(originId)}`
       : originKind === "plant" || originKind === "region" || originKind === "spirit" || originKind === "flavour"
         ? `#/discover/${encodeURIComponent(originKind)}/${encodeURIComponent(originId)}`
         : returnTo ? `#/explore/${encodeURIComponent(returnTo)}` : "#/explore";
   const backLabel = fromCatalogue
     ? t("profile.backCatalogue")
-    : originKind === "profile"
+    : originKind === "start"
+      ? t("profile.backLesson")
+      : originKind === "profile"
       ? t("profile.backProfile")
       : fromDiscovery ? t("profile.backDiscover") : t("profile.backExplore");
   const back = el("a", { href: backHref, class: "back-link" }, backLabel);

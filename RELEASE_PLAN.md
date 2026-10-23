@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — refinement after post-roadmap pair 7
 
-Post-roadmap pair 8 — Relevance & Reading Review is applied; the next planned release is **post-roadmap pair 9 — Your First Agave Spirit**, followed by pairs 10–14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
+Post-roadmap pairs 8 and 9 are applied; the next planned release is **post-roadmap pair 10 — Beginner Journey Review & Fixes**, followed by pairs 11–14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -508,17 +508,17 @@ Acceptance: valley blanco recommends highland blanco for the regional learning l
 
 ### Post-roadmap pair 9 — Your First Agave Spirit (feature/UX)
 
-Goal: turn “New to agave?” into a manageable first experience, with an obvious next action and an optional route into enthusiast depth.
+Applied (see the pair 9 notes in RELEASE_NOTES.md). Goal: turn “New to agave?” into a manageable first experience, with an obvious next action and an optional route into enthusiast depth.
 
-1. [ ] Add a concise learning start page stating the outcome: recognise a few useful flavour differences and understand a first comparison. No bottle purchase, alcohol consumption, account, quiz or sequential completion is required.
-2. [ ] Offer short, individually addressable steps using existing material: **what these spirits are → how to taste → recognise agave, smoke, body and oak → try a comparison → choose what to explore next**. Teach perceived sweetness versus sugar where relevant without front-loading all legal and botanical exceptions.
-3. [ ] Give each step one principal idea, a concrete example and a clear Next/Previous action. Provide a visible step list and direct skipping; keep content readable without completing previous steps.
-4. [ ] Open an explicitly labelled prepared comparison of the existing valley blanco and valley reposado profiles to explain wood resting. Explain that these are typical styles rather than an experiment isolating every production variable. Link the lesson to the existing comparison engine; do not duplicate sensory data or silently overwrite a user's saved comparison.
-5. [ ] Provide an optional second exercise comparing valley and highland blanco, reusing pair 8's relevance corrections. Explanations should describe tendencies and other possible influences rather than claim geography determines flavour.
-6. [ ] Give each lesson one or two short example links/cards with a reason to open them. Replace unwieldy chains of full profile titles in the new journey; make returning to the originating lesson explicit.
-7. [ ] Keep the seven existing chapters and plant/process/glossary references directly available as deeper reading. Offer this reference entrance near the journey start; experienced users must not traverse onboarding.
-8. [ ] Use stable lesson identifiers and routes consistent with the existing router. Preserve current Learn and glossary URLs through compatible destinations or redirects. Support reload and browser Back/Forward; keep progression local and optional if persistence is useful.
-9. [ ] Deliver Mexican Spanish parity for every new lesson, navigation control, example explanation and comparison handoff in the same release. Reuse canonical content and references; do not fork an unsourced beginner dataset.
+1. [x] Add a concise learning start page stating the outcome: recognise a few useful flavour differences and understand a first comparison. No bottle purchase, alcohol consumption, account, quiz or sequential completion is required.
+2. [x] Offer short, individually addressable steps using existing material: **what these spirits are → how to taste → recognise agave, smoke, body and oak → try a comparison → choose what to explore next**. Teach perceived sweetness versus sugar where relevant without front-loading all legal and botanical exceptions.
+3. [x] Give each step one principal idea, a concrete example and a clear Next/Previous action. Provide a visible step list and direct skipping; keep content readable without completing previous steps.
+4. [x] Open an explicitly labelled prepared comparison of the existing valley blanco and valley reposado profiles to explain wood resting. Explain that these are typical styles rather than an experiment isolating every production variable. Link the lesson to the existing comparison engine; do not duplicate sensory data or silently overwrite a user's saved comparison.
+5. [x] Provide an optional second exercise comparing valley and highland blanco, reusing pair 8's relevance corrections. Explanations should describe tendencies and other possible influences rather than claim geography determines flavour.
+6. [x] Give each lesson one or two short example links/cards with a reason to open them. Replace unwieldy chains of full profile titles in the new journey; make returning to the originating lesson explicit.
+7. [x] Keep the seven existing chapters and plant/process/glossary references directly available as deeper reading. Offer this reference entrance near the journey start; experienced users must not traverse onboarding.
+8. [x] Use stable lesson identifiers and routes consistent with the existing router. Preserve current Learn and glossary URLs through compatible destinations or redirects. Support reload and browser Back/Forward; keep progression local and optional if persistence is useful.
+9. [x] Deliver Mexican Spanish parity for every new lesson, navigation control, example explanation and comparison handoff in the same release. Reuse canonical content and references; do not fork an unsourced beginner dataset.
 
 Acceptance: a newcomer can enter from the homepage, learn the essentials in a short session, open the prepared comparison, understand the principal difference and return to the lesson. An enthusiast can bypass the journey and open existing references immediately.
 

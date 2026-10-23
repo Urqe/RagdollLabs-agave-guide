@@ -10,7 +10,8 @@ const COPY = {
     intro: "Explore Mexico’s spirits through their plants, places and craft. Start with a familiar name, or follow your curiosity somewhere new.",
     explore: "Explore spirits", exploreHint: "Discover styles, places and flavours.",
     compare: "Compare styles", compareHint: "Find what makes each expression different.",
-    learn: "New to agave?", learnHint: "Get to know the plants and the craft.",
+    learn: "Keep learning", learnHint: "Chapters, plants, processes and label vocabulary.",
+    start: "New to agave?", startHint: "A five-step first journey — no glass, no purchase, no quiz.",
     catalogue: "Browse bottles", catalogueHint: "Find a brand, producer or expression.",
     featured: "A few places to begin", featuredHint: "Three traditions. Three ways into the glass.",
     scene: "A little curiosity. Good company.", all: "Explore the collection",
@@ -111,7 +112,8 @@ const COPY = {
     intro: "Explora los destilados de México a través de sus plantas, lugares y métodos. Empieza por un nombre conocido o sigue tu curiosidad.",
     explore: "Explorar destilados", exploreHint: "Descubre estilos, lugares y sabores.",
     compare: "Comparar estilos", compareHint: "Descubre qué distingue a cada expresión.",
-    learn: "¿Nuevo en el agave?", learnHint: "Conoce las plantas y su elaboración.",
+    learn: "Sigue aprendiendo", learnHint: "Capítulos, plantas, procesos y vocabulario de etiqueta.",
+    start: "¿Nuevo en el agave?", startHint: "Un primer recorrido de cinco pasos — sin copa, sin compra, sin examen.",
     catalogue: "Explorar botellas", catalogueHint: "Busca una marca, productor o expresión.",
     featured: "Por dónde empezar", featuredHint: "Tres tradiciones. Tres formas de descubrir.",
     scene: "Un poco de curiosidad. Buena compañía.", all: "Explorar la colección",
@@ -234,7 +236,7 @@ export function renderHome(container, { profiles, locale }) {
   copy.appendChild(el("p", { class: "welcome-tagline" }, ui(locale, "tagline")));
   copy.appendChild(el("p", { class: "home-intro" }, ui(locale, "intro")));
   const actions = el("div", { class: "welcome-actions" });
-  for (const [key, href] of [["explore", "#/explore"], ["compare", "#/compare"], ["learn", "#/learn"], ["catalogue", "#/catalogue"]]) {
+  for (const [key, href] of [["explore", "#/explore"], ["compare", "#/compare"], ["start", "#/start"], ["learn", "#/learn"], ["catalogue", "#/catalogue"]]) {
     const action = el("a", { class: "welcome-action" + (key === "explore" ? " is-primary" : ""), href });
     action.appendChild(el("strong", {}, ui(locale, key) + " ↗"));
     action.appendChild(el("span", {}, ui(locale, key + "Hint")));

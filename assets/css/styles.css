@@ -1157,3 +1157,15 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .profile-next { margin-top: 2.25rem; border-top: 1px solid var(--line-soft); padding-top: 1rem; }
 .profile-next h2 { font-size: 1.05rem; margin: 0 0 .5rem; color: var(--text-soft); }
 .profile-next .suggestions-heading { font-size: .95rem; color: var(--text-soft); margin: 1rem 0 .2rem; }
+
+/* Pair 9 — Your First Agave Spirit: hub and lesson layout */
+.start-view .journey-outcome { margin-top: 0.8rem; max-width: 52rem; line-height: 1.6; }
+.start-view .journey-step-list { display: flex; flex-wrap: wrap; gap: 0.55rem 0.8rem; list-style: none; margin: 0.6rem 0 0; padding: 0; }
+.start-view .journey-step-list a { display: inline-block; padding: 0.3rem 0.7rem; border: 1px solid var(--line-soft); border-radius: 999px; text-decoration: none; line-height: 1.4; }
+.start-view .journey-step-list a:hover { text-decoration: underline; }
+.start-view .journey-step-list .is-active a { border-color: currentColor; font-weight: 600; }
+.start-view .journey-reference { margin-top: 1rem; }
+.start-view .lesson-idea { font-size: 1rem; line-height: 1.6; }
+.start-view .journey-comparison { margin-top: 1.1rem; }
+.start-view .journey-pager { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.6rem; }
+.start-view .discovery-matches { list-style: none; padding: 0; margin: 0.6rem 0; display: grid; gap: 0.6rem; }

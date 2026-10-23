@@ -2156,3 +2156,75 @@ methodology hedging — before adding any new navigation surface.
 - Native-device (iPhone/iPad Safari, VoiceOver) checks remain
   unverified in this environment; no layout or navigation changes
   were made in this pair.
+
+## Post-roadmap pair 9 — Your First Agave Spirit
+
+Scope per plan section 4.2: turn "New to agave?" into a manageable
+first experience — a concise learning start, five short
+individually addressable steps using existing material, a prepared
+comparison ending the sequence, and an obvious route into enthusiast
+depth without forcing enthusiasts through onboarding.
+
+### What changed
+
+- **New `#/start` route and journey module (`assets/js/journey.js`).**
+  The hub states the outcome up front (recognize a few useful flavor
+  differences and understand a first comparison — no purchase, no
+  glass, no account, no quiz), lists the five steps with direct
+  links, and keeps the Learn reference entrance one click away so
+  experienced users never traverse onboarding.
+- **Five lessons, each with one principal idea, one or two example
+  cards with a reason to open them, and clear Next/Previous actions:**
+  what these spirits are → how to taste → recognize agave, smoke,
+  body and oak → try a comparison → choose what to explore next.
+  The steps lesson teaches perceived sweetness versus sugar without
+  front-loading legal or botanical exceptions; every lesson reads on
+  its own and supports direct skipping via the visible step list
+  (active step marked with `aria-current="step"`).
+- **Prepared comparison handoff.** The comparison lesson opens the
+  explicitly labelled valley blanco vs valley reposado comparison —
+  same tradition, region, plant and method, with wood resting as the
+  difference — through the existing comparison engine (`#/compare/…?from=start:first-comparison`);
+  no sensory data is duplicated. The lesson states these are typical
+  styles, not an experiment isolating every variable. An optional
+  second exercise compares valley and highland blanco, reusing the
+  pair-8 relevance corrections and describing tendencies rather than
+  geographic determinism.
+- **Selection safety.** A lesson handoff never silently destroys a
+  saved comparison: the app stashes the persisted selection when the
+  prepared comparison opens and restores it when the reader returns
+  to the journey. The compare view carries a "← Back to the lesson"
+  link, and profile examples opened from a lesson carry
+  "← Back to the lesson" back links.
+- **Return paths and recovery.** Stable lesson identifiers and
+  routes (`#/start/:lessonId`) work with reload and browser
+  Back/Forward; invalid or retired lesson ids render a useful
+  recovery page offering the real steps. All existing Learn, glossary
+  and profile routes remain untouched.
+- **Homepage entrance.** "New to agave?" now labels the beginner
+  journey (it previously labeled the Learn action, which became
+  "Keep learning"); browsing stays the primary action. Full Mexican
+  Spanish parity for every lesson, step label, example reason,
+  navigation control and comparison handoff, delivered in the same
+  release; lessons reuse canonical profile titles and the existing
+  comparison view rather than forking a beginner dataset.
+
+### Checks run
+
+- `npm run validate` — schema plus 249 node:test/jsdom suites, all
+  passing; 12 new pair-9 regression tests covering the hub, lesson
+  structure, prepared comparison handoff, selection safety, back
+  links, invalid-id recovery, route stability, homepage entrance and
+  full ES rendering.
+- Router behavior verified at the DOM level: lesson deep links,
+  compare `?from=start:…` origins, hash navigation and history all
+  parse and build correctly.
+
+### Remaining issues / deferred
+
+- Native-device (iPhone/iPad Safari, VoiceOver) checks remain
+  unverified in this environment — explicitly the remit of pair 10's
+  maintenance review, including focus movement to lesson headings and
+  active-step announcements with a real screen reader.
+- Lesson progression is deliberately not persisted: steps are freely
+  skippable and stateless by design.

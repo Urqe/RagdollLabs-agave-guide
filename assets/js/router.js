@@ -26,6 +26,11 @@ export function parseHash(hash) {
     if (segments.length === 2) return { name: "state", params: { stateId: segments[1] } };
     return { name: "notFound", params: {} };
   }
+  if (segments[0] === "start") {
+    if (segments.length === 1) return { name: "start", params: {} };
+    if (segments.length === 2) return { name: "start", params: { lessonId: segments[1] } };
+    return { name: "notFound", params: {} };
+  }
   if (segments[0] === "learn") {
     if (segments.length === 1) return { name: "learn", params: {} };
     if (segments.length === 2 && ["terms", "plants", "processes"].includes(segments[1])) {
@@ -52,7 +57,12 @@ export function parseHash(hash) {
   }
   if (segments[0] === "compare") {
     if (segments.length === 1) return { name: "compare", params: { compareIds: "" } };
-    if (segments.length === 2) return { name: "compare", params: { compareIds: segments[1] } };
+    if (segments.length === 2) {
+      const [compareIds, query = ""] = segments[1].split("?");
+      const params = new URLSearchParams(query);
+      const from = params.get("from");
+      return { name: "compare", params: { compareIds, ...(from ? { from } : {}) } };
+    }
     return { name: "notFound", params: {} };
   }
   if (segments[0] === "profile" && segments.length === 2) {
@@ -84,8 +94,13 @@ export function buildHash(route) {
       return `#/discover/${encodeURIComponent(route.params.kind)}/${encodeURIComponent(route.params.id)}`;
     case "learn":
       return route.params.section ? `#/learn/${route.params.section}` : "#/learn";
-    case "compare":
-      return `#/compare${route.params.compareIds ? `/${route.params.compareIds.split(",").map(encodeURIComponent).join(",")}` : ""}`;
+    case "start":
+      return route.params.lessonId ? `#/start/${encodeURIComponent(route.params.lessonId)}` : "#/start";
+    case "compare": {
+      const idsPart = route.params.compareIds ? `/${route.params.compareIds.split(",").map(encodeURIComponent).join(",")}` : "";
+      const fromQuery = route.params.from ? `?from=${encodeURIComponent(route.params.from)}` : "";
+      return `#/compare${idsPart}${fromQuery}`;
+    }
     case "profile":
       return `#/profile/${encodeURIComponent(route.params.profileId)}${buildProfileQuery(route.params)}`;
     default:

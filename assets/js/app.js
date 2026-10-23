@@ -6,6 +6,7 @@ import { renderProfile, renderProfileNotFound } from "./profile.js";
 import { renderCompare } from "./compare-view.js";
 import { renderCatalogue } from "./catalogue-view.js";
 import { renderLearn } from "./learn-view.js";
+import { renderStartHub, renderLesson } from "./journey.js";
 import { renderDiscover } from "./discovery-view.js";
 import { renderPlantPage, renderTraditionPage } from "./plant-tradition-view.js";
 import { createLocale } from "./locale.js";
@@ -26,6 +27,7 @@ const state = {
   consumedRestore: null,
   lastComparePick: null,
   lastCompareQuery: null,
+  savedBeforeLesson: null,
 };
 
 function baseUrl() {
@@ -141,6 +143,21 @@ async function renderRoute(container, route) {
     });
     return;
   }
+  if (route.name === "start") {
+    state.exploreApi = null;
+    // Returning to the journey restores a compare selection the lesson
+    // handoff replaced, so the beginner route never costs saved choices.
+    if (state.savedBeforeLesson) {
+      setCompareSelection(state.savedBeforeLesson);
+      state.savedBeforeLesson = null;
+    }
+    if (route.params.lessonId) {
+      renderLesson(container, { lessonId: route.params.lessonId, profiles, locale });
+    } else {
+      renderStartHub(container, { profiles, locale });
+    }
+    return;
+  }
   if (route.name === "learn") {
     state.exploreApi = null;
     renderLearn(container, {
@@ -165,18 +182,26 @@ async function renderRoute(container, route) {
     state.exploreApi = null;
     // Deep links carry the selection; a bare #/compare reopens the saved one.
     const deepIds = parseIds(route.params.compareIds);
+    const fromLesson = typeof route.params.from === "string" && route.params.from.startsWith("start:");
     const persisted = getCompareSelection();
     let ids = deepIds;
     if (deepIds.length === 0 && persisted.length > 0) {
       ids = persisted;
-      navigateTo({ name: "compare", params: { compareIds: ids.join(",") } });
+      navigateTo({ name: "compare", params: { compareIds: ids.join(","), ...(route.params.from ? { from: route.params.from } : {}) } });
       return;
+    }
+    // A lesson handoff never silently destroys a saved selection: the
+    // prepared comparison renders, and the lesson keeps the previous
+    // selection to restore when the reader returns.
+    if (fromLesson && !state.savedBeforeLesson) {
+      state.savedBeforeLesson = persisted.length > 0 ? [...persisted] : null;
     }
     setCompareSelection(ids);
     renderCompare(container, {
       profiles,
       locale,
       compareIds: ids.join(","),
+      from: route.params.from || null,
       focusProfileId: state.lastComparePick,
       keepPickerQuery: state.lastCompareQuery,
       onSelectionChange: (nextIds, pickerQuery) => {
