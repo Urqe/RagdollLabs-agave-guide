@@ -120,7 +120,8 @@ test("R21: expression profile renders the why-it-tastes section with honest fram
   assert.ok(why, "why section renders");
   assert.match(why.textContent, /Why does it taste this way/i);
   assert.ok(why.textContent.includes("pit"), "cause-and-effect text present");
-  assert.match(why.textContent, /never deterministic/i, "why section carries the non-deterministic note");
+  assert.ok(!/never deterministic/i.test(why.textContent),
+    "pair 8: the deterministic-hedging boilerplate moved to the Learn reference material");
 });
 
 test("R21: expression profile renders enjoy, bottles and explore-next sections", () => {

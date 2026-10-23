@@ -120,6 +120,13 @@
         {
           "text": "The compare view puts these dimensions side by side: a blanco against an añejo shows the largest oak gap; a valley blanco against a highland expression shows how place reads in the glass.",
           "deeper": "Flavor chemistry is genuinely complex: roast compounds, fermentation esters and still cut each contribute. This guide attributes character to process only where sources document the link — never from a tasting note alone."
+        },
+        {
+          "text": "How this guide reaches its conclusions: style profiles are editorial descriptions drawn from the documented sensory data on each profile, not reviews or ratings of any bottle. Reviewer impressions are attributed to their source, producer notes are never presented as independent reviews, and anything the guide itself concludes is labeled editorial. Batch-specific facts — ABV, maker, plant mix, tasting notes — stay attached to the bottle they belong to, and missing evidence is disclosed rather than guessed.",
+          "exampleProfileIds": [
+            "tequila-blanco-valley-jalisco",
+            "tequila-anejo-valley-jalisco"
+          ]
         }
       ]
     },
@@ -221,7 +228,7 @@
         },
         {
           "text": "Designations evolve: bacanora's protection dates to 2000, raicilla's to 2019, sotol's to 2002. This guide records verification dates with each source and checks amendments before shipping legal summaries — a reachable URL never proves a claim by itself.",
-          "deeper": "Legal geography is municipal, not whole-state: bacanora's designation covers selected Sonoran municipalities, and raicilla's names specific municipalities in Jalisco and Nayarit. Map shading in this app always means coverage, never legal boundaries."
+          "deeper": "Legal geography is municipal, not whole-state: bacanora's designation covers selected Sonoran municipalities, and raicilla's names specific municipalities in Jalisco and Nayarit. Map shading means guide coverage, never legal boundaries."
         }
       ]
     }

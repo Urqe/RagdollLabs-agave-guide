@@ -43,9 +43,18 @@ function render(ids, locale = null) {
 }
 
 test("R23: same plant different region perspective is detected with evidence", () => {
-  const r = comparisonPerspectives([byId("tequila-blanco-valley-jalisco"), byId("tequila-extra-anejo-highland-jalisco")]);
+  const r = comparisonPerspectives([byId("tequila-blanco-valley-jalisco"), byId("tequila-blanco-highland-jalisco")]);
   const p = r.find((x) => x.id === "samePlantDifferentRegion");
   assert.ok(p, "perspective detected");
+  assert.equal(p.evidence, "plantIds", "carries its evidence");
+});
+
+test("pair 8: same plant, different region AND class never claims place is the only variable", () => {
+  const r = comparisonPerspectives([byId("tequila-blanco-valley-jalisco"), byId("tequila-extra-anejo-highland-jalisco")]);
+  assert.ok(!r.some((x) => x.id === "samePlantDifferentRegion"),
+    "uncontrolled comparison never gets the place-only perspective");
+  const p = r.find((x) => x.id === "samePlantDifferentRegionAndClass");
+  assert.ok(p, "honest perspective names the additional variable");
   assert.equal(p.evidence, "plantIds", "carries its evidence");
 });
 

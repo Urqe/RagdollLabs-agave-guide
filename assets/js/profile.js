@@ -61,24 +61,49 @@ function collapsibleBottleSources(sources, bottle, t, locale = null) {
 }
 
 
-/** Release 21: related destinations with a short why-relevant explanation. */
+/**
+ * Release 21: related destinations with a short why-relevant explanation.
+ * Pair 8: candidates are chosen deterministically (stable id order) and
+ * the same-plant link prefers a destination that keeps tradition, class
+ * and method comparable — so region stays the meaningful variable.
+ */
 function exploreNextLinks(profile, allProfiles, locale) {
   const t = (key) => (locale ? locale.t(key) : key);
   const out = [];
+  const seen = new Set([profile.id]);
   const title = (p) => localizedTitle("profile", p.id, p.title, locale);
-  const href = (p) => `#/profile/${encodeURIComponent(p.id)}`;
-  // Same plant, different region
-  const samePlant = allProfiles.find((p) => p.id !== profile.id && (p.plantIds || []).some((pid) => (profile.plantIds || []).includes(pid)) && p.regionIds[0] !== profile.regionIds[0]);
-  if (samePlant) out.push({ label: t("profile.exploreSamePlant"), profile: samePlant, reason: title(samePlant) });
+  const push = (label, candidate) => {
+    if (!candidate || seen.has(candidate.id)) return;
+    seen.add(candidate.id);
+    out.push({ label, profile: candidate, reason: title(candidate) });
+  };
+  const byId = (a, b) => a.id.localeCompare(b.id);
+  const methodKey = (p) => JSON.stringify([...(p.processIds || [])].sort());
+  // Same plant, different region — prefer a destination matching the
+  // tradition, maturation class and documented method where possible,
+  // then differing in region (valley blanco → highland blanco, never an
+  // extra añejo). Fallback keeps the ordering honest about extra changes.
+  const samePlantCandidates = allProfiles
+    .filter((p) => (p.plantIds || []).some((pid) => (profile.plantIds || []).includes(pid)) && p.regionIds[0] !== profile.regionIds[0])
+    .sort(byId);
+  const comparable = samePlantCandidates.find((p) =>
+    p.traditionId === profile.traditionId &&
+    (p.maturation?.class || null) === (profile.maturation?.class || null) &&
+    methodKey(p) === methodKey(profile));
+  push(t("profile.exploreSamePlant"), comparable || samePlantCandidates[0]);
   // Same tradition, different method (different processIds)
-  const sameTradition = allProfiles.find((p) => p.id !== profile.id && p.traditionId === profile.traditionId && JSON.stringify([...(p.processIds || [])].sort()) !== JSON.stringify([...(profile.processIds || [])].sort()));
-  if (sameTradition) out.push({ label: t("profile.exploreSameTradition"), profile: sameTradition, reason: title(sameTradition) });
+  const sameTradition = allProfiles
+    .filter((p) => p.traditionId === profile.traditionId && methodKey(p) !== methodKey(profile))
+    .sort(byId)[0];
+  push(t("profile.exploreSameTradition"), sameTradition);
   // Similar character (sensory overlap)
   const similar = ifYouLikeThis(profile, allProfiles, { maxSuggestions: 1 }).map((x) => x.profile)[0];
-  if (similar) out.push({ label: t("profile.exploreSimilar"), profile: similar, reason: title(similar) });
+  push(t("profile.exploreSimilar"), similar);
   // More adventurous (different tradition entirely)
-  const adventurous = allProfiles.find((p) => p.id !== profile.id && p.traditionId !== profile.traditionId && ADVENTUROUS_TRADITIONS.includes(p.traditionId) && !out.some((x) => x.profile.id === p.id));
-  if (adventurous) out.push({ label: t("profile.exploreAdventurous"), profile: adventurous, reason: title(adventurous) });
+  const adventurous = allProfiles
+    .filter((p) => p.traditionId !== profile.traditionId && ADVENTUROUS_TRADITIONS.includes(p.traditionId))
+    .sort(byId)[0];
+  push(t("profile.exploreAdventurous"), adventurous);
   return out;
 }
 
@@ -251,8 +276,9 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
         class: "suggestion-link",
       }, localizedTitle("profile", other.id, other.title, locale));
       item.appendChild(link);
+      const sharedText = sharedDimensionKeys.map((k) => dimensionLabel(k, locale)).join(", ");
       item.appendChild(el("span", { class: "search-result-reason" },
-        ` — ${ui(locale, "sharesWith").replace("{list}", sharedDimensionKeys.map((k) => dimensionLabel(k, locale)).join(", "))}`));
+        ` — ${ui(locale, "sharesWhy").replace("{list}", sharedText)}`));
       suggList.appendChild(item);
     }
     section.appendChild(suggList);
@@ -348,7 +374,6 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     const whyP = el("p", {}, whyText.text);
     if (!whyText.translated) whyP.appendChild(el("span", { class: "editorial-note untranslated-field" }, " " + ui(locale, "partialDisclosure")));
     whyBlock.appendChild(whyP);
-    whyBlock.appendChild(el("p", { class: "editorial-note" }, t("profile.whyNote")));
     bodyGrid.appendChild(whyBlock);
   }
 

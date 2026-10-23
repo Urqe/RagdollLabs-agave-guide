@@ -60,7 +60,7 @@ test("release 9: sap-derived vs cooked-heart production is explicit, no taste in
   assert.ok(tuxca.process.includes("roast"), "cooked-heart tradition says so");
   // Fermented pulque itself is not a spirit in the catalogue.
   assert.ok(!bottles.some((b) => b.spirit === "pulque"), "fermented pulque is not catalogued");
-  assert.ok(pulque.category.includes("fermented pulque is not a spirit"));
+  assert.ok(pulque.category.includes("fermented pulque is not a distilled spirit"));
 });
 
 test("release 9: regional aliases recorded and search-normalized", async () => {

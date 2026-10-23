@@ -2,9 +2,9 @@
   "profiles": {
     "tequila-blanco-valley-jalisco": {
       "title": "Tequila blanco, estilo Valle de Tequila",
-      "context": "Tequila sin crianza de 100% de agave azul, nacido en el pueblo de Tequila y en el valle que lleva su nombre. Pregúntale a cualquiera del valle: su agave crece más pequeño y más herbáceo que el de los altos, y sus blancos se leen sabrosos y vegetales en lugar de dulces — el sabor de esta tierra, y los del valle te lo dirán con orgullo.",
-      "description": "Un blanco (también llamado silver o plata) es un tequila embotellado sin crianza en roble, así que lo que se prueba es el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas. Los productores tradicionales del valle suelen moler el agave cocido con tahona de piedra y fermentar en tinas abiertas, lo que añade textura y un filo sabroso y terroso típico de la región.",
-      "beginnerNote": "¿Nuevo en el tequila? Un blanco es la versión sin crianza — la lectura más pura del agave cocido, antes de cualquier influencia de roble. Aquí es donde cada tequilero quiere que su tierra hable primero.",
+      "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. Pregúntale a cualquiera del valle: su agave crece más pequeño y más herbáceo que el de los altos, y sus blancos se leen sabrosos y vegetales en lugar de dulces — el sabor de este suelo, y los del valle te lo dirán con orgullo.",
+      "description": "Un blanco (también llamado silver o plata) es un tequila embotellado sin crianza en roble, así que lo que llega a la copa es el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas.",
+      "beginnerNote": "¿Nuevo en el tequila? Empieza aquí: ningún barril se interpone entre tú y el agave cocido, así que un blanco es la introducción más clara a cómo se lee la tierra de cada productor en la copa.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal sin crianza",
       "process": "Cocción al vapor (horno/autoclave), extracción con tahona o molino de rodillos, fermentación en tinas abiertas, doble destilación, sin crianza (blanco)",
       "finish": "Limpio y picante, con cítricos y una calidez vegetal suave que se desvanece de forma constante.",
@@ -16,7 +16,7 @@
           "queso fresco con chile"
         ]
       },
-      "whyItTastes": "El agave del valle crece más pequeño y más herbáceo que el del altiplano, y los productores tradicionales del valle muelen con tahona y fermentan en tinas abiertas — el filo salado y terroso sigue del lugar más el método, nunca de la edad ni del precio. Sin crianza por definición, así que el agave cocido mismo carga la copa."
+      "whyItTastes": "El filo sabroso y terroso es lugar más método: el agave del valle crece más pequeño y más herbáceo que el del altiplano, y los productores tradicionales del valle muelen la piña cocida con tahona de piedra y fermentan en tinas abiertas. Ni la edad ni el precio lo explican."
     },
     "mezcal-espadin-valles-centrales": {
       "title": "Mezcal de espadín, estilo Valles Centrales",
@@ -117,7 +117,7 @@
       "context": "Tlaxcala guarda el pulque como suyo: es el corazón del maguey pulquero. El destilado de pulque es el destilado de savia de la región: los productores de la tradición pulquera fermentan el aguamiel del maguey pulquero (Agave salmiana) hasta hacer pulque y luego lo destilan — el agave nunca se cocina. Tlaxcala no forma parte de la denominación del mezcal y el destilado de pulque no es una categoría certificada; es una tradición regional, vendida bajo etiquetas de destilado, sostenida por familias que consideran destilar el pulque un derecho de nacimiento de sus cerros. El pulque fermentado mismo (sin destilar) no forma parte de este catálogo.",
       "description": "A diferencia de los destilados de agave cocido, el destilado de pulque parte de savia sin cocinar fermentada en pulque, que luego se destila. El resultado es ligero, láctico y verde, con una acidez suave completamente distinta al carácter asado de los destilados de agave cocido.",
       "beginnerNote": "¿Nuevo en el destilado de pulque? Es pulque destilado — savia de agave sin cocinar, así que espera un carácter láctico, verde y suavemente ácido, distinto de cualquier destilado de agave cocido. Un sabor del oficio más antiguo de Tlaxcala.",
-      "category": "Destilado de pulque — una tradición regional; sin denominación de origen, y explícitamente no es mezcal (el pulque fermentado no es un destilado y no se cataloga aquí)",
+      "category": "Destilado de pulque — una tradición regional; sin denominación de origen, y explícitamente no es mezcal (el pulque fermentado no es un destilado)",
       "process": "Derivado de savia: aguamiel fermentado en pulque (unas 48 horas), luego destilado; la piña nunca se cocina",
       "finish": "Ligero y ácido, con notas lácticas y verdes que se desvanecen rápido.",
       "pairing": {
@@ -317,7 +317,7 @@
     "tequila-blanco-highland-jalisco": {
       "title": "Tequila blanco de los Altos, estilo Los Altos (Jalisco)",
       "context": "El blanco es la clase legal sin añejar del tequila — y los Altos (alrededor de Atotonilco el Alto y Arandas) lo leen de forma muy distinta al Valle de Tequila. Los suelos minerales ricos en hierro, la mayor elevación y las noches más frescas producen agaves más grandes y dulces, así que un blanco de los Altos tiende a lo brillante, afrutado y floral donde el valle tiende a lo terroso y sabroso. Es una distinción cultural y agronómica, no una clase legal — ambos son simplemente tequila blanco, y los alteños te contarán con verdadero orgullo lo afrutado de su tierra roja.",
-      "description": "La lectura alteña del tequila sin añejar: agave cocido más dulce con cítricos (piel de naranja, toronja), fruta tropical y de hueso, florales delicados y una especia suave, en un cuerpo más blando y redondo que el estilo del valle. Guía editorial de estilo, no una calificación de ninguna botella específica.",
+      "description": "La lectura alteña del tequila sin añejar: agave cocido más dulce con cítricos (piel de naranja, toronja), fruta tropical y de hueso, florales delicados y una especia suave, en un cuerpo más blando y redondo que el estilo del valle.",
       "beginnerNote": "¿Nuevo en el tequila? Un blanco de los Altos es el punto de partida más amable: suave, dulce y afrutado, sin el filo sabroso del valle. Pruébalo junto al blanco del valle para saborear lo que el lugar le hace a la misma planta.",
       "category": "Tequila — destilado con su propia Denominación de Origen; el blanco es una clase legal sin añejar",
       "process": "Cocido al vapor (o asado en piedra según algunos tradicionalistas), fermentado, doble destilado, sin añejar (blanco)",
@@ -555,7 +555,7 @@
     },
     "casa-dragones-joven": {
       "reviewSummary": "Wine Enthusiast (96 puntos, cata a ciegas) lo encuentra extraordinariamente suave, con una nariz muy dulce, afrutada, casi vinosa y un sabor puro y contundente a pimienta que termina limpio.",
-      "editorialNote": "Una mezcla joven: la app aún no tiene un perfil de estilo tequila joven (el joven requiere evidencia de composición, según el plan), así que esta entrada se cubre solo como dato de catálogo.",
+      "editorialNote": "Una mezcla joven: esta guía aún no tiene un perfil de estilo tequila joven, así que esta entrada se cubre solo como dato de catálogo.",
       "classification": "Tequila — joven (una mezcla maestra de plata con un toque de extra añejo, filtrada hasta la claridad del platino)",
       "plantComposition": "100% de agave azul weber (Agave tequilana), según la marca"
     }
@@ -665,7 +665,7 @@
       "definition": "Una clase de tequila sin crianza. En otros destilados las mismas palabras pueden significar clases distintas o nada legal; los términos de clase son específicos de cada destilado."
     },
     "joven / abocado": {
-      "definition": "La clase sin crianza del mezcal; joven también se usa informalmente en otros contextos (esta app marca los usos no legales como etiquetas editoriales)."
+      "definition": "La clase sin crianza del mezcal; joven también se usa informalmente en otros contextos, y los usos no legales se etiquetan como editoriales en esta guía."
     },
     "reposado / añejo": {
       "definition": "Clases con reposo en madera y mínimos específicos de cada destilado; las reglas del tequila no se transfieren al mezcal ni a la raicilla."
@@ -689,7 +689,7 @@
       "definition": "Los pequeños productores etiquetan lotes; los datos del lote (mezcla de agaves, graduación, fabricante) pueden diferir materialmente entre botellas de la misma marca. Los datos del lote deben quedarse con el lote."
     },
     "100% de agave": {
-      "definition": "Una afirmación de composición sobre los fermentables. Es distinta de la calidad y de la elegibilidad para esta app: tradiciones basadas en agave con fermentables no agave declarados siguen siendo honestas sobre lo que son."
+      "definition": "Una afirmación de composición sobre los fermentables, distinta de la calidad: tradiciones basadas en agave con fermentables no agave declarados (algunos comiteco) se incluyen con su composición declarada con honestidad."
     }
   },
   "chapters": {
@@ -699,7 +699,7 @@
       "block0": "El tequila, el mezcal, la bacanora y la raicilla son destilados de agave con denominación de origen propia: nombres legalmente protegidos, ligados a lugares y reglas específicas. Cada uno sabe distinto porque la planta, el lugar y la producción difieren — no porque una categoría sea inherentemente mejor.",
       "block1": "Más allá de los nombres grandes, México tiene tradiciones regionales sin denominación de origen — el tuxca en la frontera Jalisco–Colima, el comiteco de Chiapas (elaborado con aguamiel y, en algunas botellas, con azúcar de caña declarada), el destilado de pulque del corazón pulquero. Su estatus legal difiere del tequila, y esta guía nunca lo trata como un juicio de autenticidad.",
       "block2": "El sotol se incluye como una tradición norteña emparentada con el agave, pero no es un destilado de agave: el sotol viene del Dasylirion, un género emparentado. Mantener la distinción con precisión importa más que forzarlo dentro de la familia del agave.",
-      "block2deeper": "Botánicamente, el Dasylirion y el Agave están en la familia Asparagaceae, pero compartir familia no es compartir género — el sotol es tan poco agave como un puerro es una cebolla."
+      "block2deeper": "La geografía legal es municipal, no estatal: la denominación de la bacanora cubre municipios seleccionados de Sonora, y la de la raicilla nombra municipios específicos de Jalisco y Nayarit. El sombreado del mapa significa cobertura de la guía, nunca límites legales."
     },
     "meet-the-plants": {
       "title": "Conoce las plantas",
@@ -723,7 +723,8 @@
       "block0": "El cuerpo es cómo se siente el destilado en la boca — ligero, medio o pleno. El humo, cuando está presente, suele venir del asado en pozo. Las notas herbales y vegetales vienen de la planta y de una cocción limpia; la fruta y las florales a menudo surgen con el agave de los Altos y los asados suaves. La dulzura aquí significa dulzura percibida, no azúcar medido. Dentro del tequila, la misma planta se lee distinto según el lugar: el agave del valle tiende a lo terroso y sabroso, el de Los Altos a lo más dulce y afrutado — una tendencia nombrada en los perfiles de blanco de valle y de los Altos, y honestamente una tendencia: un panel de cata a ciegas encontró el patrón más débil de lo que sugiere el folclore.",
       "block1": "El roble — del reposo en madera — aporta vainilla, caramelo y especias. La longitud del final es cuánto persiste el sabor después de tragar. Ninguno de estos niveles es una calificación de calidad: son descripciones editoriales de estilo, y las botellas dentro de un estilo varían.",
       "block2": "La vista de comparación pone estas dimensiones lado a lado: un blanco contra un añejo muestra el mayor contraste de roble; un blanco del valle contra una expresión del altiplano muestra cómo se lee el lugar en la copa.",
-      "block2deeper": "La química del sabor es genuinamente compleja: los compuestos del asado, los ésteres de la fermentación y el corte del alambique contribuyen cada uno. Esta guía atribuye carácter al proceso solo donde las fuentes documentan el vínculo — nunca a partir de una sola nota de cata."
+      "block2deeper": "La química del sabor es genuinamente compleja: los compuestos del asado, los ésteres de la fermentación y el corte del alambique contribuyen cada uno. Esta guía atribuye carácter al proceso solo donde las fuentes documentan el vínculo — nunca a partir de una sola nota de cata.",
+      "block3": "Cómo llega esta guía a sus conclusiones: los perfiles de estilo son descripciones editoriales extraídas de los datos sensoriales documentados de cada perfil, no reseñas ni calificaciones de ninguna botella. Las impresiones de los reseñistas se atribuyen a su fuente, las notas de los productores nunca se presentan como reseñas independientes, y todo lo que la guía misma concluye se etiqueta como editorial. Los datos específicos de cada lote — ABV, productor, mezcla de agaves, notas de cata — permanecen adjuntos a la botella a la que pertenecen, y la evidencia faltante se declara en lugar de adivinarse."
     },
     "understanding-labels": {
       "title": "Entender las etiquetas",
@@ -747,7 +748,7 @@
       "block0": "Las páginas de referencia de plantas registran identidad científica, nombres comunes regionales, cultivo, incertidumbre botánica honesta y fuentes. Las páginas de procesos explican cada etapa de producción con los perfiles que la usan. El glosario define cada término de etiqueta en contexto.",
       "block1": "La sostenibilidad importa para los agaves de cosecha silvestre: la reproducción lenta y solo por semilla del tobalá hace vulnerables a las poblaciones silvestres, y la larga maduración del sotol hace decisiva la práctica de cosecha. El bacanora y la raicilla suman la misma preocupación a escala de tradición — ambas dependen de agaves silvestres en Sonora y Jalisco — mientras que el espadín y el azul weber cultivados soportan una presión mucho menor. Las páginas de planta y tradición de esta guía establecen estas distinciones con fuentes fechadas, y marcan las afirmaciones de los productores como no verificadas donde la evidencia es escasa.",
       "block2": "Las denominaciones evolucionan: la protección de la bacanora data de 2000, la de la raicilla de 2019, la del sotol de 2002. Esta guía registra fechas de verificación con cada fuente y revisa enmiendas antes de publicar resúmenes legales — una URL alcanzable nunca prueba una afirmación por sí sola.",
-      "block2deeper": "La geografía legal es municipal, no estatal: la denominación de la bacanora cubre municipios seleccionados de Sonora, y la de la raicilla nombra municipios específicos de Jalisco y Nayarit. El sombreado del mapa en esta app siempre significa cobertura, nunca límites legales."
+      "block2deeper": "La geografía legal es municipal, no estatal: la denominación de la bacanora cubre municipios seleccionados de Sonora, y la de la raicilla nombra municipios específicos de Jalisco y Nayarit. El sombreado del mapa significa cobertura de la guía, nunca límites legales."
     }
   },
   "traditions": {

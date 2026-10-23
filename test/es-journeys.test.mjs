@@ -84,7 +84,7 @@ test("F4: profile view renders Spanish editorial content end to end", async () =
 
   assert.equal(root.querySelector("#profile-title").textContent, "Tequila blanco, estilo Valle de Tequila",
     "profile title is Spanish");
-  assert.ok(root.querySelector(".profile-context").textContent.includes("Tequila sin crianza"),
+  assert.ok(root.querySelector(".profile-context").textContent.includes("Pregúntale a cualquiera del valle"),
     "context is Spanish");
   assert.ok(root.querySelector(".profile-description").textContent.includes("blanco"),
     "description is Spanish");
@@ -135,9 +135,11 @@ test("F8: suggestion reasons are fully Spanish", async () => {
   const reasons = [...root.querySelectorAll(".suggestion-list .search-result-reason")].map((s) => s.textContent);
   assert.ok(reasons.length >= 1, "suggestions render");
   for (const reason of reasons) {
-    assert.ok(reason.includes("Comparte"), "reason template is Spanish");
-    assert.ok(!/\b(smoke|herbal|fruit|sweetness|pepper|oak|body|finish)\b/i.test(reason),
+    assert.ok(reason.includes("Una lectura similar en la copa"), "reason template is Spanish");
+    assert.ok(!/\b(smoke|fruit|sweetness|pepper|oak|body|finish)\b/i.test(reason),
       `reason "${reason}" contains no English dimension labels`);
+    assert.ok(!/\bHerbal\b(?! \/)/.test(reason) || reason.includes("Herbal / vegetal"),
+      "herbal appears only as the established ES dimension label");
   }
 });
 
@@ -259,7 +261,7 @@ test("English mode never shows Spanish content (locale gate regression)", async 
   const root = document.createElement("div");
   renderProfile(root, { profile, bottle, sources: sourceList, allProfiles: profiles, allBottles: bottles, locale: en });
   assert.equal(root.querySelector("#profile-title").textContent, profile.title, "English title");
-  assert.ok(root.querySelector(".profile-context").textContent.includes("Unaged tequila"),
+  assert.ok(root.querySelector(".profile-context").textContent.includes("Blanco tequila born in the town of Tequila"),
     "English context");
   assert.ok(root.querySelector(".bottle-review").textContent.includes("benchmark"),
     "English bottle review");

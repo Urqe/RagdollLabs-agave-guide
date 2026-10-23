@@ -62,7 +62,7 @@
       "id": "wood-maturation",
       "name": "Wood maturation",
       "stage": "resting",
-      "explanation": "Reposado and añejo classes rest in wood for defined minimum periods depending on the spirit's own rules. Wood influence depends on wood type, size, age and time — there is no universal 'older is better' ladder, and most bottles in this app are unaged by design.",
+      "explanation": "Reposado and añejo classes rest in wood for defined minimum periods depending on the spirit's own rules. Wood influence depends on wood type, size, age and time — there is no universal 'older is better' ladder, and most bottles in this guide are unaged by design.",
       "sourceIds": [
         "diffords-tequila-category"
       ]

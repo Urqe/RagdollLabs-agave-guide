@@ -11,7 +11,7 @@
     {
       "term": "joven / abocado",
       "context": "mezcal (legal class)",
-      "definition": "Mezcal's unaged class; joven can also be used informally elsewhere (this app marks non-legal uses as editorial labels).",
+      "definition": "Mezcal's unaged class; joven can also be used informally elsewhere, and non-legal uses are labeled editorial in this guide.",
       "sourceIds": [
         "diffords-mezcal-what-it-is"
       ]
@@ -79,7 +79,7 @@
     {
       "term": "100% de agave",
       "context": "composition claim",
-      "definition": "A composition claim about fermentables. It is distinct from quality and from eligibility for this app: agave-based traditions with disclosed non-agave fermentables (some comiteco) are included honestly.",
+      "definition": "A composition claim about fermentables, distinct from quality: agave-based traditions with disclosed non-agave fermentables (some comiteco) are included with their composition stated honestly.",
       "sourceIds": [
         "backalley-comiteco"
       ]

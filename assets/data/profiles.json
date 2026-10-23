@@ -6,8 +6,8 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Unaged tequila from 100% blue agave, born in the town of Tequila and the valley that carries its name. Ask anyone from the valley: their agave grows smaller and more herbaceous than highland agave, and their blancos read savory and vegetal rather than sweet — the taste of this ground, and valley folk will tell you so with pride.",
-      "description": "A blanco (also called silver or plata) is tequila that is bottled without oak aging, so what you taste is the distilled character of the cooked agave itself: roasted piña, citrus, pepper and fresh vegetal notes. Traditional valley producers often crush the cooked agave with a tahona stone wheel and ferment in open tanks, which adds texture and a savory, earthy edge that is typical of the region.",
+      "context": "Blanco tequila born in the town of Tequila and the valley that carries its name, from 100% blue agave grown in this same ground. Ask anyone from the valley: their agave grows smaller and more herbaceous than highland agave, and their blancos read savory and vegetal rather than sweet — the taste of this soil, and valley folk will tell you so with pride.",
+      "description": "A blanco (also called silver or plata) is tequila bottled without oak aging, so what reaches the glass is the distilled character of the cooked agave itself: roasted piña, citrus, pepper and fresh vegetal notes.",
       "body": "light",
       "tasteNotes": [
         "cooked agave",
@@ -29,7 +29,7 @@
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
       "process": "Steam-cooked (oven/autoclave), tahona or roller-mill extraction, fermented in open tanks, double distilled, unaged (blanco)",
       "category": "Tequila — spirit with its own Denomination of Origin; blanco is an unaged legal class",
-      "beginnerNote": "New to tequila? A blanco is the unaged version — the purest read on cooked agave, before any oak influence. This is where every tequilero wants their land to speak first.",
+      "beginnerNote": "New to tequila? Start here: no barrel stands between you and the cooked agave, so a blanco is the clearest introduction to how each producer's land reads in the glass.",
       "sensory": {
         "smoke": "none",
         "herbal": "high",
@@ -65,7 +65,7 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "Valley agave grows smaller and more herbaceous than highland agave, and traditional valley producers crush with a tahona and ferment in open tanks — the savory, earthy edge follows from place plus method, never from age or price. Unaged by definition, so the cooked agave itself carries the glass."
+      "whyItTastes": "The savory, earthy edge is place plus method: valley agave grows smaller and more herbaceous than highland agave, and traditional valley producers crush the cooked piña with a tahona stone wheel and ferment in open tanks. Age and price explain none of it."
     },
     {
       "id": "mezcal-espadin-valles-centrales",
@@ -410,7 +410,7 @@
       "description": "Distilling a fermented sap rather than a cooked agave mash gives destilado de pulque its signature: fresh, green, lactic and faintly wild, with the vegetal, slightly tangy character of pulque carried into the glass rather than roast or smoke. Reviews note everything from steamed grass and sour-candy acidity to creamed-corn sweetness — a broad, unusual range.",
       "plant": "Maguey pulquero (Agave salmiana); sap collected daily from the living plant",
       "process": "Sap-derived: aguamiel fermented into pulque (about 48 hours), then distilled; the piña is never cooked",
-      "category": "Destilado de pulque — a regional tradition; no denomination of origin, and explicitly not mezcal (fermented pulque is not a spirit and is not catalogued here)",
+      "category": "Destilado de pulque — a regional tradition; no denomination of origin, and explicitly not mezcal (fermented pulque is not a distilled spirit)",
       "beginnerNote": "New to destilado de pulque? It is distilled pulque — uncooked agave sap, so expect lactic, green, gently sour character unlike any cooked-agave spirit. A taste of Tlaxcala's oldest trade.",
       "aliases": [
         "destilado de pulque",
@@ -1195,7 +1195,7 @@
       "stateId": "jal",
       "stateName": "Jalisco",
       "context": "Blanco is the unaged legal class of tequila — and the highlands (Los Altos) around Atotonilco el Alto and Arandas read it very differently from the Tequila Valley. Red iron-rich mineral soils, higher elevation and cooler nights grow bigger, sweeter agave, so a highland blanco leans bright, fruity and floral where the valley leans earthy and savory. This is a cultural and agronomic distinction, not a legal class — both are simply tequila blanco, and alteños will tell you their red-earth fruitiness with real pride.",
-      "description": "The highland take on unaged tequila: sweeter cooked agave with citrus (orange peel, grapefruit), tropical and stone fruit, delicate florals and a gentle spice, in a softer, rounder body than the valley style. Editorial style guidance, not a rating of any specific bottle.",
+      "description": "The highland take on unaged tequila: sweeter cooked agave with citrus (orange peel, grapefruit), tropical and stone fruit, delicate florals and a gentle spice, in a softer, rounder body than the valley style.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated; highland red mineral soils)",
       "plantId": "agave-tequilana",
       "process": "Steam-cooked (or stone-roasted by some traditionalists), fermented, double distilled, unaged (blanco)",

@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — refinement after post-roadmap pair 7
 
-The next planned release is **post-roadmap pair 8 — Relevance & Reading Review**, followed by pairs 9–14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
+Post-roadmap pair 8 — Relevance & Reading Review is applied; the next planned release is **post-roadmap pair 9 — Your First Agave Spirit**, followed by pairs 10–14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -494,15 +494,15 @@ Added: 2026-10-23. Status: **planned; not implemented**. This sequence follows c
 
 ### Post-roadmap pair 8 — Relevance & Reading Review (maintenance)
 
-Goal: correct concrete teaching and reading friction before adding another navigation surface. Apply the mandatory maintenance protocol, scoped to these findings and adjacent behavior.
+Applied (see the pair 8 notes in RELEASE_NOTES.md). Goal: correct concrete teaching and reading friction before adding another navigation surface. Apply the mandatory maintenance protocol, scoped to these findings and adjacent behavior.
 
-1. [ ] **Fix educational recommendation relevance.** The valley blanco profile currently offers highland extra añejo under “same plant, different region,” changing maturation as well as region despite an existing highland blanco profile. Prefer candidates matching tradition, class/maturation and documented method where possible, then differing in region. Do not claim that region is the sole variable when other material differences remain.
-2. [ ] Make recommendation selection deterministic with stable tie-breaking and exclude self-links and duplicate destinations. Reuse existing recommendation logic where appropriate rather than creating another ranking system. If no suitably comparable candidate exists, omit the perspective or explain the additional differences.
-3. [ ] Replace raw shared-dimension explanations such as “Shares Perceived sweetness” with useful language explaining the overlap. Shared absence or a low score alone should not imply strong overall similarity. Keep recommendations bounded to documented profile data.
-4. [ ] Tighten repeated profile introductions. On the valley blanco profile, context, description, beginner note and “why it tastes this way” repeat the unaged/agave-led point. Give each block a distinct purpose: local identity, accessible explanation, causal context, then sensory detail. Preserve regional warmth, technical facts and qualifications; apply the same review only where repetition is present elsewhere.
-5. [ ] Remove internal implementation language from visitor-facing text, including “per the plan,” app eligibility and coverage/mapping rationales. Preserve honest missing-information disclosures in plain language. Audit catalogue relationship headings too: an uncovered bottle must not be introduced as fitting a profile it is explicitly excluded from.
-6. [ ] Keep one short, relevant explanation of editorial style guidance per view. Move extended methodology into reference material while retaining bottle-specific attribution, botanical uncertainty and other qualifications necessary to interpret a claim.
-7. [ ] Add focused regressions for the existing valley/highland blanco recommendation, deterministic fallback behavior and contradictory catalogue relationship labels. Run the relevant suites and normal validation.
+1. [x] **Fix educational recommendation relevance.** The valley blanco profile currently offers highland extra añejo under “same plant, different region,” changing maturation as well as region despite an existing highland blanco profile. Prefer candidates matching tradition, class/maturation and documented method where possible, then differing in region. Do not claim that region is the sole variable when other material differences remain.
+2. [x] Make recommendation selection deterministic with stable tie-breaking and exclude self-links and duplicate destinations. Reuse existing recommendation logic where appropriate rather than creating another ranking system. If no suitably comparable candidate exists, omit the perspective or explain the additional differences.
+3. [x] Replace raw shared-dimension explanations such as “Shares Perceived sweetness” with useful language explaining the overlap. Shared absence or a low score alone should not imply strong overall similarity. Keep recommendations bounded to documented profile data.
+4. [x] Tighten repeated profile introductions. On the valley blanco profile, context, description, beginner note and “why it tastes this way” repeat the unaged/agave-led point. Give each block a distinct purpose: local identity, accessible explanation, causal context, then sensory detail. Preserve regional warmth, technical facts and qualifications; apply the same review only where repetition is present elsewhere.
+5. [x] Remove internal implementation language from visitor-facing text, including “per the plan,” app eligibility and coverage/mapping rationales. Preserve honest missing-information disclosures in plain language. Audit catalogue relationship headings too: an uncovered bottle must not be introduced as fitting a profile it is explicitly excluded from.
+6. [x] Keep one short, relevant explanation of editorial style guidance per view. Move extended methodology into reference material while retaining bottle-specific attribution, botanical uncertainty and other qualifications necessary to interpret a claim.
+7. [x] Add focused regressions for the existing valley/highland blanco recommendation, deterministic fallback behavior and contradictory catalogue relationship labels. Run the relevant suites and normal validation.
 
 Acceptance: valley blanco recommends highland blanco for the regional learning link; other perspectives do not imply controlled comparisons when several variables change. Readers can understand a profile without repeated definitions or development terminology. EN/ES meaning and source access remain intact.
 

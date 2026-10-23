@@ -80,30 +80,32 @@ export function flavorMoods(profile) {
 
 /**
  * "If you like this, try…" suggestions with reasons. Suggestions are
- * derived only from supported attributes: a suggestion is offered only
- * when the candidate shares at least one documented dimension level
- * with the anchor, and the reason names those shared attributes. Profiles
- * with too little documented overlap get no suggestion rather than a
- * guessed one.
+ * derived only from supported attributes: a candidate qualifies only
+ * when it shares at least one documented medium-or-high dimension level
+ * with the anchor — shared absence or shared low readings alone never
+ * imply a strong match. Selection is deterministic: candidates rank by
+ * documented overlap, ties break by profile id, and self-links and
+ * duplicate destinations are excluded.
  */
 export function ifYouLikeThis(anchor, candidates, { maxSuggestions = 2 } = {}) {
-  const suggestions = [];
+  const qualified = [];
+  const seen = new Set();
   for (const candidate of candidates) {
-    if (candidate.id === anchor.id) continue;
+    if (!candidate || candidate.id === anchor.id || seen.has(candidate.id)) continue;
     const shared = [];
     for (const { key } of DIMENSIONS) {
       const a = levelOf(anchor, key);
       const c = levelOf(candidate, key);
       if (isKnown(a) && a === c && a !== "none") shared.push(key);
     }
-    if (shared.length > 0) {
-      suggestions.push({
-        profile: candidate,
-        sharedDimensionKeys: shared.slice(0, 2),
-      });
+    const strong = shared.some((key) => LEVEL_ORDER[levelOf(anchor, key)] >= LEVEL_ORDER.medium);
+    if (shared.length > 0 && strong) {
+      seen.add(candidate.id);
+      qualified.push({ profile: candidate, sharedDimensionKeys: shared.slice(0, 2), sharedCount: shared.length });
     }
   }
-  return suggestions.slice(0, maxSuggestions);
+  qualified.sort((x, y) => y.sharedCount - x.sharedCount || x.profile.id.localeCompare(y.profile.id));
+  return qualified.slice(0, maxSuggestions);
 }
 
 /**
@@ -120,6 +122,11 @@ const WOOD_PROCESS = "wood-maturation";
 
 /** True when any of the profiles has documented wood maturation. */
 const isWoodRested = (p) => (p.processIds || []).includes(WOOD_PROCESS);
+
+/** The maturation class of a profile, from its structured maturation field. */
+const maturationClassOf = (p) => p?.maturation?.class || null;
+
+const methodSetOf = (p) => [...(p.processIds || [])].sort().join(",");
 
 /**
  * Detect meaningful comparison perspectives for two or three profiles.
@@ -138,13 +145,20 @@ export function comparisonPerspectives(profiles) {
   const woodMix = !allWood && !noneWood && profiles.some(isWoodRested);
   const woodProfile = profiles.find(isWoodRested);
   const unagedProfile = profiles.find((p) => !isWoodRested(p));
+  const sameMethodSet = new Set(profiles.map(methodSetOf)).size === 1;
 
   if (allSharePlant && !sameRegion) {
-    out.push({
-      id: "samePlantDifferentRegion",
-      plant: (sharedPlantIds[0] || "").replace(/-/g, " "),
-      evidence: "plantIds",
-    });
+    const plant = (sharedPlantIds[0] || "").replace(/-/g, " ");
+    const classSet = new Set(profiles.map((p) => maturationClassOf(p)));
+    // "Place is the variable" is claimed only when the compared styles
+    // also share maturation class and production method; when class or
+    // method differ too, the perspective names the additional variable
+    // instead of implying a controlled regional comparison.
+    if (classSet.size === 1 && sameMethodSet) {
+      out.push({ id: "samePlantDifferentRegion", plant, evidence: "plantIds" });
+    } else {
+      out.push({ id: "samePlantDifferentRegionAndClass", plant, evidence: "plantIds" });
+    }
   }
   if (sameTradition && !allSharePlant) {
     out.push({ id: "sameTraditionDifferentPlant", tradition: profiles[0].traditionId, evidence: "traditionId" });

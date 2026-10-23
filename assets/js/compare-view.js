@@ -248,6 +248,8 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
       let text = "";
       if (perspective.id === "samePlantDifferentRegion") {
         text = t("compare.perspective.samePlant").replace("{plant}", perspective.plant);
+      } else if (perspective.id === "samePlantDifferentRegionAndClass") {
+        text = t("compare.perspective.samePlantAndClass").replace("{plant}", perspective.plant);
       } else if (perspective.id === "sameTraditionDifferentPlant") {
         text = t("compare.perspective.sameTraditionPlant").replace("{tradition}", SPIRIT_LABELS[perspective.tradition] || perspective.tradition);
       } else if (perspective.id === "sameTraditionDifferentMethod") {

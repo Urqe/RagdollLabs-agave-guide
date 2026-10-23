@@ -2063,3 +2063,96 @@ order or the mobile layout.
   environment has no browser engine, so layout checks are
   CSS-pinned. Native mobile (iPhone/iPad Safari, VoiceOver) checks
   still unverified here.
+
+## Post-roadmap pair 8 — Relevance & Reading Review
+
+Scope per plan section 4.2: correct concrete teaching and reading
+friction — misleading recommendation links, non-deterministic
+suggestion selection, raw shared-dimension reasons, repeated profile
+introductions, internal implementation language and duplicated
+methodology hedging — before adding any new navigation surface.
+
+### Findings (confirmed defects)
+
+1. The valley blanco profile offered highland extra añejo under "Same
+   plant, different region" — changing maturation class and method as
+   well as region, despite an existing highland blanco profile.
+2. `ifYouLikeThis` returned candidates in data order with no
+   tie-breaking, no duplicate exclusion, and accepted candidates whose
+   only overlap with the anchor was shared absence or low levels.
+3. Suggestion reasons rendered "Shares Perceived sweetness with this
+   profile" — raw dimension lists that imply similarity without
+   explaining it.
+4. The compare perspective claimed "place is the variable here" for
+   comparisons where maturation class also changed.
+5. On the valley blanco profile, context, description, beginner note
+   and why-it-tastes repeated the unaged/agave-led definition four
+   times.
+6. Visitor-facing data contained implementation language ("per the
+   plan", app-eligibility rationales), and four uncovered bottles
+   (Don Julio reposado/añejo, Patrón reposado, Casa Dragones joven)
+   were introduced with "How it fits the … profile" headings while
+   explicitly excluded from those profiles.
+7. Methodology hedging appeared in multiple places per view: the
+   per-profile `whyNote` boilerplate, the coords note's duplicated
+   "approximate" clause, the highland description's trailing
+   guidance duplicate, and the map view already carrying its own
+   coverage hint.
+
+### Fixes
+
+- **Explore-next relevance (`profile.js`):** the same-plant destination
+  now prefers a candidate matching tradition, maturation class and
+  documented method, differing only in region — valley blanco now
+  links to the highland blanco. All destination categories are
+  selected deterministically (stable id order) and de-duplicated;
+  self-links are excluded.
+- **Deterministic suggestions (`compare.js`):** `ifYouLikeThis` ranks
+  by documented overlap with id tie-breaking, requires at least one
+  shared medium-or-high level (shared absence/low alone never
+  qualifies), and excludes self and duplicate candidates.
+- **Useful reason language (`presentation.js`):** "Shares {list}…"
+  replaced with "A similar read in the glass: both lean {list}, so if
+  one works for you, the other is worth a taste." (ES parity).
+- **Honest compare perspective (`compare.js`, `compare-view.js`,
+  `locale.js`):** the place-only perspective fires only when class and
+  method are held constant; otherwise a new
+  `samePlantDifferentRegionAndClass` perspective states that region
+  is not the only variable (EN/ES).
+- **Distinct reading blocks (`profiles.json`, `content-es.json`):**
+  the four valley blanco blocks each carry one purpose — local
+  identity (context), accessible definition (description), beginner
+  entry point (beginnerNote), causal explanation (whyItTastes) — with
+  the unaged definition stated once.
+- **Internal language removed:** "per the plan", app-eligibility and
+  app-meta phrasing removed from bottles, glossary, processes,
+  chapters and profile category data (EN + ES), keeping facts intact.
+- **Uncovered-bottle relationship labels (`catalogue-view.js`,
+  `presentation.js`):** bottles marked `profile-not-covered` (or
+  without a profile mapping) now render "How it relates to the
+  guide's coverage (editorial):" instead of the fits-profile heading
+  (EN/ES).
+- **One qualifier per view:** the per-profile deterministic-hedging
+  note and the coords legal-boundary clause were removed; the coords
+  note keeps a single "approximate" via the precision value; the
+  highland description's trailing guidance duplicate was dropped. The
+  extended methodology now lives in the Understanding Flavour Learn
+  chapter ("How this guide reaches its conclusions", ES parity), and
+  the profile view keeps exactly one short editorial-guidance note.
+
+### Checks run
+
+- `npm run validate` — schema plus 237 node:test/jsdom suites, all
+  passing; 9 new pair-8 regression tests (valley→highland blanco
+  link, no self/duplicate destinations, deterministic
+  shared-absence-excluded suggestions, reason language, uncovered
+  relationship labels, controlled-regional perspective, distinct
+  reading blocks, no internal language, one-guidance-note).
+- Existing tests pinning changed strings updated deliberately
+  (comparison-intelligence, es-journeys, regional, richer-profiles).
+
+### Remaining issues / deferred
+
+- Native-device (iPhone/iPad Safari, VoiceOver) checks remain
+  unverified in this environment; no layout or navigation changes
+  were made in this pair.

@@ -93,13 +93,18 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
     article.appendChild(el("p", { class: "bottle-review" }, L("reviewSummary", bottle.reviewSummary)));
   }
 
-  // The app's synthesis, explicitly profile-relative and sourced.
+  // The app's synthesis, explicitly profile-relative and sourced. An
+  // uncovered bottle never gets the "how it fits" heading — it is
+  // introduced as a reference point, not as a member of that profile.
   if (bottle.editorialNote) {
     const note = el("p", { class: "editorial-note" });
     const profile = profiles.find((p) => p.id === bottle.noteProfileId);
-    const prefix = profile
-      ? ui(locale, "fitsPrefix").replace("{title}", profile.title)
-      : ui(locale, "fitsPrefixPlain");
+    const uncovered = (bottle.coverage || []).includes("profile-not-covered") || !bottle.profileId;
+    const prefix = uncovered
+      ? ui(locale, "relatesPrefix")
+      : profile
+        ? ui(locale, "fitsPrefix").replace("{title}", profile.title)
+        : ui(locale, "fitsPrefixPlain");
     note.appendChild(document.createTextNode(prefix + L("editorialNote", bottle.editorialNote)));
     article.appendChild(note);
   }
