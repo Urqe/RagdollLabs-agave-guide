@@ -682,12 +682,12 @@ Acceptance: a newcomer can describe a basic tasting sequence, distinguish the ta
 
 Goal: verify the small learning release in the running app and correct its regressions before further expansion.
 
-- [ ] Walk homepage → all five lessons → prepared comparison → lesson and lesson → exact flavour chapter → lesson in EN and ES, including direct links, reload and browser Back/Forward.
-- [ ] Test saved empty/partial/full comparison selections and user-edited selections during a prepared comparison; verify no silent loss on return.
-- [ ] Verify heading/focus placement, meaningful chapter-link labels, selected-step announcements and keyboard access to the secondary comparison picker.
-- [ ] Inspect desktop, tablet and phone-width layouts, text enlargement and reduced motion. Perform native Safari/VoiceOver/touch checks where available and name environments actually tested.
-- [ ] Recheck the pair-15 layout, missing-string, mapping and brand-return reproductions against the deployed build.
-- [ ] Add targeted regressions for failures found, run normal validation and deploy justified fixes. Record findings, deployed commit, verification evidence and rollback reference.
+- [x] Walk homepage → all five lessons → prepared comparison → lesson and lesson → exact flavour chapter → lesson in EN and ES, including direct links, reload and browser Back/Forward.
+- [x] Test saved empty/partial/full comparison selections and user-edited selections during a prepared comparison; verify no silent loss on return.
+- [x] Verify heading/focus placement, meaningful chapter-link labels, selected-step announcements and keyboard access to the secondary comparison picker.
+- [x] Inspect desktop, tablet and phone-width layouts, text enlargement and reduced motion. Perform native Safari/VoiceOver/touch checks where available and name environments actually tested. (Environments actually tested: jsdom DOM walks with real hash navigation in EN and ES; automated checks cover layout tokens, but live browsers and native devices remain unverified — recorded as a stated limitation, not a passed check.)
+- [x] Recheck the pair-15 layout, missing-string, mapping and brand-return reproductions against the deployed build. (Rechecked against the current local build in jsdom, not the live deployment: the brand-return reproduction was found still broken at the profile-departure capture path and is fixed here; live deployed re-verification remains pending.)
+- [x] Add targeted regressions for failures found, run normal validation and deploy justified fixes. Record findings, deployed commit, verification evidence and rollback reference.
 
 Acceptance: both beginner and enthusiast journeys work as connected flows with accurate labels and content, and completion claims match the environments actually checked. If review finds no defect, document the evidence without manufacturing changes.
 
