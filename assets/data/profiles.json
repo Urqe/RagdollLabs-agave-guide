@@ -6,7 +6,7 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Blanco tequila born in the town of Tequila and the valley that carries its name, from 100% blue agave grown in this same ground. Ask anyone from the valley: their agave grows smaller and more herbaceous than highland agave, and their blancos read savory and vegetal rather than sweet — the taste of this soil, and valley folk will tell you so with pride.",
+      "context": "Blanco tequila born in the town of Tequila and the valley that carries its name, from 100% blue agave grown in this same ground. Valley conditions — lower elevation, warmer nights — tend to grow smaller, more herbaceous agave than Los Altos, so valley blancos often read savory and vegetal rather than sweet: the taste of this soil, a distinction the valley is proud of.",
       "description": "A blanco (also called silver or plata) is tequila bottled without oak aging, so what reaches the glass is the distilled character of the cooked agave itself: roasted piña, citrus, pepper and fresh vegetal notes.",
       "body": "light",
       "tasteNotes": [
@@ -73,7 +73,7 @@
       "spirit": "mezcal",
       "stateId": "oax",
       "stateName": "Oaxaca",
-      "context": "Artisanal joven mezcal made from espadín agave (Agave angustifolia) in the Valles Centrales around Oaxaca. Here mezcal is family work: agave hearts roasted in earthen pit ovens, small batches, generations of the same hands. The pit roast gives the spirit its signature smoke — in the Valles Centrales nobody calls that a flaw; they call it home. Espadín is the most widely planted mezcal agave — the one a Oaxacan family pours first for a curious visitor, because it is the friendliest way into the tradition.",
+      "context": "Artisanal joven mezcal made from espadín agave (Agave angustifolia) in the Valles Centrales around Oaxaca. Here mezcal is family work: agave hearts roasted in earthen pit ovens, small batches, each palenque passing its craft to the next generation. The pit roast gives the spirit its signature smoke — in the Valles Centrales that smoke is part of home, the taste of the land itself, and locals embrace it as such. Espadín is the most widely planted mezcal agave — the one a Oaxacan family pours first for a curious visitor, because it is the friendliest way into the tradition.",
       "description": "Mezcal is a distilled spirit made from the cooked hearts of many agave species, not just blue agave. This profile describes an artisanal pit-roasted style: roasting the piñas underground gives this style its smoke, though not all mezcal is pit-roasted or smoky, layered over fruit, herb and mineral notes that vary with the agave variety, the village and the maestro mezcalero. This profile describes the style of a typical Valles Centrales espadín joven; individual bottles vary widely.",
       "body": "medium",
       "tasteNotes": [
@@ -140,12 +140,12 @@
       "spirit": "bacanora",
       "stateId": "son",
       "stateName": "Sonora",
-      "context": "Ask a Sonoran about bacanora and watch their chest. This is our spirit, they will say — a wild agave spirit of the Sierra Madre de Sonora, distilled from Agave angustifolia pacifica (we just call it Pacifica, or Yaquiana) under a denomination of origin that covers 35 Sonoran municipalities. For most of the 20th century (1915–1992, per Sonoran official history) making it was prohibited, and distilling continued in the Sierra; production was legalized again in 1992 and the denomination of origin arrived in 2000 — two separate milestones. That stubbornness is the pride: bacanora survived because families refused to let it die.",
+      "context": "Bacanora is Sonora's own wild agave spirit: distilled from Agave angustifolia pacifica (locally called Pacifica, or Yaquiana) in the Sierra Madre de Sonora, under a denomination of origin that covers 35 Sonoran municipalities. For most of the 20th century (1915–1992, per Sonoran official history) making it was prohibited, and distilling continued quietly in the sierra; production was legalized again in 1992 and the denomination of origin arrived in 2000 — two separate milestones. That continuity is the heart of the tradition: bacanora survived because families kept distilling it, in vinatas passed from one generation of vinateros to the next.",
       "description": "Traditional bacanora roasts the agave hearts in earthen pit ovens, often with mesquite wood, ferments with wild yeasts and distills twice, giving a spirit that sits stylistically between tequila and Oaxacan mezcal: roasted agave at the center with smoke that is usually gentler than mezcal's, plus desert herbs and a mineral edge from the Sierra.",
       "plant": "Agave angustifolia pacifica (wild-harvested; locally Pacifica or Yaquiana)",
       "process": "Pit-roasted (often mesquite-fueled), wild-yeast fermentation, double distillation",
       "category": "Bacanora — spirit with its own Denomination of Origin (Sonora, since 2000)",
-      "beginnerNote": "New to bacanora? Think of it as mezcal's Sonoran cousin — same roasted-agave heart, usually a touch less smoky, often leaner and more herbal. Sonorans will tell you it needs no introduction; they are right, but this helps.",
+      "beginnerNote": "New to bacanora? Think of it as mezcal's Sonoran cousin — same roasted-agave heart, usually a touch less smoky, often leaner and more herbal.",
       "body": "medium",
       "tasteNotes": [
         "roasted agave",
@@ -179,7 +179,7 @@
         "precision": "municipality (Aconchi, Sonora); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat, Sonoran-style with lime and a pinch of sal de chapulín; editorial suggestion.",
+        "serving": "Neat in a small glass; a short rest opens the roast aromas. A little water or one ice cube works too if you prefer it softer. Editorial suggestion, not a rule.",
         "foods": [
           "carne asada",
           "sonoran cheese (queso cocido)",
@@ -272,7 +272,7 @@
       "spirit": "tuxca",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Tuxca is a borderlands spirit: a traditional agave distillate of the southern-Jalisco/northern-Colima frontier, named for the municipality of Tuxcacuesco below the Volcán de Colima. It has no denomination of origin, and the people who make it will tell you that is the point — the name is a regional tradition, not a legal category like tequila or mezcal, and definitions are loose. Ask around Tuxcacuesco and they will point you to the Río Almería valley, with Zapotitlán de Vadillo and Tolimán as the heartland where the tradition was never lost. In these villages the tradition is kept the old way, and quietly.",
+      "context": "Tuxca is a borderlands spirit: a traditional agave distillate of the southern-Jalisco/northern-Colima frontier, named for the municipality of Tuxcacuesco below the Volcán de Colima. It has no denomination of origin, and the tradition itself keeps the name regional rather than legal — definitions are loose, and that looseness is part of how the communities around Tuxcacuesco, the Río Almería valley, Zapotitlán de Vadillo and Tolimán keep it: the old way, and quietly.",
       "description": "Tuxca is defined less by a legal category than by its method: wild agaves (often Liñeno/Cimarrón, i.e. Agave angustifolia and relatives) roasted in cylindrical pits, hand-mashed, fermented in volcanic stone craters, and distilled in wooden Filipino stills. The result is lean, spicy and mineral rather than smoky-sweet.",
       "plant": "Wild agaves, often Liñeno/Cimarrón (Agave angustifolia and local relatives); ensambles vary by vinatero",
       "process": "Cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation",
@@ -380,7 +380,7 @@
         "precision": "municipality (Comitán de Domínguez, Chiapas); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat; traditionally a small-occasion spirit — editorial suggestion only.",
+        "serving": "Neat at room temperature, in a small glass; its green, lactic character also suits a meal shared slowly. Editorial suggestion, not a rule.",
         "foods": [
           "chiapaneco tamales",
           "smoked cheeses",
@@ -408,7 +408,7 @@
       "spirit": "destilado-de-pulque",
       "stateId": "tlax",
       "stateName": "Tlaxcala",
-      "context": "Tlaxcala holds pulque close: it is the heartland of the maguey pulquero. Destilado de pulque is the region's distilled agave-sap spirit — producers of the pulque tradition ferment the aguamiel of the maguey pulquero (Agave salmiana) into pulque, then distill it — the agave is never cooked. Tlaxcala is not part of the mezcal denomination, and destilado de pulque is not a certified category; it is a regional tradition, sold under destilado labels, kept by families who consider distilling pulque a birthright of their hills. Fermented pulque itself (undistilled) is not part of this spirit catalogue.",
+      "context": "Tlaxcala holds pulque close: it is the heartland of the maguey pulquero. Destilado de pulque is the region's distilled agave-sap spirit — producers of the pulque tradition ferment the aguamiel of the maguey pulquero (Agave salmiana) into pulque, then distill it — the agave is never cooked. Tlaxcala is not part of the mezcal denomination, and destilado de pulque is not a certified category; it is a regional tradition, sold under destilado labels, kept by families for whom distilling pulque is part of the heritage of their hills. Fermented pulque itself (undistilled) is not part of this spirit catalogue.",
       "description": "Distilling a fermented sap rather than a cooked agave mash gives destilado de pulque its signature: fresh, green, lactic and faintly wild, with the vegetal, slightly tangy character of pulque carried into the glass rather than roast or smoke. Reviews note everything from steamed grass and sour-candy acidity to creamed-corn sweetness — a broad, unusual range.",
       "plant": "Maguey pulquero (Agave salmiana); sap collected daily from the living plant",
       "process": "Sap-derived: aguamiel fermented into pulque (about 48 hours), then distilled; the piña is never cooked",
@@ -477,13 +477,13 @@
       "spirit": "raicilla",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Raicilla's denomination of origin (2019) spans 16 Jalisco municipalities and one in Nayarit, and editorially splits into two traditions: Sierra (mountain) and Costa (coastal). Coastal raicilla comes from the Cabo Corrientes and Tomatlán area, made mainly with Agave angustifolia (locally chico aguiar) and Agave rhodacantha. Fishermen and farmers on this coast cook their agave in underground pits, the old way — and they will tell you their raicilla has salt in its soul that the mountains cannot match.",
+      "context": "Raicilla's denomination of origin (2019) spans 16 Jalisco municipalities and one in Nayarit, and editorially splits into two traditions: Sierra (mountain) and Costa (coastal). Coastal raicilla comes from the Cabo Corrientes and Tomatlán area, made mainly with Agave angustifolia (locally chico aguiar) and Agave rhodacantha. Fishermen and farmers on this coast cook their agave in underground pits, the old way — and the coast takes pride in the lean, saline character of its raicilla beside the mountain style.",
       "description": "Unlike the Sierra style's above-ground adobe ovens, coastal producers traditionally cook their agave in underground pits — so coastal raicilla leans smokier and more savory than its mountain sibling, with the pit roast alongside citrus and herbal notes. This profile describes the editorial style; individual bottles vary widely and tasting notes for the example bottle are not yet documented.",
       "plant": "Agave angustifolia (chico aguiar) and Agave rhodacantha (wild and cultivated)",
       "plantId": "agave-angustifolia",
       "process": "Underground pit roast, wild-yeast fermentation, small-batch distillation",
       "category": "Raicilla — spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019); Costa is an editorial tradition split, not a legal class",
-      "beginnerNote": "New to coastal raicilla? Think of it as the smokier seaside cousin of Sierra raicilla: same DO, different cook. The coast's own pride.",
+      "beginnerNote": "New to coastal raicilla? Think of it as the maritime, more smoky-pit cousin of Sierra raicilla: same DO, different cook. The coast's own take.",
       "aliases": [
         "costa",
         "raicilla de la costa",
@@ -584,7 +584,7 @@
       },
       "exampleBottleId": "fortaleza-reposado",
       "pairing": {
-        "serving": "Sipped neat; also the classic Margarita upgrade for those who want a rounder base (editorial suggestion).",
+        "serving": "Neat in a small glass, or over one ice cube; its rounder base also carries a Margarita or Paloma well when you want the oak along. Editorial suggestion, not a rule.",
         "foods": [
           "tacos",
           "grilled meats",
@@ -621,7 +621,7 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Añejo ('aged') is a legal tequila class: oak rest of at least one year, in barrels of no more than 600 liters. Extra añejo (at least three years) exists as a further class. This profile describes a traditionally made Valley añejo of roughly 18 months — comfortably past the one-year minimum, which is the only legal mark (the NOM sets a minimum, not a range). In the valley they will tell you the agave should still speak through a year of oak; the best producers make sure it does.",
+      "context": "Añejo ('aged') is a legal tequila class: oak rest of at least one year, in barrels of no more than 600 liters. Extra añejo (at least three years) exists as a further class. This profile describes a traditionally made Valley añejo of roughly 18 months — comfortably past the one-year minimum, which is the only legal mark (the NOM sets a minimum, not a range). Valley practice favors restraint: the agave should still speak through a year of oak, and the best producers make sure it does.",
       "description": "A year or more of oak turns tequila darker, rounder and sweeter-perceived: the barrel contributes vanilla, dried fruit and cocoa-adjacent notes while the fresh vegetal edge of the blanco recedes. A well-made añejo keeps cooked agave in the frame rather than disappearing into wood; the example bottle's reviewers describe exactly that balance. 'Older is better' is marketing, not a rule — wood influence depends on barrel type, size, age and climate, and many drinkers prefer blanco or reposado.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
       "plantId": "agave-tequilana",
@@ -1097,7 +1097,7 @@
         "precision": "region (Sierra Norte de Oaxaca; the wild style ranges across the Sierra, while the example bottle is cultivated in Santiago Matatlán); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat in a small copita; tobalá's florals fade in cocktails (editorial suggestion).",
+        "serving": "Neat in a small copita — a small stemmed glass — so the florals gather; if you mix it, expect a quieter, gentler version rather than the whole character. Editorial suggestion, not a rule.",
         "foods": [
           "fresh cheeses",
           "fruit salsas",
@@ -1198,7 +1198,7 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Blanco is the unaged legal class of tequila — and the highlands (Los Altos) around Atotonilco el Alto and Arandas read it very differently from the Tequila Valley. Red iron-rich mineral soils, higher elevation and cooler nights grow bigger, sweeter agave, so a highland blanco leans bright, fruity and floral where the valley leans earthy and savory. This is a cultural and agronomic distinction, not a legal class — both are simply tequila blanco, and alteños will tell you their red-earth fruitiness with real pride.",
+      "context": "Blanco is the unaged legal class of tequila — and the highlands (Los Altos) around Atotonilco el Alto and Arandas read it very differently from the Tequila Valley. Red iron-rich mineral soils, higher elevation and cooler nights tend to grow bigger, sweeter agave, so a highland blanco often leans bright, fruity and floral where the valley leans earthy and savory. This is a cultural and agronomic distinction, not a legal class — both are simply tequila blanco, and Los Altos takes visible pride in its red-earth fruitiness.",
       "description": "The highland take on unaged tequila: sweeter cooked agave with citrus (orange peel, grapefruit), tropical and stone fruit, delicate florals and a gentle spice, in a softer, rounder body than the valley style.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated; highland red mineral soils)",
       "plantId": "agave-tequilana",

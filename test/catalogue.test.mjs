@@ -99,7 +99,8 @@ test("reviewer impressions, producer facts and editorial synthesis stay distingu
   const entry = bottleEntry(cielo, { sources, profiles, locale: enLocale });
   container.appendChild(entry);
   assert.ok(entry.querySelector(".catalogue-facts").textContent.includes("Producer:"));
-  assert.ok(entry.querySelector(".bottle-review").textContent.includes("TEQUILA.net describes"), "review attributed");
+  assert.ok(entry.querySelector(".bottle-review").textContent.includes("Grassy, sweet agave"), "bottle-first description");
+  assert.ok(entry.querySelector(".bottle-basis").textContent.includes("review"), "basis line attributes the evidence");
   const note = entry.querySelector(".editorial-note").textContent;
   assert.ok(note.includes("editorial)"), "editorial note labeled as the app's synthesis");
   assert.ok(entry.textContent.includes("How it fits"), "note is profile-relative");
@@ -233,7 +234,8 @@ test("R25: catalogue entries render classification and plant composition facts",
   assert.ok(facts.includes("Classification:"), "classification fact rendered");
   assert.ok(facts.includes("Plant composition:"), "plant composition rendered");
   assert.ok(facts.includes("yaquiana"), "wild plant documented");
-  assert.ok(entry.querySelector(".bottle-review").textContent.includes("Mezcal Reviews"), "review attributed");
+  assert.ok(entry.querySelector(".bottle-review").textContent.includes("Warm agave with vanilla cake"), "bottle-first description");
+  assert.ok(entry.querySelector(".bottle-basis"), "basis line present");
   container.remove();
 });
 
@@ -366,7 +368,7 @@ test("producer-note tier: producer descriptions carry explicit attribution", asy
   // The owner-approved evidence tier: when no credible review exists, the
   // producer's own description may stand in, but never reads as independent.
   const ocho = bottles.find((b) => b.id === "tequila-ocho-extra-anejo");
-  assert.ok(ocho.reviewSummary.startsWith("No independent review"), "the review gap is stated up front");
+  assert.ok(ocho.reviewSummary.includes("No independent review"), "the review gap is stated");
   assert.ok(ocho.reviewSummary.includes("per the producer's own notes"), "producer attribution inline");
   assert.ok(ocho.sourceIds.includes("ochotequila-terroir"), "producer source cited");
   // Producer facts on the comiteco entries name the claim's owner.

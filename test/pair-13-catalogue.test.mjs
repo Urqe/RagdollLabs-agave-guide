@@ -91,7 +91,8 @@ test("pair 13: reviewer, producer and editorial voices stay distinguishable in s
   renderCatalogue(c, { bottles, profiles, sources: sourceList, locale: en });
   const cielo = bottles.find((b) => b.id === "cielo-rojo-bacanora-blanco");
   const entry = c.querySelector("#bottle-cielo-rojo-bacanora-blanco");
-  assert.ok(entry.querySelector(".bottle-review").textContent.includes("TEQUILA.net describes"), "review attributed");
+  assert.ok(entry.querySelector(".bottle-review").textContent.includes("Grassy, sweet agave"), "bottle-first description");
+  assert.ok(entry.querySelector(".bottle-basis"), "basis line attributes the evidence");
   // A factual-only entry gets no invented tasting summary.
   const balam = bottles.find((b) => b.id === "balam-raicilla-costa");
   const balamEntry = c.querySelector("#bottle-balam-raicilla-costa");

@@ -84,7 +84,7 @@ test("F4: profile view renders Spanish editorial content end to end", async () =
 
   assert.equal(root.querySelector("#profile-title").textContent, "Tequila blanco, estilo Valle de Tequila",
     "profile title is Spanish");
-  assert.ok(root.querySelector(".profile-context").textContent.includes("Pregúntale a cualquiera del valle"),
+  assert.ok(root.querySelector(".profile-context").textContent.includes("Las condiciones del valle"),
     "context is Spanish");
   assert.ok(root.querySelector(".profile-description").textContent.includes("blanco"),
     "description is Spanish");
@@ -231,11 +231,10 @@ test("the reported case: Patrón Añejo Cristalino card is Spanish end to end", 
   const root = document.createElement("div");
   renderProfile(root, { profile: cristalino, bottle: patron, sources: sourceList, allProfiles: profiles, allBottles: bottles, locale: es });
   const cardText = root.querySelector(".bottle-card").textContent;
-  assert.ok(cardText.includes("Tastings.com encuentra aromas y sabores redondos y cremosos"),
+  assert.ok(cardText.includes("Aromas y sabores redondos y cremosos"),
     "review summary is Spanish");
   assert.ok(!cardText.includes("round, creamy aromas"), "no English review text remains");
-  assert.ok(!/Reviewers|describes a|finds\b/.test(cardText) || cardText.includes("encuentra"),
-    "review prose is translated, reviewer names preserved");
+  assert.ok(cardText.includes("Resumen de cata según"), "the basis line carries the attribution");
 });
 
 test("English mode never shows Spanish content (locale gate regression)", async () => {

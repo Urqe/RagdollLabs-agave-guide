@@ -9,6 +9,23 @@ import { ui, sensoryOverview, dimensionLabel } from "./presentation.js";
 import { tasteNote } from "./taste-notes.js";
 import { editorialText, fieldEs, fieldEsAny, localizedTitle, sourceKindLabel } from "./editorial.js";
 
+/**
+ * Pair 16: compact provenance line under the profile's example-bottle
+ * description — the same evidence-kind summary the catalogue shows, so a
+ * reader knows whose impressions they are reading without opening the
+ * collapsed sources.
+ */
+function bottleBasisLine(sources, bottle, locale) {
+  const noteIds = (bottle.noteSourceIds && bottle.noteSourceIds.length ? bottle.noteSourceIds : null) || bottle.sourceIds || [];
+  const noteSources = (noteIds || []).map((id) => sources.find((s) => s.id === id)).filter(Boolean);
+  if (noteSources.length === 0) return null;
+  const kinds = [...new Set(noteSources.map((s) => s.kind))];
+  const count = noteSources.length;
+  const kindText = kinds.map((k) => sourceKindLabel(k, locale, ui)).join(" / ");
+  return el("p", { class: "bottle-basis" },
+    ui(locale, "basisPrefix").replace("{count}", count === 1 ? ui(locale, "basisOne") : count).replace("{kind}", kindText));
+}
+
 function sourceLinks(sources, sourceIds, locale = null) {
   const list = el("ul", { class: "source-list" });
   for (const id of sourceIds) {
@@ -38,6 +55,8 @@ function exampleBottleCard(bottle, sources, t, locale = null) {
   if (bottle.place) card.appendChild(el("p", { class: "bottle-place" }, bottle.place));
   if (bottle.composition) card.appendChild(el("p", { class: "bottle-composition editorial-note" }, `${ui(locale, "factComposition")}: ${L("composition", bottle.composition)}`));
   card.appendChild(el("p", { class: "bottle-review" }, L("reviewSummary", bottle.reviewSummary)));
+  const basis = bottleBasisLine(sources, bottle, locale);
+  if (basis) card.appendChild(basis);
   const linksLabel = el("p", { class: "bottle-links-label" }, t("profile.sourcesBottle"));
   card.appendChild(linksLabel);
   card.appendChild(collapsibleBottleSources(sources, bottle, t, locale));

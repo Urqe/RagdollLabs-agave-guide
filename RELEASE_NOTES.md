@@ -2619,3 +2619,103 @@ the corroborating regional study; retrieve the full passage before relying
 on it as final evidence); raicilla DO declaration and published standard
 project (a PROY-NOM, not a final effective NOM). No claim was kept merely
 because its linked source is reachable; conflicts remain visible in the data.
+
+## Post-roadmap pair 16 — Practical First Tasting (2026-10-23)
+
+Feature/UX release applying the plan's pair-16 tasks 1–7 and the section 4.4
+pair-16 additions (P16-C1…C5, P16-V1…V4, P16-B1…B6, P16-L1…L2). Automated
+checks: `npm run validate` passes (18 profiles, 46 bottles, 92 sources) and
+the full node:test suite passes — 312 tests including 13 new pair-16
+regressions in `test/pair-16-review.test.mjs`. Desktop DOM evidence only:
+native Safari, VoiceOver and physical-touch checks remain pair-17 work, and
+no native-device claim is made here.
+
+### Practical first tasting (P16-C1, C2; tasks 1, 2, 6)
+
+- "How to taste" now teaches a four-step practical sequence in the main
+  reading flow (never collapsed): prepare (a small clean glass, modest pour,
+  water alongside), smell gently (no plunging, no vigorous swirl), sip and
+  notice the texture (alcohol warmth vs flavor; body as mouthfeel), follow
+  the finish. Spitting is offered; nothing requires swallowing, finishing a
+  glass, buying or drinking.
+- The flavour-landmark lesson now distinguishes aroma, taste and texture,
+  states that not every agave spirit is smoky, and that vanilla/caramel
+  alone do not prove oak contact.
+- The repeated "no purchase/no glass/no account/no quiz" list is gone; one
+  plain statement ("a glass is never required") remains. The Choosing and
+  Enjoying chapter's technique paragraph now agrees with the lesson (the
+  old "swirl" instruction is corrected) and links to it.
+- Per-tradition serving guidance: the staged "Sonoran-style with lime and
+  sal de chapulín" custom, comiteco's "small-occasion spirit," the
+  categorical "tobalá's florals fade in cocktails" and the "Margarita
+  upgrade" hierarchy are replaced with conditional, reason-giving editorial
+  suggestions; unfamiliar terms (copita) are explained in plain language.
+  Salt, citrus, ice and accompaniments are framed as choices, not
+  admission requirements (P16-C4).
+
+### Chapter addressing and lesson-opened comparison (tasks 3, 4, 5)
+
+- Stable chapter deep links: `#/learn/chapter-<id>` (with `?from=` lesson
+  origin preserved); existing `#/learn/{terms,plants,processes}` routes
+  unchanged. The flavour-chapter example card now targets the exact
+  chapter instead of the bare Learn page.
+- A lesson-opened prepared comparison now renders its explanation and
+  results before the full profile picker; changing styles stays available
+  through a labelled secondary control ("Change the styles in this
+  comparison", EN/ES). The general-purpose comparison view is unchanged.
+  Comparison-selection safety, lesson return links and history behavior
+  are preserved (pinned by regressions).
+
+### Voice and translation (P16-V1–V4)
+
+- Staged local speech and invented quotations removed across all 18
+  profiles: "watch their chest," "ask anyone," "they will tell you,"
+  "nobody calls that a flaw," "salt in its soul," "birthright of their
+  hills," the bacanora ES "mira su pecho hincharse" and the espadín ES
+  "le llaman casa." Rewrites keep warm editorial narration grounded in
+  documented place, family-continuity and vinata/vinatero vocabulary
+  without posing as a local speaker.
+- Spanish recomposed for Mexican readers rather than translated metaphors
+  ("generaciones de las mismas manos" → craft passed between generations;
+  "el humo se abre" → natural serving language; "ocasiones pequeñas"
+  removed with its staged claim). The sotol ES context also drops the
+  pre-1994 nationwide-ban claim the English was already corrected for.
+- Regional reader validation remains explicitly pending (P16-V4): no
+  Mexican Spanish editor or regional reader review has occurred; shipped
+  Spanish is restrained and source-grounded, and the authenticity goal is
+  not claimed as proven.
+
+### Bottle-first descriptions (P16-B1–B6)
+
+- All 42 reviewed bottle summaries (EN+ES) rewritten to open with the
+  expression's character rather than the reviewer's identity. Attribution
+  moves to a compact basis line under the description ("Tasting summary
+  based on N review/producer source(s) — details under Sources", EN/ES),
+  derived from the existing source data; producer-only evidence stays
+  labelled, the Ocho producer-note gap stays stated up front, and the
+  single unreviewed bottle (Balam) keeps its honest no-note disclosure.
+- Sensory statements were checked against their existing sources; no new
+  texture, consensus or production claims were added. Illustrative
+  before/after shapes follow the plan's example structure.
+
+### Label walkthrough (P16-C5)
+
+- A new Understanding Labels block walks through an explicitly invented
+  illustrative label: spirit name, class, agave/composition, % Alc. Vol.,
+  producer/origin (NOM), lot — and what those fields cannot tell you
+  about taste. Spanish parity included; ES chapter block keys renumbered.
+
+### Flags (P16-L1, L2)
+
+- The EN/ES toggle is now two clearly identified editions: UK Union Flag +
+  "English" / Mexican flag + "Español (México)", with language-name
+  accessible labels (flag decorative, text fallback if the flag fails to
+  render), `document.documentElement.lang` set to `es-MX` for the Mexican
+  Spanish edition, saved preference, page state and focus behavior
+  preserved on switch. The UK flag represents the chosen edition only; no
+  reviewed British English localisation is implied.
+
+### Known limitations / next
+
+- Native Safari/VoiceOver/touch and live deployed verification remain
+  pair-17 work (mandatory maintenance follow-up).

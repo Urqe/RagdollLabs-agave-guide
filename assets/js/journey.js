@@ -31,8 +31,45 @@ export const JOURNEY_STEPS = [
     id: "how-to-taste",
     title: { en: "How to taste", es: "Cómo catar" },
     idea: {
-      en: "You do not need a glass to learn: this guide describes styles, so reading one profile and its character levels teaches the vocabulary. When you do taste, go neat, in a small pour, and notice the body and the finish before naming any note.",
-      es: "No necesitas una copa para aprender: esta guía describe estilos, así que leer un perfil y sus niveles de carácter enseña el vocabulario. Cuando pruebes, sírvelo solo — sin hielo ni mezcladores — en una porción pequeña, y nota el cuerpo y el final antes de nombrar cualquier nota.",
+      en: "Reading one profile and its character levels teaches the vocabulary on its own — no glass needed. When you do have a glass, the sequence is short: gently smell, take a small sip, notice the mouthfeel, then follow the finish.",
+      es: "Leer un perfil y sus niveles de carácter enseña el vocabulario por sí solo — no hace falta copa. Cuando tengas una, la secuencia es corta: huele con suavidad, toma un sorbo pequeño, nota la sensación en la boca y sigue el final.",
+    },
+    practice: {
+      title: { en: "A first tasting, step by step", es: "Una primera cata, paso a paso" },
+      steps: [
+        {
+          heading: { en: "Prepare", es: "Prepara" },
+          text: {
+            en: "A small, clean glass is enough — no special stemware. A modest pour, neat, with water alongside; a few drops of water or an ice cube are a choice, not a requirement, and they soften the alcohol warmth without taking it away.",
+            es: "Basta una copa pequeña y limpia — no hace falta cristal especial. Una porción modesta, sola, con agua al lado; unas gotas de agua o un cubo de hielo son una elección, no un requisito, y suavizan el calor del alcohol sin eliminarlo.",
+          },
+        },
+        {
+          heading: { en: "Smell, gently", es: "Huele, con suavidad" },
+          text: {
+            en: "Bring the glass to your nose without plunging in, and skip the vigorous wine-style swirl — a short, calm sniff is enough. Aroma is what the nose alone picks up: citrus, herbs, smoke, even a peppery tingle.",
+            es: "Acerca la copa a la nariz sin hundirla y olvida el giro enérgico al estilo del vino — una inhalación corta y tranquila basta. El aroma es lo que percibes solo con la nariz: cítricos, hierbas, humo, incluso un cosquilleo de pimienta.",
+          },
+        },
+        {
+          heading: { en: "Sip and notice the texture", es: "Sorbe y nota la textura" },
+          text: {
+            en: "Take a small sip and let it sit a moment. Alcohol warmth in the throat is one thing; peppery or herbal flavors are another. Then ask about the body — light like water, or full and coating? Taste and texture are different questions: a spirit can taste fruity and still feel lean.",
+            es: "Toma un sorbo pequeño y déjalo un momento. El calor del alcohol en la garganta es una cosa; los sabores picantes o herbales son otra. Después pregunta por el cuerpo — ¿ligero como el agua, o pleno y envolvente? Sabor y textura son preguntas distintas: un destilado puede saber a fruta y aun así sentirse ligero.",
+          },
+        },
+        {
+          heading: { en: "Follow the finish", es: "Sigue el final" },
+          text: {
+            en: "After you swallow — or spit; nothing here requires swallowing or finishing the glass — notice how long the flavor stays: a few seconds or a slow, fading minute. That duration is the finish.",
+            es: "Después de tragar — o escupir; nada aquí exige tragar ni acabar la copa — nota cuánto permanece el sabor: unos segundos o un minuto que se apaga despacio. Esa duración es el final.",
+          },
+        },
+      ],
+      closing: {
+        en: "This sequence is enough for a first tasting, and no part of it is a test. The Choosing and Enjoying chapter goes deeper.",
+        es: "Esta secuencia basta para una primera cata, y nada de esto es un examen. El capítulo Elegir y disfrutar va más a fondo.",
+      },
     },
     examples: [
       { profileId: "tequila-blanco-valley-jalisco", reason: { en: "Read the character levels of one style first — the labels mean the same thing everywhere in the guide.", es: "Lee primero los niveles de carácter de un estilo — las etiquetas significan lo mismo en toda la guía." } },
@@ -43,8 +80,8 @@ export const JOURNEY_STEPS = [
     id: "recognise-the-notes",
     title: { en: "Recognise agave, smoke, body and oak", es: "Reconoce el agave, el humo, el cuerpo y el roble" },
     idea: {
-      en: "Four landmarks cover most of what you will taste. Cooked agave reads savory and vegetal; smoke comes from the pit roast, not from peat; body is how the spirit feels in the mouth; oak — vanilla, caramel, spice — only arrives when the spirit rests in wood. Sweetness here means perceived sweetness, never measured sugar.",
-      es: "Cuatro puntos de referencia cubren la mayor parte de lo que probarás. El agave cocido se lee sabroso y vegetal; el humo viene del asado en pozo, no de la turba; el cuerpo es cómo se siente el destilado en la boca; el roble — vainilla, caramelo, especia — solo llega cuando el destilado reposa en madera. La dulzura aquí significa dulzura percibida, nunca azúcar medido.",
+      en: "Four landmarks cover most of what you will meet. Cooked agave reads savory and vegetal; smoke usually comes from the pit roast, not from peat — and not every agave spirit is smoky. Body is how the spirit feels in the mouth. Oak notes only arrive when the spirit actually rests in wood — though vanilla or caramel alone do not prove that it did. Sweetness here means perceived sweetness, never measured sugar.",
+      es: "Cuatro puntos de referencia cubren la mayor parte de lo que encontrarás. El agave cocido se percibe sabroso y vegetal; el humo suele venir del asado en pozo, no de la turba — y no todo destilado de agave es ahumado. El cuerpo es cómo se siente el destilado en la boca. Las notas de roble solo llegan cuando el destilado reposa de verdad en madera — aunque vainilla o caramelo por sí solos no lo prueban. La dulzura aquí significa dulzura percibida, nunca azúcar medido.",
     },
     examples: [
       { profileId: "mezcal-espadin-valles-centrales", reason: { en: "Gentle smoke from the pit roast — compare its smoke level with a tequila blanco's none.", es: "Humo suave del asado en pozo — compara su nivel de humo con el «ninguno» de un tequila blanco." } },
@@ -70,8 +107,8 @@ export const JOURNEY_STEPS = [
     id: "explore-next",
     title: { en: "Choose what to explore next", es: "Elige qué explorar después" },
     idea: {
-      en: "That is the whole foundation: a style, four landmarks and one comparison. From here you can browse the styles, follow a flavor, look up a bottle you liked, or keep reading the reference chapters — no purchase or tasting required to go further.",
-      es: "Ese es todo el fundamento: un estilo, cuatro puntos de referencia y una comparación. Desde aquí puedes explorar los estilos, seguir un sabor, buscar una botella que te gustó, o seguir leyendo los capítulos de referencia — no se requiere compra ni cata para avanzar.",
+      en: "That is the whole foundation: a style, a tasting sequence, four landmarks and one comparison. From here you can browse the styles, follow a flavor, look up a bottle you liked, or keep reading the reference chapters.",
+      es: "Ese es todo el fundamento: un estilo, una secuencia de cata, cuatro puntos de referencia y una comparación. Desde aquí puedes explorar los estilos, seguir un sabor, buscar una botella que te gustó, o seguir leyendo los capítulos de referencia.",
     },
     destinations: [
       { href: "#/explore", label: { en: "Browse the styles", es: "Explora los estilos" }, reason: { en: "Every profile in the guide, searchable.", es: "Todos los perfiles de la guía, con búsqueda." } },
@@ -89,10 +126,10 @@ export function journeyStepById(id) {
 const STRINGS = {
   en: {
     hubTitle: "Your first agave spirit",
-    hubIntro: "New to agave? In five short steps you will recognize a few useful flavor differences and understand your first comparison — reading only, no purchase, no glass, no account, no quiz.",
+    hubIntro: "New to agave? In five short steps you will learn a usable tasting sequence, recognize a few flavor landmarks and understand your first comparison — reading along works too; a glass is never required.",
     stepsLabel: "The steps",
     outcomeLabel: "What you will get out of it",
-    outcomes: "Recognize four landmarks — cooked agave, smoke, body and oak — and read one prepared comparison that shows what wood resting changes.",
+    outcomes: "Describe a basic tasting sequence — smell, sip, mouthfeel, finish — recognize four flavor landmarks and read one prepared comparison that shows what wood resting changes.",
     referenceLabel: "Prefer the reference material?",
     referenceLink: "Go straight to the Learn chapters",
     lessonBack: "← Back to the journey start",
@@ -110,10 +147,10 @@ const STRINGS = {
   },
   es: {
     hubTitle: "Tu primer destilado de agave",
-    hubIntro: "¿Nuevo en el agave? En cinco pasos cortos reconocerás algunas diferencias de sabor útiles y entenderás tu primera comparación — solo lectura, sin compra, sin copa, sin cuenta, sin examen.",
+    hubIntro: "¿Nuevo en el agave? En cinco pasos cortos aprenderás una secuencia de cata útil, reconocerás algunos rasgos de sabor y entenderás tu primera comparación — leer también funciona; nunca hace falta una copa.",
     stepsLabel: "Los pasos",
     outcomeLabel: "Qué te llevarás",
-    outcomes: "Reconocerás cuatro puntos de referencia — agave cocido, humo, cuerpo y roble — y leerás una comparación preparada que muestra lo que cambia el reposo en madera.",
+    outcomes: "Describirás una secuencia de cata básica — olfato, sorbo, textura, final —, reconocerás cuatro rasgos de sabor y leerás una comparación preparada que muestra lo que cambia el reposo en madera.",
     referenceLabel: "¿Prefieres el material de referencia?",
     referenceLink: "Ve directo a los capítulos de Aprende",
     lessonBack: "← Volver al inicio del recorrido",
@@ -167,8 +204,10 @@ function exampleCard({ profileId, chapterId, reason }, { profiles, chapters = []
     const chapterTitle = chapter
       ? (fieldEs("chapter", chapter.id, "title", locale) || chapter.title)
       : ui(locale, "learn.heading");
+    // Pair 16: the example links to the exact chapter, not the bare Learn
+    // page, keeping the originating lesson in the return context.
     const link = el("a", {
-      href: `#/learn?from=${encodeURIComponent("start:" + lessonId)}`,
+      href: `#/learn/chapter-${encodeURIComponent(chapterId)}?from=${encodeURIComponent("start:" + lessonId)}`,
       class: "discovery-card",
     });
     link.appendChild(el("span", { class: "eyebrow" }, jt(locale, "exampleFrom")));
@@ -238,6 +277,26 @@ export function renderLesson(container, { lessonId, profiles, chapters = [], loc
   const index = JOURNEY_STEPS.indexOf(step);
   section.appendChild(el("h2", { id: "start-heading" }, `${index + 1}. ${stepTitle(step, locale)}`));
   section.appendChild(el("p", { class: "view-intro lesson-idea" }, step.idea[lang] || step.idea.en));
+
+  // Pair 16: the practical tasting sequence stays in the main reading flow —
+  // never buried in a collapsed deeper paragraph.
+  if (step.practice) {
+    const practice = el("div", { class: "lesson-practice", role: "group", "aria-labelledby": "lesson-practice-heading" });
+    practice.appendChild(el("h3", { id: "lesson-practice-heading", class: "sources-heading" }, step.practice.title[lang] || step.practice.title.en));
+    const list = el("ol", { class: "lesson-practice-list" });
+    for (const item of step.practice.steps || []) {
+      const li = el("li", { class: "lesson-practice-step" });
+      li.appendChild(el("strong", { class: "lesson-practice-heading" }, item.heading[lang] || item.heading.en));
+      li.appendChild(el("p", {}, item.text[lang] || item.text.en));
+      list.appendChild(li);
+    }
+    practice.appendChild(list);
+    if (step.practice.closing) {
+      practice.appendChild(el("p", { class: "editorial-note" }, step.practice.closing[lang] || step.practice.closing.en));
+    }
+    section.appendChild(practice);
+  }
+
   section.appendChild(stepList(step.id, locale));
 
   const examples = step.examples || [];

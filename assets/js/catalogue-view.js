@@ -5,6 +5,26 @@ import { SPIRIT_LABELS } from "./spirit-labels.js";
 import { ui } from "./presentation.js";
 import { sourceKindLabel, fieldEs } from "./editorial.js";
 
+/**
+ * Pair 16: compact provenance line directly under the bottle-first
+ * description. It names the kind of evidence behind the character (an
+ * independent review, the producer's own notes, or importer notes) and
+ * how many, without making the reader open the sources disclosure to know
+ * whose impressions they are reading.
+ */
+function basisLine(sources, bottle, t, locale) {
+  const noteIds = (bottle.noteSourceIds && bottle.noteSourceIds.length ? bottle.noteSourceIds : null) || bottle.sourceIds || [];
+  const noteSources = (noteIds || []).map((id) => sources.find((s) => s.id === id)).filter(Boolean);
+  if (noteSources.length === 0) return null;
+  const kinds = [...new Set(noteSources.map((s) => s.kind))];
+  const count = noteSources.length;
+  const kindText = kinds.map((k) => sourceKindLabel(k, locale, ui)).join(" / ");
+  const p = el("p", { class: "bottle-basis" });
+  p.appendChild(el("span", { class: "bottle-basis-text" },
+    ui(locale, "basisPrefix").replace("{count}", count === 1 ? ui(locale, "basisOne") : count).replace("{kind}", kindText)));
+  return p;
+}
+
 const COVERAGE_LABELS = {
   "tasting-not-documented": "Tasting notes not yet documented",
   "profile-not-covered": "Profile not yet covered",
@@ -91,6 +111,8 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
   // Reviewer impressions (attributed).
   if (bottle.reviewSummary) {
     article.appendChild(el("p", { class: "bottle-review" }, L("reviewSummary", bottle.reviewSummary)));
+    const basis = basisLine(sources, bottle, t, locale);
+    if (basis) article.appendChild(basis);
   }
 
   // The app's synthesis, explicitly profile-relative and sourced. An
@@ -179,6 +201,8 @@ function bottleSummary(bottle, { sources, profiles = [], locale = null } = {}) {
 
   if (bottle.reviewSummary) {
     article.appendChild(el("p", { class: "bottle-review" }, L("reviewSummary", bottle.reviewSummary)));
+    const basis = basisLine(sources, bottle, t, locale);
+    if (basis) article.appendChild(basis);
   } else if (!uncovered) {
     article.appendChild(el("p", { class: "editorial-note" }, ui(locale, "noReviewYet")));
   }

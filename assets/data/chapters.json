@@ -153,6 +153,14 @@
           ]
         },
         {
+          "text": "An illustrative label walkthrough — invented for teaching, not a real bottle: (1) Spirit name: “Mezcal” — the protected category; “Mezcal Artesanal” would add the production category. (2) Class: “Joven” — unaged here; the same word can mean a blend in tequila, so read each tradition's classes. (3) Agave/composition: “100% Agave espadín” or “Agave sap and cane sugars” (comiteco) — what was fermented; a composition fact, not a quality grade. (4) % Alc. Vol.: strength, not smoothness. (5) Producer/origin: the NOM number identifies the certified producer; the place named is where it was made. (6) Lot (lote): the batch identity for a small producer. These fields tell you what the bottle is and where it came from; they cannot tell you what it tastes like — for that, this guide pairs each bottle with an attributed review where one exists, and says so where one does not.",
+          "termIds": [
+            "NOM",
+            "lote / batch",
+            "100% de agave"
+          ]
+        },
+        {
           "text": "Composition claims are facts about fermentables, not quality grades. 100% de agave describes what was fermented; comiteco with disclosed cane sugar is equally honest about what it is. Composition disclosure is required reading on every bottle.",
           "termIds": [
             "100% de agave"
@@ -187,7 +195,7 @@
           ]
         },
         {
-          "text": "Serving is simple: a small glass at room temperature lets aromatics open; a splash of water can soften high ABV. Cocktails are not a compromise — a margarita or paloma is a legitimate way to meet a blanco. Pairings on each profile are editorial suggestions, never rules.",
+          "text": "Serving is simple: a small glass at room temperature lets aromatics open; a splash of water can soften high ABV. Neat, on the rocks and mixed are all legitimate ways to meet these spirits — a margarita or paloma is a real way into a blanco, not a compromise. Salt, citrus (lima, not always limón), ice and accompaniments are choices rather than admission requirements; regional customs vary and none of them is a rule. Pairings on each profile are editorial suggestions, never rules.",
           "exampleProfileIds": [
             "bacanora-pacifica-sierra-sonora",
             "raicilla-costa-jalisco"
@@ -195,7 +203,7 @@
         },
         {
           "text": "Beware marketing ladders: older is not automatically better, higher ABV is not automatically better, and rarity is not a flavor. A $30 blanco from a good producer can outshine a trophy bottle. The guide profiles styles, not trophies.",
-          "deeper": "Tasting technique: look, swirl, nose gently, sip, and note the finish. Compare two similar profiles side by side — the compare view exists precisely for this."
+          "deeper": "Tasting technique, briefly: a small clean glass, a gentle sniff without plunging the nose in or swirling hard, a small sip, notice the mouthfeel, then follow the finish. Water — alongside or a few drops in — is a choice that softens alcohol warmth; it does not make the drink alcohol-free. The How to taste lesson in the five-step journey walks this sequence step by step, and the compare view exists precisely for tasting two similar styles side by side."
         }
       ]
     },
