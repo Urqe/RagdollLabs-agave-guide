@@ -170,13 +170,16 @@
         "skurnik-estancia"
       ],
       "traditionIds": [
-        "destilado-de-pulque"
+        "destilado-de-pulque",
+        "mezcal"
       ],
       "regionIds": [
-        "tlaxcala-central"
+        "tlaxcala-central",
+        "altiplano-potosino"
       ],
       "profileIds": [
-        "destilado-de-pulque-salmiana-tlaxcala"
+        "destilado-de-pulque-salmiana-tlaxcala",
+        "mezcal-verde-altiplano-slp"
       ],
       "atAGlance": "Maguey pulquero, the sap agave of the pulque heartland; the base of destilado de pulque.",
       "whereItGrows": "Cultivated in Tlaxcala and the central-Mexico pulque highlands.",
@@ -324,6 +327,71 @@
       "harvestProduction": "Wild and cultivated; underground pit roast, wild-yeast fermentation, small-batch distillation.",
       "sensoryTendencies": "Editorial guidance: contributes to Costa raicilla's profile alongside chico aguiar; common names for coastal Jalisco agaves vary by locality and taberna.",
       "sustainability": "Mixed wild/cultivated; regional names are preserved without resolving species debates."
+    },
+    {
+      "id": "agave-cupreata",
+      "species": "Agave cupreata",
+      "commonNames": [
+        {
+          "name": "papalote",
+          "region": "Guerrero and Michoacán mountains"
+        },
+        {
+          "name": "papalometl",
+          "region": "Guerrero (Nahuatl-derived)"
+        }
+      ],
+      "cultivation": "wild-harvested and cultivated; the wild-harvest end carries the sustainability pressure",
+      "atAGlance": "The papalote agave of Guerrero's mountain mezcal — a wide, frost-toned agave that gives the state's mezcal its fruity, buttery signature.",
+      "whereItGrows": "Mountain slopes of Guerrero and adjacent Michoacán (Balsas river basin), often at elevation on thin soils.",
+      "harvestProduction": "Piña traditions: harvested at maturity (variable, source-dependent maturity years), pit-roasted, fermented and distilled as mezcal.",
+      "sensoryTendencies": "Editorial guidance: cupreata mezcals often read fruitier and more buttery than espadín, with mint, green pepper and tropical-fruit notes; smoke varies with the producer's roast.",
+      "sustainability": "Wild cupreata populations carry harvest pressure as Guerrero mezcal grows; some producers cultivate or reforest. The cited CONAFOR/INIFAP-style regional management literature is the evidence base for plant-level claims.",
+      "uncertainty": "Papalote/papalometl names appear in both Guerrero and Michoacán and may cover more than one cupreata-like taxon; the app keeps the names regional without resolving the species debate.",
+      "traditionIds": [
+        "mezcal"
+      ],
+      "profileIds": [
+        "mezcal-papalote-montana-guerrero"
+      ],
+      "regionIds": [
+        "montana-guerrero"
+      ],
+      "sourceIds": [
+        "sic-cultura-guerrero",
+        "mezcalreviews-legendario-domingo-cupreata"
+      ]
+    },
+    {
+      "id": "agave-durangensis",
+      "species": "Agave durangensis",
+      "commonNames": [
+        {
+          "name": "cenizo",
+          "region": "Durango (“ash-colored”, for the leaf tone)"
+        }
+      ],
+      "cultivation": "mostly wild-harvested; nursery and reforestation programs exist as demand grows",
+      "atAGlance": "Cenizo, the signature agave of Durango's mezcal — the plant that gives the northern state's mezcals their fruity, often creamy character.",
+      "whereItGrows": "Durango's sierra and canyon country, often among pines at elevation; the northern edge of the mezcal denomination.",
+      "harvestProduction": "Piña traditions: harvested at maturity, pit-roasted, mashed (axe and desgarradora in traditional vinatas), fermented and distilled as mezcal.",
+      "sensoryTendencies": "Editorial guidance: cenizo mezcals often read fruit-forward and creamy, with candy, tropical-fruit and lactic notes; heat and rustic funk vary by batch.",
+      "sustainability": "Wild cenizo harvest pressure grows with Durango's rising output; nursery propagation is documented in the regional research literature.",
+      "uncertainty": null,
+      "traditionIds": [
+        "mezcal"
+      ],
+      "profileIds": [
+        "mezcal-cenizo-sierra-durango"
+      ],
+      "regionIds": [
+        "sierra-el-mezquital-dgo"
+      ],
+      "sourceIds": [
+        "inifap-agave-reproduccion",
+        "mezcalistas-cenizo-tasting",
+        "sevenfifty-durango-mezcal"
+      ]
     }
   ]
 }

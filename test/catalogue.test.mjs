@@ -358,13 +358,18 @@ test("bottle-depth increment: single-example profiles gain documented second bot
   // destilado-con pechuga no longer map onto the wild-Sierra tobalá and
   // plain joven espadín profiles — their region/production context does
   // not match those styles, so both profiles are single-example again.
+  // Pair 19: the three new regional profiles ship with exactly one example
+  // bottle each, by design of the Beyond Oaxaca I batch.
   const singles = profiles.filter((p) => bottles.filter((b) => b.profileId === p.id).length === 1).map((p) => p.id);
   assert.deepEqual(singles.sort(), [
     "comiteco-aguamiel-chiapas",
     "comiteco-anejo-comitan-chiapas",
+    "mezcal-cenizo-sierra-durango",
     "mezcal-espadin-valles-centrales",
+    "mezcal-papalote-montana-guerrero",
     "mezcal-reposado-espadin-oaxaca",
     "mezcal-tobala-sierra-oaxaca",
+    "mezcal-verde-altiplano-slp",
     "raicilla-reposado-jalisco",
     "sotol-chihuahua",
   ].sort(), `unexpected single-example profiles: ${singles.join(", ")}`);

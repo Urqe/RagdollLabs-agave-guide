@@ -2894,3 +2894,55 @@ unrelated non-agave spirits (charanda, pox and cane-only aguardientes stay
 out of catalogue, profiles and comparison). The current execution pointer
 now moves to post-roadmap pair 19 — Beyond Oaxaca I — when the owner
 requests it.
+
+## Post-roadmap pair 19 — Beyond Oaxaca I (2026-10-23)
+
+Feature/content release applying section 4.5's pair-19 scope: three bounded
+profiles for Guerrero, Durango and San Luis Potosí, each with one
+expression-matched example bottle. Automated checks: `npm run validate`
+passes (21 profiles, 49 bottles, 103 sources) and the full node:test suite
+passes — 383 tests, including 9 new pair-19 regressions in
+`test/pair-19-beyond-oaxaca.test.mjs`.
+
+### What shipped
+
+- **Guerrero — mezcal-papalote-montana-guerrero:** cupreata/papalote
+  context (the kite-named agave of the Guerrero mountains, its name's need
+  for geographic context), example bottle Legendario Domingo Cupreata
+  (Alcaraz family, Apango) with its Mezcal Reviews tasting evidence.
+- **Durango — mezcal-cenizo-sierra-durango:** cenizo/Agave durangensis
+  context through a specific maker (Federico Cruz and his Tepehuán family,
+  El Mezquital; vinata as the Durango word), example bottle Lamata Cenizo
+  with its Mezcal Reviews tasting evidence.
+- **San Luis Potosí — mezcal-verde-altiplano-slp:** salmiana/maguey verde
+  context (the plateau's cooked-piña tradition, distinguished from the
+  pulque sap harvest of the same species), example bottle Mezcal de
+  Leyendas (maestro Juan José Hernández, Santa Isabel hacienda) with its
+  Mezcal Reviews tasting evidence.
+- Two new plants (agave-cupreata with its papalote/papalometl naming
+  uncertainty, agave-durangensis), the salmiana plant extended to the
+  mezcal tradition, three new regions with "app coverage, not a legal
+  boundary" distinctions, 11 new sources, and complete EN/ES mirrors of
+  every authored field (verified rendering with zero untranslated-field
+  disclosures).
+- Search now indexes profile aliases, so papalote, papalometl, cenizo,
+  durangensis, maguey verde and mezcal potosino all find their profiles.
+
+### Honest evidence notes
+
+- The Leyendas SLP cooking method is disputed between the producer's
+  clay-oven description and a local reviewer's autoclave report; the
+  disagreement is recorded in the profile context, the bottle record and
+  the ES mirror — not settled. The smoke claim stays anchored to the
+  cited reviews, not to either oven claim.
+- The Leyendas reviews range from praise to harsh; the profile presents
+  that range as the genuine state of the evidence.
+- Sensory text for all three bottles was written only after fetching and
+  verifying the exact expression's review page.
+
+### Still unverified — no claim made
+
+- Live deployed-Pages rendering, native iPhone/iPad Safari, VoiceOver,
+  physical touch, and regional-reader validation of the new Spanish prose
+  (Guerrero, Durango and SLP voices) remain unverified. jsdom evidence
+  only.

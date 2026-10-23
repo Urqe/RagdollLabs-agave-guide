@@ -95,6 +95,7 @@ function profileSearchTerms(profile) {
     profile.process || "",
     profile.category || "",
     ...(profile.tasteNotes || []),
+    ...(profile.aliases || []),
     profile.context || "",
   ];
 }

@@ -55,6 +55,8 @@ export const ES_NOTES = {
   "sweet agave": "agave dulce",
   "sweet cooked agave": "agave cocido dulce",
   "gentle spice": "especias suaves",
+  "buttery sweetness": "dulzor mantecoso",
+  "pepper": "pimienta",
   "sweet citrus": "cítricos dulces",
   "sweet corn": "maíz dulce",
   "tropical fruit": "fruta tropical",

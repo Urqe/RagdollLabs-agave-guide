@@ -643,6 +643,83 @@
       "url": "https://bacanora.sonora.gob.mx/nosotros/historia",
       "kind": "style",
       "verified": "2026-10-23"
+    },
+    {
+      "id": "mezcalreviews-legendario-domingo-cupreata",
+      "kind": "review",
+      "title": "Mezcal Reviews — Legendario Domingo Guerrero Cupreata (Alcaraz family, Apango)",
+      "url": "https://www.mezcalreviews.com/mezcal/legendario-domingo-cupreata/",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "domingomezcal-brand",
+      "kind": "producer",
+      "title": "Legendario Domingo Mezcal — brand site",
+      "url": "https://domingomezcal.com/",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "mezcalreviews-lamata-cenizo",
+      "kind": "review",
+      "title": "Mezcal Reviews — Lamata Cenizo Durango (Federico Cruz and family, El Mezquital)",
+      "url": "https://www.mezcalreviews.com/mezcal/lamata-cenizo-durango/",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "lamata-brand",
+      "kind": "producer",
+      "title": "Lamata Spirits — brand site (Nacion de Las Verdes Matas)",
+      "url": "https://lamataspirits.com/",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "mezcalistas-cenizo-tasting",
+      "kind": "style",
+      "title": "Mezcalistas — DIY terroir tasting: Cenizo from Durango",
+      "url": "https://www.mezcalistas.com/diy-terroir-tasting-cenizo-from-durango/",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "mezcalreviews-leyendas-slp",
+      "kind": "review",
+      "title": "Mezcal Reviews — Leyendas Verde, San Luis Potosí (Juan José Hernández, Santa Isabel)",
+      "url": "https://www.mezcalreviews.com/mezcal/leyenda-san-luis-potosi/",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "mezcalesdeleyenda-slp",
+      "kind": "producer",
+      "title": "Mezcales de Leyenda — San Luis Potosí (maguey verde / Agave salmiana)",
+      "url": "https://www.mezcalesdeleyenda.com/product/san-luis-potosi/",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "sevenfifty-durango-mezcal",
+      "kind": "style",
+      "title": "SevenFifty Daily — Exploring Mezcal's Next Wave (Durango cenizo, vinata tradition)",
+      "url": "https://daily.sevenfifty.com/exploring-mezcals-next-wave/",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "sic-cultura-guerrero",
+      "kind": "style",
+      "title": "Secretaría de Cultura — Guerrero regional gastronomy record (mezcal and papalote context)",
+      "url": "https://sic.cultura.gob.mx/ficha.php?table=gastronomia&table_id=50",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "inifap-agave-reproduccion",
+      "kind": "style",
+      "title": "INIFAP — Sustentabilidad del agave comercial por medio de su reproducción (cenizo/Durango context)",
+      "url": "https://www.gob.mx/inifap/articulos/sustentabilidad-del-agave-comercial-por-medio-de-su-reproduccion",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "conafor-salmiana-slp",
+      "kind": "style",
+      "title": "CONAFOR — Manejo y ecuaciones alométricas de Agave salmiana en San Luis Potosí",
+      "url": "https://www.gob.mx/conafor/documentos/manual-mejores-practicas-de-manejo-y-ecuaciones-alometricas-de-biomasa-de-agave-salmiana-sen-el-estado-de-slp",
+      "verified": "2026-10-23"
     }
   ]
 }

@@ -1148,6 +1148,78 @@
       "tastingSourceIds": [
         "wineenthusiast-casa-dragones-joven"
       ]
+    },
+    {
+      "id": "legendario-domingo-cupreata",
+      "brand": "Legendario Domingo",
+      "expression": "Cupreata",
+      "abv": 47,
+      "reviewSummary": "A classic papalote pour per its reviewers: a fruit-salad nose (grape, apple, banana) with mint and green pepper, a juicy, easy-going palate, and a warm finish with vanilla sweetness; some batches run hot. Made by the Alcaraz family in Apango.",
+      "producer": "Legendario Domingo (Alcaraz family, maestros mezcaleros), Apango, Guerrero",
+      "place": "Apango, Guerrero",
+      "spirit": "mezcal",
+      "traditionId": "mezcal",
+      "profileId": "mezcal-papalote-montana-guerrero",
+      "regionIds": [
+        "montana-guerrero"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-legendario-domingo-cupreata"
+      ],
+      "sourceIds": [
+        "mezcalreviews-legendario-domingo-cupreata",
+        "domingomezcal-brand",
+        "sic-cultura-guerrero"
+      ],
+      "batch": "Batch and ABV vary by lot (cited member reviews list 47% and 50% lots); check your bottle"
+    },
+    {
+      "id": "lamata-cenizo-durango",
+      "brand": "Lamata",
+      "expression": "Cenizo (Durango)",
+      "abv": 50,
+      "reviewSummary": "Watermelon and berry candy, bubblegum and citrus over a light roast, with a lactic, cheesy edge and real heat that varies by lot — reviewers call it vibrant, fruit-forward and well balanced. Produced by Federico Cruz and his Tepehuán family in El Mezquital.",
+      "producer": "Federico Cruz and family (Tepehuán vinateros), El Mezquital, Durango; brand by Lamata (Nacion de Las Verdes Matas)",
+      "place": "El Mezquital, Durango",
+      "spirit": "mezcal",
+      "traditionId": "mezcal",
+      "profileId": "mezcal-cenizo-sierra-durango",
+      "regionIds": [
+        "sierra-el-mezquital-dgo"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-lamata-cenizo"
+      ],
+      "sourceIds": [
+        "mezcalreviews-lamata-cenizo",
+        "lamata-brand",
+        "inifap-agave-reproduccion"
+      ],
+      "batch": "Small lots from ~40 to 200 liters; ABV varies by lot (cited member reviews list 49.2–54% batches); originally released as Amormata"
+    },
+    {
+      "id": "leyendas-san-luis-potosi",
+      "brand": "Mezcal de Leyendas",
+      "expression": "San Luis Potosí (maguey verde)",
+      "abv": 42,
+      "reviewSummary": "Green and vegetal per its reviewers: jalapeño and green pepper, grass, lemon and elderflower, with little to no smoke; impressions range from 'a soft, pretty example of the region' to harsh. Made by maestro Juan José Hernández at the Santa Isabel hacienda.",
+      "producer": "Mezcal de Leyendas (maestro mezcalero Juan José Hernández), Santa Isabel, San Luis Potosí",
+      "place": "Santa Isabel, San Luis Potosí",
+      "spirit": "mezcal",
+      "traditionId": "mezcal",
+      "profileId": "mezcal-verde-altiplano-slp",
+      "regionIds": [
+        "altiplano-potosino"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-leyendas-slp"
+      ],
+      "sourceIds": [
+        "mezcalreviews-leyendas-slp",
+        "mezcalesdeleyenda-slp",
+        "conafor-salmiana-slp"
+      ],
+      "batch": "Lots vary (cited reviews cover 42–45% bottlings); the cooking method is disputed between the producer's clay-oven description and a local reviewer's autoclave report — recorded, not settled"
     }
   ]
 }

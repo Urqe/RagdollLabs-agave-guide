@@ -1281,6 +1281,219 @@
         "agave-tequilana"
       ],
       "whyItTastes": "Los Altos agave grows at higher elevation in red iron-rich soils with cooler nights, and growers say those conditions produce bigger, sweeter piñas — so the unaged spirit leans fruity, floral and citrus-bright rather than earthy. Note the honest caveat: one blind tasting panel found the regional pattern weaker than folklore suggests, so treat this as a tendency, never a guarantee."
+    },
+    {
+      "id": "mezcal-papalote-montana-guerrero",
+      "title": "Papalote mezcal, Guerrero mountain style (cupreata)",
+      "spirit": "mezcal",
+      "traditionId": "mezcal",
+      "stateId": "gro",
+      "stateName": "Guerrero",
+      "regionIds": [
+        "montana-guerrero"
+      ],
+      "plantIds": [
+        "agave-cupreata"
+      ],
+      "plantId": "agave-cupreata",
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "body": "medium",
+      "context": "Guerrero is one of Mexico's great mezcal states, and in its mountains the name of the plant is papalote — kite — for the wide, frost-toned agave the region builds its mezcal on. Families in communities like Apango roast it in earthen pits and distill small batches, the same village craft Oaxaca is famous for, in Guerrero's own voice. The name travels: papalote also appears in Michoacán and can name more than one cupreata-lineage agave, so the word needs its mountain context — that is exactly why this guide keeps regional names regional.",
+      "description": "Papalote mezcal from Guerrero's mountains tends to read fruitier and rounder than Oaxacan espadín: reviewers of the example bottle find mint, green pepper, tropical fruit and a buttery edge over a gentle roast. Batch variation is genuine, and cupreata's wild-harvest end carries real sustainability pressure — some producers cultivate or reforest. The example bottle, from the Alcaraz family in Apango, shows the fruit salad nose and juicy, easy-going palate its reviewers describe.",
+      "beginnerNote": "New to Guerrero mezcal? Expect the friendlier side of the family: fruity, minty, buttery papalote over gentle smoke — a different welcome from espadín.",
+      "category": "Mezcal — Guerrero lies within the mezcal denomination of origin; papalote is the regional name for a cupreata-lineage agave, not a legal class",
+      "plant": "Agave cupreata (papalote; wild-harvested and cultivated)",
+      "process": "Pit-roasted, wild-fermented, distilled in small batches",
+      "smoke": "A gentle, pleasant smoke thread per the cited reviews — the roast supports the fruit rather than leading it.",
+      "finish": "Medium and warm, with mint and sweet vanilla notes per the reviewers.",
+      "tasteNotes": [
+        "tropical fruit",
+        "fresh herbs",
+        "mint / eucalyptus freshness",
+        "gentle smoke",
+        "buttery sweetness"
+      ],
+      "sensory": {
+        "sweetness": "medium",
+        "fruit": "high",
+        "herbal": "high",
+        "smoke": "low",
+        "pepper": "medium",
+        "oak": "none",
+        "finishLength": "medium"
+      },
+      "aliases": [
+        "papalote",
+        "papalometl",
+        "cupreata"
+      ],
+      "exampleBottleId": "legendario-domingo-cupreata",
+      "placeCoords": {
+        "lat": 17.83,
+        "lon": -98.72,
+        "precision": "municipality (Apango, Guerrero); approximate"
+      },
+      "pairing": {
+        "serving": "Neat in a small glass; the fruit opens with a short rest. Also works in a Margarita where its fruit plays with citrus. Editorial suggestion, not a rule.",
+        "notice": "What to notice first: the mint-and-fruit welcome — friendlier and rounder than most espadín.",
+        "foods": [
+          "guerrillense mole",
+          "fresh cheeses",
+          "tropical-fruit salsas"
+        ]
+      },
+      "sourceIds": [
+        "sic-cultura-guerrero",
+        "mezcalreviews-legendario-domingo-cupreata",
+        "domingomezcal-brand"
+      ],
+      "whyItTastes": "The fruity, buttery welcome is plant and place: cupreata ripens in the Guerrero mountains’ thin soils, and reviewers consistently find more fruit and less roast aggression than espadín grown in valley floors — a tendency, not a rule. The pit roast is present, but the cited reviews put mint, green pepper and fruit salad in front of the smoke."
+    },
+    {
+      "id": "mezcal-cenizo-sierra-durango",
+      "title": "Cenizo mezcal, Durango sierra style (Agave durangensis)",
+      "spirit": "mezcal",
+      "traditionId": "mezcal",
+      "stateId": "dgo",
+      "stateName": "Durango",
+      "regionIds": [
+        "sierra-el-mezquital-dgo"
+      ],
+      "plantIds": [
+        "agave-durangensis"
+      ],
+      "plantId": "agave-durangensis",
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "body": "medium",
+      "context": "Durango is the north within the mezcal denomination — sierra and canyon country where the word for a distillery is vinata, not palenque, and the signature agave is cenizo, named for the ash tone of its leaves. In El Mezquital, Tepehuán vinatero families like the Cruz family roast cenizo among the pines at elevation, mash by axe and desgarradora, and distill in small copper-and-wood stills. Northern is not a synonym for Oaxacan: Durango's mezcal has its own plant, vocabulary and voice.",
+      "description": "Cenizo mezcal often reads fruit-forward and creamy in a way espadín rarely does: reviewers of the example bottle find watermelon and berry candy, bubblegum, citrus and a lactic, cheesy edge, with real heat that varies by batch. The example, from Federico Cruz and his Tepehuán family in El Mezquital, shows the fruity, well-balanced character multiple reviewers describe — and the batch-to-batch swing cenizo is known for.",
+      "beginnerNote": "New to cenizo? Expect the fruit bowl: candy, melon, bubblegum over a gentle roast — Durango's welcome is sweeter and often hotter than Oaxaca's.",
+      "category": "Mezcal — Durango lies within the mezcal denomination of origin; cenizo is the regional name for Agave durangensis, not a legal class",
+      "plant": "Agave durangensis (cenizo; mostly wild-harvested, nursery programs growing)",
+      "process": "Pit-roasted, mashed by axe and desgarradora, wild-fermented in pine vats, distilled in copper-and-wood stills",
+      "smoke": "Light per the cited reviews — the pit roast is present but the fruit leads.",
+      "finish": "Long and drying per the reviewers, with mint and mineral notes after the fruit.",
+      "tasteNotes": [
+        "tropical fruit",
+        "lactic tang",
+        "gentle smoke",
+        "fresh herbs",
+        "mineral"
+      ],
+      "sensory": {
+        "sweetness": "medium",
+        "fruit": "high",
+        "herbal": "medium",
+        "smoke": "low",
+        "pepper": "low",
+        "oak": "none",
+        "finishLength": "high"
+      },
+      "aliases": [
+        "cenizo",
+        "durangensis",
+        "mezcal de Durango"
+      ],
+      "exampleBottleId": "lamata-cenizo-durango",
+      "placeCoords": {
+        "lat": 23.98,
+        "lon": -104.88,
+        "precision": "municipality (El Mezquital, Durango); approximate"
+      },
+      "pairing": {
+        "serving": "Neat in a small glass with water alongside — the batches run hot, and a few drops soften the heat without losing the fruit. Editorial suggestion, not a rule.",
+        "notice": "What to notice first: the candy-fruit welcome and the heat behind it — a northern, creamy take on mezcal.",
+        "foods": [
+          "norteño grilled meats",
+          "asadero cheeses",
+          "flour-tortilla dishes"
+        ]
+      },
+      "sourceIds": [
+        "inifap-agave-reproduccion",
+        "sevenfifty-durango-mezcal",
+        "mezcalistas-cenizo-tasting",
+        "mezcalreviews-lamata-cenizo",
+        "lamata-brand"
+      ],
+      "whyItTastes": "The candy-fruit character is cenizo itself: the agave grows among pines at elevation in a colder climate than most mezcal country, and reviewers of the example bottle find watermelon, berry candy and bubblegum where espadín gives orchard fruit. The heat that follows is batch ABV — Durango’s small lots vary widely — not a rule of the style."
+    },
+    {
+      "id": "mezcal-verde-altiplano-slp",
+      "title": "Maguey verde mezcal, Altiplano Potosino style (Agave salmiana)",
+      "spirit": "mezcal",
+      "traditionId": "mezcal",
+      "stateId": "slp",
+      "stateName": "San Luis Potosí",
+      "regionIds": [
+        "altiplano-potosino"
+      ],
+      "plantIds": [
+        "agave-salmiana"
+      ],
+      "plantId": "agave-salmiana",
+      "processIds": [
+        "distillation-methods"
+      ],
+      "body": "medium",
+      "context": "On the rocky, arid Potosino plateau, the agave that endures is maguey verde — the salmiana — and hacienda families like the Hernández lineage of Santa Isabel have made mezcal from it for over a century. The same species feeds the pulque heartland farther south, but here the tradition cooks the piña mezcal-style rather than tapping sap: a different plant context and a different tradition from the destilado de pulque this guide also covers. The plateau's cooking method is honest-disputed — the producer describes clay ovens, a local reviewer reports autoclave — and this profile records the disagreement rather than settling it.",
+      "description": "Salmiana mezcal from the plateau tends to read green and vegetal in a way espadín rarely does: the cited reviewers find jalapeño and green pepper, grass, lemon and elderflower, with little to no smoke — the cooking tradition here is not the smoky pit roast, and impressions vary widely, from 'approachable and a good example of the region' to harsh. The example bottle, from maestro Juan José Hernández, shows the vegetal, lemony side multiple reviewers describe.",
+      "beginnerNote": "New to maguey verde? Expect a green, vegetal pour — jalapeño, grass, lemon — and very little smoke. This is the plateau's own mezcal, not a smoky Oaxacan.",
+      "category": "Mezcal — San Luis Potosí lies within the mezcal denomination of origin; maguey verde is the regional salmiana name, not a legal class",
+      "plant": "Agave salmiana (maguey verde; wild plateau populations, 7–10 years to maturity)",
+      "process": "Cooked in the hacienda's oven tradition, wild-fermented, distilled in copper",
+      "smoke": "Little to none per the cited reviews — the plateau's oven tradition does not center smoke.",
+      "finish": "Medium; lemon and mineral notes per the reviewers.",
+      "tasteNotes": [
+        "green vegetal",
+        "gentle citrus",
+        "fresh herbs",
+        "pepper",
+        "mineral"
+      ],
+      "sensory": {
+        "sweetness": "low",
+        "fruit": "low",
+        "herbal": "high",
+        "smoke": "none",
+        "pepper": "medium",
+        "oak": "none",
+        "finishLength": "medium"
+      },
+      "aliases": [
+        "maguey verde",
+        "salmiana",
+        "mezcal potosino"
+      ],
+      "exampleBottleId": "leyendas-san-luis-potosi",
+      "placeCoords": {
+        "lat": 22.55,
+        "lon": -100.88,
+        "precision": "municipality (Santa Isabel area, San Luis Potosí); approximate"
+      },
+      "pairing": {
+        "serving": "Neat at room temperature in a small glass; the vegetal character also suits a salty companion (the regional serve pairs it with orange, salt and chili). Editorial suggestion, not a rule.",
+        "notice": "What to notice first: the green, jalapeño-and-lemon character — a smoke-free welcome into salmiana.",
+        "foods": [
+          "nopal and queso panela dishes",
+          "chile-forward salsas",
+          "tuna (prickly pear) desserts"
+        ]
+      },
+      "sourceIds": [
+        "conafor-salmiana-slp",
+        "mezcalreviews-leyendas-slp",
+        "mezcalesdeleyenda-slp"
+      ],
+      "whyItTastes": "The green, smoke-free pour is the plateau’s own combination: wild salmiana ripens slowly on the arid Altiplano, and the hacienda cooking tradition here is an oven, not the smoky pit roast — so the plant’s jalapeño-and-lemon character arrives without the smoke that defines Oaxacan mezcal. The oven type is disputed between the producer and a local reviewer; either way, the cited reviews agree the pour reads green, not smoky."
     }
   ]
 }

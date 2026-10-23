@@ -367,6 +367,69 @@
       },
       "whyItTastes": "El agave de Los Altos crece a mayor elevación en suelos rojos ricos en hierro con noches más frescas, y los productores dicen que esas condiciones producen piñas más grandes y dulces — por eso el destilado sin añejar tiende a lo afrutado, floral y brillante en cítricos en vez de lo terroso. Nótese la reserva honesta: un panel de cata a ciegas encontró el patrón regional más débil de lo que sugiere el folclore, así que trátalo como una tendencia, nunca una garantía.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales rojos de Los Altos)"
+    },
+    "mezcal-papalote-montana-guerrero": {
+      "title": "Mezcal de papalote, estilo montaña guerrerense (cupreata)",
+      "context": "Guerrero es uno de los grandes estados mezcaleros de México, y en sus montañas el nombre de la planta es papalote — cometa — por el agave ancho de tono cobrizo sobre el que la región construye su mezcal. Familias de comunidades como Apango lo asan en hornos de tierra y destilan lotes pequeños: el mismo oficio aldeano que hizo famoso a Oaxaca, con la voz propia de Guerrero. El nombre viaja: papalote también aparece en Michoacán y puede nombrar más de un agave de linaje cupreata, así que la palabra necesita su contexto de montaña — exactamente por eso esta guía mantiene los nombres regionales como regionales.",
+      "description": "El mezcal de papalote de las montañas de Guerrero tiende a leerse más afrutado y redondo que el espadín oaxaqueño: los reseñistas de la botella de ejemplo encuentran menta, pimiento verde, fruta tropical y un filo mantecoso sobre un asado suave. La variación entre lotes es genuina, y el extremo silvestre del cupreata carga presión real de sostenibilidad — algunos productores cultivan o reforestan. La botella de ejemplo, de la familia Alcaraz de Apango, muestra la nariz de ensalada de frutas y el paladar jugoso y fácil que describen sus reseñistas.",
+      "beginnerNote": "¿Nuevo en el mezcal guerrerense? Espera el lado más amable de la familia: papalote afrutado, con menta y mantecoso, sobre humo suave — una bienvenida distinta a la del espadín.",
+      "category": "Mezcal — Guerrero está dentro de la denominación de origen del mezcal; papalote es el nombre regional de un agave de linaje cupreata, no una clase legal",
+      "plant": "Agave cupreata (papalote; de recolección silvestre y cultivado)",
+      "process": "Asado en horno de piña, fermentado con levaduras silvestres, destilado en lotes pequeños",
+      "smoke": "Un hilo de humo suave y agradable según las reseñas citadas — el asado sostiene la fruta en lugar de encabezarla.",
+      "finish": "Medio y cálido, con notas de menta y vainilla dulce según los reseñistas.",
+      "whyItTastes": "La bienvenida afrutada y mantecosa es planta y lugar: el cupreata madura en los suelos delgados de las montañas guerrerenses, y los reseñistas encuentran sistemáticamente más fruta y menos agresión de asado que el espadín de los valles — una tendencia, no una regla. El asado en pozo está presente, pero las reseñas citadas ponen la menta, el pimiento verde y la ensalada de frutas delante del humo.",
+      "pairing": {
+        "serving": "Solo, en copa pequeña; la fruta se abre con un breve reposo. También funciona en una Margarita, donde su fruta juega con los cítricos. Sugerencia editorial, no una regla.",
+        "notice": "Qué notar primero: la bienvenida de menta y fruta — más amable y redonda que la mayoría de los espadines.",
+        "foods": [
+          "mole guerrerense",
+          "quesos frescos",
+          "salsas de fruta tropical"
+        ]
+      }
+    },
+    "mezcal-cenizo-sierra-durango": {
+      "title": "Mezcal de cenizo, estilo sierra duranguense (Agave durangensis)",
+      "context": "Durango es el norte dentro de la denominación del mezcal — sierra y cañones donde la palabra para un destiladero es vinata, no palenque, y el agave firma es el cenizo, nombrado por el tono cenizo de sus hojas. En El Mezquital, familias tepehuanas como la de los Cruz asan el cenizo entre pinos en altura, machacan con hacha y desgarradora, y destilan en pequeños alambiques de cobre y madera. Norteño no es sinónimo de oaxaqueño: el mezcal duranguense tiene su propia planta, vocabulario y voz.",
+      "description": "El mezcal de cenizo suele leerse afrutado y cremoso de una manera que el espadín rara vez logra: los reseñistas de la botella de ejemplo encuentran sandía y dulces de mora, chicle, cítricos y un filo láctico y quesero, con calor real que varía por lote. El ejemplo, de Federico Cruz y su familia tepehuana de El Mezquital, muestra el carácter afrutado y bien equilibrado que describen varios reseñistas — y el vaivén entre lotes por el que el cenizo es conocido.",
+      "beginnerNote": "¿Nuevo en el cenizo? Espera la frutera: dulces, melón y chicle sobre un asado suave — la bienvenida de Durango es más dulce y a menudo más caliente que la de Oaxaca.",
+      "category": "Mezcal — Durango está dentro de la denominación de origen del mezcal; cenizo es el nombre regional de Agave durangensis, no una clase legal",
+      "plant": "Agave durangensis (cenizo; mayormente de recolección silvestre, con programas de vivero creciendo)",
+      "process": "Asado en horno de piña, machacado con hacha y desgarradora, fermentado con levaduras silvestres en tinas de pino, destilado en alambiques de cobre y madera",
+      "smoke": "Ligero según las reseñas citadas — el asado en pozo está presente, pero la fruta encabeza.",
+      "finish": "Largo y secante según los reseñistas, con menta y notas minerales después de la fruta.",
+      "whyItTastes": "El carácter de dulces y fruta es el cenizo mismo: el agave crece entre pinos en altura, en un clima más frío que la mayoría del país mezcalero, y los reseñistas de la botella de ejemplo encuentran sandía, dulces de mora y chicle donde el espadín da fruta de huerto. El calor que sigue es el ABV del lote — los lotes pequeños de Durango varían mucho — no una regla del estilo.",
+      "pairing": {
+        "serving": "Solo, en copa pequeña con agua al lado — los lotes salen calientes, y unas gotas suavizan el calor sin perder la fruta. Sugerencia editorial, no una regla.",
+        "notice": "Qué notar primero: la bienvenida de fruta y dulce y el calor detrás — una versión norteña y cremosa del mezcal.",
+        "foods": [
+          "carnes asadas norteñas",
+          "quesos asadero",
+          "platillos de tortilla de harina"
+        ]
+      }
+    },
+    "mezcal-verde-altiplano-slp": {
+      "title": "Mezcal de maguey verde, estilo Altiplano Potosino (Agave salmiana)",
+      "context": "En la meseta pótosina, rocosa y árida, el agave que resiste es el maguey verde — la salmiana — y familias hacendadas como el linaje Hernández de Santa Isabel llevan más de un siglo haciendo mezcal con él. La misma especie alimenta el corazón pulquero más al sur, pero aquí la tradición cocina la piña a la manera del mezcal en lugar de sangrar savia: un contexto de planta distinto y una tradición distinta del destilado de pulque que esta guía también cubre. El método de cocción de la meseta está honestamente en disputa — el productor describe hornos de barro, un reseñista local reporta autoclave — y este perfil registra el desacuerdo en lugar de resolverlo.",
+      "description": "El mezcal de salmiana de la meseta suele leerse verde y vegetal de una manera que el espadín rara vez logra: los reseñistas citados encuentran jalapeño y pimiento verde, pasto, limón y flor de saúco, con poco o nada de humo — la tradición de cocción de aquí no es el asado humeante de pozo, y las impresiones varían mucho, desde “abordable y buen ejemplo de la región” hasta áspero. La botella de ejemplo, del maestro Juan José Hernández, muestra el lado vegetal y limonero que describen varios reseñistas.",
+      "beginnerNote": "¿Nuevo en el maguey verde? Espera un trago verde y vegetal — jalapeño, pasto, limón — y muy poco humo. Este es el mezcal propio de la meseta, no un oaxaqueño humeante.",
+      "category": "Mezcal — San Luis Potosí está dentro de la denominación de origen del mezcal; maguey verde es el nombre regional de la salmiana, no una clase legal",
+      "plant": "Agave salmiana (maguey verde; poblaciones silvestres de meseta, 7–10 años de madurez)",
+      "process": "Cocido en la tradición de horno de la hacienda, fermentado con levaduras silvestres, destilado en cobre",
+      "smoke": "Poco o nada según las reseñas citadas — la tradición de horno de la meseta no se centra en el humo.",
+      "finish": "Medio; notas de limón y minerales según los reseñistas.",
+      "whyItTastes": "El trago verde y sin humo es la combinación propia de la meseta: la salmiana silvestre madura despacio en el Altiplano árido, y la tradición de cocción hacendada de aquí es un horno, no el asado humeante de pozo — así que el carácter de jalapeño y limón de la planta llega sin el humo que define al mezcal oaxaqueño. El tipo de horno está en disputa entre el productor y un reseñista local; en cualquier caso, las reseñas citadas coinciden en que el trago se lee verde, no humeante.",
+      "pairing": {
+        "serving": "Solo, a temperatura ambiente, en copa pequeña; el carácter vegetal también va con un acompañamiento salado (la servida regional lo acompaña de naranja, sal y chile). Sugerencia editorial, no una regla.",
+        "notice": "Qué notar primero: el carácter verde de jalapeño y limón — una bienvenida sin humo a la salmiana.",
+        "foods": [
+          "platillos de nopal y queso panela",
+          "salsas con chile",
+          "postres de tuna"
+        ]
+      }
     }
   },
   "bottles": {
@@ -657,6 +720,24 @@
       "classification": "Tequila — joven (una mezcla maestra de plata con un toque de extra añejo, filtrada hasta la claridad del platino)",
       "plantComposition": "100% de agave azul weber (Agave tequilana), según la marca",
       "producer": "Casa Dragones (mezcla maestra en lotes pequeños, Tequila, Jalisco)"
+    },
+    "legendario-domingo-cupreata": {
+      "reviewSummary": "Un papalote clásico según sus reseñistas: nariz de ensalada de frutas (uva, manzana, plátano) con menta y pimiento verde, paladar jugoso y fácil, y un final cálido con dulzor de vainilla; algunos lotes salen calientes. Hecho por la familia Alcaraz en Apango.",
+      "producer": "Legendario Domingo (familia Alcaraz, maestros mezcaleros), Apango, Guerrero",
+      "place": "Apango, Guerrero",
+      "batch": "El lote y la graduación varían (reseñas citadas listan lotes de 47% y 50%); revisa tu botella"
+    },
+    "lamata-cenizo-durango": {
+      "reviewSummary": "Sandía y dulces de mora, chicle y cítricos sobre un asado ligero, con un filo láctico y quesero y calor real que varía por lote — los reseñistas lo llaman vibrante, afrutado y bien equilibrado. Producido por Federico Cruz y su familia tepehuana en El Mezquital.",
+      "producer": "Federico Cruz y familia (vinateros tepehuanes), El Mezquital, Durango; marca de Lamata (Nacion de Las Verdes Matas)",
+      "place": "El Mezquital, Durango",
+      "batch": "Lotes pequeños de ~40 a 200 litros; la graduación varía por lote (reseñas citadas listan lotes de 49,2–54%); originalmente lanzado como Amormata"
+    },
+    "leyendas-san-luis-potosi": {
+      "reviewSummary": "Verde y vegetal según sus reseñistas: jalapeño y pimiento verde, pasto, limón y flor de saúco, con poco o nada de humo; las impresiones van desde “blando y bonito ejemplo de la región” hasta áspero. Hecho por el maestro Juan José Hernández en la hacienda de Santa Isabel.",
+      "producer": "Mezcal de Leyendas (maestro mezcalero Juan José Hernández), Santa Isabel, San Luis Potosí",
+      "place": "Santa Isabel, San Luis Potosí",
+      "batch": "Los lotes varían (reseñas citadas cubren embotellados de 42–45%); el método de cocción está en disputa entre la descripción de horno de barro del productor y el reporte de autoclave de un reseñista local — registrado, no resuelto"
     }
   },
   "processes": {
@@ -765,6 +846,23 @@
       "sensoryTendencies": "Orientación editorial: contribuye al perfil de la raicilla de la Costa junto al chico aguiar; los nombres comunes de los agaves de la costa de Jalisco varían por localidad y taberna.",
       "sustainability": "Misto silvestre/cultivado; los nombres regionales se conservan sin resolver debates de especies.",
       "uncertainty": "Los nombres comunes de los agaves costeros de Jalisco varían por localidad y taberna; la app conserva los nombres regionales sin resolver los debates de especie."
+    },
+    "agave-cupreata": {
+      "cultivation": "de recolección silvestre y cultivado; el extremo silvestre carga la presión de sostenibilidad",
+      "atAGlance": "El agave papalote del mezcal de montaña guerrerense — un agave ancho, de tono cobrizo, que da al mezcal del estado su firma afrutada y mantecosa.",
+      "whereItGrows": "Laderas de montaña de Guerrero y el Michoacán vecino (cuenca del Balsas), a menudo en altura y suelos delgados.",
+      "harvestProduction": "Tradiciones de piña: se cosecha en su madurez (años variables según la fuente), se asa en horno de piña, se fermenta y se destila como mezcal.",
+      "sensoryTendencies": "Orientación editorial: los mezcales de cupreata suelen leerse más afrutados y mantecosos que el espadín, con menta, pimiento verde y fruta tropical; el humo varía con el asado de cada productor.",
+      "sustainability": "Las poblaciones silvestres de cupreata cargan presión de cosecha mientras crece el mezcal guerrerense; algunos productores cultivan o reforestan.",
+      "uncertainty": "Los nombres papalote/papalometl aparecen tanto en Guerrero como en Michoacán y pueden cubrir más de un taxón afín a cupreata; la guía conserva los nombres regionales sin resolver el debate de especie."
+    },
+    "agave-durangensis": {
+      "cultivation": "mayormente de recolección silvestre; existen programas de vivero y reforestación mientras crece la demanda",
+      "atAGlance": "El cenizo, el agave firma del mezcal duranguense — la planta que da a los mezcales del estado norteño su carácter afrutado y a menudo cremoso.",
+      "whereItGrows": "Sierra y cañones de Durango, a menudo entre pinos en altura; el borde norte de la denominación del mezcal.",
+      "harvestProduction": "Tradiciones de piña: se cosecha en su madurez, se asa en horno de piña, se machaca (hacha y desgarradora en las vinatas tradicionales), se fermenta y se destila como mezcal.",
+      "sensoryTendencies": "Orientación editorial: los mezcales de cenizo suelen leerse afrutados y cremosos, con notas de dulces, fruta tropical y lácticas; el calor y el funk rústico varían por lote.",
+      "sustainability": "La presión de cosecha del cenizo silvestre crece con el auge de Durango; la propagación en vivero está documentada en la literatura regional de investigación."
     }
   },
   "terms": {
@@ -992,6 +1090,21 @@
       "name": "Sierra Chihuahuense del Norte, Chihuahua",
       "geography": "País de sierra y desierto del norte de Chihuahua, desde la Sierra hasta Delicias.",
       "distinctions": "La DO del sotol (2002) cubre Chihuahua, Coahuila y Durango; el Dasylirion no es un agave, y la app lo mantiene explícito."
+    },
+    "montana-guerrero": {
+      "name": "La Montaña (Guerrero de montaña)",
+      "geography": "Municipios de montaña del oriente de Guerrero, en la cuenca del Balsas — Apango y comunidades vecinas donde se hace el mezcal de papalote.",
+      "distinctions": "Cobertura de la guía, no un límite legal: Guerrero es un estado mezcalero mayor dentro de la DO, y aquí papalote nombra un agave de linaje cupreata de estas montañas; los nombres locales necesitan su contexto geográfico."
+    },
+    "sierra-el-mezquital-dgo": {
+      "name": "Sierra El Mezquital, Durango",
+      "geography": "Alta sierra del municipio de El Mezquital, Durango — país de pinos donde vinateros tepehuanes trabajan el cenizo en altura.",
+      "distinctions": "Cobertura de la guía, no un límite legal: Durango está dentro de la DO del mezcal, y una vinata — no un palenque — es la palabra duranguense para un pequeño destiladero."
+    },
+    "altiplano-potosino": {
+      "name": "Altiplano Potosino (meseta central), San Luis Potosí",
+      "geography": "Meseta pótosina rocosa y árida alrededor de Santa Isabel y comunidades vecinas — el hogar del mezcal de maguey verde (Agave salmiana).",
+      "distinctions": "Cobertura de la guía, no un límite legal: la salmiana de aquí es el maguey verde silvestre de la meseta, cocido a la manera del mezcal — una tradición distinta de la cosecha de savia pulquera de la misma especie más al sur."
     }
   }
 }

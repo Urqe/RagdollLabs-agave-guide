@@ -32,7 +32,7 @@ test("pair 13: tradition filter, result count and reset combine predictably (EN 
   for (const locale of [en, es]) {
     const c = document.createElement("div");
     renderCatalogue(c, { bottles, profiles, sources: sourceList, locale });
-    assert.ok(/46/.test(status(c)), `${locale.get()}: full count visible`);
+    assert.ok(new RegExp(String(bottles.length)).test(status(c)), `${locale.get()}: full count visible`);
     const sel = c.querySelector("#catalogue-tradition");
     const tequilaOption = [...sel.options].find((o) => o.value === "tequila");
     assert.ok(tequilaOption, "tequila filter option present");
@@ -40,7 +40,7 @@ test("pair 13: tradition filter, result count and reset combine predictably (EN 
     sel.dispatchEvent(new dom.window.Event("change"));
     const expected = bottles.filter((b) => (b.traditionId || b.spirit) === "tequila").length;
     assert.equal(count(c), expected, `${locale.get()}: filter narrows the list`);
-    assert.ok(status(c).includes(String(expected)) && status(c).includes("46"),
+    assert.ok(status(c).includes(String(expected)) && status(c).includes(String(bottles.length)),
       `${locale.get()}: count shows filtered out of total`);
     // search combines with the filter
     const input = c.querySelector("#catalogue-search");
@@ -170,7 +170,7 @@ test("pair 13: filter and search state is captured for the return trip", async (
 test("pair 13: every control, status and message renders in Mexican Spanish", () => {
   const c = document.createElement("div");
   renderCatalogue(c, { bottles, profiles, sources: sourceList, locale: es });
-  assert.ok(/Mostrando 46 de 46 botellas/.test(status(c)), "count in Spanish");
+  assert.ok(new RegExp(`Mostrando ${bottles.length} de ${bottles.length} botellas`).test(status(c)), "count in Spanish");
   assert.ok(c.querySelector("#catalogue-tradition").querySelector('option[value=""]').textContent.includes("Todas las tradiciones"), "filter label in Spanish");
   assert.ok(c.querySelector(".catalogue-reset").textContent.includes("Restablecer"), "reset in Spanish");
   for (const depth of [...c.querySelectorAll("details.catalogue-depth > summary")]) {

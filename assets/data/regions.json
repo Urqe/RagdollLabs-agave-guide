@@ -242,6 +242,76 @@
       "sourceIds": [
         "wikipedia-sotol"
       ]
+    },
+    {
+      "id": "montana-guerrero",
+      "name": "La Montaña (mountain Guerrero)",
+      "type": "subregion",
+      "stateId": "gro",
+      "geography": "Mountain municipalities of eastern Guerrero, in the Balsas basin — Apango and neighboring communities where papalote mezcal is made.",
+      "traditionIds": [
+        "mezcal"
+      ],
+      "plantIds": [
+        "agave-cupreata"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "App coverage, not a legal boundary: Guerrero is a major mezcal state under the DO, and papalote here names a cupreata-lineage agave of these mountains; local names need their geographic context.",
+      "sourceIds": [
+        "sic-cultura-guerrero",
+        "mezcalreviews-legendario-domingo-cupreata"
+      ]
+    },
+    {
+      "id": "sierra-el-mezquital-dgo",
+      "name": "Sierra El Mezquital, Durango",
+      "type": "subregion",
+      "stateId": "dgo",
+      "geography": "High sierra of El Mezquital municipality, Durango — pine country where Tepehuán vinateros work cenizo at elevation.",
+      "traditionIds": [
+        "mezcal"
+      ],
+      "plantIds": [
+        "agave-durangensis"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "App coverage, not a legal boundary: Durango lies within the mezcal DO, and a vinata — not a palenque — is the Durango word for a small distillery.",
+      "sourceIds": [
+        "inifap-agave-reproduccion",
+        "sevenfifty-durango-mezcal",
+        "mezcalreviews-lamata-cenizo"
+      ]
+    },
+    {
+      "id": "altiplano-potosino",
+      "name": "Altiplano Potosino (central plateau), San Luis Potosí",
+      "type": "subregion",
+      "stateId": "slp",
+      "geography": "Rocky, arid central Potosino plateau around Santa Isabel and neighboring communities — the home of maguey verde (Agave salmiana) mezcal.",
+      "traditionIds": [
+        "mezcal",
+        "destilado-de-pulque"
+      ],
+      "plantIds": [
+        "agave-salmiana"
+      ],
+      "processIds": [
+        "distillation-methods"
+      ],
+      "distinctions": "App coverage, not a legal boundary: the salmiana here is the plateau's wild maguey verde, cooked mezcal-style — a different tradition from the pulquero sap harvest of the same species farther south.",
+      "sourceIds": [
+        "conafor-salmiana-slp",
+        "mezcalreviews-leyendas-slp",
+        "mezcalesdeleyenda-slp"
+      ]
     }
   ]
 }

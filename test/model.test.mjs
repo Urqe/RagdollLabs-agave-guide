@@ -151,9 +151,12 @@ test("R15: routes unchanged — profile ids survive the migration", () => {
     "mezcal-tobala-sierra-oaxaca",
     "sotol-chihuahua",
     "tequila-blanco-highland-jalisco",
+    "mezcal-papalote-montana-guerrero",
+    "mezcal-cenizo-sierra-durango",
+    "mezcal-verde-altiplano-slp",
   ];
   assert.deepEqual(profiles.map((p) => p.id).sort(), [...expected].sort());
-  assert.equal(profiles.length, 18);
+  assert.equal(profiles.length, 21);
 });
 
 test("R15: data loader exposes the new entities", async () => {
