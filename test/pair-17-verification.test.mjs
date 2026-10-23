@@ -308,16 +308,16 @@ test("pair 17: every lesson announces its selected step and keeps keyboard-reach
   }
 });
 
-test("pair 17: profile example bottle renders the pair-16 basis line in both languages", async () => {
+test("pair 17/pair 18: profile example bottle renders the shared tasting-basis line in both languages", async () => {
   const app = await bootApp("#/profile/tequila-blanco-valley-jalisco");
   try {
     const basis = app.window.document.querySelector(".bottle-card .bottle-basis");
     assert.ok(basis, "the profile's example bottle carries the basis line");
-    assert.ok(/tasting summary based on/i.test(basis.textContent), "EN basis text renders");
+    assert.ok(/character notes from .+ independent review/i.test(basis.textContent), "EN basis text renders");
     app.window.document.getElementById("locale-toggle").click();
     await new Promise((r) => setTimeout(r, 120));
     const basisEs = app.window.document.querySelector(".bottle-card .bottle-basis");
-    assert.ok(basisEs && /resumen de cata seg\u00fan/i.test(basisEs.textContent), "ES basis text renders");
+    assert.ok(basisEs && /notas de car\u00e1cter seg\u00fan/i.test(basisEs.textContent), "ES basis text renders");
   } finally {
     app.cleanup();
   }

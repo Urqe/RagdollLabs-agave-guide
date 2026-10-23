@@ -18,6 +18,10 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-valley-jal"
+      ],
+      "tastingSourceIds": [
+        "diffords-fortaleza-blanco",
+        "liquor-com-fortaleza-blanco-review"
       ]
     },
     {
@@ -38,6 +42,10 @@
       "traditionId": "mezcal",
       "regionIds": [
         "valles-centrales-oax"
+      ],
+      "tastingSourceIds": [
+        "diffords-lost-explorer-espadin",
+        "drinkhacker-lost-explorer-review"
       ]
     },
     {
@@ -57,6 +65,10 @@
       "traditionId": "bacanora",
       "regionIds": [
         "sierra-sonora"
+      ],
+      "tastingSourceIds": [
+        "mezcalistas-tepua-tasting",
+        "mezcalreviews-tepua-blanco"
       ]
     },
     {
@@ -76,6 +88,9 @@
       "traditionId": "raicilla",
       "regionIds": [
         "sierra-occidental-jal"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-lavenenosa-tabernas"
       ]
     },
     {
@@ -103,6 +118,10 @@
       "traditionId": "bacanora",
       "regionIds": [
         "sierra-sonora"
+      ],
+      "tastingSourceIds": [
+        "tequilanet-cielo-rojo",
+        "mezcalreviews-cielo-rojo"
       ]
     },
     {
@@ -126,6 +145,9 @@
       "traditionId": "bacanora",
       "regionIds": [
         "sierra-sonora"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-kilinga"
       ]
     },
     {
@@ -151,6 +173,9 @@
       "traditionId": "raicilla",
       "regionIds": [
         "costa-sur-jal"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-lavenenosa-costa"
       ]
     },
     {
@@ -171,6 +196,10 @@
       "traditionId": "tuxca",
       "regionIds": [
         "jalisco-colima-borderlands"
+      ],
+      "tastingSourceIds": [
+        "mezcalistas-balancan-tasting",
+        "mezcalreviews-balancan-tuxca"
       ]
     },
     {
@@ -213,6 +242,9 @@
       "traditionId": "destilado-de-pulque",
       "regionIds": [
         "tlaxcala-central"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-estancia-pulque"
       ]
     },
     {
@@ -233,6 +265,10 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-valley-jal"
+      ],
+      "tastingSourceIds": [
+        "lilou-fortaleza-reposado",
+        "88bamboo-fortaleza-reposado"
       ]
     },
     {
@@ -252,6 +288,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-valley-jal"
+      ],
+      "tastingSourceIds": [
+        "whiskeyshelf-fortaleza-anejo"
       ]
     },
     {
@@ -273,6 +312,10 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-valley-jal"
+      ],
+      "tastingSourceIds": [
+        "tastings-patron-cristalino",
+        "tequilareport-patron-cristalino"
       ]
     },
     {
@@ -317,6 +360,9 @@
       "traditionId": "raicilla",
       "regionIds": [
         "sierra-occidental-jal"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-lavenenosa-tabernas-reposado"
       ]
     },
     {
@@ -337,6 +383,9 @@
       "traditionId": "destilado-de-pulque",
       "regionIds": [
         "tlaxcala-central"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-juerte"
       ]
     },
     {
@@ -360,7 +409,10 @@
       ],
       "traditionId": "comiteco",
       "regionIds": [],
-      "reviewSummary": "Neat, it would substitute cleanly for white rum in a mojito — of the two Chiapanecan spirits its reviewer tasted that day, the comiteco was the preferred pour."
+      "reviewSummary": "Neat, it would substitute cleanly for white rum in a mojito — of the two Chiapanecan spirits its reviewer tasted that day, the comiteco was the preferred pour.",
+      "tastingSourceIds": [
+        "drunkpynchon-dantano-comiteco"
+      ]
     },
     {
       "id": "el-tesoro-extra-anejo",
@@ -379,6 +431,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-highlands-jal"
+      ],
+      "tastingSourceIds": [
+        "drinkhacker-eltesoro-xa"
       ]
     },
     {
@@ -399,6 +454,10 @@
       "traditionId": "mezcal",
       "regionIds": [
         "valles-centrales-oax"
+      ],
+      "tastingSourceIds": [
+        "bbcgoodfood-ilegal-reposado",
+        "bourbonbanter-ilegal"
       ]
     },
     {
@@ -421,7 +480,10 @@
         "profile-not-covered"
       ],
       "noteProfileId": "mezcal-reposado-espadin-oaxaca",
-      "editorialNote": "An añejo (rested about 14 months, beyond the 1-year añejo minimum): the app's aged-mezcal profile describes the reposado class (2 months to 1 year), so this expression is covered as a catalogue fact, not mapped onto the reposado style profile."
+      "editorialNote": "An añejo (rested about 14 months, beyond the 1-year añejo minimum): the app's aged-mezcal profile describes the reposado class (2 months to 1 year), so this expression is covered as a catalogue fact, not mapped onto the reposado style profile.",
+      "tastingSourceIds": [
+        "bourbonbanter-ilegal"
+      ]
     },
     {
       "id": "montelobos-tobala",
@@ -441,6 +503,9 @@
       "traditionId": "mezcal",
       "regionIds": [
         "sierra-norte-oax"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-montelobos-tobala"
       ]
     },
     {
@@ -461,6 +526,9 @@
       "traditionId": "mezcal",
       "regionIds": [
         "sierra-norte-oax"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-macurichos-tobala"
       ]
     },
     {
@@ -486,6 +554,9 @@
       "traditionId": "mezcal",
       "regionIds": [
         "valles-centrales-oax"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-del-maguey-pechuga"
       ]
     },
     {
@@ -506,6 +577,9 @@
       "traditionId": "tuxca",
       "regionIds": [
         "jalisco-colima-borderlands"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-siete-pozos-tuxca"
       ]
     },
     {
@@ -547,6 +621,9 @@
       "traditionId": "sotol",
       "regionIds": [
         "chihuahua-norte"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-clande-yellow"
       ]
     },
     {
@@ -571,7 +648,10 @@
         "profile-not-covered"
       ],
       "noteProfileId": "sotol-chihuahua",
-      "editorialNote": "An aged sotol (2 years in new French oak): the app's sotol profile describes an unaged Chihuahua desert style with no oak maturation, so this expression is covered as a catalogue fact, not mapped onto that style profile."
+      "editorialNote": "An aged sotol (2 years in new French oak): the app's sotol profile describes an unaged Chihuahua desert style with no oak maturation, so this expression is covered as a catalogue fact, not mapped onto that style profile.",
+      "tastingSourceIds": [
+        "mezcalreviews-hacienda-chihuahua-anejo"
+      ]
     },
     {
       "id": "bacatt-bacanora",
@@ -591,6 +671,9 @@
       "traditionId": "bacanora",
       "regionIds": [
         "sierra-sonora"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-bacatt"
       ]
     },
     {
@@ -611,6 +694,9 @@
       "traditionId": "bacanora",
       "regionIds": [
         "sierra-sonora"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-sunora-blanco"
       ]
     },
     {
@@ -631,6 +717,9 @@
       "traditionId": "bacanora",
       "regionIds": [
         "sierra-sonora"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-la-nina-bacanora"
       ]
     },
     {
@@ -651,6 +740,9 @@
       "traditionId": "raicilla",
       "regionIds": [
         "sierra-occidental-jal"
+      ],
+      "tastingSourceIds": [
+        "tastings-el-acabo-raicilla"
       ]
     },
     {
@@ -672,6 +764,9 @@
       "traditionId": "bacanora",
       "regionIds": [
         "sierra-sonora"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-aguamiel-bacanora"
       ]
     },
     {
@@ -699,6 +794,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-highlands-jal"
+      ],
+      "tastingSourceIds": [
+        "diffords-don-julio-blanco"
       ]
     },
     {
@@ -720,6 +818,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-valley-jal"
+      ],
+      "tastingSourceIds": [
+        "rumhowler-cuervo-tradicional-reposado"
       ]
     },
     {
@@ -747,6 +848,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-highlands-jal"
+      ],
+      "tastingSourceIds": [
+        "liquorcom-patron-silver"
       ]
     },
     {
@@ -768,6 +872,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-valley-jal"
+      ],
+      "tastingSourceIds": [
+        "bevvy-casa-dragones-blanco"
       ]
     },
     {
@@ -790,6 +897,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-highlands-jal"
+      ],
+      "tastingSourceIds": [
+        "thedailypour-g4-blanco"
       ]
     },
     {
@@ -812,6 +922,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-valley-jal"
+      ],
+      "tastingSourceIds": [
+        "tastings-maestro-dobel-50"
       ]
     },
     {
@@ -835,6 +948,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-valley-jal"
+      ],
+      "tastingSourceIds": [
+        "88bamboo-cascahuin-anejo"
       ]
     },
     {
@@ -857,6 +973,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-highlands-jal"
+      ],
+      "tastingSourceIds": [
+        "ochotequila-terroir"
       ]
     },
     {
@@ -906,7 +1025,10 @@
         "rumhowler-don-julio-reposado"
       ],
       "traditionId": "tequila",
-      "regionIds": []
+      "regionIds": [],
+      "tastingSourceIds": [
+        "rumhowler-don-julio-reposado"
+      ]
     },
     {
       "id": "don-julio-anejo",
@@ -933,7 +1055,10 @@
         "rumhowler-don-julio-anejo"
       ],
       "traditionId": "tequila",
-      "regionIds": []
+      "regionIds": [],
+      "tastingSourceIds": [
+        "rumhowler-don-julio-anejo"
+      ]
     },
     {
       "id": "jose-cuervo-tradicional-plata",
@@ -954,6 +1079,9 @@
       "traditionId": "tequila",
       "regionIds": [
         "tequila-valley-jal"
+      ],
+      "tastingSourceIds": [
+        "rumhowler-cuervo-tradicional-silver"
       ]
     },
     {
@@ -982,7 +1110,10 @@
         "rumhowler-patron-reposado"
       ],
       "traditionId": "tequila",
-      "regionIds": []
+      "regionIds": [],
+      "tastingSourceIds": [
+        "rumhowler-patron-reposado"
+      ]
     },
     {
       "id": "casa-dragones-joven",
@@ -1009,7 +1140,10 @@
         "wineenthusiast-casa-dragones-joven"
       ],
       "traditionId": "tequila",
-      "regionIds": []
+      "regionIds": [],
+      "tastingSourceIds": [
+        "wineenthusiast-casa-dragones-joven"
+      ]
     }
   ]
 }

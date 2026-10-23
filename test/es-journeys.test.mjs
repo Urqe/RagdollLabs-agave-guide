@@ -234,7 +234,7 @@ test("the reported case: Patrón Añejo Cristalino card is Spanish end to end", 
   assert.ok(cardText.includes("Aromas y sabores redondos y cremosos"),
     "review summary is Spanish");
   assert.ok(!cardText.includes("round, creamy aromas"), "no English review text remains");
-  assert.ok(cardText.includes("Resumen de cata según"), "the basis line carries the attribution");
+  assert.ok(cardText.includes("Notas de carácter según"), "the basis line carries the attribution");
 });
 
 test("English mode never shows Spanish content (locale gate regression)", async () => {
