@@ -7,11 +7,11 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–14 are recorded as applied. The owner-requested post-completion review found remaining defects and educational gaps; **section 4.3 supersedes the earlier “sequence complete” conclusion for next-work prioritization**. Execute **pair 15 — Corrective UX, Mapping & Localization Review next**, followed by pair 16 and its maintenance review in pair 17, only as requested by the owner. Section 4.4 extends these same releases with the owner's content-accuracy, practical tasting, Mexican Spanish/regional-voice and British/Mexican flag requirements; execute both sections together. Preserve completed work and current coverage. This update changes the plan only; the new tasks remain unchecked.
+Post-roadmap pairs 8–17 are recorded as applied. The follow-up audit found specific unresolved correctness, localization and editorial issues; **section 4.5 is the current execution authority**. Execute **post-roadmap pair 18 — Corrective Completion & Editorial Consistency next**, when requested by the owner. Regional additions follow in pairs 19–22, with maintenance after each content batch. Sections 4.3–4.4 remain the historical requirements; section 4.5 identifies the gaps to reopen without discarding completed improvements. This update changes the plan only, not the app.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
-Historical foundation guidance: this section superseded the original broad research targets during Release 1. For current execution priority, use section 4.3. Execute only the requested release, not the entire roadmap.
+Historical foundation guidance: this section superseded the original broad research targets during Release 1. For current execution priority, use section 4.5. Execute only the requested release, not the entire roadmap.
 
 - **Release 1 contains exactly two profiles: one bounded tequila style and one bounded mezcal style, with exactly one example bottle per profile (two bottles total).** Do not describe either example as representative of every tequila or mezcal.
 - The main product is the style profile: body, a few useful taste notes, smoke where relevant, and finish. The bottle is a small supporting example, not the subject of a detailed research dossier.
@@ -804,6 +804,149 @@ These are claim-specific sources, not blanket endorsement of all content on thei
 5. **Raicilla proposed standard:** https://sidof.segob.gob.mx/notas/docFuente/5650295 and https://platiica.economia.gob.mx/proyectos-de-nom/ — expressly a project, not proof of a final effective standard. Verify the DO declaration separately; do not infer its content from the project.
 6. **Sotol sustainability research starting point:** https://cienciasforestales.inifap.gob.mx/index.php/forestales/article/download/1609/4047?inline=1 — documents pressures on wild stands, not proof of regrowth after heart harvest. Regrowth remains an evidence task.
 7. **Regional vocabulary/context example:** https://www.gob.mx/agricultura/es/articulos/bacanora-orgullo-de-sonora-orgullodemexico — evidence of institutional Mexican usage and local pride; do not reproduce promotional quality or health claims as scientific fact.
+
+
+## 4.5 Follow-up audit and regional expansion — 2026-10-23
+
+**Current priority: post-roadmap pair 18.** These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
+
+### Review baseline and assessment
+
+Reviewed main commit `f0c31211c56c5c98056828b1e55278b26bb23a51`, its data/renderers and pair-17 tests, alongside focused live desktop Chrome journeys on 2026-10-23. The repository was reloaded after the usage reset and still pointed to that commit. This is a plan-only change.
+
+The agent made useful progress: the four-step tasting lesson is practical, chapter links target the relevant chapter, prepared comparisons lead with results, bottle paragraphs generally lead with character, and the requested flags have readable language names. Pair 17 identified and repaired real saved-comparison and catalogue-brand state defects. Preserve these improvements.
+
+Completion is nevertheless partial. Added translations are not consistently consumed, some factual corrections disagree across fields, and the new attribution helper confuses general references with tasting evidence. The release notes report 326 passing tests; this review did not rerun that suite. Focused live checks covered the tasting lesson, language switching, Sonora region discovery, catalogue entries and the prepared comparison. They do not establish exhaustive browser coverage. Native iPhone/iPad Safari, VoiceOver, physical touch and regional-reader validation remain unverified.
+
+| Next pair | Type | Bounded outcome |
+| --- | --- | --- |
+| 18 — Corrective Completion & Editorial Consistency | Maintenance | Resolve the concrete defects below before expanding coverage |
+| 19 — Beyond Oaxaca I | Content | Guerrero, Durango and San Luis Potosí: one bounded profile and one suitable example bottle each |
+| 20 — Regional Expansion I Review | Maintenance | Verify geography, source support, bilingual discovery and learning integration |
+| 21 — Beyond Oaxaca II | Content | Michoacán and Puebla: one bounded profile and one suitable example bottle each; scoped Colima/Nayarit visibility work |
+| 22 — Regional Expansion II Review | Maintenance | Verify the second expansion and the full regional learning path |
+
+Execute only the owner-requested pair, deploy it with evidence, and stop at its handoff. Do not run all five merely because they are planned. New tasks below are unchecked.
+
+### Post-roadmap pair 18 — Corrective Completion & Editorial Consistency (maintenance)
+
+#### P18-1 — Connect Spanish content to every relevant renderer (high)
+
+**Confirmed:** `assets/js/editorial.js` maps singular entities to plural translation buckets but omits `region: "regions"`. Calls using `fieldEs("region", ...)` therefore cannot consume the newly added `content-es.json.regions`. The live Spanish Sonora region still shows English title, description and distinctions. In `plant-tradition-view.js`, several tradition sections read raw English fields rather than their translations. Discovery cards still expose raw taste notes. The Spanish prepared comparison shows English plant context and English profile titles in some remove-control accessible names. Descriptive producer/place fragments also remain English in catalogue records (for example Clande's experience/history clause).
+
+- [ ] Fix the region lookup contract and localize all authored tradition sections, discovery-card taste notes, comparison plant context and control names. Translate descriptive producer/place prose while retaining proper names, scientific names and identifiers.
+- [ ] Review actual rendered output for every region and tradition in EN/ES, plus representative discovery cards, comparison selections and catalogue records. Translation-key presence or absence of raw lookup keys does not prove Spanish completeness.
+- [ ] Add focused DOM regressions for the Sonora region, a translated tradition history, discovery taste notes and comparison plant/remove labels. Keep intentional source titles and proper names exempt from blanket English-word checks.
+
+**Acceptance:** a Spanish-only reader can understand these surfaces without switching languages; existing state, deep links and source references survive switching.
+
+#### P18-2 — Make tasting attribution describe the evidence actually used (high)
+
+**Confirmed:** `profile.js:bottleBasisLine` and `catalogue-view.js:basisLine` duplicate a helper that takes `noteSourceIds` (support for a separate editorial comparison note), or falls back to every `sourceId`, then counts them as the tasting basis. Producer identity and general style pages therefore inflate the apparent tasting evidence. Fortaleza Blanco includes its producer identity reference in the count; La Venenosa Tabernas includes a brand homepage. Indio Alonso's paragraph explicitly says batch tasting notes are unavailable, yet receives a tasting-summary label because its factual listing is classified as a review source. A source's site/type alone does not establish what its cited passage supports.
+
+- [ ] Introduce an explicit, minimal contract linking each sensory summary to its actual supporting sources and voice (reviewer, producer, or clearly identified synthesis). Keep factual-only summaries distinct. Do not repurpose editorial-comparison source IDs.
+- [ ] Share the basis renderer between catalogue and profile. Count only relevant distinct sources, never infer reviewer counts from page counts, and do not turn producer notes into independent reviews.
+- [ ] Use concise, natural EN/ES supporting text, with correct singular/plural grammar; remove forms such as “una fuente(s) reseña”. Keep source access adjacent or immediately discoverable without restoring reviewer-led main paragraphs.
+- [ ] Test reviewed, producer-only, fact-only, missing-tasting and separate-editorial-note cases. Include Fortaleza, La Venenosa, Ocho extra añejo and Indio Alonso. Balam should retain an honest missing-notes message without repeating it unnecessarily.
+
+**Acceptance:** no identity-only or factual-only source is presented as evidence for a sensory summary; the main paragraph still describes the drink first.
+
+#### P18-3 — Correct bottle origins and representative-profile relationships (high)
+
+**Confirmed against producer pages:**
+
+- `montelobos-tobala` is assigned Santiago Matatlán, Oaxaca, and `sierra-norte-oax`, and represents a wild Oaxaca tobalá profile despite its cultivated plant description. [Montelobos's exact expression page](https://www.montelobos.com/our-mezcals/montelobos-tobala/) identifies Palenque del Tentzo, San Nicolás Huajuapan, Puebla. The pair-15 claim ledger's “example bottle cultivated in Santiago Matatlán” is therefore also wrong.
+- `del-maguey-pechuga` lists “Minas de Real del Peñón” and a Sierra Norte producer location. [Del Maguey's exact expression page](https://delmaguey.com/pechuga/) identifies Santa Catarina Minas, Oaxaca. Its direct mapping to the plain joven espadín profile conflicts with its own contextual-only editorial note.
+
+- [ ] Correct expression-specific production place, producer role and geographic references using the exact expression source; distinguish brand creator from actual maker. Preserve uncertainty about historical batches rather than silently replacing every vintage with current specifications.
+- [ ] Remove unsupported representative-profile mappings. Use the established contextual/uncovered mechanism where appropriate; a shared species or spirit does not make a bottle representative of another region, wild/cultivated context or production style.
+- [ ] Audit affected profile examples, plant/tradition links, catalogue, map/discovery, search, lesson references, Spanish text and comparison context. Do not create a new profile solely to hide a mapping defect.
+- [ ] Add relationship regressions covering cultivated Puebla tobalá versus wild Oaxaca tobalá and pechuga versus plain espadín. Append a dated correction to the pair-15 ledger rather than silently erasing its history.
+
+**Acceptance:** correct Puebla bottle facts ship in pair 18; they must not wait for the later Puebla profile. Existing valid URLs continue to resolve, and no inaccurate representative link remains.
+
+#### P18-4 — Finish corrections across all teaching surfaces (medium)
+
+**Confirmed residual contradictions:** the Spanish tobalá description still equates clay with ancestral and copper with artisanal while its process paragraph was corrected; the Spanish valley blanco description still makes an absolute no-oak claim while other fields qualify it. The deeper Meet the Plants passage still explains pre-flowering harvest as redirecting sugars and contrasts sap harvesting as simply keeping the plant alive for repeated collection. Understanding Labels still collapses NOM standard/registration distinctions, including in the new illustrative mezcal label.
+
+- [ ] Reconcile each claim across profile description/category/process, tradition, plant, chapter, glossary, bottle and ES translations against the section 4.4 sources. Resolve the meaning, not just the exact flagged sentence.
+- [ ] Make label examples spirit-specific. Do not apply tequila producer-number conventions as a universal mezcal identifier. Clearly distinguish a standard, producer registration and certification information where relevant.
+- [ ] Finish the practical first-serve guidance for all eight currently covered traditions: a plain-language starting serve, what to notice, an optional alternative, and genuinely optional accompaniments. Define “neat” as without ice or mixers when first used; explain finish as lingering character as well as duration. Preserve the useful four-step lesson and keep detail progressive.
+- [ ] Confirm a reader can find how to serve tequila, mezcal and bacanora from their profiles and from the beginner journey; check the same findability for raicilla, tuxca, comiteco, destilado de pulque and the clearly marked non-agave sotol.
+- [ ] Test changed meanings in rendered EN/ES and perform a documented editorial beginner walkthrough. Do not label that walkthrough actual user research.
+
+#### P18-5 — Complete warm bottle prose and natural regional Spanish (medium)
+
+The bottle-first direction is an improvement, but warmth must still convey character rather than repeat acclaim. Clande Yellow's “Pure magic” and favourite-bottle verdict say little about aroma, texture or finish. Fortaleza's “more complexity than most of the category” reads as the site's comparative judgment after attribution was moved. Catalogue and comparison introductions still contain lengthy model/evidence explanations. Staged local speech remains in passages such as Spanish sotol's “Un sotolero te lo dirá…”. These are editorial findings; regional authenticity has not been validated by local readers.
+
+- [ ] Reopen P16-B/P16-V only where gaps remain. Replace unsupported superiority and vague praise with source-supported sensory detail or useful production/place facts; preserve attribution for opinions whose subjective nature matters.
+- [ ] Move routine data-model/evidence explanations into supporting information while keeping material composition, batch and missing-evidence qualifications close to the claim.
+- [ ] Remove remaining invented local testimony; build warmth through documented place, makers, vocabulary, foods and occasions. Use restrained regional Mexican Spanish without caricature, forced slang or claiming to speak for a state.
+- [ ] Correct residual language defects such as “cucción”, “de el bacanora”, awkward “se leen sabrosos” phrasing and inconsistent grammatical gender. Review entire affected paragraphs rather than isolated replacements.
+- [ ] Record representative EN/ES before/after examples and their source basis. Keep regional-reader feedback pending unless real feedback is obtained; do not invent an approval or a native-editor review.
+
+#### P18-6 — Verify the contracts and repair the completion record (medium)
+
+- [ ] Keep the UK/Mexican flags and readable language names. The compact target-language toggle is acceptable, but expose the current edition accessibly as required by P16-L2. The pair-17 language test currently checks target wording and preference persistence, not the claimed current-choice announcement; strengthen the assertion or correct the claim.
+- [ ] Preserve pair-17 saved-comparison and catalogue-brand round-trip tests. Add semantic coverage for P18-1–4 instead of more text-presence checks that permit the same errors.
+- [ ] Run relevant tests and `npm run validate`; verify changed flows on deployed Pages in EN/ES, including direct links, Back/Forward and a language switch mid-journey. Record the actual deployed commit and environments.
+- [ ] Append a dated release-note correction distinguishing implemented, verified, reopened and still-unverified requirements. Do not equate a passing suite with factual accuracy, natural Spanish or native-device verification.
+- [ ] Reconcile historical scope instructions with the already shipped eight traditions: preserve sotol as an explicitly non-agave adjacent tradition; this does not authorize broad expansion into unrelated non-agave spirits. Update the current execution pointer after the release.
+
+**Exit gate:** all high-priority items are fixed and verified; remaining medium items have explicit dispositions, evidence and owner-visible limitations. Do not mark the audit complete solely because the existing suite passes.
+
+### Post-roadmap pair 19 — Beyond Oaxaca I (feature/content)
+
+These are priority coverage gaps, not a claim that other Mexican states lack traditions.
+
+| State | Bounded starting subject | Teaching purpose |
+| --- | --- | --- |
+| Guerrero | A documented cupreata / locally named papalote mezcal context | Introduce a major mezcal region outside Oaxaca and show why local plant names need geographic context |
+| Durango | A documented cenizo / Agave durangensis mezcal context | Introduce a northern mezcal tradition through a specific maker, plant and production example |
+| San Luis Potosí | A documented salmiana mezcal context | Show another plant/production context without assuming every mezcal shares Oaxaca's processes or a smoke-led taste |
+
+- [ ] Add at most three bounded profiles, each with one suitable expression-matched example bottle. Verify local alias/species usage; do not promote plant names to spirit families or impose a single taste on a state.
+- [ ] For each profile provide concise character, place and maker context, a practical first serve, one useful comparison with existing coverage and a clear next reading step. Use warm EN and natural Mexican Spanish from the start.
+- [ ] Reuse the existing entity model, sources, region/state discovery, map/list, catalogue, search, glossary and comparison paths. No second catalogue or new navigation system.
+- [ ] Follow bounded research: one suitable style reference and producer identity plus one expression-matched review for a sensory example; one replacement candidate if blocked. Omit unsupported optional details. If an essential evidence gate cannot be met, record that candidate as deferred rather than inventing sensory data.
+- [ ] Show actual app coverage only. Check current official declarations/amendments only for legal claims being published; a state or municipality's protected status is not itself a tasting profile.
+
+### Post-roadmap pair 20 — Regional Expansion I Review (maintenance)
+
+- [ ] Verify all three additions' plant aliases, maker versus brand identity, production place, profile/bottle fit and sensory source links; sample the published prose against the cited passages.
+- [ ] Test EN/ES search with accented/unaccented local names, map/list and region routes, profile/catalogue round trips, prepared comparisons and unknown-data handling. Avoid tests pinned only to a total record count.
+- [ ] Confirm comparison explanations derive from supported profile differences, not presumed geography; check Spanish rendering, keyboard access and phone-width wrapping.
+- [ ] Walk beginner → region/profile → serving advice → example bottle → next comparison, and enthusiast → exact bottle → production/source detail → contextual return.
+- [ ] Deploy and record validation and actual browser/device checks; explicitly retain unavailable native-device checks as open.
+
+### Post-roadmap pair 21 — Beyond Oaxaca II (feature/content)
+
+- [ ] **Michoacán:** add one documented cupreata or inaequidens context, selected by the strongest bounded evidence, with one example bottle. Explain regional naming and production differences without flattening the state into one style.
+- [ ] **Puebla:** add one documented papalometl context with one suitable example bottle. Reuse the corrected Montelobos record only if it genuinely matches the chosen profile; do not duplicate a bottle to satisfy the count or silently equate all local plant names.
+- [ ] **Colima visibility:** review the existing Jalisco–Colima tuxca context and make Colima's documented role findable through explanatory regional content. A Jalisco-made bottle does not establish Colima production coverage.
+- [ ] **Nayarit visibility:** explain the documented Bahía de Banderas connection to raicilla with precise geographic scope. Do not describe all Nayarit as a legal production area or create profile/map coverage without a matching documented profile.
+- [ ] Keep this release to two new profiles with one example each, plus concise Colima/Nayarit contextual refinements. If either refinement needs a genuinely new profile or bottle research beyond this scope, record a separate later candidate; do not silently expand the batch.
+- [ ] Apply pair 19's bilingual, serving, evidence and integration gates to both additions.
+
+### Post-roadmap pair 22 — Regional Expansion II Review (maintenance)
+
+- [ ] Repeat pair 20's relevant semantic and reader-journey checks for Michoacán/Puebla and verify Colima/Nayarit contextual links do not overstate production, legal scope or app coverage.
+- [ ] Check that corrected Puebla bottle geography remains consistent across the earlier Oaxaca profile, catalogue, plants, regions and lessons.
+- [ ] Read the five added regional introductions together: each should teach a concrete difference and invite a sensible next step without repeating one formula or presenting dialect stereotypes.
+- [ ] Verify no regressions in established tequila, bacanora, raicilla, tuxca, comiteco, destilado de pulque or sotol paths. Document deployment, sources, remaining evidence gaps and actual device coverage.
+
+### Regional research starting points
+
+These support candidate selection, not ready-made bottle tasting notes or a current legal-boundary inventory. Verify the specific claim and effective source version when implementing.
+
+- Guerrero: [Secretaría de Cultura regional gastronomy record](https://sic.cultura.gob.mx/ficha.php?table=gastronomia&table_id=50).
+- Durango/cenizo: [INIFAP agave propagation and sustainability](https://www.gob.mx/inifap/articulos/sustentabilidad-del-agave-comercial-por-medio-de-su-reproduccion).
+- San Luis Potosí/salmiana: [CONAFOR management and biomass resource](https://www.gob.mx/conafor/documentos/manual-mejores-practicas-de-manejo-y-ecuaciones-alometricas-de-biomasa-de-agave-salmiana-sen-el-estado-de-slp).
+- Michoacán: [2012 mezcal declaration amendment](https://www.gob.mx/cms/uploads/attachment/file/494491/4.Mezcal.22.11.2012.pdf), historical starting point; check subsequent amendments before current legal claims.
+- Puebla: [Agricultura on espadín and papalometl producers](https://www.gob.mx/agricultura/prensa/mezcal-poblano-llega-a-nueva-york-con-mas-de-6-mil-botellas-de-espadin-y-papalometl-agricultura).
+- Colima: existing S7 regional reference; verify a specific producer before adding bottle-level coverage.
+- Bahía de Banderas: [Municipal raicilla context](https://www.bahiadebanderas.gob.mx/turismo-bdb/raicilla/) and existing S3 declaration; do not copy broad technical generalizations from tourism prose.
+- Bottle corrections: the exact Montelobos and Del Maguey producer pages linked in P18-3.
 
 
 ## 5. Editorial and sourcing policy
