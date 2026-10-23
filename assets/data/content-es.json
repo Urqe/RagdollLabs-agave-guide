@@ -43,8 +43,8 @@
     },
     "bacanora-pacifica-sierra-sonora": {
       "title": "Bacanora, estilo Agave Pacifica (Sierra de Sonora)",
-      "context": "El bacanora es el destilado silvestre que Sonora llama suyo: destilado de Agave angustifolia pacifica (aquí le decimos Pacifica, o Yaquiana) en la Sierra Madre de Sonora, con denominación de origen que cubre 35 municipios sonorenses. Durante gran parte del siglo XX (1915–1992, según la historia oficial de Sonora) hacerla fue prohibido, y se siguió destilando en la sierra, en voz baja; la producción se legalizó de nuevo en 1992 y la denominación de origen llegó en el año 2000 — dos hitos separados. Esa continuidad es el corazón de la tradición: el bacanora sobrevivió porque las familias siguieron destilándolo, en vinatas pasadas de una generación de vinateros a la siguiente.",
-      "description": "La bacanora tradicional asa los corazones de agave en hornos subterráneos, a menudo con leña de mezquite, fermenta con levaduras silvestres y destila dos veces, dando un destilado que se ubica estilísticamente entre el tequila y el mezcal oaxaqueño: agave asado en el centro con un humo generalmente más suave que el del mezcal, más hierbas del desierto y un filo mineral de la sierra.",
+      "context": "El bacanora es el destilado silvestre que Sonora llama suyo: destilado de Agave angustifolia pacifica (aquí le decimos Pacifica, o Yaquiana) en la Sierra Madre de Sonora, con denominación de origen que cubre 35 municipios sonorenses. Durante gran parte del siglo XX (1915–1992, según la historia oficial de Sonora) hacerlo fue prohibido, y se siguió destilando en la sierra, en voz baja; la producción se legalizó de nuevo en 1992 y la denominación de origen llegó en el año 2000 — dos hitos separados. Esa continuidad es el corazón de la tradición: el bacanora sobrevivió porque las familias siguieron destilándolo, en vinatas pasadas de una generación de vinateros a la siguiente.",
+      "description": "La producción tradicional de bacanora asa los corazones de agave en hornos subterráneos, a menudo con leña de mezquite, fermenta con levaduras silvestres y destila dos veces, dando un destilado que se ubica estilísticamente entre el tequila y el mezcal oaxaqueño: agave asado en el centro con un humo generalmente más suave que el del mezcal, más hierbas del desierto y un filo mineral de la sierra.",
       "beginnerNote": "¿Nuevo en el bacanora? Piénsalo como el primo sonorense del mezcal: mismo corazón de agave asado, normalmente un poco menos humo, a menudo más ligero y herbáceo.",
       "category": "Bacanora — destilado con Denominación de Origen propia (Sonora, desde 2000)",
       "process": "Asado en horno (a menudo con mezquite), fermentación con levaduras silvestres, doble destilación",
@@ -324,12 +324,12 @@
         ],
         "notice": "Qué notar primero: el arranque floral y la textura sedosa — el tobalá silvestre suele ser más discreto que su fama."
       },
-      "whyItTastes": "El pequeño tobalá silvestre madura en un rango variable según la fuente (a menudo citado alrededor de 12–15 años) en altitud, dando rendimientos muy bajos; los reseñistas describen carácter concentrado en algunos lotes, y el asado en pozo y a menudo la destilación en ollas de barro mantienen la cucción suave. La variación entre lotes es genuina y grande — una cata ciega citada no encontró un solo hilo común.",
+      "whyItTastes": "El pequeño tobalá silvestre madura en un rango variable según la fuente (a menudo citado alrededor de 12–15 años) en altitud, dando rendimientos muy bajos; los reseñistas describen carácter concentrado en algunos lotes, y el asado en pozo y a menudo la destilación en ollas de barro mantienen la cocción suave. La variación entre lotes es genuina y grande — una cata ciega citada no encontró un solo hilo común.",
       "plant": "Agave potatorum (tobalá; mayormente de recolección silvestre, algo cultivado — revisa la botella)"
     },
     "sotol-chihuahua": {
       "title": "Sotol, estilo desierto chihuahuense",
-      "context": "Un sotolero te lo dirá sin rodeos: el sotol no es agave, y está orgulloso de ello. El sotol se destila de plantas del género Dasylirion (sotol o sereque), nativas del desierto chihuahuense — parientes del agave en la familia Asparagaceae que comparten la lógica del asado de piña. Tiene Denominación de Origen desde 2002, que cubre solo Chihuahua, Coahuila y Durango; su historia del siglo XX incluye regulación restrictiva y producción clandestina (el marco legal exacto varía según la época y el lugar; esta guía no afirma una sola prohibición nacional antes de 1994). Esta guía lo incluye como tradición afín al agave, etiquetado con honestidad: el sotol no es un destilado de agave, y decirlo es parte de su historia. Este perfil describe el estilo del desierto de Chihuahua.",
+      "context": "El sotol es el destilado del desierto: se destila de plantas del género Dasylirion (sotol o sereque), nativas del desierto chihuahuense — parientes del agave en la familia Asparagaceae que comparten la lógica del asado de piña, y con orgullo no son agave. Tiene Denominación de Origen desde 2002, que cubre solo Chihuahua, Coahuila y Durango; su historia del siglo XX incluye regulación restrictiva y producción clandestina en la sierra norte (el marco legal exacto varía según la época y el lugar; esta guía no afirma una sola prohibición nacional antes de 1994). Las vinatas de la sierra mantuvieron viva la tradición en un trabajo callado, de una generación a otra — los mismos hogares chihuahuenses que hoy se sirven su sotol. Este perfil describe el estilo del desierto de Chihuahua.",
       "description": "El sotol asa la piña de Dasylirion en hornos cónicos (o la cuece al vapor los productores más grandes), fermenta silvestre y destila en cobre o barro. El resultado es un destilado herbal, fresco y ligeramente picante, más verde y salvaje que el tequila, con un humo generalmente más ligero que el del mezcal.",
       "beginnerNote": "¿Nuevo en el sotol? Espera frescura herbácea y de pasto húmedo sobre un humo suave — más cercano a un primo verde y salvaje del mezcal que al tequila.",
       "category": "Sotol — destilado con Denominación de Origen propia (Chihuahua, Coahuila, Durango, desde 2002); explícitamente no es un destilado de agave, incluido aquí como una tradición norteña afín",
@@ -371,7 +371,7 @@
   },
   "bottles": {
     "fortaleza-blanco": {
-      "reviewSummary": "Un blanco del valle de referencia: agave cocido sabroso y firme, con salmuera de aceituna y pimienta, y más complejidad que la mayoría de su categoría.",
+      "reviewSummary": "Un blanco del valle de referencia: agave cocido sabroso y firme, con salmuera de aceituna y pimienta negra, y un final largo y mineral.",
       "producer": "Tequila Fortaleza (destilería Fortaleza, Tequila, Jalisco)"
     },
     "lost-explorer-espadin": {
@@ -394,7 +394,7 @@
     },
     "kilinga-bacanora-silvestre": {
       "reviewSummary": "Flores silvestres, cítricos y la acidez de la manzana verde, con un suave final violeta — una bacanora aromática y moderadamente compleja.",
-      "editorialNote": "Una lectura más afrutada y floral de el bacanora que la que describe este perfil — la acidez de manzana verde y el final violeta quedan fuera del centro mineral y sabroso del ejemplo de Rancho Tepúa.",
+      "editorialNote": "Una lectura más afrutada y floral del bacanora que la que describe este perfil — la acidez de manzana verde y el final violeta quedan fuera del centro mineral y sabroso del ejemplo de Rancho Tepúa.",
       "producer": "Rodrigo Bojórquez Bours (vinata familiar, Álamos, Sonora)"
     },
     "la-venenosa-costa": {
@@ -512,7 +512,7 @@
       "producer": "Indio Alonso (tuxquero de quinta generación David Benítez Venegas), Zapotitlán de Vadillo, Jalisco"
     },
     "clande-sotol-yellow": {
-      "reviewSummary": "Magia pura en aroma y sabor para sus reseñistas — uno lo llamó su sotol favorito probado hasta ahora; el proyecto de terruño de la marca apoya a pequeños productores locales y la conservación del Dasylirion.",
+      "reviewSummary": "Notas de plátano, madera, queso cotija, miel y nueces según la reseña citada, de un sotolero de cuarta generación clandestina; el proyecto de terruño de la marca apoya a pequeños productores locales y la conservación del Dasylirion.",
       "batch": "Lotes pequeños de Dasylirion silvestre; las etiquetas codificadas por color de Clande marcan cada una a un sotolero distinto — la etiqueta amarilla es Bienvenido Fernandez",
       "abvNote": "La graduación varía por lote (una reseña de miembro citada lista 46,5% para un lote de marzo de 2018); revisa tu botella",
       "producer": "Bienvenido Fernandez (más de 40 años de oficio; aprendió en las vinatas clandestinas de la sierra norte chihuahuense), Chihuahua"
@@ -699,7 +699,7 @@
       "atAGlance": "El gran caballo de batalla de México: espadín en el mezcal de Oaxaca, Pacifica/Yaquiana en el bacanora sonorense, chico aguiar en la raicilla de la costa.",
       "whereItGrows": "Valles Centrales de Oaxaca (cultivado), la Sierra de Sonora (silvestre) y la costa de Jalisco (silvestre y cultivado).",
       "harvestProduction": "Cultivado a escala en Oaxaca; de cosecha silvestre en Sonora. Cocido (pozo o vapor), nunca por savia.",
-      "sensoryTendencies": "Orientación editorial: los mezcales de espadín se leen con asado; la Pacifica de el bacanora aporta herbalidad sonorense; los sabores difieren por lugar y proceso, no por el nombre.",
+      "sensoryTendencies": "Orientación editorial: los mezcales de espadín se leen con asado; la Pacifica del bacanora aporta herbalidad sonorense; los sabores difieren por lugar y proceso, no por el nombre.",
       "sustainability": "Las presiones de cosecha silvestre varían mucho por región: el bacanora sonorense depende de poblaciones silvestres de yaquiana/Pacifica, y el crecimiento del mezcal ha aumentado la demanda sobre parientes angustifolia de cosecha silvestre en otras partes. Donde el espadín se cultiva a escala (Oaxaca) la presión es mucho menor. Si la Pacifica/Yaquiana sonorense es la misma planta que el espadín o una variedad local distinta sigue en debate; esta guía conserva los nombres regionales sin zanjar la botánica. (El reporte sobre cosecha de agave silvestre es un tema activo en la prensa de la categoría, p. ej. Mezcalistas, revisado el 21-10-2026.)",
       "uncertainty": "Si la pacífica/yaquiana de Sonora es la misma planta que el espadín o una variedad local distinta está en debate; la app conserva los nombres regionales sin resolver la botánica."
     },
@@ -855,7 +855,7 @@
       "intro": "Material de referencia para entusiastas: las páginas completas de plantas, procesos y vocabulario de etiqueta detrás de los capítulos — con fuentes honestas.",
       "block0": "Las páginas de referencia de plantas registran identidad científica, nombres comunes regionales, cultivo, incertidumbre botánica honesta y fuentes. Las páginas de procesos explican cada etapa de producción con los perfiles que la usan. El glosario define cada término de etiqueta en contexto.",
       "block1": "La sostenibilidad importa para los agaves de cosecha silvestre: la reproducción lenta y solo por semilla del tobalá hace vulnerables a las poblaciones silvestres, y la larga maduración del sotol hace decisiva la práctica de cosecha. El bacanora y la raicilla suman la misma preocupación a escala de tradición — ambas dependen de agaves silvestres en Sonora y Jalisco — mientras que el espadín y el azul weber cultivados soportan una presión mucho menor. Las páginas de planta y tradición de esta guía establecen estas distinciones con fuentes fechadas, y marcan las afirmaciones de los productores como no verificadas donde la evidencia es escasa.",
-      "block2": "Las denominaciones evolucionan: la protección de el bacanora data de 2000, la de la raicilla de 2019, la del sotol de 2002. Esta guía registra fechas de verificación con cada fuente y revisa enmiendas antes de publicar resúmenes legales — una URL alcanzable nunca prueba una afirmación por sí sola.",
+      "block2": "Las denominaciones evolucionan: la protección del bacanora data de 2000, la de la raicilla de 2019, la del sotol de 2002. Esta guía registra fechas de verificación con cada fuente y revisa enmiendas antes de publicar resúmenes legales — una URL alcanzable nunca prueba una afirmación por sí sola.",
       "block2deeper": "La geografía legal es municipal, no estatal: la denominación del bacanora cubre municipios seleccionados de Sonora, y la de la raicilla nombra municipios específicos de Jalisco y Nayarit. El sombreado del mapa significa cobertura de la guía, nunca límites legales."
     }
   },
@@ -941,7 +941,7 @@
     "tequila-valley-jal": {
       "name": "Valle de Tequila, Jalisco",
       "geography": "Valle bajo alrededor del pueblo de Tequila; suelos volcánicos, más cálido y seco que los Altos.",
-      "distinctions": "El agave tiende a crecer más pequeño y herbáceo que el de los Altos; los blancos del valle se leen sabrosos y vegetales en la guía editorial — una descripción cultural, no un límite legal."
+      "distinctions": "El agave tiende a crecer más pequeño y herbáceo que el de los Altos; los blancos del valle tienden a lo sabroso y vegetal en la lectura editorial — una descripción cultural, no un límite legal."
     },
     "tequila-highlands-jal": {
       "name": "Los Altos de Jalisco (La Alteña), Jalisco",
@@ -961,7 +961,7 @@
     "sierra-sonora": {
       "name": "Sierra de Sonora, Sonora",
       "geography": "Municipios de montaña (Aconchi, Álamos, San Pedro de la Cueva y vecinos) donde trabajan las vinatas bacanoreras.",
-      "distinctions": "La cobertura oficial de el bacanora es municipal dentro de Sonora (desde la DO de 2000), nunca todo el estado."
+      "distinctions": "La cobertura oficial del bacanora es municipal dentro de Sonora (desde la DO de 2000), nunca todo el estado."
     },
     "sierra-occidental-jal": {
       "name": "Sierra Occidental de Jalisco",
