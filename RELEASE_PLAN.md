@@ -1,13 +1,17 @@
 # RagdollLabs Agave Guide — Release Plan
 
 Status: release roadmap; current implementation/deployment progress must be checked in the repository.  
-Updated: 2026-10-22  
+Updated: 2026-10-23  
 Confirmed repository name: `RagdollLabs-agave-guide`  
 Product subtitle: **Explore Mexico’s agave spirits**
 
-## Implementation priority — small, profile-first foundation
+## Current execution priority — refinement after post-roadmap pair 7
 
-This section supersedes any earlier broad research targets. Execute only the requested release, not the entire roadmap.
+The next planned release is **post-roadmap pair 8 — Relevance & Reading Review**, followed by pairs 9–14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
+
+## Implementation priority — small, profile-first foundation (historical)
+
+Historical foundation guidance: this section superseded the original broad research targets during Release 1. For current execution priority, use section 4.2. Execute only the requested release, not the entire roadmap.
 
 - **Release 1 contains exactly two profiles: one bounded tequila style and one bounded mezcal style, with exactly one example bottle per profile (two bottles total).** Do not describe either example as representative of every tequila or mezcal.
 - The main product is the style profile: body, a few useful taste notes, smoke where relevant, and finish. The bottle is a small supporting example, not the subject of a detailed research dossier.
@@ -463,6 +467,122 @@ Applied (see the pair 7 notes in RELEASE_NOTES.md). Owner review of the deployed
 - [x] Regression tests: pin the two-column profile layout (story and character side by side at wide widths, stacked at narrow), the compact typography tokens, and the presence/behavior of the persistent search on the profile view.
 
 Acceptance: on a laptop viewport (~1280px) the profile page shows the story and the full "Character in the glass" block with all sliders simultaneously, with search reachable without leaving the view; on a ~390px viewport the layout matches today's mobile behavior. All existing tests pass (jsdom suites, accessibility checks, tap-target rules); `npm run validate` green; manual mobile/desktop spot-checks reported with remaining limitations.
+
+## 4.2 Active refinement sequence — Beginner Guidance & Enthusiast Usability
+
+Added: 2026-10-23. Status: **planned; not implemented**. This sequence follows completed post-roadmap pair 7 and responds to the desktop UI/UX review of the live site and repository. Existing learning chapters, profiles, comparisons and reference pages are useful foundations; refine their presentation and connections rather than rebuilding them.
+
+### Execution order and boundaries
+
+- Execute **pair 8 next**, then pairs 9–14 in order. Execute only the release the owner requests; this planning update does not authorize implementing the sequence.
+- Releases 1–26 and post-roadmap pairs 1–7 remain historical records. Old unchecked foundation tasks are not instructions to restart the app; verify implementation and release notes before reopening any item.
+- Preserve the warm regional storytelling, green/amber visual identity, compact desktop profile layout, readable mobile layout, source disclosures and bilingual support. Do not revive the already rejected story-behind-disclosure pattern or make every page airy again.
+- Keep all current coverage, stable entity IDs, profile links, existing comparison selections and source attribution. These releases add no new spirits, regions, bottles, live services, accounts or analytics.
+- The review confirmed desktop presentation and inspected selected workflows. Native iPhone/iPad Safari, physical touch and VoiceOver remain **unverified**, not confirmed defects and not passed checks.
+- Completed chapter organization is not the same as a guided beginner experience. Pair 9 adds a short optional route through existing material; it does not reopen Release 19 as unfinished.
+- This sequence does not revisit historical scope disagreements about agave-adjacent traditions. Retain current coverage and accurate botanical distinctions; any future scope change requires a separate decision.
+
+| Order | Release | Purpose | Dependency |
+| --- | --- | --- | --- |
+| 1 | Post-roadmap pair 8 — Relevance & Reading Review | Correct misleading teaching links, repetitive prose and internal-facing copy | Completed pair 7 |
+| 2 | Post-roadmap pair 9 — Your First Agave Spirit | Add a brief, optional beginner journey ending in a prepared comparison | Pair 8 |
+| 3 | Post-roadmap pair 10 — Beginner Journey Review & Fixes | Validate learning progression, bilingual navigation and return paths | Pair 9 |
+| 4 | Post-roadmap pair 11 — Clear Discovery Entrances | Give browsing and contextual discovery distinct, understandable jobs | Pair 10 |
+| 5 | Post-roadmap pair 12 — Discovery Review & Fixes | Verify search, map/list, deep links and navigation consistency | Pair 11 |
+| 6 | Post-roadmap pair 13 — Browseable Bottle Catalogue | Add useful filters and compact summaries with optional depth | Pair 12 |
+| 7 | Post-roadmap pair 14 — Catalogue & End-to-End Review | Validate catalogue identity, accessibility and both audience journeys | Pair 13 |
+
+### Post-roadmap pair 8 — Relevance & Reading Review (maintenance)
+
+Goal: correct concrete teaching and reading friction before adding another navigation surface. Apply the mandatory maintenance protocol, scoped to these findings and adjacent behavior.
+
+1. [ ] **Fix educational recommendation relevance.** The valley blanco profile currently offers highland extra añejo under “same plant, different region,” changing maturation as well as region despite an existing highland blanco profile. Prefer candidates matching tradition, class/maturation and documented method where possible, then differing in region. Do not claim that region is the sole variable when other material differences remain.
+2. [ ] Make recommendation selection deterministic with stable tie-breaking and exclude self-links and duplicate destinations. Reuse existing recommendation logic where appropriate rather than creating another ranking system. If no suitably comparable candidate exists, omit the perspective or explain the additional differences.
+3. [ ] Replace raw shared-dimension explanations such as “Shares Perceived sweetness” with useful language explaining the overlap. Shared absence or a low score alone should not imply strong overall similarity. Keep recommendations bounded to documented profile data.
+4. [ ] Tighten repeated profile introductions. On the valley blanco profile, context, description, beginner note and “why it tastes this way” repeat the unaged/agave-led point. Give each block a distinct purpose: local identity, accessible explanation, causal context, then sensory detail. Preserve regional warmth, technical facts and qualifications; apply the same review only where repetition is present elsewhere.
+5. [ ] Remove internal implementation language from visitor-facing text, including “per the plan,” app eligibility and coverage/mapping rationales. Preserve honest missing-information disclosures in plain language. Audit catalogue relationship headings too: an uncovered bottle must not be introduced as fitting a profile it is explicitly excluded from.
+6. [ ] Keep one short, relevant explanation of editorial style guidance per view. Move extended methodology into reference material while retaining bottle-specific attribution, botanical uncertainty and other qualifications necessary to interpret a claim.
+7. [ ] Add focused regressions for the existing valley/highland blanco recommendation, deterministic fallback behavior and contradictory catalogue relationship labels. Run the relevant suites and normal validation.
+
+Acceptance: valley blanco recommends highland blanco for the regional learning link; other perspectives do not imply controlled comparisons when several variables change. Readers can understand a profile without repeated definitions or development terminology. EN/ES meaning and source access remain intact.
+
+### Post-roadmap pair 9 — Your First Agave Spirit (feature/UX)
+
+Goal: turn “New to agave?” into a manageable first experience, with an obvious next action and an optional route into enthusiast depth.
+
+1. [ ] Add a concise learning start page stating the outcome: recognise a few useful flavour differences and understand a first comparison. No bottle purchase, alcohol consumption, account, quiz or sequential completion is required.
+2. [ ] Offer short, individually addressable steps using existing material: **what these spirits are → how to taste → recognise agave, smoke, body and oak → try a comparison → choose what to explore next**. Teach perceived sweetness versus sugar where relevant without front-loading all legal and botanical exceptions.
+3. [ ] Give each step one principal idea, a concrete example and a clear Next/Previous action. Provide a visible step list and direct skipping; keep content readable without completing previous steps.
+4. [ ] Open an explicitly labelled prepared comparison of the existing valley blanco and valley reposado profiles to explain wood resting. Explain that these are typical styles rather than an experiment isolating every production variable. Link the lesson to the existing comparison engine; do not duplicate sensory data or silently overwrite a user's saved comparison.
+5. [ ] Provide an optional second exercise comparing valley and highland blanco, reusing pair 8's relevance corrections. Explanations should describe tendencies and other possible influences rather than claim geography determines flavour.
+6. [ ] Give each lesson one or two short example links/cards with a reason to open them. Replace unwieldy chains of full profile titles in the new journey; make returning to the originating lesson explicit.
+7. [ ] Keep the seven existing chapters and plant/process/glossary references directly available as deeper reading. Offer this reference entrance near the journey start; experienced users must not traverse onboarding.
+8. [ ] Use stable lesson identifiers and routes consistent with the existing router. Preserve current Learn and glossary URLs through compatible destinations or redirects. Support reload and browser Back/Forward; keep progression local and optional if persistence is useful.
+9. [ ] Deliver Mexican Spanish parity for every new lesson, navigation control, example explanation and comparison handoff in the same release. Reuse canonical content and references; do not fork an unsourced beginner dataset.
+
+Acceptance: a newcomer can enter from the homepage, learn the essentials in a short session, open the prepared comparison, understand the principal difference and return to the lesson. An enthusiast can bypass the journey and open existing references immediately.
+
+### Post-roadmap pair 10 — Beginner Journey Review & Fixes (maintenance)
+
+1. [ ] Follow the beginner journey from a fresh visit in EN and ES, including reading without a glass, skipping lessons, opening an example, returning, reloading a lesson and using Back/Forward.
+2. [ ] Verify focus moves to a meaningful heading, the active step is announced, links have useful names and progress/selection is not conveyed by colour alone.
+3. [ ] Verify the prepared comparison handles existing empty, partial and full selections without silently destroying user choices; invalid or retired lesson IDs produce a useful recovery.
+4. [ ] Review cognitive load: each step has one clear primary action, jargon is explained at first use and legal/reference detail is optional.
+5. [ ] Test relevant mobile layouts, text enlargement, reduced motion and keyboard access. Record actual iPhone/iPad Safari and VoiceOver results separately from desktop or DOM evidence.
+6. [ ] Implement confirmed fixes, run focused regressions and normal validation, and verify the deployed lesson links.
+
+Acceptance: the new route teaches a coherent sequence without blocking free exploration, losing comparison state or stranding readers in a reference page. Report untested native-device behavior explicitly.
+
+### Post-roadmap pair 11 — Clear Discovery Entrances (feature/UX)
+
+Goal: remove uncertainty about where to browse while preserving the cross-linked content model.
+
+1. [ ] Give the existing destinations distinct visible jobs: **Browse styles** for searchable/filterable profile browsing; **Plants & places** for contextual discovery by tradition, flavour, plant and region. Keep existing Explore/Discover routes compatible and use the same labels consistently in navigation, headings and back links.
+2. [ ] On the contextual discovery landing page, lead with familiar spirit traditions and approachable flavour paths. Keep plant and region entrances prominent but secondary; present common plant names before scientific names where documented, preserving regional-name ambiguity.
+3. [ ] Replace the first impression of long alphabetical taxonomy lists with compact, clearly titled entry groups. Keep full lists reachable and searchable. Correct “three ways in” wording if four routes, including flavour, are offered.
+4. [ ] Keep Mexico map/list access clearly labelled as browsing by place. Preserve app-coverage versus legal-boundary distinctions, selected place and filtered results on return.
+5. [ ] Align homepage actions with the actual destinations: browse styles, compare, new-to-agave journey and bottles. Make the beginner action easy to find without replacing the main browsing action.
+6. [ ] Provide one clear onward action and contextual return on plant, tradition, region and flavour pages. Do not add another sidebar or duplicate the catalogue inside discovery.
+7. [ ] Translate labels, descriptions and accessible names together. Preserve bilingual aliases, existing entity links and shared search logic.
+
+Acceptance: a first-time visitor can distinguish “find a style” from “understand a plant/place/tradition” before clicking. Known-name search and enthusiast reference access remain direct.
+
+### Post-roadmap pair 12 — Discovery Review & Fixes (maintenance)
+
+1. [ ] Validate homepage → browse/filter → profile → return and discovery → plant/region/tradition/flavour → profile → return, in both languages.
+2. [ ] Verify existing bookmarks, legacy routes, invalid IDs, browser history and selected map/filter context after the visible-label changes.
+3. [ ] Review scientific/common-name presentation for misleading alias merges and confirm sotol remains explicitly non-agave.
+4. [ ] Test keyboard traversal, selected navigation state, focus restoration, touch targets and narrow-width wrapping. Inspect map/list equivalence on environments actually available.
+5. [ ] Implement corrections, add targeted behavioral regressions and verify deployed destinations. Preserve remaining native Safari/touch checks as unverified until performed.
+
+Acceptance: clearer entrances preserve the established search, map, comparison and reference contracts, with consistent navigation language across all views.
+
+### Post-roadmap pair 13 — Browseable Bottle Catalogue (feature/UX)
+
+Goal: help readers find and assess existing bottles without scanning a full alphabetical dossier.
+
+1. [ ] Add a spirit/tradition filter beside catalogue search, plus a clear reset and visible result count. Combine search and filter predictably; show a useful no-results state.
+2. [ ] Present compact summaries: brand/expression, tradition, producer/place where documented, ABV or a concise unknown state, and a short attributed character note where supported.
+3. [ ] Put longer production, composition, batch and source details behind clearly labelled optional disclosure. Keep material composition distinctions and warnings about varying ABV apparent where needed; compact presentation must not mislead.
+4. [ ] Keep producer notes, reviewer impressions and editorial synthesis distinguishable. Do not invent tasting summaries for factual-only entries.
+5. [ ] Offer a style-profile link only where the mapping genuinely matches the expression. Describe uncovered entries plainly; an aged sotol or añejo mezcal must not appear equivalent to a mismatched unaged or reposado profile merely to provide a destination.
+6. [ ] Preserve stable bottle anchors, direct-link discovery, filter/search state and sensible focus when returning from a profile. If a linked bottle is inside collapsed content or outside current filters, reveal it or clearly offer to show it.
+7. [ ] Remove redundant brand-list repetition where it adds no navigation value; retain useful brand browsing through a compact index or jump links if justified by the existing catalogue.
+8. [ ] Deliver all controls, result messages, summaries and disclosures in EN/ES. Extend existing catalogue rendering and search contracts rather than introducing a separate bottle database.
+
+Acceptance: users can find a known bottle or browse an existing tradition quickly, open technical depth on demand and distinguish bottle evidence from typical style guidance. No new content research or price/availability features are required.
+
+### Post-roadmap pair 14 — Catalogue & End-to-End Review (maintenance)
+
+1. [ ] Verify combined search/filter/reset, no results, unknown fields, disclosure state, bottle anchors and profile return paths in EN/ES.
+2. [ ] Audit all changed expression/profile links against tradition, region, class and documented production context. Keep factual-only entries accessible without fabricated sensory levels.
+3. [ ] Review compact summaries for lost attribution, hidden composition distinctions and inconsistent producer identity. Confirm sources remain reachable.
+4. [ ] Verify keyboard and screen-reader disclosure semantics, result announcements, focus, readable text and touch targets at phone, tablet and desktop widths. Report native Safari/VoiceOver evidence honestly.
+5. [ ] Run two complete acceptance scenarios: **beginner: homepage → lesson → prepared comparison → profile → lesson**; **enthusiast: known-name search or discovery → bottle/profile → technical reference → contextual return**.
+6. [ ] Implement confirmed issues and focused regressions; run normal validation and verify published paths, asset refresh and rollback reference. Record remaining limitations and do not mark any release complete solely because DOM tests pass.
+
+Acceptance: both audience journeys work coherently with existing content, no dead-end learning links or contradictory profile mappings, and no loss of the compact visual hierarchy. Reassess further content expansion only after these usability releases are reviewed.
+
 
 ### Mandatory protocol for every maintenance release
 
