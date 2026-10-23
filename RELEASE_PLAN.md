@@ -660,7 +660,7 @@ Acceptance: a Spanish-only reader can understand the new journey and catalogue s
 - [ ] Include rendered visual inspection of the discovery layout and newly changed surfaces. (The CSS/JS class mismatch is fixed and the pair-12 CSS assertion now validates the applied flex-wrap styling; actual rendered visual inspection at device widths is pending a browser session.)
 - [x] Run normal validation and targeted regressions; report automated tests, browser checks and native-device checks separately.
 - [x] Update the pair-14 completion record with a dated follow-up/correction: its raw-key and zero-mismatch conclusions were too broad. Preserve historical notes while recording the confirmed exceptions and their fixes.
-- [ ] Verify deployed assets and corrected routes after publishing; record deployed commit and remaining limitations. (Pending: pair-15 changes are committed but not yet deployed; re-verify after the Pages publish.)
+- [x] Verify deployed assets and corrected routes after publishing; record deployed commit and remaining limitations. (Deployed commit ba194e3; CI, Deploy to GitHub Pages and pages-build-deployment all succeeded on 2026-10-23. Remaining limitations: native Safari/VoiceOver/touch checks and live browser navigation remain unverified, recorded as pair-17 work.)
 
 Acceptance: all named reproductions are closed with evidence. Native-device checks remain explicitly pending until performed; passing DOM checks do not close them.
 
