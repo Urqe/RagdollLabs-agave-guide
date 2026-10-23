@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–19 are recorded as applied (pair 18 — Corrective Completion & Editorial Consistency; pair 19 — Beyond Oaxaca I — both applied 2026-10-23). **Section 4.5 is the current execution authority**. Execute **post-roadmap pair 20 — Regional Expansion I Review next**, when requested by the owner, then pairs 21–22. Sections 4.3–4.4 remain the historical requirements. This update changes the plan only, not the app.
+Post-roadmap pairs 8–20 are recorded as applied (pair 20 — Regional Expansion I Review — applied 2026-10-23). **Section 4.5 is the current execution authority**. Execute **post-roadmap pair 21 — Beyond Oaxaca II next**, when requested by the owner, then pair 22.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -808,7 +808,7 @@ These are claim-specific sources, not blanket endorsement of all content on thei
 
 ## 4.5 Follow-up audit and regional expansion — 2026-10-23
 
-**Current priority: post-roadmap pair 20 — Regional Expansion I Review (when the owner requests it).** Pairs 18 and 19 are recorded as applied in RELEASE_NOTES.md on 2026-10-23. These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
+**Current priority: post-roadmap pair 21 — Beyond Oaxaca II (when the owner requests it).** Pairs 18–20 are recorded as applied in RELEASE_NOTES.md on 2026-10-23. These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
 
 ### Review baseline and assessment
 
@@ -913,11 +913,11 @@ These are priority coverage gaps, not a claim that other Mexican states lack tra
 
 ### Post-roadmap pair 20 — Regional Expansion I Review (maintenance)
 
-- [ ] Verify all three additions' plant aliases, maker versus brand identity, production place, profile/bottle fit and sensory source links; sample the published prose against the cited passages.
-- [ ] Test EN/ES search with accented/unaccented local names, map/list and region routes, profile/catalogue round trips, prepared comparisons and unknown-data handling. Avoid tests pinned only to a total record count.
-- [ ] Confirm comparison explanations derive from supported profile differences, not presumed geography; check Spanish rendering, keyboard access and phone-width wrapping.
-- [ ] Walk beginner → region/profile → serving advice → example bottle → next comparison, and enthusiast → exact bottle → production/source detail → contextual return.
-- [ ] Deploy and record validation and actual browser/device checks; explicitly retain unavailable native-device checks as open.
+- [x] Verify all three additions' plant aliases, maker versus brand identity, production place, profile/bottle fit and sensory source links; sample the published prose against the cited passages. (Pair 20 applied 2026-10-23: fit, maker-vs-brand identity, region/plant/source resolution and the P18-2 tasting-evidence contract verified for all three additions; no identity or producer source counted as tasting evidence; prose checked against the pair-19 record including the honest-disputed SLP cooking method.)
+- [x] Test EN/ES search with accented/unaccented local names, map/list and region routes, profile/catalogue round trips, prepared comparisons and unknown-data handling. Avoid tests pinned only to a total record count. (Defect found and fixed: the pre-existing `papalote → rhodacantha` raicilla alias hijacked every "papalote" query, hiding the Guerrero cupreata profile — searchProfiles now matches the raw normalized query alongside the aliased one; `test/pair-20-regional-review.test.mjs` pins accented/unaccented findability (papalometl, cenizo, durangensis, maguey verde, mezcal potosino, San Luis Potosí/i, Apango, El Mezquital, Santa Isabel) and unknown-region handling without total-count pinning.)
+- [x] Confirm comparison explanations derive from supported profile differences, not presumed geography; check Spanish rendering, keyboard access and phone-width wrapping. (Comparisons vs the espadín reference derive from documented sensory differences with zero missing dimensions and cite real fields; EN/ES rendering of both reader journeys verified with zero untranslated-field disclosures; keyboard access and phone-width wrapping remain within the pair-19/17 native-device open limits below.)
+- [x] Walk beginner → region/profile → serving advice → example bottle → next comparison, and enthusiast → exact bottle → production/source detail → contextual return. (Both journeys render in EN and ES for all three profiles via the pair-20 regressions: serving/notice/example/onward links for beginners; place, tasting basis, source links and profile return for enthusiasts.)
+- [x] Deploy and record validation and actual browser/device checks; explicitly retain unavailable native-device checks as open. (`npm run validate` — 391 passing, 383 prior + 8 new pair-20 regressions; jsdom evidence only; live deployed-Pages rendering, native iPhone/iPad Safari, VoiceOver, physical touch and regional-reader validation of the new Spanish prose remain open — no claim made.)
 
 ### Post-roadmap pair 21 — Beyond Oaxaca II (feature/content)
 

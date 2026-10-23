@@ -2946,3 +2946,53 @@ passes — 383 tests, including 9 new pair-19 regressions in
   physical touch, and regional-reader validation of the new Spanish prose
   (Guerrero, Durango and SLP voices) remain unverified. jsdom evidence
   only.
+
+## Post-roadmap pair 20 — Regional Expansion I Review (2026-10-23)
+
+Maintenance review of the pair-19 regional additions (Guerrero, Durango,
+San Luis Potosí) per plan section 4.5.
+
+### Defect found and fixed
+
+- **Search alias hijack (defect found):** the pre-existing alias
+  `["papalote", "rhodacantha"]` (coastal-Jalisco raicilla vocabulary)
+  rewrote every "papalote" query, so the Guerrero cupreata profile was
+  invisible to its own regional plant name — only the two raicilla
+  profiles came back. `searchProfiles` now matches the raw normalized
+  query alongside the aliased one, so "papalote" finds both the
+  Guerrero profile and the raicilla profiles, while every other alias
+  (plata/silver → blanco, etc.) keeps working exactly as before. The
+  pair-19 test had asserted only `hits.length > 0`, which is why this
+  slipped through.
+
+### Verified
+
+- Profile/bottle fit, maker-versus-brand identity, region/plant/source
+  reference resolution and the P18-2 tasting-evidence contract hold for
+  all three additions; no identity or producer source is counted as
+  tasting evidence.
+- Accented and unaccented EN/ES queries (papalometl, cenizo,
+  durangensis, maguey verde, mezcal potosino, San Luis Potosí/San Luis
+  Potosi, Apango, El Mezquital, Santa Isabel) find their profiles.
+- Comparison explanations vs the espadín reference derive from
+  documented sensory differences (no missing dimensions), never from
+  presumed geography.
+- Beginner journey (profile → serving advice → example bottle → next
+  step) and enthusiast journey (bottle → place/source detail → profile
+  return) render in EN and ES with zero untranslated-field disclosures;
+  unknown region ids render honest not-found surfaces.
+
+### Validation
+
+- `npm run validate`: schema, cross-references and the full `node:test`
+  suite — 391 passing (383 before + 8 new pair-20 regressions in
+  `test/pair-20-regional-review.test.mjs`: alias-hijack regression,
+  accented/unaccented findability without total-count pinning,
+  fit/identity/sourcing contracts, comparison grounding, both reader
+  journeys, unknown-data handling).
+
+### Still unverified — no claim made
+
+- Live deployed-Pages rendering, native iPhone/iPad Safari, VoiceOver,
+  physical touch and regional-reader validation of the new Spanish prose
+  remain open, as recorded for pair 19.

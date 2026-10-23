@@ -107,8 +107,9 @@ function rankFor(profile, q) {
 }
 
 export function searchProfiles({ profiles, bottles, query }) {
-  const q = applyAliases(normalize(query));
-  if (!q) return [];
+  const raw = normalize(query);
+  const q = applyAliases(raw);
+  if (!q && !raw) return [];
   const bottleById = new Map((bottles || []).map((b) => [b.id, b]));
 
   const results = [];
@@ -116,7 +117,7 @@ export function searchProfiles({ profiles, bottles, query }) {
     const example = bottleById.get(profile.exampleBottleId);
     const esNoteHit = (profile.tasteNotes || []).some((n) => {
       const esLabel = ES_NOTES[n];
-      return esLabel ? normalize(esLabel).includes(q) : false;
+      return esLabel ? normalize(esLabel).includes(q) || normalize(esLabel).includes(raw) : false;
     });
     const haystack = normalize([
       ...profileSearchTerms(profile),
@@ -127,12 +128,13 @@ export function searchProfiles({ profiles, bottles, query }) {
       example ? example.producer || "" : "",
       example ? example.place || "" : "",
     ].join(" "));
-    if (haystack.includes(q)) {
+    const matched = haystack.includes(raw) ? raw : haystack.includes(q) ? q : null;
+    if (matched) {
       results.push({
         profile,
         exampleBottle: example || null,
-        rank: rankFor(profile, q),
-        reason: reasonFor(profile, example, q, esNoteHit),
+        rank: rankFor(profile, matched),
+        reason: reasonFor(profile, example, matched, esNoteHit),
       });
     }
   }
