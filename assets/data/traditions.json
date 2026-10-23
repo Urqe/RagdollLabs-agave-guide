@@ -115,11 +115,11 @@
     {
       "id": "comiteco",
       "name": "Comiteco",
-      "origin": "A sap-derived tradition from Comitán, Chiapas.",
-      "history": "Made from aguamiel collected from cultivated maguey comiteco (Agave atrovirens); the piña is never cooked.",
-      "legalStatus": "A regional tradition; not a spirit with a denomination of origin, and not legally equivalent to tequila or mezcal. Añejo here is a producer expression, not a legal class.",
-      "materials": "Aguamiel from the living Agave atrovirens; disclosed bottlings may include cane sugars — composition is verified per bottle, never assumed 100% agave.",
-      "practices": "Sap collection, fermentation, distillation in copper; blanco unaged, añejo rested in glass with white oak branches (no barrel maturation).",
+      "origin": "A sap-derived tradition from Comitán, Chiapas; protected as an Indicación Geográfica since October 2025.",
+      "history": "Made from aguamiel collected from cultivated maguey comiteco (identified as Agave americana L. in the 2025 IG declaration; some other references and producer/importer material name Agave atrovirens — the guide keeps both and does not silently resolve the difference); the piña is never cooked.",
+      "legalStatus": "A regional tradition protected since 6 October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas” (an IG, not a denomination of origin like tequila or mezcal). The declaration covers a spirit made from maguey comiteco (Agave americana L.) and cane sugars in the Meseta Comiteca-Tojolabal; comiteco outside that scope is not automatically covered. Añejo remains a producer expression unless defined in the applicable IG rules — verify per bottle.",
+      "materials": "Aguamiel from the living maguey comiteco (Agave americana L. per the IG declaration; some sources name Agave atrovirens); the protected name explicitly includes cane sugars alongside agave, and composition stays a per-bottle fact — do not label any bottle 100% agave.",
+      "practices": "Sap collection, fermentation, distillation in copper; blanco unaged, añejo rested in glass with white oak branches (no barrel maturation) per the example producer.",
       "diversity": "Composition disclosure varies by bottling; the app records it per bottle rather than as a category claim.",
       "plantIds": [
         "agave-atrovirens"
@@ -128,7 +128,8 @@
         "comitan-chiapas"
       ],
       "sourceIds": [
-        "backalley-comiteco"
+        "backalley-comiteco",
+        "dof-comiteco-ig-2025"
       ]
     },
     {

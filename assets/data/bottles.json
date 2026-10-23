@@ -410,15 +410,18 @@
       "spirit": "mezcal",
       "place": "Tlacolula, Oaxaca",
       "batch": "Joven espadín rested about 14 months in American oak, beyond the 1-year añejo minimum",
-      "profileId": "mezcal-reposado-espadin-oaxaca",
+      "profileId": null,
       "reviewSummary": "The Tequila Whisperer found it one of the most pleasing aged-mezcal surprises he had tasted; Bourbon Banter describes leaning further into caramel and spicier wood notes than the reposado, with less of the joven's smoke.",
       "sourceIds": [
         "bourbonbanter-ilegal"
       ],
       "traditionId": "mezcal",
-      "regionIds": [
-        "valles-centrales-oax"
-      ]
+      "regionIds": [],
+      "coverage": [
+        "profile-not-covered"
+      ],
+      "noteProfileId": "mezcal-reposado-espadin-oaxaca",
+      "editorialNote": "An añejo (rested about 14 months, beyond the 1-year añejo minimum): the app's aged-mezcal profile describes the reposado class (2 months to 1 year), so this expression is covered as a catalogue fact, not mapped onto the reposado style profile."
     },
     {
       "id": "montelobos-tobala",
@@ -556,16 +559,19 @@
       "spirit": "sotol",
       "place": "Delicias, Chihuahua",
       "batch": "100% wild-harvested Dasylirion, steam-cooked, triple-distilled in double-column copper, then aged 2 years in new French white oak; USDA organic and Kosher certified",
-      "profileId": "sotol-chihuahua",
+      "profileId": null,
       "reviewSummary": "A Mezcal Reviews member finds a medicinal-herbal character with brown sugar and anise and a very slight bitter finish — a light summer sipper comparable to fine añejo tequilas but deeper; the producer runs a Dasylirion conservation program.",
       "sourceIds": [
         "mezcalreviews-hacienda-chihuahua-anejo",
         "wikipedia-sotol"
       ],
       "traditionId": "sotol",
-      "regionIds": [
-        "chihuahua-norte"
-      ]
+      "regionIds": [],
+      "coverage": [
+        "profile-not-covered"
+      ],
+      "noteProfileId": "sotol-chihuahua",
+      "editorialNote": "An aged sotol (2 years in new French oak): the app's sotol profile describes an unaged Chihuahua desert style with no oak maturation, so this expression is covered as a catalogue fact, not mapped onto that style profile."
     },
     {
       "id": "bacatt-bacanora",

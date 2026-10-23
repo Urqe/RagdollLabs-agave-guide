@@ -161,7 +161,7 @@ async function renderRoute(container, route) {
       state.lessonPreparedSelection = null;
     }
     if (route.params.lessonId) {
-      renderLesson(container, { lessonId: route.params.lessonId, profiles, locale });
+      renderLesson(container, { lessonId: route.params.lessonId, profiles, chapters: state.data.chapters, locale });
     } else {
       renderStartHub(container, { profiles, locale });
     }

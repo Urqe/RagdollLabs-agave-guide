@@ -1122,7 +1122,7 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 /* Release 17 — Three Discovery Paths */
 .discover-view { display: grid; gap: 1.4rem; }
 .discover-block { display: grid; gap: 0.55rem; padding-block: 0.4rem; }
-.discover-chip-list {
+.discovery-chip-list {
   display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none;
   margin: 0; padding: 0;
 }

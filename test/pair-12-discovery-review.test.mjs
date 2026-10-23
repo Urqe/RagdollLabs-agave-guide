@@ -152,7 +152,7 @@ test("pair 12: discovery routes are distinct route keys (scroll/history correctn
 
 test("pair 12: hub and detail pages keep keyboard-accessible wrapped chips", async () => {
   const css = await read("assets/css/styles.css");
-  assert.ok(/\.discover-chip-list[\s\S]{0,160}flex-wrap: wrap/.test(css),
+  assert.ok(/\.discovery-chip-list[\s\S]{0,160}flex-wrap: wrap/.test(css),
     "chip lists wrap on narrow widths");
   assert.ok(/\.discovery-chip[\s\S]{0,260}min-height: 44px/.test(css),
     "chips keep the 44px tap target");

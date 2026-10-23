@@ -74,8 +74,8 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
   facts.appendChild(el("li", {}, `${ui(locale, "factSpirit")}: ${SPIRIT_LABELS[bottle.spirit] || bottle.spirit || ui(locale, "notDocumented")}`));
   if (bottle.abv != null) facts.appendChild(el("li", {}, `${ui(locale, "factAbvLong")}: ${bottle.abv}% (${ui(locale, "labelFact")})`));
   if (bottle.abv == null && bottle.abvNote) facts.appendChild(el("li", {}, `${ui(locale, "factAbv")}: ${L("abvNote", bottle.abvNote)}`));
-  if (bottle.producer) facts.appendChild(el("li", {}, `${ui(locale, "factProducer")}: ${bottle.producer}`));
-  if (bottle.place) facts.appendChild(el("li", {}, `${ui(locale, "factPlace")}: ${bottle.place}`));
+  if (bottle.producer) facts.appendChild(el("li", {}, `${ui(locale, "factProducer")}: ${L("producer", bottle.producer)}`));
+  if (bottle.place) facts.appendChild(el("li", {}, `${ui(locale, "factPlace")}: ${L("place", bottle.place)}`));
   if (bottle.batch) facts.appendChild(el("li", {}, `${ui(locale, "factBatch")}: ${L("batch", bottle.batch)}`));
   if (bottle.composition) facts.appendChild(el("li", {}, `${ui(locale, "factComposition")}: ${L("composition", bottle.composition)}`));
   if (bottle.classification) facts.appendChild(el("li", {}, `${ui(locale, "factClassification")}: ${L("classification", bottle.classification)}`));
@@ -160,7 +160,7 @@ function bottleSummary(bottle, { sources, profiles = [], locale = null } = {}) {
   const facts = el("ul", { class: "catalogue-facts catalogue-facts-compact" });
   facts.appendChild(el("li", {}, SPIRIT_LABELS[bottle.traditionId] || SPIRIT_LABELS[bottle.spirit] || bottle.spirit || ui(locale, "notDocumented")));
   if (bottle.producer || bottle.place) {
-    facts.appendChild(el("li", {}, [bottle.producer, bottle.place].filter(Boolean).join(" \u00b7 ")));
+    facts.appendChild(el("li", {}, [L("producer", bottle.producer), L("place", bottle.place)].filter(Boolean).join(" \u00b7 ")));
   }
   facts.appendChild(el("li", {}, bottle.abv != null
     ? `${bottle.abv}% ${ui(locale, "factAbvLong").toLowerCase()}`
@@ -259,9 +259,29 @@ export function renderCatalogue(container, { bottles, profiles, sources, locale 
   );
 
   let brandFilter = "";
+  const activeBrand = el("p", { class: "editorial-note catalogue-active-brand" });
+  activeBrand.hidden = true;
+  const clearBrandBtn = el("button", { type: "button", class: "quiet-link" }, t("catalogue.clearBrand"));
+  clearBrandBtn.addEventListener("click", () => {
+    brandFilter = "";
+    renderList();
+    searchInput.focus();
+  });
+  activeBrand.appendChild(clearBrandBtn);
+  resultList.before(activeBrand);
+
   const renderList = () => {
     clear(resultList);
     clear(searchResults);
+    if (brandFilter) {
+      activeBrand.hidden = false;
+      clear(activeBrand);
+      activeBrand.appendChild(document.createTextNode(
+        t("catalogue.activeBrand").replace("{brand}", brandFilter) + " "));
+      activeBrand.appendChild(clearBrandBtn);
+    } else {
+      activeBrand.hidden = true;
+    }
     const query = (searchInput.value || "").trim();
     const filterId = tradition.value;
     let matches = sorted;
@@ -304,6 +324,7 @@ export function renderCatalogue(container, { bottles, profiles, sources, locale 
   if (restore) {
     if (restore.query) searchInput.value = restore.query;
     if (restore.traditionId) tradition.value = restore.traditionId;
+    if (restore.brandFilter) brandFilter = restore.brandFilter;
   }
   renderList();
 
@@ -312,7 +333,7 @@ export function renderCatalogue(container, { bottles, profiles, sources, locale 
   // useful brand browsing without repeating every expression twice.
   const dirHeading = el("h3", { id: "catalogue-brands-heading" }, t("catalogue.brands"));
   section.appendChild(dirHeading);
-  const dir = el("ul", { class: "discover-chip-list brand-index" });
+  const dir = el("ul", { class: "discovery-chip-list brand-index" });
   for (const { brand } of brandDirectory(bottles)) {
     const li = el("li");
     const chip = el("a", { class: "discovery-chip", href: "#/catalogue" }, brand);
@@ -363,6 +384,6 @@ export function renderCatalogue(container, { bottles, profiles, sources, locale 
 
   container.appendChild(section);
   return {
-    snapshot: () => ({ query: searchInput.value, traditionId: tradition.value }),
+    snapshot: () => ({ query: searchInput.value, traditionId: tradition.value, brandFilter }),
   };
 }

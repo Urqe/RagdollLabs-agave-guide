@@ -183,7 +183,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   }
   if (profile.plant) {
     craft.appendChild(el("dt", {}, ui(locale, "plant")));
-    const plantDd = el("dd", { class: "profile-plant" }, profile.plant);
+    const plantDd = el("dd", { class: "profile-plant" }, fieldEs("profile", profile.id, "plant", locale) || profile.plant);
     if (profile.plantId) {
       plantDd.appendChild(document.createTextNode(" "));
       plantDd.appendChild(el("a", { href: `#/plant/${encodeURIComponent(profile.plantId)}`, class: "plant-learn-link" }, t("profile.aboutPlant")));

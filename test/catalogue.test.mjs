@@ -349,11 +349,16 @@ test("bottle-depth increment: single-example profiles gain documented second bot
   assert.equal(ocho.profileId, "tequila-extra-anejo-highland-jalisco");
   // No style profile regressed to a single bottle except the comiteco pair
   // and raicilla reposado, whose candidates failed the region/label gates.
+  // Pair 15: the Ilegal añejo and the aged sotol no longer map onto the
+  // reposado-mezcal and unaged sotol profiles — their class/maturation
+  // does not match those styles, so both profiles are single-example again.
   const singles = profiles.filter((p) => bottles.filter((b) => b.profileId === p.id).length === 1).map((p) => p.id);
   assert.deepEqual(singles.sort(), [
     "comiteco-aguamiel-chiapas",
     "comiteco-anejo-comitan-chiapas",
+    "mezcal-reposado-espadin-oaxaca",
     "raicilla-reposado-jalisco",
+    "sotol-chihuahua",
   ].sort(), `unexpected single-example profiles: ${singles.join(", ")}`);
 });
 

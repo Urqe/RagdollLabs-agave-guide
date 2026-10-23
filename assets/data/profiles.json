@@ -340,11 +340,11 @@
       "spirit": "comiteco",
       "stateId": "chis",
       "stateName": "Chiapas",
-      "context": "Comiteco belongs to Comitán de Dománguez, Chiapas, and chiapanecos speak of it as theirs alone: a sap-derived agave spirit where, instead of cooking harvested agave hearts, producers collect the fresh sap (aguamiel) of the living maguey Comiteco (Agave atrovirens), ferment it, and distill it. Some comiteco includes an additional cane-based sugar source alongside the sap, and the families of Comitán say so plainly — a proposal to define the category sets a minimum of agave content rather than requiring 100% agave, and an honest bottle always tells you what is in it.",
+      "context": "Comiteco belongs to Comitán, Chiapas: a sap-derived agave spirit where, instead of cooking harvested agave hearts, producers collect the fresh sap (aguamiel) of the living maguey comiteco, ferment it, and distill it. Since 6 October 2025 the name “Comiteco de Comitán, Chiapas” is protected as an Indicación Geográfica — a legal protection distinct from a denomination of origin — covering a spirit made from maguey comiteco (identified as Agave americana L. in the declaration; some references also name Agave atrovirens) together with cane sugars in the Meseta Comiteca-Tojolabal. Cane sugar alongside the sap is part of the protected definition, and an honest bottle always tells you what is in it.",
       "description": "Because the agave is never cooked, comiteco lacks the roast and smoke of pit-roasted spirits and instead shows a green, lactic, gently herbal character carried over from the fermented sap — closer in character to a distilled pulque than to mezcal, though it is its own tradition. This profile describes the style generally; compositions vary between producers and are disclosed per bottle.",
-      "plant": "Maguey Comiteco (Agave atrovirens), cultivated; sap collected from the living plant",
+      "plant": "Maguey comiteco (Agave americana L. per the 2025 IG declaration; some references name Agave atrovirens), cultivated; sap collected from the living plant",
       "process": "Sap-derived: aguamiel collected from the living plant, fermented, distilled — no cooking of the piña",
-      "category": "Comiteco — a regional tradition from Comitán, Chiapas; not a spirit with a denomination of origin, and not legally equivalent to tequila or mezcal",
+      "category": "Comiteco — a regional tradition from Comitán, Chiapas, protected since October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas”; an IG is a different legal figure from tequila's or mezcal's denomination of origin",
       "beginnerNote": "New to comiteco? Forget smoke: this is a sap spirit — think green, lactic and herbal, from uncooked agave. Comitán's own tradition, unlike anything to the north.",
       "aliases": [
         "comiteco"
@@ -370,7 +370,8 @@
       "exampleBottleId": "nine-guardianes-comiteco-blanco",
       "sourceIds": [
         "backalley-comiteco",
-        "mezcalreviews-9guardianes-blanco"
+        "mezcalreviews-9guardianes-blanco",
+        "dof-comiteco-ig-2025"
       ],
       "placeCoords": {
         "lat": 16.25,
@@ -767,12 +768,12 @@
       "spirit": "comiteco",
       "stateId": "chis",
       "stateName": "Chiapas",
-      "context": "Comiteco is a sap-derived agave spirit from the municipality of Comitán de Domínguez, Chiapas, produced by fermenting and distilling the fresh sap (aguamiel) of the living maguey Comiteco (Agave atrovirens) without cooking the plant. This profile covers the aged expression of that tradition. Unlike tequila or mezcal añejo, comiteco añejo is not a legally defined class: the añejo of the example producer rests in glass with branches of white oak rather than in barrels, so its wood character comes from oak contact in glass, not barrel maturation. In Comitán that oak-branch rest is an art passed through generations — chiapaneco patience in a bottle. The broader category has no denomination of origin, though a state request for DO protection has been in process.",
+      "context": "Comiteco is a sap-derived agave spirit from the municipality of Comitán, Chiapas, produced by fermenting and distilling the fresh sap (aguamiel) of the living maguey comiteco without cooking the plant. This profile covers the aged expression of that tradition. The añejo of the example producer rests in glass with branches of white oak rather than in barrels, so its wood character comes from oak contact in glass, not barrel maturation. Añejo here is a producer expression — verify against the applicable IG rules for “Comiteco de Comitán, Chiapas” (protected 6 October 2025) rather than assuming aged classes do not exist.",
       "description": "Glass resting on white-oak branches gives this style a soft wood influence without the vanilla-heavy roundness of barrel-aged spirits: the green, lactic, herbal sap character of comiteco stays in the frame while oak contributes gentle spice and a touch of color. Compared with the unaged comiteco profile, expect a slightly rounder, warmer version of the same tradition rather than a whiskey-adjacent profile.",
-      "plant": "Maguey Comiteco (Agave atrovirens), cultivated; sap collected from the living plant",
+      "plant": "Maguey comiteco (Agave americana L. per the 2025 IG declaration; some references name Agave atrovirens), cultivated; sap collected from the living plant",
       "plantId": "agave-atrovirens",
       "process": "Sap-derived: aguamiel collected from the living plant, fermented, distilled in copper, then rested in glass with branches of white oak (no barrel maturation, no cooking of the piña)",
-      "category": "Comiteco añejo — a regional tradition from Comitán, Chiapas; not a spirit with a denomination of origin, and añejo here is a producer expression, not a legal class as it is in tequila",
+      "category": "Comiteco añejo — a regional tradition from Comitán, Chiapas, protected since October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas”; añejo here is a producer expression, not a legal class as it is in tequila",
       "beginnerNote": "New to comiteco añejo? Do not expect tequila añejo: the wood comes from oak branches resting in glass, so it is gentler — think warm spice over the same green, lactic sap character.",
       "aliases": [
         "comiteco anejo",
@@ -812,7 +813,8 @@
       },
       "sourceIds": [
         "backalley-comiteco",
-        "mezcalreviews-9guardianes-anejo"
+        "mezcalreviews-9guardianes-anejo",
+        "dof-comiteco-ig-2025"
       ],
       "traditionId": "comiteco",
       "regionIds": [

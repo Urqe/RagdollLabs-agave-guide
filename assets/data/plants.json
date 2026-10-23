@@ -133,9 +133,10 @@
         }
       ],
       "cultivation": "cultivated; sap collected from the living plant (no cooking)",
-      "uncertainty": null,
+      "uncertainty": "The 2025 IG declaration for Comiteco de Comitán, Chiapas identifies the maguey comiteco as Agave americana L.; some producer/importer and earlier references name Agave atrovirens. The guide records both names rather than silently resolving the difference.",
       "sourceIds": [
-        "backalley-comiteco"
+        "backalley-comiteco",
+        "dof-comiteco-ig-2025"
       ],
       "traditionIds": [
         "comiteco"
@@ -147,7 +148,7 @@
         "comiteco-aguamiel-chiapas",
         "comiteco-anejo-comitan-chiapas"
       ],
-      "atAGlance": "Maguey Comiteco, the sap agave of Comitán, Chiapas; the base of comiteco.",
+      "atAGlance": "Maguey comiteco, the sap agave of Comitán, Chiapas; the base of comiteco. The 2025 IG declaration identifies it as Agave americana L.; earlier references also name Agave atrovirens.",
       "whereItGrows": "Cultivated in the highland plateau of central Chiapas around Comitán de Domínguez.",
       "harvestProduction": "Cultivated; the living plant is scraped and its aguamiel collected daily — the piña is never cooked.",
       "sensoryTendencies": "Editorial guidance: sap-derived comiteco skips roast character entirely; disclosed bottlings may include cane sugars, and composition stays a per-bottle fact.",

@@ -1,7 +1,7 @@
 import { el, clear } from "./dom-utils.js";
 import { navigateTo } from "./router.js";
 import { ui, renderHome } from "./presentation.js";
-import { localizedTitle } from "./editorial.js";
+import { localizedTitle, fieldEs } from "./editorial.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 
 /**
@@ -19,8 +19,8 @@ export const JOURNEY_STEPS = [
     id: "what-are-they",
     title: { en: "What these spirits are", es: "Qué son estos destilados" },
     idea: {
-      en: "Every spirit in this guide starts with a mature agave plant — cooked or its fresh sap — fermented and distilled. Tequila and mezcal are the two you will meet most; bacanora, raicilla and other traditions keep their own names, places and methods.",
-      es: "Cada destilado de esta guía empieza con una planta de agave madura — cocida o de su savia fresca — fermentada y destilada. El tequila y el mezcal son los dos que más vas a encontrar; la bacanora, la raicilla y otras tradiciones conservan sus propios nombres, lugares y métodos.",
+      en: "This guide mainly covers agave spirits: a mature agave plant — cooked, or its fresh sap — fermented and distilled. It also includes sotol, a close relative distilled from the Dasylirion plant, honestly labeled as such. Tequila and mezcal are the two you will meet most; bacanora, raicilla and other traditions keep their own names, places and methods.",
+      es: "Esta guía cubre principalmente destilados de agave: una planta de agave madura — cocida, o de su savia fresca — fermentada y destilada. También incluye el sotol, un pariente cercano destilado de la planta Dasylirion, etiquetado con honestidad como tal. El tequila y el mezcal son los dos que más vas a encontrar; la bacanora, la raicilla y otras tradiciones conservan sus propios nombres, lugares y métodos.",
     },
     examples: [
       { profileId: "tequila-blanco-valley-jalisco", reason: { en: "The clearest place to start: unaged tequila, straight cooked agave in the glass.", es: "El mejor punto de partida: tequila sin crianza, agave cocido directo en la copa." } },
@@ -32,7 +32,7 @@ export const JOURNEY_STEPS = [
     title: { en: "How to taste", es: "Cómo catar" },
     idea: {
       en: "You do not need a glass to learn: this guide describes styles, so reading one profile and its character levels teaches the vocabulary. When you do taste, go neat, in a small pour, and notice the body and the finish before naming any note.",
-      es: "No necesitas una copa para aprender: esta guía describe estilos, así que leer un perfil y sus niveles de carácter enseña el vocabulario. Cuando pruebes, hazlo solo, en una porción pequeña, y nota el cuerpo y el final antes de nombrar cualquier nota.",
+      es: "No necesitas una copa para aprender: esta guía describe estilos, así que leer un perfil y sus niveles de carácter enseña el vocabulario. Cuando pruebes, sírvelo solo — sin hielo ni mezcladores — en una porción pequeña, y nota el cuerpo y el final antes de nombrar cualquier nota.",
     },
     examples: [
       { profileId: "tequila-blanco-valley-jalisco", reason: { en: "Read the character levels of one style first — the labels mean the same thing everywhere in the guide.", es: "Lee primero los niveles de carácter de un estilo — las etiquetas significan lo mismo en toda la guía." } },
@@ -55,8 +55,8 @@ export const JOURNEY_STEPS = [
     id: "first-comparison",
     title: { en: "Try a comparison", es: "Prueba una comparación" },
     idea: {
-      en: "The fastest way to feel what wood resting changes: compare the valley blanco with the valley reposado — same tradition, same region, same plant, and the reposado's two months in oak are the difference the view highlights. These are typical styles, not a laboratory experiment isolating every production variable; bottles within each style vary.",
-      es: "La forma más rápida de sentir lo que cambia el reposo en madera: compara el blanco del valle con el reposado del valle — misma tradición, misma región, misma planta, y los dos meses del reposado en roble son la diferencia que la vista destaca. Son estilos típicos, no un experimento de laboratorio que aísle cada variable de producción; las botellas dentro de cada estilo varían.",
+      en: "The fastest way to feel what wood resting changes: compare the valley blanco with the valley reposado — same tradition, same region, same plant, and the reposado's oak rest (the legal minimum is two months; the typical style runs two months to a year) is the difference the view highlights. These are typical styles, not a laboratory experiment isolating every production variable; bottles within each style vary.",
+      es: "La forma más rápida de sentir lo que cambia el reposo en madera: compara el blanco del valle con el reposado del valle — misma tradición, misma región, misma planta, y el reposo en roble del reposado (el mínimo legal son dos meses; el estilo típico va de dos meses a un año) es la diferencia que la vista destaca. Son estilos típicos, no un experimento de laboratorio que aísle cada variable de producción; las botellas dentro de cada estilo varían.",
     },
     comparison: ["tequila-blanco-valley-jalisco", "tequila-reposado-valley-jalisco"],
     comparisonLabel: { en: "Open the prepared comparison: valley blanco vs valley reposado", es: "Abre la comparación preparada: blanco del valle contra reposado del valle" },
@@ -148,7 +148,7 @@ function localizedProfileById(id, profiles, locale) {
 }
 
 /** Example card: one or two per lesson, each with a reason to open it. */
-function exampleCard({ profileId, chapterId, reason }, { profiles, locale, lessonId }) {
+function exampleCard({ profileId, chapterId, reason }, { profiles, chapters = [], locale, lessonId }) {
   const lang = locale ? locale.get() : "en";
   const card = el("li");
   if (profileId) {
@@ -163,12 +163,16 @@ function exampleCard({ profileId, chapterId, reason }, { profiles, locale, lesso
     link.appendChild(el("span", { class: "discovery-place" }, `${found.profile.stateName}, México`));
     card.appendChild(link);
   } else if (chapterId) {
+    const chapter = (chapters || []).find((c) => c.id === chapterId);
+    const chapterTitle = chapter
+      ? (fieldEs("chapter", chapter.id, "title", locale) || chapter.title)
+      : ui(locale, "learn.heading");
     const link = el("a", {
       href: `#/learn?from=${encodeURIComponent("start:" + lessonId)}`,
       class: "discovery-card",
     });
     link.appendChild(el("span", { class: "eyebrow" }, jt(locale, "exampleFrom")));
-    link.appendChild(el("strong", {}, ui(locale, "learn.heading")));
+    link.appendChild(el("strong", {}, chapterTitle));
     card.appendChild(link);
   } else {
     return null;
@@ -218,7 +222,7 @@ export function renderStartHub(container, { profiles, locale = null } = {}) {
 }
 
 /** One lesson: principal idea, examples, prepared comparison, step list, prev/next. */
-export function renderLesson(container, { lessonId, profiles, locale = null } = {}) {
+export function renderLesson(container, { lessonId, profiles, chapters = [], locale = null } = {}) {
   clear(container);
   const lang = locale ? locale.get() : "en";
   const step = journeyStepById(lessonId);
@@ -241,7 +245,7 @@ export function renderLesson(container, { lessonId, profiles, locale = null } = 
     section.appendChild(el("h3", { class: "sources-heading" }, jt(locale, "exampleLabel")));
     const list = el("ul", { class: "discovery-matches" });
     for (const example of examples) {
-      const card = exampleCard(example, { profiles, locale, lessonId: step.id });
+      const card = exampleCard(example, { profiles, chapters, locale, lessonId: step.id });
       if (card) list.appendChild(card);
     }
     if (list.childNodes.length > 0) section.appendChild(list);

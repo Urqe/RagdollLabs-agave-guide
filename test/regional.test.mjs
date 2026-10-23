@@ -37,9 +37,12 @@ test("release 9: three regional traditions added with one example bottle each", 
 test("release 9: regional identities are not implied to be legal DOs", () => {
   for (const id of ["tuxca-lineno-cimarron-jalisco-colima", "comiteco-aguamiel-chiapas", "destilado-de-pulque-salmiana-tlaxcala"]) {
     const profile = profiles.find((p) => p.id === id);
+    // Pair 15: comiteco now states its October 2025 Indicación Geográfica
+    // protection, a legal figure distinct from a denomination of origin;
+    // tuxca and destilado de pulque still state their non-DO status.
     assert.ok(
-      /no denomination|not a spirit with a denomination|not legally equivalent|no denomination of origin/.test(profile.category),
-      `${id} category states its non-DO status honestly`
+      /no denomination|not a spirit with a denomination|not legally equivalent|no denomination of origin|Indicación Geográfica/.test(profile.category),
+      `${id} category states its legal status honestly`
     );
   }
 });

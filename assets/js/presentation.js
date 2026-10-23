@@ -109,6 +109,9 @@ const COPY = {
     hintFinish: "How long the finish lasts.",
     guidance: "Editorial style guidance — a description of the style, not a review or rating of any bottle.",
     footer: "Explore with curiosity. Enjoy responsibly.",
+    "abvUnknown": "ABV not documented",
+    "noReviewYet": "No attributed tasting note for this expression yet.",
+    "learn.heading": "Learn",
   },
   es: {
     brand: "herramientas de consulta", title: "Guía del Agave", tagline: "Descubre el carácter de cada copa.",
@@ -214,6 +217,9 @@ const COPY = {
     hintFinish: "Cu\u00e1nto dura el final.",
     guidance: "Orientación editorial sobre el estilo; no es una reseña ni una calificación de una botella.",
     footer: "Explora con curiosidad. Disfruta con responsabilidad.",
+    "abvUnknown": "ABV no documentado",
+    "noReviewYet": "Aún no hay nota de cata atribuida para esta expresión.",
+    "learn.heading": "Aprende",
   },
 };
 
