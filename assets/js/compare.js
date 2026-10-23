@@ -155,9 +155,9 @@ export function comparisonPerspectives(profiles) {
     // method differ too, the perspective names the additional variable
     // instead of implying a controlled regional comparison.
     if (classSet.size === 1 && sameMethodSet) {
-      out.push({ id: "samePlantDifferentRegion", plant, evidence: "plantIds" });
+      out.push({ id: "samePlantDifferentRegion", plant, plantProfileId: profiles[0].id, evidence: "plantIds" });
     } else {
-      out.push({ id: "samePlantDifferentRegionAndClass", plant, evidence: "plantIds" });
+      out.push({ id: "samePlantDifferentRegionAndClass", plant, plantProfileId: profiles[0].id, evidence: "plantIds" });
     }
   }
   if (sameTradition && !allSharePlant) {

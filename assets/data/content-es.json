@@ -353,25 +353,31 @@
   },
   "bottles": {
     "fortaleza-blanco": {
-      "reviewSummary": "Un blanco del valle de referencia: agave cocido sabroso y firme, con salmuera de aceituna y pimienta, y más complejidad que la mayoría de su categoría."
+      "reviewSummary": "Un blanco del valle de referencia: agave cocido sabroso y firme, con salmuera de aceituna y pimienta, y más complejidad que la mayoría de su categoría.",
+      "producer": "Tequila Fortaleza (destilería Fortaleza, Tequila, Jalisco)"
     },
     "lost-explorer-espadin": {
-      "reviewSummary": "Un espadín acogedor y suavemente ahumado: herbáceo y delicadamente dulce en el paladar, con un final largo, seco y ahumado que se desvanece en hierbas terrosas."
+      "reviewSummary": "Un espadín acogedor y suavemente ahumado: herbáceo y delicadamente dulce en el paladar, con un final largo, seco y ahumado que se desvanece en hierbas terrosas.",
+      "producer": "The Lost Explorer (producido en su palenque oaxaqueño)"
     },
     "rancho-tepua-bacanora": {
-      "reviewSummary": "Mineral y guiado por el agave asado: sándalo, canela, limoncillo y un toque mineral alrededor de un centro de agave asado, sobre una nariz rica de agave dulce."
+      "reviewSummary": "Mineral y guiado por el agave asado: sándalo, canela, limoncillo y un toque mineral alrededor de un centro de agave asado, sobre una nariz rica de agave dulce.",
+      "producer": "Vinata Rancho Tepúa (Roberto Contreras, Maestro Bacanorero)"
     },
     "la-venenosa-tabernas": {
-      "reviewSummary": "Una raicilla rústica y accesible: manzana ácida y un ligero vinagre en la nariz, agave dulce y un agradable matiz fermentado en el paladar — ligera y fácil de beber o mezclar."
+      "reviewSummary": "Una raicilla rústica y accesible: manzana ácida y un ligero vinagre en la nariz, agave dulce y un agradable matiz fermentado en el paladar — ligera y fácil de beber o mezclar.",
+      "producer": "Antonio Arrizon (Maestro Tabernero), La Vieja, Sierra Occidental, Jalisco; marca de Casa Endémica"
     },
     "cielo-rojo-bacanora-blanco": {
       "reviewSummary": "Agave dulce y herbáceo con un toque de humo y cítricos, y un cuerpo medio-ligero; el humo avanza y las notas herbáceas y terrosas superan el dulzor inicial. En conjunto, una bacanora agradable y vibrante.",
       "editorialNote": "De la misma viñata de la familia Contreras que la botella de ejemplo de este perfil — espera un carácter mineral y de asado en horno similar, con la reseña de Tequila.net señalando un humo más adelantado que el del perfil típico.",
-      "batch": "Lotes pequeños; la primera bacanora premium importada legalmente a EE. UU."
+      "batch": "Lotes pequeños; la primera bacanora premium importada legalmente a EE. UU.",
+      "producer": "Roberto Contreras Mayoral (vinata de la familia Contreras, Rancho Tepúa, Aconchi, Sonora)"
     },
     "kilinga-bacanora-silvestre": {
       "reviewSummary": "Flores silvestres, cítricos y la acidez de la manzana verde, con un suave final violeta — una bacanora aromática y moderadamente compleja.",
-      "editorialNote": "Una lectura más afrutada y floral de el bacanora que la que describe este perfil — la acidez de manzana verde y el final violeta quedan fuera del centro mineral y sabroso del ejemplo de Rancho Tepúa."
+      "editorialNote": "Una lectura más afrutada y floral de el bacanora que la que describe este perfil — la acidez de manzana verde y el final violeta quedan fuera del centro mineral y sabroso del ejemplo de Rancho Tepúa.",
+      "producer": "Rodrigo Bojórquez Bours (vinata familiar, Álamos, Sonora)"
     },
     "la-venenosa-costa": {
       "reviewSummary": "La oferta más sabrosa y ahumada del rango de La Venenosa (lote 32, 2021) — un destilado que su reseñista encontró delicioso en su punto de precio.",
@@ -390,18 +396,22 @@
       "plantComposition": "Fermentado y doble destilado a partir de aguamiel fresco de maguey comiteco (Agave atrovirens); según el importador estadounidense del productor, reposado en vidrio unos seis meses antes del embotellado",
       "reviewSummary": "Mezcal Reviews lista el 9 Guardianes Comiteco Blanco como fermentado de la savia del maguey Comitlán y destilado en Chiapas.",
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas",
-      "composition": "Destilado de savia de agave fermentada (aguamiel); según la fuente citada, la categoría más amplia del comiteco permite azúcar de caña, y esta botella es de solo savia según el productor."
+      "composition": "Destilado de savia de agave fermentada (aguamiel); según la fuente citada, la categoría más amplia del comiteco permite azúcar de caña, y esta botella es de solo savia según el productor.",
+      "producer": "Comiteco Córdova & Guillén (Comitán de Domínguez, Chiapas)"
     },
     "estancia-destilado-de-pulque": {
-      "reviewSummary": "Verde y vegetal, con notas curiosas de cardamomo, limoncillo, pimienta en grano, cheddar añejo y acedera — doble destilado de savia Salmiana fermentada 48 horas en una columna corta de cobre, según notas del importador."
+      "reviewSummary": "Verde y vegetal, con notas curiosas de cardamomo, limoncillo, pimienta en grano, cheddar añejo y acedera — doble destilado de savia Salmiana fermentada 48 horas en una columna corta de cobre, según notas del importador.",
+      "producer": "Familia Razo / Rodolfo de Razo (colectivo Rancho San Isidro, Nanacamilpa, Tlaxcala)"
     },
     "fortaleza-reposado": {
       "reviewSummary": "Un paladar terroso de canela, caramelo y cítricos con notas de aceituna y mantequilla de 6–8 meses en roble americano; el agave limpio del blanco sigue intacto, acentuado por una suave madera y especias de roble.",
-      "batch": "Envejecido en roble americano; los lotes varían"
+      "batch": "Envejecido en roble americano; los lotes varían",
+      "producer": "Tequila Fortaleza (destilería Fortaleza, Tequila, Jalisco)"
     },
     "fortaleza-anejo": {
       "reviewSummary": "Dulzor de azúcar blanca y miel, piña, uva verde y agave vegetal sobre una frutalidad suave de barrica — más oscuro y redondo que el blanco, con el roble entretejido en lugar de dominante.",
-      "batch": "Envejecido unos 18 meses en barricas ex-bourbon"
+      "batch": "Envejecido unos 18 meses en barricas ex-bourbon",
+      "producer": "Tequila Fortaleza (destilería Fortaleza, Tequila, Jalisco)"
     },
     "patron-anejo-cristalino": {
       "reviewSummary": "Aromas y sabores redondos y cremosos — vainilla, carbón de roble, crema de limón, piña tostada — con una acidez y un agave más suaves que un blanco; un perfil fácil de beber, de agave ligero, roble, canela y vainilla.",
@@ -412,7 +422,8 @@
       "plantComposition": "Fermentado y doble destilado a partir de aguamiel fresco de maguey comiteco (Agave atrovirens); según el importador estadounidense del productor, reposado en vidrio con ramas de roble blanco en lugar de barricas",
       "reviewSummary": "Mezcal Reviews lista el 9 Guardianes Comiteco Añejo al 42% de alcohol, de savia de maguey Comitlán fermentada y destilada en Chiapas.",
       "composition": "Destilado de savia de agave fermentada (aguamiel); según la fuente citada, la categoría más amplia del comiteco permite azúcar de caña, y esta botella es de solo savia según el productor.",
-      "batch": "Reposado en vidrio con ramas de roble blanco"
+      "batch": "Reposado en vidrio con ramas de roble blanco",
+      "producer": "Comiteco Córdova & Guillén (Comitán de Domínguez, Chiapas)"
     },
     "la-venenosa-tabernas-reposado": {
       "reviewSummary": "Vainilla, caramelo, cuero, tabaco dulce y ciruela en la nariz; ciruela, pasa, cereza luxardo, vainilla y cuero en el paladar, con un final de humo de fogata dulce, canela y tabaco. La barrica de jerez es divertida, aunque su reseñista nota que opaca un poco el agave.",
@@ -428,7 +439,8 @@
     "dantano-aguamiel-cane": {
       "reviewSummary": "Solo, sustituiría limpiamente al ron blanco en un mojito — de los dos destilados chiapanecos que su reseñista cató ese día, prefirió el comiteco.",
       "composition": "Destilado de savia de agave fermentada (aguamiel) mezclado con destilado de caña; la distinción se declara abiertamente y nunca se etiqueta como 100% de agave.",
-      "batch": "Destilado de aguamiel y caña; según la fuente de la reseña, esta etiqueta es un destilado de aguamiel y caña, a diferencia de la etiqueta 9 Guardianes de solo savia"
+      "batch": "Destilado de aguamiel y caña; según la fuente de la reseña, esta etiqueta es un destilado de aguamiel y caña, a diferencia de la etiqueta 9 Guardianes de solo savia",
+      "producer": "Línea Comiteco 9 Guardianes (Don Elías en México), Comitán de Domínguez, Chiapas"
     },
     "el-tesoro-extra-anejo": {
       "reviewSummary": "Mantiene el agave claramente en el encuadre donde la mayoría de los extra añejos son bombas de caramelo y vainilla: una nariz herbácea de romero, pimienta y pimienta de Jamaica que podría pasar por un reposado, sobre un roble profundo.",
@@ -450,33 +462,39 @@
     "montelobos-tobala": {
       "reviewSummary": "Aromas de limón, pimiento verde y pera, con cítricos, albahaca, higo asado, macadamia y trufa en el paladar; las notas de miembros entre lotes también mencionan chicle y pasto recién cortado.",
       "batch": "100% tobalá cultivado (sin recolección silvestre), asado en horno; producción enfocada en sostenibilidad",
-      "abvNote": "La graduación varía por lote; la reseña citada lista notas específicas de lote — revisa tu botella"
+      "abvNote": "La graduación varía por lote; la reseña citada lista notas específicas de lote — revisa tu botella",
+      "producer": "Montelobos (mezcalero Iván Saldaña; producción en la zona de Santiago Matatlán), Oaxaca"
     },
     "macurichos-ancestral-tobala": {
       "reviewSummary": "Herbáceo, con notas de tierra seca, tomillo, cilantro y un toque de romero; una reseña de miembro lo encontró suave y delicado, con un buen dulzor de principio a fin.",
       "batch": "Producción ancestral: cocido en horno de barro, molido con tahona, fermentado en tinas de madera, alambiques de barro; la familia también reforesta poblaciones silvestres",
-      "abvNote": "La graduación de los lotes pequeños varía (una reseña de miembro citada lista un lote al 47,54%); revisa tu botella"
+      "abvNote": "La graduación de los lotes pequeños varía (una reseña de miembro citada lista un lote al 47,54%); revisa tu botella",
+      "producer": "Macurichos (maestro mezcalero Gonzalo Martinez), Santiago Matatlán, Oaxaca"
     },
     "del-maguey-pechuga": {
       "reviewSummary": "Regaliz negro, anís y clavo con fruta y un ahumado afín al whisky — y, sí, un sabor a pollo; otras notas encuentran albahaca, limón, océano y fruta en la nariz, con piel de pollo asado ahumada, pimentón y sal de mar en una segunda reseña. Un estilo de producción para festivales, no una clase cotidiana.",
       "editorialNote": "La pechuga es un estilo de producción (tercera destilación sobre fruta y aves), no una clase legal de edad ni un destilado aparte; es contextual a la tradición del mezcal más que una categoría nueva aquí.",
       "batch": "Triple destilado; la tercera destilación pasa el vapor por frutas de montaña silvestres, almendras, arroz y una pechuga de pollo cruda suspendida; producción estacional y limitada",
-      "abvNote": "La graduación varía por lote (una lista minorista citada muestra 49%); revisa tu botella"
+      "abvNote": "La graduación varía por lote (una lista minorista citada muestra 49%); revisa tu botella",
+      "producer": "Del Maguey Single Village (Florencio Carlos Sarmiento y otros), Minas de Real del Peñón (Sierra Norte), Oaxaca"
     },
     "siete-pozos-tuxca": {
       "reviewSummary": "Una fragancia floral dulce con un sándalo ligero (lote 03), un paladar láctico con pimientos verdes y mineralidad dulce, y un final rico en agave.",
       "batch": "Agaves silvestres ixtero amarillo y lineño, asados en horno, fermentados en piedra volcánica, destilados en cobre; uno de los productores que impulsan activamente una denominación de origen para la tuxca",
-      "abvNote": "Producción en lotes pequeños; la graduación varía (una lista minorista muestra 45%) — revisa tu botella"
+      "abvNote": "Producción en lotes pequeños; la graduación varía (una lista minorista muestra 45%) — revisa tu botella",
+      "producer": "Siete Pozos Taberna (maestro tabernero Refugio Pineda Cruz; propietario de la marca Luis Velasco), Zapotitlán de Vadillo, Jalisco"
     },
     "indio-alonso-tuxca": {
       "reviewSummary": "La entrada citada de Mezcal Reviews documenta la composición multi-agave (cimarrón, cuaquizoca, salmiana) y la fermentación en horno de piedra volcánica; las notas de cata de este lote específico aún no están documentadas, así que aquí no se afirma ningún carácter de sabor.",
       "batch": "Agaves silvestres cimarrón (Agave angustifolia), cuaquizoca y salmiana (Agave inaequidens), asados en horno, fermentados en horno de piedra volcánica, doble destilación en cobre; otro productor que impulsa una denominación de origen para la tuxca",
-      "abvNote": "Producción en lotes pequeños; graduación no documentada en la fuente citada — revisa tu botella"
+      "abvNote": "Producción en lotes pequeños; graduación no documentada en la fuente citada — revisa tu botella",
+      "producer": "Indio Alonso (tuxquero de quinta generación David Benítez Venegas), Zapotitlán de Vadillo, Jalisco"
     },
     "clande-sotol-yellow": {
       "reviewSummary": "Magia pura en aroma y sabor para sus reseñistas — uno lo llamó su sotol favorito probado hasta ahora; el proyecto de terruño de la marca apoya a pequeños productores locales y la conservación del Dasylirion.",
       "batch": "Lotes pequeños de Dasylirion silvestre; las etiquetas codificadas por color de Clande marcan cada una a un sotolero distinto — la etiqueta amarilla es Bienvenido Fernandez",
-      "abvNote": "La graduación varía por lote (una reseña de miembro citada lista 46,5% para un lote de marzo de 2018); revisa tu botella"
+      "abvNote": "La graduación varía por lote (una reseña de miembro citada lista 46,5% para un lote de marzo de 2018); revisa tu botella",
+      "producer": "Bienvenido Fernandez (más de 40 años de oficio; aprendió en las vinatas clandestinas de la sierra norte chihuahuense), Chihuahua"
     },
     "hacienda-de-chihuahua-sotol-anejo": {
       "reviewSummary": "Un carácter medicinal-herbal con azúcar moreno y anís y un final apenas amargo — un sorbo ligero de verano que su reseñista encontró comparable a añejos finos de tequila pero más profundo.",
@@ -502,35 +520,41 @@
     "la-nina-del-mezcal-bacanora": {
       "reviewSummary": "Salada y viscosa, con fruta y azúcar de agave; una nota de miembro encontró algodón de azúcar en la nariz, notas de pasta dental de naranja y crema de mantequilla, y un final apenas ácido.",
       "batch": "Lotes pequeños artesanales de agave pacifica; lote citado B002, botella 909/1000",
-      "abvNote": "Producción en lotes pequeños; la graduación varía (la reseña citada lista 48% para el lote B002) — revisa tu botella"
+      "abvNote": "Producción en lotes pequeños; la graduación varía (la reseña citada lista 48% para el lote B002) — revisa tu botella",
+      "producer": "Rafael Encinas (doble destilación), San Pedro de la Cueva, Sonora"
     },
     "el-acabo-plata-raicilla": {
       "reviewSummary": "Una aromática brillante de pimiento verde y pasto con jalapeño y pimiento rojo, y un paladar guiado por lo verde de agave, manzana verde y jalapeño — el destilado de agave mejor clasificado (97/100) en el concurso 2025 del Beverage Testing Institute, según Tastings.com y Forbes.",
-      "batch": "Plata sin crianza de la Taberna 3 Gallos; homenaje a las celebraciones de cosecha de la Hacienda de Ahuacatepec"
+      "batch": "Plata sin crianza de la Taberna 3 Gallos; homenaje a las celebraciones de cosecha de la Hacienda de Ahuacatepec",
+      "producer": "Taberna 3 Gallos (productor Fausto, ingeniero químico; tradición de la familia Labastida), Jalisco"
     },
     "aguamiel-bacanora-blanco": {
       "reviewSummary": "Agave cálido con pastel de vainilla y ligera fruta (piña, crema de plátano) en nariz, y un paladar dulce y jugoso con notas de crema batida, masa de pastel y natillas contra ligeras notas herbáceas, de humo y salinas.",
       "classification": "Bacanora — blanco (sin añejar); denominación de origen de Sonora",
-      "plantComposition": "100% de agave silvestre yaquiana/Pacifica (la forma sonorense de Agave angustifolia), según el productor"
+      "plantComposition": "100% de agave silvestre yaquiana/Pacifica (la forma sonorense de Agave angustifolia), según el productor",
+      "producer": "Aguamiel Bacanora (vinata de la familia Quintana, Suaqui Grande, Sonora)"
     },
     "don-julio-blanco": {
       "reviewSummary": "Una nariz especiada y mineral con limón vivaz y toronja rosada y sutiles aromas de masa con levadura; el paladar limpio y mineral ofrece dulce de leche, masa y delicados sabores herbales, cerrando con un final largo y seco con notas vegetales y pimienta negra especiada. Sin crianza, reposado brevemente en recipientes inertes antes del embotellado.",
       "editorialNote": "Un blanco de los Altos y no del Valle de Tequila: espera la lectura más brillante y frutal de la misma clase legal.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
-      "place": "Atotonilco el Alto, Jalisco (Los Altos)"
+      "place": "Atotonilco el Alto, Jalisco (Los Altos)",
+      "producer": "Don Julio (Tequila Tres Magueyes, Atotonilco el Alto, Jalisco)"
     },
     "jose-cuervo-tradicional-reposado": {
       "reviewSummary": "La frutosidad, la especia y la pimienta contenidas frente a embotellados anteriores — sigue siendo un reposado agradable y fácil, pero con menos agave contundente del que su reseñista busca en un tequila de sorbo.",
       "classification": "Tequila — reposado 100% de agave (con reposo en roble)",
-      "plantComposition": "100% de agave azul weber (Agave tequilana)"
+      "plantComposition": "100% de agave azul weber (Agave tequilana)",
+      "producer": "Jose Cuervo (destilería La Rojeña, Tequila, Jalisco)"
     },
     "patron-silver": {
       "reviewSummary": "Un encantador aroma vegetal de agave cocido — pasto, pimientos verdes, algo de tierra y eucalipto — con sabores de agave, eucalipto y pimienta blanca que llevan a un final suave y sabroso; fino solo y en cócteles, con precio premium.",
       "editorialNote": "Un blanco de los Altos: la misma clase sin añejar del ejemplo del valle, con la lectura más frutal y cítrica de los Altos.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
-      "place": "Atotonilco el Alto, Jalisco (Los Altos)"
+      "place": "Atotonilco el Alto, Jalisco (Los Altos)",
+      "producer": "PATRÓN (Hacienda Patrón, Atotonilco el Alto, Jalisco)"
     },
     "casa-dragones-blanco": {
       "reviewSummary": "Toronja fresca y manzana verde en la nariz, agave protagonista en el sorbo con pimienta negra, clavo, menta y fruta tropical jugosa, y un final ligero y brillante con toronja, pimienta y hierbas refrescantes.",
@@ -543,7 +567,8 @@
       "classification": "Tequila — blanco 100% de agave, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana), de cultivo propio",
       "batch": "Elaborado con una mezcla 50/50 de agua de lluvia y de manantial; cocido en horno de piedra y molido con tahona",
-      "place": "Jesús María, Los Altos, Jalisco (Los Altos)"
+      "place": "Jesús María, Los Altos, Jalisco (Los Altos)",
+      "producer": "G4 (Felipe Camarena, destilería El Pandillo, NOM 1579, Jesús María, Jalisco)"
     },
     "maestro-dobel-50-cristalino": {
       "reviewSummary": "Un cristalino suave y complejo: la riqueza de la madera atraviesa la filtración, con notas de higo, membrillo, dátil, piña y calabaza sobre canela, vainilla y clavo señaladas por el productor.",
@@ -557,46 +582,53 @@
       "classification": "Tequila — añejo 100% de agave (14–16 meses en roble)",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
       "batch": "Reposado 14–16 meses en roble americano bien curado (barricas con larga historia de maduración de tequila), según el importador estadounidense del productor",
-      "place": "El Arenal, Jalisco (región del Valle de Tequila)"
+      "place": "El Arenal, Jalisco (región del Valle de Tequila)",
+      "producer": "Tequila Cascahuín (familia Rosales, NOM 1123, El Arenal, Jalisco)"
     },
     "tequila-ocho-extra-anejo": {
       "reviewSummary": "Cerezas, anís, chocolate oscuro, jerez, roble y plátano en nariz, y roble, anís, fruta seca, cerezas, toffee, pimienta negra y canela en el paladar. No hay reseña independiente documentada de la versión actual; según las notas del propio productor.",
       "classification": "Tequila — extra añejo 100% de agave (3+ años en roble)",
       "plantComposition": "100% de agave azul weber (Agave tequilana), de finca única y con añada",
       "batch": "Con añada de un solo rancho; añejado un mínimo de tres años en barricas usadas de whisky americano",
-      "place": "Arandas, Jalisco (Los Altos)"
+      "place": "Arandas, Jalisco (Los Altos)",
+      "producer": "Tequila Ocho (Carlos Camarena, Tequilera Los Alambiques, NOM 1474, Arandas, Jalisco)"
     },
     "balam-raicilla-costa": {
       "classification": "Raicilla — joven (sin añejar); denominación de origen de Jalisco",
       "plantComposition": "Agave Chino Aguiar / rhodacantha, según la ficha del productor; la composición varía por lote",
-      "place": "El Tuito, Jalisco costero"
+      "place": "El Tuito, Jalisco costero",
+      "producer": "Balam (Maestro Tabernero Don Rosalio Rodríguez, El Tuito, Cabo Corrientes, Jalisco)"
     },
     "don-julio-reposado": {
       "reviewSummary": "Complejidad suave de principio a fin: un dejo de dulce de leche, almendra y un toque de especia maderable y té, con especias picantes que crecen en la garganta.",
       "editorialNote": "Un reposado de los Altos: el perfil de reposado de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
       "classification": "Tequila — reposado 100% de agave (8 meses de reposo en roble, según la reseña)",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
-      "place": "Atotonilco el Alto, Jalisco (Los Altos)"
+      "place": "Atotonilco el Alto, Jalisco (Los Altos)",
+      "producer": "Don Julio (Tequila Tres Magueyes, Atotonilco el Alto, Jalisco)"
     },
     "don-julio-anejo": {
       "reviewSummary": "Agave suave con pimienta blanca moderada y caramelo claro, una presencia de roble muy leve y un dulzor agradable a la miel, con ralladura de lima y confitura de albaricoque fundidos en el agave, el roble y el caramelo.",
       "editorialNote": "Un añejo de los Altos: el perfil de añejo de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
       "classification": "Tequila — añejo 100% de agave (18 meses en roble, según la cata citada)",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
-      "place": "Atotonilco el Alto, Jalisco (Los Altos)"
+      "place": "Atotonilco el Alto, Jalisco (Los Altos)",
+      "producer": "Don Julio (Tequila Tres Magueyes, Atotonilco el Alto, Jalisco)"
     },
     "jose-cuervo-tradicional-plata": {
       "reviewSummary": "Una plata fácil de beber con el carácter terroso y herbáceo del valle presente pero más suave que los ejemplos más contundentes de la categoría — lanzada en 2011 como un verdadero tequila 100% de agave azul de la región central del valle.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
-      "place": "Tequila, Jalisco (región del valle central)"
+      "place": "Tequila, Jalisco (región del valle central)",
+      "producer": "Jose Cuervo (La Rojeña / Casa Cuervo, Tequila, Jalisco)"
     },
     "patron-reposado": {
       "reviewSummary": "Un destilado dicotómico: dulzor de caramelo a la miel, calabaza horneada suave y terrosa, pimientos verdes dulces, pimienta blanca picante, sándalo y un toque de vainilla, cambiando de dirección en el primer sorbo.",
       "editorialNote": "Un reposado de los Altos: el perfil de reposado de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
       "classification": "Tequila — reposado 100% de agave (reposo en roble, en promedio unos seis meses según la reseña)",
       "plantComposition": "100% de agave azul weber (Agave tequilana); una mezcla de tequilas de tahona y de molino de rodillos, según la ficha del productor",
-      "place": "Atotonilco el Alto, Jalisco (Los Altos)"
+      "place": "Atotonilco el Alto, Jalisco (Los Altos)",
+      "producer": "PATRÓN (Hacienda Patrón, NOM 1492, Atotonilco el Alto, Jalisco)"
     },
     "casa-dragones-joven": {
       "reviewSummary": "Extraordinariamente suave, con una nariz muy dulce, afrutada, casi vinosa y un sabor puro y contundente a pimienta que termina limpio.",
@@ -647,7 +679,8 @@
       "whereItGrows": "Valles Centrales de Oaxaca (cultivado), la Sierra de Sonora (silvestre) y la costa de Jalisco (silvestre y cultivado).",
       "harvestProduction": "Cultivado a escala en Oaxaca; de cosecha silvestre en Sonora. Cocido (pozo o vapor), nunca por savia.",
       "sensoryTendencies": "Orientación editorial: los mezcales de espadín se leen con asado; la Pacifica de el bacanora aporta herbalidad sonorense; los sabores difieren por lugar y proceso, no por el nombre.",
-      "sustainability": "Las presiones de cosecha silvestre varían mucho por región: el bacanora sonorense depende de poblaciones silvestres de yaquiana/Pacifica, y el crecimiento del mezcal ha aumentado la demanda sobre parientes angustifolia de cosecha silvestre en otras partes. Donde el espadín se cultiva a escala (Oaxaca) la presión es mucho menor. Si la Pacifica/Yaquiana sonorense es la misma planta que el espadín o una variedad local distinta sigue en debate; esta guía conserva los nombres regionales sin zanjar la botánica. (El reporte sobre cosecha de agave silvestre es un tema activo en la prensa de la categoría, p. ej. Mezcalistas, revisado el 21-10-2026.)"
+      "sustainability": "Las presiones de cosecha silvestre varían mucho por región: el bacanora sonorense depende de poblaciones silvestres de yaquiana/Pacifica, y el crecimiento del mezcal ha aumentado la demanda sobre parientes angustifolia de cosecha silvestre en otras partes. Donde el espadín se cultiva a escala (Oaxaca) la presión es mucho menor. Si la Pacifica/Yaquiana sonorense es la misma planta que el espadín o una variedad local distinta sigue en debate; esta guía conserva los nombres regionales sin zanjar la botánica. (El reporte sobre cosecha de agave silvestre es un tema activo en la prensa de la categoría, p. ej. Mezcalistas, revisado el 21-10-2026.)",
+      "uncertainty": "Si la pacífica/yaquiana de Sonora es la misma planta que el espadín o una variedad local distinta está en debate; la app conserva los nombres regionales sin resolver la botánica."
     },
     "agave-maximiliana": {
       "cultivation": "cosecha silvestre",
@@ -655,7 +688,8 @@
       "whereItGrows": "El país de las montañas de la Sierra Occidental de Jalisco, alrededor de La Vieja y la Sierra de Talpa.",
       "harvestProduction": "Cosecha silvestre; asado en hornos de adobe sobre el suelo, fermentación con levaduras silvestres, destilación en pequeños lotes.",
       "sensoryTendencies": "Orientación editorial: la raicilla de la Sierra se lee herbal y rústica; la cosecha silvestre implica variación genuina entre lotes.",
-      "sustainability": "De cosecha silvestre en la Sierra Occidental de Jalisco; la creciente demanda de raicilla pone presión sobre las poblaciones silvestres de maximiliana, y algunos productores reportan programas de replantación, aunque la evidencia documentada es limitada. Se trata aquí como una preocupación de sostenibilidad de cosecha silvestre, no como una afirmación verificada del productor."
+      "sustainability": "De cosecha silvestre en la Sierra Occidental de Jalisco; la creciente demanda de raicilla pone presión sobre las poblaciones silvestres de maximiliana, y algunos productores reportan programas de replantación, aunque la evidencia documentada es limitada. Se trata aquí como una preocupación de sostenibilidad de cosecha silvestre, no como una afirmación verificada del productor.",
+      "uncertainty": "El nombre local se solapa con otras especies en otras regiones; los nombres comunes no son identificadores únicos globales."
     },
     "agave-atrovirens": {
       "cultivation": "cultivado; savia recolectada de la planta viva (sin cocción)",
@@ -663,7 +697,8 @@
       "whereItGrows": "Cultivado en el altiplano central de Chiapas, alrededor de Comitán de Domínguez.",
       "harvestProduction": "Cultivado; la planta viva se raspa y su aguamiel se recolecta a diario — la piña nunca se cocina.",
       "sensoryTendencies": "Orientación editorial: el comiteco, de savia, carece por completo de carácter de asado; algunas botellas declaradas incluyen azúcar de caña, y la composición sigue siendo un dato por botella.",
-      "sustainability": "Cultivado; la planta sigue viva tras la cosecha de savia."
+      "sustainability": "Cultivado; la planta sigue viva tras la cosecha de savia.",
+      "uncertainty": "La declaración de la IG de 2025 para el Comiteco de Comitán, Chiapas identifica el maguey comiteco como Agave americana L.; algunos materiales de productores e importadores y referencias anteriores lo llaman Agave atrovirens. La guía registra ambos nombres en lugar de resolver la diferencia en silencio."
     },
     "agave-salmiana": {
       "cultivation": "cultivado en la tradición pulquera; savia recolectada de la planta viva",
@@ -671,7 +706,8 @@
       "whereItGrows": "Cultivado en Tlaxcala y el altiplano pulquero del centro de México.",
       "harvestProduction": "Cultivado; el aguamiel se recolecta a diario de la planta viva, se fermenta en pulque (~48 horas) y luego se destila — sin cocción.",
       "sensoryTendencies": "Orientación editorial: al ser de savia, sin carácter de asado; las fuentes varían sobre la nomenclatura de subespecies (Manso/Salmiana), lo que esta guía registra sin resolver.",
-      "sustainability": "Cultivado; la planta sigue viva tras la cosecha de savia."
+      "sustainability": "Cultivado; la planta sigue viva tras la cosecha de savia.",
+      "uncertainty": "Las fuentes difieren en el nombre de la subespecie (Manso/Salmiana); la app registra la identidad a nivel de género sin resolver el debate de la subespecie."
     },
     "tuxca-wild-agaves": {
       "cultivation": "cosecha silvestre; los ensambles varían por lote",
@@ -679,7 +715,8 @@
       "whereItGrows": "Los cañones fluviales del sur de Jalisco, alrededor de Tuxcacuesco y Zapotitlán de Vadillo, llegando hacia Colima.",
       "harvestProduction": "Cosecha silvestre; asado en pozo cilíndrico, machacado a mano, fermentación en cráter volcánico, destilación en alambique filipino de madera. Los ensambles varían por lote.",
       "sensoryTendencies": "Orientación editorial: los lotes varían genuinamente según el vinatero y la mezcla de agaves; la composición de especies se registra solo cuando una fuente documenta el lote real.",
-      "sustainability": "De cosecha silvestre; la composición del lote se rige por evidencia, nunca se asume."
+      "sustainability": "De cosecha silvestre; la composición del lote se rige por evidencia, nunca se asume.",
+      "uncertainty": "Los lotes de tuxca pueden mezclar varios agaves silvestres; la composición de especies se registra solo cuando una fuente documenta el lote concreto."
     },
     "agave-potatorum": {
       "cultivation": "mayormente silvestre en altitud; la reproducción solo por semilla hace lento el cultivo, por lo que las poblaciones silvestres están bajo presión — algunos productores ya cultivan o reforestan (la entrada citada de Montelobos es 100% cultivada)",
@@ -687,7 +724,8 @@
       "whereItGrows": "Las montañas altas de la Sierra Norte de Oaxaca (y más allá); madurez de 12–15 años en altitud.",
       "harvestProduction": "De cosecha silvestre tradicionalmente; algunos productores ya cultivan o reforestan. Asado en pozo, molienda de piedra, fermentación silvestre; alambiques de barro o cobre.",
       "sensoryTendencies": "Orientación editorial: típicamente más ligero y floral que el espadín; una cata ciega citada de ocho tobalás no encontró un solo hilo común — los lotes silvestres y cultivados se saben notablemente distintos.",
-      "sustainability": "La reproducción única por semilla hace lento el cultivo, por lo que las poblaciones silvestres están bajo presión por la demanda de tobalá; algunos productores cultivan o reforestan (la entrada de Montelobos citada es 100% cultivada). Como especie de cosecha silvestre con ciclo de maduración largo, el tobalá es uno de los casos de sostenibilidad más discutidos en los destilados de agave (reporte de categoría revisado el 21-10-2026)."
+      "sustainability": "La reproducción única por semilla hace lento el cultivo, por lo que las poblaciones silvestres están bajo presión por la demanda de tobalá; algunos productores cultivan o reforestan (la entrada de Montelobos citada es 100% cultivada). Como especie de cosecha silvestre con ciclo de maduración largo, el tobalá es uno de los casos de sostenibilidad más discutidos en los destilados de agave (reporte de categoría revisado el 21-10-2026).",
+      "uncertainty": "El tobalá silvestre y el cultivado pueden saber notablemente distintos; la variación de sabor entre lotes está documentada y es genuina."
     },
     "dasylirion-desert-spoon": {
       "cultivation": "cosecha silvestre tras 8–12 años; una sola planta rinde aproximadamente una botella, así que la cosecha sostenible (raíces dejadas para rebrotar) y los programas de conservación importan",
@@ -695,7 +733,8 @@
       "whereItGrows": "El desierto chihuahuense del norte de México (Chihuahua, Coahuila, Durango), 8–12 años hasta la madurez.",
       "harvestProduction": "Cosecha silvestre; piña asada en pozos cónicos (o cocida al vapor por productores grandes), fermentación silvestre, destilación en cobre o barro. Las raíces pueden dejarse intactas para que la planta rebrote.",
       "sensoryTendencies": "Orientación editorial: terroso y ahumado-herbal; la distinción de género significa que el sotol nunca se presenta como un destilado de agave.",
-      "sustainability": "Una sola planta rinde aproximadamente una botella, así que la cosecha sostenible (raíces dejadas para rebrotar) y los programas de conservación importan."
+      "sustainability": "Una sola planta rinde aproximadamente una botella, así que la cosecha sostenible (raíces dejadas para rebrotar) y los programas de conservación importan.",
+      "uncertainty": "No es un agave: Dasylirion es un género emparentado de la familia Asparagaceae. Esta página mantiene explícita esa distinción."
     },
     "agave-rhodacantha": {
       "cultivation": "silvestre y cultivado; usado en la raicilla de la Costa junto al chico aguiar",
@@ -703,7 +742,8 @@
       "whereItGrows": "Las montañas y cañones costeros del suroeste de Jalisco, alrededor de Cabo Corrientes.",
       "harvestProduction": "Silvestre y cultivado; asado en pozo subterráneo, fermentación con levaduras silvestres, destilación en pequeños lotes.",
       "sensoryTendencies": "Orientación editorial: contribuye al perfil de la raicilla de la Costa junto al chico aguiar; los nombres comunes de los agaves de la costa de Jalisco varían por localidad y taberna.",
-      "sustainability": "Misto silvestre/cultivado; los nombres regionales se conservan sin resolver debates de especies."
+      "sustainability": "Misto silvestre/cultivado; los nombres regionales se conservan sin resolver debates de especies.",
+      "uncertainty": "Los nombres comunes de los agaves costeros de Jalisco varían por localidad y taberna; la app conserva los nombres regionales sin resolver los debates de especie."
     }
   },
   "terms": {
@@ -802,19 +842,78 @@
     "tequila": {
       "sustainability": "El Agave tequilana se cultiva a gran escala, así que el tequila no comparte la presión sobre poblaciones silvestres de las tradiciones de cosecha silvestre; las preocupaciones documentadas de la industria se centran en los ciclos de precio del agave y el avance de la cocción industrial rápida.",
       "legalStatus": "Destilado con Denominación de Origen propia; la NOM-006-SCFI-2012 define las clases legales blanco (que puede recibir una maduración breve permitida por debajo del umbral del reposado), joven u oro, reposado, añejo y extra añejo, cada una con sus mínimos de reposo en roble. El tequila además tiene dos categorías de composición — 100% de agave y tequila (mezcla de agave con otros azúcares) — que son datos de composición, no grados de calidad. El cristalino es un estilo de acabado/marketing, no una clase legal.",
-      "materials": "Agave azul (Agave tequilana), cultivado; el tequila 100% de agave usa solo azúcares de agave, mientras que la otra categoría legal de composición permite otros azúcares junto con el agave — un dato de composición declarado, no un grado de calidad."
+      "materials": "Agave azul (Agave tequilana), cultivado; el tequila 100% de agave usa solo azúcares de agave, mientras que la otra categoría legal de composición permite otros azúcares junto con el agave — un dato de composición declarado, no un grado de calidad.",
+      "name": "Tequila",
+      "origin": "Nacido en el pueblo de Tequila y sus alrededores, Jalisco; la industria moderna creció de las haciendas del valle y de los altos.",
+      "history": "Uno de los destilados regulados más antiguos de México; la denominación de origen se limita a los municipios designados, principalmente en Jalisco.",
+      "practices": "Cocción al vapor en hornos u autoclaves, extracción con tahona o molino de rodillos, fermentación, doble destilación y reposo opcional en roble.",
+      "diversity": "El agave del valle y el de los altos se leen editorialmente distintos (sabroso/vegetal frente a más dulce/floral); los términos de clase son propios de cada destilado."
     },
     "bacanora": {
       "sustainability": "El bacanora depende de poblaciones silvestres de yaquiana/Pacifica en la Sierra sonorense; la presión de cosecha sobre el agave silvestre es el principal tema de sostenibilidad de la tradición (reporte de categoría revisado el 21-10-2026).",
-      "history": "Práctica regional de larga data; la historia oficial sonorense describe una era de prohibición de 1915 a 1992, con la producción legalizada de nuevo en 1992. La denominación de origen se declaró en 2000 — la legalización y la DO son eventos separados, no un solo cambio en 2000."
+      "history": "Práctica regional de larga data; la historia oficial sonorense describe una era de prohibición de 1915 a 1992, con la producción legalizada de nuevo en 1992. La denominación de origen se declaró en 2000 — la legalización y la DO son eventos separados, no un solo cambio en 2000.",
+      "name": "Bacanora",
+      "origin": "Una tradición destiladora sonorense de la sierra de Sonora.",
+      "legalStatus": "Destilado con denominación de origen propia (Sonora, desde 2000); la cobertura oficial es municipal dentro de Sonora, no todo el estado.",
+      "materials": "Agave angustifolia silvestre y cultivado, conocido localmente como pacífica o yaquiana.",
+      "practices": "Asado en horno de piña (a menudo con leña de mezquite), fermentación con levaduras silvestres y doble destilación en vinatas.",
+      "diversity": "Los lotes silvestres conviven con expresiones cultivadas; los nombres locales de la planta se conservan sin resolver la botánica."
     },
     "mezcal": {
       "sustainability": "El mezcal abarca desde el espadín cultivado hasta muchas especies de cosecha silvestre; la presión de sostenibilidad se concentra en el extremo de cosecha silvestre (véanse las páginas de planta para el detalle por especie).",
       "legalStatus": "Destilado con Denominación de Origen propia; la NOM-070-SCFI-2016 define tres categorías de producción (mezcal, mezcal artesanal, mezcal ancestral) y seis clases: blanco o joven, madurado en vidrio, reposado (2–12 meses en madera), añejo (más de 12 meses en madera), abocado con y destilado con. Joven y abocado son clases distintas, no sinónimos, y los requisitos del mezcal difieren de los del tequila incluso donde los mínimos coinciden. El tobalá es un agave silvestre bajo presión de sostenibilidad, no una clase legal propia.",
-      "practices": "La NOM-070 permite varias rutas de equipo por categoría: cocción en pozo, mampostería o autoclave en la categoría base; hornos de pozo o elevados de mampostería en la artesanal; hornos de pozo en la ancestral. La destilación artesanal puede usar alambiques de cobre u ollas de barro (con monteras de barro, madera o cobre); la ancestral usa ollas de barro a fuego directo. La pechuga es una práctica de destilado con, no una categoría aparte. No todo mezcal se asa en pozo ni es ahumado — el proceso de la categoría permite otros métodos de cocción."
+      "practices": "La NOM-070 permite varias rutas de equipo por categoría: cocción en pozo, mampostería o autoclave en la categoría base; hornos de pozo o elevados de mampostería en la artesanal; hornos de pozo en la ancestral. La destilación artesanal puede usar alambiques de cobre u ollas de barro (con monteras de barro, madera o cobre); la ancestral usa ollas de barro a fuego directo. La pechuga es una práctica de destilado con, no una categoría aparte. No todo mezcal se asa en pozo ni es ahumado — el proceso de la categoría permite otros métodos de cocción.",
+      "name": "Mezcal",
+      "origin": "Profundamente arraigado en Oaxaca, con producción en varios estados.",
+      "history": "La denominación de origen admite cualquier especie de agave; la categoría abarca desde el espadín cultivado hasta agaves silvestres poco comunes.",
+      "materials": "Cualquier especie de agave permitida por la denominación: espadín cultivado (Agave angustifolia), tobalá silvestre y cultivado (Agave potatorum), entre muchas otras.",
+      "diversity": "La variación entre lotes es genuina y amplia; los ensambles requieren evidencia de composición; el humo depende de la cocción, no de la categoría."
     },
     "raicilla": {
-      "sustainability": "Parte del rango de la raicilla depende de maximiliana y especies afines de cosecha silvestre; las afirmaciones de sostenibilidad varían por productor y solo se presentan cuando están documentadas."
+      "sustainability": "Parte del rango de la raicilla depende de maximiliana y especies afines de cosecha silvestre; las afirmaciones de sostenibilidad varían por productor y solo se presentan cuando están documentadas.",
+      "name": "Raicilla",
+      "origin": "Una tradición jalisciense con estilos editorialmente distintos de sierra y de costa.",
+      "history": "Históricamente un destilado rural clandestino en las montañas de Jalisco; protegido como denominación de origen en 2019.",
+      "legalStatus": "Destilado con denominación de origen propia (Jalisco y Bahía de Banderas, Nayarit, desde 2019); la declaración nombra municipios específicos. Costa frente a Sierra es una división editorial, no una clase legal; el reposado es una clase con crianza definida legalmente bajo la DO.",
+      "materials": "Varios agaves: maximiliana (firma de la sierra), angustifolia/chico aguiar, rhodacantha y otros (costa).",
+      "practices": "Asado en horno de adobe o en horno de piña, fermentación silvestre abierta en tinas de madera, destilación en pequeños lotes; taberna es la palabra local para un pequeño destiladero.",
+      "diversity": "Las botellas de sierra y de costa difieren en planta, asado y alambique; los lotes varían por taberna."
+    },
+    "tuxca": {
+      "name": "Tuxca",
+      "origin": "Una tradición regional de la frontera Jalisco–Colima alrededor de Tuxcacuesco.",
+      "history": "Una tradición de vinateros anterior a las categorías modernas; hecha en pequeños lotes con agaves silvestres.",
+      "legalStatus": "Una tradición regional sin denominación de origen; su estatus legal no equivale al del tequila o el mezcal, y la ausencia de una NOM no significa falta de autenticidad.",
+      "materials": "Agaves silvestres, a menudo liñeño/cimarrón (Agave angustifolia y parientes locales); los ensambles varían por vinatero y por lote.",
+      "practices": "Asado en horno de piña cilíndrico, machacado a mano, fermentación en crater volcánico, destilación en alambique filipino de madera.",
+      "diversity": "La composición de cada lote varía de verdad; la composición de especies se registra solo cuando una fuente documenta el lote concreto."
+    },
+    "comiteco": {
+      "name": "Comiteco",
+      "origin": "Una tradición de savia de Comitán, Chiapas; protegida como Indicación Geográfica desde octubre de 2025.",
+      "history": "Hecho con aguamiel recolectada de maguey comiteco cultivado (identificado como Agave americana L. en la declaración de la IG de 2025; otras referencias y material de productores lo llaman Agave atrovirens — la guía conserva ambos nombres sin resolver la diferencia); la piña nunca se cocina.",
+      "legalStatus": "Una tradición regional protegida desde el 6 de octubre de 2025 como la Indicación Geográfica «Comiteco de Comitán, Chiapas» (una IG, no una denominación de origen como el tequila o el mezcal). La declaración cubre un destilado hecho con maguey comiteco (Agave americana L.) y azúcares de caña en la Meseta Comiteca-Tojolabal; el comiteco fuera de ese alcance no queda cubierto automáticamente. El añejo sigue siendo una expresión del productor salvo que las reglas de la IG lo definan — verifícalo por botella.",
+      "materials": "Aguamiel del maguey comiteco vivo (Agave americana L. según la declaración de la IG; algunas fuentes lo llaman Agave atrovirens); el nombre protegido incluye explícitamente azúcares de caña junto con el agave, y la composición es un hecho de cada botella — no etiquetes ninguna botella como 100% de agave.",
+      "practices": "Recolección de savia, fermentación, destilación en cobre; el blanco sin crianza y el añejo reposado en vidrio con ramas de encino blanco (sin crianza en barrica) según el productor de ejemplo.",
+      "diversity": "La divulgación de la composición varía por botella; la app la registra por botella y no como una afirmación de categoría."
+    },
+    "destilado-de-pulque": {
+      "name": "Destilado de pulque",
+      "origin": "Una tradición de Tlaxcala y el centro de México arraigada en el corazón pulquero.",
+      "history": "El aguamiel se fermenta en pulque (unas 48 horas) y luego se destila; la piña nunca se cocina.",
+      "legalStatus": "Una tradición regional; sin denominación de origen y explícitamente no es mezcal. El pulque fermentado no es un destilado y no se cataloga.",
+      "materials": "Aguamiel de maguey pulquero cultivado (Agave salmiana), recolectada a diario de la planta viva.",
+      "practices": "Recolección de savia, fermentación en pulque, destilación.",
+      "diversity": "Lotes de pequeños productores; la documentación por botella es la regla."
+    },
+    "sotol": {
+      "name": "Sotol",
+      "origin": "Una tradición del norte del desierto chihuahuense, centrada en Chihuahua.",
+      "history": "Hecho con Dasylirion (sotol, cuchara del desierto), un género emparentado de la familia Asparagaceae — explícitamente no es un agave, aunque es afín a los agaves.",
+      "legalStatus": "Destilado con denominación de origen propia (Chihuahua, Coahuila, Durango, desde 2002); incluido aquí como una tradición norteña afín al agave con su distinción botánica explícita.",
+      "materials": "Dasylirion silvestre (comúnmente wheeleri, cedrosanum o leiophyllum) tras 8–12 años; una sola planta rinde aproximadamente una botella.",
+      "practices": "Asado de la piña en hornos cónicos (o cocción al vapor en productores grandes), fermentación silvestre, destilación en cobre o barro; la práctica de cosecha y la especie determinan si se dejan intactas las raíces — el rebrote no está garantizado solo con la cosecha.",
+      "diversity": "Importan la sostenibilidad de la cosecha y los programas de conservación; la app nunca clasifica el Dasylirion como agave."
     }
   },
   "regions": {

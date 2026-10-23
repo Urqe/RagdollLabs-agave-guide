@@ -51,8 +51,8 @@ function exampleBottleCard(bottle, sources, t, locale = null) {
     name.appendChild(el("span", { class: "bottle-abv" }, ` \u00b7 ${L("abvNote", bottle.abvNote)}`));
   }
   card.appendChild(name);
-  if (bottle.producer) card.appendChild(el("p", { class: "bottle-producer" }, bottle.producer));
-  if (bottle.place) card.appendChild(el("p", { class: "bottle-place" }, bottle.place));
+  if (bottle.producer) card.appendChild(el("p", { class: "bottle-producer" }, L("producer", bottle.producer)));
+  if (bottle.place) card.appendChild(el("p", { class: "bottle-place" }, L("place", bottle.place)));
   if (bottle.composition) card.appendChild(el("p", { class: "bottle-composition editorial-note" }, `${ui(locale, "factComposition")}: ${L("composition", bottle.composition)}`));
   card.appendChild(el("p", { class: "bottle-review" }, L("reviewSummary", bottle.reviewSummary)));
   const basis = bottleBasisLine(sources, bottle, locale);

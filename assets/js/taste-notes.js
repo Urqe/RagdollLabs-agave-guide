@@ -53,6 +53,8 @@ export const ES_NOTES = {
   "soft sweetness": "dulzor suave",
   "stone fruit (plum, raisin)": "fruta de hueso (ciruela, pasa)",
   "sweet agave": "agave dulce",
+  "sweet cooked agave": "agave cocido dulce",
+  "gentle spice": "especias suaves",
   "sweet citrus": "cítricos dulces",
   "sweet corn": "maíz dulce",
   "tropical fruit": "fruta tropical",

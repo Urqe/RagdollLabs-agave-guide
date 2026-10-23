@@ -10,7 +10,7 @@ import {
 } from "./compare.js";
 import { SPIRIT_LABELS, groupProfilesBySpirit } from "./spirit-labels.js";
 import { dimensionLabel, dimensionHint } from "./presentation.js";
-import { editorialText, localizedTitle } from "./editorial.js";
+import { editorialText, localizedTitle, fieldEs } from "./editorial.js";
 
 const MAX_SLOTS = 3;
 
@@ -189,7 +189,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   for (const profile of selected) {
     const chip = el("div", { class: "selection-chip" });
     chip.appendChild(el("span", {}, title(profile)));
-    const remove = el("button", { type: "button", class: "selection-remove", "aria-label": ui(locale, "remove") + ": " + profile.title }, ui(locale, "remove") + " ×");
+    const remove = el("button", { type: "button", class: "selection-remove", "aria-label": ui(locale, "remove") + ": " + title(profile) }, ui(locale, "remove") + " ×");
     remove.addEventListener("click", () => pick(profile.id));
     chip.appendChild(remove);
     selectionList.appendChild(chip);
@@ -260,9 +260,9 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
       const item = el("li", {});
       let text = "";
       if (perspective.id === "samePlantDifferentRegion") {
-        text = t("compare.perspective.samePlant").replace("{plant}", perspective.plant);
+        text = t("compare.perspective.samePlant").replace("{plant}", (perspective.plantProfileId ? fieldEs("profile", perspective.plantProfileId, "plant", locale) : null) || perspective.plant);
       } else if (perspective.id === "samePlantDifferentRegionAndClass") {
-        text = t("compare.perspective.samePlantAndClass").replace("{plant}", perspective.plant);
+        text = t("compare.perspective.samePlantAndClass").replace("{plant}", (perspective.plantProfileId ? fieldEs("profile", perspective.plantProfileId, "plant", locale) : null) || perspective.plant);
       } else if (perspective.id === "sameTraditionDifferentPlant") {
         text = t("compare.perspective.sameTraditionPlant").replace("{tradition}", SPIRIT_LABELS[perspective.tradition] || perspective.tradition);
       } else if (perspective.id === "sameTraditionDifferentMethod") {
@@ -305,7 +305,7 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   // Plant/process context (cross-tradition differences shown clearly)
   const craft = el("dl", { class: "profile-facts compare-craft" });
   craft.appendChild(el("dt", {}, ui(locale, "plant")));
-  craft.appendChild(el("dd", {}, selected.map((p) => `${title(p)}: ${p.plant || ui(locale, "notDocumented")}`).join(" · ")));
+  craft.appendChild(el("dd", {}, selected.map((p) => `${title(p)}: ${fieldEs("profile", p.id, "plant", locale) || p.plant || ui(locale, "notDocumented")}`).join(" · ")));
   craft.appendChild(el("dt", {}, ui(locale, "process")));
   craft.appendChild(el("dd", {}, selected.map((p) => `${title(p)}: ${editorialText("profile", p.id, "process", p.process || ui(locale, "notDocumented"), locale).text}`).join(" · ")));
   section.appendChild(craft);

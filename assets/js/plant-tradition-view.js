@@ -2,6 +2,7 @@ import { el, clear, safeLink } from "./dom-utils.js";
 import { ui } from "./presentation.js";
 import { localizedTitle, fieldEs } from "./editorial.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
+import { tasteNote } from "./taste-notes.js";
 
 /**
  * Release 21 — dedicated plant and spirit-tradition pages. These turn the
@@ -37,7 +38,7 @@ function relatedProfileList(profiles, ids, locale, origin) {
     const a = el("a", { class: "discovery-card", href: `#/profile/${encodeURIComponent(profile.id)}${origin ? `?origin=${encodeURIComponent(origin)}` : ""}` });
     a.appendChild(el("span", { class: "eyebrow" }, SPIRIT_LABELS[profile.spirit] || profile.spirit));
     a.appendChild(el("strong", {}, localizedTitle("profile", profile.id, profile.title, locale)));
-    a.appendChild(el("span", { class: "discovery-notes" }, (profile.tasteNotes || []).slice(0, 3).join(" · ")));
+    a.appendChild(el("span", { class: "discovery-notes" }, (profile.tasteNotes || []).slice(0, 3).map((n) => tasteNote(n, locale)).join(" · ")));
     li.appendChild(a);
     ul.appendChild(li);
   }
@@ -87,7 +88,7 @@ export function renderPlantPage(container, { plant, plants, regions, traditions,
   section.appendChild(el("h2", {}, t("plant.harvestProduction")));
   section.appendChild(el("p", {}, fieldEs("plant", plant.id, "harvestProduction", locale) || plant.harvestProduction || plant.cultivation));
   section.appendChild(el("p", { class: "editorial-note" }, t("plant.cultivationLabel") + ": " + plant.cultivation));
-  if (plant.uncertainty) section.appendChild(el("p", { class: "editorial-note" }, plant.uncertainty));
+  if (plant.uncertainty) section.appendChild(el("p", { class: "editorial-note" }, fieldEs("plant", plant.id, "uncertainty", locale) || plant.uncertainty));
 
   section.appendChild(el("h2", {}, t("plant.sensoryTendencies")));
   section.appendChild(el("p", {}, fieldEs("plant", plant.id, "sensoryTendencies", locale) || plant.sensoryTendencies || ""));
@@ -120,19 +121,19 @@ export function renderTraditionPage(container, { tradition, traditions, regions,
   const section = el("section", { class: "tradition-view entity-view", "aria-labelledby": "tradition-title" });
   section.appendChild(backLink("#/discover", t("plant.backToDiscover")));
   section.appendChild(el("p", { class: "eyebrow" }, t("tradition.eyebrow")));
-  section.appendChild(el("h1", { id: "tradition-title" }, tradition.name));
+  section.appendChild(el("h1", { id: "tradition-title" }, fieldEs("tradition", tradition.id, "name", locale) || tradition.name));
 
   section.appendChild(el("h2", {}, t("tradition.whatItIs")));
-  section.appendChild(el("p", { class: "view-intro" }, tradition.origin));
+  section.appendChild(el("p", { class: "view-intro" }, fieldEs("tradition", tradition.id, "origin", locale) || tradition.origin));
 
   section.appendChild(el("h2", {}, t("tradition.history")));
-  section.appendChild(el("p", {}, tradition.history));
+  section.appendChild(el("p", {}, fieldEs("tradition", tradition.id, "history", locale) || tradition.history));
 
   section.appendChild(el("h2", {}, t("tradition.legalStatus")));
-  section.appendChild(el("p", {}, tradition.legalStatus));
+  section.appendChild(el("p", {}, fieldEs("tradition", tradition.id, "legalStatus", locale) || tradition.legalStatus));
 
   section.appendChild(el("h2", {}, t("tradition.materials")));
-  section.appendChild(el("p", {}, tradition.materials));
+  section.appendChild(el("p", {}, fieldEs("tradition", tradition.id, "materials", locale) || tradition.materials));
   if ((tradition.plantIds || []).length) {
     const row = el("p", { class: "learn-usedby" });
     row.appendChild(document.createTextNode(t("tradition.plantsLink") + " "));
@@ -147,10 +148,10 @@ export function renderTraditionPage(container, { tradition, traditions, regions,
   }
 
   section.appendChild(el("h2", {}, t("tradition.production")));
-  section.appendChild(el("p", {}, tradition.practices));
+  section.appendChild(el("p", {}, fieldEs("tradition", tradition.id, "practices", locale) || tradition.practices));
 
   section.appendChild(el("h2", {}, t("tradition.distinctions")));
-  section.appendChild(el("p", {}, tradition.diversity));
+  section.appendChild(el("p", {}, fieldEs("tradition", tradition.id, "diversity", locale) || tradition.diversity));
 
   if (tradition.sustainability) {
     section.appendChild(el("h2", {}, t("plant.sustainability")));
@@ -176,7 +177,7 @@ export function renderTraditionPage(container, { tradition, traditions, regions,
   section.appendChild(el("h2", {}, t("tradition.startingPoints")));
   if (traditionProfiles.length) {
     const beginner = traditionProfiles.find((p) => p.beginnerNote) || traditionProfiles[0];
-    section.appendChild(el("p", { class: "beginner-note" }, beginner.beginnerNote || ""));
+    section.appendChild(el("p", { class: "beginner-note" }, fieldEs("profile", beginner.id, "beginnerNote", locale) || beginner.beginnerNote || ""));
     const startRow = el("p", { class: "learn-usedby" });
     startRow.appendChild(el("a", { class: "discovery-chip", href: `#/profile/${encodeURIComponent(beginner.id)}?origin=${encodeURIComponent(`spirit:${tradition.id}`)}` }, localizedTitle("profile", beginner.id, beginner.title, locale)));
     section.appendChild(startRow);
