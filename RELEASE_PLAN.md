@@ -752,12 +752,39 @@ The desired voice is a knowledgeable, welcoming host with a sense of place. Dial
 - [ ] **P16-V3 — Regional editorial briefs.** For Sonora, build warmth around verified vinata/vinatero vocabulary, Sierra places, family continuity and documented food contexts such as carne asada/chiltepín. For Jalisco distinguish valle, Los Altos, Sierra and Costa instead of one generic voice; for Oaxaca acknowledge different communities and producers rather than one statewide way of speaking. Ground Comitán, Tlaxcala, Chihuahua and Jalisco–Colima profiles in their own documented vocabulary and practices. Use occasional locally appropriate idiom only with evidence or regional reviewer support; avoid caricatured spelling, compulsory slang or manufactured Indigenous speech.
 - [ ] **P16-V4 — Editable copy examples and review record.** Prepare before/after passages for each regional cluster, with notes on the idiom/place reference and intended warmth. A possible *draft*, not a local quote: “El bacanora tiene historia en la sierra sonorense. Acércate con calma: sirve un poco, descubre sus aromas y deja que cada vinata te cuente algo distinto.” Validate regional wording with a Mexican Spanish editor and, where available, readers/producers from the represented regions. If such review is unavailable, ship restrained, sourced Mexican Spanish and explicitly leave “regional reader validation” pending in the release record; do not claim the authenticity goal is proven.
 
+### Pair 16 additions — Bottle-first descriptions and an inviting editorial voice
+
+**Owner direction, 2026-10-23:** the guide should make readers curious about these spirits and fond of Mexico through its places, people, craft and flavours. It currently too often reads like a research paper, with the reviewing authority taking centre stage. Write like a knowledgeable, generous host. Specific sensory detail and grounded stories should carry the warmth; accuracy remains essential.
+
+- [ ] **P16-B1 — Lead with the bottle.** Audit every bottle description in EN/ES, including catalogue cards, profile example bottles and expanded bottle lists. Replace routine openings such as “a Mezcal Reviews member…,” “reviewers describe…” and “according to…” with a concise description of the expression's aroma, flavour, texture or finish supported by the existing evidence. Add a useful distinction or serving suggestion only where supported or clearly editorial. Aim for two or three readable sentences where evidence permits; do not fill missing evidence with invented descriptors or borrow the generic style profile as a bottle review.
+- [ ] **P16-B2 — Give provenance a supporting position.** Put a compact source/basis line immediately below the description, with accessible links or expandable detail. Preserve the publication, actual review link and any existing author, date and relevant batch metadata in the supporting information. Label producer-only notes explicitly as producer notes, and editorial synthesis as such at the section/source level. Do not imply that the guide personally tasted the bottle. A repeated reviewer introduction in every sentence is not required for attribution.
+- [ ] **P16-B3 — Preserve meaningful uncertainty.** Keep explicit attribution in the prose when reviewers materially disagree, a distinctive assertion rests on one individual's impression, or a claim applies only to a documented batch. One review can support a concise attributed tasting summary; it cannot establish consensus or universal bottle consistency. Do not combine conflicting reviews into a fictional single tasting. When tasting evidence is absent, show useful verified production/expression facts and one brief missing-notes disclosure.
+- [ ] **P16-B4 — Apply warmth across the reading journey.** Extend this editorial pass to home invitations, lessons, profiles, tradition pages, serving guidance and generated recommendations in both languages. Lead with what a reader can discover, taste or understand. Move research-process narration, source methodology, review coverage and verification explanations into appropriate supporting sections. Retain any qualification that changes the reader's interpretation close to the claim. Replace repetitive “honest,” “editorial,” “documented” and “the guide records…” narration with direct, useful prose where those words add no information.
+- [ ] **P16-B5 — Make Mexico tangible.** Use specific, sourced details of a place, plant, maker's work, food or shared occasion to build affection and curiosity. Give regional traditions their own character and living present. Avoid generic tourism slogans, exaggerated quality claims, invented family histories, assumed local opinions and romanticising hardship. Preserve the regional-voice requirements above; warm English and natural Mexican Spanish should feel equally welcoming rather than mechanically identical.
+- [ ] **P16-B6 — Show before/after examples before completing the pass.** Record representative rewrites for tequila, mezcal and bacanora, plus a less familiar tradition, a producer-only description, a single community review, conflicting reviews and an entry without tasting notes. Check every rewritten sensory statement against its existing source. Use the following as a structural illustration, not ready-to-publish bottle data:
+
+  **Before:** “A member of a review site describes roasted agave, cinnamon and citrus.”
+
+  **After:** “Roasted agave leads, with cinnamon and a bright citrus note.”
+
+  **Supporting line:** “Tasting summary based on one published review · Source”
+
+  **Mexican Spanish:** “Predomina el agave cocido, acompañado de canela y una nota cítrica fresca.”
+
+  **Supporting line:** “Resumen de una reseña de cata · Fuente”
+
+  The after-text deliberately adds no new texture, finish, consensus or production claim. Actual published copy must reflect the exact source and distinguish roasted/cooked terminology appropriately.
+
+**Pair-16 acceptance:** a reader can understand the bottle's character before encountering the reviewer's identity; supporting evidence remains easy to inspect. Descriptions vary with the actual expression rather than repeating one formula. The overall experience invites discovery of Mexico and its spirits without becoming sales copy. This presentation guidance clarifies earlier requirements for “attributed paraphrases”: attribution may live in the adjacent supporting line instead of leading the paragraph.
+
 ### Pair 16 additions — British and Mexican flags
 
 - [ ] **P16-L1 — Honour the requested visual change.** Replace EN/ES abbreviations with the UK Union Flag and Mexican flag as language-choice cues. Prefer two clearly identified choices or a compact control that exposes **English** and **Español (México)**, rather than an ambiguous flag-only toggle. Flags represent the chosen editions here, not all speakers of those languages.
 - [ ] **P16-L2 — Accessible, predictable behaviour.** Give each option a language-name accessible label, expose the current selection, preserve keyboard operation/focus, and provide readable text when a flag fails to render. Use reliable local icons or verify emoji support on actual targets. Keep the current page, lesson, filters and comparison state when switching. Preserve saved preference and update document language appropriately (es-MX for the Mexican Spanish edition; do not imply a reviewed British English localisation solely because the UK flag is used). Verify compact mobile sizing and both themes.
 
 ### Pair 17 additions — Prove the content works for readers
+
+- [ ] **P17-B1 — Bottle copy and tone review.** Verify all rewritten bottle summaries against their sources and expression/batch scope; check source links and producer/reviewer/editorial labels in catalogue cards and profile bottle sections in EN/ES. Read representative passages aloud for warmth, naturalness and repetitive research narration. Confirm a beginner can describe the spirit after reading the main paragraph and an enthusiast can inspect the evidence immediately below it. Record actual reader feedback separately from an editorial assessment.
 
 - [ ] Review every edited entry in both rendered languages, including expanded references, generated recommendations and catalogue links; audit all five steps and seven chapters for consistency, broken term links and untranslated prose. Keep stable IDs or migrate old links when splitting an erroneous glossary term.
 - [ ] Run targeted factual regressions for the confirmed class/timeline/translation defects, plus data validation and existing tests. Automated string checks cannot certify legal accuracy, cultural authenticity or natural Spanish.
@@ -780,6 +807,8 @@ These are claim-specific sources, not blanket endorsement of all content on thei
 
 
 ## 5. Editorial and sourcing policy
+
+**Reader-facing voice:** apply section 4.4's bottle-first and inviting editorial guidance. Lead with the spirit's character and grounded Mexican context; place routine review attribution in adjacent supporting information. Keep source types, material disagreement and batch limitations clear. Evidence should support the reading experience without becoming its narrator.
 
 | Claim | Evidence to prefer |
 | --- | --- |
