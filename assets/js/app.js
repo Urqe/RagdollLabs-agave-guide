@@ -270,11 +270,12 @@ function wireLocaleToggle(refresh) {
     const flag = button.querySelector(".locale-flag");
     const name = button.querySelector(".locale-name");
     const label = ui(locale, next === "en" ? "switchToEn" : "switchToEs");
+    const current = locale.get() === "es" ? ui(locale, "currentEditionEs") : ui(locale, "currentEdition");
     if (flag) flag.textContent = next === "en" ? "\uD83C\uDDEC\uD83C\uDDE7" : "\uD83C\uDDF2\uD83C\uDDFD";
     if (name) name.textContent = next === "en" ? "English" : "Espa\u00f1ol (M\u00e9xico)";
     if (!flag || !name) button.textContent = `${next === "en" ? "\uD83C\uDDEC\uD83C\uDDE7" : "\uD83C\uDDF2\uD83C\uDDFD"} ${next === "en" ? "English" : "Espa\u00f1ol"}`;
-    button.setAttribute("aria-label", label);
-    button.title = label;
+    button.setAttribute("aria-label", `${current}. ${label}`);
+    button.title = `${current}. ${label}`;
   };
   button.addEventListener("click", () => {
     locale.set(locale.get() === "en" ? "es" : "en");

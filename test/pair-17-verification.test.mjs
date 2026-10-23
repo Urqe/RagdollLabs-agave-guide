@@ -272,6 +272,8 @@ test("pair 17: the language control names its editions and exposes the current c
     const button = app.window.document.getElementById("locale-toggle");
     const label = button.getAttribute("aria-label");
     assert.ok(label && /espa\u00f1ol \(m\u00e9xico\)/i.test(label), `the accessible label names the target edition: "${label}"`);
+    assert.ok(/current edition: english/i.test(label), `the accessible label exposes the current edition (P16-L2/P18-6): "${label}"`);
+    assert.equal(button.title, label, "the tooltip matches the accessible label");
     const name = button.querySelector(".locale-name").textContent;
     assert.ok(name, "the visible text carries the language name, not only the flag");
     assert.ok(button.querySelector(".locale-flag"), "the flag cue renders as a decorative element");
@@ -279,6 +281,7 @@ test("pair 17: the language control names its editions and exposes the current c
     await new Promise((r) => setTimeout(r, 100));
     const labelEn = button.getAttribute("aria-label");
     assert.ok(/switch to english|cambiar a inglés/i.test(labelEn), "after switching, the control offers English by name");
+    assert.ok(/edici\u00f3n actual: espa\u00f1ol \(m\u00e9xico\)/i.test(labelEn), "after switching, the current (Spanish) edition is announced accessibly");
     assert.ok(/English/.test(button.querySelector(".locale-name").textContent), "the visible edition name is English");
     assert.equal(app.window.localStorage.getItem("agave-locale"), "es", "the choice persists");
   } finally {

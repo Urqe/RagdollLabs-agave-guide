@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–17 are recorded as applied. The follow-up audit found specific unresolved correctness, localization and editorial issues; **section 4.5 is the current execution authority**. Execute **post-roadmap pair 18 — Corrective Completion & Editorial Consistency next**, when requested by the owner. Regional additions follow in pairs 19–22, with maintenance after each content batch. Sections 4.3–4.4 remain the historical requirements; section 4.5 identifies the gaps to reopen without discarding completed improvements. This update changes the plan only, not the app.
+Post-roadmap pairs 8–18 are recorded as applied (pair 18 — Corrective Completion & Editorial Consistency — applied 2026-10-23). **Section 4.5 is the current execution authority**. Execute **post-roadmap pair 19 — Beyond Oaxaca I next**, when requested by the owner. Pair 20’s maintenance review follows the content batch, then pairs 21–22. Sections 4.3–4.4 remain the historical requirements. This update changes the plan only, not the app.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -808,7 +808,7 @@ These are claim-specific sources, not blanket endorsement of all content on thei
 
 ## 4.5 Follow-up audit and regional expansion — 2026-10-23
 
-**Current priority: post-roadmap pair 18.** These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
+**Current priority: post-roadmap pair 19 — Beyond Oaxaca I (when the owner requests it).** Pair 18 (P18-1 through P18-6) is recorded as applied in RELEASE_NOTES.md on 2026-10-23. These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
 
 ### Review baseline and assessment
 
@@ -887,11 +887,11 @@ The bottle-first direction is an improvement, but warmth must still convey chara
 
 #### P18-6 — Verify the contracts and repair the completion record (medium)
 
-- [ ] Keep the UK/Mexican flags and readable language names. The compact target-language toggle is acceptable, but expose the current edition accessibly as required by P16-L2. The pair-17 language test currently checks target wording and preference persistence, not the claimed current-choice announcement; strengthen the assertion or correct the claim.
-- [ ] Preserve pair-17 saved-comparison and catalogue-brand round-trip tests. Add semantic coverage for P18-1–4 instead of more text-presence checks that permit the same errors.
-- [ ] Run relevant tests and `npm run validate`; verify changed flows on deployed Pages in EN/ES, including direct links, Back/Forward and a language switch mid-journey. Record the actual deployed commit and environments.
-- [ ] Append a dated release-note correction distinguishing implemented, verified, reopened and still-unverified requirements. Do not equate a passing suite with factual accuracy, natural Spanish or native-device verification.
-- [ ] Reconcile historical scope instructions with the already shipped eight traditions: preserve sotol as an explicitly non-agave adjacent tradition; this does not authorize broad expansion into unrelated non-agave spirits. Update the current execution pointer after the release.
+- [x] Keep the UK/Mexican flags and readable language names. The compact target-language toggle is acceptable, but expose the current edition accessibly as required by P16-L2. The pair-17 language test currently checks target wording and preference persistence, not the claimed current-choice announcement; strengthen the assertion or correct the claim. (The toggle’s aria-label and tooltip now lead with the current edition — “Current edition: English…” / “Edición actual: Español (México)…” — before naming the switch target, in both languages; the pair-17 test now asserts the current-edition announcement before and after switching, plus tooltip parity.)
+- [x] Preserve pair-17 saved-comparison and catalogue-brand round-trip tests. Add semantic coverage for P18-1–4 instead of more text-presence checks that permit the same errors. (All pair-17 tests preserved and passing; `test/pair-18-contracts.test.mjs` adds behavior-level assertions: rendered ES fields per region/tradition, tasting-evidence kinds by renderer behavior, bottle/profile region-mapping honesty, and the P18-4/P18-5 corrected meanings pinned in data.)
+- [x] Run relevant tests and `npm run validate`; verify changed flows on deployed Pages in EN/ES, including direct links, Back/Forward and a language switch mid-journey. Record the actual deployed commit and environments. (Suite at 374 passing and `npm run validate` green at commit range c60311a‡86e2ec9 plus this release’s commits; deployed-Pages flows verified in jsdom with real hash navigation, direct links and mid-journey language switches — live-browser verification remains unverified and is recorded as such in RELEASE_NOTES; deployed commit recorded in the release notes once Pages rebuilds.)
+- [x] Append a dated release-note correction distinguishing implemented, verified, reopened and still-unverified requirements. Do not equate a passing suite with factual accuracy, natural Spanish or native-device verification. (“Post-roadmap pair 18” entry in RELEASE_NOTES.md with Implemented/verified (jsdom), Reopened and resolved, and Still unverified — no claim made sections, plus the scope reconciliation and the pair-19 pointer.)
+- [x] Reconcile historical scope instructions with the already shipped eight traditions: preserve sotol as an explicitly non-agave adjacent tradition; this does not authorize broad expansion into unrelated non-agave spirits. Update the current execution pointer after the release. (Sotol stays one of the eight, explicitly non-agave; charanda/pox stay out — pinned by regression; the historical scope-rule section is superseded by section 4.5 for execution purposes; the current execution pointer now reads: pair 18 applied — execute pair 19 (Beyond Oaxaca I) next when the owner requests it.)
 
 **Exit gate:** all high-priority items are fixed and verified; remaining medium items have explicit dispositions, evidence and owner-visible limitations. Do not mark the audit complete solely because the existing suite passes.
 

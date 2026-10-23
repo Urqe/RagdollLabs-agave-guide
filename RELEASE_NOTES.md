@@ -2820,3 +2820,77 @@ pair-17 verification tests in `test/pair-17-verification.test.mjs`.
 Both fixes are in `assets/js/app.js` and are covered by the new
 pair-17 tests; reverting the pair-17 commit restores the prior (defective)
 behavior and the tests would fail again.
+
+## Post-roadmap pair 18 — Corrective Completion & Editorial Consistency (2026-10-23)
+
+Maintenance release applying section 4.5's P18-1 through P18-6. Automated
+checks: `npm run validate` passes (18 profiles, 46 bottles, 92 sources) and
+the full node:test suite passes — 374 tests, including 40 new pair-18
+regressions across five files (`pair-18-es-renderers`, `pair-18-tasting-basis`,
+`pair-18-bottle-origins`, `pair-18-teaching-surfaces`, `pair-18-warm-prose`,
+`pair-18-contracts`).
+
+### Implemented and verified (jsdom)
+
+- **P18-1:** `region: "regions"` added to the editorial bucket map so
+  `fieldEs("region", …)` consumes the shipped `content-es.json` regions;
+  tradition pages and spirit discovery consume ES for every authored field;
+  discovery/comparison/catalogue surfaces localize taste notes, plant
+  context, remove-control names and producer/place prose. Rendered-output
+  audit of all 11 regions and 8 traditions in ES.
+- **P18-2:** explicit `tastingSourceIds` contract naming only the sources
+  behind each sensory summary; shared `tasting-basis.js` renderer for
+  catalogue and profile; Fortaleza/La Venenosa/Ocho/Don Julio inflations
+  fixed; factual-only records (Indio Alonso, Balam, comiteco factual
+  entries) get a distinct facts-only line; natural EN/ES grammar replaces
+  the "fuente(s)" forms.
+- **P18-3:** Montelobos tobalá carries its Puebla origin (Palenque del
+  Tentzo, San Nicolás Huajuapan) and is unmapped from the wild-Sierra
+  profile; Del Maguey pechuga carries Santa Catarina Minas and is unmapped
+  from the plain joven espadín profile; the tobalá profile now exemplifies
+  the wild-harvested Macurichos Ancestral Tobalá (verified against the
+  cited Mezcalistas page); dated pair-15 ledger correction appended above.
+- **P18-4:** ES tobalá clay/copper equivalence, valley blanco absolute
+  no-oak claim, the "redirects sugars" mechanism and the NOM
+  standard/registration/certification conflation corrected (EN and ES);
+  first-serve guidance completed for all 18 profiles (notice lines), "neat"
+  defined at first use, finish explained as character as well as duration.
+- **P18-5:** vague acclaim replaced with cited sensory detail (Clande
+  Yellow, Fortaleza Blanco); invented sotolero testimony removed (EN/ES)
+  with warmth rebuilt from documented history; ES defects corrected
+  (cucción, del bacanora ×4, se leen sabrosos, bacanora gender); routine
+  model/evidence explanations moved out of the catalogue/compare intros.
+- **P18-6:** the language toggle now announces the current edition
+  accessibly (aria-label + tooltip), closing the P16-L2 gap the pair-17
+  test missed; the pair-17 assertion strengthened accordingly; semantic
+  regressions added for P18-1 through P18-5 instead of text-presence
+  checks; pair-17 saved-comparison and catalogue-brand round-trip tests
+  preserved and passing.
+
+### Reopened and resolved in this release
+
+- The pair-15 claim-ledger row "example bottle cultivated in Santiago
+  Matatlán" (wrong per the producer's expression page) — corrected with a
+  dated ledger entry; history preserved.
+- The pair-16 basis-line wording ("fuente(s)") — replaced by the shared
+  renderer with real singular/plural grammar; the two tests pinning the
+  old wording were updated to the new contract.
+
+### Still unverified — no claim made
+
+- Live deployed-Pages behavior in a real browser (all pair-18 verification
+  is jsdom against the real modules and data); native iPhone/iPad Safari,
+  VoiceOver, physical touch, text enlargement and reduced motion remain
+  unverified. A passing suite is not evidence of factual accuracy, natural
+  Spanish or native-device behavior.
+- Regional-reader validation of the Spanish prose is pending; no
+  native-editor review or approval is claimed.
+
+### Scope reconciliation
+
+Sotol remains one of the eight covered traditions, explicitly labeled as a
+non-agave Dasylirion tradition. This does not authorize expansion into
+unrelated non-agave spirits (charanda, pox and cane-only aguardientes stay
+out of catalogue, profiles and comparison). The current execution pointer
+now moves to post-roadmap pair 19 — Beyond Oaxaca I — when the owner
+requests it.
