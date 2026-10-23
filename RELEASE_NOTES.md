@@ -2620,6 +2620,28 @@ on it as final evidence); raicilla DO declaration and published standard
 project (a PROY-NOM, not a final effective NOM). No claim was kept merely
 because its linked source is reachable; conflicts remain visible in the data.
 
+### Pair-15 claim ledger correction (appended 2026-10-23, pair 18 / P18-3)
+
+The pair-15 corrections table above recorded "example bottle cultivated in
+Santiago Matatlán" for the tobalá profile. That claim is wrong: the
+producer's own expression page (montelobos.com/our-mezcals/montelobos-tobala)
+identifies the Montelobos tobalá as produced at Palenque del Tentzo, San
+Nicolás Huajuapan, Puebla — not Santiago Matatlán, Oaxaca. The historical
+table row is preserved above; the corrected facts shipped in pair 18 are:
+
+- Montelobos tobalá now carries its expression-specific Puebla origin and is
+  unmapped from the wild-Sierra tobalá profile (profile-not-covered with a
+  contextual editorial note), because a cultivated Puebla bottle is not
+  representative of a wild Oaxaca Sierra style.
+- The tobalá profile's example bottle is now Macurichos Ancestral Tobalá —
+  wild-harvested agave (San Baltazar Guelavila and Matatlán per the cited
+  Mezcalistas tasting), produced in Santiago Matatlán with ancestral
+  clay-pot distillation, matching the profile's wild-Sierra context.
+- Del Maguey pechuga now carries its Santa Catarina Minas origin (per
+  delmaguey.com/pechuga) and is unmapped from the plain joven espadín
+  profile: a destilado-con festival-production style is contextual, not
+  representative of that profile.
+
 ## Post-roadmap pair 16 — Practical First Tasting (2026-10-23)
 
 Feature/UX release applying the plan's pair-16 tasks 1–7 and the section 4.4

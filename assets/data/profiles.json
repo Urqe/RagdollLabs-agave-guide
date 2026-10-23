@@ -1061,7 +1061,7 @@
       "stateId": "oax",
       "stateName": "Oaxaca",
       "context": "Tobalá (Agave potatorum) is a small, high-altitude, mostly wild agave often called the 'king of agaves' in México; its tiny size and long maturity (a variable, source-dependent range often cited around 12–15 years) give very low yields, which has pushed prices up and wild populations down. The mezcal DO permits any agave species, so tobalá is mezcal; some tobalá is now cultivated, which changes both the sustainability story and, reviewers note, sometimes the flavor. This is a plant-driven style, not a place-driven one: tobalá grows across Oaxaca's Sierra Norte and beyond. In the Sierra Norte, finding a tobalá ready to harvest is a source of personal pride — a mezcalero will walk you to the plant, not to a map.",
-      "description": "Tobalá mezcal is typically lighter and more floral than espadín, with sweet citrus, tropical fruit and a silky texture over a gentler roast. Batch variation is genuinely large — a cited blind tasting of eight tobalás found no single common thread — so treat this as a family of expressions, not one flavor. The example bottle, from 100% cultivated tobalá, shows lemon, pear and green pepper aromas with basil and roasted fig on the palate.",
+      "description": "Tobalá mezcal is typically lighter and more floral than espadín, with sweet citrus, tropical fruit and a silky texture over a gentler roast. Batch variation is genuinely large — a cited blind tasting of eight tobalás found no single common thread — so treat this as a family of expressions, not one flavor. The example bottle, from wild-harvested tobalá around Santiago Matatlán, is herbal and delicate, with dry soil, thyme, coriander and a touch of rosemary.",
       "plant": "Agave potatorum (tobalá; mostly wild-harvested, some cultivated — check the bottle)",
       "plantId": "agave-potatorum",
       "process": "Pit-roasted, stone-milled, wild-fermented, distilled; NOM-070's artisanal category permits copper alembics or clay pots, so clay is not exclusive to ancestral production",
@@ -1090,11 +1090,11 @@
         "oak": "none",
         "finishLength": "medium"
       },
-      "exampleBottleId": "montelobos-tobala",
+      "exampleBottleId": "macurichos-ancestral-tobala",
       "placeCoords": {
         "lat": 17.2,
         "lon": -96.5,
-        "precision": "region (Sierra Norte de Oaxaca; the wild style ranges across the Sierra, while the example bottle is cultivated in Santiago Matatlán); approximate"
+        "precision": "region (Sierra Norte de Oaxaca; the wild style ranges across the Sierra, while the example bottle is produced in Santiago Matatlán); approximate"
       },
       "pairing": {
         "serving": "Neat in a small copita — a small stemmed glass — so the florals gather; if you mix it, expect a quieter, gentler version rather than the whole character. Editorial suggestion, not a rule.",

@@ -294,7 +294,7 @@
     "mezcal-tobala-sierra-oaxaca": {
       "title": "Mezcal de tobalá, estilo Agave potatorum silvestre (Sierra, Oaxaca)",
       "context": "El tobalá (Agave potatorum) es un agave pequeño, de altitud y mayormente silvestre, al que en México llaman el 'rey de los agaves'; su tamaño diminuto y su larga madurez (un rango variable según la fuente, a menudo citado alrededor de 12–15 años) dan rendimientos muy bajos, lo que ha encarecido su precio y mermado sus poblaciones silvestres. La DO del mezcal permite cualquier especie de agave, así que el tobalá es mezcal; parte del tobalá ya se cultiva, lo que cambia la historia de sostenibilidad y, anotan los reseñistas, a veces el sabor. Es un estilo dirigido por la planta, no por el lugar: el tobalá crece por la Sierra Norte de Oaxaca y más allá. En la Sierra Norte, encontrar un tobalá listo para cosechar es orgullo personal: el mezcalero te llevará a la planta, no al mapa.",
-      "description": "El tobalá se asa en horno, se muele en piedra, fermenta silvestre y se destila — en alambiques de barro en las producciones ancestrales, de cobre en las artesanales. El resultado es un mezcal más floral y afrutado que el espadín, con fruta dulce sobre un asado suave y un final mineral.",
+      "description": "El tobalá se asa en horno, se muele en piedra, fermenta silvestre y se destila — en alambiques de barro en las producciones ancestrales, de cobre en las artesanales. El resultado es un mezcal más floral y afrutado que el espadín, con fruta dulce sobre un asado suave y un final mineral. La botella de ejemplo, de tobalá silvestre de los alrededores de Santiago Matatlán, es herbal y delicada, con tierra seca, tomillo, cilantro y un toque de romero.",
       "beginnerNote": "¿Nuevo en el tobalá? Espera la prima más amable y floral del mezcal: cítricos dulces y fruta tropical sobre un asado suave — más caro porque el agave es pequeño, lento y escaso.",
       "category": "Mezcal — el tobalá está dentro de la denominación de origen del mezcal; es una categoría de agave silvestre bajo presión de sostenibilidad, no una clase legal propia",
       "process": "Asado en pozo, molido con piedra, fermentado con levaduras silvestres, destilado; la categoría artesanal de la NOM-070 permite alambiques de cobre u ollas de barro, así que el barro no es exclusivo de la producción ancestral",
@@ -463,7 +463,9 @@
       "reviewSummary": "Aromas de limón, pimiento verde y pera, con cítricos, albahaca, higo asado, macadamia y trufa en el paladar; las notas de miembros entre lotes también mencionan chicle y pasto recién cortado.",
       "batch": "100% tobalá cultivado (sin recolección silvestre), asado en horno; producción enfocada en sostenibilidad",
       "abvNote": "La graduación varía por lote; la reseña citada lista notas específicas de lote — revisa tu botella",
-      "producer": "Montelobos (mezcalero Iván Saldaña; producción en la zona de Santiago Matatlán), Oaxaca"
+      "producer": "Montelobos (mezcalero Iván Saldaña; producido en el Palenque del Tentzo), Puebla",
+      "editorialNote": "Tobalá cultivado de Puebla, fuera del contexto silvestre de la Sierra oaxaqueña que describe este perfil; la planta es la misma especie, pero la región de cultivo y la producción cultivada difieren.",
+      "place": "San Nicolás Huajuapan (Palenque del Tentzo), Puebla"
     },
     "macurichos-ancestral-tobala": {
       "reviewSummary": "Herbáceo, con notas de tierra seca, tomillo, cilantro y un toque de romero; una reseña de miembro lo encontró suave y delicado, con un buen dulzor de principio a fin.",
@@ -473,10 +475,11 @@
     },
     "del-maguey-pechuga": {
       "reviewSummary": "Regaliz negro, anís y clavo con fruta y un ahumado afín al whisky — y, sí, un sabor a pollo; otras notas encuentran albahaca, limón, océano y fruta en la nariz, con piel de pollo asado ahumada, pimentón y sal de mar en una segunda reseña. Un estilo de producción para festivales, no una clase cotidiana.",
-      "editorialNote": "La pechuga es un estilo de producción (tercera destilación sobre fruta y aves), no una clase legal de edad ni un destilado aparte; es contextual a la tradición del mezcal más que una categoría nueva aquí.",
+      "editorialNote": "La pechuga es un estilo de producción para festivales (una tercera destilación sobre fruta, arroz y una pechuga de pollo cruda suspendida), no un espadín joven típico; es contextual a la tradición del mezcal más que representativa de este perfil.",
       "batch": "Triple destilado; la tercera destilación pasa el vapor por frutas de montaña silvestres, almendras, arroz y una pechuga de pollo cruda suspendida; producción estacional y limitada",
       "abvNote": "La graduación varía por lote (una lista minorista citada muestra 49%); revisa tu botella",
-      "producer": "Del Maguey Single Village (Florencio Carlos Sarmiento y otros), Minas de Real del Peñón (Sierra Norte), Oaxaca"
+      "producer": "Del Maguey Single Village (Florencio Carlos Sarmiento y familia), Santa Catarina Minas, Oaxaca",
+      "place": "Santa Catarina Minas, Oaxaca"
     },
     "siete-pozos-tuxca": {
       "reviewSummary": "Una fragancia floral dulce con un sándalo ligero (lote 03), un paladar láctico con pimientos verdes y mineralidad dulce, y un final rico en agave.",
@@ -719,7 +722,7 @@
       "uncertainty": "Los lotes de tuxca pueden mezclar varios agaves silvestres; la composición de especies se registra solo cuando una fuente documenta el lote concreto."
     },
     "agave-potatorum": {
-      "cultivation": "mayormente silvestre en altitud; la reproducción solo por semilla hace lento el cultivo, por lo que las poblaciones silvestres están bajo presión — algunos productores ya cultivan o reforestan (la entrada citada de Montelobos es 100% cultivada)",
+      "cultivation": "mayormente de recolección silvestre en altitud; la reproducción solo por semilla hace lento el cultivo, así que las poblaciones silvestres están bajo presión — algunos productores ya cultivan o reforestan (un ejemplo cultivado citado es Montelobos, producido en Puebla, fuera de este perfil de estilo silvestre)",
       "atAGlance": "Tobalá, el pequeño «rey de los agaves» de la Sierra Norte de Oaxaca en altitud — mayormente silvestre, algo cultivado.",
       "whereItGrows": "Las montañas altas de la Sierra Norte de Oaxaca (y más allá); madurez de 12–15 años en altitud.",
       "harvestProduction": "De cosecha silvestre tradicionalmente; algunos productores ya cultivan o reforestan. Asado en pozo, molienda de piedra, fermentación silvestre; alambiques de barro o cobre.",

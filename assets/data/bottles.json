@@ -488,25 +488,28 @@
     {
       "id": "montelobos-tobala",
       "brand": "Montelobos",
-      "producer": "Montelobos (mezcalero Iván Saldaña; Santiago Matatlán area production), Oaxaca",
+      "producer": "Montelobos (mezcalero Iván Saldaña; produced at Palenque del Tentzo), Puebla",
       "expression": "Montelobos Tobalá",
       "abv": null,
       "abvNote": "ABV varies by lot; the cited review lists lot-specific notes — check your bottle",
       "spirit": "mezcal",
-      "place": "Santiago Matatlán, Oaxaca",
+      "place": "San Nicolás Huajuapan (Palenque del Tentzo), Puebla",
       "batch": "100% cultivated tobalá (no wild-harvest), pit-roasted; sustainability-focused production",
-      "profileId": "mezcal-tobala-sierra-oaxaca",
+      "profileId": null,
       "reviewSummary": "Aromas of lemon, green pepper and pear, with citrus, basil, roasted fig, macadamia and truffle on the palate; member notes across lots also mention bubblegum and fresh-cut grass.",
       "sourceIds": [
         "mezcalreviews-montelobos-tobala"
       ],
       "traditionId": "mezcal",
-      "regionIds": [
-        "sierra-norte-oax"
+      "regionIds": [],
+      "coverage": [
+        "profile-not-covered"
       ],
-      "tastingSourceIds": [
+      "noteProfileId": "mezcal-tobala-sierra-oaxaca",
+      "noteSourceIds": [
         "mezcalreviews-montelobos-tobala"
-      ]
+      ],
+      "editorialNote": "Cultivated tobalá from Puebla, outside the wild-Oaxaca Sierra context this profile describes; the plant is the same species, but the growing region and cultivated production differ."
     },
     {
       "id": "macurichos-ancestral-tobala",
@@ -534,16 +537,16 @@
     {
       "id": "del-maguey-pechuga",
       "brand": "Del Maguey",
-      "producer": "Del Maguey Single Village (Florencio Carlos Sarmiento et al.), Minas de Real del Peñón (Sierra Norte), Oaxaca",
+      "producer": "Del Maguey Single Village (Florencio Carlos Sarmiento and family), Santa Catarina Minas, Oaxaca",
       "expression": "Pechuga",
       "abv": null,
       "abvNote": "ABV varies by batch (a cited retail listing shows 49%); check your bottle",
       "spirit": "mezcal",
-      "place": "Minas de Real del Peñón, Oaxaca",
+      "place": "Santa Catarina Minas, Oaxaca",
       "batch": "Triple-distilled; the third distillation passes vapor through wild mountain fruits, almonds, rice and a suspended raw chicken breast (pechuga); seasonal, limited production",
-      "profileId": "mezcal-espadin-valles-centrales",
+      "profileId": null,
       "reviewSummary": "Black licorice, anise and clove with fruit and a Scotch-like smokiness — and, yes, a taste of chicken; other notes find basil, lemon, ocean and fruit on the nose, with smoky roast chicken skin, paprika and sea salt in a second review. A festival-production style, not an everyday class.",
-      "editorialNote": "Pechuga is a production style (third distillation over fruit and poultry), not a legal age class or separate spirit; it is contextual to mezcal tradition rather than a new category here.",
+      "editorialNote": "Pechuga is a festival-production style (a third distillation over fruit, rice and a suspended raw chicken breast), not a typical joven espadín; it is contextual to mezcal tradition rather than representative of this profile.",
       "noteProfileId": "mezcal-espadin-valles-centrales",
       "noteSourceIds": [
         "mezcalreviews-del-maguey-pechuga"
@@ -552,11 +555,12 @@
         "mezcalreviews-del-maguey-pechuga"
       ],
       "traditionId": "mezcal",
-      "regionIds": [
-        "valles-centrales-oax"
-      ],
+      "regionIds": [],
       "tastingSourceIds": [
         "mezcalreviews-del-maguey-pechuga"
+      ],
+      "coverage": [
+        "profile-not-covered"
       ]
     },
     {

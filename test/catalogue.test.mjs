@@ -354,11 +354,17 @@ test("bottle-depth increment: single-example profiles gain documented second bot
   // Pair 15: the Ilegal añejo and the aged sotol no longer map onto the
   // reposado-mezcal and unaged sotol profiles — their class/maturation
   // does not match those styles, so both profiles are single-example again.
+  // Pair 18 (P18-3): the cultivated Puebla Montelobos tobalá and the
+  // destilado-con pechuga no longer map onto the wild-Sierra tobalá and
+  // plain joven espadín profiles — their region/production context does
+  // not match those styles, so both profiles are single-example again.
   const singles = profiles.filter((p) => bottles.filter((b) => b.profileId === p.id).length === 1).map((p) => p.id);
   assert.deepEqual(singles.sort(), [
     "comiteco-aguamiel-chiapas",
     "comiteco-anejo-comitan-chiapas",
+    "mezcal-espadin-valles-centrales",
     "mezcal-reposado-espadin-oaxaca",
+    "mezcal-tobala-sierra-oaxaca",
     "raicilla-reposado-jalisco",
     "sotol-chihuahua",
   ].sort(), `unexpected single-example profiles: ${singles.join(", ")}`);
