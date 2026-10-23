@@ -261,6 +261,9 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     pairing.appendChild(el("h3", { class: "sources-heading" }, t("profile.pairing")));
     const esPairing = fieldEsAny("profile", profile.id, "pairing", locale);
     pairing.appendChild(el("p", {}, (esPairing && esPairing.serving) || profile.pairing.serving));
+    if (profile.pairing.notice || (esPairing && esPairing.notice)) {
+      pairing.appendChild(el("p", { class: "pairing-notice" }, (esPairing && esPairing.notice) || profile.pairing.notice));
+    }
     const foods = (esPairing && esPairing.foods) || profile.pairing.foods;
     if (foods && foods.length > 0) {
       pairing.appendChild(el("p", {}, t("profile.pairingFoods") + " " + foods.join(", ") + "."));

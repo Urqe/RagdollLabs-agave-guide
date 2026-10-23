@@ -64,7 +64,7 @@
             "comiteco-aguamiel-chiapas",
             "destilado-de-pulque-salmiana-tlaxcala"
           ],
-          "deeper": "A mature agave flowers once, then dies. Harvesting before flowering redirects sugars into the piña; sap traditions instead keep the plant alive and harvest its sugars repeatedly."
+          "deeper": "A mature agave flowers once, then dies. Piña traditions harvest the whole plant at that maturity, taking its accumulated sugars once; sap traditions instead work with the living plant, cutting the flower stalk and collecting aguamiel over successive seasons — repeated tapping also drains the plant, just on a different timescale."
         }
       ]
     },
@@ -145,7 +145,7 @@
           ]
         },
         {
-          "text": "The NOM on a tequila or mezcal label identifies the certified producer. Tuxca bottles carry no NOM registration — what is absent is certification under a denomination-of-origin scheme, not exemption from general labeling requirements — a legal fact, not an authenticity judgment. Batch terms (lote) matter for small producers: batch facts stay with the batch.",
+          "text": "A NOM (Norma Oficial Mexicana) is an official Mexican standard that defines each spirit’s rules; the number printed on a tequila or mezcal label is the producer’s registration under that standard, and certification seals are issued separately by a conformity-evaluation body. Three different things: the standard, the registration and the certification. Tuxca bottles carry no NOM registration — what is absent is certification under a denomination-of-origin scheme, not exemption from general labeling requirements — a legal fact, not an authenticity judgment. Batch terms (lote) matter for small producers: batch facts stay with the batch.",
           "termIds": [
             "NOM",
             "lote / batch",
@@ -153,7 +153,7 @@
           ]
         },
         {
-          "text": "An illustrative label walkthrough — invented for teaching, not a real bottle: (1) Spirit name: “Mezcal” — the protected category; “Mezcal Artesanal” would add the production category. (2) Class: “Joven” — unaged here; the same word can mean a blend in tequila, so read each tradition's classes. (3) Agave/composition: “100% Agave espadín” or “Agave sap and cane sugars” (comiteco) — what was fermented; a composition fact, not a quality grade. (4) % Alc. Vol.: strength, not smoothness. (5) Producer/origin: the NOM number identifies the certified producer; the place named is where it was made. (6) Lot (lote): the batch identity for a small producer. These fields tell you what the bottle is and where it came from; they cannot tell you what it tastes like — for that, this guide pairs each bottle with an attributed review where one exists, and says so where one does not.",
+          "text": "An illustrative label walkthrough — invented for teaching, not a real bottle: (1) Spirit name: “Mezcal” — the protected category; “Mezcal Artesanal” would add the production category. (2) Class: “Joven” — unaged here; the same word can mean a blend in tequila, so read each tradition's classes. (3) Agave/composition: “100% Agave espadín” or “Agave sap and cane sugars” (comiteco) — what was fermented; a composition fact, not a quality grade. (4) % Alc. Vol.: strength, not smoothness. (5) Producer/origin: the NOM number is the producer’s registration under the mezcal standard (the tequila producer-number convention is not a universal rule); the place named is where it was made. (6) Lot (lote): the batch identity for a small producer. These fields tell you what the bottle is and where it came from; they cannot tell you what it tastes like — for that, this guide pairs each bottle with an attributed review where one exists, and says so where one does not.",
           "termIds": [
             "NOM",
             "lote / batch",
@@ -195,7 +195,7 @@
           ]
         },
         {
-          "text": "Serving is simple: a small glass at room temperature lets aromatics open; a splash of water can soften high ABV. Neat, on the rocks and mixed are all legitimate ways to meet these spirits — a margarita or paloma is a real way into a blanco, not a compromise. Salt, citrus (lima, not always limón), ice and accompaniments are choices rather than admission requirements; regional customs vary and none of them is a rule. Pairings on each profile are editorial suggestions, never rules.",
+          "text": "Serving is simple: a small glass at room temperature lets aromatics open; a splash of water can soften high ABV. Neat — without ice or mixers — on the rocks and mixed are all legitimate ways to meet these spirits — a margarita or paloma is a real way into a blanco, not a compromise. Salt, citrus (lima, not always limón), ice and accompaniments are choices rather than admission requirements; regional customs vary and none of them is a rule. Pairings on each profile are editorial suggestions, never rules.",
           "exampleProfileIds": [
             "bacanora-pacifica-sierra-sonora",
             "raicilla-costa-jalisco"

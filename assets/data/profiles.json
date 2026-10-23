@@ -7,7 +7,7 @@
       "stateId": "jal",
       "stateName": "Jalisco",
       "context": "Blanco tequila born in the town of Tequila and the valley that carries its name, from 100% blue agave grown in this same ground. Valley conditions — lower elevation, warmer nights — tend to grow smaller, more herbaceous agave than Los Altos, so valley blancos often read savory and vegetal rather than sweet: the taste of this soil, a distinction the valley is proud of.",
-      "description": "A blanco (also called silver or plata) is tequila bottled without oak aging, so what reaches the glass is the distilled character of the cooked agave itself: roasted piña, citrus, pepper and fresh vegetal notes.",
+      "description": "A blanco (also called silver or plata) is tequila typically bottled without oak aging — the rules allow brief resting under the reposado minimum, but the style is defined by the distilled character of the cooked agave itself: roasted piña, citrus, pepper and fresh vegetal notes.",
       "body": "light",
       "tasteNotes": [
         "cooked agave",
@@ -50,7 +50,8 @@
           "tacos al pastor",
           "ceviche",
           "queso fresco with chile"
-        ]
+        ],
+        "notice": "What to notice first: the savory roasted-agave center and the clean, peppery finish."
       },
       "plantId": "agave-tequilana",
       "traditionId": "tequila",
@@ -117,7 +118,8 @@
           "tlayudas",
           "grilled meats",
           "roasted vegetables"
-        ]
+        ],
+        "notice": "What to notice first: the roast smoke as a thread through the agave, not a wall in front of it."
       },
       "plantId": "agave-angustifolia",
       "traditionId": "mezcal",
@@ -184,7 +186,8 @@
           "carne asada",
           "sonoran cheese (queso cocido)",
           "chiltepin-sauced dishes"
-        ]
+        ],
+        "notice": "What to notice first: the roast-agave aromas opening after a short rest in the glass."
       },
       "plantId": "agave-angustifolia",
       "traditionId": "bacanora",
@@ -250,7 +253,8 @@
           "birria",
           "mole",
           "aged cheeses"
-        ]
+        ],
+        "notice": "What to notice first: the gentle fermented edge that makes sierra raicilla its own thing."
       },
       "plantId": "agave-maximiliana",
       "traditionId": "raicilla",
@@ -318,7 +322,8 @@
           "pescado a la talla",
           "fresh cheese with tortillas",
           "colimense seafood"
-        ]
+        ],
+        "notice": "What to notice first: the lean mineral spine and how slowly the glass opens."
       },
       "plantId": "tuxca-wild-agaves",
       "traditionId": "tuxca",
@@ -385,7 +390,8 @@
           "chiapaneco tamales",
           "smoked cheeses",
           "coffee-adjacent desserts"
-        ]
+        ],
+        "notice": "What to notice first: the green, lactic sap character — nothing here was roasted."
       },
       "plantId": "agave-atrovirens",
       "traditionId": "comiteco",
@@ -454,7 +460,8 @@
           "barbacoa",
           "mixiotes",
           "corn-forward dishes"
-        ]
+        ],
+        "notice": "What to notice first: the fresh pulque kinship — lactic, yeasty, unlike any cooked agave."
       },
       "plantId": "agave-salmiana",
       "traditionId": "destilado-de-pulque",
@@ -519,7 +526,8 @@
           "grilled fish",
           "seafood with chile",
           "coastal tocios"
-        ]
+        ],
+        "notice": "What to notice first: the coastal herbs and smoke, lighter on the roast than valley mezcal."
       },
       "sourceIds": [
         "mezcalreviews-raicilla-category",
@@ -589,7 +597,8 @@
           "tacos",
           "grilled meats",
           "aged cheeses"
-        ]
+        ],
+        "notice": "What to notice first: how the gentle oak sits under the agave without covering it."
       },
       "sourceIds": [
         "diffords-tequila-category",
@@ -664,7 +673,8 @@
           "dark chocolate",
           "mole",
           "grilled steak"
-        ]
+        ],
+        "notice": "What to notice first: the oak sweetness wrapping the cooked agave, and the long, soft finish."
       },
       "sourceIds": [
         "diffords-tequila-category",
@@ -736,7 +746,8 @@
         "foods": [
           "light appetizers",
           "fresh fruit desserts"
-        ]
+        ],
+        "notice": "What to notice first: whether the filtered oak reads smooth or thin to you — opinions genuinely differ."
       },
       "sourceIds": [
         "patron-what-is-cristalino",
@@ -810,7 +821,8 @@
           "chiapaneco tamales",
           "aged cheeses",
           "cinnamon-adjacent desserts"
-        ]
+        ],
+        "notice": "What to notice first: the oak spice over the herbal sap, from glass-resting rather than barrels."
       },
       "sourceIds": [
         "backalley-comiteco",
@@ -878,7 +890,8 @@
           "fruit-forward salsas",
           "caramelized pork",
           "flan"
-        ]
+        ],
+        "notice": "What to notice first: how the fruit carries through the rest."
       },
       "sourceIds": [
         "wikipedia-raicilla",
@@ -953,7 +966,8 @@
           "dark chocolate",
           "cigar-adjacent desserts",
           "aged cheese"
-        ]
+        ],
+        "notice": "What to notice first: how much agave survives the long rest — the best ones keep it in the frame."
       },
       "sourceIds": [
         "wikipedia-tequila",
@@ -1027,7 +1041,8 @@
           "mild cheeses",
           "carnitas",
           "grilled corn"
-        ]
+        ],
+        "notice": "What to notice first: how the wood rounds the smoke without erasing it."
       },
       "sourceIds": [
         "diffords-mezcal-categories",
@@ -1102,7 +1117,8 @@
           "fresh cheeses",
           "fruit salsas",
           "seafood tostadas"
-        ]
+        ],
+        "notice": "What to notice first: the floral lift and the silky texture — wild tobalá is often quieter than its reputation."
       },
       "sourceIds": [
         "mezcalreviews-tobala-category",
@@ -1170,7 +1186,8 @@
           "asadero cheeses",
           "flour-tortilla northern dishes",
           "roasted vegetables"
-        ]
+        ],
+        "notice": "What to notice first: the desert-herb freshness that Dasylirion gives instead of agave sweetness."
       },
       "sourceIds": [
         "wikipedia-sotol",
@@ -1241,7 +1258,8 @@
           "fruit-forward salsas",
           "carnitas",
           "fresh cheese with honey"
-        ]
+        ],
+        "notice": "What to notice first: the sweeter, floral highland fruit against the pepper."
       },
       "sourceIds": [
         "foodandwine-highland-valley",

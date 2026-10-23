@@ -40,8 +40,8 @@ export const JOURNEY_STEPS = [
         {
           heading: { en: "Prepare", es: "Prepara" },
           text: {
-            en: "A small, clean glass is enough — no special stemware. A modest pour, neat, with water alongside; a few drops of water or an ice cube are a choice, not a requirement, and they soften the alcohol warmth without taking it away.",
-            es: "Basta una copa pequeña y limpia — no hace falta cristal especial. Una porción modesta, sola, con agua al lado; unas gotas de agua o un cubo de hielo son una elección, no un requisito, y suavizan el calor del alcohol sin eliminarlo.",
+            en: "A small, clean glass is enough — no special stemware. A modest pour, neat — that means without ice or mixers — with water alongside; a few drops of water or an ice cube are a choice, not a requirement, and they soften the alcohol warmth without taking it away.",
+            es: "Basta una copa pequeña y limpia — no hace falta cristal especial. Una porción modesta, sola — es decir, sin hielo ni mezcladores — con agua al lado; unas gotas de agua o un cubo de hielo son una elección, no un requisito, y suavizan el calor del alcohol sin eliminarlo.",
           },
         },
         {
@@ -61,8 +61,8 @@ export const JOURNEY_STEPS = [
         {
           heading: { en: "Follow the finish", es: "Sigue el final" },
           text: {
-            en: "After you swallow — or spit; nothing here requires swallowing or finishing the glass — notice how long the flavor stays: a few seconds or a slow, fading minute. That duration is the finish.",
-            es: "Después de tragar — o escupir; nada aquí exige tragar ni acabar la copa — nota cuánto permanece el sabor: unos segundos o un minuto que se apaga despacio. Esa duración es el final.",
+            en: "After you swallow — or spit; nothing here requires swallowing or finishing the glass — notice how long the flavor stays: a few seconds or a slow, fading minute. That lingering character is the finish — both how long it lasts and what it tastes like as it fades.",
+            es: "Después de tragar — o escupir; nada aquí exige tragar ni acabar la copa — nota cuánto permanece el sabor: unos segundos o un minuto que se apaga despacio. Ese carácter que se queda es el final — tanto cuánto dura como a qué sabe mientras se apaga.",
           },
         },
       ],

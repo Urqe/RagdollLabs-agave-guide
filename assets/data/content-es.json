@@ -3,7 +3,7 @@
     "tequila-blanco-valley-jalisco": {
       "title": "Tequila blanco, estilo Valle de Tequila",
       "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. Las condiciones del valle — menor elevación, noches más cálidas — tienden a producir agaves más pequeños y herbáceos que los de Los Altos, así que los blancos del valle suelen leerse sabrosos y vegetales en lugar de dulces: el sabor de este suelo, una distinción de la que el valle se enorgullece.",
-      "description": "Un blanco (también llamado silver o plata) es un tequila embotellado sin crianza en roble, así que lo que llega a la copa es el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas.",
+      "description": "Un blanco (también llamado silver o plata) es un tequila que suele embotellarse sin crianza en roble — las reglas permiten un reposo breve por debajo del mínimo del reposado, pero el estilo se define por el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas.",
       "beginnerNote": "¿Nuevo en el tequila? Empieza aquí: ningún barril se interpone entre tú y el agave cocido, así que un blanco es la introducción más clara a cómo se lee la tierra de cada productor en la copa.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
       "process": "Cocción al vapor (horno/autoclave), extracción con tahona o molino de rodillos, fermentación en tinas abiertas, doble destilación; normalmente sin crianza, aunque las reglas del blanco permiten un contacto breve con roble por debajo del mínimo de dos meses del reposado",
@@ -14,7 +14,8 @@
           "tacos al pastor",
           "ceviche",
           "queso fresco con chile"
-        ]
+        ],
+        "notice": "Qué notar primero: el centro sabroso de agave asado y el final limpio y picante."
       },
       "whyItTastes": "El filo sabroso y terroso es lugar y método trabajando juntos: el agave del valle tiende a crecer más pequeño y más herbáceo que el del altiplano (una tendencia, no una regla), y los productores tradicionales del valle muelen la piña cocida con tahona de piedra y fermentan en tinas abiertas. Ni la edad ni el precio lo explican; el método y el lugar juntos moldean la copa, ninguno la decide solo.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado)"
@@ -34,7 +35,8 @@
           "tlayudas",
           "carnes asadas",
           "verduras asadas"
-        ]
+        ],
+        "notice": "Qué notar primero: el humo del asado como un hilo a través del agave, no un muro delante de él."
       },
       "whyItTastes": "El asado en pozo de tierra cocina el espadín lentamente sobre leña — de ahí viene el carácter de asado (cuánto humo varía con la leña, el tiempo y el pozo). La fermentación con levaduras silvestres y la molienda en tahona aportan textura; joven significa que ningún roble se interpone entre tú y la cocción.",
       "plant": "Agave angustifolia (espadín, cultivado)"
@@ -54,7 +56,8 @@
           "carne asada",
           "queso sonorense (queso cocido)",
           "platillos con salsa de chiltepín"
-        ]
+        ],
+        "notice": "Qué notar primero: los aromas de agave asado que se abren tras un breve reposo en la copa."
       },
       "whyItTastes": "Agave Pacifica/Yaquiana silvestre de la sierra sonorense, asado en pozo (a menudo sobre mezquite) y fermentado con levaduras silvestres: reseñistas y productores describen un carácter herbal y suavemente ahumado que la guía atribuye a la planta y al asado en pozo juntos — una tendencia documentada de este estilo, no un resultado garantizado de la cosecha silvestre. La doble destilación es el método estándar aquí; no asegura limpieza por sí misma.",
       "plant": "Agave angustifolia pacifica (de recolección silvestre; conocido localmente como pacifica o yaquiana)"
@@ -74,7 +77,8 @@
           "birria",
           "mole",
           "quesos madurados"
-        ]
+        ],
+        "notice": "Qué notar primero: el filo fermentado suave que hace de la raicilla de sierra algo propio."
       },
       "whyItTastes": "Maximiliana silvestre de las montañas de Jalisco, asada en hornos de adobe sobre el suelo y no en pozos — menos humo que las tradiciones de pozo — luego fermentada al aire en tinas de madera y destilada en pequeños lotes. El filo herbal rústico sigue de la planta silvestre, el asado en horno y la escala de lote.",
       "plant": "Agave maximiliana (de recolección silvestre; el agave distintivo de la raicilla de la Sierra)"
@@ -94,7 +98,8 @@
           "pescado a la talla",
           "queso fresco con tortillas",
           "mariscos colimenses"
-        ]
+        ],
+        "notice": "Qué notar primero: la espina mineral y magra, y lo despacio que se abre la copa."
       },
       "whyItTastes": "Agaves silvestres Liñeño/Cimarrón, asado en pozo cilíndrico, machacado a mano, fermentación en un filtro de cráter volcánico y alambique filipino de madera — una cadena de métodos inusualmente específica que deja un carácter cocido-silvestre distintivo, variando lote a lote con la mezcla de agaves.",
       "plant": "Agaves silvestres, a menudo liñeno/cimarrón (Agave angustifolia y parientes locales); los ensambles varían según el vinatero"
@@ -113,7 +118,8 @@
           "tamales chiapanecos",
           "quesos ahumados",
           "postres con café"
-        ]
+        ],
+        "notice": "Qué notar primero: el carácter verde y láctico de la savia — aquí nada fue asado."
       },
       "whyItTastes": "Sin ningún asado: la savia (aguamiel) del maguey comiteco vivo se recolecta, fermenta y destila. Todo en la copa sigue de ese camino de savia — por eso el comiteco no se lee nada como un destilado de piña cocida.",
       "plant": "Maguey comiteco (Agave americana L. según la declaración de IG de 2025; algunas referencias nombran Agave atrovirens), cultivado; el aguamiel se recolecta de la planta viva"
@@ -132,7 +138,8 @@
           "barbacoa",
           "mixiotes",
           "platillos con maíz"
-        ]
+        ],
+        "notice": "Qué notar primero: el parentesco con el pulque fresco — láctico, con levadura, distinto de todo agave cocido."
       },
       "whyItTastes": "El aguamiel del maguey pulquero vivo se fermenta en pulque (~48 horas) y luego se destila; la piña nunca se cocina. El perfil sigue la savia, no el asado.",
       "plant": "Maguey pulquero (Agave salmiana); el aguamiel se recolecta a diario de la planta viva"
@@ -152,7 +159,8 @@
           "pescado asado",
           "mariscos con chile",
           "cocina costera"
-        ]
+        ],
+        "notice": "Qué notar primero: las hierbas costeras y el humo, más ligeros de asado que el mezcal de valle."
       },
       "whyItTastes": "Agaves chico aguiar y rhodacantha de la costa, asado en pozo subterráneo y fermentación silvestre en los cañones de Cabo Corrientes — una mezcla de plantas y un asado distintos de la tradición de la Sierra, y por eso la raicilla de la Costa y la de la Sierra divergen.",
       "plant": "Agave angustifolia (chico aguiar) y Agave rhodacantha (silvestre y cultivado)"
@@ -171,7 +179,8 @@
           "tacos",
           "carnes asadas",
           "quesos madurados"
-        ]
+        ],
+        "notice": "Qué notar primero: cómo el roble suave se apoya bajo el agave sin cubrirlo."
       },
       "whyItTastes": "La misma base del valle que el blanco, reposada en roble el mínimo legal de dos meses (típicamente 2–12): el roble suaviza el filo vegetal y aporta especias suaves, sin borrar el agave cocido debajo.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado)"
@@ -190,7 +199,8 @@
           "chocolate oscuro",
           "mole",
           "bistec asado"
-        ]
+        ],
+        "notice": "Qué notar primero: el dulzor del roble envolviendo el agave cocido, y el final largo y suave."
       },
       "whyItTastes": "Un año o más en roble (típicamente barricas ex-bourbon): la madera ahora habla claro — vainilla y caramelo sobre el agave — pero «más viejo es mejor» es marketing, no una regla de sabor.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado)"
@@ -208,7 +218,8 @@
         "foods": [
           "botanas ligeras",
           "postres de fruta fresca"
-        ]
+        ],
+        "notice": "Qué notar primero: si el roble filtrado te parece suave o ligero — las opiniones difieren de verdad."
       },
       "whyItTastes": "Elaborado como reposado o añejo reposado en roble y luego filtrado con carbón hasta dejarlo claro: el filtrado retira el color y, con él, algo de sabor. Lo que queda lleva influencia de madera pero parece blanco — una elección de acabado, no una clase legal.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado)"
@@ -227,7 +238,8 @@
           "tamales chiapanecos",
           "quesos madurados",
           "postres con canela"
-        ]
+        ],
+        "notice": "Qué notar primero: la especia del roble sobre la savia herbal, del reposo en vidrio y no en barrica."
       },
       "whyItTastes": "De savia como el blanco, luego reposado en vidrio con ramas de encino — un toque de madera suave sin maduración en barrica, y el añejo aquí es una expresión del productor, no una clase legal como la del tequila.",
       "plant": "Maguey comiteco (Agave americana L. según la declaración de IG de 2025; algunas referencias nombran Agave atrovirens), cultivado; el aguamiel se recolecta de la planta viva"
@@ -247,7 +259,8 @@
           "quesos suaves",
           "fruta fresca",
           "platillos con mole suave"
-        ]
+        ],
+        "notice": "Qué notar primero: cómo la fruta atraviesa el reposo."
       },
       "whyItTastes": "Fermentado y destilado (la botella de ejemplo indica acero inoxidable), luego reposado en barricas de madera unos tres meses — un reposo corto de la botella de ejemplo (no un mínimo legal) que redondea la raicilla sin convertirla en otra cosa.",
       "plant": "Varía según la botella (la botella de ejemplo indica angustifolia y maximiliana); vinculado a la página de la Maximiliana como el agave distintivo de la tradición de la Sierra — revisa la botella, los lotes difieren"
@@ -266,7 +279,8 @@
           "chocolate oscuro",
           "postres para acompañar puros",
           "queso madurado"
-        ]
+        ],
+        "notice": "Qué notar primero: cuánto agave sobrevive al largo reposo — los mejores lo mantienen en el cuadro."
       },
       "whyItTastes": "El agave del altiplano, de suelos rojos minerales, tiende a leerse más dulce y floral que el del valle — una tendencia documentada, no un resultado garantizado del lugar; tres años o más en roble (típicamente ex-bourbon americano) empujan el destilado firmemente hacia la madera mientras la fruta del altiplano se mantiene debajo.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales de Los Altos)"
@@ -286,7 +300,8 @@
           "quesos suaves",
           "carnitas",
           "elote asado"
-        ]
+        ],
+        "notice": "Qué notar primero: cómo la madera redondea el humo sin borrarlo."
       },
       "whyItTastes": "La misma base de espadín asado en pozo que el joven, reposada en roble de 2 a 12 meses (la botella de ejemplo indica 4–6 en roble americano): el asado queda, suavizado por la madera. Nota: el mínimo de reposado del mezcal difiere del tequila — las reglas no se transfieren.",
       "plant": "Agave angustifolia (espadín, cultivado); algunos productores mezclan agaves silvestres"
@@ -294,7 +309,7 @@
     "mezcal-tobala-sierra-oaxaca": {
       "title": "Mezcal de tobalá, estilo Agave potatorum silvestre (Sierra, Oaxaca)",
       "context": "El tobalá (Agave potatorum) es un agave pequeño, de altitud y mayormente silvestre, al que en México llaman el 'rey de los agaves'; su tamaño diminuto y su larga madurez (un rango variable según la fuente, a menudo citado alrededor de 12–15 años) dan rendimientos muy bajos, lo que ha encarecido su precio y mermado sus poblaciones silvestres. La DO del mezcal permite cualquier especie de agave, así que el tobalá es mezcal; parte del tobalá ya se cultiva, lo que cambia la historia de sostenibilidad y, anotan los reseñistas, a veces el sabor. Es un estilo dirigido por la planta, no por el lugar: el tobalá crece por la Sierra Norte de Oaxaca y más allá. En la Sierra Norte, encontrar un tobalá listo para cosechar es orgullo personal: el mezcalero te llevará a la planta, no al mapa.",
-      "description": "El tobalá se asa en horno, se muele en piedra, fermenta silvestre y se destila — en alambiques de barro en las producciones ancestrales, de cobre en las artesanales. El resultado es un mezcal más floral y afrutado que el espadín, con fruta dulce sobre un asado suave y un final mineral. La botella de ejemplo, de tobalá silvestre de los alrededores de Santiago Matatlán, es herbal y delicada, con tierra seca, tomillo, cilantro y un toque de romero.",
+      "description": "El tobalá se asa en horno, se muele en piedra, fermenta silvestre y se destila — en ollas de barro en las producciones ancestrales, y en cobre o barro en las artesanales, pues la categoría artesanal permite ambos caminos. El resultado es un mezcal más floral y afrutado que el espadín, con fruta dulce sobre un asado suave y un final mineral. La botella de ejemplo, de tobalá silvestre de los alrededores de Santiago Matatlán, es herbal y delicada, con tierra seca, tomillo, cilantro y un toque de romero.",
       "beginnerNote": "¿Nuevo en el tobalá? Espera la prima más amable y floral del mezcal: cítricos dulces y fruta tropical sobre un asado suave — más caro porque el agave es pequeño, lento y escaso.",
       "category": "Mezcal — el tobalá está dentro de la denominación de origen del mezcal; es una categoría de agave silvestre bajo presión de sostenibilidad, no una clase legal propia",
       "process": "Asado en pozo, molido con piedra, fermentado con levaduras silvestres, destilado; la categoría artesanal de la NOM-070 permite alambiques de cobre u ollas de barro, así que el barro no es exclusivo de la producción ancestral",
@@ -306,7 +321,8 @@
           "quesos frescos",
           "salsas de fruta",
           "tostadas de mariscos"
-        ]
+        ],
+        "notice": "Qué notar primero: el arranque floral y la textura sedosa — el tobalá silvestre suele ser más discreto que su fama."
       },
       "whyItTastes": "El pequeño tobalá silvestre madura en un rango variable según la fuente (a menudo citado alrededor de 12–15 años) en altitud, dando rendimientos muy bajos; los reseñistas describen carácter concentrado en algunos lotes, y el asado en pozo y a menudo la destilación en ollas de barro mantienen la cucción suave. La variación entre lotes es genuina y grande — una cata ciega citada no encontró un solo hilo común.",
       "plant": "Agave potatorum (tobalá; mayormente de recolección silvestre, algo cultivado — revisa la botella)"
@@ -326,7 +342,8 @@
           "quesos asadero",
           "platillos norteños de tortilla de harina",
           "verduras asadas"
-        ]
+        ],
+        "notice": "Qué notar primero: la frescura de hierba del desierto que da el Dasylirion en lugar del dulzor del agave."
       },
       "whyItTastes": "El Dasylirion (no un agave) se cosecha silvestre, se asa en pozos cónicos y se fermenta con levaduras silvestres: el carácter terroso, ahumado-herbal sigue de la planta y la cocción del desierto. Las poblaciones silvestres enfrentan presión de cosecha documentada; las afirmaciones de rebrote requieren evidencia de especie y método que esta guía no ha verificado.",
       "plant": "Dasylirion (sotol, conocida comúnmente como cuchara del desierto; a menudo wheeleri, cedrosanum o leiophyllum), de recolección silvestre; no es un agave, aunque sí un pariente cercano"
@@ -345,7 +362,8 @@
           "salsas afrutadas",
           "carnitas",
           "queso fresco con miel"
-        ]
+        ],
+        "notice": "Qué notar primero: la fruta floral y más dulce del altiplano frente a la pimienta."
       },
       "whyItTastes": "El agave de Los Altos crece a mayor elevación en suelos rojos ricos en hierro con noches más frescas, y los productores dicen que esas condiciones producen piñas más grandes y dulces — por eso el destilado sin añejar tiende a lo afrutado, floral y brillante en cítricos en vez de lo terroso. Nótese la reserva honesta: un panel de cata a ciegas encontró el patrón regional más débil de lo que sugiere el folclore, así que trátalo como una tendencia, nunca una garantía.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales rojos de Los Altos)"
@@ -796,7 +814,7 @@
       "block0": "El agave azul es el único agave permitido legalmente en el tequila; el espadín es el caballo de batalla del mezcal, cultivado a escala. Otros agaves — la maximiliana en la Sierra de Jalisco, el tobalá en las montañas de Oaxaca — suelen cosecharse silvestres, lo que moldea tanto el sabor como la sostenibilidad.",
       "block1": "Los nombres comunes son regionales, no científicos: la lechuguilla del altiplano de Jalisco es un nombre local para la maximiliana, mientras que la lechuguilla sonorense es una planta distinta. Donde la botánica está genuinamente sin resolver — como con la Pacifica/Yaquiana de Sonora — esta guía registra los nombres sin zanjar el debate.",
       "block2": "No todo destilado de esta guía cocina la piña. El comiteco y el destilado de pulque recolectan aguamiel — la savia extraída de la planta viva — y la fermentan en su lugar. Las tradiciones de savia se saltan el asado por completo, y por eso su camino de sabor difiere de los destilados de piña cocida.",
-      "block2deeper": "Un agave maduro florece una sola vez y luego muere. Cosechar antes de la floración redirige los azúcares hacia la piña; las tradiciones de savia, en cambio, mantienen viva la planta y cosechan sus azúcares repetidamente."
+      "block2deeper": "Un agave maduro florece una sola vez y luego muere. Las tradiciones de piña cosechan la planta entera en esa madurez, tomando de una vez sus azúcares acumulados; las tradiciones de savia, en cambio, trabajan con la planta viva: cortan el tallo floral y recolectan el aguamiel a lo largo de varias temporadas — el sangrado repetido también agota la planta, solo en otra escala de tiempo."
     },
     "from-plant-to-glass": {
       "title": "De la planta a la copa",
@@ -819,8 +837,8 @@
       "title": "Entender las etiquetas",
       "intro": "Una etiqueta mexicana lleva términos legales, datos del productor y marketing — a veces en la misma palabra. Este capítulo los decodifica, y nunca aplica las reglas de una tradición a otra.",
       "block0": "Los términos de clase son específicos de cada destilado: blanco es una clase legal del tequila, joven es la clase sin crianza del mezcal, y los mínimos de reposado difieren entre tequila, mezcal y raicilla. El cristalino es una elección de acabado, no una clase legal. Cuando un término no es una clase legal, esta guía lo dice.",
-      "block1": "El NOM en una etiqueta de tequila o mezcal identifica al productor certificado. Las botellas de tuxca no llevan registro NOM — lo que falta es la certificación bajo un esquema de denominación de origen, no la exención de los requisitos generales de etiquetado — un hecho legal, no un juicio de autenticidad. Los términos de lote importan para los pequeños productores: los datos del lote se quedan con el lote.",
-      "block2": "Un ejemplo ilustrativo de etiqueta — inventado para enseñar, no una botella real: (1) Nombre del destilado: «Mezcal» — la categoría protegida; «Mezcal Artesanal» añadiría la categoría de producción. (2) Clase: «Joven» — sin crianza en este caso; la misma palabra puede significar una mezcla en el tequila, así que lee las clases de cada tradición. (3) Agave/composición: «100% Agave espadín» o «Savia de agave y azúcares de caña» (comiteco) — lo que se fermentó; un dato de composición, no un grado de calidad. (4) % Alc. Vol.: graduación, no suavidad. (5) Productor/origen: el número NOM identifica al productor certificado; el lugar nombrado es donde se elaboró. (6) Lote: la identidad del lote para un pequeño productor. Estos campos dicen qué es la botella y de dónde viene; no pueden decirte a qué sabe — para eso, esta guía acompaña cada botella con una reseña atribuida donde existe, y lo declara donde no existe.",
+      "block1": "Una NOM (Norma Oficial Mexicana) es una norma oficial mexicana que define las reglas de cada destilado; el número impreso en una etiqueta de tequila o mezcal es el registro del productor bajo esa norma, y los sellos de certificación los emite por separado un organismo de evaluación de la conformidad. Tres cosas distintas: la norma, el registro y la certificación. Las botellas de tuxca no llevan registro NOM — lo que falta es la certificación bajo un esquema de denominación de origen, no la exención de los requisitos generales de etiquetado — un hecho legal, no un juicio de autenticidad. Los términos de lote importan para los pequeños productores: los datos del lote se quedan con el lote.",
+      "block2": "Un ejemplo ilustrativo de etiqueta — inventado para enseñar, no una botella real: (1) Nombre del destilado: «Mezcal» — la categoría protegida; «Mezcal Artesanal» añadiría la categoría de producción. (2) Clase: «Joven» — sin crianza en este caso; la misma palabra puede significar una mezcla en el tequila, así que lee las clases de cada tradición. (3) Agave/composición: «100% Agave espadín» o «Savia de agave y azúcares de caña» (comiteco) — lo que se fermentó; un dato de composición, no un grado de calidad. (4) % Alc. Vol.: graduación, no suavidad. (5) Productor/origen: el número NOM es el registro del productor bajo la norma del mezcal (la convención del número de productor del tequila no es una regla universal); el lugar nombrado es donde se elaboró. (6) Lote: la identidad del lote para un pequeño productor. Estos campos dicen qué es la botella y de dónde viene; no pueden decirte a qué sabe — para eso, esta guía acompaña cada botella con una reseña atribuida donde existe, y lo declara donde no existe.",
       "block3": "Las afirmaciones de composición son datos sobre los fermentables, no grados de calidad. «100% de agave» describe qué se fermentó; el comiteco con azúcar de caña declarada es igualmente honesto sobre lo que es. La declaración de composición es lectura obligatoria en cada botella.",
       "block4": "¿Cómo sabes a qué sabe una botella? Las reseñas independientes, las descripciones del productor y las síntesis editoriales son tipos distintos de evidencia, y esta guía las mantiene visiblemente separadas: la impresión de un reseñista se atribuye al reseñista; las notas de cata del propio productor se etiquetan como suyas; donde no existe ninguna reseña, la entrada lo dice en lugar de tomar carácter prestado. Cuando leas una afirmación de cata en cualquier parte, pregunta de qué paladar vino — ese hábito viaja más lejos que cualquier botella."
     },
@@ -828,7 +846,7 @@
       "title": "Elegir y disfrutar",
       "intro": "No hay una manera incorrecta de disfrutar estos destilados — pero sí maneras honestas de elegir. Este capítulo favorece tu propio paladar sobre el precio, la edad o la rareza.",
       "block0": "Empieza por lo que ya te gusta: blancos frescos y herbales, mezcales con humo, añejos con roble, o algo fuera de lo común. Los caminos de descubrimiento de esta guía agrupan perfiles por sabor para que sigas tu propio gusto, y cada perfil nombra su estilo sensorial con honestidad.",
-      "block1": "El servicio es simple: una copa pequeña a temperatura ambiente deja abrir los aromas; un chorrito de agua puede suavizar graduaciones altas. Beberlo solo, con hielo o mezclado son formas igualmente legítimas de conocer estos destilados — una margarita o una paloma son un camino real hacia un blanco. La sal, los cítricos (lima, no siempre limón), el hielo y los acompañamientos son elecciones, no requisitos; las costumbres regionales varían y ninguna es una regla. Los maridajes de cada perfil son sugerencias editoriales, nunca reglas.",
+      "block1": "El servicio es simple: una copa pequeña a temperatura ambiente deja abrir los aromas; un chorrito de agua puede suavizar graduaciones altas. Beberlo solo — sin hielo ni mezcladores —, con hielo y mezclado son maneras legítimas de conocer estos destilados — una margarita o una paloma son una entrada real a un blanco, no un compromiso. La sal, los cítricos (lima, no siempre limón), el hielo y los acompañamientos son elecciones, no requisitos de entrada; las costumbres regionales varían y ninguna es una regla. Los maridajes de cada perfil son sugerencias editoriales, nunca reglas.",
       "block2": "Cuidado con las escaleras de marketing: más viejo no es automáticamente mejor, más graduación no es automáticamente mejor, y la rareza no es un sabor. Un blanco accesible de un buen productor puede superar a una botella trofeo. Esta guía perfila estilos, no trofeos.",
       "block2deeper": "Técnica de cata, en breve: una copa pequeña y limpia, una inhalación suave sin hundir la nariz ni girar con fuerza, un sorbo pequeño, atención a la textura y después el final. El agua — al lado o unas gotas dentro — es una elección que suaviza el calor del alcohol; no vuelve la bebida sin alcohol. La lección Cómo catar del recorrido de cinco pasos guía esta secuencia paso a paso, y la vista de comparación existe precisamente para catar dos estilos parecidos lado a lado."
     },
