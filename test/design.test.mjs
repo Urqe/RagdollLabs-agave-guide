@@ -165,7 +165,7 @@ test("new Spanish navigation paths and headings do not leak translation keys", (
   const root = document.createElement("div");
   renderHome(root, { profiles, locale: es });
   assert.equal(root.querySelector("h1").textContent, "Guía del Agave");
-  assert.ok(root.textContent.includes("Explorar destilados"));
+  assert.ok(root.textContent.includes("Explorar estilos"));
   assert.ok(!root.textContent.includes("exploreHint"));
   es.set("en");
 });

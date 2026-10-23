@@ -102,6 +102,9 @@ export function renderPlantPage(container, { plant, plants, regions, traditions,
   section.appendChild(el("h2", {}, t("plant.furtherReading")));
   section.appendChild(sourcesBlock(sources, plant.sourceIds, t, locale));
 
+  // Pair 11: one clear onward action after the reference material.
+  section.appendChild(el("a", { href: "#/explore", class: "cta-link" }, t("plant.browseStyles")));
+
   container.appendChild(section);
 }
 
@@ -186,6 +189,9 @@ export function renderTraditionPage(container, { tradition, traditions, regions,
 
   section.appendChild(el("h2", {}, t("plant.furtherReading")));
   section.appendChild(sourcesBlock(sources, tradition.sourceIds, t, locale));
+
+  // Pair 11: one clear onward action after the reference material.
+  section.appendChild(el("a", { href: "#/explore", class: "cta-link" }, t("plant.browseStyles")));
 
   container.appendChild(section);
 }

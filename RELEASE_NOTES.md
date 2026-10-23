@@ -2293,3 +2293,68 @@ available in this environment; DOM-level evidence only.
 
 - Native-device (iPhone/iPad Safari, VoiceOver) checks still
   unverified in this environment, honestly recorded as such.
+
+## Post-roadmap pair 11 — Clear Discovery Entrances
+
+Scope per plan section 4.2: give browsing and contextual discovery
+distinct, understandable jobs, lead the discovery landing with familiar
+entrances, and remove uncertainty about where to browse — while
+preserving the cross-linked content model and all existing routes.
+
+### What changed
+
+- **Distinct job labels everywhere.** The two main navigation
+  destinations are now "Browse styles" (searchable/filterable profile
+  browsing, `#/explore`) and "Plants & places" (contextual discovery by
+  tradition, flavour, plant and region, `#/discover`) — consistent in
+  the top navigation (including the static index.html text), homepage
+  actions, back links ("← Back to plants & places") and the beginner
+  journey's explore-next card. EN/ES parity throughout; the explore and
+  discover routes themselves are untouched and stay compatible.
+- **Discovery landing reordered.** Familiar spirit traditions lead,
+  approachable flavour paths come second, and plants/places remain
+  prominent but secondary — replacing the wall of alphabetical
+  taxonomy lists as the first impression. The hub heading now says
+  "Understand what is in the glass" instead of the inaccurate "Three
+  ways in" (four routes, including flavour, were offered).
+- **Common names before scientific names.** Plant chips on the hub,
+  plant pages' related-plant chips and region pages' plant chips now
+  lead with the documented common name and keep the species in
+  parentheses (e.g. "maximiliana (Agave maximiliana)"), preserving
+  regional-name ambiguity instead of sorting by Latin binomial.
+- **Map/list clearly labelled as browsing by place.** The explore
+  view's map disclosure now reads "Browse by place — map & state list"
+  (EN/ES); the app-coverage versus legal-boundary distinction in the
+  map hint is unchanged.
+- **Homepage actions aligned with destinations.** "Browse styles"
+  (search and filter every style profile) stays the primary action;
+  the beginner entrance, comparison, catalogue and Learn remain
+  present.
+- **One clear onward action on reference pages.** Plant and tradition
+  pages now end with "Browse the style profiles →" after the source
+  material, so a reader is never stranded without a next step; their
+  existing "← Back to plants & places" returns are unchanged.
+- **Fixed a broken deep link.** The spirit page's example-bottle cards
+  linked to `#/catalogue?brand=…`, which the router resolves as
+  not-found; they now link to the searchable catalogue, which resolves.
+- The hub carries a short note that full lists stay searchable in
+  Browse styles; known-name search and enthusiast reference access
+  remain direct.
+
+### Checks run
+
+- `npm run validate` — schema plus 267 node:test/jsdom suites, all
+  passing; 9 new pair-11 regression tests (distinct labels, hub order,
+  common-name-first chips, link resolution, place-browsing label,
+  homepage alignment, onward actions, contextual returns, EN/ES hub
+  rendering). Existing tests pinning the old labels updated
+  deliberately (design, discovery suites).
+- Every link rendered by the spirit discovery page verified to parse
+  to a real route.
+
+### Remaining issues / deferred
+
+- Native-device (iPhone/iPad Safari, VoiceOver) checks remain
+  unverified in this environment; DOM-level evidence only. Deep-link
+  and history behavior of the renamed labels is pair 12's review
+  scope.

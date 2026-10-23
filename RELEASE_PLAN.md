@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — refinement after post-roadmap pair 7
 
-Post-roadmap pairs 8–10 are applied; the next planned release is **post-roadmap pair 11 — Clear Discovery Entrances**, followed by pairs 12–14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
+Post-roadmap pairs 8–11 are applied; the next planned release is **post-roadmap pair 12 — Discovery Review & Fixes**, followed by pairs 13–14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -537,15 +537,15 @@ Acceptance: the new route teaches a coherent sequence without blocking free expl
 
 ### Post-roadmap pair 11 — Clear Discovery Entrances (feature/UX)
 
-Goal: remove uncertainty about where to browse while preserving the cross-linked content model.
+Applied (see the pair 11 notes in RELEASE_NOTES.md). Goal: remove uncertainty about where to browse while preserving the cross-linked content model.
 
-1. [ ] Give the existing destinations distinct visible jobs: **Browse styles** for searchable/filterable profile browsing; **Plants & places** for contextual discovery by tradition, flavour, plant and region. Keep existing Explore/Discover routes compatible and use the same labels consistently in navigation, headings and back links.
-2. [ ] On the contextual discovery landing page, lead with familiar spirit traditions and approachable flavour paths. Keep plant and region entrances prominent but secondary; present common plant names before scientific names where documented, preserving regional-name ambiguity.
-3. [ ] Replace the first impression of long alphabetical taxonomy lists with compact, clearly titled entry groups. Keep full lists reachable and searchable. Correct “three ways in” wording if four routes, including flavour, are offered.
-4. [ ] Keep Mexico map/list access clearly labelled as browsing by place. Preserve app-coverage versus legal-boundary distinctions, selected place and filtered results on return.
-5. [ ] Align homepage actions with the actual destinations: browse styles, compare, new-to-agave journey and bottles. Make the beginner action easy to find without replacing the main browsing action.
-6. [ ] Provide one clear onward action and contextual return on plant, tradition, region and flavour pages. Do not add another sidebar or duplicate the catalogue inside discovery.
-7. [ ] Translate labels, descriptions and accessible names together. Preserve bilingual aliases, existing entity links and shared search logic.
+1. [x] Give the existing destinations distinct visible jobs: **Browse styles** for searchable/filterable profile browsing; **Plants & places** for contextual discovery by tradition, flavour, plant and region. Keep existing Explore/Discover routes compatible and use the same labels consistently in navigation, headings and back links.
+2. [x] On the contextual discovery landing page, lead with familiar spirit traditions and approachable flavour paths. Keep plant and region entrances prominent but secondary; present common plant names before scientific names where documented, preserving regional-name ambiguity.
+3. [x] Replace the first impression of long alphabetical taxonomy lists with compact, clearly titled entry groups. Keep full lists reachable and searchable. Correct “three ways in” wording if four routes, including flavour, are offered.
+4. [x] Keep Mexico map/list access clearly labelled as browsing by place. Preserve app-coverage versus legal-boundary distinctions, selected place and filtered results on return.
+5. [x] Align homepage actions with the actual destinations: browse styles, compare, new-to-agave journey and bottles. Make the beginner action easy to find without replacing the main browsing action.
+6. [x] Provide one clear onward action and contextual return on plant, tradition, region and flavour pages. Do not add another sidebar or duplicate the catalogue inside discovery.
+7. [x] Translate labels, descriptions and accessible names together. Preserve bilingual aliases, existing entity links and shared search logic.
 
 Acceptance: a first-time visitor can distinguish “find a style” from “understand a plant/place/tradition” before clicking. Known-name search and enthusiast reference access remain direct.
 

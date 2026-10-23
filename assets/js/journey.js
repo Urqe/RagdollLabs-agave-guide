@@ -75,7 +75,7 @@ export const JOURNEY_STEPS = [
     },
     destinations: [
       { href: "#/explore", label: { en: "Browse the styles", es: "Explora los estilos" }, reason: { en: "Every profile in the guide, searchable.", es: "Todos los perfiles de la guía, con búsqueda." } },
-      { href: "#/discover", label: { en: "Explore by plant, place or flavor", es: "Explora por planta, lugar o sabor" }, reason: { en: "Contextual discovery through the same profiles.", es: "Descubrimiento contextual a través de los mismos perfiles." } },
+      { href: "#/discover", label: { en: "Plants & places", es: "Plantas y lugares" }, reason: { en: "Understand the plants, regions and traditions behind the styles.", es: "Entiende las plantas, regiones y tradiciones detrás de los estilos." } },
       { href: "#/catalogue", label: { en: "Look up a bottle", es: "Busca una botella" }, reason: { en: "The reviewed bottle catalogue.", es: "El catálogo de botellas con reseñas." } },
       { href: "#/learn", label: { en: "Keep learning", es: "Sigue aprendiendo" }, reason: { en: "The seven chapters and reference material.", es: "Los siete capítulos y el material de referencia." } },
     ],

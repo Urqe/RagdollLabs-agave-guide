@@ -160,9 +160,9 @@ test("R17: Spanish locale renders localized discovery headings without raw keys"
   locale.set("es");
   container.innerHTML = "";
   renderDiscover(container, { plants, regions, traditions, profiles, bottles, locale });
-  assert.ok(container.textContent.includes("Explora por planta"), "plant heading in Spanish");
+  assert.ok(container.textContent.includes("Plantas"), "plant heading in Spanish");
   assert.ok(!/discover\.[a-zA-Z]/.test(container.textContent), "no raw locale keys leak");
-  assert.ok(container.textContent.includes("Descubrir") || container.textContent.includes("Tres caminos"), "Spanish hub copy");
+  assert.ok(container.textContent.includes("Entiende qué hay en la copa"), "Spanish hub copy");
   locale.set("en");
 });
 
@@ -194,7 +194,7 @@ test("R18: plant page region chips show region names, not raw ids", () => {
 test("R18: region page plant chips show species names, not raw ids", () => {
   const view = render({ kind: "region", id: "sierra-occidental-jal" });
   const chips = [...view.querySelectorAll('a[href^="#/discover/plant/"]')].map((a) => a.textContent);
-  assert.ok(chips.includes("Agave maximiliana"), `plant chip uses the species name, got: ${chips.join(", ")}`);
+  assert.ok(chips.some((t) => t.includes("Agave maximiliana")), `plant chip keeps the species name alongside the common name, got: ${chips.join(", ")}`);
   assert.ok(!chips.some((t) => t === "agave-maximiliana"), "no raw plant id leaks");
 });
 
@@ -213,7 +213,7 @@ test("R18: profile back link returns to the discovery origin page", async () => 
   });
   const back = container.querySelector(".back-link");
   assert.equal(back.getAttribute("href"), "#/discover/plant/agave-maximiliana", "back link returns to the plant page");
-  assert.ok(back.textContent.includes("discovery"), "back link is labeled for discovery");
+  assert.ok(back.textContent.includes("plants & places"), "back link is labeled for the discovery destination");
 });
 
 test("R18: regional plant-name aliases find their profiles", async () => {

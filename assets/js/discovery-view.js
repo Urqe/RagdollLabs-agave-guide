@@ -85,29 +85,18 @@ function sectionHeader(id, text) {
   return el("h2", { id, tabindex: "-1" }, text);
 }
 
-/** Browse hub: the three entry points as equal, keyboard-accessible lists. */
+/**
+ * Pair 11 hub: familiar spirit traditions and approachable flavour paths
+ * lead; plants and places stay prominent but secondary, common names
+ * before scientific ones. Compact, clearly titled groups replace the
+ * long alphabetical taxonomy lists.
+ */
 function renderHub(container, { plants, regions, traditions, profiles, locale }) {
   const section = el("section", { class: "discover-view", "aria-labelledby": "discover-heading" });
   section.appendChild(el("h1", { id: "discover-heading" }, ui(locale, "discoverHeading")));
   section.appendChild(el("p", { class: "view-intro" }, ui(locale, "discoverIntro")));
 
   const compare = (a, b) => (locale ? locale.compare(a, b) : a.localeCompare(b));
-
-  const plantBlock = el("section", { class: "discover-block", "aria-labelledby": "discover-plants" });
-  plantBlock.appendChild(sectionHeader("discover-plants", ui(locale, "discoverByPlant")));
-  plantBlock.appendChild(el("p", { class: "view-intro" }, ui(locale, "discoverByPlantIntro")));
-  plantBlock.appendChild(linkChips(
-    [...plants].sort((a, b) => compare(a.species, b.species)),
-    "plant", (p) => `${p.species} — ${(p.commonNames || []).map((n) => n.name).slice(0, 2).join(", ")}`, locale));
-  section.appendChild(plantBlock);
-
-  const regionBlock = el("section", { class: "discover-block", "aria-labelledby": "discover-regions" });
-  regionBlock.appendChild(sectionHeader("discover-regions", ui(locale, "discoverByRegion")));
-  regionBlock.appendChild(el("p", { class: "view-intro" }, ui(locale, "discoverByRegionIntro")));
-  regionBlock.appendChild(linkChips(
-    [...regions].sort((a, b) => compare(a.name, b.name)),
-    "region", (r) => r.name, locale));
-  section.appendChild(regionBlock);
 
   const spiritBlock = el("section", { class: "discover-block", "aria-labelledby": "discover-spirits" });
   spiritBlock.appendChild(sectionHeader("discover-spirits", ui(locale, "discoverBySpirit")));
@@ -125,6 +114,29 @@ function renderHub(container, { plants, regions, traditions, profiles, locale })
     "flavour", (c) => ui(locale, flavourLabel(c.id, locale)), locale));
   section.appendChild(flavourBlock);
 
+  const plantBlock = el("section", { class: "discover-block", "aria-labelledby": "discover-plants" });
+  plantBlock.appendChild(sectionHeader("discover-plants", ui(locale, "discoverByPlant")));
+  plantBlock.appendChild(el("p", { class: "view-intro" }, ui(locale, "discoverByPlantIntro")));
+  // Common names lead; the scientific name follows in parentheses.
+  const primaryPlantName = (p) => {
+    const common = (p.commonNames || []).map((n) => n.name).filter(Boolean);
+    return common.length ? `${common[0]} (${p.species})` : p.species;
+  };
+  plantBlock.appendChild(linkChips(
+    [...plants].sort((a, b) => compare(primaryPlantName(a), primaryPlantName(b))),
+    "plant", primaryPlantName, locale));
+  section.appendChild(plantBlock);
+
+  const regionBlock = el("section", { class: "discover-block", "aria-labelledby": "discover-regions" });
+  regionBlock.appendChild(sectionHeader("discover-regions", ui(locale, "discoverByRegion")));
+  regionBlock.appendChild(el("p", { class: "view-intro" }, ui(locale, "discoverByRegionIntro")));
+  regionBlock.appendChild(linkChips(
+    [...regions].sort((a, b) => compare(a.name, b.name)),
+    "region", (r) => r.name, locale));
+  section.appendChild(regionBlock);
+
+  section.appendChild(el("p", { class: "editorial-note" }, ui(locale, "discoverMore")));
+
   container.appendChild(section);
 }
 
@@ -135,6 +147,10 @@ function renderPlant(container, { plant, plants, regions, profiles, locale }) {
   section.appendChild(el("p", { class: "eyebrow" }, ui(locale, "discoverByPlant")));
   section.appendChild(el("h1", { id: "discover-heading" }, plant.species));
   section.appendChild(el("p", { class: "view-intro" }, `${ui(locale, "alsoKnownAs")}: ${(plant.commonNames || []).map((n) => `${n.name} (${n.region})`).join("; ")}`));
+  const plantCommonName = (p) => {
+    const common = (p.commonNames || []).map((n) => n.name).filter(Boolean);
+    return common.length ? `${common[0]} (${p.species})` : p.species;
+  };
   section.appendChild(el("p", { class: "view-intro" }, `${ui(locale, "cultivationLabel")}: ${plant.cultivation}`));
   if (plant.uncertainty) section.appendChild(el("p", { class: "editorial-note" }, plant.uncertainty));
 
@@ -168,7 +184,7 @@ function renderPlant(container, { plant, plants, regions, profiles, locale }) {
   if (others.length) {
     const otherBlock = el("section", { class: "discover-block", "aria-labelledby": "plant-others" });
     otherBlock.appendChild(sectionHeader("plant-others", ui(locale, "otherPlantsSameTradition")));
-    otherBlock.appendChild(linkChips(others, "plant", (p) => p.species, locale));
+    otherBlock.appendChild(linkChips(others, "plant", plantCommonName, locale));
     section.appendChild(otherBlock);
   }
   container.appendChild(section);
@@ -198,7 +214,12 @@ function renderRegion(container, { region, plants, profiles, locale }) {
   };
   plantsBlock.appendChild(linkChips(
     (region.plantIds || []).map((id) => ({ id })),
-    "plant", (p) => plantName(p.id), locale));
+    "plant", (p) => {
+      const pl = (plants || []).find((x) => x.id === p.id);
+      if (!pl) return p.id;
+      const common = (pl.commonNames || []).map((n) => n.name).filter(Boolean);
+      return common.length ? `${common[0]} (${pl.species})` : pl.species;
+    }, locale));
   section.appendChild(plantsBlock);
 
   const expr = profiles.filter((p) => (p.regionIds || []).includes(region.id));
@@ -240,7 +261,7 @@ function renderSpirit(container, { tradition, profiles, bottles, locale }) {
     bottleBlock.appendChild(sectionHeader("spirit-bottles", ui(locale, "bottlesFromTradition")));
     const list = el("div", { class: "discovery-grid" });
     for (const b of traditionBottles.slice(0, 6)) {
-      const link = el("a", { class: "discovery-card", href: `#/catalogue?brand=${encodeURIComponent(b.brand)}` });
+      const link = el("a", { class: "discovery-card", href: "#/catalogue" });
       link.appendChild(el("span", { class: "eyebrow" }, ui(locale, "catalogue.allBottles")));
       link.appendChild(el("strong", {}, `${b.brand} — ${b.expression}`));
       link.appendChild(el("span", { class: "discovery-place" }, b.place || ""));
