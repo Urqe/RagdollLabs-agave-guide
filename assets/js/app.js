@@ -7,6 +7,7 @@ import { renderCompare } from "./compare-view.js";
 import { renderCatalogue } from "./catalogue-view.js";
 import { renderLearn } from "./learn-view.js";
 import { renderStartHub, renderLesson } from "./journey.js";
+import { renderDiscoverNotFound } from "./discovery-view.js";
 import { renderDiscover } from "./discovery-view.js";
 import { renderPlantPage, renderTraditionPage } from "./plant-tradition-view.js";
 import { createLocale } from "./locale.js";
@@ -108,7 +109,7 @@ async function renderRoute(container, route) {
         locale,
       });
     } else {
-      renderProfileNotFound(container, route.params.plantId, locale);
+      renderDiscoverNotFound(container, "plant", route.params.plantId, locale);
     }
     return;
   }
@@ -127,7 +128,7 @@ async function renderRoute(container, route) {
         locale,
       });
     } else {
-      renderProfileNotFound(container, route.params.traditionId, locale);
+      renderDiscoverNotFound(container, "spirit", route.params.traditionId, locale);
     }
     return;
   }
@@ -342,7 +343,7 @@ async function boot() {
       state.lastExploreState = state.exploreApi.snapshot();
     }
     state.intraExploreMove = intraExploreMove;
-    const routeKey = route.name + ":" + (route.params.profileId || route.params.stateId || route.params.compareIds || route.params.lessonId || "");
+    const routeKey = route.name + ":" + (route.params.profileId || route.params.stateId || route.params.compareIds || route.params.lessonId || (route.params.kind ? route.params.kind + ":" + (route.params.id || "") : "") || "");
     const routeChanged = routeKey !== lastRouteKey;
     lastRouteKey = routeKey;
     state.consumedRestore = null;

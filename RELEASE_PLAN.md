@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — refinement after post-roadmap pair 7
 
-Post-roadmap pairs 8–11 are applied; the next planned release is **post-roadmap pair 12 — Discovery Review & Fixes**, followed by pairs 13–14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
+Post-roadmap pairs 8–12 are applied; the next planned release is **post-roadmap pair 13 — Browseable Bottle Catalogue**, followed by pair 14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -551,11 +551,13 @@ Acceptance: a first-time visitor can distinguish “find a style” from “unde
 
 ### Post-roadmap pair 12 — Discovery Review & Fixes (maintenance)
 
-1. [ ] Validate homepage → browse/filter → profile → return and discovery → plant/region/tradition/flavour → profile → return, in both languages.
-2. [ ] Verify existing bookmarks, legacy routes, invalid IDs, browser history and selected map/filter context after the visible-label changes.
-3. [ ] Review scientific/common-name presentation for misleading alias merges and confirm sotol remains explicitly non-agave.
-4. [ ] Test keyboard traversal, selected navigation state, focus restoration, touch targets and narrow-width wrapping. Inspect map/list equivalence on environments actually available.
-5. [ ] Implement corrections, add targeted behavioral regressions and verify deployed destinations. Preserve remaining native Safari/touch checks as unverified until performed.
+Applied (see the pair 12 notes in RELEASE_NOTES.md).
+
+1. [x] Validate homepage → browse/filter → profile → return and discovery → plant/region/tradition/flavour → profile → return, in both languages.
+2. [x] Verify existing bookmarks, legacy routes, invalid IDs, browser history and selected map/filter context after the visible-label changes.
+3. [x] Review scientific/common-name presentation for misleading alias merges and confirm sotol remains explicitly non-agave.
+4. [x] Test keyboard traversal, selected navigation state, focus restoration, touch targets and narrow-width wrapping. Inspect map/list equivalence on environments actually available.
+5. [x] Implement corrections, add targeted behavioral regressions and verify deployed destinations. Preserve remaining native Safari/touch checks as unverified until performed.
 
 Acceptance: clearer entrances preserve the established search, map, comparison and reference contracts, with consistent navigation language across all views.
 

@@ -2358,3 +2358,62 @@ preserving the cross-linked content model and all existing routes.
   unverified in this environment; DOM-level evidence only. Deep-link
   and history behavior of the renamed labels is pair 12's review
   scope.
+
+## Post-roadmap pair 12 — Discovery Review & Fixes
+
+Scope per plan section 4.2: maintenance review of the pair-11
+discovery-entrance changes — both navigation journeys in EN and ES,
+bookmarks/legacy routes/invalid ids after the visible-label changes,
+common vs scientific name presentation, and keyboard/touch behavior.
+
+### Findings (confirmed defects, all fixed)
+
+1. **Discover detail moves were treated as the same route.** The app's
+   route key ignored the discover `kind`/`id` params, so navigating
+   between two discovery pages (e.g. a plant page to a region page)
+   skipped the new-page scroll-to-heading behavior. The key now
+   includes `kind:id`.
+2. **Invalid plant and tradition ids rendered "Profile not found".**
+   The app reused the profile not-found view for unknown plant and
+   tradition routes, mislabeling the missing entity. A new typed
+   recovery (`renderDiscoverNotFound`) names the entity kind that was
+   not found — "No plant exists with the id …" — for all four
+   discovery kinds, EN and ES.
+3. **The not-found recovery did not keep its promise.** It said "use a
+   discovery path below" but listed none, and offered only a back
+   link. The recovery now links to the discovery hub, which lists all
+   four paths, and its message no longer references paths it does not
+   show. Unknown flavour ids join the same typed recovery instead of
+   the older separate message.
+
+Verified without defect: all 34 hub links and every link rendered by
+the plant/region/spirit/flavour detail pages parse to a real route and
+reference an existing entity; profile back links return to the exact
+discovery origin in both languages; no alias merges — the documented
+"lechuguilla" ambiguity (maximiliana local usage vs tuxca trade usage)
+stays visually distinct via the parenthetical species; sotol keeps its
+Dasylirion genus distinction and explicitly-not-an-agave-spirit
+disclosure on every discovery surface; chip lists wrap at narrow
+widths with 44px tap targets; bookmarks and legacy routes parse
+unchanged. Native Safari/VoiceOver and touch-device checks remain
+**unverified** in this environment (no browser engine available);
+DOM-level evidence only.
+
+### Checks run
+
+- `npm run validate` — schema plus 275 node:test/jsdom suites, all
+  passing; 8 new pair-12 regression tests (link/entity resolution,
+  back-link origins EN/ES, typed recovery for all four kinds EN/ES,
+  no profile-view mislabeling, alias distinctness, sotol non-agave
+  status, route distinctness/legacy parsing, wrapped keyboard-
+  accessible chips).
+- Both journeys re-verified at the DOM level: homepage → browse →
+  profile → return, and discovery → plant/region/spirit/flavour →
+  profile → return.
+
+### Remaining issues / deferred
+
+- Native-device (iPhone/iPad Safari, VoiceOver) checks still
+  unverified, honestly recorded; selected-place and filtered-results
+  context on return from the map view re-verified only at the DOM
+  level.

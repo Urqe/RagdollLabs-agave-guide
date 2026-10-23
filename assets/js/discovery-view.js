@@ -280,12 +280,14 @@ function renderFlavour(container, { flavourId, profiles, locale }) {
   const section = el("section", { class: "discover-view", "aria-labelledby": "discover-heading" });
   section.appendChild(backToDiscover(locale));
   section.appendChild(el("p", { class: "eyebrow" }, ui(locale, "discoverByFlavour")));
-  section.appendChild(el("h1", { id: "discover-heading" }, ui(locale, flavourLabel(flavourId, locale))));
   if (!category) {
-    section.appendChild(el("p", { class: "empty-state" }, ui(locale, "flavourUnknown")));
+    // Pair 12: unknown flavour ids use the typed recovery like the other
+    // kinds, with the hub reachable for the real flavour paths.
     container.appendChild(section);
+    renderDiscoverNotFound(container, "flavour", flavourId, { locale });
     return;
   }
+  section.appendChild(el("h1", { id: "discover-heading" }, ui(locale, flavourLabel(flavourId, locale))));
   section.appendChild(el("p", { class: "view-intro" }, ui(locale, flavourIntro(flavourId, locale))));
 
   const matched = profiles.filter(category.match);
@@ -318,6 +320,37 @@ function flavourReasons(profile, categoryId, locale) {
 }
 
 /**
+ * Pair 12: typed recovery for an unknown plant, region, spirit or
+ * flavour id. The message names the entity kind that was not found,
+ * and the real discovery paths are listed below — the page keeps its
+ * promise instead of offering only a back link.
+ */
+export function renderDiscoverNotFound(container, kind = null, id = null, { plants, regions, traditions, locale = null } = {}) {
+  clear(container);
+  const section = el("section", { class: "discover-view", "aria-labelledby": "discover-heading" });
+  section.appendChild(backToDiscover(locale));
+  section.appendChild(el("h1", { id: "discover-heading" }, ui(locale, "discoverNotFoundTitle")));
+  const kindLabels = {
+    plant: ui(locale, "discoverKindPlant"),
+    region: ui(locale, "discoverKindRegion"),
+    spirit: ui(locale, "discoverKindSpirit"),
+    flavour: ui(locale, "discoverKindFlavour"),
+    unknown: ui(locale, "discoverKindUnknown"),
+  };
+  section.appendChild(el("p", { class: "empty-state" },
+    (ui(locale, "discoverNotFoundKind") || "")
+      .replace("{kind}", kindLabels[kind] || kindLabels.unknown)
+      .replace("{id}", id || "")));
+  // The four discovery paths stay reachable from the recovery page —
+  // via the hub, which lists every one of them.
+  const recovery = el("a", { class: "cta-link", href: "#/discover" });
+  recovery.textContent = ui(locale, "discoverBack");
+  section.appendChild(recovery);
+  container.appendChild(section);
+  return section;
+}
+
+/**
  * Main entry: renders the hub or a detail page. Unknown ids render an
  * honest empty state with a way back (no dead ends).
  */
@@ -339,11 +372,7 @@ export function renderDiscover(container, { kind = null, id = null, plants, regi
     return renderFlavour(container, { flavourId: id, profiles, locale });
   }
   if (kind) {
-    const section = el("section", { class: "discover-view", "aria-labelledby": "discover-heading" });
-    section.appendChild(backToDiscover(locale));
-    section.appendChild(el("h1", { id: "discover-heading" }, ui(locale, "discoverNotFoundTitle")));
-    section.appendChild(el("p", { class: "empty-state" }, ui(locale, "discoverNotFoundBody")));
-    container.appendChild(section);
+    renderDiscoverNotFound(container, kind, id, { plants, regions, traditions, locale });
     return;
   }
   renderHub(container, { plants, regions, traditions, profiles, locale });
