@@ -270,7 +270,7 @@
           "region": "Chihuahuan desert (northern México and southwestern USA)"
         }
       ],
-      "cultivation": "wild-harvested after 8-12 years; a single plant yields roughly one bottle, so sustainable harvest (roots left to regrow) and conservation programs matter",
+      "cultivation": "wild-harvested, often after roughly 8–12 years (a variable, source-dependent range, not a fixed figure); a single plant may yield roughly one bottle",
       "uncertainty": "Not an agave: Dasylirion is a related genus in the Asparagaceae family. This page keeps that distinction explicit.",
       "sourceIds": [
         "wikipedia-sotol",
@@ -287,9 +287,9 @@
       ],
       "atAGlance": "Desert spoon — sotol's plant. Not an agave: Dasylirion is a related genus in the Asparagaceae family.",
       "whereItGrows": "The Chihuahuan desert of northern México (Chihuahua, Coahuila, Durango), 8–12 years to maturity.",
-      "harvestProduction": "Wild-harvested; piña pit-roasted in conical ovens (or steam-cooked by larger producers), wild-fermented, distilled in copper or clay. Roots can be left intact so the plant regrows.",
+      "harvestProduction": "Wild-harvested; piña pit-roasted in conical ovens (or steam-cooked by larger producers), wild-fermented, distilled in copper or clay. Harvest practice and species determine whether roots are left intact; regrowth is not guaranteed by harvest alone.",
       "sensoryTendencies": "Editorial guidance: earthy and smoky-herbal; the genus distinction means sotol is never presented as an agave spirit.",
-      "sustainability": "A single plant yields roughly one bottle, so sustainable harvest (roots left to regrow) and conservation programs matter."
+      "sustainability": "Wild Dasylirion stands face documented harvest pressure; regrowth after heart harvest depends on species, method and evidence this guide has not verified, so no regeneration claim is made here. Conservation programs address the pressure; cultivation alone would not establish low impact."
     },
     {
       "id": "agave-rhodacantha",

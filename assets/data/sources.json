@@ -629,6 +629,20 @@
       "url": "https://sidof.segob.gob.mx/notas/docFuente/5769331",
       "kind": "style",
       "verified": "2026-10-23"
+    },
+    {
+      "id": "dof-nom-070",
+      "title": "DOF — NOM-070-SCFI-2016, Bebidas alcohólicas–Mezcal–Especificaciones (categories 4.2, production 4.4, classes 4.5)",
+      "url": "https://dof.gob.mx/normasOficiales/6437/seeco11_C/seeco11_C.html",
+      "kind": "style",
+      "verified": "2026-10-23"
+    },
+    {
+      "id": "bacanora-sonora-historia",
+      "title": "Gobierno de Sonora — Bacanora: historia (official 1915/1992 prohibition timeline)",
+      "url": "https://bacanora.sonora.gob.mx/nosotros/historia",
+      "kind": "style",
+      "verified": "2026-10-23"
     }
   ]
 }

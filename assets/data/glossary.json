@@ -9,20 +9,22 @@
       ]
     },
     {
-      "term": "joven / abocado",
+      "term": "joven / blanco (mezcal)",
       "context": "mezcal (legal class)",
-      "definition": "Mezcal's unaged class; joven can also be used informally elsewhere, and non-legal uses are labeled editorial in this guide.",
+      "definition": "NOM-070-SCFI-2016 defines six mezcal classes: blanco o joven (no subsequent process), madurado en vidrio (over 12 months in glass), reposado (2–12 months in wood), añejo (over 12 months in wood containers under 1000 L), abocado con (ingredients added, e.g. worm, damiana, honey) and destilado con (distilled with ingredients, e.g. turkey or chicken breast — the pechuga tradition belongs here). Abocado and joven are different classes, not synonyms; the class list is separate from the three production categories (mezcal, artesanal, ancestral).",
       "sourceIds": [
-        "diffords-mezcal-what-it-is"
+        "diffords-mezcal-what-it-is",
+        "dof-nom-070"
       ]
     },
     {
       "term": "reposado / añejo",
       "context": "spirit-specific classes",
-      "definition": "Wood-rested classes with spirit-specific minimums; tequila rules do not transfer to mezcal or raicilla.",
+      "definition": "Wood-rested classes with spirit-specific rules. Tequila and mezcal reposado both begin at a two-month minimum, although their other requirements differ (mezcal reposado runs 2–12 months; mezcal añejo over 12 months in wood under 1000 L). Tequila rules still do not transfer to raicilla.",
       "sourceIds": [
         "diffords-tequila-category",
-        "wikipedia-raicilla"
+        "wikipedia-raicilla",
+        "dof-nom-070"
       ]
     },
     {
@@ -52,7 +54,7 @@
     {
       "term": "NOM",
       "context": "producer identifier",
-      "definition": "The Norma Oficial Mexicana number on the label identifying the certified producer. NOMs identify the maker; absence of a NOM (as with uncertified tuxca) means uncertified, not lower quality.",
+      "definition": "A NOM (Norma Oficial Mexicana) is an official Mexican standard; the NOM number printed on a tequila or mezcal label identifies the certified producer's registration under that standard. It is distinct from other label marks such as certification seals or holograms issued by a conformity-evaluation body. Absence of a NOM number (as with uncertified tuxca) means the producer is not registered under a denomination-of-origin scheme — not lower quality, and not exemption from other labeling requirements.",
       "sourceIds": [
         "mezcalistas-tepua-tasting",
         "mezcalistas-balancan-tasting"

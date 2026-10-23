@@ -27,7 +27,7 @@
           "exampleProfileIds": [
             "sotol-chihuahua"
           ],
-          "deeper": "Botanically, Dasylirion and Agave both sit in the Asparagaceae family, but a shared family is not a shared genus — sotol is no more an agave than a leek is an onion."
+          "deeper": "Botanically, Dasylirion and Agave both sit in the Asparagaceae family, but a shared family is not a shared genus — different genera within one family are like cousins, not like the same plant under two names. Sotol is agave's relative, not agave itself."
         }
       ]
     },
@@ -136,16 +136,16 @@
       "intro": "A Mexican spirit label carries legal terms, producer facts and marketing — sometimes in the same word. This chapter decodes them, and never applies one tradition's rules to another.",
       "blocks": [
         {
-          "text": "Class terms are spirit-specific: blanco is a legal tequila class, joven is mezcal's unaged class, and reposado minimums differ between tequila, mezcal and raicilla. Cristalino is a finishing choice, not a legal class. When a term is not a legal class, this guide says so.",
+          "text": "Class terms are spirit-specific: blanco is a legal tequila class, joven or blanco is mezcal's unaged class under NOM-070-SCFI-2016 (which also defines madurado en vidrio, reposado, añejo, abocado con and destilado con), and reposado rules differ in detail between tequila, mezcal and raicilla even where the two-month start coincides. Cristalino is a finishing choice, not a legal class. When a term is not a legal class, this guide says so.",
           "termIds": [
             "blanco / plata / silver",
-            "joven / abocado",
+            "joven / blanco (mezcal)",
             "reposado / añejo",
             "cristalino"
           ]
         },
         {
-          "text": "The NOM on a tequila or mezcal label identifies the certified producer. Tuxca bottles carry no NOM — a legal fact, not an authenticity judgment. Batch terms (lote) matter for small producers: batch facts stay with the batch.",
+          "text": "The NOM on a tequila or mezcal label identifies the certified producer. Tuxca bottles carry no NOM registration — what is absent is certification under a denomination-of-origin scheme, not exemption from general labeling requirements — a legal fact, not an authenticity judgment. Batch terms (lote) matter for small producers: batch facts stay with the batch.",
           "termIds": [
             "NOM",
             "lote / batch",

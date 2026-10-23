@@ -5,8 +5,8 @@
       "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. Pregúntale a cualquiera del valle: su agave crece más pequeño y más herbáceo que el de los altos, y sus blancos se leen sabrosos y vegetales en lugar de dulces — el sabor de este suelo, y los del valle te lo dirán con orgullo.",
       "description": "Un blanco (también llamado silver o plata) es un tequila embotellado sin crianza en roble, así que lo que llega a la copa es el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas.",
       "beginnerNote": "¿Nuevo en el tequila? Empieza aquí: ningún barril se interpone entre tú y el agave cocido, así que un blanco es la introducción más clara a cómo se lee la tierra de cada productor en la copa.",
-      "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal sin crianza",
-      "process": "Cocción al vapor (horno/autoclave), extracción con tahona o molino de rodillos, fermentación en tinas abiertas, doble destilación, sin crianza (blanco)",
+      "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
+      "process": "Cocción al vapor (horno/autoclave), extracción con tahona o molino de rodillos, fermentación en tinas abiertas, doble destilación; normalmente sin crianza, aunque las reglas del blanco permiten un contacto breve con roble por debajo del mínimo de dos meses del reposado",
       "finish": "Limpio y picante, con cítricos y una calidez vegetal suave que se desvanece de forma constante.",
       "pairing": {
         "serving": "Solo, en copa pequeña o con una rodaja de lima; también la base clásica de la Margarita y la Paloma. Sugerencia editorial, no una regla.",
@@ -83,7 +83,7 @@
       "title": "Tuxca, estilo Liñeno/Cimarrón (frontera Jalisco–Colima)",
       "context": "La tuxca es un destilado de la frontera: tradición agavera del sur de Jalisco y el norte de Colima, nombrada por el municipio de Tuxcacuesco, a los pies del Volcán de Colima. No tiene denominación de origen, y quien la hace te dirá que ese es precisamente el punto: el nombre es una tradición regional, no una categoría legal como el tequila o el mezcal, y sus definiciones son flexibles. Pregunta por Tuxcacuesco y te señalarán el valle del Río Almería, con Zapotitlán de Vadillo y Tolimán como corazón donde la tradición nunca se perdió. En estos pueblos la tradición se mantiene a la vieja manera, y en voz baja.",
       "description": "La tuxca se asa en hornos cilíndricos, se muele a mano, fermenta en cráteres volcánicos recubiertos y se destila en alambiques de madera de tradición filipina. El resultado es un destilado magro, especiado y mineral muy tradicional de las tierras fronterizas del volcán de Colima.",
-      "beginnerNote": "¿Nuevo en la tuxca? Espera un destilado fronterizo profundamente tradicional y sin certificación — más magro y mineral que la mayoría de los mezcales, con especia en lugar de humo. Sin sello en la botella; el orgullo es el certificado.",
+      "beginnerNote": "¿Nuevo en la tuxca? Espera un destilado fronterizo profundamente tradicional y sin certificación — más magro y mineral que la mayoría de los mezcales, con especia en lugar de humo. Sin sello de certificación de DO en la botella; siguen aplicando otros requisitos de etiquetado, y la autoridad de la tradición es cultural, no certificada.",
       "category": "Tuxca — una tradición regional sin denominación de origen; su estatus legal no equivale al del tequila ni al del mezcal",
       "process": "Asado en horno cilíndrico, molienda a mano, fermentación en cráter volcánico, destilación en alambique de madera filipino",
       "smoke": "Generalmente ligero: el asado en horno es más corto y los alambiques de madera se perciben herbáceo-especiados en lugar de ahumados.",
@@ -178,7 +178,7 @@
     },
     "tequila-anejo-valley-jalisco": {
       "title": "Tequila añejo, estilo Valle de Tequila",
-      "context": "El añejo ('aged') es una clase legal del tequila: reposo en roble de al menos un año, en barricas de no más de 600 litros. El extra añejo (al menos tres años) existe como clase adicional. Este perfil describe un añejo tradicional del valle de unos 18 meses — el punto medio del rango legal. En el valle te dirán que el agave debe seguir hablando a través de un año de roble; los mejores productores se aseguran de que así sea.",
+      "context": "El añejo ('aged') es una clase legal del tequila: reposo en roble de al menos un año, en barricas de no más de 600 litros. El extra añejo (al menos tres años) existe como clase adicional. Este perfil describe un añejo tradicional del valle de unos 18 meses — muy por encima del mínimo de un año, que es la única referencia legal (la NOM fija un mínimo, no un rango). En el valle te dirán que el agave debe seguir hablando a través de un año de roble; los mejores productores se aseguran de que así sea.",
       "description": "Un añejo es tequila envejecido en roble un año o más: vainilla, fruta seca y especias de madera rodean el agave. Es la expresión más redonda y oscura del tequila, la más cercana al whisky en sensación, aunque sigue siendo tequila en esencia.",
       "beginnerNote": "¿Nuevo en el añejo? Espera la expresión más redonda y oscura del tequila: vainilla de roble y fruta seca alrededor del agave — la más cercana al whisky en sentir, todavía tequila de corazón.",
       "category": "Tequila — destilado con Denominación de Origen propia; el añejo es una clase legal (envejecido en roble, mínimo 1 año)",
@@ -234,10 +234,10 @@
     },
     "raicilla-reposado-jalisco": {
       "title": "Raicilla reposado, estilo reposado en barrica (Jalisco)",
-      "context": "La raicilla es un destilado de agave con denominación de origen de Jalisco y, a diferencia del comiteco o del destilado de pulque, sí tiene clases envejecidas legalmente definidas: reposado significa reposo en madera. Este perfil cubre el extremo joven de ese rango — reposos breves de unos meses que redondean el destilado sin sacar el agave del centro. Los raicilleros de Jalisco se enorgullecen de que su destilado ganara reconocimiento legal sin perder su carácter rústico; los reposos cortos son su manera de mantenerlo así.",
+      "context": "La raicilla es un destilado de agave con denominación de origen de Jalisco y las expresiones envejecidas existen (la botella de ejemplo reposa en madera); los requisitos exactos de las clases envejecidas descansan en la declaración de DO de 2019 y en el proyecto de norma publicado, no en reglas al estilo del tequila. Este perfil cubre el extremo joven — reposos breves de unos meses que redondean el destilado sin sacar el agave del centro. Los raicilleros de Jalisco se enorgullecen de que su destilado ganara reconocimiento legal sin perder su carácter rústico; los reposos cortos son su manera de mantenerlo así.",
       "description": "Una raicilla reposado descansa en barricas de madera unos tres meses tras la destilación: la fruta y las florales del joven quedan con un halo ligero de caramelo y vainilla. Queda más cerca de su versión joven que de un tequila reposado.",
       "beginnerNote": "¿Nuevo en la raicilla envejecida? Espera la fruta y las flores del joven con un halo ligero de caramelo y vainilla de un reposo breve — más cerca de su yo sin crianza que del tequila reposado.",
-      "category": "Raicilla reposado — una clase envejecida legalmente definida bajo la denominación de origen de la raicilla (mínimo 2 meses en madera según la fuente DO citada)",
+      "category": "Raicilla reposado — una afirmación de clase envejecida bajo la denominación de origen de la raicilla (2019); las reglas de las clases envejecidas descansan en la declaración de DO y en el proyecto de norma publicado, así que verifica la versión vigente en lugar de suponer mínimos al estilo del tequila",
       "process": "Fermentado y destilado (la botella de ejemplo indica acero inoxidable), luego reposado en barricas de madera unos 3 meses",
       "smoke": "Puede persistir un ahumado delicado de la producción; el reseñista de la botella de ejemplo describe humo de fogata en el final.",
       "finish": "De media a larga duración, con fruta dulce, especias afines a la canela y un final suave de humo.",
@@ -249,12 +249,12 @@
           "platillos con mole suave"
         ]
       },
-      "whyItTastes": "Fermentado y destilado (la botella de ejemplo indica acero inoxidable), luego reposado en barricas de madera unos tres meses: un reposo corto del mínimo legal que redondea la raicilla sin convertirla en otra cosa.",
+      "whyItTastes": "Fermentado y destilado (la botella de ejemplo indica acero inoxidable), luego reposado en barricas de madera unos tres meses — un reposo corto de la botella de ejemplo (no un mínimo legal) que redondea la raicilla sin convertirla en otra cosa.",
       "plant": "Varía según la botella (la botella de ejemplo indica angustifolia y maximiliana); vinculado a la página de la Maximiliana como el agave distintivo de la tradición de la Sierra — revisa la botella, los lotes difieren"
     },
     "tequila-extra-anejo-highland-jalisco": {
       "title": "Tequila extra añejo, estilo de los altos (Jalisco)",
-      "context": "El extra añejo ('extra aged') es la clase legal más reciente del tequila: mínimo tres años en barricas de roble de no más de 600 litros, agregado a la NOM en 2006. Existe porque los productores querían reconocimiento para los tequilas de largo reposo; la familia de El Tesoro lanzó su Paradiso en 1994, antes de que la clase existiera legalmente. Este perfil describe un extra añejo de los altos de cuatro a cinco años — el lado largo del rango legal. El orgullo de los altos corre hondo aquí: el agave de los altos crece más grande y más dulce, y los alteños dicen que es el único agave que puede cargar tanto roble y seguir sabiendo a agave.",
+      "context": "El extra añejo ('extra aged') es la clase legal más reciente del tequila: mínimo tres años en barricas de roble de no más de 600 litros, agregado a la NOM en 2006. Existe porque los productores querían reconocimiento para los tequilas de largo reposo; la familia de El Tesoro lanzó su Paradiso en 1994, antes de que la clase existiera legalmente. Este perfil describe un extra añejo de los altos de cuatro a cinco años — muy por encima del mínimo de tres años, que es la única referencia legal (la NOM fija un mínimo, no un rango). El orgullo de los altos corre hondo aquí: el agave de los altos crece más grande y más dulce, y los alteños dicen que es el único agave que puede cargar tanto roble y seguir sabiendo a agave.",
       "description": "Un extra añejo es tequila envejecido tres años o más: el roble domina con chocolate, café y especias, y el agave de los altos — más dulce y frutal — sostiene la estructura. Es el tequila más cercano al whisky en carácter.",
       "beginnerNote": "¿Nuevo en el extra añejo? Es el tequila en su versión más cercana al whisky: espera roble, chocolate y café — los buenos todavía saben a agave debajo.",
       "category": "Tequila — destilado con Denominación de Origen propia; el extra añejo es una clase legal (envejecido en roble, mínimo 3 años, barricas de hasta 600 litros)",
@@ -276,7 +276,7 @@
       "context": "El reposado es una clase legal del mezcal (la NOM reconoce joven, reposado y añejo): reposo en roble de dos meses a un año. La mayoría del mezcal vendido en el mundo es joven (sin crianza), y muchos tradicionalistas oaxaqueños argumentan que la madera oscurece lo que hace distinto al mezcal — ese argumento es parte del orgullo: defienden su horno subterráneo porque es su tierra en la copa. El mezcal envejecido es, con todo, una parte legal y creciente de la categoría. Este perfil cubre el extremo de reposo corto: unos meses en madera, típicamente partiendo de espadín asado en horno.",
       "description": "Un mezcal reposado combina el humo del joven con vainilla y caramelo del reposo en roble. En el estilo de los Valles Centrales el reposo suele ser breve — el ejemplo indica 4–6 meses en roble americano — para que el humo del espadín siga presente de la nariz al final.",
       "beginnerNote": "¿Nuevo en el mezcal reposado? Espera el humo de un joven suavizado con vainilla y caramelo — una entrada más amable a los destilados de agave ahumados.",
-      "category": "Mezcal — destilado con denominación de origen propia; el reposado es una clase legal (reposado en roble, de 2 meses a 1 año)",
+      "category": "Mezcal — destilado con denominación de origen propia; el reposado es una clase legal (reposo en madera de 2–12 meses; la madera no tiene que ser encino, y el inicio a los dos meses coincide con el del tequila aunque los demás requisitos difieren)",
       "process": "Asado en horno, molienda en piedra, fermentación silvestre, destilación y reposo en roble de 2 a 12 meses (la botella de ejemplo indica 4–6 meses en roble americano)",
       "smoke": "El humo del asado del espadín persiste tras el reposo; los reseñistas lo describen de la nariz al final.",
       "finish": "Medio, ahumado-dulce, con un final afín al dulce de leche.",
@@ -293,11 +293,11 @@
     },
     "mezcal-tobala-sierra-oaxaca": {
       "title": "Mezcal de tobalá, estilo Agave potatorum silvestre (Sierra, Oaxaca)",
-      "context": "El tobalá (Agave potatorum) es un agave pequeño, de altitud y mayormente silvestre, al que en México llaman el 'rey de los agaves'; su tamaño diminuto y su madurez de 12-15 años dan rendimientos muy bajos, lo que ha encarecido su precio y mermado sus poblaciones silvestres. La DO del mezcal permite cualquier especie de agave, así que el tobalá es mezcal; parte del tobalá ya se cultiva, lo que cambia la historia de sostenibilidad y, anotan los reseñistas, a veces el sabor. Es un estilo dirigido por la planta, no por el lugar: el tobalá crece por la Sierra Norte de Oaxaca y más allá. En la Sierra Norte, encontrar un tobalá listo para cosechar es orgullo personal: el mezcalero te llevará a la planta, no al mapa.",
+      "context": "El tobalá (Agave potatorum) es un agave pequeño, de altitud y mayormente silvestre, al que en México llaman el 'rey de los agaves'; su tamaño diminuto y su larga madurez (un rango variable según la fuente, a menudo citado alrededor de 12–15 años) dan rendimientos muy bajos, lo que ha encarecido su precio y mermado sus poblaciones silvestres. La DO del mezcal permite cualquier especie de agave, así que el tobalá es mezcal; parte del tobalá ya se cultiva, lo que cambia la historia de sostenibilidad y, anotan los reseñistas, a veces el sabor. Es un estilo dirigido por la planta, no por el lugar: el tobalá crece por la Sierra Norte de Oaxaca y más allá. En la Sierra Norte, encontrar un tobalá listo para cosechar es orgullo personal: el mezcalero te llevará a la planta, no al mapa.",
       "description": "El tobalá se asa en horno, se muele en piedra, fermenta silvestre y se destila — en alambiques de barro en las producciones ancestrales, de cobre en las artesanales. El resultado es un mezcal más floral y afrutado que el espadín, con fruta dulce sobre un asado suave y un final mineral.",
       "beginnerNote": "¿Nuevo en el tobalá? Espera la prima más amable y floral del mezcal: cítricos dulces y fruta tropical sobre un asado suave — más caro porque el agave es pequeño, lento y escaso.",
       "category": "Mezcal — el tobalá está dentro de la denominación de origen del mezcal; es una categoría de agave silvestre bajo presión de sostenibilidad, no una clase legal propia",
-      "process": "Asado en horno, molienda en piedra, fermentación silvestre, destilación (alambiques de barro en producciones ancestrales, de cobre en artesanales)",
+      "process": "Asado en pozo, molido con piedra, fermentado con levaduras silvestres, destilado; la categoría artesanal de la NOM-070 permite alambiques de cobre u ollas de barro, así que el barro no es exclusivo de la producción ancestral",
       "smoke": "Un carácter de asado suave en lugar de humo pesado; los lotes ancestrales de barro pueden mostrar más.",
       "finish": "Medio y sedoso, con dulzor de fruta y un final mineral suave.",
       "pairing": {
@@ -308,7 +308,7 @@
           "tostadas de mariscos"
         ]
       },
-      "whyItTastes": "El pequeño tobalá silvestre madura 12–15 años en altitud, dando rendimientos muy bajos y carácter concentrado; el asado en pozo y a menudo la destilación en ollas de barro mantienen la cocción suave. La variación entre lotes es genuina y grande — una cata ciega citada no encontró un solo hilo común.",
+      "whyItTastes": "El pequeño tobalá silvestre madura en un rango variable según la fuente (a menudo citado alrededor de 12–15 años) en altitud, dando rendimientos muy bajos; los reseñistas describen carácter concentrado en algunos lotes, y el asado en pozo y a menudo la destilación en ollas de barro mantienen la cucción suave. La variación entre lotes es genuina y grande — una cata ciega citada no encontró un solo hilo común.",
       "plant": "Agave potatorum (tobalá; mayormente de recolección silvestre, algo cultivado — revisa la botella)"
     },
     "sotol-chihuahua": {
@@ -317,7 +317,7 @@
       "description": "El sotol asa la piña de Dasylirion en hornos cónicos (o la cuece al vapor los productores más grandes), fermenta silvestre y destila en cobre o barro. El resultado es un destilado herbal, fresco y ligeramente picante, más verde y salvaje que el tequila, con un humo generalmente más ligero que el del mezcal.",
       "beginnerNote": "¿Nuevo en el sotol? Espera frescura herbácea y de pasto húmedo sobre un humo suave — más cercano a un primo verde y salvaje del mezcal que al tequila.",
       "category": "Sotol — destilado con Denominación de Origen propia (Chihuahua, Coahuila, Durango, desde 2002); explícitamente no es un destilado de agave, incluido aquí como una tradición norteña afín",
-      "process": "Piña asada en hornos cónicos (o cocción al vapor en productores grandes), fermentación silvestre, destilación en cobre o barro; la cosecha puede dejar las raíces para que la planta rebrote",
+      "process": "Piña asada en hornos cónicos (o cocida al vapor por los productores más grandes), fermentación silvestre, destilación en cobre o barro; que las raíces se dejen intactas depende de la práctica de cosecha, y el rebrote no está garantizado",
       "smoke": "Un humo suave, generalmente más ligero que el del mezcal, del asado en horno; depende del lote y del productor.",
       "finish": "Medio, herbal y ligeramente picante, con un final mineral.",
       "pairing": {
@@ -328,7 +328,7 @@
           "verduras asadas"
         ]
       },
-      "whyItTastes": "El Dasylirion (no un agave) se cosecha silvestre tras 8–12 años, se asa en pozos cónicos y se fermenta con levaduras silvestres: el carácter terroso, ahumado-herbal sigue de la planta y la cocción del desierto. Las raíces dejadas intactas dejan la planta rebrotar — la cosecha puede ser sostenible por diseño.",
+      "whyItTastes": "El Dasylirion (no un agave) se cosecha silvestre, se asa en pozos cónicos y se fermenta con levaduras silvestres: el carácter terroso, ahumado-herbal sigue de la planta y la cocción del desierto. Las poblaciones silvestres enfrentan presión de cosecha documentada; las afirmaciones de rebrote requieren evidencia de especie y método que esta guía no ha verificado.",
       "plant": "Dasylirion (sotol, conocida comúnmente como cuchara del desierto; a menudo wheeleri, cedrosanum o leiophyllum), de recolección silvestre; no es un agave, aunque sí un pariente cercano"
     },
     "tequila-blanco-highland-jalisco": {
@@ -336,7 +336,7 @@
       "context": "El blanco es la clase legal sin añejar del tequila — y los Altos (alrededor de Atotonilco el Alto y Arandas) lo leen de forma muy distinta al Valle de Tequila. Los suelos minerales ricos en hierro, la mayor elevación y las noches más frescas producen agaves más grandes y dulces, así que un blanco de los Altos tiende a lo brillante, afrutado y floral donde el valle tiende a lo terroso y sabroso. Es una distinción cultural y agronómica, no una clase legal — ambos son simplemente tequila blanco, y los alteños te contarán con verdadero orgullo lo afrutado de su tierra roja.",
       "description": "La lectura alteña del tequila sin añejar: agave cocido más dulce con cítricos (piel de naranja, toronja), fruta tropical y de hueso, florales delicados y una especia suave, en un cuerpo más blando y redondo que el estilo del valle.",
       "beginnerNote": "¿Nuevo en el tequila? Un blanco de los Altos es el punto de partida más amable: suave, dulce y afrutado, sin el filo sabroso del valle. Pruébalo junto al blanco del valle para saborear lo que el lugar le hace a la misma planta.",
-      "category": "Tequila — destilado con su propia Denominación de Origen; el blanco es una clase legal sin añejar",
+      "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
       "process": "Cocido al vapor (o asado en piedra según algunos tradicionalistas), fermentado, doble destilado, sin añejar (blanco)",
       "finish": "Suave y afrutado, con un lento desvanecer de agave dulce y un leve repunte de pimienta al final.",
       "pairing": {
@@ -614,7 +614,7 @@
       "explanation": "Los corazones de agave se cocinan al vapor en hornos de mampostería (hornos) o autoclaves. Es la cocción típica del tequila: limpia, sin humo de leña."
     },
     "sap-collection": {
-      "explanation": "El aguamiel — la savia dulce del agave — se recolecta de la planta viva, raspanado la quiota diariamente. Es la base del comiteco y del destilado de pulque: no se cocina la piña."
+      "explanation": "En las tradiciones del comiteco y el pulque, el quiote — el tallo floral — de la planta viva se corta y la cavidad resultante en la cabeza de la planta se raspa; el aguamiel que se acumula se recolecta durante días sucesivos. Es una operación distinta de cosechar y cocinar una piña: la planta no muere en la cosecha, pero la recolección repetida de savia agota la planta — no es regeneración indefinida. La piña nunca se cocina en estas tradiciones, lo que las hace destilados de savia sin carácter de asado."
     },
     "wild-fermentation": {
       "explanation": "La fermentación ocurre en tinas abiertas con levaduras silvestres del entorno, aportando carácter local y variación genuina entre productores y lotes."
@@ -710,11 +710,8 @@
     "blanco / plata / silver": {
       "definition": "Una clase de tequila sin crianza. En otros destilados las mismas palabras pueden significar clases distintas o nada legal; los términos de clase son específicos de cada destilado."
     },
-    "joven / abocado": {
-      "definition": "La clase sin crianza del mezcal; joven también se usa informalmente en otros contextos, y los usos no legales se etiquetan como editoriales en esta guía."
-    },
     "reposado / añejo": {
-      "definition": "Clases con reposo en madera y mínimos específicos de cada destilado; las reglas del tequila no se transfieren al mezcal ni a la raicilla."
+      "definition": "Clases con reposo en madera y reglas específicas de cada destilado. El tequila y el mezcal reposado empiezan ambos con un mínimo de dos meses, aunque sus demás requisitos difieren (el reposado de mezcal va de 2 a 12 meses en madera; el añejo de mezcal, más de 12 meses en recipientes de madera de menos de 1000 L). Las reglas del tequila siguen sin transferirse a la raicilla."
     },
     "pechuga": {
       "definition": "Un mezcal elaborado con fruta y/o una pechuga de pollo o pavo suspendida durante una (usualmente tercera) destilación — una tradición de producción específica, no una categoría de destilado propia."
@@ -726,7 +723,7 @@
       "definition": "Un destilado con crianza filtrado (a menudo con carbón) para quitar el color conservando parte del carácter de madera. Es una elección de acabado, no una clase legal en la mayoría de las categorías."
     },
     "NOM": {
-      "definition": "El número de Norma Oficial Mexicana en la etiqueta que identifica al productor certificado. Los NOM identifican al fabricante; la ausencia de NOM (como en el tuxca no certificado) es un dato legal, no un sello de autenticidad."
+      "definition": "Una NOM (Norma Oficial Mexicana) es una norma oficial mexicana; el número NOM impreso en una etiqueta de tequila o mezcal identifica el registro del productor certificado bajo esa norma. Es distinto de otras marcas de la etiqueta, como los sellos u hologramas de certificación emitidos por un organismo de evaluación de la conformidad. La ausencia de número NOM (como en el tuxca no certificado) significa que el productor no está registrado en un esquema de denominación de origen — no menor calidad, y no exención de otros requisitos de etiquetado."
     },
     "vinata / taberna / palenque": {
       "definition": "Palabras regionales para una pequeña destilería: viñata en Sonora, taberna en el país raicillero de Jalisco, palenque en Oaxaca. Misma función, tradición distinta."
@@ -736,6 +733,9 @@
     },
     "100% de agave": {
       "definition": "Una afirmación de composición sobre los fermentables, distinta de la calidad: tradiciones basadas en agave con fermentables no agave declarados (algunos comiteco) se incluyen con su composición declarada con honestidad."
+    },
+    "joven / blanco (mezcal)": {
+      "definition": "La NOM-070-SCFI-2016 define seis clases de mezcal: blanco o joven (sin proceso posterior), madurado en vidrio (más de 12 meses en vidrio), reposado (2–12 meses en madera), añejo (más de 12 meses en recipientes de madera de menos de 1000 L), abocado con (con ingredientes añadidos, como gusano, damiana o miel) y destilado con (destilado con ingredientes, como pechuga de pavo o pollo — la tradición de la pechuga pertenece aquí). Abocado y joven son clases distintas, no sinónimos; la lista de clases es separada de las tres categorías de producción (mezcal, artesanal, ancestral)."
     }
   },
   "chapters": {
@@ -776,7 +776,7 @@
       "title": "Entender las etiquetas",
       "intro": "Una etiqueta mexicana lleva términos legales, datos del productor y marketing — a veces en la misma palabra. Este capítulo los decodifica, y nunca aplica las reglas de una tradición a otra.",
       "block0": "Los términos de clase son específicos de cada destilado: blanco es una clase legal del tequila, joven es la clase sin crianza del mezcal, y los mínimos de reposado difieren entre tequila, mezcal y raicilla. El cristalino es una elección de acabado, no una clase legal. Cuando un término no es una clase legal, esta guía lo dice.",
-      "block1": "El NOM en una etiqueta de tequila o mezcal identifica al productor certificado. Las botellas de tuxca no llevan NOM — un hecho legal, no un juicio de autenticidad. Los términos de lote importan para los pequeños productores: los datos del lote se quedan con el lote.",
+      "block1": "El NOM en una etiqueta de tequila o mezcal identifica al productor certificado. Las botellas de tuxca no llevan registro NOM — lo que falta es la certificación bajo un esquema de denominación de origen, no la exención de los requisitos generales de etiquetado — un hecho legal, no un juicio de autenticidad. Los términos de lote importan para los pequeños productores: los datos del lote se quedan con el lote.",
       "block2": "Las afirmaciones de composición son datos sobre los fermentables, no grados de calidad. «100% de agave» describe qué se fermentó; el comiteco con azúcar de caña declarada es igualmente honesto sobre lo que es. La declaración de composición es lectura obligatoria en cada botella.",
       "block3": "¿Cómo sabes a qué sabe una botella? Las reseñas independientes, las descripciones del productor y las síntesis editoriales son tipos distintos de evidencia, y esta guía las mantiene visiblemente separadas: la impresión de un reseñista se atribuye al reseñista; las notas de cata del propio productor se etiquetan como suyas; donde no existe ninguna reseña, la entrada lo dice en lugar de tomar carácter prestado. Cuando leas una afirmación de cata en cualquier parte, pregunta de qué paladar vino — ese hábito viaja más lejos que cualquier botella."
     },
@@ -799,13 +799,18 @@
   },
   "traditions": {
     "tequila": {
-      "sustainability": "El Agave tequilana se cultiva a gran escala, así que el tequila no comparte la presión sobre poblaciones silvestres de las tradiciones de cosecha silvestre; las preocupaciones documentadas de la industria se centran en los ciclos de precio del agave y el avance de la cocción industrial rápida."
+      "sustainability": "El Agave tequilana se cultiva a gran escala, así que el tequila no comparte la presión sobre poblaciones silvestres de las tradiciones de cosecha silvestre; las preocupaciones documentadas de la industria se centran en los ciclos de precio del agave y el avance de la cocción industrial rápida.",
+      "legalStatus": "Destilado con Denominación de Origen propia; la NOM-006-SCFI-2012 define las clases legales blanco (que puede recibir una maduración breve permitida por debajo del umbral del reposado), joven u oro, reposado, añejo y extra añejo, cada una con sus mínimos de reposo en roble. El tequila además tiene dos categorías de composición — 100% de agave y tequila (mezcla de agave con otros azúcares) — que son datos de composición, no grados de calidad. El cristalino es un estilo de acabado/marketing, no una clase legal.",
+      "materials": "Agave azul (Agave tequilana), cultivado; el tequila 100% de agave usa solo azúcares de agave, mientras que la otra categoría legal de composición permite otros azúcares junto con el agave — un dato de composición declarado, no un grado de calidad."
     },
     "bacanora": {
-      "sustainability": "El bacanora depende de poblaciones silvestres de yaquiana/Pacifica en la Sierra sonorense; la presión de cosecha sobre el agave silvestre es el principal tema de sostenibilidad de la tradición (reporte de categoría revisado el 21-10-2026)."
+      "sustainability": "El bacanora depende de poblaciones silvestres de yaquiana/Pacifica en la Sierra sonorense; la presión de cosecha sobre el agave silvestre es el principal tema de sostenibilidad de la tradición (reporte de categoría revisado el 21-10-2026).",
+      "history": "Práctica regional de larga data; la historia oficial sonorense describe una era de prohibición de 1915 a 1992, con la producción legalizada de nuevo en 1992. La denominación de origen se declaró en 2000 — la legalización y la DO son eventos separados, no un solo cambio en 2000."
     },
     "mezcal": {
-      "sustainability": "El mezcal abarca desde el espadín cultivado hasta muchas especies de cosecha silvestre; la presión de sostenibilidad se concentra en el extremo de cosecha silvestre (véanse las páginas de planta para el detalle por especie)."
+      "sustainability": "El mezcal abarca desde el espadín cultivado hasta muchas especies de cosecha silvestre; la presión de sostenibilidad se concentra en el extremo de cosecha silvestre (véanse las páginas de planta para el detalle por especie).",
+      "legalStatus": "Destilado con Denominación de Origen propia; la NOM-070-SCFI-2016 define tres categorías de producción (mezcal, mezcal artesanal, mezcal ancestral) y seis clases: blanco o joven, madurado en vidrio, reposado (2–12 meses en madera), añejo (más de 12 meses en madera), abocado con y destilado con. Joven y abocado son clases distintas, no sinónimos, y los requisitos del mezcal difieren de los del tequila incluso donde los mínimos coinciden. El tobalá es un agave silvestre bajo presión de sostenibilidad, no una clase legal propia.",
+      "practices": "La NOM-070 permite varias rutas de equipo por categoría: cocción en pozo, mampostería o autoclave en la categoría base; hornos de pozo o elevados de mampostería en la artesanal; hornos de pozo en la ancestral. La destilación artesanal puede usar alambiques de cobre u ollas de barro (con monteras de barro, madera o cobre); la ancestral usa ollas de barro a fuego directo. La pechuga es una práctica de destilado con, no una categoría aparte. No todo mezcal se asa en pozo ni es ahumado — el proceso de la categoría permite otros métodos de cocción."
     },
     "raicilla": {
       "sustainability": "Parte del rango de la raicilla depende de maximiliana y especies afines de cosecha silvestre; las afirmaciones de sostenibilidad varían por productor y solo se presentan cuando están documentadas."

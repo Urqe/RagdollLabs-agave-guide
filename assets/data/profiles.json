@@ -27,8 +27,8 @@
         "tequilafortaleza-blanco"
       ],
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
-      "process": "Steam-cooked (oven/autoclave), tahona or roller-mill extraction, fermented in open tanks, double distilled, unaged (blanco)",
-      "category": "Tequila — spirit with its own Denomination of Origin; blanco is an unaged legal class",
+      "process": "Steam-cooked (oven/autoclave), tahona or roller-mill extraction, fermented in open tanks, double distilled; typically unaged, though blanco rules permit brief oak contact below the two-month reposado minimum",
+      "category": "Tequila — spirit with its own Denomination of Origin; blanco is a legal class of tequila typically sold unaged, though the rules permit brief oak maturation below the reposado minimum",
       "beginnerNote": "New to tequila? Start here: no barrel stands between you and the cooked agave, so a blanco is the clearest introduction to how each producer's land reads in the glass.",
       "sensory": {
         "smoke": "none",
@@ -74,7 +74,7 @@
       "stateId": "oax",
       "stateName": "Oaxaca",
       "context": "Artisanal joven mezcal made from espadín agave (Agave angustifolia) in the Valles Centrales around Oaxaca. Here mezcal is family work: agave hearts roasted in earthen pit ovens, small batches, generations of the same hands. The pit roast gives the spirit its signature smoke — in the Valles Centrales nobody calls that a flaw; they call it home. Espadín is the most widely planted mezcal agave — the one a Oaxacan family pours first for a curious visitor, because it is the friendliest way into the tradition.",
-      "description": "Mezcal is a distilled spirit made from the roasted hearts of many agave species, not just blue agave. Roasting the piñas underground gives mezcal its characteristic smoke, layered over fruit, herb and mineral notes that vary with the agave variety, the village and the maestro mezcalero. This profile describes the style of a typical Valles Centrales espadín joven; individual bottles vary widely.",
+      "description": "Mezcal is a distilled spirit made from the cooked hearts of many agave species, not just blue agave. This profile describes an artisanal pit-roasted style: roasting the piñas underground gives this style its smoke, though not all mezcal is pit-roasted or smoky, layered over fruit, herb and mineral notes that vary with the agave variety, the village and the maestro mezcalero. This profile describes the style of a typical Valles Centrales espadín joven; individual bottles vary widely.",
       "body": "medium",
       "tasteNotes": [
         "roasted agave",
@@ -140,7 +140,7 @@
       "spirit": "bacanora",
       "stateId": "son",
       "stateName": "Sonora",
-      "context": "Ask a Sonoran about bacanora and watch their chest. This is our spirit, they will say — a wild agave spirit of the Sierra Madre de Sonora, distilled from Agave angustifolia pacifica (we just call it Pacifica, or Yaquiana) under a denomination of origin that covers 35 Sonoran municipalities. For most of the 20th century (1915–1992) making it was a crime, and Sonorans kept distilling anyway, hidden in the Sierra; the DO arrived in 2000. That stubbornness is the pride: bacanora survived because families refused to let it die.",
+      "context": "Ask a Sonoran about bacanora and watch their chest. This is our spirit, they will say — a wild agave spirit of the Sierra Madre de Sonora, distilled from Agave angustifolia pacifica (we just call it Pacifica, or Yaquiana) under a denomination of origin that covers 35 Sonoran municipalities. For most of the 20th century (1915–1992, per Sonoran official history) making it was prohibited, and distilling continued in the Sierra; production was legalized again in 1992 and the denomination of origin arrived in 2000 — two separate milestones. That stubbornness is the pride: bacanora survived because families refused to let it die.",
       "description": "Traditional bacanora roasts the agave hearts in earthen pit ovens, often with mesquite wood, ferments with wild yeasts and distills twice, giving a spirit that sits stylistically between tequila and Oaxacan mezcal: roasted agave at the center with smoke that is usually gentler than mezcal's, plus desert herbs and a mineral edge from the Sierra.",
       "plant": "Agave angustifolia pacifica (wild-harvested; locally Pacifica or Yaquiana)",
       "process": "Pit-roasted (often mesquite-fueled), wild-yeast fermentation, double distillation",
@@ -161,7 +161,8 @@
         "mezcalistas-bacanora-tradition",
         "sunora-bacanora",
         "mezcalistas-tepua-tasting",
-        "mezcalreviews-tepua-blanco"
+        "mezcalreviews-tepua-blanco",
+        "bacanora-sonora-historia"
       ],
       "sensory": {
         "smoke": "low",
@@ -207,7 +208,7 @@
       "stateId": "jal",
       "stateName": "Jalisco",
       "context": "Raicilla is the mountain spirit of Jalisco (the DO also reaches one Nayarit municipality, awarded in 2019), and jaliscienses wear it as proof their state makes more than tequila. It splits into two editorial traditions: Sierra (mountain) raicilla, made mainly from Agave maximiliana and inaequidens cooked in above-ground ovens, and Costa (coastal) raicilla from angustifolia and rhodacantha cooked in underground pits. For decades raicilla was distilled informally, in the shadow of its famous neighbor — locals kept it alive until the law caught up. This profile covers the Sierra style around the Sierra Occidental.",
-      "description": "Sierra raicilla is typically cooked in above-ground adobe ovens rather than pits, so it tends to be less smoky than pit-roasted agave spirits, with a distinctive fermented, gently funky character: orchard fruit, herbs and a soft lactic roundness from wild-yeast fermentation in wooden vats. Distillation is often in small rustic stills (tabernas), and each maestro's batches vary widely.",
+      "description": "Sierra raicilla is typically cooked in above-ground adobe ovens rather than pits, so it tends to be less smoky than pit-roasted agave spirits, with a distinctive fermented, gently funky character: orchard fruit, herbs and a soft lactic roundness from wild-yeast fermentation in wooden vats. Distillation happens in small rustic tabernas — the word names the distillery itself, not the still — and each maestro's batches vary widely.",
       "plant": "Agave maximiliana (wild-harvested; Sierra raicilla's signature agave)",
       "process": "Above-ground adobe-oven roast, open wild-yeast fermentation in wooden vats, small-batch distillation",
       "category": "Raicilla — spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019)",
@@ -276,7 +277,7 @@
       "plant": "Wild agaves, often Liñeno/Cimarrón (Agave angustifolia and local relatives); ensambles vary by vinatero",
       "process": "Cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation",
       "category": "Tuxca — a regional tradition with no denomination of origin; legal status is not equivalent to tequila or mezcal",
-      "beginnerNote": "New to tuxca? Expect an uncertified, deeply traditional borderlands spirit — leaner and more mineral than most mezcal, with spice instead of smoke. No seal on the bottle; pride is the certificate.",
+      "beginnerNote": "New to tuxca? Expect an uncertified, deeply traditional borderlands spirit — leaner and more mineral than most mezcal, with spice instead of smoke. No DO certification seal on the bottle; other labeling requirements still apply, and the tradition's authority is cultural rather than certified.",
       "aliases": [
         "tuxca",
         "vino de mezcal tuxca"
@@ -620,7 +621,7 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Añejo ('aged') is a legal tequila class: oak rest of at least one year, in barrels of no more than 600 liters. Extra añejo (at least three years) exists as a further class. This profile describes a traditionally made Valley añejo of roughly 18 months — the middle of the legal range. In the valley they will tell you the agave should still speak through a year of oak; the best producers make sure it does.",
+      "context": "Añejo ('aged') is a legal tequila class: oak rest of at least one year, in barrels of no more than 600 liters. Extra añejo (at least three years) exists as a further class. This profile describes a traditionally made Valley añejo of roughly 18 months — comfortably past the one-year minimum, which is the only legal mark (the NOM sets a minimum, not a range). In the valley they will tell you the agave should still speak through a year of oak; the best producers make sure it does.",
       "description": "A year or more of oak turns tequila darker, rounder and sweeter-perceived: the barrel contributes vanilla, dried fruit and cocoa-adjacent notes while the fresh vegetal edge of the blanco recedes. A well-made añejo keeps cooked agave in the frame rather than disappearing into wood; the example bottle's reviewers describe exactly that balance. 'Older is better' is marketing, not a rule — wood influence depends on barrel type, size, age and climate, and many drinkers prefer blanco or reposado.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
       "plantId": "agave-tequilana",
@@ -837,11 +838,11 @@
       "spirit": "raicilla",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Raicilla is a denomination-of-origin agave spirit from Jalisco, and unlike comiteco or destilado de pulque it does carry legally defined aged classes: reposado means a rest in wood. This profile covers the young-rested end of that range — short rests of a few months that round the spirit without pushing the agave out of the frame. Jalisco's raicilleros are proud that their spirit earned legal recognition without giving up its rustic character; short rests are how they keep it that way.",
+      "context": "Raicilla is a denomination-of-origin agave spirit from Jalisco, and aged expressions exist (the example bottle rests in wood); the precise aged-class requirements rest on the 2019 DO declaration and the published standard project rather than tequila-style rules. This profile covers the young-rested end — short rests of a few months that round the spirit without pushing the agave out of the frame. Jalisco's raicilleros are proud that their spirit earned legal recognition without giving up its rustic character; short rests are how they keep it that way.",
       "description": "A short barrel rest (the example bottle lists 3 months) takes the fruity, floral, delicately smoky raicilla character and adds a light wood halo: vanilla, caramel and soft fruit sweetness around — rather than instead of — the agave. Reviewers of the example bottle describe sherry-cask influence with plum, raisin and sweet tobacco, and note the agave can be overpowered by cask character; that risk of wood masking the spirit is part of this style's honest picture.",
       "plant": "Varies by bottling (the example bottle lists Angustifolia and Maximiliana); linked to the Maximiliana plant page as the Sierra tradition's signature agave — check the bottle, batches differ",
       "process": "Fermented and distilled (the example bottle lists steel), then rested in wooden barrels about 3 months",
-      "category": "Raicilla reposado — a legally defined aged class under the raicilla denomination of origin (minimum 2 months in wood per the cited DO source)",
+      "category": "Raicilla reposado — an aged-class claim under the raicilla denomination of origin (2019); the aged-class rules rest on the DO declaration and the published standard project, so verify the effective version rather than assuming tequila-style minimums",
       "beginnerNote": "New to aged raicilla? Expect the fruit and florals of the joven with a light caramel-vanilla halo from a short rest — closer to its unaged self than to tequila reposado.",
       "aliases": [
         "raicilla reposado",
@@ -897,7 +898,7 @@
       "plantIds": [
         "agave-maximiliana"
       ],
-      "whyItTastes": "Fermented and distilled (the example bottle lists steel), then rested in wooden barrels about three months: a short legal-minimum rest that rounds the raicilla without turning it into something else.",
+      "whyItTastes": "Fermented and distilled (the example bottle lists steel), then rested in wooden barrels about three months — a short rest of the example bottle (not a legal minimum) that rounds the raicilla without turning it into something else.",
       "maturation": {
         "class": "reposado",
         "duration": "minimum 2 months in wood"
@@ -909,7 +910,7 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Extra añejo ('extra aged') is the newest legal tequila class: a minimum of three years in oak barrels of no more than 600 liters, added to the NOM in 2006. It exists because producers wanted recognition for long-rested tequilas; El Tesoro's family released its Paradiso in 1994, before the class legally existed. This profile describes a highland extra añejo of four to five years — the longer side of the legal range. Highland pride runs deep here: highland agave grows bigger and sweeter, and alteños say it is the only agave that can carry that much oak and still taste of agave.",
+      "context": "Extra añejo ('extra aged') is the newest legal tequila class: a minimum of three years in oak barrels of no more than 600 liters, added to the NOM in 2006. It exists because producers wanted recognition for long-rested tequilas; El Tesoro's family released its Paradiso in 1994, before the class legally existed. This profile describes a highland extra añejo of four to five years — well past the three-year minimum, which is the only legal mark (the NOM sets a minimum, not a range). Highland pride runs deep here: highland agave grows bigger and sweeter, and alteños say it is the only agave that can carry that much oak and still taste of agave.",
       "description": "Three-plus years of oak pushes tequila toward brandy territory: deep oak, chocolate, coffee and dried fruit around a cooked-agave core. The honest tension of this class is that many producers consider more than about four years excessive — wood can overwhelm the delicate agave — so the best extra añejos are those that keep agave in the frame, as the example bottle's reviewers note. 'Older is better' remains marketing, not a rule.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated; highland mineral soils)",
       "plantId": "agave-tequilana",
@@ -984,12 +985,12 @@
       "spirit": "mezcal",
       "stateId": "oax",
       "stateName": "Oaxaca",
-      "context": "Reposado is a legal mezcal class (the NOM recognizes joven, reposado and añejo): a rest of two months to a year in oak. Most mezcal sold worldwide is joven (unaged), and many Oaxacan traditionalists argue wood obscures what makes mezcal distinct — that argument is part of the pride: they defend their pit roast because it is their land in the glass. Aged mezcal is nonetheless a growing, legal part of the category. This profile covers the short-rested end: a few months in wood, typically starting from pit-roasted espadín.",
+      "context": "Reposado is a legal mezcal class under NOM-070-SCFI-2016 (which defines six classes: blanco o joven, madurado en vidrio, reposado, añejo, abocado con and destilado con): a rest of two months to a year in wood. Most mezcal sold worldwide is joven (unaged), and many Oaxacan traditionalists argue wood obscures what makes mezcal distinct — that argument is part of the pride: they defend their pit roast because it is their land in the glass. Aged mezcal is nonetheless a growing, legal part of the category. This profile covers the short-rested end: a few months in wood, typically starting from pit-roasted espadín.",
       "description": "A short barrel rest softens the pit-roast smoke of espadín mezcal and layers light vanilla and caramel over it, without erasing the spirit's vegetal, roasted character. Reviews of the example bottle describe exactly that balance — smoke carried from nose to finish, ending in a smoky butterscotch — while others caution the wood can dominate. Expect mezcal first, wood second; if the wood leads, it is closer to tequila reposado territory.",
       "plant": "Agave angustifolia (espadín, cultivated); some producers blend wild agaves",
       "plantId": "agave-angustifolia",
       "process": "Pit-roasted, stone-milled, wild-fermented, distilled, then rested in oak 2-12 months (the example bottle lists 4-6 months in American oak)",
-      "category": "Mezcal — spirit with its own denomination of origin; reposado is a legal class (oak-rested, 2 months to 1 year)",
+      "category": "Mezcal — spirit with its own denomination of origin; reposado is a legal class (wood-rested, 2–12 months; the wood need not be oak, and the two-month start coincides with tequila's although the other requirements differ)",
       "beginnerNote": "New to mezcal reposado? Expect the smoke of a joven softened with vanilla and caramel — a gentler entry into smoked agave spirits.",
       "aliases": [
         "mezcal reposado",
@@ -1031,7 +1032,8 @@
       "sourceIds": [
         "diffords-mezcal-categories",
         "bbcgoodfood-ilegal-reposado",
-        "bourbonbanter-ilegal"
+        "bourbonbanter-ilegal",
+        "dof-nom-070"
       ],
       "traditionId": "mezcal",
       "regionIds": [
@@ -1046,7 +1048,7 @@
       "plantIds": [
         "agave-angustifolia"
       ],
-      "whyItTastes": "The same pit-roasted espadín base as the joven, rested in oak 2–12 months (the example bottle lists 4–6 in American oak): the roast stays, softened by wood. Note the mezcal reposado minimum differs from tequila's — the rules do not transfer.",
+      "whyItTastes": "The same pit-roasted espadín base as the joven, rested in oak 2–12 months (the example bottle lists 4–6 in American oak): the roast stays, softened by wood. Tequila and mezcal reposado both start at two months, but their other requirements differ — do not transfer rules between spirits.",
       "maturation": {
         "class": "reposado",
         "duration": "2 months to 1 year in oak"
@@ -1058,11 +1060,11 @@
       "spirit": "mezcal",
       "stateId": "oax",
       "stateName": "Oaxaca",
-      "context": "Tobalá (Agave potatorum) is a small, high-altitude, mostly wild agave often called the 'king of agaves' in México; its tiny size and 12-15 year maturity give very low yields, which has pushed prices up and wild populations down. The mezcal DO permits any agave species, so tobalá is mezcal; some tobalá is now cultivated, which changes both the sustainability story and, reviewers note, sometimes the flavor. This is a plant-driven style, not a place-driven one: tobalá grows across Oaxaca's Sierra Norte and beyond. In the Sierra Norte, finding a tobalá ready to harvest is a source of personal pride — a mezcalero will walk you to the plant, not to a map.",
+      "context": "Tobalá (Agave potatorum) is a small, high-altitude, mostly wild agave often called the 'king of agaves' in México; its tiny size and long maturity (a variable, source-dependent range often cited around 12–15 years) give very low yields, which has pushed prices up and wild populations down. The mezcal DO permits any agave species, so tobalá is mezcal; some tobalá is now cultivated, which changes both the sustainability story and, reviewers note, sometimes the flavor. This is a plant-driven style, not a place-driven one: tobalá grows across Oaxaca's Sierra Norte and beyond. In the Sierra Norte, finding a tobalá ready to harvest is a source of personal pride — a mezcalero will walk you to the plant, not to a map.",
       "description": "Tobalá mezcal is typically lighter and more floral than espadín, with sweet citrus, tropical fruit and a silky texture over a gentler roast. Batch variation is genuinely large — a cited blind tasting of eight tobalás found no single common thread — so treat this as a family of expressions, not one flavor. The example bottle, from 100% cultivated tobalá, shows lemon, pear and green pepper aromas with basil and roasted fig on the palate.",
       "plant": "Agave potatorum (tobalá; mostly wild-harvested, some cultivated — check the bottle)",
       "plantId": "agave-potatorum",
-      "process": "Pit-roasted, stone-milled, wild-fermented, distilled (clay pot stills in ancestral productions, copper in artisanal ones)",
+      "process": "Pit-roasted, stone-milled, wild-fermented, distilled; NOM-070's artisanal category permits copper alembics or clay pots, so clay is not exclusive to ancestral production",
       "category": "Mezcal — tobalá is within the mezcal denomination of origin; it is a wild agave category under sustainability pressure, not a legal class of its own",
       "beginnerNote": "New to tobalá? Expect mezcal's gentler, more floral cousin: sweet citrus and tropical fruit over a soft roast — pricier because the agave is small, slow and scarce.",
       "aliases": [
@@ -1119,7 +1121,7 @@
       "plantIds": [
         "agave-potatorum"
       ],
-      "whyItTastes": "Small wild tobalá matures 12–15 years at altitude, giving very low yields and concentrated character; pit roast and often clay-pot distillation keep the cook gentle. Batch variation is genuine and large — a cited blind tasting found no single common thread."
+      "whyItTastes": "Small wild tobalá matures over a variable, source-dependent range (often cited around 12–15 years) at altitude, giving very low yields; reviewers describe concentrated character in some batches, pit roast and often clay-pot distillation keep the cook gentle. Batch variation is genuine and large — a cited blind tasting found no single common thread."
     },
     {
       "id": "sotol-chihuahua",
@@ -1127,10 +1129,10 @@
       "spirit": "sotol",
       "stateId": "chih",
       "stateName": "Chihuahua",
-      "context": "Ask a sotolero what sotol is and you will hear it plainly: not agave, and proud of it. Sotol is distilled from plants of the Dasylirion genus (desert spoon), native to the Chihuahuan desert — relatives of agave in the Asparagaceae family that share the roasted-piña logic. Sotol has had a Denominación de Origen since 2002, covering only Chihuahua, Coahuila and Durango; it was illegal in Mexico before 1994, and clandestine vinatas kept the tradition alive, just as Sonoran families kept bacanora. This guide includes it as an agave-adjacent tradition, honestly labeled: sotol is not an agave spirit, and saying so is part of its story. This profile describes the Chihuahua desert style.",
-      "description": "Sotol's signature is a bright, grassy, herbal, sometimes menthol- or eucalyptus-adjacent freshness — more vegetal than most agave spirits, with a smoky, earthy base from pit roasting. Terroir is unusually audible: the cited DO sources describe forested-region sotols tasting of menthol, mushrooms and pine, while arid-desert ones lean to leather, cacao and pepper. A single plant yields roughly one bottle after 8-12 years, so batches are small and vary genuinely.",
+      "context": "Ask a sotolero what sotol is and you will hear it plainly: not agave, and proud of it. Sotol is distilled from plants of the Dasylirion genus (desert spoon), native to the Chihuahuan desert — relatives of agave in the Asparagaceae family that share the roasted-piña logic. Sotol has had a Denominación de Origen since 2002, covering only Chihuahua, Coahuila and Durango; its 20th-century history includes restrictive regulation and clandestine production (the specific legal timeline varies by era and place; this guide does not assert a single nationwide pre-1994 ban). This guide includes it as an agave-adjacent tradition, honestly labeled: sotol is not an agave spirit, and saying so is part of its story. This profile describes the Chihuahua desert style.",
+      "description": "Sotol's signature is a bright, grassy, herbal, sometimes menthol- or eucalyptus-adjacent freshness — more vegetal than most agave spirits, with a smoky, earthy base from pit roasting. Terroir is unusually audible: the cited DO sources describe forested-region sotols tasting of menthol, mushrooms and pine, while arid-desert ones lean to leather, cacao and pepper. A single plant may yield roughly one bottle after a variable, source-dependent number of years (often cited around 8–12), so batches are small and vary genuinely.",
       "plant": "Dasylirion (desert spoon; commonly wheeleri, cedrosanum or leiophyllum), wild-harvested; not an agave, though a close relative",
-      "process": "Piña pit-roasted in conical ovens (or steam-cooked by larger producers), wild-fermented, distilled in copper or clay; harvest can leave roots intact so the plant regrows",
+      "process": "Piña pit-roasted in conical ovens (or steam-cooked by larger producers), wild-fermented, distilled in copper or clay; whether roots are left intact depends on harvest practice, and regrowth is not guaranteed",
       "category": "Sotol — spirit with its own Denomination of Origin (Chihuahua, Coahuila, Durango, since 2002); explicitly not an agave spirit, included here as an agave-adjacent northern tradition",
       "beginnerNote": "New to sotol? Expect bright wet-grass and herbal freshness over gentle smoke — closer to a green, wild cousin of mezcal than to tequila.",
       "aliases": [
@@ -1188,7 +1190,7 @@
       "plantIds": [
         "dasylirion-desert-spoon"
       ],
-      "whyItTastes": "Dasylirion (not an agave) wild-harvested after 8–12 years, pit-roasted in conical ovens and wild-fermented: the earthy, smoky-herbal character follows from the plant and the desert cook. Roots left intact let the plant regrow — the harvest can be sustainable by design."
+      "whyItTastes": "Dasylirion (not an agave) wild-harvested, pit-roasted in conical ovens and wild-fermented: the earthy, smoky-herbal character follows from the plant and the desert cook. Wild stands face documented harvest pressure; regrowth claims need species and method evidence this guide has not verified."
     },
     {
       "id": "tequila-blanco-highland-jalisco",
@@ -1200,8 +1202,8 @@
       "description": "The highland take on unaged tequila: sweeter cooked agave with citrus (orange peel, grapefruit), tropical and stone fruit, delicate florals and a gentle spice, in a softer, rounder body than the valley style.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated; highland red mineral soils)",
       "plantId": "agave-tequilana",
-      "process": "Steam-cooked (or stone-roasted by some traditionalists), fermented, double distilled, unaged (blanco)",
-      "category": "Tequila — spirit with its own Denomination of Origin; blanco is an unaged legal class",
+      "process": "Steam-cooked (or stone-roasted by some traditionalists), fermented, double distilled; typically unaged, though blanco rules permit brief oak contact below the two-month reposado minimum",
+      "category": "Tequila — spirit with its own Denomination of Origin; blanco is a legal class of tequila typically sold unaged, though the rules permit brief oak maturation below the reposado minimum",
       "beginnerNote": "New to tequila? A highland blanco is the friendliest starting point: soft, sweet and fruity, with none of the valley's savory edge. Try it beside the valley blanco to taste what place does to the same plant.",
       "aliases": [
         "highland blanco",
