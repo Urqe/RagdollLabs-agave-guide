@@ -55,13 +55,21 @@ test("catalogue lists entries alphabetically and shows the brand directory", () 
   const container = document.createElement("div");
   document.body.appendChild(container);
   renderCatalogue(container, { bottles, profiles, sources, locale: enLocale });
-  assert.equal(container.querySelectorAll(".catalogue-entry").length, bottles.length);
+  // Pair 13: the visible list is compact summaries; every bottle stays
+  // listed with its stable anchor, alphabetically by brand.
+  assert.equal(container.querySelectorAll(".catalogue-summary").length, bottles.length);
   const names = [...container.querySelectorAll(".catalogue-entry-title")].map((n) => n.textContent);
   const sortedNames = [...names].sort((a, b) => a.localeCompare(b));
   assert.deepEqual(names, sortedNames, "alphabetical by brand");
-  const brands = [...container.querySelectorAll(".brand-directory-item h4")].map((h) => h.textContent);
-  assert.equal(new Set(brands).size, brands.length, "one directory entry per brand");
-  assert.ok(brands.length >= 5);
+  for (const bottle of bottles) {
+    assert.ok(container.querySelector(`#bottle-${bottle.id}`), `${bottle.id} keeps its stable anchor`);
+  }
+  // The brand index: one compact chip per brand, no repeated expression
+  // lists (those live in the filterable main list).
+  const brands = [...container.querySelectorAll(".brand-index .discovery-chip")].map((c) => c.textContent);
+  assert.equal(new Set(brands).size, brands.length, "one index chip per brand");
+  assert.equal(brands.length, new Set(bottles.map((b) => b.brand)).size);
+  assert.ok(!container.querySelector(".brand-directory-bottles"), "no redundant per-brand bottle lists");
   container.remove();
 });
 
@@ -148,19 +156,24 @@ test("brands, producers and expressions remain separate linked entities", () => 
   assert.equal(lv.bottles.length, laVenenosa.length, "directory groups by brand without merging producers");
 });
 
-test("release 8: search results keep context and move focus to the entry", () => {
+test("release 8: search narrows the list in place and keeps stable anchors", () => {
   const container = document.createElement("div");
   document.body.appendChild(container);
   renderCatalogue(container, { bottles, profiles, sources, locale: enLocale });
   const search = container.querySelector("#catalogue-search");
   search.value = "cielo rojo";
   search.dispatchEvent(new window.Event("input", { bubbles: true }));
-  const link = container.querySelector(".search-result-link");
-  assert.ok(link, "search result present");
-  link.dispatchEvent(new window.Event("click", { bubbles: true, cancelable: true }));
-  const focused = document.activeElement;
-  assert.equal(focused && focused.id, "bottle-cielo-rojo-bacanora-blanco-title", "focus lands on the entry title");
-  assert.equal(focused.getAttribute("tabindex"), "-1", "entry title is programmatically focusable");
+  // Pair 13: search filters the main list directly; the matched entry
+  // keeps its stable anchor and focusable title.
+  const entries = [...container.querySelectorAll(".catalogue-summary")];
+  assert.ok(entries.length >= 1, "matched entries stay listed");
+  assert.ok(entries.length < bottles.length, "list narrows to the match");
+  const title = container.querySelector("#bottle-cielo-rojo-bacanora-blanco-title");
+  assert.ok(title, "stable anchor present after filtering");
+  assert.equal(title.getAttribute("tabindex"), "-1", "entry title is programmatically focusable");
+  // Reset returns the full catalogue.
+  container.querySelector(".catalogue-reset").dispatchEvent(new window.Event("click", { bubbles: true }));
+  assert.equal(container.querySelectorAll(".catalogue-summary").length, bottles.length, "reset restores every bottle");
   container.remove();
 });
 

@@ -30,6 +30,7 @@ const state = {
   lastCompareQuery: null,
   savedBeforeLesson: null,
   lessonPreparedSelection: null,
+  catalogueApi: null,
 };
 
 function baseUrl() {
@@ -184,7 +185,12 @@ async function renderRoute(container, route) {
     state.exploreApi = null;
     const restore = takeView("catalogue");
     state.consumedRestore = restore;
-    renderCatalogue(container, { bottles, profiles, sources, locale, ...(restore ? { restore } : {}) });
+    const api = renderCatalogue(container, {
+      bottles, profiles, sources, locale,
+      ...(restore ? { restore } : {}),
+      ...(route.params.bottle ? { revealBottleId: route.params.bottle } : {}),
+    });
+    state.catalogueApi = api || null;
     return;
   }
   if (route.name === "compare") {
@@ -327,7 +333,8 @@ async function boot() {
     }
     if (route.name === "profile" && state.catalogueActive) {
       const input = document.getElementById("catalogue-search");
-      captureView("catalogue", { query: input ? input.value : "" });
+      const filter = document.getElementById("catalogue-tradition");
+      captureView("catalogue", { query: input ? input.value : "", traditionId: filter ? filter.value : "" });
     }
   };
 

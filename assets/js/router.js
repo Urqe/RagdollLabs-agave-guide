@@ -56,8 +56,10 @@ export function parseHash(hash) {
     if (!supported.has(segments[1])) return { name: "notFound", params: {} };
     return { name: "discover", params: { kind: segments[1], id: segments[2] } };
   }
-  if (segments[0] === "catalogue" && segments.length === 1) {
-    return { name: "catalogue", params: {} };
+  if (segments[0].split("?")[0] === "catalogue" && segments.length === 1) {
+    const query = segments[0].split("?")[1] || "";
+    const bottle = new URLSearchParams(query).get("bottle");
+    return bottle ? { name: "catalogue", params: { bottle } } : { name: "catalogue", params: {} };
   }
   if (segments[0] === "compare") {
     if (segments.length === 1) return { name: "compare", params: { compareIds: "" } };
@@ -88,7 +90,7 @@ export function buildHash(route) {
     case "state":
       return `#/explore/${encodeURIComponent(route.params.stateId)}`;
     case "catalogue":
-      return "#/catalogue";
+      return route.params.bottle ? `#/catalogue?bottle=${encodeURIComponent(route.params.bottle)}` : "#/catalogue";
     case "plant":
       return `#/plant/${encodeURIComponent(route.params.plantId)}`;
     case "tradition":

@@ -2417,3 +2417,77 @@ DOM-level evidence only.
   unverified, honestly recorded; selected-place and filtered-results
   context on return from the map view re-verified only at the DOM
   level.
+
+## Post-roadmap pair 13 — Browseable Bottle Catalogue
+
+Scope per plan section 4.2: help readers find and assess existing
+bottles without scanning a full alphabetical dossier — filters,
+compact summaries with optional depth, honest evidence distinctions
+and preserved deep-linking, extending the existing catalogue and
+search contracts rather than adding a separate bottle database.
+
+### What changed
+
+- **Tradition filter beside the search**, with a clear reset and a
+  visible result count ("Showing 18 of 46 bottles"). Search and
+  filter combine predictably: the filter narrows the collection, the
+  query searches within it; typing a new query clears a brand browse
+  so the controls never fight each other. A useful no-results state
+  names the query and keeps the reset reachable.
+- **Compact summaries replace the full-dossier list.** Each entry now
+  shows brand/expression, tradition, documented producer/place, ABV
+  (or an explicit "ABV not documented"), and one short attributed
+  character note. Coverage disclosures (tasting not documented,
+  profile not covered) and composition distinctions — including the
+  comiteco cane-sugar disclosure — stay visible in the compact view,
+  so density never hides a material fact.
+- **Depth behind clearly labelled disclosure.** Production,
+  composition, batch and every source group moved into a per-entry
+  "Production, composition & sources" disclosure; the existing full
+  entry renders inside it unchanged.
+- **Evidence voices stay distinguishable.** Reviewer impressions stay
+  attributed; producer notes never appear as reviews; factual-only
+  entries get "No attributed tasting note for this expression yet"
+  instead of an invented summary.
+- **Profile links only where the mapping genuinely matches.** Uncovered
+  bottles (D'Antaño comiteco, Don Julio reposado/añejo, Patrón
+  reposado, Casa Dragones joven) get no style-profile link and are
+  described plainly through the coverage relationship; covered
+  bottles link their mapped profile.
+- **Stable anchors, deep links and state preserved.** Every entry
+  keeps its `#bottle-<id>` anchor through filtering. The router now
+  accepts `#/catalogue?bottle=<id>`: a deep-linked bottle is revealed
+  with its depth disclosure opened, or — when a restored search or
+  filter excludes it — clearly explained with a "Show it anyway"
+  action. Search and filter state are captured for the return trip
+  from a profile (the snapshot now carries the tradition filter, not
+  just the query), and focus lands on the entry title.
+- **Brand browsing kept, repetition removed.** The brand directory
+  (which repeated every expression in a second list) became a compact
+  chip index; a chip narrows the main list to that brand exactly.
+- **Full Mexican Spanish parity** for every control, status, result
+  message, summary label, disclosure and deep-link notice; canonical
+  bottle data and the shared search contract are reused, with no
+  separate bottle database.
+
+### Checks run
+
+- `npm run validate` — schema plus 284 node:test/jsdom suites, all
+  passing; 9 new pair-13 regression tests (filter/count/reset in both
+  languages, no-results state, compact-summary honesty, evidence
+  voices, mapping-gated profile links, brand index, deep-link reveal
+  including the filtered-out case, state capture/restore, full ES
+  rendering). Two existing tests updated deliberately to pin the new
+  list contracts (alphabetical anchors preserved; search narrows in
+  place with stable anchors and reset).
+- The catalogue search contract is unchanged (`searchBottles`): a
+  brand browse now filters by the brand field exactly, since free-text
+  search legitimately matches cross-references (e.g. a producer line
+  name inside another bottle's producer field).
+
+### Remaining issues / deferred
+
+- Native-device (iPhone/iPad Safari, VoiceOver) checks of the new
+  controls — select/filter announcements, disclosure semantics at
+  phone widths — remain unverified in this environment; explicitly
+  pair 14's review scope.

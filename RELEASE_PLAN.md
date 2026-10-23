@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — refinement after post-roadmap pair 7
 
-Post-roadmap pairs 8–12 are applied; the next planned release is **post-roadmap pair 13 — Browseable Bottle Catalogue**, followed by pair 14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
+Post-roadmap pairs 8–13 are applied; the final planned release in this sequence is **post-roadmap pair 14 — Catalogue & End-to-End Review** in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -563,16 +563,16 @@ Acceptance: clearer entrances preserve the established search, map, comparison a
 
 ### Post-roadmap pair 13 — Browseable Bottle Catalogue (feature/UX)
 
-Goal: help readers find and assess existing bottles without scanning a full alphabetical dossier.
+Applied (see the pair 13 notes in RELEASE_NOTES.md). Goal: help readers find and assess existing bottles without scanning a full alphabetical dossier.
 
-1. [ ] Add a spirit/tradition filter beside catalogue search, plus a clear reset and visible result count. Combine search and filter predictably; show a useful no-results state.
-2. [ ] Present compact summaries: brand/expression, tradition, producer/place where documented, ABV or a concise unknown state, and a short attributed character note where supported.
-3. [ ] Put longer production, composition, batch and source details behind clearly labelled optional disclosure. Keep material composition distinctions and warnings about varying ABV apparent where needed; compact presentation must not mislead.
-4. [ ] Keep producer notes, reviewer impressions and editorial synthesis distinguishable. Do not invent tasting summaries for factual-only entries.
-5. [ ] Offer a style-profile link only where the mapping genuinely matches the expression. Describe uncovered entries plainly; an aged sotol or añejo mezcal must not appear equivalent to a mismatched unaged or reposado profile merely to provide a destination.
-6. [ ] Preserve stable bottle anchors, direct-link discovery, filter/search state and sensible focus when returning from a profile. If a linked bottle is inside collapsed content or outside current filters, reveal it or clearly offer to show it.
-7. [ ] Remove redundant brand-list repetition where it adds no navigation value; retain useful brand browsing through a compact index or jump links if justified by the existing catalogue.
-8. [ ] Deliver all controls, result messages, summaries and disclosures in EN/ES. Extend existing catalogue rendering and search contracts rather than introducing a separate bottle database.
+1. [x] Add a spirit/tradition filter beside catalogue search, plus a clear reset and visible result count. Combine search and filter predictably; show a useful no-results state.
+2. [x] Present compact summaries: brand/expression, tradition, producer/place where documented, ABV or a concise unknown state, and a short attributed character note where supported.
+3. [x] Put longer production, composition, batch and source details behind clearly labelled optional disclosure. Keep material composition distinctions and warnings about varying ABV apparent where needed; compact presentation must not mislead.
+4. [x] Keep producer notes, reviewer impressions and editorial synthesis distinguishable. Do not invent tasting summaries for factual-only entries.
+5. [x] Offer a style-profile link only where the mapping genuinely matches the expression. Describe uncovered entries plainly; an aged sotol or añejo mezcal must not appear equivalent to a mismatched unaged or reposado profile merely to provide a destination.
+6. [x] Preserve stable bottle anchors, direct-link discovery, filter/search state and sensible focus when returning from a profile. If a linked bottle is inside collapsed content or outside current filters, reveal it or clearly offer to show it.
+7. [x] Remove redundant brand-list repetition where it adds no navigation value; retain useful brand browsing through a compact index or jump links if justified by the existing catalogue.
+8. [x] Deliver all controls, result messages, summaries and disclosures in EN/ES. Extend existing catalogue rendering and search contracts rather than introducing a separate bottle database.
 
 Acceptance: users can find a known bottle or browse an existing tradition quickly, open technical depth on demand and distinguish bottle evidence from typical style guidance. No new content research or price/availability features are required.
 

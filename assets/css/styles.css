@@ -1170,3 +1170,14 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .start-view .journey-comparison { margin-top: 1.1rem; }
 .start-view .journey-pager { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.6rem; }
 .start-view .discovery-matches { list-style: none; padding: 0; margin: 0.6rem 0; display: grid; gap: 0.6rem; }
+
+/* Pair 13 — browseable bottle catalogue */
+.catalogue-controls { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; margin: 0.9rem 0; }
+.catalogue-controls .search-input { flex: 1 1 14rem; }
+.catalogue-status { margin: 0.2rem 0 0.6rem; }
+.catalogue-summary { padding: 0.9rem 1rem; border: 1px solid var(--line-soft); border-radius: 0.7rem; margin-bottom: 0.6rem; }
+.catalogue-summary .catalogue-entry-title { font-size: 1.05rem; margin: 0 0 0.35rem; scroll-margin-top: 5rem; }
+.catalogue-facts-compact { display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; list-style: none; margin: 0 0 0.4rem; padding: 0; color: var(--text-soft); font-size: 0.92rem; }
+.catalogue-summary .bottle-review { margin: 0.35rem 0; }
+.catalogue-summary .catalogue-profile-link { display: inline-block; margin-top: 0.4rem; }
+.brand-index { margin: 0.6rem 0 0; }
