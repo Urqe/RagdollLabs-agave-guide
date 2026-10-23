@@ -303,7 +303,7 @@ test("pair 3: learning journey refreshed with the newer content threads", () => 
   assert.ok(ed.blocks[1].exampleProfileIds.length >= 3, "sustainability block cites its examples");
   // The new evidence-tier block exists in the labels chapter.
   const ul = chapters.find((c) => c.id === "understanding-labels");
-  const tierBlock = ul.blocks[3];
+  const tierBlock = ul.blocks.find((b) => (b.text || "").includes("whose palate"));
   assert.ok(tierBlock, "evidence-tier block present");
   assert.ok(tierBlock.text.includes("whose palate"), "teaches the evidence question");
 });

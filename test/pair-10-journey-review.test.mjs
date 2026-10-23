@@ -64,8 +64,8 @@ test("pair 10: example cards return to the originating lesson, in both kinds", (
   const hrefs = [...container.querySelectorAll(".discovery-matches a")].map((a) => a.getAttribute("href"));
   assert.ok(hrefs.some((h) => decodeURIComponent(h).includes("origin=start:how-to-taste")),
     "profile example carries the lesson id, not the profile id");
-  assert.ok(hrefs.some((h) => decodeURIComponent(h).includes("#/learn?from=start:how-to-taste")),
-    "reference example carries the lesson origin");
+  assert.ok(hrefs.some((h) => decodeURIComponent(h).includes("#/learn/chapter-understanding-flavour?from=start:how-to-taste")),
+    "reference example targets the exact chapter and carries the lesson origin");
   // The profile back link resolves to a real lesson.
   const profileLink = hrefs.find((h) => h.includes("#/profile"));
   const origin = new URLSearchParams("?" + profileLink.split("?")[1]).get("origin");

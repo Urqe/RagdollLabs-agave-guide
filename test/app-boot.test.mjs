@@ -134,7 +134,7 @@ test("F6: profile-to-profile navigation scrolls to the heading; locale toggle do
     toggle.click();
     await new Promise((r) => setTimeout(r, 80));
     assert.equal(app.scrollCalls.length, 0, "locale re-render preserves the scroll position");
-    assert.equal(app.document.documentElement.lang, "es");
+    assert.equal(app.document.documentElement.lang, "es-MX");
   } finally {
     app.cleanup();
   }
@@ -172,7 +172,7 @@ test("F10: switching language before data loads does not crash and applies after
     assert.equal(dom.window.localStorage.getItem("agave-locale"), "es", "language persisted immediately");
     release();
     await new Promise((r) => setTimeout(r, 120));
-    assert.equal(dom.window.document.documentElement.lang, "es",
+    assert.equal(dom.window.document.documentElement.lang, "es-MX",
       "the completed page renders in the language chosen during loading");
   } finally {
     restore();
@@ -187,7 +187,7 @@ test("same-route re-render (language toggle) does not scroll to the heading", as
     assert.ok(toggle, "locale toggle renders");
     toggle.click();
     await new Promise((r) => setTimeout(r, 80));
-    assert.equal(app.document.documentElement.lang, "es", "document language switched");
+    assert.equal(app.document.documentElement.lang, "es-MX", "document language switched");
     assert.equal(app.scrollCalls.length, 0, "no scroll-to-heading on same-route re-render");
     assert.ok(app.document.body.textContent.includes("Perfiles de estilo"),
       "explore re-renders in Spanish");
@@ -216,7 +216,7 @@ test("switching language keeps expanded disclosures open", async () => {
     toggle.click();
     await new Promise((r) => setTimeout(r, 100));
 
-    assert.equal(app.document.documentElement.lang, "es", "language switched");
+    assert.equal(app.document.documentElement.lang, "es-MX", "language switched");
     assert.ok(app.document.querySelector("details.more-bottles")?.open,
       "more-bottles stays open after the language switch");
     const learnings = app.document.querySelectorAll("details.profile-learning");

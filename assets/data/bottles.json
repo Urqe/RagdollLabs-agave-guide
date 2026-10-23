@@ -5,7 +5,7 @@
       "brand": "Fortaleza",
       "expression": "Blanco Tequila",
       "abv": 40,
-      "reviewSummary": "Reviewers call this a benchmark lowland blanco: a savory, assertive expression of cooked agave with olive brine and pepper, showing more complexity than most in its category.",
+      "reviewSummary": "A benchmark lowland blanco: savory, assertive cooked agave with olive brine and pepper, showing more complexity than most in its category.",
       "sourceIds": [
         "tequilafortaleza-blanco",
         "diffords-fortaleza-blanco",
@@ -25,7 +25,7 @@
       "brand": "The Lost Explorer",
       "expression": "Mezcal Espadín (joven)",
       "abv": 42,
-      "reviewSummary": "Reviewers describe a welcoming, gently smoky espadín: herbaceous and delicately sweet on the palate with a long, dry, smoky finish that fades to earthy herbs.",
+      "reviewSummary": "A welcoming, gently smoky espadín: herbaceous and delicately sweet on the palate, with a long, dry, smoky finish that fades to earthy herbs.",
       "sourceIds": [
         "thelostexplorer-our-craft",
         "diffords-lost-explorer-espadin",
@@ -47,7 +47,7 @@
       "expression": "Bacanora (joven)",
       "abv": 43,
       "place": "Rancho Tepúa, Aconchi, Sonora",
-      "reviewSummary": "Mezcalistas' tasting notes describe a mineral, roast-agave-driven spirit: sandalwood, cinnamon, lemongrass and a mineral tang around a center of roast agave, with a rich, sweet-agave nose.",
+      "reviewSummary": "Mineral and roast-agave-driven, with sandalwood, cinnamon, lemongrass and a mineral tang around a center of roast agave, over a rich, sweet-agave nose.",
       "sourceIds": [
         "mezcalistas-tepua-tasting",
         "mezcalreviews-tepua-blanco"
@@ -66,7 +66,7 @@
       "expression": "Raicilla Tabernas Edición (joven)",
       "abv": 40,
       "place": "La Vieja, Sierra Occidental, Jalisco",
-      "reviewSummary": "Mezcal Reviews members describe a funky, approachable raicilla: sour apple and slight vinegar on the nose, sweet agave and a pleasant fermented funk on the palate, light and easy to sip or mix.",
+      "reviewSummary": "A funky, approachable raicilla: sour apple and a slight vinegar note on the nose, sweet agave and a pleasant fermented funk on the palate — light and easy to sip or mix.",
       "sourceIds": [
         "mezcalreviews-lavenenosa-tabernas",
         "casaendemica-brands"
@@ -88,7 +88,7 @@
       "place": "Aconchi, Sonora",
       "batch": "Small batches; first premium bacanora legally imported to the US",
       "profileId": "bacanora-pacifica-sierra-sonora",
-      "reviewSummary": "TEQUILA.net describes grassy, sweet agave with a hint of smoke and citrus, a medium-thin body, with smoke coming forward and grassy, earthy notes overtaking the initial sweetness; Mezcal Reviews calls it a pleasant and vibrant bacanora.",
+      "reviewSummary": "Grassy, sweet agave with a hint of smoke and citrus and a medium-thin body; the smoke comes forward and grassy, earthy notes overtake the initial sweetness. A pleasant, vibrant bacanora overall.",
       "editorialNote": "From the same Contreras family vinata as this profile's example bottle — expect a similarly mineral, pit-roast character, with the Tequila.net review noting smoke that sits forward of the typical profile.",
       "noteProfileId": "bacanora-pacifica-sierra-sonora",
       "noteSourceIds": [
@@ -114,7 +114,7 @@
       "spirit": "bacanora",
       "place": "Álamos, Sonora",
       "profileId": "bacanora-pacifica-sierra-sonora",
-      "reviewSummary": "Mezcal Reviews describes notes of wildflowers, citrus and the tartness of green apple, with a gentle violet finish — an aromatic, moderately complex bacanora.",
+      "reviewSummary": "Wildflowers, citrus and the tartness of green apple, with a gentle violet finish — an aromatic, moderately complex bacanora.",
       "editorialNote": "A fruitier, more floral read on bacanora than this profile describes — the green-apple tartness and violet finish sit well outside the mineral, savory center of the Rancho Tepúa example.",
       "noteProfileId": "bacanora-pacifica-sierra-sonora",
       "noteSourceIds": [
@@ -137,7 +137,7 @@
       "spirit": "raicilla",
       "place": "Coastal Jalisco (Cabo Corrientes region)",
       "profileId": "raicilla-costa-jalisco",
-      "reviewSummary": "A Mezcal Reviews member tasting (lote 32, 2021) calls it the most savory and smoky offering of the La Venenosa range — positively delicious at its price point, per the reviewer.",
+      "reviewSummary": "The most savory and smoky offering of the La Venenosa range (lote 32, 2021) — a pour its reviewer found positively delicious at its price point.",
       "sourceIds": [
         "casaendemica-brands",
         "mezcalreviews-lavenenosa-costa"
@@ -162,7 +162,7 @@
       "spirit": "tuxca",
       "place": "Tuxcacuesco region, southern Jalisco (Jalisco–Colima borderlands)",
       "profileId": "tuxca-lineno-cimarron-jalisco-colima",
-      "reviewSummary": "Mezcalistas' tasting notes describe a rich nose with spicy, pickle-juice and tangy keywords; Mezcal Reviews members find lime zest, hay, peppercorn and agave with a straightforward, mineral palate.",
+      "reviewSummary": "A rich nose with spicy, pickle-juice and tangy notes (Mezcalistas); lime zest, hay, peppercorn and agave on a straightforward, mineral palate (Mezcal Reviews members).",
       "sourceIds": [
         "mezcalistas-balancan-tasting",
         "mezcalreviews-balancan-tuxca"
@@ -205,7 +205,7 @@
       "spirit": "destilado-de-pulque",
       "place": "Nanacamilpa, Tlaxcala",
       "profileId": "destilado-de-pulque-salmiana-tlaxcala",
-      "reviewSummary": "Importer notes describe a green, vegetal spirit with curious notes of cardamom, lemongrass, peppercorn, sharp cheddar and sorrel, double-distilled from 48-hour fermented Salmiana sap in a short copper column.",
+      "reviewSummary": "Green and vegetal, with curious notes of cardamom, lemongrass, peppercorn, sharp cheddar and sorrel — double-distilled from 48-hour fermented Salmiana sap in a short copper column, per importer notes.",
       "sourceIds": [
         "skurnik-estancia",
         "mezcalreviews-estancia-pulque"
@@ -225,7 +225,7 @@
       "place": "Tequila, Jalisco",
       "batch": "Aged in American oak; lots vary",
       "profileId": "tequila-reposado-valley-jalisco",
-      "reviewSummary": "Long Island Lou describes an earthy, cinnamon, caramel and citrus palate with olive and butter notes from 6–8 months in American oak; 88 Bamboo finds the clean agave of the blanco intact, accented by soft oakiness and wood spice.",
+      "reviewSummary": "An earthy palate of cinnamon, caramel and citrus with olive and butter notes from 6–8 months in American oak; the clean agave of the blanco stays intact, accented by soft oakiness and wood spice.",
       "sourceIds": [
         "lilou-fortaleza-reposado",
         "88bamboo-fortaleza-reposado"
@@ -245,7 +245,7 @@
       "place": "Tequila, Jalisco",
       "batch": "Aged ~18 months in ex-bourbon casks",
       "profileId": "tequila-anejo-valley-jalisco",
-      "reviewSummary": "The Whiskey Shelf describes white sugar and honey sweetness, pineapple, green grape and vegetal agave over gentle barrel fruitiness — darker and rounder than the blanco, with oak woven in rather than dominant.",
+      "reviewSummary": "White-sugar and honey sweetness, pineapple, green grape and vegetal agave over gentle barrel fruitiness — darker and rounder than the blanco, with oak woven in rather than dominant.",
       "sourceIds": [
         "whiskeyshelf-fortaleza-anejo"
       ],
@@ -264,7 +264,7 @@
       "place": "Jalisco",
       "batch": "Añejo aged in American and French oak, then charcoal-filtered clear",
       "profileId": "tequila-cristalino-style",
-      "reviewSummary": "Tastings.com finds round, creamy aromas and flavors — vanilla, oak charcoal, lemon cream, toasted pineapple — with softer acidity and agave than a blanco; Tequila Report calls it an easy-sipping profile of light agave, oak, cinnamon and vanilla.",
+      "reviewSummary": "Round, creamy aromas and flavors — vanilla, oak charcoal, lemon cream, toasted pineapple — with softer acidity and agave than a blanco; an easy-sipping profile of light agave, oak, cinnamon and vanilla.",
       "sourceIds": [
         "tastings-patron-cristalino",
         "tequilareport-patron-cristalino",
@@ -309,7 +309,7 @@
       "place": "Sierra Occidental, Jalisco",
       "batch": "Rested about 3 months in wooden (sherry) casks; each Tabernas Edición batch differs — check your bottle",
       "profileId": "raicilla-reposado-jalisco",
-      "reviewSummary": "A Mezcal Reviews member describes vanilla, caramel, leather, sweet tobacco and plum on the nose; plum, raisin, luxardo cherry, vanilla and leather on the palate, finishing with sweet campfire smoke, cinnamon and tobacco — noting the sherry-cask influence is fun but overpowers the agave a bit.",
+      "reviewSummary": "Vanilla, caramel, leather, sweet tobacco and plum on the nose; plum, raisin, luxardo cherry, vanilla and leather on the palate, finishing with sweet campfire smoke, cinnamon and tobacco. The sherry-cask influence is fun, though its reviewer notes it overpowers the agave a bit.",
       "sourceIds": [
         "mezcalreviews-lavenenosa-tabernas-reposado",
         "casaendemica-brands"
@@ -329,7 +329,7 @@
       "place": "Tlaxcala",
       "batch": "Single distilled in stainless steel; aguamiel fermented about a week with pulque madre",
       "profileId": "destilado-de-pulque-salmiana-tlaxcala",
-      "reviewSummary": "Mezcalistas describes a beguiling nose of lightly fermented tepache, mango and molasses richness; on the palate hints of licorice and fennel with a lactic blast, and a fantastic tension between sweet and savory.",
+      "reviewSummary": "A beguiling nose of lightly fermented tepache, mango and molasses richness; on the palate hints of licorice and fennel with a lactic blast, and a fantastic tension between sweet and savory.",
       "sourceIds": [
         "mezcalistas-juerte",
         "mezcalreviews-juerte"
@@ -360,7 +360,7 @@
       ],
       "traditionId": "comiteco",
       "regionIds": [],
-      "reviewSummary": "A Tom Pynchon's Liquor Cabinet tasting (2024) drinks it neat and finds it would substitute cleanly for white rum in a mojito — of the two Chiapanecan spirits tasted that day, the reviewer prefers the comiteco."
+      "reviewSummary": "Neat, it would substitute cleanly for white rum in a mojito — of the two Chiapanecan spirits its reviewer tasted that day, the comiteco was the preferred pour."
     },
     {
       "id": "el-tesoro-extra-anejo",
@@ -372,7 +372,7 @@
       "place": "Jalisco highlands (La Alteña, near Arandas), Jalisco",
       "batch": "Aged 4-5 years in American oak ex-bourbon barrels — longer than the 3-year legal minimum",
       "profileId": "tequila-extra-anejo-highland-jalisco",
-      "reviewSummary": "Drinkhacker notes that where most extra añejos are caramel-vanilla bombs, this one keeps the agave clearly in the frame — an herbal nose of rosemary, pepper and allspice that could pass for a reposado, over deep oak.",
+      "reviewSummary": "Keeps the agave clearly in the frame where most extra añejos are caramel-vanilla bombs: an herbal nose of rosemary, pepper and allspice that could pass for a reposado, over deep oak.",
       "sourceIds": [
         "drinkhacker-eltesoro-xa"
       ],
@@ -391,7 +391,7 @@
       "place": "Tlacolula, Oaxaca",
       "batch": "Joven espadín rested about 4-6 months in American oak (ex-whiskey casks per brand notes)",
       "profileId": "mezcal-reposado-espadin-oaxaca",
-      "reviewSummary": "BBC Good Food describes a smooth spirit with a subtle straw-like aroma, hints of citrus and candy sweetness, vanilla and citrus on the palate with spice and earth, and a sweet, smooth finish; Bourbon Banter notes clove and butterscotch with the smoke carrying from nose to a smoky-butterscotch finish.",
+      "reviewSummary": "Smooth, with a subtle straw-like aroma, hints of citrus and candy sweetness; vanilla and citrus on the palate with spice and earth, and a sweet, smooth finish. A second review adds clove and butterscotch, with the smoke carrying from nose to a smoky-butterscotch finish.",
       "sourceIds": [
         "bbcgoodfood-ilegal-reposado",
         "bourbonbanter-ilegal"
@@ -411,7 +411,7 @@
       "place": "Tlacolula, Oaxaca",
       "batch": "Joven espadín rested about 14 months in American oak, beyond the 1-year añejo minimum",
       "profileId": null,
-      "reviewSummary": "The Tequila Whisperer found it one of the most pleasing aged-mezcal surprises he had tasted; Bourbon Banter describes leaning further into caramel and spicier wood notes than the reposado, with less of the joven's smoke.",
+      "reviewSummary": "Leans further into caramel and spicier wood notes than the reposado, with less of the joven's smoke — one reviewer's most pleasing aged-mezcal surprise; Bourbon Banter describes the same caramel-and-wood direction.",
       "sourceIds": [
         "bourbonbanter-ilegal"
       ],
@@ -434,7 +434,7 @@
       "place": "Santiago Matatlán, Oaxaca",
       "batch": "100% cultivated tobalá (no wild-harvest), pit-roasted; sustainability-focused production",
       "profileId": "mezcal-tobala-sierra-oaxaca",
-      "reviewSummary": "Mezcal Reviews describes aromas of lemon, green pepper and pear, with citrus, basil, roasted fig, macadamia and truffle on the palate; member notes also mention bubblegum and fresh-cut grass across lots.",
+      "reviewSummary": "Aromas of lemon, green pepper and pear, with citrus, basil, roasted fig, macadamia and truffle on the palate; member notes across lots also mention bubblegum and fresh-cut grass.",
       "sourceIds": [
         "mezcalreviews-montelobos-tobala"
       ],
@@ -454,7 +454,7 @@
       "place": "Santiago Matatlán, Oaxaca",
       "batch": "Ancestral production: earthen-oven cooked, tahona-milled, wooden-vat fermented, clay pot stills; family also reforests wild populations",
       "profileId": "mezcal-tobala-sierra-oaxaca",
-      "reviewSummary": "Mezcal Reviews describes it as herbal with notes of dry soil, thyme, coriander and a touch of rosemary; a member review found it soft and delicate with solid sweetness throughout.",
+      "reviewSummary": "Herbal, with notes of dry soil, thyme, coriander and a touch of rosemary; a member review found it soft and delicate, with solid sweetness throughout.",
       "sourceIds": [
         "mezcalreviews-macurichos-tobala"
       ],
@@ -474,7 +474,7 @@
       "place": "Minas de Real del Peñón, Oaxaca",
       "batch": "Triple-distilled; the third distillation passes vapor through wild mountain fruits, almonds, rice and a suspended raw chicken breast (pechuga); seasonal, limited production",
       "profileId": "mezcal-espadin-valles-centrales",
-      "reviewSummary": "Mezcal Reviews members describe black licorice, anise and clove with fruit, a Scotch-like smokiness and — yes — a taste of chicken; others find basil, lemon, ocean and fruit on the nose. Difford's describes smoky roast chicken skin, paprika and sea salt. A festival-production style, not an everyday class.",
+      "reviewSummary": "Black licorice, anise and clove with fruit and a Scotch-like smokiness — and, yes, a taste of chicken; other notes find basil, lemon, ocean and fruit on the nose, with smoky roast chicken skin, paprika and sea salt in a second review. A festival-production style, not an everyday class.",
       "editorialNote": "Pechuga is a production style (third distillation over fruit and poultry), not a legal age class or separate spirit; it is contextual to mezcal tradition rather than a new category here.",
       "noteProfileId": "mezcal-espadin-valles-centrales",
       "noteSourceIds": [
@@ -499,7 +499,7 @@
       "place": "Zapotitlán de Vadillo, Jalisco",
       "batch": "Wild ixtero amarillo and lineño agaves, pit-roasted, volcanic-stone fermented, copper distilled; one of the producers actively pushing for a tuxca denomination of origin",
       "profileId": "tuxca-lineno-cimarron-jalisco-colima",
-      "reviewSummary": "A Mezcal Reviews member (batch 03) found a sweet floral fragrance with light sandalwood, a lactic palate with green peppers and sweet minerality, and an agave-rich finish.",
+      "reviewSummary": "A sweet floral fragrance with light sandalwood (batch 03), a lactic palate with green peppers and sweet minerality, and an agave-rich finish.",
       "sourceIds": [
         "mezcalreviews-siete-pozos-tuxca"
       ],
@@ -539,7 +539,7 @@
       "place": "Northern Chihuahuan Sierra, Chihuahua",
       "batch": "Small batches from wild Dasylirion; the color-coded Clande labels each mark a different sotolero — the yellow label is Bienvenido Fernandez",
       "profileId": "sotol-chihuahua",
-      "reviewSummary": "Mezcal Reviews members call the Yellow their favorite of the Clande line — pure magic in aroma and flavor, and for one reviewer their favorite sotol tried thus far; the brand's terroir-driven project supports small local producers and Dasylirion conservation.",
+      "reviewSummary": "Pure magic in aroma and flavor for its reviewers — one called it their favorite sotol tried thus far; the brand's terroir-driven project supports small local producers and Dasylirion conservation.",
       "sourceIds": [
         "mezcalreviews-clande-yellow",
         "wikipedia-sotol"
@@ -560,7 +560,7 @@
       "place": "Delicias, Chihuahua",
       "batch": "100% wild-harvested Dasylirion, steam-cooked, triple-distilled in double-column copper, then aged 2 years in new French white oak; USDA organic and Kosher certified",
       "profileId": null,
-      "reviewSummary": "A Mezcal Reviews member finds a medicinal-herbal character with brown sugar and anise and a very slight bitter finish — a light summer sipper comparable to fine añejo tequilas but deeper; the producer runs a Dasylirion conservation program.",
+      "reviewSummary": "A medicinal-herbal character with brown sugar and anise and a very slight bitter finish — a light summer sipper its reviewer found comparable to fine añejo tequilas but deeper.",
       "sourceIds": [
         "mezcalreviews-hacienda-chihuahua-anejo",
         "wikipedia-sotol"
@@ -584,7 +584,7 @@
       "place": "Sonora",
       "batch": "Traditional underground-oven roasted maguey pacifica; lot 2305, bottle 242 of the cited run",
       "profileId": "bacanora-pacifica-sierra-sonora",
-      "reviewSummary": "A Mezcal Reviews member describes wet grass after a rainstorm, woody sweetness and minerality on the nose; the palate shifts between a sweet mesquite-oak note with a minty finish and a peppery cookies-and-cream note — a souvenir-worthy bottle they now save for special occasions.",
+      "reviewSummary": "Wet grass after a rainstorm, woody sweetness and minerality on the nose; the palate shifts between a sweet mesquite-oak note with a minty finish and a peppery cookies-and-cream note — a bottle its reviewer now saves for special occasions.",
       "sourceIds": [
         "mezcalreviews-bacatt"
       ],
@@ -604,7 +604,7 @@
       "place": "Sonora",
       "batch": "Maguey pacifica roasted 48 hours in underground ovens (mallas), stone-wheel crushed, fermented 6-12 days, triple-distilled",
       "profileId": "bacanora-pacifica-sierra-sonora",
-      "reviewSummary": "Mezcal Reviews members describe jalapeño, watermelon and cream cheese with roasted agave piña and sourdough on the nose; grilled artichoke, charred asparagus, wet stone and turkey-jerky meatiness on the palate with a light earthy smoke — a solid introduction to the category.",
+      "reviewSummary": "Jalapeño, watermelon and cream cheese with roasted agave piña and sourdough on the nose; grilled artichoke, charred asparagus, wet stone and a turkey-jerky meatiness on the palate, with a light earthy smoke — a solid introduction to the category.",
       "sourceIds": [
         "mezcalreviews-sunora-blanco"
       ],
@@ -624,7 +624,7 @@
       "place": "San Pedro de la Cueva, Sonora",
       "batch": "Handcrafted small batches from agave pacifica; cited batch B002, bottle 909/1000",
       "profileId": "bacanora-pacifica-sierra-sonora",
-      "reviewSummary": "Mezcal Reviews describes it as briny and viscous with fruit and agave sugar; a member found cotton candy on the nose with orange fancy-toothpaste and buttercream notes and a slight sour finish.",
+      "reviewSummary": "Briny and viscous, with fruit and agave sugar; one member note found cotton candy on the nose, orange fancy-toothpaste and buttercream notes, and a slight sour finish.",
       "sourceIds": [
         "mezcalreviews-la-nina-bacanora"
       ],
@@ -643,7 +643,7 @@
       "place": "Jalisco",
       "batch": "Unaged plata from Taberna 3 Gallos; homage to the harvest celebrations of Hacienda de Ahuacatepec",
       "profileId": "raicilla-maximiliana-sierra-jalisco",
-      "reviewSummary": "Tastings.com scored it 97/100 in May 2025 and Forbes reports it was the top-ranked agave spirit at the 2025 Beverage Testing Institute judging, one of only two Platinum medals; judges describe bright aromatics of green bell pepper and grass with jalapeño and red bell pepper, and a grass-driven palate of agave, green apple and jalapeño.",
+      "reviewSummary": "Bright aromatics of green bell pepper and grass with jalapeño and red bell pepper, and a grass-driven palate of agave, green apple and jalapeño — the top-ranked agave spirit (97/100) at the 2025 Beverage Testing Institute judging, per Tastings.com and Forbes.",
       "sourceIds": [
         "tastings-el-acabo-raicilla",
         "forbes-bti-2025"
@@ -664,7 +664,7 @@
       "classification": "Bacanora — blanco (unaged); Sonora denomination of origin",
       "plantComposition": "100% wild agave yaquiana/Pacifica (the Sonoran form of Agave angustifolia), per the producer",
       "profileId": "bacanora-pacifica-sierra-sonora",
-      "reviewSummary": "A Mezcal Reviews member tasting describes warm agave with vanilla cake and slight fruit (pineapple, banana cream) on the nose, then a sweet, juicy palate with whipped-cream, cake-batter and custard notes against slight grass, smoke and salinity.",
+      "reviewSummary": "Warm agave with vanilla cake and slight fruit (pineapple, banana cream) on the nose, then a sweet, juicy palate with whipped-cream, cake-batter and custard notes against slight grass, smoke and salinity.",
       "sourceIds": [
         "bacanoraaguamiel-producer",
         "mezcalreviews-aguamiel-bacanora"
@@ -685,7 +685,7 @@
       "classification": "Tequila — 100% agave blanco, unaged",
       "plantComposition": "100% blue weber agave (Agave tequilana)",
       "profileId": "tequila-blanco-highland-jalisco",
-      "reviewSummary": "Difford's Guide (sampled 2011) finds a peppery, mineral nose with zesty lemon and pink grapefruit and subtle yeasty pastry aromas; the clean, mineral palate offers fudge, pastry and delicate herbal flavours, ending in a long, dry finish with vegetal notes and spicy black pepper. The bottle is un-aged, rested briefly in inert containers before bottling.",
+      "reviewSummary": "A peppery, mineral nose with zesty lemon and pink grapefruit and subtle yeasty pastry aromas; the clean, mineral palate offers fudge, pastry and delicate herbal flavours, ending in a long, dry finish with vegetal notes and spicy black pepper. Un-aged, rested briefly in inert containers before bottling.",
       "editorialNote": "A highlands blanco rather than a Tequila Valley one: expect the brighter, fruitier highland reading of the same legal class.",
       "noteProfileId": "tequila-blanco-valley-jalisco",
       "noteSourceIds": [
@@ -712,7 +712,7 @@
       "classification": "Tequila — 100% agave reposado (oak-rested)",
       "plantComposition": "100% blue weber agave (Agave tequilana)",
       "profileId": "tequila-reposado-valley-jalisco",
-      "reviewSummary": "The Rum Howler finds the fruitiness, spice and pepper held back compared with earlier bottlings — still a pleasant, easy reposado, but with less punchy agave than the reviewer wants in a sipped tequila.",
+      "reviewSummary": "Fruitiness, spice and pepper held back compared with earlier bottlings — still a pleasant, easy reposado, but with less punchy agave than its reviewer wants in a sipped tequila.",
       "sourceIds": [
         "cuervo-tradicional-producer",
         "rumhowler-cuervo-tradicional-reposado"
@@ -733,7 +733,7 @@
       "classification": "Tequila — 100% agave blanco, unaged",
       "plantComposition": "100% blue weber agave (Agave tequilana)",
       "profileId": "tequila-blanco-highland-jalisco",
-      "reviewSummary": "Liquor.com finds a lovely vegetal aroma of cooked agave — grass, green peppers, a little earth and eucalyptus — with flavors of agave, eucalyptus and white pepper leading to a smooth, savory finish; fine neat and in cocktails, if priced as a premium.",
+      "reviewSummary": "A lovely vegetal aroma of cooked agave — grass, green peppers, a little earth and eucalyptus — with flavors of agave, eucalyptus and white pepper leading to a smooth, savory finish; fine neat and in cocktails, if priced as a premium.",
       "editorialNote": "A highlands blanco: the same unaged class as the featured valley example, with the highlands' fruitier, more citric reading.",
       "noteProfileId": "tequila-blanco-valley-jalisco",
       "noteSourceIds": [
@@ -760,7 +760,7 @@
       "classification": "Tequila — 100% blue agave blanco, unaged",
       "plantComposition": "100% blue weber agave (Agave tequilana), per the brand",
       "profileId": "tequila-blanco-valley-jalisco",
-      "reviewSummary": "Bevvy's review finds fresh grapefruit and green apple on the nose, agave forward on the sip with black pepper, cloves, mint and juicy tropical fruit, finishing light and bright with grapefruit, pepper and cooling herbs.",
+      "reviewSummary": "Fresh grapefruit and green apple on the nose, agave forward on the sip with black pepper, cloves, mint and juicy tropical fruit, finishing light and bright with grapefruit, pepper and cooling herbs.",
       "sourceIds": [
         "casadragones-producer",
         "bevvy-casa-dragones-blanco"
@@ -782,7 +782,7 @@
       "plantComposition": "100% blue weber agave (Agave tequilana), estate grown",
       "batch": "Made with a 50/50 blend of rainwater and spring water; stone-oven cooked and tahona-crushed",
       "profileId": "tequila-blanco-highland-jalisco",
-      "reviewSummary": "The Daily Pour finds it showcases the complex, savory delights of highland agave, oozing pepper and green olive notes; the producer's method — slow stone-oven cooking, a handmade metal tahona, double distillation in copper — keeps the agave front and center.",
+      "reviewSummary": "Showcases the complex, savory delights of highland agave, oozing pepper and green olive notes; the producer's method — slow stone-oven cooking, a handmade metal tahona, double distillation in copper — keeps the agave front and center.",
       "sourceIds": [
         "siptequila-g4-blanco",
         "thedailypour-g4-blanco"
@@ -804,7 +804,7 @@
       "plantComposition": "100% blue weber agave (Agave tequilana), per the producer",
       "batch": "Aged a minimum of three years in American and Eastern European oak, then charcoal-filtered clear",
       "profileId": "tequila-cristalino-style",
-      "reviewSummary": "Tastings.com (2021 judging, 94 points) finds a smooth, complex cristalino: the oak's richness carries through the filtration, with the producer noting fig, quince, date, pineapple and pumpkin notes over cinnamon, vanilla and clove.",
+      "reviewSummary": "A smooth, complex cristalino: the oak's richness carries through the filtration, with fig, quince, date, pineapple and pumpkin notes over cinnamon, vanilla and clove noted by the producer.",
       "sourceIds": [
         "maestrodobel-50-cristalino",
         "tastings-maestro-dobel-50"
@@ -827,7 +827,7 @@
       "plantComposition": "100% blue weber agave (Agave tequilana)",
       "batch": "Rested 14–16 months in well-seasoned American oak (barrels with long tequila-maturation history), per the producer's US importer",
       "profileId": "tequila-anejo-valley-jalisco",
-      "reviewSummary": "88 Bamboo's taste test of the Rosales family's distillery finds the añejo keeps cooked agave at the center with oak in support — the house's earthy, mineral valley character holding on under gentle barrel sweetness.",
+      "reviewSummary": "Keeps cooked agave at the center with oak in support — the house's earthy, mineral valley character holding on under gentle barrel sweetness.",
       "sourceIds": [
         "siptequila-cascahuin-anejo",
         "88bamboo-cascahuin-anejo"
@@ -849,7 +849,7 @@
       "plantComposition": "100% blue weber agave (Agave tequilana), single-estate and vintage-dated",
       "batch": "Vintage-dated from a single rancho; aged a minimum of three years in ex-American whiskey barrels",
       "profileId": "tequila-extra-anejo-highland-jalisco",
-      "reviewSummary": "No independent review of the current release is documented; per the producer's own notes, the extra añejo shows cherries, anise, dark chocolate, sherry, oak and plantain on the nose, and oak, anise, dried fruit, cherries, toffee, black pepper and cinnamon on the palate.",
+      "reviewSummary": "Cherries, anise, dark chocolate, sherry, oak and plantain on the nose, and oak, anise, dried fruit, cherries, toffee, black pepper and cinnamon on the palate. No independent review of the current release is documented; per the producer's own notes.",
       "sourceIds": [
         "ochotequila-terroir",
         "liquorbarn-ocho-extra-anejo"
@@ -895,7 +895,7 @@
       "coverage": [
         "profile-not-covered"
       ],
-      "reviewSummary": "The Rum Howler (refreshed 2020, 87.5/100) finds smooth complexity throughout: a fade of butterscotch, nutty almond and a smattering of wood-spice and tea, with peppery spices building in the throat.",
+      "reviewSummary": "Smooth complexity throughout: a fade of butterscotch, nutty almond and a smattering of wood-spice and tea, with peppery spices building in the throat.",
       "editorialNote": "A highlands reposado: the app's reposado profile describes the Tequila Valley reading, and this expression distills in Los Altos — covered here as a catalogue fact, not mapped onto the valley profile.",
       "noteProfileId": "tequila-reposado-valley-jalisco",
       "noteSourceIds": [
@@ -922,7 +922,7 @@
       "coverage": [
         "profile-not-covered"
       ],
-      "reviewSummary": "The Rum Howler (revised 2018, 90.5/100) finds mellow agave with mild white pepper and light caramel, a very mild oak presence and an appealing honey-like sweetness, with lime zest and apricot jam melded into the agave, oak and caramel.",
+      "reviewSummary": "Mellow agave with mild white pepper and light caramel, a very mild oak presence and an appealing honey-like sweetness, with lime zest and apricot jam melded into the agave, oak and caramel.",
       "editorialNote": "A highlands añejo: the app's añejo profile describes the Tequila Valley reading, and this expression distills in Los Altos — covered here as a catalogue fact, not mapped onto the valley profile.",
       "noteProfileId": "tequila-anejo-valley-jalisco",
       "noteSourceIds": [
@@ -946,7 +946,7 @@
       "classification": "Tequila — 100% agave blanco, unaged",
       "plantComposition": "100% blue weber agave (Agave tequilana)",
       "profileId": "tequila-blanco-valley-jalisco",
-      "reviewSummary": "The Rum Howler (2018, 82.5/100) notes it was released in 2011 as a true 100% blue agave tequila from the central lowland region; the review finds an easy-drinking silver with the valley's earthy, herbaceous character present but gentler than the category's punchiest examples.",
+      "reviewSummary": "An easy-drinking silver with the valley's earthy, herbaceous character present but gentler than the category's punchiest examples — released in 2011 as a true 100% blue agave tequila from the central lowland region.",
       "sourceIds": [
         "cuervo-tradicional-producer",
         "rumhowler-cuervo-tradicional-silver"
@@ -970,7 +970,7 @@
       "coverage": [
         "profile-not-covered"
       ],
-      "reviewSummary": "The Rum Howler describes a dichotomous spirit: honeyed caramel sweetness, soft earthy baked squash, sweet green peppers, hot white pepper, sandalwood and a hint of vanilla, changing direction on the first sip.",
+      "reviewSummary": "A dichotomous spirit: honeyed caramel sweetness, soft earthy baked squash, sweet green peppers, hot white pepper, sandalwood and a hint of vanilla, changing direction on the first sip.",
       "editorialNote": "A highlands reposado: the app's reposado profile describes the Tequila Valley reading, and this expression distills in Los Altos — covered here as a catalogue fact, not mapped onto the valley profile.",
       "noteProfileId": "tequila-reposado-valley-jalisco",
       "noteSourceIds": [
@@ -998,7 +998,7 @@
       "coverage": [
         "profile-not-covered"
       ],
-      "reviewSummary": "Wine Enthusiast (96 points, blind tasted) finds it extraordinarily smooth, with a very sweet, fruity, almost wine-like nose and a bold, pure peppery flavor that finishes cleanly.",
+      "reviewSummary": "Extraordinarily smooth, with a very sweet, fruity, almost wine-like nose and a bold, pure peppery flavor that finishes cleanly.",
       "editorialNote": "A joven blend: no joven tequila style profile exists in this guide yet, so this entry is covered as a catalogue fact only.",
       "noteProfileId": "tequila-cristalino-style",
       "noteSourceIds": [

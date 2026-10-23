@@ -37,8 +37,19 @@ export function parseHash(hash) {
       const from = new URLSearchParams(query).get("from");
       return from ? { name: "learn", params: { from } } : { name: "learn", params: {} };
     }
-    if (segments.length === 2 && ["terms", "plants", "processes"].includes(segments[1])) {
-      return { name: "learn", params: { section: segments[1] } };
+    // Chapter deep links keep the originating lesson in the return context
+    // (#/learn/chapter-<id>?from=start:<lesson>), mirroring profile origins.
+    if (segments.length === 2) {
+      const [rawSection, query = ""] = segments[1].split("?");
+      const from = new URLSearchParams(query).get("from");
+      const known = ["terms", "plants", "processes"].includes(rawSection);
+      const chapter = rawSection.startsWith("chapter-") ? rawSection.slice("chapter-".length) : null;
+      if (known) return { name: "learn", params: { section: rawSection } };
+      if (chapter) {
+        const params = { section: `chapter-${chapter}` };
+        if (from) params.from = from;
+        return { name: "learn", params };
+      }
     }
     return { name: "notFound", params: {} };
   }
@@ -100,7 +111,11 @@ export function buildHash(route) {
       return `#/discover/${encodeURIComponent(route.params.kind)}/${encodeURIComponent(route.params.id)}`;
     case "learn": {
       const fromQuery = route.params.from ? `?from=${encodeURIComponent(route.params.from)}` : "";
-      return route.params.section ? `#/learn/${route.params.section}` : `#/learn${fromQuery}`;
+      if (!route.params.section) return `#/learn${fromQuery}`;
+      const section = route.params.section.startsWith("chapter-") && !/^(terms|plants|processes)$/.test(route.params.section)
+        ? `chapter-${route.params.section.slice("chapter-".length)}`
+        : route.params.section;
+      return `#/learn/${section}${fromQuery}`;
     }
     case "start":
       return route.params.lessonId ? `#/start/${encodeURIComponent(route.params.lessonId)}` : "#/start";

@@ -201,6 +201,20 @@ a { color: var(--blue); }
 
 .theme-toggle:hover { box-shadow: var(--glow-anejo); transform: translateY(-1px); }
 
+/* Pair 16: language control shows flag + language name side by side; the
+   flag is decorative, the text carries the meaning. Pill, not circle. */
+.theme-toggle.locale-toggle {
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.theme-toggle.locale-toggle .locale-flag { font-size: 1rem; line-height: 1; }
+
 .app-main {
   max-width: 82rem;
   margin: 0 auto;
@@ -1181,3 +1195,13 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .catalogue-summary .bottle-review { margin: 0.35rem 0; }
 .catalogue-summary .catalogue-profile-link { display: inline-block; margin-top: 0.4rem; }
 .brand-index { margin: 0.6rem 0 0; }
+
+/* Pair 16: practical first-tasting sequence in the lesson reading flow. */
+.lesson-practice { margin-block: 1rem; padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); }
+.lesson-practice-list { margin: 0.4rem 0 0; padding-left: 1.2rem; display: grid; gap: 0.6rem; }
+.lesson-practice-step > p { margin: 0.15rem 0 0; }
+.compare-change-styles { margin-top: 1.2rem; border-top: 1px solid var(--line); padding-top: 0.6rem; }
+.compare-change-styles summary { cursor: pointer; font-weight: 600; min-height: var(--tap); display: flex; align-items: center; }
+/* Pair 16: compact provenance line under bottle-first descriptions. */
+.bottle-basis { margin: 0.15rem 0 0.4rem; font-size: 0.82rem; opacity: 0.75; }
+.bottle-basis-text { display: inline; }

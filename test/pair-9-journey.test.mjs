@@ -41,8 +41,8 @@ test("pair 9: hub renders outcome, five addressable steps and the reference entr
   }
   assert.ok(container.querySelector(".journey-reference a[href='#/learn']"),
     "reference entrance stays directly available near the journey start");
-  assert.ok(!/purchase|account|quiz/i.test(container.textContent) === false,
-    "no-purchase/no-account/no-quiz expectations stated");
+  assert.ok(container.textContent.includes("never required"),
+    "the read-only expectation is stated once, plainly");
 });
 
 test("pair 9: every lesson carries one idea, examples with reasons, and prev/next", () => {

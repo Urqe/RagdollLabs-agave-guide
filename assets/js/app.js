@@ -260,11 +260,21 @@ async function renderRoute(container, route) {
 function wireLocaleToggle(refresh) {
   const button = document.getElementById("locale-toggle");
   if (!button) return;
+  // Pair 16: the toggle shows the language the reader would switch TO,
+  // as two clearly identified editions (UK flag → English, Mexican flag →
+  // Español (México)). The accessible label always names the target
+  // language, and the flag is decorative next to the text, so the control
+  // stays readable if the flag fails to render.
   const render = () => {
     const next = locale.get() === "en" ? "es" : "en";
-    button.textContent = next.toUpperCase();
-    button.setAttribute("aria-label", ui(locale, next === "en" ? "switchToEn" : "switchToEs"));
-    button.title = button.getAttribute("aria-label");
+    const flag = button.querySelector(".locale-flag");
+    const name = button.querySelector(".locale-name");
+    const label = ui(locale, next === "en" ? "switchToEn" : "switchToEs");
+    if (flag) flag.textContent = next === "en" ? "\uD83C\uDDEC\uD83C\uDDE7" : "\uD83C\uDDF2\uD83C\uDDFD";
+    if (name) name.textContent = next === "en" ? "English" : "Espa\u00f1ol (M\u00e9xico)";
+    if (!flag || !name) button.textContent = `${next === "en" ? "\uD83C\uDDEC\uD83C\uDDE7" : "\uD83C\uDDF2\uD83C\uDDFD"} ${next === "en" ? "English" : "Espa\u00f1ol"}`;
+    button.setAttribute("aria-label", label);
+    button.title = label;
   };
   button.addEventListener("click", () => {
     locale.set(locale.get() === "en" ? "es" : "en");
@@ -356,7 +366,7 @@ async function boot() {
     state.consumedRestore = null;
     state.catalogueActive = route.name === "catalogue";
     syncCompareNav(route);
-    document.documentElement.lang = locale.get();
+    document.documentElement.lang = locale.get() === "es" ? "es-MX" : "en";
     for (const link of document.querySelectorAll(".nav-link")) {
       const name = link.dataset.view;
       link.textContent = locale.t("nav." + name);

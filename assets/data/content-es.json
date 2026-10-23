@@ -2,7 +2,7 @@
   "profiles": {
     "tequila-blanco-valley-jalisco": {
       "title": "Tequila blanco, estilo Valle de Tequila",
-      "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. Pregúntale a cualquiera del valle: su agave crece más pequeño y más herbáceo que el de los altos, y sus blancos se leen sabrosos y vegetales en lugar de dulces — el sabor de este suelo, y los del valle te lo dirán con orgullo.",
+      "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. Las condiciones del valle — menor elevación, noches más cálidas — tienden a producir agaves más pequeños y herbáceos que los de Los Altos, así que los blancos del valle suelen leerse sabrosos y vegetales en lugar de dulces: el sabor de este suelo, una distinción de la que el valle se enorgullece.",
       "description": "Un blanco (también llamado silver o plata) es un tequila embotellado sin crianza en roble, así que lo que llega a la copa es el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas.",
       "beginnerNote": "¿Nuevo en el tequila? Empieza aquí: ningún barril se interpone entre tú y el agave cocido, así que un blanco es la introducción más clara a cómo se lee la tierra de cada productor en la copa.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
@@ -21,7 +21,7 @@
     },
     "mezcal-espadin-valles-centrales": {
       "title": "Mezcal de espadín, estilo Valles Centrales",
-      "context": "Mezcal artesanal joven hecho con agave espadín (Agave angustifolia) en los Valles Centrales de Oaxaca. Aquí el mezcal es asunto de familia: corazones asados en hornos subterráneos, lotes pequeños, generaciones de las mismas manos. El asado en horno le da su humo distintivo — en los Valles Centrales nadie lo llama defecto; le llaman casa. El espadín es el agave de mezcal más plantado — el que una familia oaxaqueña sirve primero al visitante curioso, porque es la forma más amable de entrar en la tradición.",
+      "context": "Mezcal artesanal joven hecho con agave espadín (Agave angustifolia) en los Valles Centrales de Oaxaca. Aquí el mezcal es asunto de familia: corazones asados en hornos subterráneos, lotes pequeños, cada palenque pasando su oficio a la siguiente generación. El asado en pozo le da su humo distintivo — en los Valles Centrales ese humo es parte de casa, el sabor de la tierra misma, y los oaxaqueños lo abrazan como tal. El espadín es el agave de mezcal más plantado — el que una familia oaxaqueña sirve primero al visitante curioso, porque es la forma más amable de entrar en la tradición.",
       "description": "El mezcal es un destilado hecho de los corazones asados de muchas especies de agave, no solo del agave azul. Asar las piñas bajo tierra le da al mezcal su humo característico, superpuesto a notas de fruta, hierba y minerales que varían según la variedad de agave, el pueblo y el maestro mezcalero. Este perfil describe el estilo de un espadín joven típico de los Valles Centrales; cada botella varía considerablemente.",
       "beginnerNote": "¿Nuevo en el mezcal? El humo proviene de asar el agave bajo tierra — es un carácter del proceso, no un sabor añadido. Los oaxaqueños te dirán con gusto que es el sabor de su tierra.",
       "category": "Mezcal — destilado con Denominación de Origen propia; el joven/abocado es una clase legal sin crianza",
@@ -41,15 +41,15 @@
     },
     "bacanora-pacifica-sierra-sonora": {
       "title": "Bacanora, estilo Agave Pacifica (Sierra de Sonora)",
-      "context": "Pregúntale a un sonorense por el bacanora y mira su pecho hincharse. “Es nuestro destilado”, dirá: un agave silvestre de la Sierra Madre de Sonora, destilado de Agave angustifolia pacifica (aquí nomás le decimos Pacifica, o Yaquiana), con denominación de origen que cubre 35 municipios sonorenses. Durante gran parte del siglo XX (1915–1992) hacerla fue un delito, y los sonorenses siguieron destilando igual, escondidos en la sierra; la DO llegó en el año 2000. Esa terquedad es el orgullo: el bacanora sobrevivió porque las familias no la dejaron morir.",
+      "context": "El bacanora es el destilado silvestre que Sonora llama suyo: destilado de Agave angustifolia pacifica (aquí le decimos Pacifica, o Yaquiana) en la Sierra Madre de Sonora, con denominación de origen que cubre 35 municipios sonorenses. Durante gran parte del siglo XX (1915–1992, según la historia oficial de Sonora) hacerla fue prohibido, y se siguió destilando en la sierra, en voz baja; la producción se legalizó de nuevo en 1992 y la denominación de origen llegó en el año 2000 — dos hitos separados. Esa continuidad es el corazón de la tradición: el bacanora sobrevivió porque las familias siguieron destilándolo, en vinatas pasadas de una generación de vinateros a la siguiente.",
       "description": "La bacanora tradicional asa los corazones de agave en hornos subterráneos, a menudo con leña de mezquite, fermenta con levaduras silvestres y destila dos veces, dando un destilado que se ubica estilísticamente entre el tequila y el mezcal oaxaqueño: agave asado en el centro con un humo generalmente más suave que el del mezcal, más hierbas del desierto y un filo mineral de la sierra.",
-      "beginnerNote": "¿Nuevo en el bacanora? Piénsala como la prima sonorense del mezcal: mismo corazón de agave asado, normalmente un poco menos humo, a menudo más ligera y herbácea. Un sonorense te dirá que no necesita presentación; tiene razón, pero esto ayuda.",
+      "beginnerNote": "¿Nuevo en el bacanora? Piénsalo como el primo sonorense del mezcal: mismo corazón de agave asado, normalmente un poco menos humo, a menudo más ligero y herbáceo.",
       "category": "Bacanora — destilado con Denominación de Origen propia (Sonora, desde 2000)",
       "process": "Asado en horno (a menudo con mezquite), fermentación con levaduras silvestres, doble destilación",
       "smoke": "Presente pero generalmente más suave que el mezcal oaxaqueño: el asado en horno da un humo magro y sabroso en lugar de dominante.",
       "finish": "Seco y herbáceo, con un hilo suave de humo y un final mineral y picante.",
       "pairing": {
-        "serving": "Se bebe solo, al estilo sonorense con lima y una pizca de sal de chapulín; sugerencia editorial.",
+        "serving": "Solo, en copa pequeña; un reposo corto abre los aromas del asado. Un poco de agua o un cubo de hielo también funcionan si lo prefieres más suave. Sugerencia editorial, no una regla.",
         "foods": [
           "carne asada",
           "queso sonorense (queso cocido)",
@@ -81,7 +81,7 @@
     },
     "tuxca-lineno-cimarron-jalisco-colima": {
       "title": "Tuxca, estilo Liñeno/Cimarrón (frontera Jalisco–Colima)",
-      "context": "La tuxca es un destilado de la frontera: tradición agavera del sur de Jalisco y el norte de Colima, nombrada por el municipio de Tuxcacuesco, a los pies del Volcán de Colima. No tiene denominación de origen, y quien la hace te dirá que ese es precisamente el punto: el nombre es una tradición regional, no una categoría legal como el tequila o el mezcal, y sus definiciones son flexibles. Pregunta por Tuxcacuesco y te señalarán el valle del Río Almería, con Zapotitlán de Vadillo y Tolimán como corazón donde la tradición nunca se perdió. En estos pueblos la tradición se mantiene a la vieja manera, y en voz baja.",
+      "context": "La tuxca es un destilado de la frontera: tradición agavera del sur de Jalisco y el norte de Colima, nombrada por el municipio de Tuxcacuesco, a los pies del Volcán de Colima. No tiene denominación de origen, y la propia tradición conserva el nombre como regional, no como legal — sus definiciones son flexibles, y esa flexibilidad es parte de cómo la mantienen las comunidades de Tuxcacuesco, del valle del Río Almería, de Zapotitlán de Vadillo y de Tolimán: a la vieja manera, y en voz baja.",
       "description": "La tuxca se asa en hornos cilíndricos, se muele a mano, fermenta en cráteres volcánicos recubiertos y se destila en alambiques de madera de tradición filipina. El resultado es un destilado magro, especiado y mineral muy tradicional de las tierras fronterizas del volcán de Colima.",
       "beginnerNote": "¿Nuevo en la tuxca? Espera un destilado fronterizo profundamente tradicional y sin certificación — más magro y mineral que la mayoría de los mezcales, con especia en lugar de humo. Sin sello de certificación de DO en la botella; siguen aplicando otros requisitos de etiquetado, y la autoridad de la tradición es cultural, no certificada.",
       "category": "Tuxca — una tradición regional sin denominación de origen; su estatus legal no equivale al del tequila ni al del mezcal",
@@ -108,7 +108,7 @@
       "process": "Derivado de savia: aguamiel recolectado de la planta viva, fermentado, destilado — sin cocción de la piña",
       "finish": "Suave y herbal, con un final terroso ligero y sin carácter de asado.",
       "pairing": {
-        "serving": "Se bebe solo; tradicionalmente es un destilado de ocasiones pequeñas — solo sugerencia editorial.",
+        "serving": "Solo, a temperatura ambiente, en copa pequeña; su carácter verde y láctico también acompaña bien una comida compartida sin prisa. Sugerencia editorial, no una regla.",
         "foods": [
           "tamales chiapanecos",
           "quesos ahumados",
@@ -120,7 +120,7 @@
     },
     "destilado-de-pulque-salmiana-tlaxcala": {
       "title": "Destilado de pulque, estilo Salmiana (Tlaxcala)",
-      "context": "Tlaxcala guarda el pulque como suyo: es el corazón del maguey pulquero. El destilado de pulque es el destilado de savia de la región: los productores de la tradición pulquera fermentan el aguamiel del maguey pulquero (Agave salmiana) hasta hacer pulque y luego lo destilan — el agave nunca se cocina. Tlaxcala no forma parte de la denominación del mezcal y el destilado de pulque no es una categoría certificada; es una tradición regional, vendida bajo etiquetas de destilado, sostenida por familias que consideran destilar el pulque un derecho de nacimiento de sus cerros. El pulque fermentado mismo (sin destilar) no forma parte de este catálogo.",
+      "context": "Tlaxcala guarda el pulque como suyo: es el corazón del maguey pulquero. El destilado de pulque es el destilado de savia de la región: los productores de la tradición pulquera fermentan el aguamiel del maguey pulquero (Agave salmiana) hasta hacer pulque y luego lo destilan — el agave nunca se cocina. Tlaxcala no forma parte de la denominación del mezcal y el destilado de pulque no es una categoría certificada; es una tradición regional, vendida bajo etiquetas de destilado, sostenida por familias para las que destilar el pulque es parte de la herencia de sus cerros. El pulque fermentado mismo (sin destilar) no forma parte de este catálogo.",
       "description": "A diferencia de los destilados de agave cocido, el destilado de pulque parte de savia sin cocinar fermentada en pulque, que luego se destila. El resultado es ligero, láctico y verde, con una acidez suave completamente distinta al carácter asado de los destilados de agave cocido.",
       "beginnerNote": "¿Nuevo en el destilado de pulque? Es pulque destilado — savia de agave sin cocinar, así que espera un carácter láctico, verde y suavemente ácido, distinto de cualquier destilado de agave cocido. Un sabor del oficio más antiguo de Tlaxcala.",
       "category": "Destilado de pulque — una tradición regional; sin denominación de origen, y explícitamente no es mezcal (el pulque fermentado no es un destilado)",
@@ -139,9 +139,9 @@
     },
     "raicilla-costa-jalisco": {
       "title": "Raicilla de la costa, estilo costero (Jalisco)",
-      "context": "La denominación de origen de la raicilla (2019) abarca 16 municipios de Jalisco y uno de Nayarit, y editorialmente se divide en dos tradiciones: Sierra (montaña) y Costa. La raicilla de la costa proviene de la zona de Cabo Corrientes y Tomatlán, hecha principalmente con Agave angustifolia (localmente chico aguiar) y Agave rhodacantha. Pescadores y campesinos de esta costa cocinan su agave en hornos subterráneos, a la vieja manera — y te dirán que su raicilla lleva sal en el alma, algo que la montaña no puede igualar.",
+      "context": "La denominación de origen de la raicilla (2019) abarca 16 municipios de Jalisco y uno de Nayarit, y editorialmente se divide en dos tradiciones: Sierra (montaña) y Costa. La raicilla de la costa proviene de la zona de Cabo Corrientes y Tomatlán, hecha principalmente con Agave angustifolia (localmente chico aguiar) y Agave rhodacantha. Pescadores y campesinos de esta costa cocinan su agave en hornos subterráneos, a la vieja manera — y la costa se enorgullece del carácter magro y salino de su raicilla frente al de la sierra.",
       "description": "El estilo costero de la raicilla asa los corazones de agave bajo tierra, dándole un humo sabroso más presente que en la variante de la sierra, entretejido con cítricos y hierbas. Comparte la denominación de origen con toda la raicilla; la diferencia está en la cocción.",
-      "beginnerNote": "¿Nuevo en la raicilla costera? Piénsala como la prima marítima y más ahumada de la raicilla de la sierra: misma DO, distinta cocción. El orgullo propio de la costa.",
+      "beginnerNote": "¿Nuevo en la raicilla costera? Piénsala como la prima marítima y más ahumada de la raicilla de la sierra: misma DO, distinta cocción. La versión propia de la costa.",
       "category": "Raicilla — destilado con Denominación de Origen propia (Jalisco y Bahía de Banderas, Nayarit, desde 2019); la costa es una división editorial de tradiciones, no una clase legal",
       "process": "Asado en horno subterráneo, fermentación con levaduras silvestres, destilación en pequeños lotes",
       "smoke": "Más presente que en la raicilla de la sierra: la cocción bajo tierra da un humo sabroso entretejido con cítricos y hierbas.",
@@ -166,7 +166,7 @@
       "process": "Cocción al vapor, fermentación, doble destilación y reposo en barricas de roble (mínimo legal 2 meses; típicamente 2–12 meses)",
       "finish": "Medio, con especias suaves de madera y un final de caramelo y agave.",
       "pairing": {
-        "serving": "Se bebe solo; también es la evolución clásica de la Margarita para quien busca una base más redonda (sugerencia editorial).",
+        "serving": "Solo, en copa pequeña, o con un cubo de hielo; su base más redonda también sostiene bien una Margarita o una Paloma cuando quieres el roble presente. Sugerencia editorial, no una regla.",
         "foods": [
           "tacos",
           "carnes asadas",
@@ -178,7 +178,7 @@
     },
     "tequila-anejo-valley-jalisco": {
       "title": "Tequila añejo, estilo Valle de Tequila",
-      "context": "El añejo es una clase legal del tequila: reposo en roble de al menos un año, en barricas de no más de 600 litros. El extra añejo (al menos tres años) existe como clase adicional. Este perfil describe un añejo tradicional del valle de unos 18 meses — muy por encima del mínimo de un año, que es la única referencia legal (la NOM fija un mínimo, no un rango). En el valle te dirán que el agave debe seguir hablando a través de un año de roble; los mejores productores se aseguran de que así sea.",
+      "context": "El añejo es una clase legal del tequila: reposo en roble de al menos un año, en barricas de no más de 600 litros. El extra añejo (al menos tres años) existe como clase adicional. Este perfil describe un añejo tradicional del valle de unos 18 meses — muy por encima del mínimo de un año, que es la única referencia legal (la NOM fija un mínimo, no un rango). La práctica del valle favorece la mesura: el agave debe seguir hablando a través de un año de roble, y los mejores productores se aseguran de que así sea.",
       "description": "Un añejo es tequila envejecido en roble un año o más: vainilla, fruta seca y especias de madera rodean el agave. Es la expresión más redonda y oscura del tequila, la más cercana al whisky en sensación, aunque sigue siendo tequila en esencia.",
       "beginnerNote": "¿Nuevo en el añejo? Espera la expresión más redonda y oscura del tequila: vainilla de roble y fruta seca alrededor del agave — la más cercana al whisky en sentir, todavía tequila de corazón.",
       "category": "Tequila — destilado con Denominación de Origen propia; el añejo es una clase legal (envejecido en roble, mínimo 1 año)",
@@ -301,7 +301,7 @@
       "smoke": "Un carácter de asado suave en lugar de humo pesado; los lotes ancestrales de barro pueden mostrar más.",
       "finish": "Medio y sedoso, con dulzor de fruta y un final mineral suave.",
       "pairing": {
-        "serving": "Se bebe solo en una copita pequeña; las florales del tobalá se pierden en coctelería (sugerencia editorial).",
+        "serving": "Solo, en una copita pequeña — una copa pequeña con tallo — para que se concentren los florales; si lo mezclas, espera una versión más callada y suave, no todo su carácter. Sugerencia editorial, no una regla.",
         "foods": [
           "quesos frescos",
           "salsas de fruta",
@@ -313,7 +313,7 @@
     },
     "sotol-chihuahua": {
       "title": "Sotol, estilo desierto chihuahuense",
-      "context": "Pregúntale a un sotolero qué es el sotol y lo escucharás sin rodeos: no es agave, y está orgulloso de ello. El sotol se destila de plantas del género Dasylirion (sotol o sereque), nativas del desierto chihuahuense — parientes del agave en la familia Asparagaceae que comparten la lógica del asado de piña. Tiene Denominación de Origen desde 2002, que cubre solo Chihuahua, Coahuila y Durango; fue ilegal en México antes de 1994, y las vinatas clandestinas mantuvieron viva la tradición, igual que las familias sonorenses mantuvieron el bacanora. Esta guía lo incluye como tradición afín al agave, etiquetado con honestidad: el sotol no es un destilado de agave, y decirlo es parte de su historia. Este perfil describe el estilo del desierto de Chihuahua.",
+      "context": "Un sotolero te lo dirá sin rodeos: el sotol no es agave, y está orgulloso de ello. El sotol se destila de plantas del género Dasylirion (sotol o sereque), nativas del desierto chihuahuense — parientes del agave en la familia Asparagaceae que comparten la lógica del asado de piña. Tiene Denominación de Origen desde 2002, que cubre solo Chihuahua, Coahuila y Durango; su historia del siglo XX incluye regulación restrictiva y producción clandestina (el marco legal exacto varía según la época y el lugar; esta guía no afirma una sola prohibición nacional antes de 1994). Esta guía lo incluye como tradición afín al agave, etiquetado con honestidad: el sotol no es un destilado de agave, y decirlo es parte de su historia. Este perfil describe el estilo del desierto de Chihuahua.",
       "description": "El sotol asa la piña de Dasylirion en hornos cónicos (o la cuece al vapor los productores más grandes), fermenta silvestre y destila en cobre o barro. El resultado es un destilado herbal, fresco y ligeramente picante, más verde y salvaje que el tequila, con un humo generalmente más ligero que el del mezcal.",
       "beginnerNote": "¿Nuevo en el sotol? Espera frescura herbácea y de pasto húmedo sobre un humo suave — más cercano a un primo verde y salvaje del mezcal que al tequila.",
       "category": "Sotol — destilado con Denominación de Origen propia (Chihuahua, Coahuila, Durango, desde 2002); explícitamente no es un destilado de agave, incluido aquí como una tradición norteña afín",
@@ -333,7 +333,7 @@
     },
     "tequila-blanco-highland-jalisco": {
       "title": "Tequila blanco de los Altos, estilo Los Altos (Jalisco)",
-      "context": "El blanco es la clase legal sin añejar del tequila — y los Altos (alrededor de Atotonilco el Alto y Arandas) lo leen de forma muy distinta al Valle de Tequila. Los suelos minerales ricos en hierro, la mayor elevación y las noches más frescas producen agaves más grandes y dulces, así que un blanco de los Altos tiende a lo brillante, afrutado y floral donde el valle tiende a lo terroso y sabroso. Es una distinción cultural y agronómica, no una clase legal — ambos son simplemente tequila blanco, y los alteños te contarán con verdadero orgullo lo afrutado de su tierra roja.",
+      "context": "El blanco es la clase legal sin crianza del tequila — y los Altos (alrededor de Atotonilco el Alto y Arandas) lo leen de forma muy distinta al Valle de Tequila. Los suelos minerales ricos en hierro, la mayor elevación y las noches más frescas tienden a producir agaves más grandes y dulces, así que un blanco de los Altos suele inclinarse a lo brillante, afrutado y floral donde el valle tiende a lo terroso y sabroso. Es una distinción cultural y agronómica, no una clase legal — ambos son simplemente tequila blanco, y Los Altos presume con razón de la frutalidad de su tierra roja.",
       "description": "La lectura alteña del tequila sin añejar: agave cocido más dulce con cítricos (piel de naranja, toronja), fruta tropical y de hueso, florales delicados y una especia suave, en un cuerpo más blando y redondo que el estilo del valle.",
       "beginnerNote": "¿Nuevo en el tequila? Un blanco de los Altos suele describirse como punto de partida amable: suave, dulce y afrutado, y a menudo menos sabroso que un blanco del valle — aunque valle y altiplano se solapan y cada botella varía. Pruébalo junto al blanco del valle para saborear lo que el lugar puede hacer con la misma planta.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
@@ -353,34 +353,34 @@
   },
   "bottles": {
     "fortaleza-blanco": {
-      "reviewSummary": "Los reseñistas lo llaman un blanco del valle de referencia: una expresión sabrosa y firme de agave cocido con salmuera de aceituna y pimienta, con más complejidad que la mayoría de su categoría."
+      "reviewSummary": "Un blanco del valle de referencia: agave cocido sabroso y firme, con salmuera de aceituna y pimienta, y más complejidad que la mayoría de su categoría."
     },
     "lost-explorer-espadin": {
-      "reviewSummary": "Los reseñistas describen un espadín acogedor y suavemente ahumado: herbáceo y delicadamente dulce en el paladar, con un final largo, seco y ahumado que se desvanece en hierbas terrosas."
+      "reviewSummary": "Un espadín acogedor y suavemente ahumado: herbáceo y delicadamente dulce en el paladar, con un final largo, seco y ahumado que se desvanece en hierbas terrosas."
     },
     "rancho-tepua-bacanora": {
-      "reviewSummary": "Las notas de cata de Mezcalistas describen un destilado mineral impulsado por el agave asado: sándalo, canela, limoncillo y un toque mineral alrededor de un centro de agave asado, con una nariz rica de agave dulce."
+      "reviewSummary": "Mineral y guiado por el agave asado: sándalo, canela, limoncillo y un toque mineral alrededor de un centro de agave asado, sobre una nariz rica de agave dulce."
     },
     "la-venenosa-tabernas": {
-      "reviewSummary": "Los miembros de Mezcal Reviews describen una raicilla rústica y accesible: manzana ácida y un ligero vinagre en la nariz, agave dulce y un agradable matiz fermentado en el paladar, ligera y fácil de beber o mezclar."
+      "reviewSummary": "Una raicilla rústica y accesible: manzana ácida y un ligero vinagre en la nariz, agave dulce y un agradable matiz fermentado en el paladar — ligera y fácil de beber o mezclar."
     },
     "cielo-rojo-bacanora-blanco": {
-      "reviewSummary": "TEQUILA.net describe un agave dulce y herbáceo con un toque de humo y cítricos, un cuerpo medio-ligero, con el humo avanzando y notas herbáceas y terrosas superando el dulzor inicial; Mezcal Reviews la llama una bacanora agradable y vibrante.",
+      "reviewSummary": "Agave dulce y herbáceo con un toque de humo y cítricos, y un cuerpo medio-ligero; el humo avanza y las notas herbáceas y terrosas superan el dulzor inicial. En conjunto, una bacanora agradable y vibrante.",
       "editorialNote": "De la misma viñata de la familia Contreras que la botella de ejemplo de este perfil — espera un carácter mineral y de asado en horno similar, con la reseña de Tequila.net señalando un humo más adelantado que el del perfil típico.",
       "batch": "Lotes pequeños; la primera bacanora premium importada legalmente a EE. UU."
     },
     "kilinga-bacanora-silvestre": {
-      "reviewSummary": "Mezcal Reviews describe notas de flores silvestres, cítricos y la acidez de la manzana verde, con un suave final violeta — una bacanora aromática y moderadamente compleja.",
+      "reviewSummary": "Flores silvestres, cítricos y la acidez de la manzana verde, con un suave final violeta — una bacanora aromática y moderadamente compleja.",
       "editorialNote": "Una lectura más afrutada y floral de el bacanora que la que describe este perfil — la acidez de manzana verde y el final violeta quedan fuera del centro mineral y sabroso del ejemplo de Rancho Tepúa."
     },
     "la-venenosa-costa": {
-      "reviewSummary": "Una cata de miembro de Mezcal Reviews (lote 32, 2021) la llama la oferta más sabrosa y ahumada del rango de La Venenosa — deliciosamente positiva en su punto de precio, según el reseñista.",
+      "reviewSummary": "La oferta más sabrosa y ahumada del rango de La Venenosa (lote 32, 2021) — un destilado que su reseñista encontró delicioso en su punto de precio.",
       "editorialNote": "Encaja con la lectura costera de cocción en fosa del perfil Costa: sabroso y ahumado es exactamente lo que el perfil predice para este estilo.",
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas",
       "place": "Jalisco costero (región de Cabo Corrientes)"
     },
     "balancan-tuxca": {
-      "reviewSummary": "Las notas de cata de Mezcalistas describen una nariz rica con descriptores especiado, jugo de pepinillos y ácido; los miembros de Mezcal Reviews encuentran ralladura de lima, heno, pimienta en grano y agave con un paladar directo y mineral.",
+      "reviewSummary": "Una nariz rica con notas especiado, jugo de pepinillos y ácido (Mezcalistas); ralladura de lima, heno, pimienta en grano y agave sobre un paladar directo y mineral (miembros de Mezcal Reviews).",
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas",
       "producer": "Ignacio Juárez (vinatero, región de Tuxcacuesco), embotellado por Laika Spirits",
       "place": "Región de Tuxcacuesco, sur de Jalisco (frontera Jalisco–Colima)"
@@ -393,18 +393,18 @@
       "composition": "Destilado de savia de agave fermentada (aguamiel); según la fuente citada, la categoría más amplia del comiteco permite azúcar de caña, y esta botella es de solo savia según el productor."
     },
     "estancia-destilado-de-pulque": {
-      "reviewSummary": "Las notas del importador describen un destilado verde y vegetal con notas curiosas de cardamomo, limoncillo, pimienta en grano, cheddar añejo y acedera, doble destilado de savia Salmiana fermentada 48 horas en una columna corta de cobre."
+      "reviewSummary": "Verde y vegetal, con notas curiosas de cardamomo, limoncillo, pimienta en grano, cheddar añejo y acedera — doble destilado de savia Salmiana fermentada 48 horas en una columna corta de cobre, según notas del importador."
     },
     "fortaleza-reposado": {
-      "reviewSummary": "Long Island Lou describe un paladar terroso, de canela, caramelo y cítricos con notas de aceituna y mantequilla de 6–8 meses en roble americano; 88 Bamboo encuentra el agave limpio del blanco intacto, acentuado por una suave madera y especias de roble.",
+      "reviewSummary": "Un paladar terroso de canela, caramelo y cítricos con notas de aceituna y mantequilla de 6–8 meses en roble americano; el agave limpio del blanco sigue intacto, acentuado por una suave madera y especias de roble.",
       "batch": "Envejecido en roble americano; los lotes varían"
     },
     "fortaleza-anejo": {
-      "reviewSummary": "The Whiskey Shelf describe un dulzor de azúcar blanca y miel, piña, uva verde y agave vegetal sobre una frutalidad suave de barrica — más oscuro y redondo que el blanco, con el roble entretejido en lugar de dominante.",
+      "reviewSummary": "Dulzor de azúcar blanca y miel, piña, uva verde y agave vegetal sobre una frutalidad suave de barrica — más oscuro y redondo que el blanco, con el roble entretejido en lugar de dominante.",
       "batch": "Envejecido unos 18 meses en barricas ex-bourbon"
     },
     "patron-anejo-cristalino": {
-      "reviewSummary": "Tastings.com encuentra aromas y sabores redondos y cremosos — vainilla, carbón de roble, crema de limón, piña tostada — con una acidez y un agave más suaves que un blanco; Tequila Report lo llama un perfil fácil de beber, de agave ligero, roble, canela y vainilla.",
+      "reviewSummary": "Aromas y sabores redondos y cremosos — vainilla, carbón de roble, crema de limón, piña tostada — con una acidez y un agave más suaves que un blanco; un perfil fácil de beber, de agave ligero, roble, canela y vainilla.",
       "batch": "Añejo envejecido en roble americano y francés, luego filtrado con carbón hasta dejarlo claro"
     },
     "nine-guardianes-comiteco-anejo": {
@@ -415,56 +415,56 @@
       "batch": "Reposado en vidrio con ramas de roble blanco"
     },
     "la-venenosa-tabernas-reposado": {
-      "reviewSummary": "Un miembro de Mezcal Reviews describe vainilla, caramelo, cuero, tabaco dulce y ciruela en la nariz; ciruela, pasa, cereza luxardo, vainilla y cuero en el paladar, con un final de humo de fogata dulce, canela y tabaco — señalando que la influencia de la barrica de jerez es divertida pero opaca un poco el agave.",
+      "reviewSummary": "Vainilla, caramelo, cuero, tabaco dulce y ciruela en la nariz; ciruela, pasa, cereza luxardo, vainilla y cuero en el paladar, con un final de humo de fogata dulce, canela y tabaco. La barrica de jerez es divertida, aunque su reseñista nota que opaca un poco el agave.",
       "batch": "Reposado unos 3 meses en barricas de madera (jerez); cada lote de Tabernas Edición difiere — revisa tu botella",
       "abvNote": "La graduación varía por lote (la fuente de la reseña lista un lote al 44,8%; un rango de 40–46% está documentado) — revisa la botella",
       "producer": "Línea Tabernas Edición (los productores del lote varían; Antonio Arrizon, Benito Salcedo Rios y José Salcedo según la fuente de la reseña), Sierra Occidental, Jalisco"
     },
     "juerte-destilado-de-pulque": {
-      "reviewSummary": "Mezcalistas describe una nariz cautivadora de tepache ligeramente fermentado, mango y una riqueza de melaza; en el paladar, toques de regaliz e hinojo con una explosión láctica, y una tensión fantástica entre lo dulce y lo salado.",
+      "reviewSummary": "Una nariz cautivadora de tepache ligeramente fermentado, mango y una riqueza de melaza; en el paladar, toques de regaliz e hinojo con una explosión láctica, y una tensión fantástica entre lo dulce y lo salado.",
       "batch": "Destilación única en acero inoxidable; aguamiel fermentado alrededor de una semana con pulque madre",
       "producer": "Gerónimo Rosainz (maestro destilador; marca de Jorge Viveros), pueblo del noreste de Tlaxcala"
     },
     "dantano-aguamiel-cane": {
-      "reviewSummary": "Una cata de Tom Pynchon's Liquor Cabinet (2024) lo bebe solo y encuentra que sustituiría limpiamente al ron blanco en un mojito — de los dos destilados chiapanecos catados ese día, el reseñista prefiere el comiteco.",
+      "reviewSummary": "Solo, sustituiría limpiamente al ron blanco en un mojito — de los dos destilados chiapanecos que su reseñista cató ese día, prefirió el comiteco.",
       "composition": "Destilado de savia de agave fermentada (aguamiel) mezclado con destilado de caña; la distinción se declara abiertamente y nunca se etiqueta como 100% de agave.",
       "batch": "Destilado de aguamiel y caña; según la fuente de la reseña, esta etiqueta es un destilado de aguamiel y caña, a diferencia de la etiqueta 9 Guardianes de solo savia"
     },
     "el-tesoro-extra-anejo": {
-      "reviewSummary": "Drinkhacker señala que, donde la mayoría de los extra añejos son bombas de caramelo y vainilla, este mantiene el agave claramente en el encuadre — una nariz herbácea de romero, pimienta y pimienta de Jamaica que podría pasar por un reposado, sobre un roble profundo.",
+      "reviewSummary": "Mantiene el agave claramente en el encuadre donde la mayoría de los extra añejos son bombas de caramelo y vainilla: una nariz herbácea de romero, pimienta y pimienta de Jamaica que podría pasar por un reposado, sobre un roble profundo.",
       "batch": "Envejecido 4-5 años en barricas americanas ex-bourbon — más allá del mínimo legal de 3 años",
       "producer": "Destilería La Alteña (familia Camarena, Carlos Camarena), Los Altos de Jalisco",
       "place": "Los Altos de Jalisco (La Alteña, cerca de Arandas), Jalisco"
     },
     "ilegal-mezcal-reposado": {
-      "reviewSummary": "BBC Good Food describe un destilado suave con un aroma sutil a paja, toques de cítricos y dulzor de caramelo, vainilla y cítricos en el paladar con especias y tierra, y un final dulce y suave; Bourbon Banter nota clavo y dulce de leche con el humo que va de la nariz a un final ahumado con dulzor de leche.",
+      "reviewSummary": "Suave, con un aroma sutil a paja, toques de cítricos y dulzor de caramelo; vainilla y cítricos en el paladar con especias y tierra, y un final dulce y suave. Una segunda reseña añade clavo y dulce de leche, con el humo yendo de la nariz a un final ahumado con dulzor de leche.",
       "batch": "Espadín joven reposado unos 4-6 meses en roble americano (barricas ex-whisky según notas de la marca)",
       "producer": "Ilegal Mezcal (productores del valle de Tlacolula; marca de John Rexer), Oaxaca"
     },
     "ilegal-mezcal-anejo": {
-      "reviewSummary": "The Tequila Whisperer lo encontró una de las sorpresas de mezcal envejecido más placenteras que había probado; Bourbon Banter describe un giro más pronunciado hacia el caramelo y las notas de madera más especiadas que el reposado, con menos del humo del joven.",
+      "reviewSummary": "Se inclina más al caramelo y a las notas de madera especiada que el reposado, con menos del humo del joven — una de las sorpresas de mezcal envejecido más placenteras para su reseñista; Bourbon Banter describe el mismo giro hacia caramelo y madera.",
       "batch": "Espadín joven reposado unos 14 meses en roble americano, más allá del mínimo de 1 año del añejo",
       "editorialNote": "Un añejo (reposado unos 14 meses, más allá del mínimo de 1 año del añejo): el perfil de mezcal envejecido de la app describe la clase reposado (de 2 meses a 1 año), así que esta expresión se cubre como dato de catálogo, no como ejemplo del perfil de estilo reposado.",
       "producer": "Ilegal Mezcal (productores del valle de Tlacolula; marca de John Rexer), Oaxaca"
     },
     "montelobos-tobala": {
-      "reviewSummary": "Mezcal Reviews describe aromas de limón, pimiento verde y pera, con cítricos, albahaca, higo asado, macadamia y trufa en el paladar; las notas de miembros también mencionan chicle y pasto recién cortado entre lotes.",
+      "reviewSummary": "Aromas de limón, pimiento verde y pera, con cítricos, albahaca, higo asado, macadamia y trufa en el paladar; las notas de miembros entre lotes también mencionan chicle y pasto recién cortado.",
       "batch": "100% tobalá cultivado (sin recolección silvestre), asado en horno; producción enfocada en sostenibilidad",
       "abvNote": "La graduación varía por lote; la reseña citada lista notas específicas de lote — revisa tu botella"
     },
     "macurichos-ancestral-tobala": {
-      "reviewSummary": "Mezcal Reviews lo describe como herbáceo con notas de tierra seca, tomillo, cilantro y un toque de romero; una reseña de miembro lo encontró suave y delicado con un buen dulzor de principio a fin.",
+      "reviewSummary": "Herbáceo, con notas de tierra seca, tomillo, cilantro y un toque de romero; una reseña de miembro lo encontró suave y delicado, con un buen dulzor de principio a fin.",
       "batch": "Producción ancestral: cocido en horno de barro, molido con tahona, fermentado en tinas de madera, alambiques de barro; la familia también reforesta poblaciones silvestres",
       "abvNote": "La graduación de los lotes pequeños varía (una reseña de miembro citada lista un lote al 47,54%); revisa tu botella"
     },
     "del-maguey-pechuga": {
-      "reviewSummary": "Los miembros de Mezcal Reviews describen regaliz negro, anís y clavo con fruta, un ahumado afín al whisky y —sí— un sabor a pollo; otros encuentran albahaca, limón, océano y fruta en la nariz. Difford's describe piel de pollo asado ahumada, pimentón y sal de mar. Un estilo de producción para festivales, no una clase cotidiana.",
+      "reviewSummary": "Regaliz negro, anís y clavo con fruta y un ahumado afín al whisky — y, sí, un sabor a pollo; otras notas encuentran albahaca, limón, océano y fruta en la nariz, con piel de pollo asado ahumada, pimentón y sal de mar en una segunda reseña. Un estilo de producción para festivales, no una clase cotidiana.",
       "editorialNote": "La pechuga es un estilo de producción (tercera destilación sobre fruta y aves), no una clase legal de edad ni un destilado aparte; es contextual a la tradición del mezcal más que una categoría nueva aquí.",
       "batch": "Triple destilado; la tercera destilación pasa el vapor por frutas de montaña silvestres, almendras, arroz y una pechuga de pollo cruda suspendida; producción estacional y limitada",
       "abvNote": "La graduación varía por lote (una lista minorista citada muestra 49%); revisa tu botella"
     },
     "siete-pozos-tuxca": {
-      "reviewSummary": "Un miembro de Mezcal Reviews (lote 03) encontró una fragancia floral dulce con un sándalo ligero, un paladar láctico con pimientos verdes y mineralidad dulce, y un final rico en agave.",
+      "reviewSummary": "Una fragancia floral dulce con un sándalo ligero (lote 03), un paladar láctico con pimientos verdes y mineralidad dulce, y un final rico en agave.",
       "batch": "Agaves silvestres ixtero amarillo y lineño, asados en horno, fermentados en piedra volcánica, destilados en cobre; uno de los productores que impulsan activamente una denominación de origen para la tuxca",
       "abvNote": "Producción en lotes pequeños; la graduación varía (una lista minorista muestra 45%) — revisa tu botella"
     },
@@ -474,85 +474,85 @@
       "abvNote": "Producción en lotes pequeños; graduación no documentada en la fuente citada — revisa tu botella"
     },
     "clande-sotol-yellow": {
-      "reviewSummary": "Los miembros de Mezcal Reviews llaman al Yellow su favorito de la línea Clande — magia pura en aroma y sabor, y para un reseñista su sotol favorito probado hasta ahora; el proyecto de terruño de la marca apoya a pequeños productores locales y la conservación del Dasylirion.",
+      "reviewSummary": "Magia pura en aroma y sabor para sus reseñistas — uno lo llamó su sotol favorito probado hasta ahora; el proyecto de terruño de la marca apoya a pequeños productores locales y la conservación del Dasylirion.",
       "batch": "Lotes pequeños de Dasylirion silvestre; las etiquetas codificadas por color de Clande marcan cada una a un sotolero distinto — la etiqueta amarilla es Bienvenido Fernandez",
       "abvNote": "La graduación varía por lote (una reseña de miembro citada lista 46,5% para un lote de marzo de 2018); revisa tu botella"
     },
     "hacienda-de-chihuahua-sotol-anejo": {
-      "reviewSummary": "Un miembro de Mezcal Reviews encuentra un carácter medicinal-herbal con azúcar moreno y anís y un final apenas amargo — un sorbo ligero de verano comparable a añejos finos de tequila pero más profundo; el productor mantiene un programa de conservación de Dasylirion.",
+      "reviewSummary": "Un carácter medicinal-herbal con azúcar moreno y anís y un final apenas amargo — un sorbo ligero de verano que su reseñista encontró comparable a añejos finos de tequila pero más profundo.",
       "batch": "100% Dasylirion de recolección silvestre, cocido al vapor, triple destilado en cobre de doble columna, luego envejecido 2 años en encino blanco francés nuevo; certificado orgánico USDA y Kosher",
       "abvNote": "Graduación no indicada en la página de la reseña citada; la línea envejecida del productor es de menor graduación según notas de miembros — revisa tu botella",
       "editorialNote": "Un sotol envejecido (2 años en encino blanco francés nuevo): el perfil de sotol de la app describe un estilo desértico de Chihuahua sin crianza y sin maduración en madera, así que esta expresión se cubre como dato de catálogo, no como ejemplo de ese perfil de estilo.",
       "producer": "Vinomex (maestro destilador José Daumas Gil de Partearroyo), Delicias, Chihuahua"
     },
     "bacatt-bacanora": {
-      "reviewSummary": "Un miembro de Mezcal Reviews describe pasto húmedo después de la lluvia, un dulzor maderoso y mineralidad en la nariz; el paladar alterna entre una nota dulce de mezquite-roble con un final mentolado y una nota picante de galletas con crema — una botella digna de recuerdo que ya reservan para ocasiones especiales.",
+      "reviewSummary": "Pasto húmedo después de la lluvia, un dulzor maderoso y mineralidad en la nariz; el paladar alterna entre una nota dulce de mezquite-roble con un final mentolado y una nota picante de galletas con crema — una botella que su reseñista ya reserva para ocasiones especiales.",
       "batch": "Maguey pacifica asado en horno subterráneo tradicional; lote 2305, botella 242 de la corrida citada",
       "abvNote": "Producción de lote pequeño; la graduación varía (la reseña citada es del lote 2305) — revisa tu botella",
       "producer": "Bacatt (bacanora sonorense de lotes pequeños), Sonora",
       "place": "Sonora"
     },
     "sunora-bacanora-blanco": {
-      "reviewSummary": "Los miembros de Mezcal Reviews describen jalapeño, sandía y queso crema con piña de agave asada y masa madre en la nariz; alcachofa asada, espárrago carbonizado, piedra húmeda y un carnoso afín a cecina de pavo en el paladar con un humo terroso ligero — una sólida introducción a la categoría.",
+      "reviewSummary": "Jalapeño, sandía y queso crema con piña de agave asada y masa madre en la nariz; alcachofa asada, espárrago carbonizado, piedra húmeda y un carnoso afín a cecina de pavo en el paladar, con un humo terroso ligero — una sólida introducción a la categoría.",
       "batch": "Maguey pacifica asado 48 horas en hornos subterráneos (mallas), molido con piedra, fermentado 6-12 días, triple destilado",
       "abvNote": "Graduación no documentada en la página de la reseña citada — revisa tu botella",
       "producer": "Sunora (lotes pequeños, varias generaciones de bacanoreros), Sonora",
       "place": "Sonora"
     },
     "la-nina-del-mezcal-bacanora": {
-      "reviewSummary": "Mezcal Reviews la describe como salada y viscosa con fruta y azúcar de agave; un miembro encontró algodón de azúcar en la nariz con notas de pasta dental de naranja y crema de mantequilla y un final apenas ácido.",
+      "reviewSummary": "Salada y viscosa, con fruta y azúcar de agave; una nota de miembro encontró algodón de azúcar en la nariz, notas de pasta dental de naranja y crema de mantequilla, y un final apenas ácido.",
       "batch": "Lotes pequeños artesanales de agave pacifica; lote citado B002, botella 909/1000",
       "abvNote": "Producción en lotes pequeños; la graduación varía (la reseña citada lista 48% para el lote B002) — revisa tu botella"
     },
     "el-acabo-plata-raicilla": {
-      "reviewSummary": "Tastings.com la calificó 97/100 en mayo de 2025 y Forbes reporta que fue el destilado de agave mejor clasificado en el concurso 2025 del Beverage Testing Institute, uno de solo dos premios Platinum; los jueces describen una aromática brillante de pimiento verde y pasto con jalapeño y pimiento rojo, y un paladar de agave, manzana verde y jalapeño guiado por lo verde.",
+      "reviewSummary": "Una aromática brillante de pimiento verde y pasto con jalapeño y pimiento rojo, y un paladar guiado por lo verde de agave, manzana verde y jalapeño — el destilado de agave mejor clasificado (97/100) en el concurso 2025 del Beverage Testing Institute, según Tastings.com y Forbes.",
       "batch": "Plata sin crianza de la Taberna 3 Gallos; homenaje a las celebraciones de cosecha de la Hacienda de Ahuacatepec"
     },
     "aguamiel-bacanora-blanco": {
-      "reviewSummary": "Una cata de miembro de Mezcal Reviews describe agave cálido con pastel de vainilla y ligera fruta (piña, crema de plátano) en nariz, y un paladar dulce y jugoso con notas de crema batida, masa de pastel y natillas contra ligeras notas herbáceas, de humo y salinas.",
+      "reviewSummary": "Agave cálido con pastel de vainilla y ligera fruta (piña, crema de plátano) en nariz, y un paladar dulce y jugoso con notas de crema batida, masa de pastel y natillas contra ligeras notas herbáceas, de humo y salinas.",
       "classification": "Bacanora — blanco (sin añejar); denominación de origen de Sonora",
       "plantComposition": "100% de agave silvestre yaquiana/Pacifica (la forma sonorense de Agave angustifolia), según el productor"
     },
     "don-julio-blanco": {
-      "reviewSummary": "La guía Difford's (catada en 2011) encuentra una nariz especiada y mineral con limón vivaz y toronja rosada y sutiles aromas de masa con levadura; el paladar limpio y mineral ofrece dulce de leche, masa y delicados sabores herbales, cerrando con un final largo y seco con notas vegetales y pimienta negra especiada. La botella es sin añejar, reposada brevemente en recipientes inertes antes del embotellado.",
+      "reviewSummary": "Una nariz especiada y mineral con limón vivaz y toronja rosada y sutiles aromas de masa con levadura; el paladar limpio y mineral ofrece dulce de leche, masa y delicados sabores herbales, cerrando con un final largo y seco con notas vegetales y pimienta negra especiada. Sin crianza, reposado brevemente en recipientes inertes antes del embotellado.",
       "editorialNote": "Un blanco de los Altos y no del Valle de Tequila: espera la lectura más brillante y frutal de la misma clase legal.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
       "place": "Atotonilco el Alto, Jalisco (Los Altos)"
     },
     "jose-cuervo-tradicional-reposado": {
-      "reviewSummary": "The Rum Howler encuentra la frutosidad, la especia y la pimienta contenidas frente a embotellados anteriores — sigue siendo un reposado agradable y fácil, pero con menos agave contundente del que el reseñista busca en un tequila de sorbo.",
+      "reviewSummary": "La frutosidad, la especia y la pimienta contenidas frente a embotellados anteriores — sigue siendo un reposado agradable y fácil, pero con menos agave contundente del que su reseñista busca en un tequila de sorbo.",
       "classification": "Tequila — reposado 100% de agave (con reposo en roble)",
       "plantComposition": "100% de agave azul weber (Agave tequilana)"
     },
     "patron-silver": {
-      "reviewSummary": "Liquor.com encuentra un encantador aroma vegetal de agave cocido — pasto, pimientos verdes, algo de tierra y eucalipto — con sabores de agave, eucalipto y pimienta blanca que llevan a un final suave y sabroso; fino solo y en cócteles, con precio premium.",
+      "reviewSummary": "Un encantador aroma vegetal de agave cocido — pasto, pimientos verdes, algo de tierra y eucalipto — con sabores de agave, eucalipto y pimienta blanca que llevan a un final suave y sabroso; fino solo y en cócteles, con precio premium.",
       "editorialNote": "Un blanco de los Altos: la misma clase sin añejar del ejemplo del valle, con la lectura más frutal y cítrica de los Altos.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
       "place": "Atotonilco el Alto, Jalisco (Los Altos)"
     },
     "casa-dragones-blanco": {
-      "reviewSummary": "La reseña de Bevvy encuentra toronja fresca y manzana verde en nariz, agave protagonista en el sorbo con pimienta negra, clavo, menta y fruta tropical jugosa, y un final ligero y brillante con toronja, pimienta y hierbas refrescantes.",
+      "reviewSummary": "Toronja fresca y manzana verde en la nariz, agave protagonista en el sorbo con pimienta negra, clavo, menta y fruta tropical jugosa, y un final ligero y brillante con toronja, pimienta y hierbas refrescantes.",
       "classification": "Tequila — blanco 100% de agave azul, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana), según la marca",
       "producer": "Casa Dragones (destilación en lotes pequeños, Tequila, Jalisco)"
     },
     "g4-blanco": {
-      "reviewSummary": "The Daily Pour encuentra que muestra las delicias complejas y sabrosas del agave de los Altos, rezumando pimienta y notas de aceituna verde; el método del productor — cocción lenta en horno de piedra, tahona metálica artesanal, doble destilación en cobre — mantiene el agave en primer plano.",
+      "reviewSummary": "Muestra las delicias complejas y sabrosas del agave de los Altos, rezumando pimienta y notas de aceituna verde; el método del productor — cocción lenta en horno de piedra, tahona metálica artesanal, doble destilación en cobre — mantiene el agave en primer plano.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana), de cultivo propio",
       "batch": "Elaborado con una mezcla 50/50 de agua de lluvia y de manantial; cocido en horno de piedra y molido con tahona",
       "place": "Jesús María, Los Altos, Jalisco (Los Altos)"
     },
     "maestro-dobel-50-cristalino": {
-      "reviewSummary": "Tastings.com (cata de 2021, 94 puntos) encuentra un cristalino suave y complejo: la riqueza de la madera atraviesa la filtración, con el productor señalando notas de higo, membrillo, dátil, piña y calabaza sobre canela, vainilla y clavo.",
+      "reviewSummary": "Un cristalino suave y complejo: la riqueza de la madera atraviesa la filtración, con notas de higo, membrillo, dátil, piña y calabaza sobre canela, vainilla y clavo señaladas por el productor.",
       "classification": "Tequila — extra añejo estilo cristalino (3+ años en roble, filtrado para retirar el color)",
       "plantComposition": "100% de agave azul weber (Agave tequilana), según el productor",
       "batch": "Añejado un mínimo de tres años en roble americano y de Europa del Este, luego filtrado con carbón hasta la claridad"
     },
     "cascahuin-anejo": {
-      "reviewSummary": "La cata de 88 Bamboo de la destilería de la familia Rosales encuentra que el añejo mantiene el agave cocido en el centro con el roble en apoyo — el carácter terroso y mineral del valle de la casa persiste bajo una dulzura suave de barril.",
+      "reviewSummary": "Mantiene el agave cocido en el centro con el roble en apoyo — el carácter terroso y mineral del valle de la casa persiste bajo una dulzura suave de barril.",
       "abvNote": "Graduación alcohólica no documentada en las reseñas citadas; el embotellado estándar de la destilería ronda el 40% — verifica tu botella",
       "classification": "Tequila — añejo 100% de agave (14–16 meses en roble)",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
@@ -560,7 +560,7 @@
       "place": "El Arenal, Jalisco (región del Valle de Tequila)"
     },
     "tequila-ocho-extra-anejo": {
-      "reviewSummary": "No hay reseña independiente documentada de la versión actual; según las notas del propio productor, el extra añejo presenta cerezas, anís, chocolate oscuro, jerez, roble y plátano en nariz, y roble, anís, fruta seca, cerezas, toffee, pimienta negra y canela en el paladar.",
+      "reviewSummary": "Cerezas, anís, chocolate oscuro, jerez, roble y plátano en nariz, y roble, anís, fruta seca, cerezas, toffee, pimienta negra y canela en el paladar. No hay reseña independiente documentada de la versión actual; según las notas del propio productor.",
       "classification": "Tequila — extra añejo 100% de agave (3+ años en roble)",
       "plantComposition": "100% de agave azul weber (Agave tequilana), de finca única y con añada",
       "batch": "Con añada de un solo rancho; añejado un mínimo de tres años en barricas usadas de whisky americano",
@@ -572,34 +572,34 @@
       "place": "El Tuito, Jalisco costero"
     },
     "don-julio-reposado": {
-      "reviewSummary": "La reseña de The Rum Howler (87.5/100, actualizada en 2020) encuentra complejidad suave de principio a fin: un dejo de dulce de leche, almendra y un toque de especia maderable y té, con especias picantes que crecen en la garganta.",
+      "reviewSummary": "Complejidad suave de principio a fin: un dejo de dulce de leche, almendra y un toque de especia maderable y té, con especias picantes que crecen en la garganta.",
       "editorialNote": "Un reposado de los Altos: el perfil de reposado de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
       "classification": "Tequila — reposado 100% de agave (8 meses de reposo en roble, según la reseña)",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
       "place": "Atotonilco el Alto, Jalisco (Los Altos)"
     },
     "don-julio-anejo": {
-      "reviewSummary": "La reseña de The Rum Howler (90.5/100, revisada en 2018) encuentra agave suave con pimienta blanca moderada y caramelo claro, una presencia de roble muy leve y un dulzor agradable a la miel, con ralladura de lima y confitura de albaricoque fundidos en el agave, el roble y el caramelo.",
+      "reviewSummary": "Agave suave con pimienta blanca moderada y caramelo claro, una presencia de roble muy leve y un dulzor agradable a la miel, con ralladura de lima y confitura de albaricoque fundidos en el agave, el roble y el caramelo.",
       "editorialNote": "Un añejo de los Altos: el perfil de añejo de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
       "classification": "Tequila — añejo 100% de agave (18 meses en roble, según la cata citada)",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
       "place": "Atotonilco el Alto, Jalisco (Los Altos)"
     },
     "jose-cuervo-tradicional-plata": {
-      "reviewSummary": "Según la reseña de The Rum Howler (82.5/100, 2018), se lanzó en 2011 como un verdadero tequila 100% de agave azul de la región central del valle; encuentra una plata fácil de beber con el carácter terroso y herbáceo del valle presente pero más suave que los ejemplos más contundentes de la categoría.",
+      "reviewSummary": "Una plata fácil de beber con el carácter terroso y herbáceo del valle presente pero más suave que los ejemplos más contundentes de la categoría — lanzada en 2011 como un verdadero tequila 100% de agave azul de la región central del valle.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
       "place": "Tequila, Jalisco (región del valle central)"
     },
     "patron-reposado": {
-      "reviewSummary": "La reseña de The Rum Howler describe un destilado dicotómico: dulzor de caramelo a la miel, calabaza horneada suave y terrosa, pimientos verdes dulces, pimienta blanca picante, sándalo y un toque de vainilla, cambiando de dirección en el primer sorbo.",
+      "reviewSummary": "Un destilado dicotómico: dulzor de caramelo a la miel, calabaza horneada suave y terrosa, pimientos verdes dulces, pimienta blanca picante, sándalo y un toque de vainilla, cambiando de dirección en el primer sorbo.",
       "editorialNote": "Un reposado de los Altos: el perfil de reposado de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
       "classification": "Tequila — reposado 100% de agave (reposo en roble, en promedio unos seis meses según la reseña)",
       "plantComposition": "100% de agave azul weber (Agave tequilana); una mezcla de tequilas de tahona y de molino de rodillos, según la ficha del productor",
       "place": "Atotonilco el Alto, Jalisco (Los Altos)"
     },
     "casa-dragones-joven": {
-      "reviewSummary": "Wine Enthusiast (96 puntos, cata a ciegas) lo encuentra extraordinariamente suave, con una nariz muy dulce, afrutada, casi vinosa y un sabor puro y contundente a pimienta que termina limpio.",
+      "reviewSummary": "Extraordinariamente suave, con una nariz muy dulce, afrutada, casi vinosa y un sabor puro y contundente a pimienta que termina limpio.",
       "editorialNote": "Una mezcla joven: esta guía aún no tiene un perfil de estilo tequila joven, así que esta entrada se cubre solo como dato de catálogo.",
       "classification": "Tequila — joven (una mezcla maestra de plata con un toque de extra añejo, filtrada hasta la claridad del platino)",
       "plantComposition": "100% de agave azul weber (Agave tequilana), según la marca",
@@ -777,16 +777,17 @@
       "intro": "Una etiqueta mexicana lleva términos legales, datos del productor y marketing — a veces en la misma palabra. Este capítulo los decodifica, y nunca aplica las reglas de una tradición a otra.",
       "block0": "Los términos de clase son específicos de cada destilado: blanco es una clase legal del tequila, joven es la clase sin crianza del mezcal, y los mínimos de reposado difieren entre tequila, mezcal y raicilla. El cristalino es una elección de acabado, no una clase legal. Cuando un término no es una clase legal, esta guía lo dice.",
       "block1": "El NOM en una etiqueta de tequila o mezcal identifica al productor certificado. Las botellas de tuxca no llevan registro NOM — lo que falta es la certificación bajo un esquema de denominación de origen, no la exención de los requisitos generales de etiquetado — un hecho legal, no un juicio de autenticidad. Los términos de lote importan para los pequeños productores: los datos del lote se quedan con el lote.",
-      "block2": "Las afirmaciones de composición son datos sobre los fermentables, no grados de calidad. «100% de agave» describe qué se fermentó; el comiteco con azúcar de caña declarada es igualmente honesto sobre lo que es. La declaración de composición es lectura obligatoria en cada botella.",
-      "block3": "¿Cómo sabes a qué sabe una botella? Las reseñas independientes, las descripciones del productor y las síntesis editoriales son tipos distintos de evidencia, y esta guía las mantiene visiblemente separadas: la impresión de un reseñista se atribuye al reseñista; las notas de cata del propio productor se etiquetan como suyas; donde no existe ninguna reseña, la entrada lo dice en lugar de tomar carácter prestado. Cuando leas una afirmación de cata en cualquier parte, pregunta de qué paladar vino — ese hábito viaja más lejos que cualquier botella."
+      "block2": "Un ejemplo ilustrativo de etiqueta — inventado para enseñar, no una botella real: (1) Nombre del destilado: «Mezcal» — la categoría protegida; «Mezcal Artesanal» añadiría la categoría de producción. (2) Clase: «Joven» — sin crianza en este caso; la misma palabra puede significar una mezcla en el tequila, así que lee las clases de cada tradición. (3) Agave/composición: «100% Agave espadín» o «Savia de agave y azúcares de caña» (comiteco) — lo que se fermentó; un dato de composición, no un grado de calidad. (4) % Alc. Vol.: graduación, no suavidad. (5) Productor/origen: el número NOM identifica al productor certificado; el lugar nombrado es donde se elaboró. (6) Lote: la identidad del lote para un pequeño productor. Estos campos dicen qué es la botella y de dónde viene; no pueden decirte a qué sabe — para eso, esta guía acompaña cada botella con una reseña atribuida donde existe, y lo declara donde no existe.",
+      "block3": "Las afirmaciones de composición son datos sobre los fermentables, no grados de calidad. «100% de agave» describe qué se fermentó; el comiteco con azúcar de caña declarada es igualmente honesto sobre lo que es. La declaración de composición es lectura obligatoria en cada botella.",
+      "block4": "¿Cómo sabes a qué sabe una botella? Las reseñas independientes, las descripciones del productor y las síntesis editoriales son tipos distintos de evidencia, y esta guía las mantiene visiblemente separadas: la impresión de un reseñista se atribuye al reseñista; las notas de cata del propio productor se etiquetan como suyas; donde no existe ninguna reseña, la entrada lo dice en lugar de tomar carácter prestado. Cuando leas una afirmación de cata en cualquier parte, pregunta de qué paladar vino — ese hábito viaja más lejos que cualquier botella."
     },
     "choosing-and-enjoying": {
       "title": "Elegir y disfrutar",
       "intro": "No hay una manera incorrecta de disfrutar estos destilados — pero sí maneras honestas de elegir. Este capítulo favorece tu propio paladar sobre el precio, la edad o la rareza.",
       "block0": "Empieza por lo que ya te gusta: blancos frescos y herbales, mezcales con humo, añejos con roble, o algo fuera de lo común. Los caminos de descubrimiento de esta guía agrupan perfiles por sabor para que sigas tu propio gusto, y cada perfil nombra su estilo sensorial con honestidad.",
-      "block1": "El servicio es simple: una copa pequeña a temperatura ambiente deja abrir los aromas; un chorrito de agua puede suavizar graduaciones altas. Los cócteles no implican un compromiso con el sabor: una margarita o una paloma son una forma legítima de conocer un blanco. Los maridajes de cada perfil son sugerencias editoriales, nunca reglas.",
+      "block1": "El servicio es simple: una copa pequeña a temperatura ambiente deja abrir los aromas; un chorrito de agua puede suavizar graduaciones altas. Beberlo solo, con hielo o mezclado son formas igualmente legítimas de conocer estos destilados — una margarita o una paloma son un camino real hacia un blanco. La sal, los cítricos (lima, no siempre limón), el hielo y los acompañamientos son elecciones, no requisitos; las costumbres regionales varían y ninguna es una regla. Los maridajes de cada perfil son sugerencias editoriales, nunca reglas.",
       "block2": "Cuidado con las escaleras de marketing: más viejo no es automáticamente mejor, más graduación no es automáticamente mejor, y la rareza no es un sabor. Un blanco accesible de un buen productor puede superar a una botella trofeo. Esta guía perfila estilos, no trofeos.",
-      "block2deeper": "Técnica de cata: mira, gira, huele suavemente, sorbe, y atiende el final. Compara dos perfiles parecidos lado a lado — la vista de comparación existe precisamente para eso."
+      "block2deeper": "Técnica de cata, en breve: una copa pequeña y limpia, una inhalación suave sin hundir la nariz ni girar con fuerza, un sorbo pequeño, atención a la textura y después el final. El agua — al lado o unas gotas dentro — es una elección que suaviza el calor del alcohol; no vuelve la bebida sin alcohol. La lección Cómo catar del recorrido de cinco pasos guía esta secuencia paso a paso, y la vista de comparación existe precisamente para catar dos estilos parecidos lado a lado."
     },
     "explore-deeper": {
       "title": "Explora más profundo",

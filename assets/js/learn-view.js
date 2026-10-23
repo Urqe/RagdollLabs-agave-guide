@@ -249,9 +249,14 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
   container.appendChild(section);
 
   // Deep links (#/learn/terms etc.) land on the requested reference
-  // section instead of the top of the page.
+  // section instead of the top of the page. Pair 16 adds stable chapter
+  // addressing (#/learn/chapter-<id>) so a lesson example opens the exact
+  // chapter, not the whole Learn page.
   const SECTION_TARGETS = { terms: "learn-terms", plants: "learn-plants", processes: "learn-processes" };
-  const targetId = SECTION_TARGETS[deepSection] || null;
+  const targetId = SECTION_TARGETS[deepSection]
+    || (deepSection && deepSection.startsWith("chapter-")
+      ? (section.querySelector(`#chapter-${deepSection.slice("chapter-".length)}`) ? `chapter-${deepSection.slice("chapter-".length)}` : null)
+      : null);
   if (targetId) {
     const target = section.querySelector(`#${targetId}`);
     if (target && typeof target.scrollIntoView === "function") {

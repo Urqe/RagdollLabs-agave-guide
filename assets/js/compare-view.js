@@ -167,6 +167,10 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
 
   const pickerHolder = el("div", { class: "compare-picker" });
   const currentQuery = () => pickerHolder.querySelector("#compare-search")?.value || "";
+  // Pair 16: a comparison opened from a lesson teaches first — the
+  // prepared comparison's explanation and results render before the full
+  // profile picker, which stays available as a secondary control below.
+  const fromLessonView = Boolean(from && from.startsWith("start:"));
   const pick = (profileId, pickerQuery) => {
     const removing = selectedIds.includes(profileId);
     const next = removing
@@ -193,7 +197,9 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
   selections.appendChild(selectionList);
   section.appendChild(selections);
   pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick, { locale, initialQuery: keepPickerQuery || "", titleFn: title }));
-  section.appendChild(pickerHolder);
+  if (!fromLessonView || selected.length < 2) {
+    section.appendChild(pickerHolder);
+  }
 
   if (selected.length === 0) {
     announce(ui(locale, "noneSelected"));
@@ -329,6 +335,15 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
     const note = el("p", { class: "editorial-note" },
       ui(locale, "missingData").replace("{list}", missing.map((m) => dimLabel(m.key)).join(", ")));
     section.appendChild(note);
+  }
+
+  // Pair 16: the lesson keeps its explanation and results first; changing
+  // styles stays available through this clearly labelled secondary control.
+  if (fromLessonView) {
+    const changeBlock = el("details", { class: "compare-change-styles" });
+    changeBlock.appendChild(el("summary", {}, t("compare.changeStyles")));
+    changeBlock.appendChild(pickerHolder);
+    section.appendChild(changeBlock);
   }
 
   container.appendChild(section);
