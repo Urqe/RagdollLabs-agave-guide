@@ -20,7 +20,7 @@ export const JOURNEY_STEPS = [
     title: { en: "What these spirits are", es: "Qué son estos destilados" },
     idea: {
       en: "This guide mainly covers agave spirits: a mature agave plant — cooked, or its fresh sap — fermented and distilled. It also includes sotol, a close relative distilled from the Dasylirion plant, honestly labeled as such. Tequila and mezcal are the two you will meet most; bacanora, raicilla and other traditions keep their own names, places and methods.",
-      es: "Esta guía cubre principalmente destilados de agave: una planta de agave madura — cocida, o de su savia fresca — fermentada y destilada. También incluye el sotol, un pariente cercano destilado de la planta Dasylirion, etiquetado con honestidad como tal. El tequila y el mezcal son los dos que más vas a encontrar; la bacanora, la raicilla y otras tradiciones conservan sus propios nombres, lugares y métodos.",
+      es: "Esta guía cubre principalmente destilados de agave: una planta de agave madura — cocida, o de su savia fresca — fermentada y destilada. También incluye el sotol, un pariente cercano destilado de la planta Dasylirion, etiquetado con honestidad como tal. El tequila y el mezcal son los dos que más vas a encontrar; el bacanora, la raicilla y otras tradiciones conservan sus propios nombres, lugares y métodos.",
     },
     examples: [
       { profileId: "tequila-blanco-valley-jalisco", reason: { en: "The clearest place to start: unaged tequila, straight cooked agave in the glass.", es: "El mejor punto de partida: tequila sin crianza, agave cocido directo en la copa." } },

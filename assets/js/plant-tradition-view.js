@@ -77,7 +77,7 @@ export function renderPlantPage(container, { plant, plants, regions, traditions,
     for (const rid of plant.regionIds) {
       const region = (regions || []).find((r) => r.id === rid);
       if (region) {
-        row.appendChild(el("a", { href: `#/discover/region/${encodeURIComponent(rid)}`, class: "discovery-chip" }, region.name));
+        row.appendChild(el("a", { href: `#/discover/region/${encodeURIComponent(rid)}`, class: "discovery-chip" }, fieldEs("region", rid, "name", locale) || region.name));
         row.appendChild(document.createTextNode(" "));
       }
     }
@@ -163,7 +163,7 @@ export function renderTraditionPage(container, { tradition, traditions, regions,
     for (const rid of tradition.regionIds) {
       const region = (regions || []).find((r) => r.id === rid);
       if (region) {
-        row.appendChild(el("a", { href: `#/discover/region/${encodeURIComponent(rid)}`, class: "discovery-chip" }, region.name));
+        row.appendChild(el("a", { href: `#/discover/region/${encodeURIComponent(rid)}`, class: "discovery-chip" }, fieldEs("region", rid, "name", locale) || region.name));
         row.appendChild(document.createTextNode(" "));
       }
     }

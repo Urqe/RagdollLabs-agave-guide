@@ -16,7 +16,7 @@
           "queso fresco con chile"
         ]
       },
-      "whyItTastes": "El filo sabroso y terroso es lugar más método: el agave del valle crece más pequeño y más herbáceo que el del altiplano, y los productores tradicionales del valle muelen la piña cocida con tahona de piedra y fermentan en tinas abiertas. Ni la edad ni el precio lo explican.",
+      "whyItTastes": "El filo sabroso y terroso es lugar y método trabajando juntos: el agave del valle tiende a crecer más pequeño y más herbáceo que el del altiplano (una tendencia, no una regla), y los productores tradicionales del valle muelen la piña cocida con tahona de piedra y fermentan en tinas abiertas. Ni la edad ni el precio lo explican; el método y el lugar juntos moldean la copa, ninguno la decide solo.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado)"
     },
     "mezcal-espadin-valles-centrales": {
@@ -41,9 +41,9 @@
     },
     "bacanora-pacifica-sierra-sonora": {
       "title": "Bacanora, estilo Agave Pacifica (Sierra de Sonora)",
-      "context": "Pregúntale a un sonorense por la bacanora y mira su pecho hincharse. “Es nuestro destilado”, dirá: un agave silvestre de la Sierra Madre de Sonora, destilado de Agave angustifolia pacifica (aquí nomás le decimos Pacifica, o Yaquiana), con denominación de origen que cubre 35 municipios sonorenses. Durante gran parte del siglo XX (1915–1992) hacerla fue un delito, y los sonorenses siguieron destilando igual, escondidos en la sierra; la DO llegó en el año 2000. Esa terquedad es el orgullo: la bacanora sobrevivió porque las familias no la dejaron morir.",
+      "context": "Pregúntale a un sonorense por el bacanora y mira su pecho hincharse. “Es nuestro destilado”, dirá: un agave silvestre de la Sierra Madre de Sonora, destilado de Agave angustifolia pacifica (aquí nomás le decimos Pacifica, o Yaquiana), con denominación de origen que cubre 35 municipios sonorenses. Durante gran parte del siglo XX (1915–1992) hacerla fue un delito, y los sonorenses siguieron destilando igual, escondidos en la sierra; la DO llegó en el año 2000. Esa terquedad es el orgullo: el bacanora sobrevivió porque las familias no la dejaron morir.",
       "description": "La bacanora tradicional asa los corazones de agave en hornos subterráneos, a menudo con leña de mezquite, fermenta con levaduras silvestres y destila dos veces, dando un destilado que se ubica estilísticamente entre el tequila y el mezcal oaxaqueño: agave asado en el centro con un humo generalmente más suave que el del mezcal, más hierbas del desierto y un filo mineral de la sierra.",
-      "beginnerNote": "¿Nuevo en la bacanora? Piénsala como la prima sonorense del mezcal: mismo corazón de agave asado, normalmente un poco menos humo, a menudo más ligera y herbácea. Un sonorense te dirá que no necesita presentación; tiene razón, pero esto ayuda.",
+      "beginnerNote": "¿Nuevo en el bacanora? Piénsala como la prima sonorense del mezcal: mismo corazón de agave asado, normalmente un poco menos humo, a menudo más ligera y herbácea. Un sonorense te dirá que no necesita presentación; tiene razón, pero esto ayuda.",
       "category": "Bacanora — destilado con Denominación de Origen propia (Sonora, desde 2000)",
       "process": "Asado en horno (a menudo con mezquite), fermentación con levaduras silvestres, doble destilación",
       "smoke": "Presente pero generalmente más suave que el mezcal oaxaqueño: el asado en horno da un humo magro y sabroso en lugar de dominante.",
@@ -56,7 +56,7 @@
           "platillos con salsa de chiltepín"
         ]
       },
-      "whyItTastes": "Agave Pacifica/Yaquiana silvestre de la sierra sonorense, asado en pozo (a menudo sobre mezquite) y fermentado con levaduras silvestres — el carácter herbal y suavemente ahumado sigue de la cosecha silvestre más el asado en pozo. La doble destilación lo mantiene limpio sobre el asado.",
+      "whyItTastes": "Agave Pacifica/Yaquiana silvestre de la sierra sonorense, asado en pozo (a menudo sobre mezquite) y fermentado con levaduras silvestres: reseñistas y productores describen un carácter herbal y suavemente ahumado que la guía atribuye a la planta y al asado en pozo juntos — una tendencia documentada de este estilo, no un resultado garantizado de la cosecha silvestre. La doble destilación es el método estándar aquí; no asegura limpieza por sí misma.",
       "plant": "Agave angustifolia pacifica (de recolección silvestre; conocido localmente como pacifica o yaquiana)"
     },
     "raicilla-maximiliana-sierra-jalisco": {
@@ -159,7 +159,7 @@
     },
     "tequila-reposado-valley-jalisco": {
       "title": "Tequila reposado, estilo Valle de Tequila",
-      "context": "El reposado ('rested') es una clase legal del tequila: el destilado descansa en roble un mínimo de dos meses, sin máximo. En la práctica, la mayoría de los productores lo reposan de dos meses a un año. Este perfil describe un reposado tradicional del Valle de Tequila — el mismo estilo del blanco del valle, más roble. La tradición del valle dice que el reposo debe sazonar el agave, nunca enterrarlo; esa mesura es orgullo local.",
+      "context": "El reposado es una clase legal del tequila: el destilado descansa en roble un mínimo de dos meses, sin máximo. En la práctica, la mayoría de los productores lo reposan de dos meses a un año. Este perfil describe un reposado tradicional del Valle de Tequila — el mismo estilo del blanco del valle, más roble. La tradición del valle dice que el reposo debe sazonar el agave, nunca enterrarlo; esa mesura es orgullo local.",
       "description": "Un reposado es el mismo tequila que el blanco, reposado brevemente en roble: el agave permanece y se le unen vainilla y especias. En el estilo del valle el reposado suele ser breve — dos a doce meses — para no cubrir el carácter herbáceo del agave.",
       "beginnerNote": "¿Nuevo en el reposado? Piénsalo como el mismo destilado que el blanco, reposado brevemente en roble: el agave permanece, la vainilla y las especias se suman.",
       "category": "Tequila — destilado con Denominación de Origen propia; el reposado es una clase legal (reposado en roble, mínimo 2 meses)",
@@ -178,7 +178,7 @@
     },
     "tequila-anejo-valley-jalisco": {
       "title": "Tequila añejo, estilo Valle de Tequila",
-      "context": "El añejo ('aged') es una clase legal del tequila: reposo en roble de al menos un año, en barricas de no más de 600 litros. El extra añejo (al menos tres años) existe como clase adicional. Este perfil describe un añejo tradicional del valle de unos 18 meses — muy por encima del mínimo de un año, que es la única referencia legal (la NOM fija un mínimo, no un rango). En el valle te dirán que el agave debe seguir hablando a través de un año de roble; los mejores productores se aseguran de que así sea.",
+      "context": "El añejo es una clase legal del tequila: reposo en roble de al menos un año, en barricas de no más de 600 litros. El extra añejo (al menos tres años) existe como clase adicional. Este perfil describe un añejo tradicional del valle de unos 18 meses — muy por encima del mínimo de un año, que es la única referencia legal (la NOM fija un mínimo, no un rango). En el valle te dirán que el agave debe seguir hablando a través de un año de roble; los mejores productores se aseguran de que así sea.",
       "description": "Un añejo es tequila envejecido en roble un año o más: vainilla, fruta seca y especias de madera rodean el agave. Es la expresión más redonda y oscura del tequila, la más cercana al whisky en sensación, aunque sigue siendo tequila en esencia.",
       "beginnerNote": "¿Nuevo en el añejo? Espera la expresión más redonda y oscura del tequila: vainilla de roble y fruta seca alrededor del agave — la más cercana al whisky en sentir, todavía tequila de corazón.",
       "category": "Tequila — destilado con Denominación de Origen propia; el añejo es una clase legal (envejecido en roble, mínimo 1 año)",
@@ -254,7 +254,7 @@
     },
     "tequila-extra-anejo-highland-jalisco": {
       "title": "Tequila extra añejo, estilo de los altos (Jalisco)",
-      "context": "El extra añejo ('extra aged') es la clase legal más reciente del tequila: mínimo tres años en barricas de roble de no más de 600 litros, agregado a la NOM en 2006. Existe porque los productores querían reconocimiento para los tequilas de largo reposo; la familia de El Tesoro lanzó su Paradiso en 1994, antes de que la clase existiera legalmente. Este perfil describe un extra añejo de los altos de cuatro a cinco años — muy por encima del mínimo de tres años, que es la única referencia legal (la NOM fija un mínimo, no un rango). El orgullo de los altos corre hondo aquí: el agave de los altos crece más grande y más dulce, y los alteños dicen que es el único agave que puede cargar tanto roble y seguir sabiendo a agave.",
+      "context": "El extra añejo es la clase legal más reciente del tequila: mínimo tres años en barricas de roble de no más de 600 litros, agregado a la NOM en 2006. Existe porque los productores querían reconocimiento para los tequilas de largo reposo; la familia de El Tesoro lanzó su Paradiso en 1994, antes de que la clase existiera legalmente. Este perfil describe un extra añejo de los altos de cuatro a cinco años — muy por encima del mínimo de tres años, que es la única referencia legal (la NOM fija un mínimo, no un rango). El orgullo de los altos corre hondo aquí: los productores describen el agave de los Altos como más grande y más dulce, y algunos alteños sostienen que carga reposos largos en roble mejor que el agave del valle — la guía lo registra como visión local y tendencia, no como regla; las destilerías del valle también elaboran extra añejo.",
       "description": "Un extra añejo es tequila envejecido tres años o más: el roble domina con chocolate, café y especias, y el agave de los altos — más dulce y frutal — sostiene la estructura. Es el tequila más cercano al whisky en carácter.",
       "beginnerNote": "¿Nuevo en el extra añejo? Es el tequila en su versión más cercana al whisky: espera roble, chocolate y café — los buenos todavía saben a agave debajo.",
       "category": "Tequila — destilado con Denominación de Origen propia; el extra añejo es una clase legal (envejecido en roble, mínimo 3 años, barricas de hasta 600 litros)",
@@ -268,7 +268,7 @@
           "queso madurado"
         ]
       },
-      "whyItTastes": "El agave del altiplano, de suelos rojos minerales, se lee más dulce y floral que el del valle; tres años o más en roble (típicamente ex-bourbon americano) empujan el destilado firmemente hacia la madera mientras la fruta del altiplano se mantiene debajo.",
+      "whyItTastes": "El agave del altiplano, de suelos rojos minerales, tiende a leerse más dulce y floral que el del valle — una tendencia documentada, no un resultado garantizado del lugar; tres años o más en roble (típicamente ex-bourbon americano) empujan el destilado firmemente hacia la madera mientras la fruta del altiplano se mantiene debajo.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales de Los Altos)"
     },
     "mezcal-reposado-espadin-oaxaca": {
@@ -313,7 +313,7 @@
     },
     "sotol-chihuahua": {
       "title": "Sotol, estilo desierto chihuahuense",
-      "context": "Pregúntale a un sotolero qué es el sotol y lo escucharás sin rodeos: no es agave, y está orgulloso de ello. El sotol se destila de plantas del género Dasylirion (sotol o sereque), nativas del desierto chihuahuense — parientes del agave en la familia Asparagaceae que comparten la lógica del asado de piña. Tiene Denominación de Origen desde 2002, que cubre solo Chihuahua, Coahuila y Durango; fue ilegal en México antes de 1994, y las vinatas clandestinas mantuvieron viva la tradición, igual que las familias sonorenses mantuvieron la bacanora. Esta guía lo incluye como tradición afín al agave, etiquetado con honestidad: el sotol no es un destilado de agave, y decirlo es parte de su historia. Este perfil describe el estilo del desierto de Chihuahua.",
+      "context": "Pregúntale a un sotolero qué es el sotol y lo escucharás sin rodeos: no es agave, y está orgulloso de ello. El sotol se destila de plantas del género Dasylirion (sotol o sereque), nativas del desierto chihuahuense — parientes del agave en la familia Asparagaceae que comparten la lógica del asado de piña. Tiene Denominación de Origen desde 2002, que cubre solo Chihuahua, Coahuila y Durango; fue ilegal en México antes de 1994, y las vinatas clandestinas mantuvieron viva la tradición, igual que las familias sonorenses mantuvieron el bacanora. Esta guía lo incluye como tradición afín al agave, etiquetado con honestidad: el sotol no es un destilado de agave, y decirlo es parte de su historia. Este perfil describe el estilo del desierto de Chihuahua.",
       "description": "El sotol asa la piña de Dasylirion en hornos cónicos (o la cuece al vapor los productores más grandes), fermenta silvestre y destila en cobre o barro. El resultado es un destilado herbal, fresco y ligeramente picante, más verde y salvaje que el tequila, con un humo generalmente más ligero que el del mezcal.",
       "beginnerNote": "¿Nuevo en el sotol? Espera frescura herbácea y de pasto húmedo sobre un humo suave — más cercano a un primo verde y salvaje del mezcal que al tequila.",
       "category": "Sotol — destilado con Denominación de Origen propia (Chihuahua, Coahuila, Durango, desde 2002); explícitamente no es un destilado de agave, incluido aquí como una tradición norteña afín",
@@ -335,7 +335,7 @@
       "title": "Tequila blanco de los Altos, estilo Los Altos (Jalisco)",
       "context": "El blanco es la clase legal sin añejar del tequila — y los Altos (alrededor de Atotonilco el Alto y Arandas) lo leen de forma muy distinta al Valle de Tequila. Los suelos minerales ricos en hierro, la mayor elevación y las noches más frescas producen agaves más grandes y dulces, así que un blanco de los Altos tiende a lo brillante, afrutado y floral donde el valle tiende a lo terroso y sabroso. Es una distinción cultural y agronómica, no una clase legal — ambos son simplemente tequila blanco, y los alteños te contarán con verdadero orgullo lo afrutado de su tierra roja.",
       "description": "La lectura alteña del tequila sin añejar: agave cocido más dulce con cítricos (piel de naranja, toronja), fruta tropical y de hueso, florales delicados y una especia suave, en un cuerpo más blando y redondo que el estilo del valle.",
-      "beginnerNote": "¿Nuevo en el tequila? Un blanco de los Altos es el punto de partida más amable: suave, dulce y afrutado, sin el filo sabroso del valle. Pruébalo junto al blanco del valle para saborear lo que el lugar le hace a la misma planta.",
+      "beginnerNote": "¿Nuevo en el tequila? Un blanco de los Altos suele describirse como punto de partida amable: suave, dulce y afrutado, y a menudo menos sabroso que un blanco del valle — aunque valle y altiplano se solapan y cada botella varía. Pruébalo junto al blanco del valle para saborear lo que el lugar puede hacer con la misma planta.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
       "process": "Cocido al vapor (o asado en piedra según algunos tradicionalistas), fermentado, doble destilado, sin añejar (blanco)",
       "finish": "Suave y afrutado, con un lento desvanecer de agave dulce y un leve repunte de pimienta al final.",
@@ -371,7 +371,7 @@
     },
     "kilinga-bacanora-silvestre": {
       "reviewSummary": "Mezcal Reviews describe notas de flores silvestres, cítricos y la acidez de la manzana verde, con un suave final violeta — una bacanora aromática y moderadamente compleja.",
-      "editorialNote": "Una lectura más afrutada y floral de la bacanora que la que describe este perfil — la acidez de manzana verde y el final violeta quedan fuera del centro mineral y sabroso del ejemplo de Rancho Tepúa."
+      "editorialNote": "Una lectura más afrutada y floral de el bacanora que la que describe este perfil — la acidez de manzana verde y el final violeta quedan fuera del centro mineral y sabroso del ejemplo de Rancho Tepúa."
     },
     "la-venenosa-costa": {
       "reviewSummary": "Una cata de miembro de Mezcal Reviews (lote 32, 2021) la llama la oferta más sabrosa y ahumada del rango de La Venenosa — deliciosamente positiva en su punto de precio, según el reseñista.",
@@ -608,7 +608,7 @@
   },
   "processes": {
     "pit-roast": {
-      "explanation": "Los corazones de agave se asan en pozos revestidos de piedra con fuego de leña, a veces durante días. Es la cocción clásica del mezcal, la bacanora y el tuxca; puede aportar humo, pero cuánto varía con la leña, el tiempo y el pozo — el método por sí solo no garantiza humo."
+      "explanation": "Los corazones de agave se asan en pozos revestidos de piedra con fuego de leña, a veces durante días. Es la cocción clásica del mezcal, el bacanora y el tuxca; puede aportar humo, pero cuánto varía con la leña, el tiempo y el pozo — el método por sí solo no garantiza humo."
     },
     "steam-cook": {
       "explanation": "Los corazones de agave se cocinan al vapor en hornos de mampostería (hornos) o autoclaves. Es la cocción típica del tequila: limpia, sin humo de leña."
@@ -643,10 +643,10 @@
     },
     "agave-angustifolia": {
       "cultivation": "cultivado en Oaxaca; silvestre y cultivado en otras regiones",
-      "atAGlance": "El gran caballo de batalla de México: espadín en el mezcal de Oaxaca, Pacifica/Yaquiana en la bacanora sonorense, chico aguiar en la raicilla de la costa.",
+      "atAGlance": "El gran caballo de batalla de México: espadín en el mezcal de Oaxaca, Pacifica/Yaquiana en el bacanora sonorense, chico aguiar en la raicilla de la costa.",
       "whereItGrows": "Valles Centrales de Oaxaca (cultivado), la Sierra de Sonora (silvestre) y la costa de Jalisco (silvestre y cultivado).",
       "harvestProduction": "Cultivado a escala en Oaxaca; de cosecha silvestre en Sonora. Cocido (pozo o vapor), nunca por savia.",
-      "sensoryTendencies": "Orientación editorial: los mezcales de espadín se leen con asado; la Pacifica de la bacanora aporta herbalidad sonorense; los sabores difieren por lugar y proceso, no por el nombre.",
+      "sensoryTendencies": "Orientación editorial: los mezcales de espadín se leen con asado; la Pacifica de el bacanora aporta herbalidad sonorense; los sabores difieren por lugar y proceso, no por el nombre.",
       "sustainability": "Las presiones de cosecha silvestre varían mucho por región: el bacanora sonorense depende de poblaciones silvestres de yaquiana/Pacifica, y el crecimiento del mezcal ha aumentado la demanda sobre parientes angustifolia de cosecha silvestre en otras partes. Donde el espadín se cultiva a escala (Oaxaca) la presión es mucho menor. Si la Pacifica/Yaquiana sonorense es la misma planta que el espadín o una variedad local distinta sigue en debate; esta guía conserva los nombres regionales sin zanjar la botánica. (El reporte sobre cosecha de agave silvestre es un tema activo en la prensa de la categoría, p. ej. Mezcalistas, revisado el 21-10-2026.)"
     },
     "agave-maximiliana": {
@@ -726,7 +726,7 @@
       "definition": "Una NOM (Norma Oficial Mexicana) es una norma oficial mexicana; el número NOM impreso en una etiqueta de tequila o mezcal identifica el registro del productor certificado bajo esa norma. Es distinto de otras marcas de la etiqueta, como los sellos u hologramas de certificación emitidos por un organismo de evaluación de la conformidad. La ausencia de número NOM (como en el tuxca no certificado) significa que el productor no está registrado en un esquema de denominación de origen — no menor calidad, y no exención de otros requisitos de etiquetado."
     },
     "vinata / taberna / palenque": {
-      "definition": "Palabras regionales para una pequeña destilería: viñata en Sonora, taberna en el país raicillero de Jalisco, palenque en Oaxaca. Misma función, tradición distinta."
+      "definition": "Palabras regionales para una pequeña destilería: vinata en Sonora, taberna en el país raicillero de Jalisco, palenque en Oaxaca. Misma función, tradición distinta."
     },
     "lote / batch": {
       "definition": "Los pequeños productores etiquetan lotes; los datos del lote (mezcla de agaves, graduación, fabricante) pueden diferir materialmente entre botellas de la misma marca. Los datos del lote deben quedarse con el lote."
@@ -742,10 +742,10 @@
     "discover-mexican-spirits": {
       "title": "Descubre los destilados mexicanos",
       "intro": "México destila muchos destilados de agave — y algunos de plantas emparentadas. Este capítulo presenta las tradiciones cubiertas en esta guía y qué hace distinta a cada una.",
-      "block0": "El tequila, el mezcal, la bacanora y la raicilla son destilados de agave con denominación de origen propia: nombres legalmente protegidos, ligados a lugares y reglas específicas. Cada uno sabe distinto porque la planta, el lugar y la producción difieren — no porque una categoría sea inherentemente mejor.",
+      "block0": "El tequila, el mezcal, el bacanora y la raicilla son destilados de agave con denominación de origen propia: nombres legalmente protegidos, ligados a lugares y reglas específicas. Cada uno sabe distinto porque la planta, el lugar y la producción difieren — no porque una categoría sea inherentemente mejor.",
       "block1": "Más allá de los nombres grandes, México tiene otras tradiciones regionales — el tuxca en la frontera Jalisco–Colima (sin denominación de origen), el comiteco de Chiapas (elaborado con aguamiel y azúcar de caña; protegido desde octubre de 2025 como la Indicación Geográfica “Comiteco de Comitán, Chiapas”, una figura distinta de una denominación de origen), el destilado de pulque del corazón pulquero (sin denominación de origen). Su estatus legal difiere del tequila, y esta guía nunca lo trata como un juicio de autenticidad.",
       "block2": "El sotol se incluye como una tradición norteña emparentada con el agave, pero no es un destilado de agave: el sotol viene del Dasylirion, un género emparentado. Mantener la distinción con precisión importa más que forzarlo dentro de la familia del agave.",
-      "block2deeper": "La geografía legal es municipal, no estatal: la denominación de la bacanora cubre municipios seleccionados de Sonora, y la de la raicilla nombra municipios específicos de Jalisco y Nayarit. El sombreado del mapa significa cobertura de la guía, nunca límites legales."
+      "block2deeper": "Botánicamente, Dasylirion y Agave están en la familia Asparagaceae, pero compartir familia no es compartir género — géneros distintos dentro de una familia son como primos, no como la misma planta con dos nombres. El sotol es pariente del agave, no agave."
     },
     "meet-the-plants": {
       "title": "Conoce las plantas",
@@ -784,7 +784,7 @@
       "title": "Elegir y disfrutar",
       "intro": "No hay una manera incorrecta de disfrutar estos destilados — pero sí maneras honestas de elegir. Este capítulo favorece tu propio paladar sobre el precio, la edad o la rareza.",
       "block0": "Empieza por lo que ya te gusta: blancos frescos y herbales, mezcales con humo, añejos con roble, o algo fuera de lo común. Los caminos de descubrimiento de esta guía agrupan perfiles por sabor para que sigas tu propio gusto, y cada perfil nombra su estilo sensorial con honestidad.",
-      "block1": "El servicio es simple: una copa pequeña a temperatura ambiente deja abrir los aromas; un chorrito de agua puede suavizar graduaciones altas. Los cócteles no son un compromiso — una margarita o una paloma son una forma legítima de conocer un blanco. Los maridajes de cada perfil son sugerencias editoriales, nunca reglas.",
+      "block1": "El servicio es simple: una copa pequeña a temperatura ambiente deja abrir los aromas; un chorrito de agua puede suavizar graduaciones altas. Los cócteles no implican un compromiso con el sabor: una margarita o una paloma son una forma legítima de conocer un blanco. Los maridajes de cada perfil son sugerencias editoriales, nunca reglas.",
       "block2": "Cuidado con las escaleras de marketing: más viejo no es automáticamente mejor, más graduación no es automáticamente mejor, y la rareza no es un sabor. Un blanco accesible de un buen productor puede superar a una botella trofeo. Esta guía perfila estilos, no trofeos.",
       "block2deeper": "Técnica de cata: mira, gira, huele suavemente, sorbe, y atiende el final. Compara dos perfiles parecidos lado a lado — la vista de comparación existe precisamente para eso."
     },
@@ -793,8 +793,8 @@
       "intro": "Material de referencia para entusiastas: las páginas completas de plantas, procesos y vocabulario de etiqueta detrás de los capítulos — con fuentes honestas.",
       "block0": "Las páginas de referencia de plantas registran identidad científica, nombres comunes regionales, cultivo, incertidumbre botánica honesta y fuentes. Las páginas de procesos explican cada etapa de producción con los perfiles que la usan. El glosario define cada término de etiqueta en contexto.",
       "block1": "La sostenibilidad importa para los agaves de cosecha silvestre: la reproducción lenta y solo por semilla del tobalá hace vulnerables a las poblaciones silvestres, y la larga maduración del sotol hace decisiva la práctica de cosecha. El bacanora y la raicilla suman la misma preocupación a escala de tradición — ambas dependen de agaves silvestres en Sonora y Jalisco — mientras que el espadín y el azul weber cultivados soportan una presión mucho menor. Las páginas de planta y tradición de esta guía establecen estas distinciones con fuentes fechadas, y marcan las afirmaciones de los productores como no verificadas donde la evidencia es escasa.",
-      "block2": "Las denominaciones evolucionan: la protección de la bacanora data de 2000, la de la raicilla de 2019, la del sotol de 2002. Esta guía registra fechas de verificación con cada fuente y revisa enmiendas antes de publicar resúmenes legales — una URL alcanzable nunca prueba una afirmación por sí sola.",
-      "block2deeper": "La geografía legal es municipal, no estatal: la denominación de la bacanora cubre municipios seleccionados de Sonora, y la de la raicilla nombra municipios específicos de Jalisco y Nayarit. El sombreado del mapa significa cobertura de la guía, nunca límites legales."
+      "block2": "Las denominaciones evolucionan: la protección de el bacanora data de 2000, la de la raicilla de 2019, la del sotol de 2002. Esta guía registra fechas de verificación con cada fuente y revisa enmiendas antes de publicar resúmenes legales — una URL alcanzable nunca prueba una afirmación por sí sola.",
+      "block2deeper": "La geografía legal es municipal, no estatal: la denominación del bacanora cubre municipios seleccionados de Sonora, y la de la raicilla nombra municipios específicos de Jalisco y Nayarit. El sombreado del mapa significa cobertura de la guía, nunca límites legales."
     }
   },
   "traditions": {
@@ -814,6 +814,63 @@
     },
     "raicilla": {
       "sustainability": "Parte del rango de la raicilla depende de maximiliana y especies afines de cosecha silvestre; las afirmaciones de sostenibilidad varían por productor y solo se presentan cuando están documentadas."
+    }
+  },
+  "regions": {
+    "tequila-valley-jal": {
+      "name": "Valle de Tequila, Jalisco",
+      "geography": "Valle bajo alrededor del pueblo de Tequila; suelos volcánicos, más cálido y seco que los Altos.",
+      "distinctions": "El agave tiende a crecer más pequeño y herbáceo que el de los Altos; los blancos del valle se leen sabrosos y vegetales en la guía editorial — una descripción cultural, no un límite legal."
+    },
+    "tequila-highlands-jal": {
+      "name": "Los Altos de Jalisco (La Alteña), Jalisco",
+      "geography": "Meseta alta al este del valle (alrededor de Arandas y la zona de La Alteña); suelos minerales rojos, noches más frescas.",
+      "distinctions": "El agave de los Altos se lee más dulce y floral en la guía editorial; algunos tradicionalistas asan en piedra. Una distinción cultural/agronómica, no una clase legal."
+    },
+    "valles-centrales-oax": {
+      "name": "Valles Centrales, Oaxaca",
+      "geography": "Sistema de valles alrededor de la ciudad de Oaxaca, incluidos Santiago Matatlán y Tlacolula.",
+      "distinctions": "Corazón del mezcal de palenque; la pechuga es una tradición de destilación específica de aquí, no una categoría propia."
+    },
+    "sierra-norte-oax": {
+      "name": "Sierra Norte, Oaxaca",
+      "geography": "Montañas altas al norte de los valles; país de agaves silvestres de altitud.",
+      "distinctions": "El tobalá crece aquí y más allá; encontrar un tobalá maduro es motivo de orgullo personal para un mezcalero — una nota cultural, no un área legal."
+    },
+    "sierra-sonora": {
+      "name": "Sierra de Sonora, Sonora",
+      "geography": "Municipios de montaña (Aconchi, Álamos, San Pedro de la Cueva y vecinos) donde trabajan las vinatas bacanoreras.",
+      "distinctions": "La cobertura oficial de el bacanora es municipal dentro de Sonora (desde la DO de 2000), nunca todo el estado."
+    },
+    "sierra-occidental-jal": {
+      "name": "Sierra Occidental de Jalisco",
+      "geography": "País de montaña al oeste de Guadalajara, alrededor de La Vieja y la Sierra de Talpa.",
+      "distinctions": "País de las tabernas de la raicilla de la Sierra; la declaración de DO nombra municipios específicos de Jalisco, así que nunca se sombrea el estado completo."
+    },
+    "costa-sur-jal": {
+      "name": "Costa Sur / Cabo Corrientes, Jalisco",
+      "geography": "Montañas y cañones costeros del suroeste de Jalisco, alrededor de Cabo Corrientes.",
+      "distinctions": "La Costa es una división editorial de la raicilla, no una clase legal."
+    },
+    "jalisco-colima-borderlands": {
+      "name": "Región de Tuxcacuesco, sur de Jalisco (frontera Jalisco–Colima)",
+      "geography": "Cañones fluviales del sur de Jalisco alrededor de Tuxcacuesco y Zapotitlán de Vadillo, llegando hacia Colima.",
+      "distinctions": "La tuxca no tiene denominación de origen; la práctica del vinatero es cultural, y las botellas no llevan registro NOM — lo que falta es la certificación del esquema de DO, no otras obligaciones de etiquetado — un hecho legal, no un juicio de autenticidad."
+    },
+    "comitan-chiapas": {
+      "name": "Comitán de Domínguez, Chiapas",
+      "geography": "Meseta alta del centro de Chiapas alrededor de Comitán de Domínguez.",
+      "distinctions": "El comiteco está protegido desde octubre de 2025 como la Indicación Geográfica “Comiteco de Comitán, Chiapas” (una IG, no una DO); la composición (agave frente a azúcares de caña) se verifica por botella, nunca se supone."
+    },
+    "tlaxcala-central": {
+      "name": "Nanacamilpa y el centro de Tlaxcala",
+      "geography": "Corazón pulquero de las tierras altas Tlaxcala–Estado de México.",
+      "distinctions": "El destilado de pulque es una tradición regional, explícitamente no mezcal; el pulque fermentado no es un destilado y queda fuera del catálogo."
+    },
+    "chihuahua-norte": {
+      "name": "Sierra Chihuahuense del Norte, Chihuahua",
+      "geography": "País de sierra y desierto del norte de Chihuahua, desde la Sierra hasta Delicias.",
+      "distinctions": "La DO del sotol (2002) cubre Chihuahua, Coahuila y Durango; el Dasylirion no es un agave, y la app lo mantiene explícito."
     }
   }
 }

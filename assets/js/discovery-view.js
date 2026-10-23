@@ -1,7 +1,7 @@
 import { el, clear } from "./dom-utils.js";
 import { navigateTo } from "./router.js";
 import { ui } from "./presentation.js";
-import { localizedTitle } from "./editorial.js";
+import { localizedTitle, fieldEs } from "./editorial.js";
 import { SPIRIT_LABELS, ADVENTUROUS_TRADITIONS } from "./spirit-labels.js";
 import { flavorMoods } from "./compare.js";
 
@@ -166,7 +166,7 @@ function renderPlant(container, { plant, plants, regions, profiles, locale }) {
   regionsBlock.appendChild(sectionHeader("plant-regions", ui(locale, "whereItGrows")));
   const regionName = (id) => {
     const r = (regions || []).find((x) => x.id === id);
-    return r ? r.name : id;
+    return r ? (fieldEs("region", r.id, "name", locale) || r.name) : id;
   };
   regionsBlock.appendChild(linkChips(
     (plant.regionIds || []).map((id) => ({ id })),
@@ -195,9 +195,9 @@ function renderRegion(container, { region, plants, profiles, locale }) {
   const section = el("section", { class: "discover-view", "aria-labelledby": "discover-heading" });
   section.appendChild(backToDiscover(locale));
   section.appendChild(el("p", { class: "eyebrow" }, ui(locale, "discoverByRegion")));
-  section.appendChild(el("h1", { id: "discover-heading" }, region.name));
-  section.appendChild(el("p", { class: "view-intro" }, region.geography));
-  section.appendChild(el("p", { class: "editorial-note" }, region.distinctions));
+  section.appendChild(el("h1", { id: "discover-heading" }, fieldEs("region", region.id, "name", locale) || region.name));
+  section.appendChild(el("p", { class: "view-intro" }, fieldEs("region", region.id, "geography", locale) || region.geography));
+  section.appendChild(el("p", { class: "editorial-note" }, fieldEs("region", region.id, "distinctions", locale) || region.distinctions));
 
   const traditionsBlock = el("section", { class: "discover-block", "aria-labelledby": "region-traditions" });
   traditionsBlock.appendChild(sectionHeader("region-traditions", ui(locale, "traditionsHere")));

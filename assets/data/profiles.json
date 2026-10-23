@@ -65,7 +65,7 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "The savory, earthy edge is place plus method: valley agave grows smaller and more herbaceous than highland agave, and traditional valley producers crush the cooked piña with a tahona stone wheel and ferment in open tanks. Age and price explain none of it."
+      "whyItTastes": "The savory, earthy edge is place plus method working together: valley agave tends to grow smaller and more herbaceous than highland agave (a tendency, not a rule), and traditional valley producers crush the cooked piña with a tahona stone wheel and ferment in open tanks. Age and price explain none of it; method and place together shape the glass, neither alone decides it."
     },
     {
       "id": "mezcal-espadin-valles-centrales",
@@ -199,7 +199,7 @@
       "plantIds": [
         "agave-angustifolia"
       ],
-      "whyItTastes": "Wild Pacifica/Yaquiana agave from the Sonoran sierra, pit-roasted (often over mesquite) and wild-fermented — the herbal, gently smoky character follows from wild harvest plus pit roast. Double distillation keeps it clean over the roast."
+      "whyItTastes": "Wild Pacifica/Yaquiana agave from the Sonoran sierra, pit-roasted (often over mesquite) and wild-fermented: reviewers and producers describe an herbal, gently smoky character that the guide attributes to the plant and the pit roast together — a documented tendency of this style, not a guaranteed outcome of wild harvest. Double distillation is the standard method here; it does not by itself ensure cleanliness."
     },
     {
       "id": "raicilla-maximiliana-sierra-jalisco",
@@ -910,7 +910,7 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Extra añejo ('extra aged') is the newest legal tequila class: a minimum of three years in oak barrels of no more than 600 liters, added to the NOM in 2006. It exists because producers wanted recognition for long-rested tequilas; El Tesoro's family released its Paradiso in 1994, before the class legally existed. This profile describes a highland extra añejo of four to five years — well past the three-year minimum, which is the only legal mark (the NOM sets a minimum, not a range). Highland pride runs deep here: highland agave grows bigger and sweeter, and alteños say it is the only agave that can carry that much oak and still taste of agave.",
+      "context": "Extra añejo ('extra aged') is the newest legal tequila class: a minimum of three years in oak barrels of no more than 600 liters, added to the NOM in 2006. It exists because producers wanted recognition for long-rested tequilas; El Tesoro's family released its Paradiso in 1994, before the class legally existed. This profile describes a highland extra añejo of four to five years — well past the three-year minimum, which is the only legal mark (the NOM sets a minimum, not a range). Highland pride runs deep here: growers describe highland agave as bigger and sweeter, and some alteños argue it carries long oak rests better than valley agave — the guide records that as a local view and a tendency, not a rule; valley distilleries also age extra añejo.",
       "description": "Three-plus years of oak pushes tequila toward brandy territory: deep oak, chocolate, coffee and dried fruit around a cooked-agave core. The honest tension of this class is that many producers consider more than about four years excessive — wood can overwhelm the delicate agave — so the best extra añejos are those that keep agave in the frame, as the example bottle's reviewers note. 'Older is better' remains marketing, not a rule.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated; highland mineral soils)",
       "plantId": "agave-tequilana",
@@ -945,7 +945,7 @@
       "placeCoords": {
         "lat": 20.9,
         "lon": -103.84,
-        "precision": "town (Tequila, Jalisco); approximate"
+        "precision": "highlands (Los Altos, near Arandas; example producer La Alteña); approximate"
       },
       "pairing": {
         "serving": "Sipped neat after dinner, in a snifter-style glass (editorial suggestion).",
@@ -973,7 +973,7 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "Highland agave from red mineral soils reads sweeter and more floral than valley agave; three-plus years in (typically American ex-bourbon) oak pushes the spirit firmly into wood territory while the highland fruit holds on underneath.",
+      "whyItTastes": "Highland agave from red mineral soils tends to read sweeter and more floral than valley agave — a documented tendency, not a guaranteed outcome of place; three-plus years in (typically American ex-bourbon) oak pushes the spirit firmly into wood territory while the highland fruit holds on underneath.",
       "maturation": {
         "class": "extra añejo",
         "duration": "3 years or more in oak"
@@ -1094,7 +1094,7 @@
       "placeCoords": {
         "lat": 17.2,
         "lon": -96.5,
-        "precision": "region (Sierra Norte / Santiago Matatlán area, Oaxaca); approximate"
+        "precision": "region (Sierra Norte de Oaxaca; the wild style ranges across the Sierra, while the example bottle is cultivated in Santiago Matatlán); approximate"
       },
       "pairing": {
         "serving": "Sipped neat in a small copita; tobalá's florals fade in cocktails (editorial suggestion).",
@@ -1204,7 +1204,7 @@
       "plantId": "agave-tequilana",
       "process": "Steam-cooked (or stone-roasted by some traditionalists), fermented, double distilled; typically unaged, though blanco rules permit brief oak contact below the two-month reposado minimum",
       "category": "Tequila — spirit with its own Denomination of Origin; blanco is a legal class of tequila typically sold unaged, though the rules permit brief oak maturation below the reposado minimum",
-      "beginnerNote": "New to tequila? A highland blanco is the friendliest starting point: soft, sweet and fruity, with none of the valley's savory edge. Try it beside the valley blanco to taste what place does to the same plant.",
+      "beginnerNote": "New to tequila? A highland blanco is often described as a friendly starting point: soft, sweet and fruity, and often less savory than a valley blanco — though valley and highland overlap, and individual bottles vary. Try it beside the valley blanco to taste what place can do to the same plant.",
       "aliases": [
         "highland blanco",
         "altos blanco",
