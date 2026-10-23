@@ -79,10 +79,18 @@ function exampleRow(label, profiles, locale) {
  * chapter links to real profiles/plants/processes/terms; direct access
  * to reference sections is preserved through the jump nav.
  */
-export function renderLearn(container, { chapters = [], plants, processes, glossary, profiles, bottles, sources, locale = null, section: deepSection = null }) {
+export function renderLearn(container, { chapters = [], plants, processes, glossary, profiles, bottles, sources, locale = null, section: deepSection = null, from = null }) {
   clear(container);
   const section = el("section", { class: "learn-view", "aria-labelledby": "learn-heading" });
   const t = (key) => (locale ? locale.t(key) : key);
+  // Pair 10: a lesson's reference example links back to that lesson, so
+  // the reader is never stranded in the reference material.
+  if (from && from.startsWith("start:")) {
+    section.appendChild(el("a", {
+      href: `#/start/${encodeURIComponent(from.slice("start:".length))}`,
+      class: "back-link",
+    }, t("profile.backLesson")));
+  }
   section.appendChild(el("h2", { id: "learn-heading" }, t("learn.heading")));
   section.appendChild(el("p", { class: "view-intro" }, t("learn.intro")));
 

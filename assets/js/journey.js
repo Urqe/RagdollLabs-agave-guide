@@ -106,7 +106,7 @@ const STRINGS = {
     invalidLesson: "That lesson does not exist.",
     invalidLessonBody: "The journey has five steps — pick any of them below; each one reads on its own.",
     whyThisExample: "Why open it",
-    preparedComparisonNote: "The comparison opens in the existing comparison view with these two styles selected. If you had styles saved for comparison, returning to this lesson brings them back.",
+    preparedComparisonNote: "The comparison opens in the existing comparison view with these two styles selected. If you had styles saved for comparison, returning to the journey brings them back — your own picks in the comparison are always kept.",
   },
   es: {
     hubTitle: "Tu primer destilado de agave",
@@ -127,7 +127,7 @@ const STRINGS = {
     invalidLesson: "Esa lección no existe.",
     invalidLessonBody: "El recorrido tiene cinco pasos — elige cualquiera de ellos abajo; cada uno se lee por sí solo.",
     whyThisExample: "Por qué abrirlo",
-    preparedComparisonNote: "La comparación se abre en la vista de comparación existente con estos dos estilos seleccionados. Si tenías estilos guardados para comparar, volver a esta lección los recupera.",
+    preparedComparisonNote: "La comparación se abre en la vista de comparación existente con estos dos estilos seleccionados. Si tenías estilos guardados para comparar, volver al recorrido los recupera — lo que tú elijas en la comparación siempre se conserva.",
   },
 };
 
@@ -148,14 +148,14 @@ function localizedProfileById(id, profiles, locale) {
 }
 
 /** Example card: one or two per lesson, each with a reason to open it. */
-function exampleCard({ profileId, chapterId, reason }, { profiles, locale }) {
+function exampleCard({ profileId, chapterId, reason }, { profiles, locale, lessonId }) {
   const lang = locale ? locale.get() : "en";
   const card = el("li");
   if (profileId) {
     const found = localizedProfileById(profileId, profiles, locale);
     if (!found) return null;
     const link = el("a", {
-      href: `#/profile/${encodeURIComponent(profileId)}?origin=${encodeURIComponent("start:" + profileId)}`,
+      href: `#/profile/${encodeURIComponent(profileId)}?origin=${encodeURIComponent("start:" + lessonId)}`,
       class: "discovery-card",
     });
     link.appendChild(el("span", { class: "eyebrow" }, SPIRIT_LABELS[found.profile.spirit] || found.profile.spirit));
@@ -163,7 +163,10 @@ function exampleCard({ profileId, chapterId, reason }, { profiles, locale }) {
     link.appendChild(el("span", { class: "discovery-place" }, `${found.profile.stateName}, México`));
     card.appendChild(link);
   } else if (chapterId) {
-    const link = el("a", { href: "#/learn", class: "discovery-card" });
+    const link = el("a", {
+      href: `#/learn?from=${encodeURIComponent("start:" + lessonId)}`,
+      class: "discovery-card",
+    });
     link.appendChild(el("span", { class: "eyebrow" }, jt(locale, "exampleFrom")));
     link.appendChild(el("strong", {}, ui(locale, "learn.heading")));
     card.appendChild(link);
@@ -179,16 +182,15 @@ function stepList(activeId, locale) {
   const nav = el("nav", { class: "journey-steps", "aria-label": jt(locale, "stepListLabel") });
   const list = el("ol", { class: "journey-step-list" });
   JOURNEY_STEPS.forEach((step, index) => {
+    const label = `${index + 1}. ${stepTitle(step, locale)}`;
     const item = el("li", { class: step.id === activeId ? "is-active" : undefined });
-    const link = el("a", { href: `#/start/${encodeURIComponent(step.id)}` },
-      `${index + 1}. ${stepTitle(step, locale)}`);
     if (step.id === activeId) {
-      link.setAttribute("aria-current", "step");
-      const strong = el("strong", {}, link.textContent);
-      link.textContent = "";
-      link.appendChild(strong);
+      // The current position is a marker, never a link to itself.
+      const marker = el("strong", { "aria-current": "step" }, label);
+      item.appendChild(marker);
+    } else {
+      item.appendChild(el("a", { href: `#/start/${encodeURIComponent(step.id)}` }, label));
     }
-    item.appendChild(link);
     list.appendChild(item);
   });
   nav.appendChild(list);
@@ -239,7 +241,7 @@ export function renderLesson(container, { lessonId, profiles, locale = null } = 
     section.appendChild(el("h3", { class: "sources-heading" }, jt(locale, "exampleLabel")));
     const list = el("ul", { class: "discovery-matches" });
     for (const example of examples) {
-      const card = exampleCard(example, { profiles, locale });
+      const card = exampleCard(example, { profiles, locale, lessonId: step.id });
       if (card) list.appendChild(card);
     }
     if (list.childNodes.length > 0) section.appendChild(list);
@@ -251,7 +253,7 @@ export function renderLesson(container, { lessonId, profiles, locale = null } = 
     const link = el("a", {
       href: `#/compare/${ids}?from=${encodeURIComponent("start:" + step.id)}`,
       class: "cta-link",
-    }, jt(locale, "comparisonLabel") || stepTitle(step, locale));
+    }, step.comparisonLabel[lang] || step.comparisonLabel.en || stepTitle(step, locale));
     handoff.appendChild(link);
     section.appendChild(handoff);
     section.appendChild(el("p", { class: "editorial-note" }, jt(locale, "preparedComparisonNote")));

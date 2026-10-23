@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — refinement after post-roadmap pair 7
 
-Post-roadmap pairs 8 and 9 are applied; the next planned release is **post-roadmap pair 10 — Beginner Journey Review & Fixes**, followed by pairs 11–14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
+Post-roadmap pairs 8–10 are applied; the next planned release is **post-roadmap pair 11 — Clear Discovery Entrances**, followed by pairs 12–14 in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -524,12 +524,14 @@ Acceptance: a newcomer can enter from the homepage, learn the essentials in a sh
 
 ### Post-roadmap pair 10 — Beginner Journey Review & Fixes (maintenance)
 
-1. [ ] Follow the beginner journey from a fresh visit in EN and ES, including reading without a glass, skipping lessons, opening an example, returning, reloading a lesson and using Back/Forward.
-2. [ ] Verify focus moves to a meaningful heading, the active step is announced, links have useful names and progress/selection is not conveyed by colour alone.
-3. [ ] Verify the prepared comparison handles existing empty, partial and full selections without silently destroying user choices; invalid or retired lesson IDs produce a useful recovery.
-4. [ ] Review cognitive load: each step has one clear primary action, jargon is explained at first use and legal/reference detail is optional.
-5. [ ] Test relevant mobile layouts, text enlargement, reduced motion and keyboard access. Record actual iPhone/iPad Safari and VoiceOver results separately from desktop or DOM evidence.
-6. [ ] Implement confirmed fixes, run focused regressions and normal validation, and verify the deployed lesson links.
+Applied (see the pair 10 notes in RELEASE_NOTES.md).
+
+1. [x] Follow the beginner journey from a fresh visit in EN and ES, including reading without a glass, skipping lessons, opening an example, returning, reloading a lesson and using Back/Forward.
+2. [x] Verify focus moves to a meaningful heading, the active step is announced, links have useful names and progress/selection is not conveyed by colour alone.
+3. [x] Verify the prepared comparison handles existing empty, partial and full selections without silently destroying user choices; invalid or retired lesson IDs produce a useful recovery.
+4. [x] Review cognitive load: each step has one clear primary action, jargon is explained at first use and legal/reference detail is optional.
+5. [x] Test relevant mobile layouts, text enlargement, reduced motion and keyboard access. Record actual iPhone/iPad Safari and VoiceOver results separately from desktop or DOM evidence.
+6. [x] Implement confirmed fixes, run focused regressions and normal validation, and verify the deployed lesson links.
 
 Acceptance: the new route teaches a coherent sequence without blocking free exploration, losing comparison state or stranding readers in a reference page. Report untested native-device behavior explicitly.
 

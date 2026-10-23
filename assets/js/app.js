@@ -28,6 +28,7 @@ const state = {
   lastComparePick: null,
   lastCompareQuery: null,
   savedBeforeLesson: null,
+  lessonPreparedSelection: null,
 };
 
 function baseUrl() {
@@ -146,10 +147,16 @@ async function renderRoute(container, route) {
   if (route.name === "start") {
     state.exploreApi = null;
     // Returning to the journey restores a compare selection the lesson
-    // handoff replaced, so the beginner route never costs saved choices.
+    // handoff replaced — but only if the reader made no picks of their
+    // own inside the comparison; their own choices always win.
     if (state.savedBeforeLesson) {
-      setCompareSelection(state.savedBeforeLesson);
+      const current = getCompareSelection();
+      const prepared = state.lessonPreparedComparison || [];
+      const untouched = prepared.length > 0 &&
+        current.length === prepared.length && current.every((id, i) => id === prepared[i]);
+      if (untouched) setCompareSelection(state.savedBeforeLesson);
       state.savedBeforeLesson = null;
+      state.lessonPreparedSelection = null;
     }
     if (route.params.lessonId) {
       renderLesson(container, { lessonId: route.params.lessonId, profiles, locale });
@@ -162,6 +169,7 @@ async function renderRoute(container, route) {
     state.exploreApi = null;
     renderLearn(container, {
       section: route.params.section || null,
+      from: route.params.from || null,
       chapters: state.data.chapters,
       plants: state.data.plants,
       processes: state.data.processes,
@@ -192,9 +200,11 @@ async function renderRoute(container, route) {
     }
     // A lesson handoff never silently destroys a saved selection: the
     // prepared comparison renders, and the lesson keeps the previous
-    // selection to restore when the reader returns.
+    // selection to restore when the reader returns — unless the reader
+    // made their own picks inside the comparison view.
     if (fromLesson && !state.savedBeforeLesson) {
       state.savedBeforeLesson = persisted.length > 0 ? [...persisted] : null;
+      state.lessonPreparedSelection = [...ids];
     }
     setCompareSelection(ids);
     renderCompare(container, {
@@ -332,7 +342,7 @@ async function boot() {
       state.lastExploreState = state.exploreApi.snapshot();
     }
     state.intraExploreMove = intraExploreMove;
-    const routeKey = route.name + ":" + (route.params.profileId || route.params.stateId || route.params.compareIds || "");
+    const routeKey = route.name + ":" + (route.params.profileId || route.params.stateId || route.params.compareIds || route.params.lessonId || "");
     const routeChanged = routeKey !== lastRouteKey;
     lastRouteKey = routeKey;
     state.consumedRestore = null;

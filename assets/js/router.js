@@ -31,8 +31,12 @@ export function parseHash(hash) {
     if (segments.length === 2) return { name: "start", params: { lessonId: segments[1] } };
     return { name: "notFound", params: {} };
   }
-  if (segments[0] === "learn") {
-    if (segments.length === 1) return { name: "learn", params: {} };
+  if (segments[0] === "learn" || segments[0].split("?")[0] === "learn") {
+    if (segments.length === 1) {
+      const query = segments[0].split("?")[1] || "";
+      const from = new URLSearchParams(query).get("from");
+      return from ? { name: "learn", params: { from } } : { name: "learn", params: {} };
+    }
     if (segments.length === 2 && ["terms", "plants", "processes"].includes(segments[1])) {
       return { name: "learn", params: { section: segments[1] } };
     }
@@ -92,8 +96,10 @@ export function buildHash(route) {
     case "discover":
       if (!route.params.kind) return "#/discover";
       return `#/discover/${encodeURIComponent(route.params.kind)}/${encodeURIComponent(route.params.id)}`;
-    case "learn":
-      return route.params.section ? `#/learn/${route.params.section}` : "#/learn";
+    case "learn": {
+      const fromQuery = route.params.from ? `?from=${encodeURIComponent(route.params.from)}` : "";
+      return route.params.section ? `#/learn/${route.params.section}` : `#/learn${fromQuery}`;
+    }
     case "start":
       return route.params.lessonId ? `#/start/${encodeURIComponent(route.params.lessonId)}` : "#/start";
     case "compare": {

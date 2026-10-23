@@ -2228,3 +2228,68 @@ depth without forcing enthusiasts through onboarding.
   active-step announcements with a real screen reader.
 - Lesson progression is deliberately not persisted: steps are freely
   skippable and stateless by design.
+
+## Post-roadmap pair 10 — Beginner Journey Review & Fixes
+
+Scope per plan section 4.2: maintenance review of the pair-9 beginner
+journey — full walkthrough in EN and ES, comparison-selection safety,
+focus/announcement semantics, cognitive load, invalid ids and route
+stability.
+
+### Findings (confirmed defects, all fixed)
+
+1. **The prepared comparison was never explicitly labelled.** The
+   handoff link fell back to the step title ("Try a comparison")
+   because it read a `comparisonLabel` key from the module's STRINGS
+   table, where the key does not exist — the label lives on the step
+   object. The link now reads "Open the prepared comparison: valley
+   blanco vs valley reposado" (ES parity).
+2. **The active step was a link to itself.** The step list rendered
+   the current lesson as an anchor to its own route. The active step
+   is now a non-interactive position marker (`<strong
+   aria-current="step">`), so progress is announced without a
+   meaningless self-link.
+3. **Example-card back links pointed at invalid lessons.** Profile
+   examples carried `origin=start:<profileId>` instead of the lesson
+   id, so "← Back to the lesson" landed on the invalid-id recovery
+   page. The origin now carries the actual lesson id.
+4. **Reference-page stranding.** The how-to-taste lesson's chapter
+   example linked to bare `#/learn` with no return path, and the
+   router 404'd on `#/learn?from=…`. The router now parses the from
+   query on the learn route, the example links with the lesson
+   origin, and the Learn view renders "← Back to the lesson" when
+   arrived from one — mirroring the profile and compare views.
+5. **The selection restore could destroy the reader's own picks.**
+   Returning to the journey always restored the stashed pre-lesson
+   selection, even when the reader had picked their own styles inside
+   the lesson-opened comparison view. The restore now fires only when
+   the selection still equals the prepared comparison; the reader's
+   own choices always win. The in-lesson disclosure says so plainly.
+6. **Lesson-to-lesson moves were treated as same-route.** The app's
+   route key ignored `lessonId`, so navigating between lessons skipped
+   the new-page scroll-to-heading behavior. Lesson ids are now part
+   of the route key.
+
+Verified without defect: EN/ES rendering isolation (no leakage after
+a toggle), heading focus and scroll behavior via the existing route
+handling, jargon introduced with context in every lesson, one clear
+onward action per lesson, invalid lesson ids recovering with the real
+step list, and the step-list chips meeting the 44px tap-target rule
+(now explicit in CSS). Native iPhone/iPad Safari and VoiceOver checks
+remain **unverified** — no browser engine or screen reader is
+available in this environment; DOM-level evidence only.
+
+### Checks run
+
+- `npm run validate` — schema plus 258 node:test/jsdom suites, all
+  passing; 9 new pair-10 regression tests (explicit labelling, no
+  self-links, example-origin integrity, no reference stranding,
+  restore-vs-reader-picks, route distinctness, jargon context,
+  language isolation, back-link resolution in EN and ES).
+- Router re-verified at the DOM level for `#/learn?from=…`, bare
+  `#/learn`, section routes and all lesson routes.
+
+### Remaining issues / deferred
+
+- Native-device (iPhone/iPad Safari, VoiceOver) checks still
+  unverified in this environment, honestly recorded as such.
