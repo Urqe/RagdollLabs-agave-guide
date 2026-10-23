@@ -2547,3 +2547,75 @@ with search state intact).
 Post-roadmap pairs 8–14 are applied. Per the plan, further content
 expansion is reassessed only after these usability releases are
 reviewed by the owner on the deployed site.
+
+### Pair-14 follow-up correction (2026-10-23, pair 15)
+
+The pair-14 raw-key and zero-mismatch conclusions were too broad. The
+sweep's regex (`/[a-z]+\.[A-Z][a-zA-Z]+/`) missed lowercase-first keys
+such as `learn.heading` and bare keys such as `noReviewYet`, and its
+element selection skipped lesson card titles: at `#/start/how-to-taste`
+the chapter example card rendered the generic "Learn" label via
+`learn.heading`, and at `#/catalogue` the Balam entry showed the raw
+`noReviewYet` key because `ui()` reads a second COPY bundle that never
+contained it (it existed only in locale.js STRINGS). Both are fixed in
+pair 15, which also found that `ilegal-mezcal-anejo` (a 14-month
+añejo) was mapped onto the mezcal reposado profile and
+`hacienda-de-chihuahua-sotol-anejo` (2 years in oak) onto the unaged
+sotol profile — the pair-14 "every expression/profile link audited
+— zero mismatches" claim is corrected accordingly. The historical
+pair-14 notes above are preserved; the pair-15 regression suite now
+validates ui() keys at their source against both string bundles.
+
+## Post-roadmap pair 15 — Corrective UX, Mapping & Localization Review (2026-10-23)
+
+Maintenance release applying the plan's section 4.3 tasks 15.1–15.6 and the
+section 4.4 pair-15 content corrections (P15-C1…C9). Automated checks:
+`npm run validate` passes (18 profiles, 46 bottles, 92 sources) and the full
+node:test suite passes including 7 new pair-15 regressions. Desktop DOM
+evidence only: native iPhone/iPad Safari, VoiceOver and physical-touch
+checks remain unverified, and no native-device claim is made. Deployed
+re-verification is pending (this record was written before deployment).
+
+### Claim ledger (changed claims, EN and ES surfaces)
+
+| Claim | Disposition | Where |
+| --- | --- | --- |
+| Comiteco: "not a spirit with a denomination of origin, DO request pending" | Corrected — IG "Comiteco de Comitán, Chiapas" protected 6 Oct 2025; cane sugars and Agave americana L. named by the declaration; A. atrovirens kept as attributed alternative | profiles, traditions, plants, regions, chapters (EN+ES) [S: DOF/SIDOF 5769331] |
+| "Comitán de Domínguez" in the English aguamiel profile | Corrected — English profile says Comitán; Spanish keeps the official municipality name | profiles (EN) |
+| Mezcal classes: "joven / abocado" conflation | Corrected — six NOM-070 classes listed (blanco o joven, madurado en vidrio, reposado, añejo, abocado con, destilado con); pechuga placed as destilado con | glossary, traditions, chapters, mezcal reposado profile (EN+ES) [S: NOM-070-SCFI-2016 4.5] |
+| Copper/artisanal vs clay/ancestral binary | Corrected — artisanal permits copper or clay per NOM-070 4.4.2 | traditions, tobalá profile (EN+ES) |
+| "Mezcal reposado minimum differs from tequila's" | Corrected — both start at two months; other requirements differ; wood not narrowed to oak | glossary, mezcal reposado profile, chapters (EN+ES) |
+| "All mezcal pit-roasted/smoky" implication | Qualified — category-level process allows other cooking methods | mezcal espadín profile, traditions (EN+ES) |
+| Tequila class list missing joven/oro; composition categories | Corrected — joven/oro included; 100% de agave vs tequila categories explained as composition facts, not quality grades | traditions (EN+ES) [S: NOM-006/CRT] |
+| Blanco = "unaged" flat definition | Qualified — typically unaged; brief permitted maturation below the reposado window exists | tequila blanco profiles (EN+ES) |
+| "Middle of the legal range" (18-month añejo); "longer side of the legal range" (4–5-year extra añejo) | Corrected — only minima exist; range language removed | añejo and extra añejo profiles (EN+ES) |
+| "Only highland agave can carry that much oak" | Corrected — recorded as a local view/tendency; valley distilleries also age extra añejo | extra añejo profile (EN+ES) |
+| Highland beginner note "none of the valley's savory edge" | Qualified — overlaps and bottle variation acknowledged | highland blanco profile (EN+ES) |
+| Bacanora "legalized and protected as DO in 2000" | Corrected — prohibition 1915–1992, legalization 1992, DO 2000 (separate events) | traditions, bacanora profile (EN+ES) [S: bacanora.sonora.gob.mx] |
+| NOM glossary collapsed standard vs registration | Corrected — NOM is a standard; label number is the producer registration; distinct from certification seals | glossary (EN+ES) |
+| "Tuxca bottles carry no NOM / no seal — pride is the certificate" | Corrected — absence is DO-scheme certification, not exemption from labeling requirements | chapters, tuxca beginnerNote, regions (EN+ES) |
+| Sierra raicilla "tabernas" as stills | Corrected — a taberna is a distillery | raicilla profile (EN+ES) |
+| Raicilla reposado "minimum 2 months per DO source" | Qualified — rests on the 2019 declaration and published standard project; the 3-month example rest is a bottle fact, not a legal minimum | raicilla reposado profile (EN+ES) |
+| "Sotol was illegal in Mexico before 1994" | Corrected — replaced with era-specific wording; no single nationwide ban asserted | sotol profile (EN+ES) |
+| Sotol "roots left intact → regrows — sustainable by design" | Corrected — regrowth not guaranteed; harvest pressure documented; no regeneration claim | sotol profile, plants, traditions (EN+ES) |
+| Tobalá "12–15 years", sotol "8–12 years / one bottle" fixed figures | Qualified — variable, source-dependent ranges | plants, profiles (EN+ES) |
+| Sap harvest described indefinitely sustainable / scraping vagueness | Corrected — quiote cut, cavity scraped, repeated collection exhausts the plant | processes (EN+ES) |
+| Leek/onion cross-genus analogy | Corrected — cousins framing that does not fail on genera | chapters (EN+ES) |
+| "Wild harvest causes bacanora herbality", "double distillation keeps it clean", valley/highland determinism | Qualified — tendencies and variables, not causes/guarantees | bacanora, valley blanco, extra añejo whyItTastes (EN+ES) |
+| Extra añejo marker described as the town of Tequila | Corrected — Los Altos near Arandas with producer context | extra añejo placeCoords |
+| Tobalá mixed "Sierra Norte / Santiago Matatlán" location | Corrected — wild style ranges the Sierra; example bottle cultivated in Santiago Matatlán | tobalá placeCoords |
+| "raspanado la quiota", "viñata", "hazlo solo", "cócteles no son un compromiso", English glosses in Spanish, el/la bacanora gender | Corrected — quiote/cavity description, "vinata", "sin hielo ni mezcladores", cocktail wording, glosses removed, standardized to "el bacanora" | content-es, journey, glossary |
+| Bacanora live plant field untranslated; regions without ES; block2deeper drift; producer/place fragments | Corrected — plant field via fieldEs, full regions group added, block mapping realigned, named producer/place fragments translated | profile.js, discovery-view.js, plant-tradition-view.js, content-es |
+| ilegal-mezcal-anejo → mezcal reposado profile; hacienda-de-chihuahua-sotol-anejo → unaged sotol profile | Corrected — both unmapped as profile-not-covered with editorial notes; maturation facts kept | bottles (EN+ES) |
+| `learn.heading` card label; raw `noReviewYet`; `abvUnknown` missing from ui() COPY | Corrected — chapter title lookup, keys added to presentation COPY, source-validated key regression added | presentation.js, journey.js, pair-15 tests |
+| Catalogue brand filter lost on profile return | Corrected — brandFilter in snapshot/restore with visible active-brand label and clear action | catalogue-view.js, locale.js |
+| discovery-chip-list / .discover-chip-list mismatch | Corrected — standardized on discovery-chip-list for discovery and brand index | styles.css, catalogue-view.js |
+
+Sources for the corrections: DOF/SIDOF Comiteco IG declaration (6 Oct 2025);
+NOM-070-SCFI-2016 sections 4.2/4.4/4.5; NOM-006-SCFI-2012/CRT; Sonoran
+official bacanora history (full-page retrieval returned 403 during the audit
+— the 1915/1992 timeline is recorded from search-result confirmation and
+the corroborating regional study; retrieve the full passage before relying
+on it as final evidence); raicilla DO declaration and published standard
+project (a PROY-NOM, not a final effective NOM). No claim was kept merely
+because its linked source is reachable; conflicts remain visible in the data.
