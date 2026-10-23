@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — refinement after post-roadmap pair 7
 
-Post-roadmap pairs 8–13 are applied; the final planned release in this sequence is **post-roadmap pair 14 — Catalogue & End-to-End Review** in **section 4.2**. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
+Post-roadmap pairs 8–14 are all applied; the beginner-guidance and enthusiast-usability sequence in section 4.2 is complete. Further content expansion is reassessed only after owner review of the deployed site. That section governs the next refinement work. Earlier foundation priorities and completed release descriptions below are retained as history, not instructions to restart or remove established coverage. This update changes the plan only; all new refinement tasks remain unchecked.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -578,12 +578,14 @@ Acceptance: users can find a known bottle or browse an existing tradition quickl
 
 ### Post-roadmap pair 14 — Catalogue & End-to-End Review (maintenance)
 
-1. [ ] Verify combined search/filter/reset, no results, unknown fields, disclosure state, bottle anchors and profile return paths in EN/ES.
-2. [ ] Audit all changed expression/profile links against tradition, region, class and documented production context. Keep factual-only entries accessible without fabricated sensory levels.
-3. [ ] Review compact summaries for lost attribution, hidden composition distinctions and inconsistent producer identity. Confirm sources remain reachable.
-4. [ ] Verify keyboard and screen-reader disclosure semantics, result announcements, focus, readable text and touch targets at phone, tablet and desktop widths. Report native Safari/VoiceOver evidence honestly.
-5. [ ] Run two complete acceptance scenarios: **beginner: homepage → lesson → prepared comparison → profile → lesson**; **enthusiast: known-name search or discovery → bottle/profile → technical reference → contextual return**.
-6. [ ] Implement confirmed issues and focused regressions; run normal validation and verify published paths, asset refresh and rollback reference. Record remaining limitations and do not mark any release complete solely because DOM tests pass.
+Applied (see the pair 14 notes in RELEASE_NOTES.md).
+
+1. [x] Verify combined search/filter/reset, no results, unknown fields, disclosure state, bottle anchors and profile return paths in EN/ES.
+2. [x] Audit all changed expression/profile links against tradition, region, class and documented production context. Keep factual-only entries accessible without fabricated sensory levels.
+3. [x] Review compact summaries for lost attribution, hidden composition distinctions and inconsistent producer identity. Confirm sources remain reachable.
+4. [x] Verify keyboard and screen-reader disclosure semantics, result announcements, focus, readable text and touch targets at phone, tablet and desktop widths. Report native Safari/VoiceOver evidence honestly.
+5. [x] Run two complete acceptance scenarios: **beginner: homepage → lesson → prepared comparison → profile → lesson**; **enthusiast: known-name search or discovery → bottle/profile → technical reference → contextual return**.
+6. [x] Implement confirmed issues and focused regressions; run normal validation and verify published paths, asset refresh and rollback reference. Record remaining limitations and do not mark any release complete solely because DOM tests pass.
 
 Acceptance: both audience journeys work coherently with existing content, no dead-end learning links or contradictory profile mappings, and no loss of the compact visual hierarchy. Reassess further content expansion only after these usability releases are reviewed.
 

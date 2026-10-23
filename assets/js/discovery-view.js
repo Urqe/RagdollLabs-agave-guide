@@ -262,7 +262,7 @@ function renderSpirit(container, { tradition, profiles, bottles, locale }) {
     const list = el("div", { class: "discovery-grid" });
     for (const b of traditionBottles.slice(0, 6)) {
       const link = el("a", { class: "discovery-card", href: "#/catalogue" });
-      link.appendChild(el("span", { class: "eyebrow" }, ui(locale, "catalogue.allBottles")));
+      link.appendChild(el("span", { class: "eyebrow" }, ui(locale, "bottleEyebrow")));
       link.appendChild(el("strong", {}, `${b.brand} — ${b.expression}`));
       link.appendChild(el("span", { class: "discovery-place" }, b.place || ""));
       list.appendChild(link);

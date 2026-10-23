@@ -2491,3 +2491,59 @@ search contracts rather than adding a separate bottle database.
   controls — select/filter announcements, disclosure semantics at
   phone widths — remain unverified in this environment; explicitly
   pair 14's review scope.
+
+## Post-roadmap pair 14 — Catalogue & End-to-End Review
+
+Scope per plan section 4.2: final maintenance review of the sequence —
+catalogue identity and accessibility, both audience journeys end to
+end, and the compact visual hierarchy.
+
+### Findings (confirmed defects, fixed)
+
+1. **Owner-reported: raw locale key on every spirit discovery page.**
+   The "Example bottles in this tradition" cards on `#/discover/spirit/…`
+   led each bottle with the literal string "CATALOGUE.ALLBOTTLES" in
+   both languages. Root cause: the eyebrow read
+   `ui(locale, "catalogue.allBottles")`, but that key lives in the
+   locale bundle, not the presentation bundle the `ui()` helper reads
+   — the helper fell back to the raw key. The eyebrow now uses a
+   proper shared presentation string, "Bottle in the catalogue" /
+   "Botella del catálogo" (which is also the semantically correct
+   label for a bottle card, unlike the list heading it borrowed).
+   A sweep of every rendered surface in both languages — hub,
+   catalogue, all spirit/plant/region/flavour details, profiles,
+   Learn, journey hub and lessons, compare, home — found no other
+   raw-key leaks of this class.
+
+Verified without defect: combined search/filter/reset with stable
+anchors in both languages; unknown fields stated honestly in the
+compact view ("Tasting notes not yet documented"); depth disclosures
+closed by default with sources reachable inside, surviving locale
+toggles via the existing open-state restore; every expression/profile
+link audited against tradition and coverage — zero mismatches, no
+fabricated sensory levels on factual-only entries; attribution,
+composition distinctions and producer identity preserved in every
+compact summary; result counts announced via `role="status"`, the
+filter has an accessible name, summaries are focusable with visible
+focus, reduced-motion respected. Both acceptance scenarios pass at
+the DOM level: **beginner** (homepage → lesson → prepared comparison
+→ profile → lesson, no dead ends) and **enthusiast** (known-name
+search → bottle/profile → technical reference → contextual return
+with search state intact).
+
+### Checks run
+
+- `npm run validate` — schema plus 292 node:test/jsdom suites, all
+  passing; 8 new pair-14 regression tests including a sweep that
+  renders every spirit/plant/region/flavour page in both languages
+  and asserts no raw locale keys leak on any surface.
+- Native iPhone/iPad Safari and VoiceOver checks remain **unverified**
+  in this environment (no browser engine or screen reader available);
+  this review's evidence is DOM-level, recorded honestly per the plan's
+  rules. The deployed Pages URL serves the corrected bottle labels.
+
+### Sequence complete
+
+Post-roadmap pairs 8–14 are applied. Per the plan, further content
+expansion is reassessed only after these usability releases are
+reviewed by the owner on the deployed site.
