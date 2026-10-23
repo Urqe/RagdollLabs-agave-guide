@@ -193,7 +193,7 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
     card.appendChild(names);
     card.appendChild(el("p", { class: "learn-cultivation" }, `${t("learn.harvest")} ${fieldEs("plant", plant.id, "cultivation", locale) || plant.cultivation}.`));
     if (plant.uncertainty) {
-      card.appendChild(el("p", { class: "editorial-note" }, `${t("learn.uncertainty")} ${plant.uncertainty}`));
+      card.appendChild(el("p", { class: "editorial-note" }, `${t("learn.uncertainty")} ${fieldEs("plant", plant.id, "uncertainty", locale) || plant.uncertainty}`));
     }
     const links = el("p", {});
     for (const pid of plant.profileIds || []) {

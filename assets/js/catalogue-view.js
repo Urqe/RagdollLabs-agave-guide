@@ -3,7 +3,7 @@ import { navigateTo } from "./router.js";
 import { searchBottles, brandDirectory } from "./catalogue.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 import { ui } from "./presentation.js";
-import { sourceKindLabel, fieldEs } from "./editorial.js";
+import { sourceKindLabel, fieldEs, localizedTitle } from "./editorial.js";
 
 /**
  * Pair 16: compact provenance line directly under the bottle-first
@@ -125,7 +125,7 @@ export function bottleEntry(bottle, { sources, profiles = [], linkToProfile = tr
     const prefix = uncovered
       ? ui(locale, "relatesPrefix")
       : profile
-        ? ui(locale, "fitsPrefix").replace("{title}", profile.title)
+        ? ui(locale, "fitsPrefix").replace("{title}", localizedTitle("profile", profile.id, profile.title, locale))
         : ui(locale, "fitsPrefixPlain");
     note.appendChild(document.createTextNode(prefix + L("editorialNote", bottle.editorialNote)));
     article.appendChild(note);

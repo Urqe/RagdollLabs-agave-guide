@@ -4,6 +4,7 @@ import { ui } from "./presentation.js";
 import { localizedTitle, fieldEs } from "./editorial.js";
 import { SPIRIT_LABELS, ADVENTUROUS_TRADITIONS } from "./spirit-labels.js";
 import { flavorMoods } from "./compare.js";
+import { tasteNote } from "./taste-notes.js";
 
 /**
  * Release 17 — Three Discovery Paths. One surface with three entry
@@ -55,7 +56,7 @@ function profileLinkRow(profile, locale, origin) {
   link.appendChild(el("span", { class: "eyebrow" }, SPIRIT_LABELS[profile.spirit] || profile.spirit));
   link.appendChild(el("strong", {}, localizedTitle("profile", profile.id, profile.title, locale)));
   link.appendChild(el("span", { class: "discovery-place" }, `${profile.stateName}, México`));
-  link.appendChild(el("span", { class: "discovery-notes" }, (profile.tasteNotes || []).slice(0, 3).join(" · ")));
+  link.appendChild(el("span", { class: "discovery-notes" }, (profile.tasteNotes || []).slice(0, 3).map((n) => tasteNote(n, locale)).join(" · ")));
   return link;
 }
 
@@ -103,7 +104,7 @@ function renderHub(container, { plants, regions, traditions, profiles, locale })
   spiritBlock.appendChild(el("p", { class: "view-intro" }, ui(locale, "discoverBySpiritIntro")));
   spiritBlock.appendChild(linkChips(
     [...traditions].sort((a, b) => compare(a.name, b.name)),
-    "spirit", (t) => t.name, locale));
+    "spirit", (t) => fieldEs("tradition", t.id, "name", locale) || t.name, locale));
   section.appendChild(spiritBlock);
 
   const flavourBlock = el("section", { class: "discover-block", "aria-labelledby": "discover-flavours" });
@@ -132,7 +133,7 @@ function renderHub(container, { plants, regions, traditions, profiles, locale })
   regionBlock.appendChild(el("p", { class: "view-intro" }, ui(locale, "discoverByRegionIntro")));
   regionBlock.appendChild(linkChips(
     [...regions].sort((a, b) => compare(a.name, b.name)),
-    "region", (r) => r.name, locale));
+    "region", (r) => fieldEs("region", r.id, "name", locale) || r.name, locale));
   section.appendChild(regionBlock);
 
   section.appendChild(el("p", { class: "editorial-note" }, ui(locale, "discoverMore")));
@@ -152,7 +153,7 @@ function renderPlant(container, { plant, plants, regions, profiles, locale }) {
     return common.length ? `${common[0]} (${p.species})` : p.species;
   };
   section.appendChild(el("p", { class: "view-intro" }, `${ui(locale, "cultivationLabel")}: ${plant.cultivation}`));
-  if (plant.uncertainty) section.appendChild(el("p", { class: "editorial-note" }, plant.uncertainty));
+  if (plant.uncertainty) section.appendChild(el("p", { class: "editorial-note" }, fieldEs("plant", plant.id, "uncertainty", locale) || plant.uncertainty));
 
   const traditionsBlock = el("section", { class: "discover-block", "aria-labelledby": "plant-traditions" });
   traditionsBlock.appendChild(sectionHeader("plant-traditions", ui(locale, "traditionsUsing")));
@@ -240,10 +241,10 @@ function renderSpirit(container, { tradition, profiles, bottles, locale }) {
   const section = el("section", { class: "discover-view", "aria-labelledby": "discover-heading" });
   section.appendChild(backToDiscover(locale));
   section.appendChild(el("p", { class: "eyebrow" }, ui(locale, "discoverBySpirit")));
-  section.appendChild(el("h1", { id: "discover-heading" }, tradition.name));
-  section.appendChild(el("p", { class: "view-intro" }, tradition.origin));
+  section.appendChild(el("h1", { id: "discover-heading" }, fieldEs("tradition", tradition.id, "name", locale) || tradition.name));
+  section.appendChild(el("p", { class: "view-intro" }, fieldEs("tradition", tradition.id, "origin", locale) || tradition.origin));
   const facts = el("dl", { class: "profile-facts profile-craft" });
-  for (const [term, value] of [[ui(locale, "tHistory"), tradition.history], [ui(locale, "tLegal"), tradition.legalStatus], [ui(locale, "tMaterials"), tradition.materials], [ui(locale, "tPractices"), tradition.practices], [ui(locale, "tDiversity"), tradition.diversity]]) {
+  for (const [term, value] of [[ui(locale, "tHistory"), fieldEs("tradition", tradition.id, "history", locale) || tradition.history], [ui(locale, "tLegal"), fieldEs("tradition", tradition.id, "legalStatus", locale) || tradition.legalStatus], [ui(locale, "tMaterials"), fieldEs("tradition", tradition.id, "materials", locale) || tradition.materials], [ui(locale, "tPractices"), fieldEs("tradition", tradition.id, "practices", locale) || tradition.practices], [ui(locale, "tDiversity"), fieldEs("tradition", tradition.id, "diversity", locale) || tradition.diversity]]) {
     facts.appendChild(el("dt", {}, term));
     facts.appendChild(el("dd", {}, value));
   }
@@ -264,7 +265,7 @@ function renderSpirit(container, { tradition, profiles, bottles, locale }) {
       const link = el("a", { class: "discovery-card", href: "#/catalogue" });
       link.appendChild(el("span", { class: "eyebrow" }, ui(locale, "bottleEyebrow")));
       link.appendChild(el("strong", {}, `${b.brand} — ${b.expression}`));
-      link.appendChild(el("span", { class: "discovery-place" }, b.place || ""));
+      link.appendChild(el("span", { class: "discovery-place" }, fieldEs("bottle", b.id, "place", locale) || b.place || ""));
       list.appendChild(link);
     }
     bottleBlock.appendChild(list);
