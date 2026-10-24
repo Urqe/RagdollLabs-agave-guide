@@ -1362,3 +1362,93 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
   .brand-product { white-space: normal; }
   .brand { min-width: 0; }
 }
+/* Pair 30: comparison readability — letters and short names, slider-style
+   level meters, and a stacked layout on phones (no sideways scrolling). */
+:root { --cmp-a: var(--anejo); --cmp-b: var(--blue); --cmp-c: var(--agave); }
+[data-key="A"] { --cmp: var(--cmp-a); }
+[data-key="B"] { --cmp: var(--cmp-b); }
+[data-key="C"] { --cmp: var(--cmp-c); }
+.cmp-badge {
+  display: inline-grid; place-items: center; flex: 0 0 auto;
+  width: 1.5rem; height: 1.5rem; margin-right: .45rem; border-radius: 50%;
+  background: var(--cmp, var(--line)); color: var(--bg);
+  font: 750 .8rem/1 var(--body-font); vertical-align: middle;
+}
+.cmp-meter {
+  --pos: 0;
+  position: relative; display: inline-block; flex: 0 0 auto;
+  width: 5.5rem; height: .45rem; margin: 0 .6rem 0 .1rem; vertical-align: middle;
+  border-radius: 999px; background: var(--line-soft);
+}
+.cmp-meter::before {
+  content: ""; position: absolute; inset: 0 auto 0 0; border-radius: inherit;
+  width: calc(var(--pos) / 3 * 100%); background: var(--cmp, var(--anejo)); opacity: .55;
+}
+.cmp-meter::after {
+  content: ""; position: absolute; top: 50%; width: .95rem; height: .95rem; border-radius: 50%;
+  left: calc(var(--pos) / 3 * (100% - .95rem)); transform: translateY(-50%);
+  background: var(--cmp, var(--anejo)); box-shadow: 0 0 0 2px var(--surface);
+}
+.cmp-meter.is-unknown { background: transparent; border: 1px dashed var(--text-dim); }
+.cmp-meter.is-unknown::before, .cmp-meter.is-unknown::after { display: none; }
+.cmp-level { white-space: nowrap; }
+.compare-table td { white-space: nowrap; }
+.compare-table thead th { white-space: normal; }
+.cmp-scale-note { margin: .2rem 0 .6rem; }
+
+.compare-legend { list-style: none; margin: .8rem 0 .4rem; padding: 0; display: grid; gap: .5rem; max-width: 52rem; }
+.compare-legend-item {
+  display: flex; align-items: center; gap: .5rem; padding: .45rem .6rem .45rem .7rem;
+  border: 1px solid var(--line-soft); border-left: 4px solid var(--cmp); border-radius: var(--radius-sm); background: var(--surface);
+}
+.compare-legend-item .cmp-badge { margin-right: 0; }
+.compare-legend-names { display: grid; min-width: 0; flex: 1 1 auto; }
+.compare-legend-short { font-weight: 700; color: var(--text); text-decoration: none; min-height: 1.6rem; }
+.compare-legend-short:hover { text-decoration: underline; }
+.compare-legend-full { font-size: .82rem; color: var(--text-dim); overflow-wrap: anywhere; }
+.compare-legend-item .compare-remove-button { margin-top: 0; flex: 0 0 auto; }
+
+.compare-craft-list, .compare-diff-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
+/* Text flows after the letter and name; a flex row would squeeze the name into a column. */
+.compare-craft-list li { display: block; padding-left: 2rem; text-indent: -2rem; }
+.compare-craft-list li > .cmp-badge { text-indent: 0; margin-right: .5rem; }
+.compare-diff-list { padding-left: 0; list-style: none; display: grid; gap: .9rem; }
+.compare-diff-dimension { display: block; margin-bottom: .3rem; }
+.compare-diff-rows li { display: flex; align-items: center; }
+.compare-diff-name { flex: 0 1 11rem; min-width: 0; margin-right: .5rem; overflow-wrap: anywhere; }
+
+/* Desktop and tablets keep the table; it no longer needs a fixed minimum width. */
+.comparison-scroll .compare-table { min-width: 0; }
+
+@media (max-width: 40rem) {
+  .comparison-scroll { overflow: visible; }
+  .compare-table, .compare-table tbody, .compare-table tr, .compare-table th, .compare-table td { display: block; }
+  .compare-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .compare-table tbody tr { padding: .65rem .85rem; border-bottom: 1px solid var(--line-soft); }
+  .compare-table tbody tr:last-child { border-bottom: none; }
+  .compare-table tbody th { padding: 0 0 .35rem; border: none; white-space: normal; }
+  .compare-table td { display: flex; align-items: center; padding: .2rem 0; border: none; font-size: .92rem; }
+  .compare-table td::before {
+    content: attr(data-key); display: inline-grid; place-items: center; flex: 0 0 auto;
+    width: 1.35rem; height: 1.35rem; margin-right: .55rem; border-radius: 50%;
+    background: var(--cmp, var(--line)); color: var(--bg); font: 750 .75rem/1 var(--body-font);
+  }
+  .cmp-meter { width: auto; flex: 1 1 auto; max-width: 11rem; }
+  .compare-diff-name { flex-basis: 8.5rem; }
+  .compare-diff-rows .cmp-meter { max-width: 7rem; }
+}
+.compare-legend { scroll-margin-top: calc(var(--header-offset, 5rem) + 0.75rem); }
+.compare-legend:focus { outline: none; }
+.compare-legend:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+/* Light theme: darker marker colours so the white letters keep 5:1 contrast. */
+:root[data-theme="light"] { --cmp-a: #8a5f14; --cmp-b: #3d6b74; --cmp-c: #3f6b45; }
+:root[data-theme="light"] .cmp-badge, :root[data-theme="light"] .compare-table td::before { color: #fffdf7; }
+/* Large text and narrow phones: the legend's remove button may wrap under
+   the names, and the plant/production lines get the full width. */
+.compare-legend-item { flex-wrap: wrap; }
+.compare-craft-list li { min-width: 0; overflow-wrap: break-word; }
+@media (max-width: 40rem) {
+  .compare-craft { display: block; }
+  .compare-craft dt { margin-top: .6rem; }
+  .compare-craft dd { margin: .3rem 0 0; }
+}

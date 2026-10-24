@@ -3753,8 +3753,8 @@ together (Mexican Spanish, tú).
 
 ## Pair 29 — Learning quality and usability audit (2026-10-25)
 
-Branch `pair-29-quality-audit`. Not merged or deployed: awaiting the
-owner's review. No new scope; every change fixes something the audit found.
+Branch `pair-29-quality-audit`. Merged as PR #80 (merge `e9b9ec4`) and
+deployed. No new scope; every change fixes something the audit found.
 
 ### Found and fixed
 
@@ -3832,3 +3832,65 @@ owner's review. No new scope; every change fixes something the audit found.
 - At 200% text the sticky header is about 190px tall on a 390px-wide
   phone. It no longer overflows, but it takes a large share of the screen;
   making the header non-sticky at large text sizes is a possible follow-up.
+
+## Pair 30 — Compare readability (2026-10-25)
+
+Branch `pair-30-compare-readability`. Not merged or deployed: awaiting the
+owner's review. Requested by the owner: on phones the comparison relied on
+words (none / low / light / medium / high), needed sideways scrolling, and
+the differences repeated each style's full name.
+
+### Changed
+
+- **Level meters.** Every level in the comparison table, the biggest
+  differences and the guided-comparison answers now has a slider-style
+  meter: a track from none (left) to high (right), with body from light to
+  full. The word stays next to it and remains the cell's text, so screen
+  readers and copy-paste read "Medium", not a picture. An undocumented
+  level draws a dashed empty track and says "Not documented", never zero.
+  A one-line scale note sits above the table.
+- **No sideways scrolling on phones.** Below 40rem the table becomes one
+  block per dimension, with a row per style: letter, meter, word. Explicit
+  table roles keep the structure for assistive technology. The old 640px
+  minimum width and the "scroll sideways" hint are gone. Desktop keeps the
+  table, with meters in the cells.
+- **Letters and short names.** Each style gets a letter (A, B, C) and a
+  marker colour, with the letter always shown so colour is never the only
+  cue. Every profile has a short name in both editions ("Valley blanco" /
+  "Blanco del valle", "Espadín mezcal" / "Mezcal de espadín"); validation
+  requires one, at most 26 characters and unique. A legend at the top
+  names each style once in full, links its profile and holds its Remove
+  button. The table header, summary, plant and production lines,
+  differences and guided answers use the short names.
+- **Shorter summaries.** "What this comparison tells you" now names the
+  dimensions that differ most and points to the bars, rather than listing
+  every style's level in one sentence. Biggest differences show one short
+  row per style.
+- **Results first.** With two or more styles, the legend and results come
+  first and the picker moves into "Change the styles in this comparison"
+  after them; the duplicate selection chips are gone. Focus follows the
+  control used: the pick that completes a comparison moves to the results,
+  a Remove in the legend stays on the legend, and a pick from the picker
+  keeps it open on that button (or moves to the legend when all three slots
+  are full).
+- **Light theme.** Darker marker colours keep the white letters at 5:1
+  contrast.
+
+### Checks run
+
+- `npm run validate`: data validation passes (including the short-name
+  rule); 510 tests pass, including the new
+  `test/pair-30-compare-readability.test.mjs` (9 tests). Older tests that
+  pinned the previous layout (picker before results, chips with two styles,
+  "Name: level · Name: level" answer text) were updated to the new design.
+- Headless Chromium: Compare with two and three styles at 320, 390 and
+  1280px in EN and ES, dark and light themes, has no sideways scroll, and
+  none at 200% text either. The pick, add, remove and remove-to-one flow
+  keeps focus where the reader acted, with no page errors. The full crawl
+  (551 routes per language) is still clean.
+
+### Not verified
+
+- iPhone Safari and VoiceOver reading of the stacked table (the explicit
+  roles are there for this). These are listed in the plan's "Needs a
+  person" section.

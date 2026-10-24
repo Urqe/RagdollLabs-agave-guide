@@ -117,12 +117,31 @@ function slotSelector(profiles, selectedIds, onPick, { locale = null, initialQue
   return holder;
 }
 
-function levelCell(profile, dimKey, t) {
+const LEVEL_POSITION = { none: 0, low: 1, medium: 2, high: 3 };
+/** Pair 30: the style markers, in selection order. Letters, not colour alone, tell styles apart. */
+export const STYLE_KEYS = ["A", "B", "C"];
+
+/**
+ * Pair 30: a level as a small slider-style meter (none at the left, high
+ * at the right) followed by the word. The meter is decorative: the word
+ * stays the cell's text, so screen readers and copy-paste read "Medium".
+ * An undocumented level draws an empty dashed track, never a zero.
+ */
+export function levelMeter(profile, dimKey, t) {
   const level = levelOf(profile, dimKey);
-  if (level === null || level === undefined) {
-    return el("td", { class: "compare-unknown" }, t("compare.notDocumented"));
-  }
-  return el("td", {}, levelText(profile, dimKey, t));
+  const known = level !== null && level !== undefined && level in LEVEL_POSITION;
+  const meter = el("span", { class: "cmp-meter" + (known ? "" : " is-unknown"), "aria-hidden": "true" });
+  if (known) meter.style.setProperty("--pos", String(LEVEL_POSITION[level]));
+  return meter;
+}
+
+function levelCell(profile, dimKey, t, key) {
+  const level = levelOf(profile, dimKey);
+  const unknown = level === null || level === undefined;
+  const td = el("td", { class: unknown ? "compare-unknown" : "", role: "cell", dataset: { key } });
+  td.appendChild(levelMeter(profile, dimKey, t));
+  td.appendChild(el("span", { class: "cmp-level" }, levelText(profile, dimKey, t)));
+  return td;
 }
 
 /**
@@ -139,7 +158,7 @@ function levelText(profile, dimKey, t) {
 }
 
 /** Pair 27: the active guided comparison — question, focus, answer, limits, next. */
-function presetPanel(preset, byId, { locale, title, t, from }) {
+function presetPanel(preset, byId, { locale, title, short, t, from }) {
   const lang = locale ? locale.get() : "en";
   const [a, b] = preset.ids.map((id) => byId.get(id));
   const panel = el("section", { class: "compare-preset", "aria-labelledby": "compare-preset-question" });
@@ -155,7 +174,19 @@ function presetPanel(preset, byId, { locale, title, t, from }) {
   const list = el("dl", { class: "compare-preset-levels" });
   for (const key of preset.focus) {
     list.appendChild(el("dt", {}, dimensionLabel(key, locale)));
-    list.appendChild(el("dd", {}, `${title(a)}: ${levelText(a, key, t)} · ${title(b)}: ${levelText(b, key, t)}`));
+    // Pair 30: the same letters, short names and meters as the table.
+    const dd = el("dd", {});
+    const rows = el("ul", { class: "compare-diff-rows" });
+    [a, b].forEach((p, i) => {
+      const row = el("li", { dataset: { key: STYLE_KEYS[i] } });
+      row.appendChild(el("span", { class: "cmp-badge", "aria-hidden": "true" }, STYLE_KEYS[i]));
+      row.appendChild(el("span", { class: "compare-diff-name" }, short(p)));
+      row.appendChild(levelMeter(p, key, t));
+      row.appendChild(el("span", { class: "cmp-level" }, levelText(p, key, t)));
+      rows.appendChild(row);
+    });
+    dd.appendChild(rows);
+    list.appendChild(dd);
   }
   answer.appendChild(list);
   answer.appendChild(el("p", {}, preset.shows[lang] || preset.shows.en));
@@ -228,7 +259,7 @@ function sharedPlantName(perspective, plants) {
   return (record && record.species) || perspective.plant;
 }
 
-export function renderCompare(container, { profiles, plants = [], compareIds, onSelectionChange, focusProfileId = null, keepPickerQuery = "", locale = null, from = null, preset: presetParam = null }) {
+export function renderCompare(container, { profiles, plants = [], compareIds, onSelectionChange, focusProfileId = null, keepPickerQuery = "", locale = null, from = null, preset: presetParam = null, revealResults = false, focusSource = null }) {
   clear(container);
   const byId = new Map(profiles.map((p) => [p.id, p]));
   const parsedIds = parseIds(compareIds);
@@ -243,6 +274,9 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
   const section = el("section", { class: "compare-view", "aria-labelledby": "compare-heading" });
   const t = (key) => (locale ? locale.t(key) : key);
   const title = (p) => localizedTitle("profile", p.id, p.title, locale);
+  // Pair 30: comparisons name styles by their short name ("Valley blanco");
+  // the full title appears once, in the legend.
+  const short = (p) => fieldEs("profile", p.id, "shortTitle", locale) || p.shortTitle || title(p);
   // Pair 9: a comparison opened from a lesson links back to it, above the
   // heading so it reads as a return path, mirroring the profile back link.
   if (from && from.startsWith("start:")) {
@@ -260,7 +294,7 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
     && selectedIds.length === 2
     && requested.ids.every((id, i) => selectedIds[i] === id)
     && checkPreset(requested, byId).length === 0 ? requested : null;
-  if (activePreset) section.appendChild(presetPanel(activePreset, byId, { locale, title, t, from }));
+  if (activePreset) section.appendChild(presetPanel(activePreset, byId, { locale, title, short, t, from }));
   // Pair 27: with fewer than two styles chosen, the guided comparisons and
   // the instruction come first; the free picker follows.
   if (!activePreset && selected.length < 2) {
@@ -287,7 +321,7 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
   const fromLessonView = Boolean(from && from.startsWith("start:"));
   // A guided comparison teaches first in the same way as a lesson handoff.
   const teachFirst = fromLessonView || Boolean(activePreset);
-  const pick = (profileId, pickerQuery) => {
+  const pick = (profileId, pickerQuery, source = "picker") => {
     const removing = selectedIds.includes(profileId);
     const next = removing
       ? selectedIds.filter((id) => id !== profileId)
@@ -297,7 +331,7 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
     announce(removing
       ? `${ui(locale, "removedFrom").replace("{name}", name)} ${total(next.length)}.`
       : `${ui(locale, "addedTo").replace("{name}", name)} ${total(next.length)}.`);
-    if (onSelectionChange) onSelectionChange(next, pickerQuery ?? currentQuery());
+    if (onSelectionChange) onSelectionChange(next, pickerQuery ?? currentQuery(), source);
   };
   const selections = el("section", { class: "comparison-selections", "aria-label": ui(locale, "choices") });
   selections.appendChild(el("p", { class: "sensory-note" }, ui(locale, "slots")));
@@ -311,9 +345,12 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
     selectionList.appendChild(chip);
   }
   selections.appendChild(selectionList);
-  section.appendChild(selections);
   pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick, { locale, initialQuery: keepPickerQuery || "", titleFn: title }));
-  if (!teachFirst || selected.length < 2) {
+  // Pair 30: once two styles are chosen the comparison comes first; the
+  // legend takes over the chips' job, and the picker moves into a
+  // collapsible control after the results.
+  if (selected.length < 2) {
+    section.appendChild(selections);
     section.appendChild(pickerHolder);
   }
 
@@ -333,35 +370,55 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
 
   announce(`${ui(locale, "comparing")} ${total(selected.length)}: ${selected.map((p) => title(p)).join(", ")}.`);
 
-  // Sensory table
-  const table = el("table", { class: "compare-table" });
-  const thead = el("thead", {});
-  const headRow = el("tr", {});
-  headRow.appendChild(el("th", { scope: "col" }, ui(locale, "dimension")));
+  // Pair 30: a legend gives each style a letter and a short name, with its
+  // full title and the remove control, so the table and the summaries
+  // below can stay short.
+  const keyOf = new Map(selected.map((p, i) => [p.id, STYLE_KEYS[i]]));
+  const legend = el("ol", { class: "compare-legend", "aria-label": t("compare.legendLabel") });
   for (const profile of selected) {
-    const th = el("th", { scope: "col" }, title(profile));
+    const item = el("li", { class: "compare-legend-item", dataset: { key: keyOf.get(profile.id) } });
+    item.appendChild(el("span", { class: "cmp-badge", "aria-hidden": "true" }, keyOf.get(profile.id)));
+    const names = el("span", { class: "compare-legend-names" });
+    names.appendChild(el("a", { href: `#/profile/${encodeURIComponent(profile.id)}`, class: "compare-legend-short" }, short(profile)));
+    names.appendChild(el("span", { class: "compare-legend-full" }, title(profile)));
+    item.appendChild(names);
     const removeButton = el("button", {
       type: "button",
       class: "compare-remove-button",
       dataset: { profileId: profile.id },
       "aria-label": `${t("compare.removeLabel")}: ${title(profile)}`,
     }, t("compare.removeLabel"));
-    removeButton.addEventListener("click", () => pick(profile.id));
-    th.appendChild(removeButton);
+    removeButton.addEventListener("click", () => pick(profile.id, undefined, "legend"));
+    item.appendChild(removeButton);
+    legend.appendChild(item);
+  }
+
+  // Sensory table: one row per dimension, a meter and a word per style.
+  // Explicit roles keep the table semantics when phones restyle it as
+  // stacked rows.
+  const table = el("table", { class: "compare-table", role: "table" });
+  const thead = el("thead", { role: "rowgroup" });
+  const headRow = el("tr", { role: "row" });
+  headRow.appendChild(el("th", { scope: "col", role: "columnheader" }, ui(locale, "dimension")));
+  for (const profile of selected) {
+    const th = el("th", { scope: "col", role: "columnheader", dataset: { key: keyOf.get(profile.id) } });
+    th.appendChild(el("span", { class: "cmp-badge", "aria-hidden": "true" }, keyOf.get(profile.id)));
+    th.appendChild(document.createTextNode(short(profile)));
     headRow.appendChild(th);
   }
   thead.appendChild(headRow);
   table.appendChild(thead);
 
-  const tbody = el("tbody", {});
+  const tbody = el("tbody", { role: "rowgroup" });
   for (const { key } of DIMENSIONS) {
-    const row = el("tr", {});
-    const th = el("th", { scope: "row", title: dimensionHint(key, locale) }, dimLabel(key));
+    const row = el("tr", { role: "row" });
+    const th = el("th", { scope: "row", role: "rowheader", title: dimensionHint(key, locale) }, dimLabel(key));
     row.appendChild(th);
-    for (const profile of selected) row.appendChild(levelCell(profile, key, t));
+    for (const profile of selected) row.appendChild(levelCell(profile, key, t, keyOf.get(profile.id)));
     tbody.appendChild(row);
   }
   table.appendChild(tbody);
+
   // Release 23: plain-language interpretation above the detail — what
   // differs and possibly why, or an honest statement when the data
   // cannot support one.
@@ -387,8 +444,8 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
         const moods = perspective.moods.map((m) => (locale ? locale.mood(m) : m)).join(", ");
         text = t("compare.perspective.similarFlavours").replace("{moods}", moods);
       } else if (perspective.id === "unagedVersusWoodRested") {
-        const woodName = title(byId.get(perspective.wood) || { title: "" });
-        const unagedName = title(byId.get(perspective.unaged) || { title: "" });
+        const woodName = short(byId.get(perspective.wood) || { title: "" });
+        const unagedName = short(byId.get(perspective.unaged) || { title: "" });
         text = t("compare.perspective.woodVsUnaged").replace("{wood}", woodName).replace("{unaged}", unagedName);
       } else if (perspective.id === "differentMaturation") {
         const classes = perspective.classes.map((c) => c).join(" vs ");
@@ -401,29 +458,42 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
   }
   if (summary.differences.length > 0) {
     const diffLine = el("p", { class: "compare-summary-line" });
-    const parts = summary.differences.map((d) => {
-      const labels = selected.map((p) => `${title(p)}: ${levelText(p, d.key, t)}`);
-      return `${dimLabel(d.key)} (${labels.join(" vs ")})`;
-    });
-    diffLine.appendChild(document.createTextNode(t("compare.summaryDifferences") + " " + parts.join("; ") + "."));
+    // Pair 30: the summary names the dimensions; the levels themselves are
+    // in the meters below, so the sentence no longer repeats every style.
+    const parts = summary.differences.map((d) => dimLabel(d.key));
+    diffLine.appendChild(document.createTextNode(`${t("compare.summaryDifferences")} ${parts.join(", ")}. ${t("compare.summaryDetailsBelow")}`));
     summaryBlock.appendChild(diffLine);
   } else {
     summaryBlock.appendChild(el("p", { class: "compare-summary-line" }, t("compare.noDiffs")));
   }
+  section.appendChild(legend);
   section.appendChild(summaryBlock);
 
-  const scrollHint = el("p", { id: "compare-scroll-hint", class: "sensory-note compare-scroll-hint" }, ui(locale, "scroll"));
-  section.appendChild(scrollHint);
-  const scroll = el("div", { class: "comparison-scroll", tabindex: "0", role: "region", "aria-label": ui(locale, "choices"), "aria-describedby": "compare-scroll-hint" });
+  section.appendChild(el("p", { class: "sensory-note cmp-scale-note" }, t("compare.scaleNote")));
+  const scroll = el("div", { class: "comparison-scroll", role: "region", "aria-label": t("compare.tableLabel") });
   scroll.appendChild(table);
   section.appendChild(scroll);
 
   // Plant/process context (cross-tradition differences shown clearly)
+  // Pair 30: one line per style, led by its letter and short name.
   const craft = el("dl", { class: "profile-facts compare-craft" });
+  const craftLines = (valueFor) => {
+    const dd = el("dd", {});
+    const list = el("ul", { class: "compare-craft-list" });
+    for (const p of selected) {
+      const li = el("li", { dataset: { key: keyOf.get(p.id) } });
+      li.appendChild(el("span", { class: "cmp-badge", "aria-hidden": "true" }, keyOf.get(p.id)));
+      li.appendChild(el("strong", {}, `${short(p)}: `));
+      li.appendChild(document.createTextNode(valueFor(p)));
+      list.appendChild(li);
+    }
+    dd.appendChild(list);
+    return dd;
+  };
   craft.appendChild(el("dt", {}, ui(locale, "plant")));
-  craft.appendChild(el("dd", {}, selected.map((p) => `${title(p)}: ${fieldEs("profile", p.id, "plant", locale) || p.plant || ui(locale, "notDocumented")}`).join(" · ")));
+  craft.appendChild(craftLines((p) => fieldEs("profile", p.id, "plant", locale) || p.plant || ui(locale, "notDocumented")));
   craft.appendChild(el("dt", {}, ui(locale, "process")));
-  craft.appendChild(el("dd", {}, selected.map((p) => `${title(p)}: ${editorialText("profile", p.id, "process", p.process || ui(locale, "notDocumented"), locale).text}`).join(" · ")));
+  craft.appendChild(craftLines((p) => editorialText("profile", p.id, "process", p.process || ui(locale, "notDocumented"), locale).text));
   section.appendChild(craft);
 
   // Biggest differences
@@ -433,11 +503,20 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
     section.appendChild(diffHeading);
     const diffList = el("ul", { class: "compare-diff-list" });
     for (const diff of diffs) {
+      // Pair 30: the dimension, then one short line per style with its
+      // letter, meter and level, instead of a sentence of full titles.
       const item = el("li", {});
-      item.appendChild(el("strong", {}, `${dimLabel(diff.key)}: `));
-      item.appendChild(document.createTextNode(
-        selected.map((p) => `${title(p)} — ${levelText(p, diff.key, t)}`).join("; ")
-      ));
+      item.appendChild(el("strong", { class: "compare-diff-dimension" }, dimLabel(diff.key)));
+      const rows = el("ul", { class: "compare-diff-rows" });
+      for (const p of selected) {
+        const row = el("li", { dataset: { key: keyOf.get(p.id) } });
+        row.appendChild(el("span", { class: "cmp-badge", "aria-hidden": "true" }, keyOf.get(p.id)));
+        row.appendChild(el("span", { class: "compare-diff-name" }, short(p)));
+        row.appendChild(levelMeter(p, diff.key, t));
+        row.appendChild(el("span", { class: "cmp-level" }, levelText(p, diff.key, t)));
+        rows.appendChild(row);
+      }
+      item.appendChild(rows);
       diffList.appendChild(item);
     }
     section.appendChild(diffList);
@@ -455,17 +534,28 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
 
   // Pair 16: the lesson keeps its explanation and results first; changing
   // styles stays available through this clearly labelled secondary control.
-  if (!activePreset) section.appendChild(presetsBlock(byId, { locale, title, t, from, place: "after" }));
-
-  if (teachFirst) {
-    const changeBlock = el("details", { class: "compare-change-styles" });
+  {
+    // Open when the reader has just added or removed a style from inside
+    // it, so their place and focus are kept.
+    const changeBlock = el("details", { class: "compare-change-styles", ...(!revealResults && focusSource === "picker" ? { open: "" } : {}) });
     changeBlock.appendChild(el("summary", {}, t("compare.changeStyles")));
     changeBlock.appendChild(pickerHolder);
     section.appendChild(changeBlock);
   }
+  if (!activePreset) section.appendChild(presetsBlock(byId, { locale, title, t, from, place: "after" }));
 
   container.appendChild(section);
-  restoreFocus(pickerHolder, focusProfileId);
+  // Pair 30: focus follows the control the reader used. Completing a
+  // comparison, removing from the legend, or filling the last slot (no
+  // picker button left to focus) all land on the legend.
+  const focusLegend = (scroll) => {
+    legend.setAttribute("tabindex", "-1");
+    legend.focus({ preventScroll: true });
+    if (scroll && typeof legend.scrollIntoView === "function") legend.scrollIntoView({ block: "start", behavior: "instant" });
+  };
+  if (revealResults) return focusLegend(true);
+  if (focusSource === "legend") return focusLegend(false);
+  if (focusSource === "picker" && !restoreFocus(pickerHolder, focusProfileId)) return focusLegend(true);
 }
 
 /**
@@ -476,14 +566,16 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
 function restoreFocus(pickerHolder, focusProfileId) {
   // Pair 26: only after the reader acted on a picker button. A fresh visit
   // leaves focus to the app, which lands the page at its heading.
-  if (!focusProfileId) return;
-  if (focusProfileId) {
-    const button = pickerHolder.querySelector(`[data-profile-id="${focusProfileId}"]`);
-    if (button && !button.disabled) {
-      button.focus();
-      return;
-    }
+  if (!focusProfileId) return false;
+  const button = pickerHolder.querySelector(`[data-profile-id="${focusProfileId}"]`);
+  if (button && !button.disabled) {
+    button.focus();
+    return true;
   }
   const firstEnabled = pickerHolder.querySelector(".compare-pick-button:not([disabled])");
-  if (firstEnabled) firstEnabled.focus();
+  if (firstEnabled) {
+    firstEnabled.focus();
+    return true;
+  }
+  return false;
 }

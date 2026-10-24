@@ -97,7 +97,8 @@ test("a bare #/compare reopens the persisted selection", async () => {
       "route reopens with the second saved id");
     assert.ok(app.document.querySelector(".compare-table"),
       "the saved comparison renders without new picks");
-    const chips = [...app.document.querySelectorAll(".selection-chip")];
+    // Pair 30: with two styles the legend carries the removal controls.
+    const chips = [...app.document.querySelectorAll(".compare-legend .compare-remove-button")];
     assert.equal(chips.length, 2, "both saved selections have removal controls");
     const persisted = JSON.parse(app.window.localStorage.getItem("agave-compare-selection"));
     assert.deepEqual(persisted, [profileIds[0], profileIds[1]], "persistence is untouched by the reopen");

@@ -124,8 +124,9 @@ test("pair 27: an active preset asks its question, hides the answer, then names 
   const answer = panel.querySelector("details.compare-preset-answer");
   assert.equal(answer.open, false, "the answer starts hidden");
   const rows = Object.fromEntries([...answer.querySelectorAll("dt")].map((dt) => [dt.textContent, dt.nextElementSibling.textContent]));
-  assert.ok(/: None · .*: Medium/.test(rows.Oak), `oak levels come from the data: ${rows.Oak}`);
-  assert.ok(/: Light · .*: Medium/.test(rows.Body), `body reads Light/Medium: ${rows.Body}`);
+  // Pair 30: each style is a row with its short name, meter and level.
+  assert.ok(/Valley blanco.*None.*Valley reposado.*Medium/.test(rows.Oak), `oak levels come from the data: ${rows.Oak}`);
+  assert.ok(/Valley blanco.*Light.*Valley reposado.*Medium/.test(rows.Body), `body reads Light/Medium: ${rows.Body}`);
   assert.ok(answer.textContent.includes(presetById("wood").shows.en));
   assert.ok(answer.textContent.includes("What this doesn't show") && answer.textContent.includes(presetById("wood").limits.en));
   const next = panel.querySelector(".compare-preset-next a");
@@ -151,7 +152,9 @@ test("pair 27: a preset whose pair no longer matches the selection falls back to
   assert.equal(box.querySelector(".compare-preset"), null, "no mismatched exercise");
   assert.ok(box.querySelector(".compare-table"), "the free comparison renders");
   assert.ok(box.querySelector(".compare-presets-after"), "guided comparisons are offered after the results");
-  assert.ok(!box.querySelector("details.compare-change-styles"), "the picker is not tucked away in free mode");
+  // Pair 30: with two styles chosen the results lead and the picker follows
+  // in the change-styles control, in free mode too.
+  assert.ok(box.querySelector("details.compare-change-styles .compare-picker"), "the picker follows the results");
 });
 
 test("pair 27: the comparison table and summaries show body as Light / Medium / Full", () => {

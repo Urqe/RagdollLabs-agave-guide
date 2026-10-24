@@ -120,16 +120,22 @@ test("pair 16: a lesson-opened comparison shows its explanation before the full 
     "the explanation comes before the picker control");
 });
 
-test("pair 16: a general-purpose comparison keeps the picker in its usual place", () => {
+test("pair 16 (updated in Pair 30): a free comparison of two styles leads with the results, picker after", () => {
   const container = document.createElement("div");
   renderCompare(container, {
     profiles,
     compareIds: "tequila-blanco-valley-jalisco,tequila-reposado-valley-jalisco",
     locale: en,
   });
-  assert.equal(container.querySelector("details.compare-change-styles"), null,
-    "no secondary control outside the lesson flow");
-  assert.ok(container.querySelector(".compare-picker"), "the full picker renders directly");
+  const change = container.querySelector("details.compare-change-styles");
+  assert.ok(change && change.querySelector(".compare-picker"), "the picker lives in the change-styles control");
+  assert.ok(!change.open, "it starts collapsed on a fresh visit");
+  const order = [...container.querySelectorAll(".compare-legend, .compare-table, details.compare-change-styles")];
+  assert.ok(order[0].classList.contains("compare-legend") && order[2] === change, "legend and table come before the picker");
+  const one = document.createElement("div");
+  renderCompare(one, { profiles, compareIds: "tequila-blanco-valley-jalisco", locale: en });
+  assert.equal(one.querySelector("details.compare-change-styles"), null, "with one style the picker stays in place");
+  assert.ok(one.querySelector(".compare-picker"));
 });
 
 test("pair 16: bottle descriptions lead with character; attribution moves to a compact basis line", () => {
