@@ -236,7 +236,13 @@ async function renderRoute(container, route) {
       preset: route.params.preset || null,
       focusProfileId: state.lastComparePick,
       keepPickerQuery: state.lastCompareQuery,
-      onSelectionChange: (nextIds, pickerQuery) => {
+      revealResults: Boolean(state.revealCompareResults),
+      focusSource: state.compareFocusSource || null,
+      onSelectionChange: (nextIds, pickerQuery, source = "picker") => {
+        state.compareFocusSource = source;
+        // Pair 30: the pick that completes a comparison takes the reader to
+        // the results, which now render above the picker.
+        state.revealCompareResults = ids.length < 2 && nextIds.length >= 2;
         state.lastCompareQuery = pickerQuery;
         setCompareSelection(nextIds);
         state.lastComparePick = state.lastComparePick && nextIds.includes(state.lastComparePick)
@@ -245,6 +251,8 @@ async function renderRoute(container, route) {
         navigateTo({ name: "compare", params: { compareIds: nextIds.join(",") } });
       },
     });
+    state.revealCompareResults = false;
+    state.compareFocusSource = null;
     return;
   }
   if (route.name === "profile") {

@@ -8,8 +8,8 @@ Companion documents: `EDITORIAL_VOICE.md` (how all reader-facing text sounds, EN
 
 ## 1. Current status and next step
 
-- **Shipped and deployed:** Releases 1–26 and post-roadmap pairs 1–28, the last being Pair 28 (editorial consistency and regional warmth; PR #79, merge `fa8c9f8`), plus the plan cleanup (PR #77).
-- **In review:** Pair 29, learning quality and usability audit, on branch `pair-29-quality-audit`. It is the last pair of the learning roadmap.
+- **Shipped and deployed:** Releases 1–26 and post-roadmap pairs 1–29, the last being Pair 29 (learning quality and usability audit; PR #80, merge `e9b9ec4`), plus the plan cleanup (PR #77). The learning roadmap (pairs 24–29) is complete.
+- **In review:** Pair 30, Compare readability (owner request), on branch `pair-30-compare-readability`.
 - **Next after that:** nothing scheduled. Section 10 lists what needs a person; section 11 lists unscheduled ideas. A new pair needs an owner decision.
 - **How to work:** execute one owner-authorized pair at a time on its own branch, validate, record it in `RELEASE_NOTES.md`, open a PR and stop. The owner reviews and merges, and the merge deploys. Never start the following pair automatically.
 
@@ -134,7 +134,7 @@ Data lives in `assets/data/`: `profiles`, `bottles`, `sources`, `plants`, `proce
   - No framework, bundler, build step or service worker.
   - Keep modules small and add one only when a feature needs it.
   - `app.js` owns routing, state and landing; views render into the container they are given.
-  - When `styles.css` changes, bump its `?v=` key in `index.html` (it was not bumped in Pairs 24–26; now `agave-pair29-1`).
+  - When `styles.css` changes, bump its `?v=` key in `index.html` (it was not bumped in Pairs 24–26; now `agave-pair30-1`).
   - Missing essential data shows a clear error state; a failed optional enrichment must not disable core browsing.
   - Search ignores accents and case and supports curated aliases.
 - **Spanish.**
@@ -263,6 +263,14 @@ Directional goals, not scores or release gates: beginner friendliness 7.5→9/10
 - [x] Check the empty Compare page on phones: the five guided-comparison cards come first (as Pair 27 intended) and push the free picker about a screen down. Decide whether a compact list works better.
 - [x] Clean up redundant copy, broken paths, stale anchors and needless UI complexity found in the audit. No new scope.
 - **Acceptance:** test and task evidence supports the learning flow; issues and gaps are documented in the release notes.
+
+### Pair 30 — Compare readability (owner request, 2026-10-25)
+
+- [x] Show sensory levels as slider-style meters beside the words (none → high; body light → full; dashed when not documented).
+- [x] No sideways scrolling on phones: the table stacks into one block per dimension, with a lettered row per style.
+- [x] Short names for every profile (EN and ES, validated) and letters A/B/C, so the summary, plant/production lines, differences and guided answers stop repeating full titles. The full title appears once, in the legend.
+- [x] With two or more styles the results come first; the picker moves into "Change the styles" after them, and focus follows the control the reader used.
+- **Acceptance:** at 320–414px no Compare view scrolls sideways (also at 200% text); every level has a word and a meter; full titles appear only in the legend.
 
 ## 10. Needs a person (open since Pair 17; no agent can close these)
 

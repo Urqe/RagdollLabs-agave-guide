@@ -549,8 +549,27 @@ for (const p of profiles) {
 // would be dead data that looks like a published translation.
 const RENDERED_ES_PROFILE_FIELDS = new Set([
   "title", "context", "description", "beginnerNote", "category", "plant",
-  "process", "smoke", "finish", "pairing", "whyItTastes", "placePrecision",
+  "process", "smoke", "finish", "pairing", "whyItTastes", "placePrecision", "shortTitle",
 ]);
+// Pair 30: every profile has a short name for comparisons, in both editions,
+// short enough to sit beside a level meter on a phone.
+for (const p of profiles) {
+  const esEntry = (contentEsAll.profiles || {})[p.id] || {};
+  for (const [label, value] of [["EN", p.shortTitle], ["ES", esEntry.shortTitle]]) {
+    if (typeof value !== "string" || !value.trim()) fail(`profile ${p.id}: ${label} shortTitle required`);
+    else if (value.length > 26) fail(`profile ${p.id}: ${label} shortTitle "${value}" is longer than 26 characters`);
+  }
+}
+{
+  const seen = new Map();
+  for (const p of profiles) {
+    for (const [lang, value] of [["en", p.shortTitle], ["es", ((contentEsAll.profiles || {})[p.id] || {}).shortTitle]]) {
+      const key = String(value || "").toLowerCase() + "|" + lang;
+      if (seen.has(key)) fail(`profiles ${seen.get(key)} and ${p.id} share the short name "${value}"`);
+      seen.set(key, p.id);
+    }
+  }
+}
 // Pair 28: the coordinate precision label is shown in both editions.
 for (const p of profiles) {
   const esEntry = (contentEsAll.profiles || {})[p.id] || {};

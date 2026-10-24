@@ -3,6 +3,7 @@
     {
       "id": "tequila-blanco-valley-jalisco",
       "title": "Blanco tequila, Tequila Valley style",
+      "shortTitle": "Valley blanco",
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
@@ -71,6 +72,7 @@
     {
       "id": "mezcal-espadin-valles-centrales",
       "title": "Espadín mezcal, Valles Centrales style",
+      "shortTitle": "Espadín mezcal",
       "spirit": "mezcal",
       "stateId": "oax",
       "stateName": "Oaxaca",
@@ -139,6 +141,7 @@
     {
       "id": "bacanora-pacifica-sierra-sonora",
       "title": "Bacanora, Agave Pacifica style (Sierra de Sonora)",
+      "shortTitle": "Bacanora",
       "spirit": "bacanora",
       "stateId": "son",
       "stateName": "Sonora",
@@ -207,6 +210,7 @@
     {
       "id": "raicilla-maximiliana-sierra-jalisco",
       "title": "Sierra raicilla, Maximiliana style (Jalisco)",
+      "shortTitle": "Sierra raicilla",
       "spirit": "raicilla",
       "stateId": "jal",
       "stateName": "Jalisco",
@@ -273,6 +277,7 @@
     {
       "id": "tuxca-lineno-cimarron-jalisco-colima",
       "title": "Tuxca, Liñeno/Cimarrón style (Jalisco–Colima borderlands)",
+      "shortTitle": "Tuxca",
       "spirit": "tuxca",
       "stateId": "jal",
       "stateName": "Jalisco",
@@ -343,6 +348,7 @@
     {
       "id": "comiteco-aguamiel-chiapas",
       "title": "Comiteco, aguamiel style (Comitán, Chiapas)",
+      "shortTitle": "Comiteco",
       "spirit": "comiteco",
       "stateId": "chis",
       "stateName": "Chiapas",
@@ -411,6 +417,7 @@
     {
       "id": "destilado-de-pulque-salmiana-tlaxcala",
       "title": "Destilado de pulque, Salmiana style (Tlaxcala)",
+      "shortTitle": "Destilado de pulque",
       "spirit": "destilado-de-pulque",
       "stateId": "tlax",
       "stateName": "Tlaxcala",
@@ -481,6 +488,7 @@
     {
       "id": "raicilla-costa-jalisco",
       "title": "Costa raicilla, coastal style (Jalisco)",
+      "shortTitle": "Costa raicilla",
       "spirit": "raicilla",
       "stateId": "jal",
       "stateName": "Jalisco",
@@ -552,6 +560,7 @@
     {
       "id": "tequila-reposado-valley-jalisco",
       "title": "Reposado tequila, Tequila Valley style",
+      "shortTitle": "Valley reposado",
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
@@ -627,6 +636,7 @@
     {
       "id": "tequila-anejo-valley-jalisco",
       "title": "Añejo tequila, Tequila Valley style",
+      "shortTitle": "Valley añejo",
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
@@ -702,6 +712,7 @@
     {
       "id": "tequila-cristalino-style",
       "title": "Cristalino tequila style",
+      "shortTitle": "Cristalino",
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
@@ -777,6 +788,7 @@
     {
       "id": "comiteco-anejo-comitan-chiapas",
       "title": "Comiteco añejo, glass-rested with oak branches (Comitán, Chiapas)",
+      "shortTitle": "Comiteco añejo",
       "spirit": "comiteco",
       "stateId": "chis",
       "stateName": "Chiapas",
@@ -847,6 +859,7 @@
     {
       "id": "raicilla-reposado-jalisco",
       "title": "Raicilla reposado, barrel-rested style (Jalisco)",
+      "shortTitle": "Raicilla reposado",
       "spirit": "raicilla",
       "stateId": "jal",
       "stateName": "Jalisco",
@@ -920,6 +933,7 @@
     {
       "id": "tequila-extra-anejo-highland-jalisco",
       "title": "Extra añejo tequila, highland style (Jalisco)",
+      "shortTitle": "Highland extra añejo",
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
@@ -996,6 +1010,7 @@
     {
       "id": "mezcal-reposado-espadin-oaxaca",
       "title": "Mezcal reposado, briefly barrel-rested espadín style (Valles Centrales, Oaxaca)",
+      "shortTitle": "Mezcal reposado",
       "spirit": "mezcal",
       "stateId": "oax",
       "stateName": "Oaxaca",
@@ -1071,6 +1086,7 @@
     {
       "id": "mezcal-tobala-sierra-oaxaca",
       "title": "Tobalá mezcal, wild Agave potatorum style (Sierra, Oaxaca)",
+      "shortTitle": "Tobalá mezcal",
       "spirit": "mezcal",
       "stateId": "oax",
       "stateName": "Oaxaca",
@@ -1141,6 +1157,7 @@
     {
       "id": "sotol-chihuahua",
       "title": "Sotol, Chihuahua desert style",
+      "shortTitle": "Sotol",
       "spirit": "sotol",
       "stateId": "chih",
       "stateName": "Chihuahua",
@@ -1211,6 +1228,7 @@
     {
       "id": "tequila-blanco-highland-jalisco",
       "title": "Highland blanco tequila, Los Altos style (Jalisco)",
+      "shortTitle": "Highland blanco",
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
@@ -1284,6 +1302,7 @@
     {
       "id": "mezcal-papalote-montana-guerrero",
       "title": "Papalote mezcal, Guerrero mountain style (cupreata)",
+      "shortTitle": "Guerrero papalote",
       "spirit": "mezcal",
       "traditionId": "mezcal",
       "stateId": "gro",
@@ -1355,6 +1374,7 @@
     {
       "id": "mezcal-cenizo-sierra-durango",
       "title": "Cenizo mezcal, Durango sierra style (Agave durangensis)",
+      "shortTitle": "Durango cenizo",
       "spirit": "mezcal",
       "traditionId": "mezcal",
       "stateId": "dgo",
@@ -1428,6 +1448,7 @@
     {
       "id": "mezcal-verde-altiplano-slp",
       "title": "Maguey verde mezcal, Altiplano Potosino style (Agave salmiana)",
+      "shortTitle": "Potosino maguey verde",
       "spirit": "mezcal",
       "traditionId": "mezcal",
       "stateId": "slp",
@@ -1497,6 +1518,7 @@
     {
       "id": "mezcal-cupreata-rio-de-parras-michoacan",
       "title": "Cupreata mezcal, Rio de Parras style (Michoacán)",
+      "shortTitle": "Michoacán cupreata",
       "spirit": "mezcal",
       "traditionId": "mezcal",
       "stateId": "mich",
@@ -1568,6 +1590,7 @@
     {
       "id": "mezcal-papalometl-mixteca-puebla",
       "title": "Papalometl mezcal, Mixteca Poblana style (Puebla)",
+      "shortTitle": "Puebla papalometl",
       "spirit": "mezcal",
       "traditionId": "mezcal",
       "stateId": "pue",

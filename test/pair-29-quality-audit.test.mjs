@@ -205,6 +205,6 @@ test("P29: the phone header is two rows — the nav scrolls in one row and keeps
   assert.match(css, /\.locale-toggle \.locale-region \{ display: none; \}/);
   assert.match(indexHtml, /data-view="learn"/);
   assert.match(indexHtml, /data-view="compare"/);
-  assert.match(indexHtml, /styles\.css\?v=agave-pair29-1/, "the CSS cache key is bumped");
+  assert.match(indexHtml, /styles\.css\?v=agave-pair(29|[3-9]\d)-\d+/, "the CSS cache key is bumped (Pair 29 or later)");
   assert.match(css, /\.app-main \{ overflow-wrap: break-word; \}/, "long words wrap at enlarged text sizes");
 });
