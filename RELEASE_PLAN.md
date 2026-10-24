@@ -1,13 +1,13 @@
 # RagdollLabs Agave Guide — Release Plan
 
 Status: release roadmap; current implementation/deployment progress must be checked in the repository.  
-Updated: 2026-10-23  
+Updated: 2026-10-24  
 Confirmed repository name: `RagdollLabs-agave-guide`  
 Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–22 are recorded as applied (pair 22 — Regional Expansion II Review — applied 2026-10-24). **Section 4.5 is the current execution authority**. All planned post-roadmap pairs are now applied; the plan's next work is the owner's to direct.
+Post-roadmap pairs 8–22 are recorded as applied (pair 22 — Regional Expansion II Review — applied 2026-10-24). **Section 8 is the current execution authority for the next owner-directed learning releases.** Section 4.5 and pairs 18–23 remain historical implementation records. Start with pair 24 only after explicit owner authorization.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -1109,3 +1109,86 @@ regions, profiles or bottles.
 
 **Current execution pointer: pair 23 applied — corrective editorial
 maintenance complete; stop here. The next work is the owner's to direct.**
+
+
+## 8. Owner-directed learning experience roadmap — 2026-10-24
+
+**Status:** planned, not implemented. This roadmap follows the completed post-roadmap pair 23; preserve its corrections, test contracts, localization, sources, and existing profile-first architecture. **Execute one owner-authorized pair at a time, validate, review, and stop.** No new spirit, region, plant, or bottle expansion is required in these pairs.
+
+### Product outcome and editorial principles
+
+Turn a source-backed reference into an intuitive beginner-to-enthusiast learning experience. The intended reader should be able to (1) explain what the major traditions are, (2) distinguish aroma, flavor, mouthfeel, finish, and alcohol warmth, (3) describe common sensory tendencies without claiming deterministic causality, (4) explain how plant, place, cooking, fermentation, distillation, and resting *may* affect the glass, and (5) perform and understand simple comparative tastings. The site must remain valuable for readers who do not drink alcohol.
+
+- **Three clear intentions, one content model:** *Teach me* (five-step journey), *Help me explore* (flavor/spirit/plant/place), and *Look something up* (catalogue, profiles, glossary, technical reference). These are pathways through existing data, not separate copies to maintain.
+- **Flavor first, evidence one click away:** primary profile order is taste/body/finish → possible explanation and uncertainties → distinctions → representative expression → sources. Keep mandatory legal/composition/safety qualifications at point of claim, while moving reviewer provenance and methodology into unobtrusive, accessible disclosures.
+- **Observations ≠ causes:** do not infer cooking, agave identity, geography, fermentation, or still type solely from tasting descriptors. Sensory levels are editorial style tendencies, not measurements, objective quality scores, or promises about every bottle.
+- **Localized and accessible:** every new user-facing lesson, control, exercise, explanation and error is available in complete, natural Mexican Spanish as well as English. Preserve keyboard, focus, reduced-motion, and responsive contracts. No account, telemetry, runtime AI, or external service dependency.
+
+### Pair 24 — Guided sensory tasting (feature, P0)
+
+Build on `#/start`, its "How to taste" lesson and existing profile sensory vocabulary rather than creating a second learning syllabus.
+
+- [ ] Add a short guided practice sequence: prepare → aroma → sip/flavor → texture/body and alcohol warmth → finish → reflect/compare. Provide explicit no-glass/read-only mode using an existing representative style profile; actual tasting is optional.
+- [ ] Distinguish perceived sweetness from sugar content; alcohol burn from peppery flavor; smoke from other roasted aromas; body from flavor intensity; and smell from retronasal flavor.
+- [ ] Offer a small approachable sensory lexicon with everyday anchors (vegetal, herbal, earthy, mineral, floral, fruit, pepper, oak, cooked agave). Clarify that "mineral" is a subjective descriptor, not proof of dissolved rock or provenance.
+- [ ] Provide learner reflection prompts and optional choices rather than scored right/wrong palate tests. Do not imply that a beginner must find each prewritten note.
+- [ ] Link from starter lesson to a worked style example, retain lesson-origin context and a clear next step. Avoid durable tracking unless its value is demonstrated; no personal tasting data collection.
+- [ ] Test EN/ES text, navigation/direct links, optional/no-glass paths, focus, and narrow-screen overflow. A non-drinker must be able to complete every lesson.
+- **Acceptance:** a first-time reader can describe aroma, taste, mouthfeel, finish and alcohol warmth and complete a simulated tasting without possessing a bottle.
+
+### Pair 25 — Production → sensory explanation (feature, P0)
+
+- [ ] Create an accessible, responsive *plant-to-glass* teaching sequence linking existing plant, region, cooking, extraction, fermentation, still and maturation entities to *possible* sensory effects and representative profiles. Include sap-derived routes and sotol's non-agave identity where relevant.
+- [ ] Show examples: some pit roasts can add smoke; fermentation can influence aromatics; still choice and cuts affect the distillate; resting in oak often adds vanilla/spice/color; glass resting does not add oak. Explicitly say no individual note proves its cause.
+- [ ] Distinguish evidence documented for an example bottle from broader style-level editorial interpretation. Preserve uncertain/disputed process records visibly (especially regional cases already corrected in pair 23).
+- [ ] Progressive reveal: first a concise visual/step sequence, then expandable technical details and attributed sources. Avoid duplicating long descriptions into new JSON silos.
+- [ ] Cross-link back to tasting exercises and relevant profiles; preserve EN/ES and text-first alternatives to diagrams.
+- **Acceptance:** readers can follow at least two contrasting production routes, predict plausible sensory differences, and identify why those are not guarantees.
+
+### Pair 26 — Three-intention navigation and lesson continuity (UX, P1)
+
+- [ ] At the home/entry surface, clearly offer **Learn / Explore / Reference** with differentiated concise descriptions; keep power-user deep links and existing routes intact.
+- [ ] Establish consistent return-to-lesson/origin context for profile, compare, reference and bottle links launched from a lesson. Tell readers what to notice in the linked example rather than dropping them onto a generic page.
+- [ ] Audit `#/start`, `#/learn`, `#/discover`, `#/explore`, `#/compare` and `#/catalogue` for competing labels, duplicative calls to action, long-scroll reference overload and mobile orientation. Keep the seven reference chapters and jump access; do not create redundant new chapters.
+- [ ] Ensure clear "what next" suggestions after lessons without gating content or forcing completion. Validate Back/Forward, refresh, direct links, keyboard focus, screen-reader headings and no-JS failure messaging.
+- **Acceptance:** a novice can begin with one clearly named path, return after opening supporting evidence and recognize a next action; an enthusiast can reach reference content directly.
+
+### Pair 27 — Comparison as a learning exercise (feature, P1)
+
+- [ ] Add **curated learning comparisons** to existing Compare rather than a parallel comparison engine: valley blanco vs reposado (wood); valley vs highland blanco (regional tendency, not single-variable proof); blanco tequila vs espadín mezcal (multiple variables); espadín vs tobalá and/or bacanora vs raicilla where sufficiently supported.
+- [ ] Each preset asks one beginner-facing question, points to 2–3 sensory dimensions, explains supported differences, identifies confounders and gives a logical next exercise. Keep "not documented" distinct from "none."
+- [ ] Cross-link from starter journey, flavor discovery and profiles; existing free comparison of two or three profiles remains fully available.
+- [ ] Validate profiles, presets and localized interpretations from normalized data so additions cannot silently become stale when profiles change.
+- **Acceptance:** readers understand what each comparison demonstrates *and what it does not establish*; no claim that region or method is the only variable unless supported.
+
+### Pair 28 — Editorial consistency and regional warmth (content/maintenance, P1–P2)
+
+- [ ] Audit profile and bottle surfaces for research-paper narration, reviewer-led opening sentences, premature legal detail, repetitive disclaimers and generic flavor description. Prioritize vivid, concise sensory orientation; attribution remains accessible and accurate.
+- [ ] Audit remaining classification/terminology discrepancies across pages. Known candidate: `mezcal-espadin-valles-centrales` has `category` wording treating "joven/abocado" as an unaged class, conflicting with the Learn chapter's correct separation of those classes. Verify against authoritative legal source before correcting and add regression coverage.
+- [ ] Review highland/valley tequila, terroir, smoke, mineral, wild-fermentation and process→flavor explanations for overstated causal certainty. Avoid folklore framed as established chemistry.
+- [ ] Add short, sourced context for regional makers and traditions, especially Sonora's bacanora, Jalisco's coastal vs sierra raicilla, and Oaxaca's family/palenque practices. Avoid invented quotes, blanket cultural assertions or exoticizing small producers.
+- [ ] Review English and Mexican Spanish together; cultural warmth should be natural rather than literal translation. Keep legal terms, denomination status and composition precision.
+- **Acceptance:** profiles consistently answer "what will this likely taste like, why might it, what distinguishes it?" before methodology; no unsupported region-wide bottle extrapolation.
+
+### Pair 29 — Learning quality and usability audit (maintenance, P2)
+
+- [ ] Run schema/content checks and full `npm run validate`; add regression tests for all new journey routes, curated comparison IDs, normalized term links, Spanish parity, origin restoration and empty/unknown sensory states.
+- [ ] Carry out manual browser tests of actual deployed UI: desktop Chrome/Safari, iPhone/iPad Safari, keyboard/VoiceOver, long translated text, tap targets, direct-link reload, Back/Forward, enlarged text and reduced motion. Record unverified environments rather than asserting success.
+- [ ] Conduct simple observational novice tasks if testers are available: find a starting lesson; distinguish nose/mouthfeel/finish; locate why a mezcal might be smoky; complete a preset comparison; find an example bottle and return. Record whether the user succeeds without prompting.
+- [ ] Clean up redundant copy, broken paths, stale anchors and unnecessary UI complexity discovered during the audit. No new catalogue scope or speculative feature work.
+- **Acceptance:** evidence from tests and concrete tasks supports the claimed learning flow; issues and gaps are documented in release notes.
+
+### Priorities, release boundaries and measurement
+
+| Priority | Pair | Primary improvement | Scope discipline |
+| --- | --- | --- | --- |
+| P0 | 24 | Guided tasting and sensory vocabulary | Build on existing starter journey |
+| P0 | 25 | Cause-and-effect teaching | Reuse existing process/plant/profile evidence |
+| P1 | 26 | Clear learning, exploration and reference entry paths | Preserve routes and deep links |
+| P1 | 27 | Curated pedagogical comparisons | Extend existing Compare |
+| P1–P2 | 28 | Clear, warm and rigorous content | No broad catalogue expansion |
+| P2 | 29 | Accessibility, usability and regression review | Fix what can be verified |
+
+**Directional goals, not achieved scores:** beginner friendliness 7.5→9/10; learning journey 8→9.5/10; tasting education 7→9/10; overall 7.6→9/10. These are editorial aspirations, *not* empirical usability metrics or release-gating thresholds. Evidence of success is whether beginners can confidently describe, compare and navigate, not additional word count.
+
+Each pair must document changed content, sources or editorial evidence, relevant automated tests, actual manual checks, incomplete checks, deployment and remaining risks in `RELEASE_NOTES.md`. Do not implement future pairs automatically. Historical scope rules earlier in this plan may describe the original foundation (including a now-superseded sotol exclusion); retain historical records but follow the actual deployed eight-tradition scope and this section for new work.
