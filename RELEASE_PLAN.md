@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–22 are recorded as applied (pair 22 — Regional Expansion II Review — applied 2026-10-24). **Pair 23.1 is the current next-execution priority**, followed by Section 8's learning roadmap (Pairs 24–29). Section 4.5 and pairs 18–23 remain historical implementation records. Execute only the owner-authorized pair.
+Post-roadmap pairs 8–23 are recorded as applied (pair 23 — Corrective editorial maintenance — applied 2026-10-24). **Pair 23.1 is the current execution priority**; it now opens with the editorial voice guide (`EDITORIAL_VOICE.md`) so that every later pair writes new text in the agreed voice. Section 8's learning roadmap (Pairs 24–29) follows, in the order set out in section 8 (reordered 2026-10-24 by the owner). This header is the single current pointer: status lines inside sections 4.3, 4.5 and 7 are historical. Execute only the owner-authorized pair.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -592,7 +592,7 @@ Acceptance: both audience journeys work coherently with existing content, no dea
 
 ## 4.3 Post-completion review — Correctness & Practical Learning
 
-Added: 2026-10-23. Status: **planned; not implemented**. Owner-requested follow-up to the live desktop Chrome and repository review after pairs 8–14. Those releases delivered useful navigation and catalogue improvements, but their completion notes do not close the confirmed findings below. Preserve the existing design and coverage; no redesign or catalogue expansion is needed.
+Added: 2026-10-23. Status: **pairs 15–17 recorded as applied** (status corrected 2026-10-24; this line previously still read "planned; not implemented"). Item 15.6's live-browser and device-width checks stay open and are carried by Pair 29. Owner-requested follow-up to the live desktop Chrome and repository review after pairs 8–14. Those releases delivered useful navigation and catalogue improvements, but their completion notes do not close the confirmed findings below. Preserve the existing design and coverage; no redesign or catalogue expansion is needed.
 
 ### Execution order and evidence
 
@@ -808,7 +808,7 @@ These are claim-specific sources, not blanket endorsement of all content on thei
 
 ## 4.5 Follow-up audit and regional expansion — 2026-10-23
 
-**Current priority: none — all planned post-roadmap pairs (18–22) are applied.** Pairs 18–21 are recorded as applied in RELEASE_NOTES.md; pair 22 was applied 2026-10-24. These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
+**Historical status (superseded by the header pointer): all planned post-roadmap pairs (18–22) are applied.** Pairs 18–21 are recorded as applied in RELEASE_NOTES.md; pair 22 was applied 2026-10-24. These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
 
 ### Review baseline and assessment
 
@@ -1107,14 +1107,17 @@ regions, profiles or bottles.
   Native iPhone/iPad Safari, VoiceOver and regional-reader validation
   remain unverified and unclaimed.
 
-**Current execution pointer: pair 23 applied — corrective editorial
-maintenance complete; stop here. The next work is the owner's to direct.**
+**Historical pointer (superseded by the header): pair 23 applied — corrective editorial
+maintenance complete.**
 
 
 ### Pair 23.1 — Editorial and Spanish localization corrective maintenance (P0/P1)
 
 **Status:** planned; execute before Pair 24. This is a bounded correction to applied Pair 23, not a new content/region expansion. Preserve factual sourcing, process-versus-tasting uncertainty, regional specificity, and all existing routes. No unrelated refactor.
 
+**Owner direction, 2026-10-24:** the voice is a knowledgeable person talking warmly about their own spirit, not an encyclopedia or a research text. It is not a fictional narrator: no invented personal history, memories or quotes. The voice guide below is written first, and every rewrite in this pair follows it.
+
+- [ ] **Adopt the editorial voice guide (P0, first).** Add `EDITORIAL_VOICE.md`: who is talking, profile order (glass first), caution said once, regional voice through specifics, a words-to-avoid list, British spelling for the English edition, the home-path labels used by Pair 26, Mexican Spanish rules (including the savory ≠ sabroso false friend), one EN/ES before-and-after sample and a rewrite checklist. Pairs 24–29 cite it; Pair 28 audits older surfaces against it.
 - [ ] **Remove five-fold editorial formulas (P1).** Rewrite the five new regional profile descriptions currently beginning "This profile is grounded in one bottle:" and their five `whyItTastes` fields beginning "What the glass shows and how it is made are separate records." Do likewise in the Spanish mirror. Give each region its own direct, natural sensory introduction; keep expression-level evidence and causal qualifications. Audit repeated sentence openings more broadly rather than simply banning these two exact strings.
 - [ ] **Fix untranslated Spanish plant fields (P0).** In `plant-tradition-view.js` and `discovery-view.js`, render the localized `plant.cultivation` value rather than raw English. Audit `commonNames[].region` labels across plant, discover, and Learn pages; introduce a single suitable regional-label localization contract rather than ad-hoc literal substitutions. Preserve scientific names and proper nouns. Add EN/ES DOM tests for both direct routes and navigation into them.
 - [ ] **Edit unnatural ES text (P1).** Audit the new Michoacán/Puebla and Zinacantan bottle copy for untranslated "funky" and "taffy de plátano"; prefer accurate natural Mexican Spanish (e.g., `matiz fermentado`, `caramelo masticable de plátano` when sensory evidence supports them). Replace stiff "genuinamente divididas" where appropriate and correct existing calques such as "el agave firma", "en vinatas pasadas de una generación…" and "carga la presión de sostenibilidad". Review surrounding prose, not isolated tokens; do not turn descriptions into generic machine-like wording.
@@ -1122,13 +1125,18 @@ maintenance complete; stop here. The next work is the owner's to direct.**
 - [ ] **Resolve unused Spanish `tasteNotes` (P1).** `profile.js` currently renders the canonical English array using `tasteNote(note, locale)`; the independently authored Spanish `content-es.json` `tasteNotes` strings for Michoacán/Puebla are not displayed. Choose one canonical contract for translated structured notes, and separate any necessary freeform localized tasting *narrative* into an explicitly rendered field. Remove/migrate dead duplicate data and add validation to flag unused/nonconforming localization keys.
 - [ ] **Harden body-only suggestions (P2, bounded).** `ifYouLikeThis` can qualify candidates sharing only medium `bodyLevel`, even if all flavor dimensions differ. Prevent such entries being presented as flavor-similarity recommendations; require meaningful supported flavor overlap, or explicitly label a different texture-based recommendation. Add a synthetic regression fixture: no current real-data pair reportedly triggers the issue. Do not disturb existing valid suggestions or unknown≠none semantics.
 - [ ] **Improve same-plant chip readability (P2).** Comparison chips should use the canonical short plant name, not the full `plant` string including cultivation parentheses, which creates nested parentheses. Preserve correct plant identity and regional-name distinctions.
+- [ ] **Stop the blanket Spanish "content is in English" note (P1).** Added from the owner's 2026-10-24 review. `appendUntranslatedNote` in `app.js` appends "El contenido editorial y algunas etiquetas de referencia están actualmente en inglés" to every Spanish render, including fully translated pages. The field-level `partialDisclosure` already marks the fields actually shown in English. Show the page-level note only when the render really contains English fallback, and test both cases.
+- [ ] **Fix the "leerse sabrosos" calque (P1).** Added from the owner's review. P16-V2 and P18-5 rephrased "se leen sabrosos", but the valley blanco ES context still says "suelen leerse sabrosos y vegetales". "Sabroso" means tasty, not savoury. Rewrite that sentence and the similar "se leen" flavour phrasing in `content-es.json` (espadín/bacanora tendencies, tequila tradition diversity) to natural Mexican Spanish per the voice guide.
+- [ ] **Place the extra añejo pin in Los Altos (P2).** Added from the owner's review. P15-C7 is ticked, but `tequila-extra-anejo-highland-jalisco` still uses the town of Tequila's coordinates (20.9, −103.84) while its precision label, region record and example bottle all say Los Altos near Arandas (La Alteña). Move it to municipality-level Arandas coordinates, keep it approximate, and add a regression that the pin falls in the highland region it names.
 - [ ] **Verification:** `npm run validate` plus EN/ES DOM checks for plant/discovery/Learn/profile/compare, localized cultivation and common-name regions, translated note contract, synthetic body-only match, readable plant chips, and editorial review of the five regional pages side-by-side in both languages. Manual desktop/mobile Safari, VoiceOver and real Mexican-Spanish reader review should be recorded as performed or explicitly unverified; do not claim these checks without evidence.
 
-**Acceptance:** No untranslated cultivation/region labels on ES plant and learning surfaces; no unused Spanish notes disguised as published translations; no body-only flavor recommendation; five regional profiles sound distinct in EN/ES without losing attribution or factual caution. Record outcomes and remaining unverified checks in `RELEASE_NOTES.md`. Stop after this maintenance pair and request owner authorization before Pair 24.
+**Acceptance:** `EDITORIAL_VOICE.md` exists and the five rewritten profiles pass its checklist; no untranslated cultivation/region labels on ES plant and learning surfaces; no unused Spanish notes disguised as published translations; no blanket "in English" note on fully translated Spanish pages; no "leerse sabrosos" calque; the extra añejo pin sits in Los Altos; no body-only flavor recommendation; five regional profiles sound distinct in EN/ES without losing attribution or factual caution. Record outcomes and remaining unverified checks in `RELEASE_NOTES.md`. Stop after this maintenance pair and request owner authorization before Pair 24.
 
 ## 8. Owner-directed learning experience roadmap — 2026-10-24
 
 **Status:** planned, not implemented. This roadmap follows the planned Pair 23.1 corrective maintenance (after completed Pair 23); preserve its corrections, test contracts, localization, sources, and existing profile-first architecture. **Execute one owner-authorized pair at a time, validate, review, and stop.** No new spirit, region, plant, or bottle expansion is required in these pairs.
+
+**Reordered 2026-10-24 (owner).** The voice work that used to wait for Pair 28 now comes first, as the voice guide in Pair 23.1, so Pairs 24–27 write new lessons in the final voice instead of rewriting them later. Pair 28 keeps the audit of existing surfaces. Findings from the owner's live-site review are added to the pairs they belong to (marked "added 2026-10-24"). Execution order: **23.1 → 24 → 25 → 26 → 27 → 28 → 29.** Every new user-facing text in these pairs follows `EDITORIAL_VOICE.md`.
 
 ### Product outcome and editorial principles
 
@@ -1148,6 +1156,7 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 - [ ] Offer a small approachable sensory lexicon with everyday anchors (vegetal, herbal, earthy, mineral, floral, fruit, pepper, oak, cooked agave). Clarify that "mineral" is a subjective descriptor, not proof of dissolved rock or provenance.
 - [ ] Provide learner reflection prompts and optional choices rather than scored right/wrong palate tests. Do not imply that a beginner must find each prewritten note.
 - [ ] Link from starter lesson to a worked style example, retain lesson-origin context and a clear next step. Avoid durable tracking unless its value is demonstrated; no personal tasting data collection.
+- [ ] Show each sensory dimension once on profiles (added 2026-10-24). The valley blanco page shows "Body: Low" in the grid and "Light body" below it. Use the body scale words (light/medium/full) in the grid and drop the duplicate, so body is taught as texture, not as intensity.
 - [ ] Test EN/ES text, navigation/direct links, optional/no-glass paths, focus, and narrow-screen overflow. A non-drinker must be able to complete every lesson.
 - **Acceptance:** a first-time reader can describe aroma, taste, mouthfeel, finish and alcohol warmth and complete a simulated tasting without possessing a bottle.
 
@@ -1162,7 +1171,9 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 
 ### Pair 26 — Three-intention navigation and lesson continuity (UX, P1)
 
-- [ ] At the home/entry surface, clearly offer **Learn / Explore / Reference** with differentiated concise descriptions; keep power-user deep links and existing routes intact.
+- [ ] At the home/entry surface, clearly offer three paths with differentiated concise descriptions; keep power-user deep links and existing routes intact. Labels (decided 2026-10-24, see `EDITORIAL_VOICE.md`): **Start here** (`#/start`), **Explore** (styles, flavours, plants and places) and **Look it up** (catalogue, profiles, glossary). The nav item **Learn** keeps naming the reference chapters, so "Learn" never means two things.
+- [ ] Land every new page at its heading (added 2026-10-24). After a route change, `app.js` scrolls the first h1/h2 into view, but the sticky header covers it, so pages open mid-content with the title hidden. Give page headings a `scroll-margin-top` matching the header height (or offset the scroll), and test at desktop and narrow widths.
+- [ ] Move focus to the page heading and name the page (added 2026-10-24). Focus currently lands on the `main` container, so screen readers announce no page name, and `document.title` is the same on every route. Focus the h1 (tabindex −1) after route changes and set a per-route title such as "Blanco tequila, Tequila Valley style · Agave Guide", in EN and ES. Keep the existing same-route re-render behaviour for language and theme switches.
 - [ ] Establish consistent return-to-lesson/origin context for profile, compare, reference and bottle links launched from a lesson. Tell readers what to notice in the linked example rather than dropping them onto a generic page.
 - [ ] Audit `#/start`, `#/learn`, `#/discover`, `#/explore`, `#/compare` and `#/catalogue` for competing labels, duplicative calls to action, long-scroll reference overload and mobile orientation. Keep the seven reference chapters and jump access; do not create redundant new chapters.
 - [ ] Ensure clear "what next" suggestions after lessons without gating content or forcing completion. Validate Back/Forward, refresh, direct links, keyboard focus, screen-reader headings and no-JS failure messaging.
@@ -1173,6 +1184,7 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 - [ ] Add **curated learning comparisons** to existing Compare rather than a parallel comparison engine: valley blanco vs reposado (wood); valley vs highland blanco (regional tendency, not single-variable proof); blanco tequila vs espadín mezcal (multiple variables); espadín vs tobalá and/or bacanora vs raicilla where sufficiently supported.
 - [ ] Each preset asks one beginner-facing question, points to 2–3 sensory dimensions, explains supported differences, identifies confounders and gives a logical next exercise. Keep "not documented" distinct from "none."
 - [ ] Cross-link from starter journey, flavor discovery and profiles; existing free comparison of two or three profiles remains fully available.
+- [ ] Put the curated comparisons and the "pick two or three" instruction above the free picker (added 2026-10-24). The empty Compare page currently opens on 23 pills with the instruction at the bottom.
 - [ ] Validate profiles, presets and localized interpretations from normalized data so additions cannot silently become stale when profiles change.
 - **Acceptance:** readers understand what each comparison demonstrates *and what it does not establish*; no claim that region or method is the only variable unless supported.
 
@@ -1183,6 +1195,9 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 - [ ] Review highland/valley tequila, terroir, smoke, mineral, wild-fermentation and process→flavor explanations for overstated causal certainty. Avoid folklore framed as established chemistry.
 - [ ] Add short, sourced context for regional makers and traditions, especially Sonora's bacanora, Jalisco's coastal vs sierra raicilla, and Oaxaca's family/palenque practices. Avoid invented quotes, blanket cultural assertions or exoticizing small producers.
 - [ ] Review English and Mexican Spanish together; cultural warmth should be natural rather than literal translation. Keep legal terms, denomination status and composition precision.
+- [ ] Audit against `EDITORIAL_VOICE.md` (the guide now exists from Pair 23.1; this pair applies it to the remaining 18 profiles, bottles, Learn and Discover, rather than defining the voice). Include the generated suggestion text: "Explore next" repeats the same `sharesWhy` sentence word for word for every suggestion; vary it by what actually differs.
+- [ ] Align English spelling to British (added 2026-10-24): the edition uses the UK flag, but "Flavour" (filters, Learn) and "Flavor" (profiles) are mixed.
+- [ ] Correct source classification (added 2026-10-24). Diario Oficial de la Federación declarations, NOM-070, the Sonora state bacanora page, INIFAP and CONAFOR are tagged `kind: "style"`; add or use a `regulator`/official kind so legal claims visibly rest on official sources. Remove the duplicate Difford's URL and replace the Facebook-page producer link with the brand's own site where one exists. Note the weight on a single review site (about 30 Mezcal Reviews entries) and prefer an independent second source when touching those bottles.
 - **Acceptance:** profiles consistently answer "what will this likely taste like, why might it, what distinguishes it?" before methodology; no unsupported region-wide bottle extrapolation.
 
 ### Pair 29 — Learning quality and usability audit (maintenance, P2)
@@ -1197,6 +1212,7 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 
 | Priority | Pair | Primary improvement | Scope discipline |
 | --- | --- | --- | --- |
+| P0 | 23.1 | Voice guide, then the corrective fixes | Bounded corrections; no expansion |
 | P0 | 24 | Guided tasting and sensory vocabulary | Build on existing starter journey |
 | P0 | 25 | Cause-and-effect teaching | Reuse existing process/plant/profile evidence |
 | P1 | 26 | Clear learning, exploration and reference entry paths | Preserve routes and deep links |
