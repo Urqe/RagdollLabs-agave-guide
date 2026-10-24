@@ -572,6 +572,8 @@ a { color: var(--blue); }
 }
 
 .source-list a { color: var(--blue); font-weight: 550; }
+/* Pair 29: long source titles wrap at enlarged text sizes instead of widening the page. */
+.source-list li { min-width: 0; overflow-wrap: anywhere; }
 .source-kind { color: var(--text-dim); font-size: 0.88rem; }
 .sources-heading { margin: 1.25rem 0 0.4rem; font-size: 1.05rem; }
 
@@ -1317,3 +1319,46 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
   .compare-preset-levels dd + dt { margin-top: 0.4rem; }
 }
 @media (prefers-reduced-motion: reduce) { .compare-preset-answer summary::before { transition: none; } }
+/* Pair 29: phone header in two rows — brand and preferences, then the
+   main nav as one scrolling row with edge fades — instead of three. */
+@media (max-width: 48rem) {
+  .app-header { row-gap: .25rem; padding-bottom: .35rem; }
+  .app-header nav { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; gap: .15rem; }
+  .app-header nav::-webkit-scrollbar { display: none; }
+  .app-header nav .nav-link { flex: 0 0 auto; white-space: nowrap; min-height: var(--tap, 44px); display: inline-flex; align-items: center; }
+  .app-header nav.nav-more-end { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); }
+  .app-header nav.nav-more-start { -webkit-mask-image: linear-gradient(to left, #000 85%, transparent); mask-image: linear-gradient(to left, #000 85%, transparent); }
+  .app-header nav.nav-more-start.nav-more-end { -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent); }
+}
+/* Pair 29: the skip link past the guided comparisons, and compact
+   exercise cards on phones so the free picker is reachable. */
+.compare-skip-own { display: inline-flex; align-items: center; min-height: var(--tap, 44px); font-weight: 600; margin-bottom: .4rem; }
+.compare-own-heading:focus { outline: none; }
+.compare-own-heading:focus-visible { outline: 2px solid var(--anejo); outline-offset: 4px; }
+@media (max-width: 40rem) {
+  .compare-preset-list { gap: .5rem; }
+  .compare-preset-list .discovery-card { padding: .55rem .8rem; min-height: var(--tap, 44px); }
+  .compare-preset-list .discovery-card > strong { font-size: 1.1rem; margin: 0; }
+  .compare-preset-list .discovery-place { display: none; }
+  .compare-preset-list .discovery-reason { margin: 0; font-size: .9rem; }
+}
+@media (max-width: 30rem) {
+  .locale-toggle .locale-region { display: none; }
+  .brand-product { white-space: nowrap; }
+}
+/* Pair 29: enlarged-text safety — long names wrap, wide tables scroll in place. */
+.discovery-chip { max-width: 100%; overflow-wrap: anywhere; }
+.catalogue-entry { min-width: 0; overflow-wrap: anywhere; }
+.selection-chip > span { min-width: 0; overflow-wrap: anywhere; }
+.selection-chip .selection-remove { flex-shrink: 0; }
+.ptg-levels-scroll { max-width: 100%; overflow-x: auto; }
+/* Pair 29: at enlarged text sizes a single long word ("Liñeno/Cimarrón",
+   "Dasylirion") may be wider than a phone column; break it rather than
+   widen the page. Only words that cannot fit are broken. */
+.app-main { overflow-wrap: break-word; }
+/* Below ~360px there is no room for the product name on one line next to
+   the two preference buttons, so it wraps rather than being clipped. */
+@media (max-width: 22.4rem) {
+  .brand-product { white-space: normal; }
+  .brand { min-width: 0; }
+}

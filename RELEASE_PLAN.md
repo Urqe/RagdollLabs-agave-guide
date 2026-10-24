@@ -8,9 +8,9 @@ Companion documents: `EDITORIAL_VOICE.md` (how all reader-facing text sounds, EN
 
 ## 1. Current status and next step
 
-- **Shipped and deployed:** Releases 1–26 and post-roadmap pairs 1–27, the last being Pair 27 (curated learning comparisons; PR #78, merge `5c6817b`), plus the plan cleanup (PR #77).
-- **In review:** Pair 28, editorial consistency and regional warmth, on branch `pair-28-editorial`.
-- **Next after that:** Pair 29 (quality and usability audit).
+- **Shipped and deployed:** Releases 1–26 and post-roadmap pairs 1–28, the last being Pair 28 (editorial consistency and regional warmth; PR #79, merge `fa8c9f8`), plus the plan cleanup (PR #77).
+- **In review:** Pair 29, learning quality and usability audit, on branch `pair-29-quality-audit`. It is the last pair of the learning roadmap.
+- **Next after that:** nothing scheduled. Section 10 lists what needs a person; section 11 lists unscheduled ideas. A new pair needs an owner decision.
 - **How to work:** execute one owner-authorized pair at a time on its own branch, validate, record it in `RELEASE_NOTES.md`, open a PR and stop. The owner reviews and merges, and the merge deploys. Never start the following pair automatically.
 
 ## 2. Product and scope
@@ -134,7 +134,7 @@ Data lives in `assets/data/`: `profiles`, `bottles`, `sources`, `plants`, `proce
   - No framework, bundler, build step or service worker.
   - Keep modules small and add one only when a feature needs it.
   - `app.js` owns routing, state and landing; views render into the container they are given.
-  - When `styles.css` changes, bump its `?v=` key in `index.html` (it was not bumped in Pairs 24–26; reset to `agave-pair26-1`).
+  - When `styles.css` changes, bump its `?v=` key in `index.html` (it was not bumped in Pairs 24–26; now `agave-pair29-1`).
   - Missing essential data shows a clear error state; a failed optional enrichment must not disable core browsing.
   - Search ignores accents and case and supports curated aliases.
 - **Spanish.**
@@ -246,22 +246,22 @@ Directional goals, not scores or release gates: beginner friendliness 7.5→9/10
 
 ### Pair 29 — Learning quality and usability audit (maintenance, P2)
 
-- [ ] Full `npm run validate`. Regression tests for every journey route, curated comparison ID, term link, Spanish parity, origin restoration and empty or unknown sensory state.
-- [ ] Reduce the sticky header's height on phones. At 375px it is 165–182px tall, because the five nav items wrap onto two rows. Try a single scrolling row or a compact menu, without hiding Learn or Compare.
-- [ ] Manual checks of the deployed site, recording unverified environments rather than asserting success:
+- [x] Full `npm run validate`. Regression tests for every journey route, curated comparison ID, term link, Spanish parity, origin restoration and empty or unknown sensory state.
+- [x] Reduce the sticky header's height on phones. At 375px it is 165–182px tall, because the five nav items wrap onto two rows. Try a single scrolling row or a compact menu, without hiding Learn or Compare.
+- [x] Manual checks, recording unverified environments rather than asserting success (headless Chromium only; Safari, iOS and VoiceOver remain unverified, see section 10):
   - desktop Chrome and Safari; iPhone and iPad Safari
   - keyboard and VoiceOver
   - long translated text, tap targets, enlarged text, reduced motion
   - direct-link reload, Back/Forward
   - running-app round trips: brand → profile → back, lesson → reference → lesson, prepared comparison → lesson
-- [ ] Novice tasks, with real testers if available, recording whether each person succeeds unprompted:
+- [x] Novice tasks, with real testers if available, recording whether each person succeeds unprompted (scripted editorial walkthrough; no real testers yet, see section 10):
   - find a starting lesson
   - tell nose, mouthfeel and finish apart
   - find why a mezcal might be smoky
   - complete a preset comparison
   - find an example bottle and return
-- [ ] Check the empty Compare page on phones: the five guided-comparison cards come first (as Pair 27 intended) and push the free picker about a screen down. Decide whether a compact list works better.
-- [ ] Clean up redundant copy, broken paths, stale anchors and needless UI complexity found in the audit. No new scope.
+- [x] Check the empty Compare page on phones: the five guided-comparison cards come first (as Pair 27 intended) and push the free picker about a screen down. Decide whether a compact list works better.
+- [x] Clean up redundant copy, broken paths, stale anchors and needless UI complexity found in the audit. No new scope.
 - **Acceptance:** test and task evidence supports the learning flow; issues and gaps are documented in the release notes.
 
 ## 10. Needs a person (open since Pair 17; no agent can close these)
@@ -271,6 +271,7 @@ Record each as performed, with who and when, or keep it listed as pending. Never
 - **Mexican Spanish editorial review** of the Spanish edition, with feedback from readers in the represented regions (Sonora, Jalisco, Oaxaca, Chiapas, Tlaxcala, Chihuahua, Jalisco–Colima), kept separate from factual corrections.
 - **Experienced-reader review** of class and category distinctions, production exceptions and source traceability, without making the beginner route encyclopedic.
 - **Bottle copy review** against sources and batch scope, read aloud for warmth and repetition. Record actual reader feedback separately from editorial assessment.
+- **Real-device and assistive-technology checks** (open since Pair 29): desktop Safari, iPhone and iPad Safari, VoiceOver, and a novice-task session with real testers. Pair 29 checked only headless Chromium and scripted tasks.
 - **Beginner walkthrough** without alcohol: can a new reader explain what the spirit is, how to serve it, how to smell, sip and describe it, and what to try next? Cover tequila, bacanora and mezcal first. Label it an editorial walkthrough unless real users took part.
 
 ## 11. Later ideas (not scheduled)

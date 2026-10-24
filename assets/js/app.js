@@ -1,5 +1,5 @@
 import { el, clear } from "./dom-utils.js";
-import { parseHash, startRouter, navigateTo } from "./router.js";
+import { parseHash, startRouter, navigateTo, replaceRoute } from "./router.js";
 import { loadAppData } from "./data-loader.js";
 import { renderExplore } from "./explore.js";
 import { renderProfile, renderProfileNotFound } from "./profile.js";
@@ -212,8 +212,9 @@ async function renderRoute(container, route) {
     let ids = deepIds;
     if (deepIds.length === 0 && persisted.length > 0) {
       ids = persisted;
-      navigateTo({ name: "compare", params: { compareIds: ids.join(","), ...(route.params.from ? { from: route.params.from } : {}) } });
-      return;
+      // Pair 29: replace the bare entry (so Back does not bounce) and render
+      // the saved selection in this same pass.
+      replaceRoute({ name: "compare", params: { compareIds: ids.join(","), ...(route.params.from ? { from: route.params.from } : {}) } });
     }
     // A lesson handoff never silently destroys a saved selection: the
     // prepared comparison renders, and the lesson keeps the previous
@@ -286,7 +287,12 @@ function wireLocaleToggle(refresh) {
     const label = ui(locale, next === "en" ? "switchToEn" : "switchToEs");
     const current = locale.get() === "es" ? ui(locale, "currentEditionEs") : ui(locale, "currentEdition");
     if (flag) flag.textContent = next === "en" ? "\uD83C\uDDEC\uD83C\uDDE7" : "\uD83C\uDDF2\uD83C\uDDFD";
-    if (name) name.textContent = next === "en" ? "English" : "Espa\u00f1ol (M\u00e9xico)";
+    if (name) {
+      // Pair 29: the region sits in its own span so narrow phones can drop
+      // it visually; the text and accessible label keep "(México)".
+      name.textContent = next === "en" ? "English" : "Espa\u00f1ol";
+      if (next === "es") name.appendChild(Object.assign(document.createElement("span"), { className: "locale-region", textContent: " (M\u00e9xico)" }));
+    }
     if (!flag || !name) button.textContent = `${next === "en" ? "\uD83C\uDDEC\uD83C\uDDE7" : "\uD83C\uDDF2\uD83C\uDDFD"} ${next === "en" ? "English" : "Espa\u00f1ol"}`;
     button.setAttribute("aria-label", `${current}. ${label}`);
     button.title = `${current}. ${label}`;
@@ -376,6 +382,11 @@ async function boot() {
 
   const handleRoute = async () => {
     const route = parseHash(window.location.hash);
+    // Pair 29: remember whether the reader was inside the page before this
+    // render, so a same-route re-render only pulls focus back to main when
+    // it actually detached focus from there (not on the first load, where
+    // focus is still on the body and Tab must reach the skip link first).
+    const focusWasInMain = main.contains(document.activeElement);
     const previousRouteKey = lastRouteKey;
     const previousWasExplore = ["explore", "state"].includes((previousRouteKey || "").split(":")[0]);
     const intraExploreMove = ["state", "explore"].includes(route.name) && previousWasExplore;
@@ -402,6 +413,7 @@ async function boot() {
       if (active) link.setAttribute("aria-current", "page");
       else link.removeAttribute("aria-current");
     }
+    keepCurrentNavVisible();
     const brand = document.querySelector(".brand");
     if (brand) brand.setAttribute("aria-label", ui(locale, "home"));
     const footer = document.querySelector(".app-footer p");
@@ -456,7 +468,7 @@ async function boot() {
       : null;
     if (restoreScroll != null) {
       window.scrollTo(0, restoreScroll);
-    } else if (routeChanged && !viewPlacedFocus) {
+    } else if (routeChanged && !viewPlacedFocus && !firstRender) {
       // Pair 26: new pages open at the top of their content. The landing
       // target's scroll-margin matches the measured sticky-header height,
       // so the back link and heading are never hidden under the header.
@@ -470,7 +482,7 @@ async function boot() {
       // new page; the initial load leaves focus where the browser put it.
       if (!heading.hasAttribute("tabindex")) heading.setAttribute("tabindex", "-1");
       heading.focus({ preventScroll: true });
-    } else if (!routeChanged && (!document.activeElement || document.activeElement === document.body)) {
+    } else if (!routeChanged && focusWasInMain && (!document.activeElement || document.activeElement === document.body)) {
       // A same-route re-render detached the focused element: keep the
       // reader inside the page. Focus outside main (the language or theme
       // switch in the header) is left where it is.
@@ -518,3 +530,53 @@ function appendUntranslatedNote(container) {
 }
 
 boot();
+
+/**
+ * Pair 29: on phones the main nav is one horizontally scrolling row. Keep
+ * the current item in view (without scrolling the page) and mark which
+ * edges have more items, so the row never hides Learn or Compare silently.
+ */
+function keepCurrentNavVisible() {
+  const nav = document.querySelector(".app-header nav");
+  if (!nav) return;
+  const current = nav.querySelector('[aria-current="page"]');
+  if (current && nav.scrollWidth > nav.clientWidth) {
+    const left = current.offsetLeft - nav.offsetLeft;
+    const right = left + current.offsetWidth;
+    if (left < nav.scrollLeft) nav.scrollLeft = Math.max(0, left - 16);
+    else if (right > nav.scrollLeft + nav.clientWidth) nav.scrollLeft = right - nav.clientWidth + 16;
+  }
+  markNavOverflow(nav);
+}
+
+function markNavOverflow(nav) {
+  const more = nav.scrollWidth - nav.clientWidth;
+  nav.classList.toggle("nav-more-start", more > 1 && nav.scrollLeft > 1);
+  nav.classList.toggle("nav-more-end", more > 1 && nav.scrollLeft < more - 1);
+}
+
+if (typeof document !== "undefined") {
+  const nav = document.querySelector(".app-header nav");
+  if (nav) {
+    nav.addEventListener("scroll", () => markNavOverflow(nav), { passive: true });
+    window.addEventListener("resize", () => markNavOverflow(nav));
+  }
+}
+
+/**
+ * Pair 29: the skip link's "#main" is not a route. Following it changed
+ * the hash, and the router rendered the not-found page. With JavaScript
+ * running, the link moves focus to the page content instead and leaves
+ * the route alone.
+ */
+if (typeof document !== "undefined") {
+  document.addEventListener("click", (event) => {
+    const skip = event.target && event.target.closest ? event.target.closest(".skip-link") : null;
+    if (!skip) return;
+    const main = document.getElementById("main");
+    if (!main) return;
+    event.preventDefault();
+    main.focus({ preventScroll: true });
+    main.scrollIntoView({ block: "start", behavior: "instant" });
+  });
+}
