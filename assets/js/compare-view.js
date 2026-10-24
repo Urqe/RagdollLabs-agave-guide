@@ -180,7 +180,21 @@ function presetsBlock(byId, { locale, title, t, from, place }) {
   const lang = locale ? locale.get() : "en";
   const block = el("section", { class: `compare-presets compare-presets-${place}`, "aria-labelledby": `compare-presets-heading-${place}` });
   block.appendChild(el("h2", { id: `compare-presets-heading-${place}` }, t(place === "top" ? "compare.presets.heading" : "compare.presets.headingAfter")));
-  if (place === "top") block.appendChild(el("p", {}, t("compare.presets.intro")));
+  if (place === "top") {
+    block.appendChild(el("p", {}, t("compare.presets.intro")));
+    // Pair 29: on phones the five exercises fill more than a screen, so a
+    // skip link reaches the free picker without scrolling past them. The
+    // app uses hash routes, so the link scrolls instead of navigating.
+    const skip = el("a", { href: "#/compare", class: "compare-skip-own" }, t("compare.presets.skipToOwn"));
+    skip.addEventListener("click", (event) => {
+      event.preventDefault();
+      const target = document.getElementById("compare-own-heading");
+      if (!target) return;
+      target.scrollIntoView({ block: "start", behavior: "instant" });
+      target.focus({ preventScroll: true });
+    });
+    block.appendChild(skip);
+  }
   const list = el("ul", { class: "discovery-matches compare-preset-list" });
   for (const preset of PRESETS) {
     if (checkPreset(preset, byId).length) continue; // never offer a stale exercise
@@ -251,7 +265,7 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
   // the instruction come first; the free picker follows.
   if (!activePreset && selected.length < 2) {
     section.appendChild(presetsBlock(byId, { locale, title, t, from, place: "top" }));
-    section.appendChild(el("h2", { class: "compare-own-heading" }, t("compare.presets.ownHeading")));
+    section.appendChild(el("h2", { class: "compare-own-heading", id: "compare-own-heading", tabindex: "-1" }, t("compare.presets.ownHeading")));
     section.appendChild(el("p", { class: "compare-instruction" }, t(selected.length === 1 ? "compare.oneMore" : "compare.pick")));
   }
 

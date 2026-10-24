@@ -100,6 +100,29 @@ function profileSearchTerms(profile) {
   ];
 }
 
+/**
+ * Pair 29: per-word variants for phrase search. Each word goes through the
+ * alias map, and an adjective ending in -y also tries its stem, so
+ * "smoky" finds "smoke" and "fruity" finds "fruit".
+ */
+const LEVEL = { none: 0, low: 1, medium: 2, high: 3 };
+const SENSORY_WORDS = [
+  ["smoke", ["smok"]],
+  ["fruit", ["fruit"]],
+  ["sweetness", ["sweet"]],
+  ["oak", ["oak", "wood"]],
+  ["herbal", ["herb"]],
+  ["pepper", ["pepper", "spic"]],
+];
+
+function tokenVariants(raw) {
+  return raw.split(/\s+/).filter((w) => w.length > 1).map((word) => {
+    const variants = new Set([word, applyAliases(word)]);
+    for (const v of [...variants]) if (v.length > 4 && v.endsWith("y")) variants.add(v.slice(0, -1));
+    return [...variants];
+  });
+}
+
 function rankFor(profile, q) {
   // Exact spirit match ranks above profiles that only mention the term.
   if (normalize(profile.spirit) === q) return 0;
@@ -111,6 +134,7 @@ export function searchProfiles({ profiles, bottles, query }) {
   const q = applyAliases(raw);
   if (!q && !raw) return [];
   const bottleById = new Map((bottles || []).map((b) => [b.id, b]));
+  const tokens = tokenVariants(raw);
 
   const results = [];
   for (const profile of profiles) {
@@ -128,12 +152,31 @@ export function searchProfiles({ profiles, bottles, query }) {
       example ? example.producer || "" : "",
       example ? example.place || "" : "",
     ].join(" "));
-    const matched = haystack.includes(raw) ? raw : haystack.includes(q) ? q : null;
+    let matched = haystack.includes(raw) ? raw : haystack.includes(q) ? q : null;
+    // Pair 29: a reader's phrase ("smoky mezcal", "mezcal ahumado") rarely
+    // appears verbatim. When the whole phrase misses, every word must match
+    // somewhere in the profile instead.
+    let wordScore = 0;
+    if (!matched && tokens.length > 1 && tokens.every((variants) => variants.some((v) => haystack.includes(v)))) {
+      matched = raw;
+      // Words found in the title, spirit or taste notes count for more than
+      // a passing mention in the context paragraph.
+      const strong = normalize([profile.title, profile.spirit, ...(profile.tasteNotes || []),
+        fieldEsAnyLocale("profile", profile.id, "title") || "", ...(profile.tasteNotes || []).map((n) => ES_NOTES[n] || "")].join(" "));
+      // A word that names a sensory dimension ("smoky", "fruity", "sweet")
+      // ranks by the profile's editorial level for it, so "smoky mezcal"
+      // puts the medium-smoke styles above the gently smoky ones.
+      wordScore = tokens.reduce((score, variants) => {
+        const dim = SENSORY_WORDS.find(([, words]) => variants.some((v) => words.some((w) => v.startsWith(w))));
+        if (dim) return score + (LEVEL[(profile.sensory || {})[dim[0]]] || 0);
+        return score + (variants.some((v) => strong.includes(v)) ? 1 : 0);
+      }, 0);
+    }
     if (matched) {
       results.push({
         profile,
         exampleBottle: example || null,
-        rank: rankFor(profile, matched),
+        rank: rankFor(profile, matched) - wordScore / 10,
         reason: reasonFor(profile, example, matched, esNoteHit),
       });
     }

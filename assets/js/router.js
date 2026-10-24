@@ -161,6 +161,20 @@ export function navigateTo(route) {
   return true;
 }
 
+/**
+ * Pair 29: a redirect (a bare #/compare reopening the saved selection)
+ * replaces the current history entry instead of adding one, so Back does
+ * not land on the bare route and get redirected forward again.
+ */
+export function replaceRoute(route) {
+  const hash = buildHash(route);
+  if (window.location.hash === hash) return false;
+  // No hashchange fires: the caller renders the replacement route itself
+  // (on first load the router is not listening yet).
+  window.history.replaceState(window.history.state, "", hash);
+  return true;
+}
+
 export function startRouter(onChange) {
   const handler = () => onChange(parseHash(window.location.hash));
   window.addEventListener("hashchange", handler);

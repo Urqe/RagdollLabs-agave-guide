@@ -3691,8 +3691,8 @@ Headless Chromium against a local static server, at 375px (EN, ES) and
 
 ## Pair 28 — Editorial consistency and regional warmth (2026-10-24)
 
-Branch `pair-28-editorial`. Not merged or deployed: awaiting the owner's
-review. All rewritten text follows `EDITORIAL_VOICE.md`, EN and ES written
+Branch `pair-28-editorial`. Merged as PR #79 (merge `fa8c9f8`) and
+deployed. All rewritten text follows `EDITORIAL_VOICE.md`, EN and ES written
 together (Mexican Spanish, tú).
 
 ### Changed
@@ -3750,3 +3750,85 @@ together (Mexican Spanish, tú).
   bottle tasting facts were touched, so this remains a standing rule.
 - The Bahía de Banderas and Agricultura bacanora pages could not be fetched
   (robots and client errors), so nothing new was cited from them.
+
+## Pair 29 — Learning quality and usability audit (2026-10-25)
+
+Branch `pair-29-quality-audit`. Not merged or deployed: awaiting the
+owner's review. No new scope; every change fixes something the audit found.
+
+### Found and fixed
+
+- **Skip link opened a not-found page.** "Skip to content" pointed at
+  `#main`, which the hash router read as a route. It now moves focus to the
+  page content and leaves the route alone.
+- **Back trap on Compare.** Opening a bare `#/compare` with a saved
+  selection added a history entry, so Back returned to `#/compare`, which
+  redirected forward again. The redirect now replaces the entry and renders
+  the saved comparison in the same pass.
+- **Keyboard users skipped the header on first load.** The landing scroll
+  on the first render moved Chrome's focus starting point into the page, so
+  the first Tab skipped the skip link and nav. The first render no longer
+  scrolls (the page is already at the top), and a same-route re-render only
+  pulls focus back to the page if it was there before.
+- **Phrase search found nothing.** "smoky mezcal" or "mezcal ahumado"
+  returned zero profiles, because search matched the whole phrase. When the
+  phrase misses, every word must now match; "smoky" also finds "smoke", and
+  sensory words rank by the profile's editorial level, so medium-smoke
+  styles come first.
+- **Phone header.** At 375px it was 182px tall: the five nav items wrapped
+  to two rows. It is now 110px: brand and preferences, then one scrolling
+  nav row with edge fades, the current item kept in view, and 44px tap
+  targets. On narrow phones the language button drops "(México)" visually
+  (the accessible label keeps it). Below about 360px the product name wraps
+  instead of being clipped (127px).
+- **Empty Compare on phones.** The free picker started about 1,890px down.
+  The guided comparisons are now compact cards on phones (question kept,
+  style names hidden), and a "Skip to choosing your own styles" link sits
+  above them. The picker now starts about 1,070px down, or one tap away.
+- **Enlarged text (200%).** Eight pages scrolled sideways at 390px: long
+  words ("Liñeno/Cimarrón", "Dasylirion"), source titles, chips, catalogue
+  cards and the plant-to-glass levels table. Long words now wrap, and the
+  table scrolls inside its own box.
+
+### Checks run
+
+- `npm run validate`: data validation passes; 501 tests pass, including the
+  new `test/pair-29-quality-audit.test.mjs` (9 tests): skip link, Compare
+  history, first-load focus, the Compare skip link, phrase search, every
+  journey lesson and its links in both languages (routes, profile ids,
+  preset ids, chapter ids), unknown sensory levels, Spanish parity for new
+  strings, header rules and the CSS key.
+- Headless Chromium, EN and ES at 390×844: a crawl of every internal link
+  (551 routes per language) found no not-found pages, no horizontal scroll
+  and no page errors.
+- Round trips pass: catalogue → profile → Back (scroll restored), lesson →
+  Learn chapter → Back and → back link, lesson → prepared comparison → back
+  to lesson, brand directory → Back, Back/Forward chains, and reload of
+  direct links (profile, compare preset, Learn chapter, lesson, plant,
+  catalogue bottle).
+- Keyboard on a fresh load: skip link, brand, five nav items, theme,
+  language, all with visible focus. Reduced motion: no smooth scrolling and
+  no animated elements. 200% text: no horizontal scroll on any main route
+  or profile with all details open.
+
+### Novice tasks (scripted editorial walkthrough, not real testers)
+
+- Find a starting lesson: two taps from home (Start here → lesson 1).
+- Tell nose, mouthfeel and finish apart: lesson 2 walks through smell, sip,
+  texture and warmth, and finish as separate steps. ES uses nariz, boca and
+  final; EN calls mouthfeel "texture" and "body".
+- Find why a mezcal might be smoky: Browse styles → search "smoky mezcal"
+  → the espadín profile explains the pit roast. This failed before the
+  search fix.
+- Complete a preset comparison: Compare → first exercise → reveal → next
+  exercise link.
+- Find an example bottle and return: each profile shows its example bottle
+  on the page; catalogue → profile → Back returns to the same scroll.
+
+### Not verified (recorded, not claimed)
+
+- Desktop Safari, iPhone and iPad Safari, VoiceOver, and real novice
+  testers. These are now listed in the plan's "Needs a person" section.
+- At 200% text the sticky header is about 190px tall on a 390px-wide
+  phone. It no longer overflows, but it takes a large share of the screen;
+  making the header non-sticky at large text sizes is a possible follow-up.

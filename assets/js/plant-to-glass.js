@@ -344,7 +344,10 @@ function routeBlock(route, { processById, profileById, locale }) {
     tbody.appendChild(row);
   }
   table.appendChild(tbody);
-  details.appendChild(table);
+  // Pair 29: wide tables scroll inside their own box, never the page.
+  const scroller = el("div", { class: "ptg-levels-scroll" });
+  scroller.appendChild(table);
+  details.appendChild(scroller);
   details.appendChild(el("h4", {}, s(locale, "notGuarantee")));
   details.appendChild(el("p", {}, pick(route.caveat, locale)));
   details.appendChild(el("a", { href: `#/compare/${route.ids.join(",")}`, class: "cta-link" }, s(locale, "compareLink")));
