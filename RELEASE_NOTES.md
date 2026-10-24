@@ -3248,8 +3248,11 @@ corrected copy and logic. Live URL:
 
 ## Pair 23.1 — Editorial voice and Spanish localization maintenance (2026-10-24)
 
-Branch `pair-23.1-voice-and-localization`. Not merged or deployed:
-awaiting the owner's review. Section 8 of the plan was reordered on the
+Branch `pair-23.1-voice-and-localization`, reviewed and merged by the
+owner as PR #73 (merge commit `1fb95ee`). CI, Deploy to GitHub Pages and
+pages-build-deployment all succeeded for `1fb95ee`, and the live
+`profiles.json` was fetched afterwards: it serves the rewritten Guerrero
+text and the Arandas pin. Section 8 of the plan was reordered on the
 owner's instruction (voice guide first; execution order 23.1 → 24 → … → 29)
 and the owner's live-site review findings were added to the pairs they
 belong to.
@@ -3340,3 +3343,73 @@ adjusted deliberately:
 - Profile coordinate precision labels still render in English in the
   Spanish edition. They are small and are recorded for Pair 28.
 - Native iPhone/iPad Safari, VoiceOver and touch checks remain unverified.
+
+## Pair 24 — Guided sensory tasting (2026-10-24)
+
+Branch `pair-24-guided-tasting`. Not merged or deployed: awaiting the
+owner's review. All new text follows `EDITORIAL_VOICE.md`.
+
+### Changed
+
+- **Guided tasting** (`#/start/how-to-taste`). The four-step sequence is
+  now six steps: prepare, aroma, sip, texture and warmth, finish,
+  reflect. The technique text of the old steps is kept word for word, and
+  "Sip and notice the texture" is split into "Sip" (which now explains
+  retronasal flavour) and "Texture and warmth". A switch at the top picks
+  **Reading along, no glass** (the default) or **I have a glass**:
+  - Reading along: each step shows a panel built from the valley blanco
+    profile's own data (taste notes, what to notice, body, pepper level,
+    finish text and length), so no sensory content is duplicated. A panel
+    is skipped rather than guessed if a field is missing.
+  - With a glass: each step shows a short "your turn" prompt instead.
+  - The choice lives in memory only. Nothing is stored or sent.
+- **Reflection.** An optional choice ("What stood out most?") points to
+  the matching flavour path, or for "Hard to say yet" to the comparison
+  step. There is no score and no right or wrong wording.
+- **Lesson 3** (`#/start/recognise-the-notes`) adds "Easy to mix up"
+  (sweetness vs sugar, alcohol warmth vs pepper, smoke vs roast, body vs
+  intensity, smell vs flavour in the mouth) and "Words for what you
+  taste": ten descriptors with everyday anchors. Mineral and oak carry
+  caveats ("not proof", "vanilla alone doesn't prove it"). The Spanish
+  anchors are Mexican (camote asado, calabaza en tacha, hierbabuena, gis,
+  cajeta).
+- **Hub outcome** now promises telling aroma, flavour, body, alcohol
+  warmth and finish apart, plus a tasting with or without a glass.
+- **Profiles show body once.** The character grid shows Light / Medium /
+  Full (Ligero / Medio / Pleno) instead of Low / Medium / High, and the
+  duplicate "Body" entry in the facts list is gone.
+- **Valley blanco ES.** "el centro sabroso" became "el corazón de agave
+  asado, más salado que dulce", and "rodaja de lima" became "rodaja de
+  limón". The same slips elsewhere are logged for Pair 28.
+
+### Tests
+
+`npm run validate`: data validation passed and 442 tests pass (431 prior
+plus 11 in `test/pair-24-guided-tasting.test.mjs`). Three existing tests
+pinned the four-step lesson and were updated deliberately, with every
+content check kept (neat definition, stemware, swirl, warmth, finish
+definition):
+
+- pair 16 step count and headings
+- pair 16 hub outcome wording
+- P18-4 step indices, now looked up by step id
+
+### Manual checks
+
+Headless Chromium against a local static server:
+
+- **Widths and overflow.** At 375px, EN and ES, the how-to-taste lesson,
+  lesson 3 and the valley blanco profile show no horizontal overflow. At
+  1280px, EN, both lessons render.
+- **Mode switch.** It swaps panels and prompts and keeps focus on the
+  pressed button.
+- **Reflection.** Choosing "Pepper or spice" shows the "Peppery and
+  spicy" path link in both languages.
+- **Errors.** No page errors.
+
+### Still open or unverified
+
+- Native-speaker review of the new Spanish is not done.
+- Native iPhone/iPad Safari, VoiceOver and touch checks remain unverified.
+- Lesson 3 is now long on phones. Pair 26's page-landing and orientation
+  work should check it.
