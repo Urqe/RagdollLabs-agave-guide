@@ -85,10 +85,19 @@ export function commonNameRegion(region, locale = null) {
   return typeof value === "string" && value.trim() ? value : region;
 }
 
+/**
+ * A region label shown inside "name (region)" keeps its own aside, but
+ * as a comma clause, so "Guerrero (Nahuatl-derived)" never renders as
+ * nested parentheses: "papalometl (Guerrero, Nahuatl-derived)".
+ */
+export function flattenAside(label) {
+  return String(label || "").replace(/\s*\(([^()]*)\)/g, ", $1");
+}
+
 /** "name (region)" list for a plant's common names, localized regions. */
 export function commonNamesText(plant, locale = null, separator = ", ") {
   return ((plant && plant.commonNames) || [])
-    .map((n) => (n.region ? `${n.name} (${commonNameRegion(n.region, locale)})` : n.name))
+    .map((n) => (n.region ? `${n.name} (${flattenAside(commonNameRegion(n.region, locale))})` : n.name))
     .join(separator);
 }
 

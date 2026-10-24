@@ -141,17 +141,21 @@ test("pair 23.1: the Learn plant reference localizes region labels on every plan
   const { chapters } = JSON.parse(rawFiles["chapters.json"]);
   const { processes } = JSON.parse(rawFiles["processes.json"]);
   const { glossary } = JSON.parse(rawFiles["glossary.json"]);
+  const { flattenAside } = await import("../assets/js/editorial.js");
   const box = document.createElement("div");
   renderLearn(box, { chapters, plants, processes, glossary, profiles, bottles, sources, locale: es });
   const text = box.textContent;
   for (const plant of plants) {
     for (const n of plant.commonNames || []) {
-      const esLabel = contentEs.commonNameRegions[n.region];
-      if (esLabel !== n.region) {
-        assert.ok(!text.includes(`(${n.region})`), `Learn does not show the English label "${n.region}"`);
+      const esLabel = flattenAside(contentEs.commonNameRegions[n.region]);
+      if (esLabel !== flattenAside(n.region)) {
+        assert.ok(!text.includes(`(${flattenAside(n.region)})`), `Learn does not show the English label "${n.region}"`);
       }
       assert.ok(text.includes(`(${esLabel})`), `Learn shows the Spanish label "${esLabel}"`);
     }
+  }
+  for (const names of box.querySelectorAll(".learn-names")) {
+    assert.ok(!/\([^)]*\(/.test(names.textContent), `no nested parentheses in "${names.textContent}"`);
   }
 });
 
