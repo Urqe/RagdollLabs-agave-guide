@@ -192,27 +192,33 @@ test("pair 23: the five regional profiles keep tasting evidence at bottle scale"
   }
 });
 
-test("pair 23: causal explanations separate documented method from documented tasting", () => {
+// Pair 23.1 rewrote these why-blocks in the voice of EDITORIAL_VOICE.md and
+// removed the "separate records" formula on purpose. What stays pinned is the
+// substance: the method and the tasting are both stated, and the causal link
+// between them is visibly unestablished.
+test("pair 23: causal explanations keep method and tasting apart and the cause open", () => {
   const mic = profileById.get("mezcal-cupreata-rio-de-parras-michoacan");
-  assert.ok(/separate records|two documented/i.test(mic.whyItTastes),
-    "the Michoac\u00e1n why-block separates the method record from the tasting record");
+  assert.ok(/pulque/i.test(mic.whyItTastes) && /taster|review/i.test(mic.whyItTastes),
+    "the Michoac\u00e1n why-block states both the method and what tasters find");
   assert.ok(/not a mechanism|no source isolates|does not establish/i.test(mic.whyItTastes),
     "the pulque-starter causal link stays flagged as unestablished");
   assert.ok(/open/i.test(mic.whyItTastes), "the causal question stays visibly open");
   const esMic = contentEs.profiles[mic.id].whyItTastes;
-  assert.ok(/dos registros distintos/i.test(esMic), "the ES why-block mirrors the separation");
+  assert.ok(/pulque/i.test(esMic) && /catador|reseña/i.test(esMic),
+    "the ES why-block states both the method and what tasters find");
   assert.ok(/no un mecanismo|ninguna fuente a[ií]sla|no establezcan/i.test(esMic),
     "the ES causal link stays flagged as unestablished");
+  assert.ok(/abierta/i.test(esMic), "the ES causal question stays visibly open");
 
   const pue = profileById.get("mezcal-papalometl-mixteca-puebla");
-  assert.ok(/separate records|two documented/i.test(pue.whyItTastes),
-    "the Puebla why-block separates the method record from the tasting record");
+  assert.ok(/ferment/i.test(pue.whyItTastes) && /review/i.test(pue.whyItTastes),
+    "the Puebla why-block states both the method and what reviews report");
   assert.ok(/not something the reviews establish|they report the acidity, not its cause/i.test(pue.whyItTastes),
     "the fermentation/acidity causal link stays flagged as unestablished");
   const esPue = contentEs.profiles[pue.id].whyItTastes;
-  assert.ok(/dos registros distintos/i.test(esPue), "the ES Puebla why-block mirrors the separation");
-  assert.ok(/no algo que las reseñas establezcan/i.test(esPue),
+  assert.ok(/no algo que las reseñas establezcan|reportan la acidez, no su causa/i.test(esPue),
     "the ES fermentation/acidity causal link stays flagged");
+  assert.ok(/abierto/i.test(esPue), "the ES Puebla causal link stays open");
 
   const slp = profileById.get("mezcal-verde-altiplano-slp");
   assert.ok(/disputed|unresolved/i.test(slp.whyItTastes), "the SLP oven dispute stays visible in the why-block");
