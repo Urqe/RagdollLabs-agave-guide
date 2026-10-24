@@ -37,7 +37,7 @@
       "atAGlance": "The only agave legally permitted for tequila; cultivated at scale in Jalisco's valley and highlands.",
       "whereItGrows": "Cultivated in the Tequila Valley and the Jalisco highlands (Los Altos), in volcanic and red mineral soils respectively.",
       "harvestProduction": "Harvested at maturity (typically 5–7 years); the jimador trims the leaves to the piña, which is then steam-cooked — never sap-collected.",
-      "sensoryTendencies": "Editorial guidance: valley-grown reads savory and vegetal, highland-grown sweeter and more floral; this is place guidance, not a universal flavor.",
+      "sensoryTendencies": "Editorial guidance: valley-grown reads savoury and vegetal, highland-grown sweeter and more floral; this is place guidance, not a universal flavour.",
       "sustainability": "Cultivated, so wild-population pressure is not the concern it is for wild-harvested agaves."
     },
     {
@@ -84,7 +84,7 @@
       "atAGlance": "Mexico's great workhorse agave: espadín in Oaxaca's mezcal, Pacifica/Yaquiana in Sonora's bacanora, chico aguiar in coastal raicilla.",
       "whereItGrows": "Valles Centrales of Oaxaca (cultivated), the Sierra de Sonora (wild), and coastal Jalisco (wild and cultivated).",
       "harvestProduction": "Cultivated at scale in Oaxaca; wild-harvested in Sonora. Cooked (pit roast or steam), never sap-collected.",
-      "sensoryTendencies": "Editorial guidance: espadín mezcals read roast-forward; bacanora's Pacifica adds Sonoran herbality; flavors differ by place and process, not by the name alone.",
+      "sensoryTendencies": "Editorial guidance: espadín mezcals read roast-forward; bacanora's Pacifica adds Sonoran herbality; flavours differ by place and process, not by the name alone.",
       "sustainability": "Wild harvest pressures vary sharply by region: Sonora's bacanora depends on wild yaquiana/Pacifica populations, and mezcal's growth has increased demand on wild-harvested angustifolia relatives elsewhere. Where espadín is cultivated at scale (Oaxaca) the pressure is far lower. Whether Sonora's Pacifica/Yaquiana is the same plant as espadín or a distinct local variety remains debated; this guide preserves the regional names without settling the botany. (Sustainability reporting on wild agave harvest is an active topic in the category press, e.g. Mezcalistas, reviewed 2026-10-21.)"
     },
     {
@@ -243,7 +243,7 @@
         }
       ],
       "cultivation": "mostly wild-harvested at high altitude; seed-only reproduction makes cultivation slow, so wild populations are under pressure — some producers now cultivate or reforest (a cited cultivated example is Montelobos, produced in Puebla, outside this wild-style profile)",
-      "uncertainty": "Wild vs cultivated tobalá can taste noticeably different; flavor variation between batches is documented and genuine. The name papalometl in Puebla names Agave potatorum in the cited example's documented case, but the same word can point to other agaves in other states — keep names regional.",
+      "uncertainty": "Wild vs cultivated tobalá can taste noticeably different; flavour variation between batches is documented and genuine. The name papalometl in Puebla names Agave potatorum in the cited example's documented case, but the same word can point to other agaves in other states — keep names regional.",
       "sourceIds": [
         "mezcalreviews-tobala-category",
         "mezcalreviews-montelobos-tobala",
@@ -380,7 +380,7 @@
       "commonNames": [
         {
           "name": "cenizo",
-          "region": "Durango (“ash-colored”, for the leaf tone)"
+          "region": "Durango (“ash-coloured”, for the leaf tone)"
         }
       ],
       "cultivation": "mostly wild-harvested; nursery and reforestation programs exist as demand grows",

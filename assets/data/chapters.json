@@ -37,7 +37,7 @@
       "intro": "Every agave spirit starts as a plant. This chapter covers the species behind the guide's profiles, their regional names, and how harvest and cultivation shape what ends up in the glass.",
       "blocks": [
         {
-          "text": "Blue weber agave is the only agave legally permitted in tequila; espadín is mezcal's workhorse, cultivated at scale. Other agaves — maximiliana in the Sierra de Jalisco, tobalá in Oaxaca's mountains — are often wild-harvested, which shapes both flavor and sustainability.",
+          "text": "Blue weber agave is the only agave legally permitted in tequila; espadín is mezcal's workhorse, cultivated at scale. Other agaves — maximiliana in the Sierra de Jalisco, tobalá in Oaxaca's mountains — are often wild-harvested, which shapes both flavour and sustainability.",
           "exampleProfileIds": [
             "tequila-blanco-valley-jalisco",
             "mezcal-espadin-valles-centrales",
@@ -59,7 +59,7 @@
           ]
         },
         {
-          "text": "Not every spirit here cooks the piña. Comiteco and destilado de pulque collect aguamiel — sap drawn from the living plant — and ferment that instead. Sap-derived traditions skip the roast entirely, which is why their flavor path differs from cooked-heart spirits.",
+          "text": "Not every spirit here cooks the piña. Comiteco and destilado de pulque collect aguamiel — sap drawn from the living plant — and ferment that instead. Sap-derived traditions skip the roast entirely, which is why their flavour path differs from cooked-heart spirits.",
           "exampleProfileIds": [
             "comiteco-aguamiel-chiapas",
             "destilado-de-pulque-salmiana-tlaxcala"
@@ -74,7 +74,7 @@
       "intro": "How does a spiky plant become a spirit? This chapter walks the production sequence — and why each stage leaves a trace you can taste.",
       "blocks": [
         {
-          "text": "Cooking converts the agave's complex carbohydrates into fermentable sugars. Earthen pit roasts (mezcal, bacanora, tuxca, sotol) can lend smoke; steam cooking in hornos or autoclaves (tequila) cooks clean. Neither method guarantees a flavor — wood, time and technique decide.",
+          "text": "Cooking converts the agave's complex carbohydrates into fermentable sugars. Earthen pit roasts (mezcal, bacanora, tuxca, sotol) can lend smoke; steam cooking in hornos or autoclaves (tequila) cooks clean. Neither method guarantees a flavour — wood, time and technique decide.",
           "processIds": [
             "pit-roast",
             "steam-cook"
@@ -88,22 +88,22 @@
           ]
         },
         {
-          "text": "Most agave spirits rest: in glass, or in oak. Wood maturation (reposado, añejo classes) adds color, oak spice and softness, with spirit-specific legal minimums. Glass resting (madurado en vidrio) mellows without wood influence. Comiteco shows a third path: its añejo takes its wood character from resting in glass with branches of white oak rather than barrels — per the producer's own importer — a reminder that resting traditions are more varied than the legal classes suggest.",
+          "text": "Most agave spirits rest: in glass, or in oak. Wood maturation (reposado, añejo classes) adds colour, oak spice and softness, with spirit-specific legal minimums. Glass resting (madurado en vidrio) mellows without wood influence. Comiteco shows a third path: its añejo takes its wood character from resting in glass with branches of white oak rather than barrels — per the producer's own importer — a reminder that resting traditions are more varied than the legal classes suggest.",
           "processIds": [
             "wood-maturation",
             "glass-resting"
           ],
-          "deeper": "Sap-derived traditions invert the sequence: no roast, no piña — aguamiel ferments first (into pulque for destilado de pulque) and distillation follows, which is why the regulatory category and the flavor both diverge from cooked-heart spirits."
+          "deeper": "Sap-derived traditions invert the sequence: no roast, no piña — aguamiel ferments first (into pulque for destilado de pulque) and distillation follows, which is why the regulatory category and the flavour both diverge from cooked-heart spirits."
         }
       ]
     },
     {
       "id": "understanding-flavour",
       "title": "Understanding Flavour",
-      "intro": "What are you actually tasting? This chapter separates the vocabulary of flavor — and shows each concept on a real profile from the guide.",
+      "intro": "What are you actually tasting? This chapter separates the vocabulary of flavour — and shows each concept on a real profile from the guide.",
       "blocks": [
         {
-          "text": "Body is how the spirit feels in the mouth — light, medium or full. Smoke, when present, usually comes from the pit roast. Herbal and vegetal notes come from the plant and a clean cook; fruit and floral notes often rise with highland agave and gentle roasts. Sweetness here means perceived sweetness, not measured sugar. Within tequila, the same plant reads differently by place: valley agave trends earthy and savory, Los Altos agave sweeter and fruitier — a tendency named on the highland and valley blanco profiles, and honestly a tendency: a blind tasting panel once found the pattern weaker than folklore suggests.",
+          "text": "Body is how the spirit feels in the mouth — light, medium or full. Smoke, when present, usually comes from the pit roast. Herbal and vegetal notes come from the plant and a clean cook; fruit and floral notes often rise with highland agave and gentle roasts. Sweetness here means perceived sweetness, not measured sugar. Within tequila, the same plant reads differently by place: valley agave trends earthy and savoury, Los Altos agave sweeter and fruitier — a tendency named on the highland and valley blanco profiles, and honestly a tendency: a blind tasting panel once found the pattern weaker than folklore suggests.",
           "exampleProfileIds": [
             "tequila-blanco-valley-jalisco",
             "bacanora-pacifica-sierra-sonora",
@@ -111,7 +111,7 @@
           ]
         },
         {
-          "text": "Oak — from wood resting — contributes vanilla, caramel and spice. Finish length is how long the flavor persists after swallowing. None of these levels is a quality score: they are editorial descriptions of style, and bottles within a style vary.",
+          "text": "Oak — from wood resting — contributes vanilla, caramel and spice. Finish length is how long the flavour persists after swallowing. None of these levels is a quality score: they are editorial descriptions of style, and bottles within a style vary.",
           "exampleProfileIds": [
             "tequila-anejo-valley-jalisco",
             "tequila-reposado-valley-jalisco"
@@ -119,10 +119,10 @@
         },
         {
           "text": "The compare view puts these dimensions side by side: a blanco against an añejo shows the largest oak gap; a valley blanco against a highland expression shows how place reads in the glass.",
-          "deeper": "Flavor chemistry is genuinely complex: roast compounds, fermentation esters and still cut each contribute. This guide attributes character to process only where sources document the link — never from a tasting note alone."
+          "deeper": "Flavour chemistry is genuinely complex: roast compounds, fermentation esters and still cut each contribute. This guide attributes character to process only where sources document the link — never from a tasting note alone."
         },
         {
-          "text": "How this guide reaches its conclusions: style profiles are editorial descriptions drawn from the documented sensory data on each profile, not reviews or ratings of any bottle. Reviewer impressions are attributed to their source, producer notes are never presented as independent reviews, and anything the guide itself concludes is labeled editorial. Batch-specific facts — ABV, maker, plant mix, tasting notes — stay attached to the bottle they belong to, and missing evidence is disclosed rather than guessed.",
+          "text": "How this guide reaches its conclusions: style profiles are editorial descriptions drawn from the documented sensory data on each profile, not reviews or ratings of any bottle. Reviewer impressions are attributed to their source, producer notes are never presented as independent reviews, and anything the guide itself concludes is labelled editorial. Batch-specific facts — ABV, maker, plant mix, tasting notes — stay attached to the bottle they belong to, and missing evidence is disclosed rather than guessed.",
           "exampleProfileIds": [
             "tequila-blanco-valley-jalisco",
             "tequila-anejo-valley-jalisco"
@@ -145,7 +145,7 @@
           ]
         },
         {
-          "text": "A NOM (Norma Oficial Mexicana) is an official Mexican standard that defines each spirit’s rules; the number printed on a tequila or mezcal label is the producer’s registration under that standard, and certification seals are issued separately by a conformity-evaluation body. Three different things: the standard, the registration and the certification. Tuxca bottles carry no NOM registration — what is absent is certification under a denomination-of-origin scheme, not exemption from general labeling requirements — a legal fact, not an authenticity judgment. Batch terms (lote) matter for small producers: batch facts stay with the batch.",
+          "text": "A NOM (Norma Oficial Mexicana) is an official Mexican standard that defines each spirit’s rules; the number printed on a tequila or mezcal label is the producer’s registration under that standard, and certification seals are issued separately by a conformity-evaluation body. Three different things: the standard, the registration and the certification. Tuxca bottles carry no NOM registration — what is absent is certification under a denomination-of-origin scheme, not exemption from general labelling requirements — a legal fact, not an authenticity judgment. Batch terms (lote) matter for small producers: batch facts stay with the batch.",
           "termIds": [
             "NOM",
             "lote / batch",
@@ -187,7 +187,7 @@
       "intro": "There is no wrong way to enjoy these spirits — but there are honest ways to choose. This chapter favors your own palate over price, age or rarity.",
       "blocks": [
         {
-          "text": "Start from what you already like: fresh and herbal blancos, smoky mezcals, oak-rich añejos, or something off the beaten path. The discovery paths in this guide group profiles by flavor so you can follow your own taste, and every profile names its sensory style honestly.",
+          "text": "Start from what you already like: fresh and herbal blancos, smoky mezcals, oak-rich añejos, or something off the beaten path. The discovery paths in this guide group profiles by flavour so you can follow your own taste, and every profile names its sensory style honestly.",
           "exampleProfileIds": [
             "tequila-blanco-valley-jalisco",
             "mezcal-espadin-valles-centrales",
@@ -195,14 +195,14 @@
           ]
         },
         {
-          "text": "Serving is simple: a small glass at room temperature lets aromatics open; a splash of water can soften high ABV. Neat — without ice or mixers — on the rocks and mixed are all legitimate ways to meet these spirits — a margarita or paloma is a real way into a blanco, not a compromise. Salt, citrus (lima, not always limón), ice and accompaniments are choices rather than admission requirements; regional customs vary and none of them is a rule. Pairings on each profile are editorial suggestions, never rules.",
+          "text": "Serving is simple: a small glass at room temperature lets aromatics open; a splash of water can soften high ABV. Neat — without ice or mixers — on the rocks and mixed are all legitimate ways to meet these spirits — a margarita or paloma is a real way into a blanco, not a compromise. Salt, citrus (in Mexico usually limón, the small green lime), ice and accompaniments are choices rather than admission requirements; regional customs vary and none of them is a rule. Pairings on each profile are editorial suggestions, never rules.",
           "exampleProfileIds": [
             "bacanora-pacifica-sierra-sonora",
             "raicilla-costa-jalisco"
           ]
         },
         {
-          "text": "Beware marketing ladders: older is not automatically better, higher ABV is not automatically better, and rarity is not a flavor. A $30 blanco from a good producer can outshine a trophy bottle. The guide profiles styles, not trophies.",
+          "text": "Beware marketing ladders: older is not automatically better, higher ABV is not automatically better, and rarity is not a flavour. A $30 blanco from a good producer can outshine a trophy bottle. The guide profiles styles, not trophies.",
           "deeper": "Tasting technique, briefly: a small clean glass, a gentle sniff without plunging the nose in or swirling hard, a small sip, notice the mouthfeel, then follow the finish. Water — alongside or a few drops in — is a choice that softens alcohol warmth; it does not make the drink alcohol-free. The How to taste lesson in the five-step journey walks this sequence step by step, and the compare view exists precisely for tasting two similar styles side by side."
         }
       ]

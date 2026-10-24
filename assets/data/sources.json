@@ -295,13 +295,6 @@
       "verified": "2026-10-20"
     },
     {
-      "id": "diffords-mezcal-categories",
-      "title": "Difford's Guide — Mezcal categories (joven, reposado, añejo)",
-      "url": "https://www.diffordsguide.com/encyclopedia/363/bws/mezcal-what-it-is-and-how-its-made",
-      "kind": "style",
-      "verified": "2026-10-20"
-    },
-    {
       "id": "bbcgoodfood-ilegal-reposado",
       "title": "BBC Good Food — Ilegal Mezcal reposado review",
       "url": "https://www.bbcgoodfood.com/review/ilegal-mezcal-reposado",
@@ -627,21 +620,21 @@
       "id": "dof-comiteco-ig-2025",
       "title": "DOF — Declaración de Protección de la Indicación Geográfica “Comiteco de Comitán, Chiapas” (6 de octubre de 2025)",
       "url": "https://sidof.segob.gob.mx/notas/docFuente/5769331",
-      "kind": "style",
+      "kind": "official",
       "verified": "2026-10-23"
     },
     {
       "id": "dof-nom-070",
       "title": "DOF — NOM-070-SCFI-2016, Bebidas alcohólicas–Mezcal–Especificaciones (categories 4.2, production 4.4, classes 4.5)",
       "url": "https://dof.gob.mx/normasOficiales/6437/seeco11_C/seeco11_C.html",
-      "kind": "style",
+      "kind": "official",
       "verified": "2026-10-23"
     },
     {
       "id": "bacanora-sonora-historia",
       "title": "Gobierno de Sonora — Bacanora: historia (official 1915/1992 prohibition timeline)",
       "url": "https://bacanora.sonora.gob.mx/nosotros/historia",
-      "kind": "style",
+      "kind": "official",
       "verified": "2026-10-23"
     },
     {
@@ -702,21 +695,21 @@
     },
     {
       "id": "sic-cultura-guerrero",
-      "kind": "style",
+      "kind": "official",
       "title": "Secretaría de Cultura — Guerrero regional gastronomy record (mezcal and papalote context)",
       "url": "https://sic.cultura.gob.mx/ficha.php?table=gastronomia&table_id=50",
       "verified": "2026-10-23"
     },
     {
       "id": "inifap-agave-reproduccion",
-      "kind": "style",
+      "kind": "official",
       "title": "INIFAP — Sustentabilidad del agave comercial por medio de su reproducción (cenizo/Durango context)",
       "url": "https://www.gob.mx/inifap/articulos/sustentabilidad-del-agave-comercial-por-medio-de-su-reproduccion",
       "verified": "2026-10-23"
     },
     {
       "id": "conafor-salmiana-slp",
-      "kind": "style",
+      "kind": "official",
       "title": "CONAFOR — Manejo y ecuaciones alométricas de Agave salmiana en San Luis Potosí",
       "url": "https://www.gob.mx/conafor/documentos/manual-mejores-practicas-de-manejo-y-ecuaciones-alometricas-de-biomasa-de-agave-salmiana-sen-el-estado-de-slp",
       "verified": "2026-10-23"
@@ -731,7 +724,7 @@
     {
       "id": "palalma-brand",
       "kind": "producer",
-      "title": "Pal'alma / Mezcalito Pal'alma — brand site (Erick Rodriguez)",
+      "title": "Pal'alma / Mezcalito Pal'alma — Facebook page (no separate brand site found, checked 2026-10-24)",
       "url": "https://www.facebook.com/Mezcalito-Palalma-865025870235262/",
       "verified": "2026-10-24"
     },
@@ -761,6 +754,27 @@
       "kind": "style",
       "title": "Global Press Journal — Endangered Agave: Can Mezcal Avoid Tequila's Destructive Legacy? (Zinacantán, Puebla context)",
       "url": "https://globalpressjournal.com/americas/mexico/endangered-agave-can-mezcal-avoid-tequilas-destructive-legacy/",
+      "verified": "2026-10-24"
+    },
+    {
+      "id": "nom-006-tequila",
+      "title": "NOM-006-SCFI-2012, Bebidas alcohólicas–Tequila–Especificaciones (classes 4.36, maturation 6.4)",
+      "url": "https://www.crt.org.mx/wp-content/uploads/2024/01/NOM-006-SCFI-2012.pdf",
+      "kind": "official",
+      "verified": "2026-10-24"
+    },
+    {
+      "id": "montelobos-tobala-producer",
+      "title": "Montelobos — Tobalá (producer page: Palenque del Tentzo, San Nicolás Huajuapan, Puebla)",
+      "url": "https://www.montelobos.com/our-mezcals/montelobos-tobala/",
+      "kind": "producer",
+      "verified": "2026-10-24"
+    },
+    {
+      "id": "delmaguey-pechuga-producer",
+      "title": "Del Maguey — Pechuga (producer page: Santa Catarina Minas, Oaxaca)",
+      "url": "https://delmaguey.com/pechuga/",
+      "kind": "producer",
       "verified": "2026-10-24"
     }
   ]

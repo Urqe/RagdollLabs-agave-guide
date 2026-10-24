@@ -46,7 +46,7 @@
     {
       "term": "cristalino",
       "context": "finishing/marketing",
-      "definition": "An aged spirit filtered (often through charcoal) to remove color while keeping some wood character. It is a finishing choice, not a legal class in most categories.",
+      "definition": "An aged spirit filtered (often through charcoal) to remove colour while keeping some wood character. It is a finishing choice, not a legal class in most categories.",
       "sourceIds": [
         "diffords-tequila-category"
       ]
@@ -54,7 +54,7 @@
     {
       "term": "NOM",
       "context": "producer identifier",
-      "definition": "A NOM (Norma Oficial Mexicana) is an official Mexican standard; the NOM number printed on a tequila or mezcal label identifies the certified producer's registration under that standard. It is distinct from other label marks such as certification seals or holograms issued by a conformity-evaluation body. Absence of a NOM number (as with uncertified tuxca) means the producer is not registered under a denomination-of-origin scheme — not lower quality, and not exemption from other labeling requirements.",
+      "definition": "A NOM (Norma Oficial Mexicana) is an official Mexican standard; the NOM number printed on a tequila or mezcal label identifies the certified producer's registration under that standard. It is distinct from other label marks such as certification seals or holograms issued by a conformity-evaluation body. Absence of a NOM number (as with uncertified tuxca) means the producer is not registered under a denomination-of-origin scheme — not lower quality, and not exemption from other labelling requirements.",
       "sourceIds": [
         "mezcalistas-tepua-tasting",
         "mezcalistas-balancan-tasting"

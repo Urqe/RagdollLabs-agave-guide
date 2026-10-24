@@ -109,7 +109,7 @@ Data lives in `assets/data/`: `profiles`, `bottles`, `sources`, `plants`, `proce
 - **Bacanora.** Prohibited 1915–1992 per Sonora's official history, legalised again in 1992, denomination of origin in 2000: two separate milestones. Use "el bacanora" consistently.
 - **Raicilla.** A taberna is a distillery, not a still. The raicilla PROY-NOM is a project, not an effective standard; a rest period in one example is not a legal minimum.
 - **Sotol and sustainability.** Leaving roots does not prove regrowth. Plant ages and yields are variable, sourced ranges. Wild-population pressure and overall sustainability are different questions.
-- **Sap traditions.** The flowering stalk (quiote) is cut and the cavity scraped. Repeated sap collection eventually exhausts the plant; it is not indefinite regeneration.
+- **Sap traditions.** A large cut is made at the top of the living plant and scraped over successive days (Back Alley Imports on comiteco; no registered source yet names the quiote). Repeated sap collection eventually exhausts the plant; it is not indefinite regeneration.
 - **Valley vs highland tequila.** This is a tendency, and one blind tasting panel found it weaker than folklore suggests.
 - **Spanish false friends.** English savoury is not *sabroso*. Lime is *limón* in Mexico, not *lima*.
 

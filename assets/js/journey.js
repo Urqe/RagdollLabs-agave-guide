@@ -235,14 +235,14 @@ export const JOURNEY_STEPS = [
       label: { en: "Optional second exercise: valley blanco vs highland blanco", es: "Segundo ejercicio opcional: blanco del valle contra blanco de los Altos" },
       ids: ["tequila-blanco-valley-jalisco", "tequila-blanco-highland-jalisco"],
       preset: "region",
-      reason: { en: "Same plant and class, different region. The comparison describes tendencies — geography shapes flavor together with method and plant, it never decides it alone.", es: "Misma planta y clase, distinta región. La comparación describe tendencias — la geografía moldea el sabor junto con el método y la planta, nunca lo decide sola." },
+      reason: { en: "Same plant and class, different region. The comparison describes tendencies — geography shapes flavour together with method and plant, it never decides it alone.", es: "Misma planta y clase, distinta región. La comparación describe tendencias — la geografía moldea el sabor junto con el método y la planta, nunca lo decide sola." },
     },
   },
   {
     id: "explore-next",
     title: { en: "Choose what to explore next", es: "Elige qué explorar después" },
     idea: {
-      en: "That is the whole foundation: a style, a tasting sequence, four landmarks and one comparison. From here you can browse the styles, follow a flavor, look up a bottle you liked, or keep reading the reference chapters.",
+      en: "That is the whole foundation: a style, a tasting sequence, four landmarks and one comparison. From here you can browse the styles, follow a flavour, look up a bottle you liked, or keep reading the reference chapters.",
       es: "Ese es todo el fundamento: un estilo, una secuencia de cata, cuatro puntos de referencia y una comparación. Desde aquí puedes explorar los estilos, seguir un sabor, buscar una botella que te gustó, o seguir leyendo los capítulos de referencia.",
     },
     destinations: [
@@ -281,7 +281,7 @@ export function lessonNoteFor(lessonId, profileId, locale = null) {
 const STRINGS = {
   en: {
     hubTitle: "Your first agave spirit",
-    hubIntro: "New to agave? In five short steps you will learn a usable tasting sequence, recognize a few flavor landmarks and understand your first comparison — reading along works too; a glass is never required.",
+    hubIntro: "New to agave? In five short steps you will learn a usable tasting sequence, recognise a few flavour landmarks and understand your first comparison — reading along works too; a glass is never required.",
     stepsLabel: "The steps",
     outcomeLabel: "What you will get out of it",
     outcomes: "Tell aroma, flavour, body, alcohol warmth and finish apart, try a guided tasting with or without a glass, recognise four flavour landmarks and read one prepared comparison that shows what wood resting changes.",

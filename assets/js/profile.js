@@ -175,7 +175,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
       ui(locale, "coordsNote")
         .replace("{lat}", c.lat.toFixed(2))
         .replace("{lon}", c.lon.toFixed(2))
-        .replace("{precision}", c.precision)));
+        .replace("{precision}", fieldEs("profile", profile.id, "placePrecision", locale) || c.precision)));
   }
 
   const contextText = editorialText("profile", profile.id, "context", profile.context, locale);

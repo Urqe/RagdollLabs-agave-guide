@@ -15,7 +15,7 @@
       "processIds": [
         "steam-cook"
       ],
-      "distinctions": "Agave grows smaller and more herbaceous than highland agave; valley blancos read savory and vegetal in editorial guidance — a cultural description, not a legal boundary.",
+      "distinctions": "Agave grows smaller and more herbaceous than highland agave; valley blancos come across savoury and vegetal in editorial guidance — a cultural description, not a legal boundary.",
       "sourceIds": [
         "diffords-tequila-made",
         "diffords-tequila-category"
@@ -171,7 +171,7 @@
         "wild-fermentation",
         "distillation-methods"
       ],
-      "distinctions": "Tuxca has no denomination of origin; vinatero practice is cultural, and bottles carry no NOM registration — the absence is of DO-scheme certification, not of other labeling obligations — a legal fact, not an authenticity judgment. The tradition is borderlands: it reaches into northern Colima, but the app's cited example is a Jalisco-made bottle, which does not by itself establish Colima production coverage.",
+      "distinctions": "Tuxca has no denomination of origin; vinatero practice is cultural, and bottles carry no NOM registration — the absence is of DO-scheme certification, not of other labelling obligations — a legal fact, not an authenticity judgment. The tradition is borderlands: it reaches into northern Colima, but the app's cited example is a Jalisco-made bottle, which does not by itself establish Colima production coverage.",
       "sourceIds": [
         "mexicanspiritsbible-tuxca"
       ]
@@ -248,7 +248,7 @@
       "name": "La Montaña (mountain Guerrero)",
       "type": "subregion",
       "stateId": "gro",
-      "geography": "Mountain municipalities of eastern Guerrero, in the Balsas basin — Apango and neighboring communities where papalote mezcal is made.",
+      "geography": "Mountain municipalities of eastern Guerrero, in the Balsas basin — Apango and neighbouring communities where papalote mezcal is made.",
       "traditionIds": [
         "mezcal"
       ],
@@ -295,7 +295,7 @@
       "name": "Altiplano Potosino (central plateau), San Luis Potosí",
       "type": "subregion",
       "stateId": "slp",
-      "geography": "Rocky, arid central Potosino plateau around Santa Isabel and neighboring communities — the home of maguey verde (Agave salmiana) mezcal.",
+      "geography": "Rocky, arid central Potosino plateau around Santa Isabel and neighbouring communities — the home of maguey verde (Agave salmiana) mezcal.",
       "traditionIds": [
         "mezcal",
         "destilado-de-pulque"
@@ -318,7 +318,7 @@
       "name": "Rio de Parras, Michoacán",
       "type": "subregion",
       "stateId": "mich",
-      "geography": "River-valley communities of the Trans-Mexican Volcanic Belt in Michoacán — Rio de Parras and neighboring vinata country where cupreata (penca ancha) mezcal is made.",
+      "geography": "River-valley communities of the Trans-Mexican Volcanic Belt in Michoacán — Rio de Parras and neighbouring vinata country where cupreata (penca ancha) mezcal is made.",
       "traditionIds": [
         "mezcal"
       ],
@@ -339,7 +339,7 @@
       "name": "Mixteca Poblana, Puebla",
       "type": "subregion",
       "stateId": "pue",
-      "geography": "Hills of the Mixteca Poblana around San Diego La Mesa Tochimilitzingo and neighboring communities — papalometl mezcal country.",
+      "geography": "Hills of the Mixteca Poblana around San Diego La Mesa Tochimilitzingo and neighbouring communities — papalometl mezcal country.",
       "traditionIds": [
         "mezcal"
       ],
