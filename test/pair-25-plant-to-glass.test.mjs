@@ -40,7 +40,15 @@ localStorage.clear();
 const en = createLocale();
 en.set("en");
 
-const { renderPlantToGlass, STAGES, ROUTES, OPEN_QUESTIONS } = await import("../assets/js/plant-to-glass.js");
+const { renderPlantToGlass, STAGES, ROUTES, OPEN_QUESTIONS, routeProcessIds } = await import("../assets/js/plant-to-glass.js");
+
+test("pair 25: routes add the crush step only when the profile's method names a crushing tool", () => {
+  const blanco = profileById.get("tequila-blanco-valley-jalisco");
+  const anejo = profileById.get("tequila-anejo-valley-jalisco");
+  assert.deepEqual(routeProcessIds(blanco), ["steam-cook", "milling-extraction", "wild-fermentation", "distillation-methods"],
+    "blanco's method names tahona or roller mill, so the crush appears in stage order");
+  assert.ok(!routeProcessIds(anejo).includes("milling-extraction"), "añejo's method names no crushing tool, so no crush step is invented");
+});
 const { parseHash, buildHash } = await import("../assets/js/router.js");
 
 function page(locale, from = null) {
@@ -134,7 +142,7 @@ test("pair 25: two contrasting routes, built from profile data, with a predictio
       assert.equal(columns.length, 2, "two columns");
       route.ids.forEach((id, c) => {
         const p = profileById.get(id);
-        assert.equal(columns[c].querySelectorAll(".ptg-route-steps li").length, p.processIds.length,
+        assert.equal(columns[c].querySelectorAll(".ptg-route-steps li").length, routeProcessIds(p).length,
           `${id}: one route step per documented process`);
         const documented = locale === es ? contentEs.profiles[id].process : p.process;
         assert.ok(columns[c].textContent.includes(documented), `${id}: the profile's documented method is quoted`);

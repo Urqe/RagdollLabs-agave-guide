@@ -1236,6 +1236,11 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .ptg-seen-in { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.5rem 0; }
 .ptg-details { margin-top: 0.5rem; }
 .ptg-details summary { cursor: pointer; font-weight: 600; min-height: var(--tap); display: flex; align-items: center; }
+.ptg-details summary { list-style: none; gap: 0.45rem; }
+.ptg-details summary::-webkit-details-marker { display: none; }
+.ptg-details summary::before { content: "▸"; display: inline-block; transition: transform 0.15s var(--ease); }
+.ptg-details[open] > summary::before { transform: rotate(90deg); }
+@media (prefers-reduced-motion: reduce) { .ptg-details summary::before { transition: none; } }
 .ptg-details h4 { margin: 0.6rem 0 0.2rem; }
 .ptg-route { margin-top: 1rem; padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); }
 .ptg-route h3 { margin-top: 0; }

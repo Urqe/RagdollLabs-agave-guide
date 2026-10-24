@@ -203,6 +203,19 @@ function pick(obj, locale) {
 
 const ORIGIN = "page:plant-to-glass";
 
+/**
+ * Profiles do not carry a milling process id; a route shows the crush step
+ * only when the profile's own documented method names a crushing tool.
+ */
+export const CRUSH_TOOLS = /tahona|roller-mill|roller mill|horse-drawn mill|stone-milled|mallet|by axe|desgarradora|shredder|hand-mash/i;
+
+export function routeProcessIds(profile) {
+  const ids = [...(profile.processIds || [])];
+  if (CRUSH_TOOLS.test(profile.process || "") && !ids.includes("milling-extraction")) ids.push("milling-extraction");
+  const order = STAGES.flatMap((st) => st.processIds);
+  return ids.sort((a, b) => order.indexOf(a) - order.indexOf(b));
+}
+
 function profileLink(profile, locale) {
   return el("a", {
     href: `#/profile/${encodeURIComponent(profile.id)}?origin=${encodeURIComponent(ORIGIN)}`,
@@ -296,13 +309,11 @@ function routeBlock(route, { processById, profileById, locale }) {
   block.appendChild(el("h3", { id: `ptg-route-${route.id}` }, pick(route.title, locale)));
 
   const columns = el("div", { class: "ptg-route-columns" });
-  const stageOrder = STAGES.flatMap((st) => st.processIds);
   for (const p of profiles) {
     const col = el("section", { class: "ptg-route-column", "aria-label": localizedTitle("profile", p.id, p.title, locale) });
     col.appendChild(el("h4", {}, localizedTitle("profile", p.id, p.title, locale)));
     const steps = el("ol", { class: "ptg-route-steps" });
-    const ids = [...(p.processIds || [])].sort((a, b) => stageOrder.indexOf(a) - stageOrder.indexOf(b));
-    for (const pid of ids) {
+    for (const pid of routeProcessIds(p)) {
       const proc = processById.get(pid);
       if (proc) steps.appendChild(el("li", {}, fieldEs("process", proc.id, "name", locale) || proc.name));
     }
