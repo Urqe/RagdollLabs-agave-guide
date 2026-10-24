@@ -3592,3 +3592,18 @@ Headless Chromium against a local static server, at 375px (EN, ES) and
   placement.
 - **Native devices.** iPhone/iPad Safari and touch checks remain
   unverified.
+
+## Documentation — Release plan reduced to next steps (2026-10-24)
+
+On the owner's request, `RELEASE_PLAN.md` was rewritten from about 191 KB to about 27 KB so that it guides the next steps and stays small enough for AI models to read whole. Releases 1–26 and pairs 1–26 are recorded in this file, so the plan no longer repeats them.
+
+- **Kept, compacted:** current status and working rules; scope (with sotol now stated as an included non-agave relative, replacing the superseded foundation exclusion); data-model and map rules; the editorial and sourcing policy, including Pair 16's bottle-first and regional-voice rules; a list of easy-to-get-wrong content facts from the Pair 15 corrections; source starting points; implementation conventions from Pairs 23.1–26; release gates; and the maintenance contract.
+- **Carried forward:**
+  - Every open item of Pairs 27–29.
+  - Pair 15.6's running-app round trips, moved into Pair 29.
+  - Pair 17's reviews that need a person (Mexican Spanish editorial review, experienced-reader review, bottle copy review, beginner walkthrough), as their own section.
+  - The future designation layer and coverage backlog, under later ideas.
+- **New items found during the rewrite:**
+  - The stylesheet cache key in `index.html` had not been bumped since Pair 16, although Pairs 24–26 changed the CSS. It is now `agave-pair26-1`, and the plan says to bump it with CSS changes.
+  - The Montelobos and Del Maguey producer pages behind Pair 18's bottle-origin corrections are not registered in `sources.json`. This is logged under Pair 28.
+- **Not changed:** `START_HERE.md` is the original Release 1 prompt and tells agents not to read the plan. It is left for the owner to decide on.
