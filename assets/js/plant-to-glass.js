@@ -1,3 +1,4 @@
+import { educationalFigure } from "./educational-images.js";
 import { el, clear, safeLink } from "./dom-utils.js";
 import { ui, dimensionLabel } from "./presentation.js";
 import { localizedTitle, fieldEs } from "./editorial.js";
@@ -246,6 +247,8 @@ function stageCard(stage, index, { processById, profileById, sourceById, locale 
   item.appendChild(el("span", { class: "ptg-stage-number", "aria-hidden": "true" }, String(index + 1)));
   const body = el("div", { class: "ptg-stage-body" });
   body.appendChild(el("h3", {}, pick(stage.title, locale)));
+  if (["cook", "cooking", "roast"].includes(stage.id)) body.appendChild(educationalFigure("roast", locale));
+  if (["distill", "distillation", "still"].includes(stage.id)) body.appendChild(educationalFigure("distill", locale));
   body.appendChild(el("p", {}, pick(stage.text, locale)));
 
   const effects = el("ul", { class: "ptg-effects" });

@@ -1,3 +1,4 @@
+import { educationalFigure } from "./educational-images.js";
 import { el, clear, safeLink } from "./dom-utils.js";
 import { ui } from "./presentation.js";
 import { localizedTitle, fieldEs, commonNamesText, plantCultivation } from "./editorial.js";
@@ -58,6 +59,7 @@ export function renderPlantPage(container, { plant, plants, regions, traditions,
   section.appendChild(backLink("#/discover", t("plant.backToDiscover")));
   section.appendChild(el("p", { class: "eyebrow" }, t("plant.eyebrow")));
   section.appendChild(el("h1", { id: "plant-title" }, plant.species));
+  if (!plant.id.startsWith("dasylirion")) section.appendChild(educationalFigure("agave", locale));
 
   const identity = el("p", { class: "view-intro" }, plant.id.startsWith("dasylirion") ? t("plant.notAnAgave") : t("plant.isAnAgave"));
   section.appendChild(identity);
