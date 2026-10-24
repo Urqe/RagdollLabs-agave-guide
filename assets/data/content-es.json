@@ -24,8 +24,8 @@
   "profiles": {
     "tequila-blanco-valley-jalisco": {
       "title": "Tequila blanco, estilo Valle de Tequila",
-      "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. Las condiciones del valle — menor elevación, noches más cálidas — tienden a dar agaves más pequeños y herbáceos que los de Los Altos, así que los blancos del valle suelen saber más vegetales y salinos que dulces: el sabor de este suelo, una distinción de la que el valle se enorgullece.",
-      "description": "Un blanco (también llamado silver o plata) es un tequila que suele embotellarse sin crianza en roble — las reglas permiten un reposo breve por debajo del mínimo del reposado, pero el estilo se define por el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas.",
+      "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. El valle está más bajo que Los Altos y sus noches son más cálidas. Las condiciones del valle tienden a dar un agave más pequeño y herbáceo, y un blanco del valle suele saber más salino y verde que dulce. El valle está orgulloso de esa diferencia.",
+      "description": "Espera primero piña asada, luego cítricos, pimienta negra y notas verdes frescas. Un blanco (también llamado silver o plata) suele embotellarse sin crianza; las reglas permiten un reposo breve por debajo del mínimo del reposado, pero el estilo vive del propio agave destilado, sin nada de por medio.",
       "beginnerNote": "¿Nuevo en el tequila? Empieza aquí: ningún barril se interpone entre tú y el agave cocido, así que un blanco es la forma más clara de probar en la copa la tierra de cada productor.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
       "process": "Cocción al vapor (horno/autoclave), extracción con tahona o molino de rodillos, fermentación en tinas abiertas, doble destilación; normalmente sin crianza, aunque las reglas del blanco permiten un contacto breve con roble por debajo del mínimo de dos meses del reposado",
@@ -39,7 +39,7 @@
         ],
         "notice": "Qué notar primero: el corazón de agave asado, más salado que dulce, y el final limpio y picante."
       },
-      "whyItTastes": "El lado salino y terroso es lugar y método trabajando juntos: el agave del valle tiende a crecer más pequeño y más herbáceo que el del altiplano (una tendencia, no una regla), y los productores tradicionales del valle muelen la piña cocida con tahona de piedra y fermentan en tinas abiertas. Ni la edad ni el precio lo explican; el método y el lugar juntos moldean la copa, ninguno la decide solo.",
+      "whyItTastes": "Ese lado salino y terroso viene del lugar y del método juntos. El agave del valle tiende a crecer más pequeño y herbáceo que el de los Altos, y los productores tradicionales del valle muelen la piña cocida con tahona de piedra y fermentan en tinas abiertas. La edad y el precio no tienen nada que ver.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado)",
       "placePrecision": "pueblo (Tequila, Jalisco); aproximada"
     },
@@ -197,9 +197,9 @@
     },
     "tequila-reposado-valley-jalisco": {
       "title": "Tequila reposado, estilo Valle de Tequila",
-      "context": "El reposado es una clase legal del tequila: el destilado descansa en roble un mínimo de dos meses, sin máximo. En la práctica, la mayoría de los productores lo reposan de dos meses a un año. Este perfil describe un reposado tradicional del Valle de Tequila — el mismo estilo del blanco del valle, más roble. La tradición del valle dice que el reposo debe sazonar el agave, nunca enterrarlo; esa mesura es orgullo local.",
-      "description": "Un reposado es el mismo tequila que el blanco, reposado brevemente en roble: el agave permanece y se le unen vainilla y especias. En el estilo del valle el reposado suele ser breve — dos a doce meses — para no cubrir el carácter herbáceo del agave.",
-      "beginnerNote": "¿Nuevo en el reposado? Piénsalo como el mismo destilado que el blanco, reposado brevemente en roble: el agave permanece, la vainilla y las especias se suman.",
+      "context": "Es el blanco del valle después de un reposo en roble, hecho a la manera tradicional. El reposado es una clase legal: al menos dos meses en roble, sin máximo, y la mayoría de los productores lo reposan entre dos meses y un año. La tradición del valle dice que el reposo debe sazonar el agave, nunca enterrarlo, y aquí los productores se enorgullecen de esa mesura.",
+      "description": "Aquí el tequila conoce la madera. El carácter verde y especiado del blanco gana vainilla, caramelo y especias de repostería de la barrica, mientras el agave cocido sigue al centro: en un reposado tradicional el roble es el condimento, no el platillo, y las reseñas de la botella de ejemplo encuentran el agave todavía al frente. La edad no es una escalera: un reposado de dos meses puede saber más ligero que el blanco de otro productor, y más roble no es mejor.",
+      "beginnerNote": "¿Nuevo en el reposado? Piénsalo como el blanco después de un reposo corto en roble: el agave se queda, y la vainilla y las especias se le suman.",
       "category": "Tequila — destilado con Denominación de Origen propia; el reposado es una clase legal (reposado en roble, mínimo 2 meses)",
       "process": "Cocción al vapor, fermentación, doble destilación y reposo en barricas de roble (mínimo legal 2 meses; típicamente 2–12 meses)",
       "finish": "Medio, con especias suaves de madera y un final de caramelo y agave.",
@@ -212,15 +212,15 @@
         ],
         "notice": "Qué notar primero: cómo el roble suave se apoya bajo el agave sin cubrirlo."
       },
-      "whyItTastes": "La misma base del valle que el blanco, reposada en roble el mínimo legal de dos meses (típicamente 2–12): el roble suaviza el filo vegetal y aporta especias suaves, sin borrar el agave cocido debajo.",
+      "whyItTastes": "La misma base del valle que el blanco, reposada en roble al menos los dos meses legales (normalmente 2–12). El roble suaviza el filo verde y aporta especias suaves sin tapar el agave cocido de abajo.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado)",
       "placePrecision": "pueblo (Tequila, Jalisco); aproximada"
     },
     "tequila-anejo-valley-jalisco": {
       "title": "Tequila añejo, estilo Valle de Tequila",
-      "context": "El añejo es una clase legal del tequila: reposo en roble de al menos un año, en barricas de no más de 600 litros. El extra añejo (al menos tres años) existe como clase adicional. Este perfil describe un añejo tradicional del valle de unos 18 meses — muy por encima del mínimo de un año, que es la única referencia legal (la NOM fija un mínimo, no un rango). La práctica del valle favorece la mesura: el agave debe seguir hablando a través de un año de roble, y los mejores productores se aseguran de que así sea.",
-      "description": "Un añejo es tequila envejecido en roble un año o más: vainilla, fruta seca y especias de madera rodean el agave. Es la expresión más redonda y oscura del tequila, la más cercana al whisky en sensación, aunque sigue siendo tequila en esencia.",
-      "beginnerNote": "¿Nuevo en el añejo? Espera la expresión más redonda y oscura del tequila: vainilla de roble y fruta seca alrededor del agave — la más cercana al whisky en sentir, todavía tequila de corazón.",
+      "context": "Dale al tequila del valle un año o más en roble y tienes un añejo, una clase legal: al menos un año en barricas de no más de 600 litros, y más allá el extra añejo (tres años o más). Este es un añejo tradicional del valle de unos 18 meses; la NOM solo fija el mínimo, no un rango. En el valle se prefiere la mesura: el agave tiene que seguir hablando después de un año de roble, y los mejores productores se aseguran de que así sea.",
+      "description": "Un año o más de roble vuelve al tequila más oscuro, más redondo y de sabor más dulce: la barrica trae vainilla, fruta seca y algo cercano al cacao, mientras el filo verde y fresco del blanco se desvanece. Un buen añejo mantiene el agave cocido a la vista, y las reseñas de la botella de ejemplo encuentran justo ese equilibrio. «Más viejo es mejor» es mercadotecnia, no una regla: la madera depende del tipo de barrica, su tamaño, su edad y el clima, y mucha gente prefiere el blanco o el reposado.",
+      "beginnerNote": "¿Nuevo en el añejo? Espera el tequila en su versión más redonda y oscura: roble, vainilla y fruta seca alrededor del agave. Es lo más cercano al whisky en sensación, y sigue siendo tequila de corazón.",
       "category": "Tequila — destilado con Denominación de Origen propia; el añejo es una clase legal (envejecido en roble, mínimo 1 año)",
       "process": "Cocción al vapor, fermentación, doble destilación y envejecimiento en roble al menos un año (típicamente barricas ex-bourbon)",
       "finish": "Largo y redondo, con especias de roble, agave dulce y un final seco suave.",
@@ -233,15 +233,15 @@
         ],
         "notice": "Qué notar primero: el dulzor del roble envolviendo el agave cocido, y el final largo y suave."
       },
-      "whyItTastes": "Un año o más en roble (típicamente barricas ex-bourbon): la madera ahora habla claro — vainilla y caramelo sobre el agave — pero «más viejo es mejor» es marketing, no una regla de sabor.",
+      "whyItTastes": "Un año o más en roble, normalmente barricas que antes tuvieron bourbon. Ahora la madera habla claro: vainilla y caramelo sobre el agave.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado)",
       "placePrecision": "pueblo (Tequila, Jalisco); aproximada"
     },
     "tequila-cristalino-style": {
       "title": "Tequila cristalino, estilo",
-      "context": "El cristalino no es una clase legal: es un tequila envejecido (usualmente reposado o añejo) filtrado — típicamente con carbón de madera — para retirar el color que le dio la barrica. Casi todas las marcas grandes ya hacen uno. La categoría está en auge comercial y en pleno debate crítico: bartenders y escritores están divididos entre si es innovación o dilución del marketing de la tradición — y ese debate es parte de cómo México discute, con orgullo, sobre sus destilados.",
-      "description": "Un cristalino se elabora como reposado o añejo y luego se filtra con carbón hasta dejarlo claro: transparente como un blanco, más redondo como un añejo. Es objeto de debate honesto — algunos valoran la accesibilidad, otros prefieren los destilados sin filtrar.",
-      "beginnerNote": "¿Nuevo en el cristalino? Es un tequila envejecido con el color filtrado — claro como un blanco, más redondo como un añejo, y objeto de debate honesto.",
+      "context": "El cristalino parece un blanco, pero empieza como un tequila con crianza, casi siempre reposado o añejo, que se filtra (normalmente con carbón) para quitarle el color que le dio la barrica. No es una clase legal. Casi todas las marcas grandes ya tienen uno, y bartenders y escritores discuten si es innovación o una dilución de la tradición impulsada por la mercadotecnia. Esa discusión es parte de cómo México debate, con orgullo, lo que deben ser sus destilados.",
+      "description": "En la copa es transparente como un blanco, pero sabe a barrica suavizada: más redondo, más cremoso y a menudo más dulce que un blanco o que su base con crianza sin filtrar, con una acidez más amable y menos mordida de agave. El filtrado quita el color y, con él, algo de sabor, y lo que queda es suave y fácil a propósito. Los críticos señalan que la categoría se presta a usar aditivos que le devuelven dulzor y cuerpo, así que importan más el destilado base y el productor que el nombre.",
+      "beginnerNote": "¿Nuevo en el cristalino? Es un tequila con crianza al que le quitaron el color: transparente como un blanco, redondo como un añejo, y muy discutido.",
       "category": "Cristalino — un estilo de acabado/marketing sobre una clase legal, no una clase legal en sí; la divulgación de la base envejecida varía según la marca",
       "process": "Elaborado como reposado o añejo reposado en roble, luego filtrado con carbón hasta dejarlo claro; una elección de acabado, no una clase legal",
       "finish": "Suave y de corta a media duración; diseñado para beberse fácil.",
@@ -253,7 +253,7 @@
         ],
         "notice": "Qué notar primero: si el roble filtrado te parece suave o ligero — las opiniones difieren de verdad."
       },
-      "whyItTastes": "Elaborado como reposado o añejo reposado en roble y luego filtrado con carbón hasta dejarlo claro: el filtrado retira el color y, con él, algo de sabor. Lo que queda lleva influencia de madera pero parece blanco — una elección de acabado, no una clase legal.",
+      "whyItTastes": "Se hace como reposado o añejo en roble y luego se filtra con carbón hasta dejarlo transparente. Los productores dicen que el carácter de la crianza sobrevive al filtro; los reseñistas a menudo encuentran que una parte se va con el color. Lo que queda sabe a madera, pero parece blanco.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado)",
       "placePrecision": "región (Jalisco; valle o Altos según el productor); aproximada"
     },
@@ -302,9 +302,9 @@
     },
     "tequila-extra-anejo-highland-jalisco": {
       "title": "Tequila extra añejo, estilo de los altos (Jalisco)",
-      "context": "El extra añejo es la clase legal más reciente del tequila: mínimo tres años en barricas de roble de no más de 600 litros, agregado a la NOM en 2006. Existe porque los productores querían reconocimiento para los tequilas de largo reposo; la familia de El Tesoro lanzó su Paradiso en 1994, antes de que la clase existiera legalmente. Este perfil describe un extra añejo de los altos de cuatro a cinco años — muy por encima del mínimo de tres años, que es la única referencia legal (la NOM fija un mínimo, no un rango). El orgullo de los altos corre hondo aquí: los productores describen el agave de los Altos como más grande y más dulce, y algunos alteños sostienen que carga reposos largos en roble mejor que el agave del valle — la guía lo registra como visión local y tendencia, no como regla; las destilerías del valle también elaboran extra añejo.",
-      "description": "Un extra añejo es tequila envejecido tres años o más: el roble domina con chocolate, café y especias, y el agave de los altos — más dulce y frutal — sostiene la estructura. Es el tequila más cercano al whisky en carácter.",
-      "beginnerNote": "¿Nuevo en el extra añejo? Es el tequila en su versión más cercana al whisky: espera roble, chocolate y café — los buenos todavía saben a agave debajo.",
+      "context": "El extra añejo es la clase legal más nueva del tequila: al menos tres años en barricas de roble de no más de 600 litros, agregada a la NOM en 2006. Los productores la impulsaron porque ya reposaban tequila ese tiempo; la familia de El Tesoro sacó su Paradiso en 1994, antes de que la clase existiera. Este es un extra añejo de los Altos de cuatro a cinco años, muy por encima del mínimo de tres (la NOM fija un mínimo, no un rango). Los productores de Los Altos describen su agave como más grande y más dulce, y algunos alteños dicen que aguanta mejor los reposos largos que el del valle. Es una opinión local, y las destilerías del valle también hacen extra añejo.",
+      "description": "Tres años o más de roble llevan al tequila hacia el brandy: roble profundo, chocolate, café y fruta seca alrededor de un corazón de agave cocido. La tensión de esta clase es que muchos productores consideran demasiado lo que pasa de unos cuatro años, porque la madera puede ahogar el agave. Los mejores mantienen el agave a la vista, como encuentran las reseñas de la botella de ejemplo. «Más viejo es mejor» sigue siendo mercadotecnia, no una regla.",
+      "beginnerNote": "¿Nuevo en el extra añejo? Es el tequila en su versión más parecida al whisky: espera roble, chocolate y café. Los buenos todavía saben a agave debajo.",
       "category": "Tequila — destilado con Denominación de Origen propia; el extra añejo es una clase legal (envejecido en roble, mínimo 3 años, barricas de hasta 600 litros)",
       "process": "Cocción al vapor (o asado en piedra para algunos tradicionalistas), fermentación, doble destilación y envejecimiento de al menos tres años en roble (típicamente barricas americanas ex-bourbon)",
       "finish": "Largo y de roble, con chocolate, especias suaves y un final lento de agave.",
@@ -317,7 +317,7 @@
         ],
         "notice": "Qué notar primero: cuánto agave sobrevive al largo reposo — los mejores lo mantienen en el cuadro."
       },
-      "whyItTastes": "El agave del altiplano, de suelos rojos minerales, tiende a ser más dulce y floral que el del valle — una tendencia documentada, no un resultado garantizado del lugar; tres años o más en roble (típicamente ex-bourbon americano) empujan el destilado firmemente hacia la madera mientras la fruta del altiplano se mantiene debajo.",
+      "whyItTastes": "El agave de los Altos, de suelos rojos minerales, tiende a ser más dulce y floral que el del valle, aunque el lugar no lo garantiza. Tres años o más en roble, normalmente barricas americanas que tuvieron bourbon, llevan el destilado de lleno a la madera, con la fruta de los Altos aguantando debajo.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales de Los Altos)",
       "placePrecision": "municipio (Arandas, Los Altos; productor de ejemplo: La Alteña); aproximada"
     },
@@ -389,9 +389,9 @@
     },
     "tequila-blanco-highland-jalisco": {
       "title": "Tequila blanco de los Altos, estilo Los Altos (Jalisco)",
-      "context": "El blanco es la clase legal sin crianza del tequila — y los Altos (alrededor de Atotonilco el Alto y Arandas) lo leen de forma muy distinta al Valle de Tequila. Los suelos minerales ricos en hierro, la mayor elevación y las noches más frescas tienden a producir agaves más grandes y dulces, así que un blanco de los Altos suele inclinarse a lo brillante, afrutado y floral donde el valle tiende a lo terroso y salino. Es una distinción cultural y agronómica, no una clase legal — ambos son simplemente tequila blanco, y Los Altos presume con razón de la frutalidad de su tierra roja.",
-      "description": "La lectura alteña del tequila sin añejar: agave cocido más dulce con cítricos (piel de naranja, toronja), fruta tropical y de hueso, florales delicados y una especia suave, en un cuerpo más blando y redondo que el estilo del valle.",
-      "beginnerNote": "¿Nuevo en el tequila? Un blanco de los Altos suele describirse como punto de partida amable: suave, dulce y afrutado, y a menudo menos salino que un blanco del valle — aunque valle y altiplano se solapan y cada botella varía. Pruébalo junto al blanco del valle para saborear lo que el lugar puede hacer con la misma planta.",
+      "context": "Allá arriba, en Los Altos, alrededor de Atotonilco el Alto y Arandas, el blanco sabe distinto. La tierra roja rica en hierro, la altura y las noches más frescas tienden a dar agaves más grandes y dulces, así que un blanco de los Altos suele tirarle a lo brillante, afrutado y floral, donde el del valle tira a lo terroso y salino. Los dos son simplemente tequila blanco, la clase legal sin crianza; la diferencia es cultural y agronómica, y Los Altos presume con gusto la fruta de su tierra roja.",
+      "description": "Agave cocido más dulce, con cítricos (cáscara de naranja, toronja), fruta tropical y de hueso, flores delicadas y una especia suave, en un cuerpo más suave y redondo que el estilo del valle.",
+      "beginnerNote": "¿Nuevo en el tequila? Un blanco de los Altos suele ser un buen punto de partida: suave, dulce y afrutado, y casi siempre menos salino que un blanco del valle, aunque los dos se cruzan y cada botella cambia. Pruébalo junto al blanco del valle para sentir lo que el lugar le hace a la misma planta.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
       "process": "Cocido al vapor (o asado en piedra según algunos tradicionalistas), fermentado, doble destilado, sin añejar (blanco)",
       "finish": "Suave y afrutado, con un lento desvanecer de agave dulce y un leve repunte de pimienta al final.",
@@ -404,7 +404,7 @@
         ],
         "notice": "Qué notar primero: la fruta floral y más dulce del altiplano frente a la pimienta."
       },
-      "whyItTastes": "El agave de Los Altos crece a mayor elevación en suelos rojos ricos en hierro con noches más frescas, y los productores dicen que esas condiciones producen piñas más grandes y dulces — por eso el destilado sin añejar tiende a lo afrutado, floral y brillante en cítricos en vez de lo terroso. Nótese la reserva honesta: un panel de cata a ciegas encontró el patrón regional más débil de lo que sugiere el folclore, así que trátalo como una tendencia, nunca una garantía.",
+      "whyItTastes": "Los productores de Los Altos dicen que la altura, la tierra roja rica en hierro y las noches frescas dan piñas más grandes y dulces, y el destilado sin crianza tiende a lo afrutado, floral y brillante más que a lo terroso. Un panel de cata a ciegas encontró ese patrón regional más débil de lo que sugiere el folclore, así que tómalo como una tendencia.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales rojos de Los Altos)",
       "placePrecision": "pueblo (zona de Atotonilco el Alto, Los Altos); aproximada"
     },

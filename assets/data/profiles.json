@@ -6,8 +6,8 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Blanco tequila born in the town of Tequila and the valley that carries its name, from 100% blue agave grown in this same ground. Valley conditions — lower elevation, warmer nights — tend to grow smaller, more herbaceous agave than Los Altos, so valley blancos often read savoury and vegetal rather than sweet: the taste of this soil, a distinction the valley is proud of.",
-      "description": "A blanco (also called silver or plata) is tequila typically bottled without oak aging — the rules allow brief resting under the reposado minimum, but the style is defined by the distilled character of the cooked agave itself: roasted piña, citrus, pepper and fresh vegetal notes.",
+      "context": "Blanco tequila born in the town of Tequila and the valley that carries its name, from 100% blue agave grown in the same ground. The valley sits lower than Los Altos and its nights are warmer, so its agave tends to grow smaller and more herbaceous, and a valley blanco usually tastes more savoury and green than sweet. The valley is proud of that difference.",
+      "description": "Expect roasted piña first, then citrus, black pepper and fresh green notes. A blanco (also called silver or plata) is typically bottled without oak aging; the rules allow brief rests below the reposado minimum, but the style lives on the distilled agave itself, with nothing in the way.",
       "body": "light",
       "tasteNotes": [
         "cooked agave",
@@ -29,7 +29,7 @@
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
       "process": "Steam-cooked (oven/autoclave), tahona or roller-mill extraction, fermented in open tanks, double distilled; typically unaged, though blanco rules permit brief oak contact below the two-month reposado minimum",
       "category": "Tequila — spirit with its own Denomination of Origin; blanco is a legal class of tequila typically sold unaged, though the rules permit brief oak maturation below the reposado minimum",
-      "beginnerNote": "New to tequila? Start here: no barrel stands between you and the cooked agave, so a blanco is the clearest introduction to how each producer's land reads in the glass.",
+      "beginnerNote": "New to tequila? Start here: no barrel stands between you and the cooked agave, so a blanco is the clearest way to taste each producer's land in the glass.",
       "sensory": {
         "smoke": "none",
         "herbal": "high",
@@ -66,7 +66,7 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "The savoury, earthy edge is place plus method working together: valley agave tends to grow smaller and more herbaceous than highland agave (a tendency, not a rule), and traditional valley producers crush the cooked piña with a tahona stone wheel and ferment in open tanks. Age and price explain none of it; method and place together shape the glass, neither alone decides it."
+      "whyItTastes": "That savoury, earthy edge comes from place and method together. Valley agave tends to grow smaller and more herbaceous than highland agave, and traditional valley producers crush the cooked piña with a tahona stone wheel and ferment in open tanks. Age and price have nothing to do with it."
     },
     {
       "id": "mezcal-espadin-valles-centrales",
@@ -555,13 +555,13 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Reposado ('rested') is a legal tequila class: the spirit rests in oak for a minimum of two months, with no maximum. In practice most producers rest it two months to a year. This profile describes a traditionally made Tequila Valley reposado — the same style as the valley blanco, plus oak. Valley tradition holds that rest should season the agave, never bury it; that restraint is local pride.",
-      "description": "Reposado is where tequila first meets wood: the vegetal, peppery blanco character takes on vanilla, caramel and baking-spice notes from the barrel while the cooked agave stays at the centre. In traditionally made reposados the oak is a seasoning, not the dish — reviewers of the example bottle consistently note the agave remains forward. There is no universal age-to-flavour ladder: a 2-month reposado can read leaner than a blanco from another producer, and 'more oak' is not 'better'.",
+      "context": "This is the valley blanco after a rest in oak, made the traditional way. Reposado ('rested') is a legal class: at least two months in oak, with no maximum, and most producers rest it between two months and a year. Valley tradition says the rest should season the agave, never bury it, and producers here take pride in that restraint.",
+      "description": "Here tequila first meets wood. The green, peppery blanco character picks up vanilla, caramel and baking spice from the barrel, while the cooked agave stays at the centre: in a traditional reposado the oak is the seasoning, not the dish, and reviewers of the example bottle find the agave still forward. Age is no ladder: a two-month reposado can taste leaner than another producer's blanco, and more oak is not better.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
       "plantId": "agave-tequilana",
       "process": "Steam-cooked, fermented, double distilled, then rested in oak barrels (legal minimum 2 months; typically 2–12 months)",
       "category": "Tequila — spirit with its own Denomination of Origin; reposado is a legal class (oak-rested, 2-month minimum)",
-      "beginnerNote": "New to reposado? Think of it as the same spirit as blanco, briefly rested in oak: the agave stays, vanilla and spice join.",
+      "beginnerNote": "New to reposado? Think of it as the blanco after a short rest in oak: the agave stays, and vanilla and spice join it.",
       "aliases": [
         "reposado",
         "rested tequila"
@@ -618,7 +618,7 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "The same valley base as the blanco, rested in oak for the legal minimum of two months (typically 2–12): the oak softens the vegetal edge and adds gentle spice, without erasing the cooked agave underneath.",
+      "whyItTastes": "The same valley base as the blanco, rested in oak for at least the legal two months (usually 2–12). The oak softens the green edge and adds gentle spice without covering the cooked agave underneath.",
       "maturation": {
         "class": "reposado",
         "duration": "2 months to 1 year in oak"
@@ -630,13 +630,13 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Añejo ('aged') is a legal tequila class: oak rest of at least one year, in barrels of no more than 600 litres. Extra añejo (at least three years) exists as a further class. This profile describes a traditionally made Valley añejo of roughly 18 months — comfortably past the one-year minimum, which is the only legal mark (the NOM sets a minimum, not a range). Valley practice favors restraint: the agave should still speak through a year of oak, and the best producers make sure it does.",
-      "description": "A year or more of oak turns tequila darker, rounder and sweeter-perceived: the barrel contributes vanilla, dried fruit and cocoa-adjacent notes while the fresh vegetal edge of the blanco recedes. A well-made añejo keeps cooked agave in the frame rather than disappearing into wood; the example bottle's reviewers describe exactly that balance. 'Older is better' is marketing, not a rule — wood influence depends on barrel type, size, age and climate, and many drinkers prefer blanco or reposado.",
+      "context": "Give the valley's tequila a year or more in oak and you have añejo ('aged'), a legal class: at least one year in barrels of no more than 600 litres, with extra añejo (three years or more) beyond it. This one is a traditionally made valley añejo of around 18 months; the NOM sets only the minimum, not a range. Valley practice favours restraint: the agave should still speak through a year of oak, and the best producers make sure it does.",
+      "description": "A year or more of oak makes tequila darker, rounder and sweeter-tasting: the barrel brings vanilla, dried fruit and something close to cocoa, while the blanco's fresh green edge fades. A well-made añejo keeps cooked agave in the picture, and the example bottle's reviewers find exactly that balance. 'Older is better' is marketing, not a rule: wood depends on barrel type, size, age and climate, and plenty of drinkers prefer blanco or reposado.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
       "plantId": "agave-tequilana",
       "process": "Steam-cooked, fermented, double distilled, then aged in oak at least one year (typically ex-bourbon casks)",
       "category": "Tequila — spirit with its own Denomination of Origin; añejo is a legal class (oak-aged, 1-year minimum)",
-      "beginnerNote": "New to añejo? Expect the roundest, darkest tequila expression: oak-driven vanilla and dried fruit around the agave — closest to whiskey in feel, still tequila at heart.",
+      "beginnerNote": "New to añejo? Expect tequila at its roundest and darkest: oak, vanilla and dried fruit around the agave. It's the closest to whiskey in feel and still tequila at heart.",
       "aliases": [
         "anejo",
         "aged tequila",
@@ -693,7 +693,7 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "One year or more in oak (typically ex-bourbon casks): the wood now speaks clearly — vanilla and caramel over the agave — but 'older is better' is marketing, not a rule of flavour.",
+      "whyItTastes": "A year or more in oak, typically ex-bourbon casks. Now the wood speaks clearly, vanilla and caramel over the agave.",
       "maturation": {
         "class": "añejo",
         "duration": "1 to 3 years in oak"
@@ -705,13 +705,13 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Cristalino is not a legal class: it is an aged tequila (usually reposado or añejo) filtered — typically through wood charcoal — to remove the colour the barrel gave it. Nearly every major brand now makes one. The category is commercially booming and critically debated: bartenders and writers are divided over whether it is innovation or a marketing-driven dilution of tradition — and that debate is itself part of how Mexico argues, with pride, about its spirits.",
-      "description": "A cristalino looks like a blanco in the glass but carries softened barrel character: rounder, creamier and often sweeter-perceived than either a blanco or its unfiltered aged base, with gentler acidity and agave bite. Filtration removes colour and, with it, some flavour — what remains is by design smooth and approachable. The category is prone to additive use to restore sweetness and body, which critics flag; the base spirit and the producer matter more than the style name.",
+      "context": "Cristalino looks like a blanco but starts as an aged tequila, usually reposado or añejo, filtered (typically through charcoal) to remove the colour the barrel gave it. It isn't a legal class. Nearly every big brand now makes one, and bartenders and writers argue over whether it's innovation or a marketing-driven dilution of tradition. That argument is part of how Mexico debates, with pride, what its spirits should be.",
+      "description": "In the glass it's as clear as a blanco, but it tastes of softened barrel: rounder, creamier and often sweeter than either a blanco or its unfiltered aged base, with gentler acidity and less agave bite. Filtration removes colour and, with it, some flavour, and what's left is smooth and easy by design. Critics flag that the category is prone to additives that put back sweetness and body, so the base spirit and the producer matter more than the name.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated)",
       "plantId": "agave-tequilana",
       "process": "Made as oak-rested reposado or añejo, then charcoal-filtered clear; a finishing choice, not a legal class",
       "category": "Cristalino — a finishing/marketing style on top of a legal class, not a legal class itself; disclosure of the aged base varies by brand",
-      "beginnerNote": "New to cristalino? It is an aged tequila with the colour filtered out — clear like a blanco, rounder like an añejo, and the subject of honest debate.",
+      "beginnerNote": "New to cristalino? It's an aged tequila with the colour filtered out: clear like a blanco, rounder like an añejo, and much argued about.",
       "aliases": [
         "cristalino",
         "crystal tequila",
@@ -768,7 +768,7 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "Made as an oak-rested reposado or añejo and then charcoal-filtered clear: the filtration removes colour and, with it, some flavour. What remains is wood-influenced but visually blanco — a finishing choice, not a legal class.",
+      "whyItTastes": "It's made as an oak-rested reposado or añejo and then charcoal-filtered clear. Producers say the aged character survives the filter; reviewers often find some of it goes with the colour. What's left tastes of wood but looks like a blanco.",
       "maturation": {
         "class": "cristalino-style (filtered aged base)",
         "duration": "aged base (varies; typically añejo or extra añejo) then filtered"
@@ -923,13 +923,13 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Extra añejo ('extra aged') is the newest legal tequila class: a minimum of three years in oak barrels of no more than 600 litres, added to the NOM in 2006. It exists because producers wanted recognition for long-rested tequilas; El Tesoro's family released its Paradiso in 1994, before the class legally existed. This profile describes a highland extra añejo of four to five years — well past the three-year minimum, which is the only legal mark (the NOM sets a minimum, not a range). Highland pride runs deep here: growers describe highland agave as bigger and sweeter, and some alteños argue it carries long oak rests better than valley agave — the guide records that as a local view and a tendency, not a rule; valley distilleries also age extra añejo.",
-      "description": "Three-plus years of oak pushes tequila toward brandy territory: deep oak, chocolate, coffee and dried fruit around a cooked-agave core. The honest tension of this class is that many producers consider more than about four years excessive — wood can overwhelm the delicate agave — so the best extra añejos are those that keep agave in the frame, as the example bottle's reviewers note. 'Older is better' remains marketing, not a rule.",
+      "context": "Extra añejo ('extra aged') is tequila's newest legal class: at least three years in oak barrels of no more than 600 litres, added to the NOM in 2006. Producers pushed for it because they were already resting tequila that long; El Tesoro's family released its Paradiso in 1994, before the class existed. This one is a highland extra añejo of four to five years, well past the three-year minimum (the NOM sets a minimum, not a range). Growers in Los Altos describe their agave as bigger and sweeter, and some alteños say it carries long rests better than valley agave. That's a local view, and valley distilleries make extra añejo too.",
+      "description": "Three or more years of oak take tequila towards brandy: deep oak, chocolate, coffee and dried fruit around a cooked-agave core. The tension in this class is that many producers think anything past about four years is too much, because wood can drown the agave. The best keep agave in the picture, as the example bottle's reviewers find. 'Older is better' is still marketing, not a rule.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated; highland mineral soils)",
       "plantId": "agave-tequilana",
       "process": "Steam-cooked (or stone-roasted by some traditionalists), fermented, double distilled, then aged at least three years in oak (typically American ex-bourbon barrels)",
       "category": "Tequila — spirit with its own Denomination of Origin; extra añejo is a legal class (oak-aged, 3-year minimum, barrels up to 600 litres)",
-      "beginnerNote": "New to extra añejo? This is tequila at its most whiskey-adjacent: expect oak, chocolate and coffee — the good ones still taste of agave underneath.",
+      "beginnerNote": "New to extra añejo? This is tequila at its most whiskey-like: expect oak, chocolate and coffee. The good ones still taste of agave underneath.",
       "aliases": [
         "extra anejo",
         "extra añejo",
@@ -987,7 +987,7 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "Highland agave from red mineral soils tends to read sweeter and more floral than valley agave — a documented tendency, not a guaranteed outcome of place; three-plus years in (typically American ex-bourbon) oak pushes the spirit firmly into wood territory while the highland fruit holds on underneath.",
+      "whyItTastes": "Highland agave from red mineral soils tends to be sweeter and more floral than valley agave, though place doesn't guarantee it. Three or more years in oak, typically American ex-bourbon, pull the spirit firmly into wood, with the highland fruit holding on underneath.",
       "maturation": {
         "class": "extra añejo",
         "duration": "3 years or more in oak"
@@ -1214,13 +1214,13 @@
       "spirit": "tequila",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Blanco is the unaged legal class of tequila — and the highlands (Los Altos) around Atotonilco el Alto and Arandas read it very differently from the Tequila Valley. Red iron-rich mineral soils, higher elevation and cooler nights tend to grow bigger, sweeter agave, so a highland blanco often leans bright, fruity and floral where the valley leans earthy and savoury. This is a cultural and agronomic distinction, not a legal class — both are simply tequila blanco, and Los Altos takes visible pride in its red-earth fruitiness.",
-      "description": "The highland take on unaged tequila: sweeter cooked agave with citrus (orange peel, grapefruit), tropical and stone fruit, delicate florals and a gentle spice, in a softer, rounder body than the valley style.",
+      "context": "Up in Los Altos, around Atotonilco el Alto and Arandas, blanco tastes different. Red, iron-rich soils, higher ground and cooler nights tend to grow bigger, sweeter agave, so a highland blanco often leans bright, fruity and floral where the valley leans earthy and savoury. Both are simply tequila blanco, the unaged legal class; the difference is cultural and agronomic, and Los Altos is visibly proud of its red-earth fruit.",
+      "description": "Sweeter cooked agave with citrus (orange peel, grapefruit), tropical and stone fruit, delicate flowers and a gentle spice, in a softer, rounder body than the valley style.",
       "plant": "Agave tequilana Weber azul (blue weber agave, cultivated; highland red mineral soils)",
       "plantId": "agave-tequilana",
       "process": "Steam-cooked (or stone-roasted by some traditionalists), fermented, double distilled; typically unaged, though blanco rules permit brief oak contact below the two-month reposado minimum",
       "category": "Tequila — spirit with its own Denomination of Origin; blanco is a legal class of tequila typically sold unaged, though the rules permit brief oak maturation below the reposado minimum",
-      "beginnerNote": "New to tequila? A highland blanco is often described as a friendly starting point: soft, sweet and fruity, and often less savoury than a valley blanco — though valley and highland overlap, and individual bottles vary. Try it beside the valley blanco to taste what place can do to the same plant.",
+      "beginnerNote": "New to tequila? A highland blanco is often a friendly place to start: soft, sweet and fruity, and usually less savoury than a valley blanco, though the two overlap and bottles vary. Try it beside the valley blanco to taste what place can do with the same plant.",
       "aliases": [
         "highland blanco",
         "altos blanco",
@@ -1279,7 +1279,7 @@
       "plantIds": [
         "agave-tequilana"
       ],
-      "whyItTastes": "Los Altos agave grows at higher elevation in red iron-rich soils with cooler nights, and growers say those conditions produce bigger, sweeter piñas — so the unaged spirit leans fruity, floral and citrus-bright rather than earthy. Note the honest caveat: one blind tasting panel found the regional pattern weaker than folklore suggests, so treat this as a tendency, never a guarantee."
+      "whyItTastes": "Growers in Los Altos say the altitude, the red iron-rich soils and the cooler nights give bigger, sweeter piñas, and the unaged spirit leans fruity, floral and bright rather than earthy. One blind tasting panel found that regional pattern weaker than folklore suggests, so take it as a tendency."
     },
     {
       "id": "mezcal-papalote-montana-guerrero",
