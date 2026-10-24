@@ -369,6 +369,9 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
  * place. Falls back to the first enabled picker button.
  */
 function restoreFocus(pickerHolder, focusProfileId) {
+  // Pair 26: only after the reader acted on a picker button. A fresh visit
+  // leaves focus to the app, which lands the page at its heading.
+  if (!focusProfileId) return;
   if (focusProfileId) {
     const button = pickerHolder.querySelector(`[data-profile-id="${focusProfileId}"]`);
     if (button && !button.disabled) {

@@ -263,7 +263,7 @@ const STRINGS = {
     "profile.backPlantToGlass": "\u2190 Volver a De la planta a la copa",
     "profile.plantToGlassLink": "C\u00f3mo puede marcar la copa cada paso \u2192",
     "profile.moreBottles": "Ver m\u00e1s botellas de este estilo",
-    "learn.heading": "Aprende",
+    "learn.heading": "Aprender",
     "learn.intro": "Los agaves, los m\u00e9todos de producci\u00f3n y el vocabulario de etiqueta detr\u00e1s de los perfiles. Las descripciones educativas no garantizan sabor por geograf\u00eda, especie o edad; donde la bot\u00e1nica est\u00e1 genuinamente sin resolver, lo decimos en lugar de adivinar.",
     "learn.plants": "Los agaves",
     "learn.processes": "C\u00f3mo se hacen los destilados",

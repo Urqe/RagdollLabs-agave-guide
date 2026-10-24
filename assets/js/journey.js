@@ -246,13 +246,33 @@ export const JOURNEY_STEPS = [
       { href: "#/explore", label: { en: "Browse the styles", es: "Explora los estilos" }, reason: { en: "Every profile in the guide, searchable.", es: "Todos los perfiles de la guía, con búsqueda." } },
       { href: "#/discover", label: { en: "Plants & places", es: "Plantas y lugares" }, reason: { en: "Understand the plants, regions and traditions behind the styles.", es: "Entiende las plantas, regiones y tradiciones detrás de los estilos." } },
       { href: "#/catalogue", label: { en: "Look up a bottle", es: "Busca una botella" }, reason: { en: "The reviewed bottle catalogue.", es: "El catálogo de botellas con reseñas." } },
-      { href: "#/learn", label: { en: "Keep learning", es: "Sigue aprendiendo" }, reason: { en: "The seven chapters and reference material.", es: "Los siete capítulos y el material de referencia." } },
+      { href: "#/learn", label: { en: "Look it up in Learn", es: "Consulta en Aprender" }, reason: { en: "The seven chapters and reference material.", es: "Los siete capítulos y el material de referencia." } },
     ],
   },
 ];
 
 export function journeyStepById(id) {
   return JOURNEY_STEPS.find((s) => s.id === id) || null;
+}
+
+/**
+ * Pair 26: when a lesson sends the reader to a profile, the profile repeats
+ * the lesson's own reason for opening it, so the reader knows what to look
+ * for. Returns null when the lesson gives no reason for that profile.
+ */
+export function lessonNoteFor(lessonId, profileId, locale = null) {
+  const step = journeyStepById(lessonId);
+  if (!step) return null;
+  const lang = locale ? locale.get() : "en";
+  const example = (step.examples || []).find((e) => e.profileId === profileId);
+  const practice = step.practice && step.practice.exampleProfileId === profileId;
+  const reason = example ? example.reason : null;
+  if (!reason && !practice) return null;
+  const text = reason ? (reason[lang] || reason.en) : null;
+  return {
+    from: jt(locale, "lessonNoteFrom").replace("{title}", stepTitle(step, locale)),
+    text,
+  };
 }
 
 const STRINGS = {
@@ -304,6 +324,8 @@ const STRINGS = {
     reflectUnsure: "That's normal, and the most common answer on a first try. Differences are much easier to spot side by side, and step 4 does exactly that.",
     reflectUnsureLink: "Go to the comparison step",
     reflectNoStore: "Your answer stays on this page. Nothing is saved or sent.",
+    stepOf: "Step {n} of {total}",
+    lessonNoteFrom: "From the lesson \u201c{title}\u201d",
   },
   es: {
     hubTitle: "Tu primer destilado de agave",
@@ -312,7 +334,7 @@ const STRINGS = {
     outcomeLabel: "Qué te llevarás",
     outcomes: "Distinguirás aroma, sabor, cuerpo, calor del alcohol y final, harás una cata guiada con o sin copa, reconocerás cuatro rasgos de sabor y leerás una comparación preparada que muestra lo que cambia el reposo en madera.",
     referenceLabel: "¿Prefieres el material de referencia?",
-    referenceLink: "Ve directo a los capítulos de Aprende",
+    referenceLink: "Ve directo a los capítulos de Aprender",
     lessonBack: "← Volver al inicio del recorrido",
     next: "Siguiente paso: {title} →",
     previous: "← Anterior: {title}",
@@ -353,6 +375,8 @@ const STRINGS = {
     reflectUnsure: "Es normal, y es la respuesta más común en una primera cata. Las diferencias se notan mucho más lado a lado, y eso es justo lo que hace el paso 4.",
     reflectUnsureLink: "Ir al paso de comparación",
     reflectNoStore: "Tu respuesta se queda en esta página. No se guarda ni se envía nada.",
+    stepOf: "Paso {n} de {total}",
+    lessonNoteFrom: "De la lección «{title}»",
   },
 };
 
@@ -650,6 +674,9 @@ export function renderLesson(container, { lessonId, profiles, chapters = [], loc
     return section;
   }
   const index = JOURNEY_STEPS.indexOf(step);
+  // Pair 26: say where the reader is in the journey before the heading.
+  section.appendChild(el("p", { class: "eyebrow lesson-position" },
+    jt(locale, "stepOf").replace("{n}", String(index + 1)).replace("{total}", String(JOURNEY_STEPS.length))));
   section.appendChild(el("h2", { id: "start-heading" }, `${index + 1}. ${stepTitle(step, locale)}`));
   section.appendChild(el("p", { class: "view-intro lesson-idea" }, step.idea[lang] || step.idea.en));
 

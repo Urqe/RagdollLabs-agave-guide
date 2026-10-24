@@ -223,6 +223,8 @@ async function renderRoute(container, route) {
       state.savedBeforeLesson = persisted.length > 0 ? [...persisted] : null;
       state.lessonPreparedSelection = [...ids];
     }
+    // Pair 26: a picker focus belongs to the visit it happened in.
+    if (state.previousRouteName !== "compare") state.lastComparePick = null;
     setCompareSelection(ids);
     renderCompare(container, {
       profiles,
@@ -319,6 +321,7 @@ async function boot() {
   const root = document.getElementById("app");
   const main = el("main", { id: "main", class: "app-main", tabindex: "-1" });
   root.appendChild(main);
+  trackHeaderOffset();
   let onLocaleSwitch = null;
   wireThemeToggle();
   wireLocaleToggle(() => {
@@ -368,6 +371,7 @@ async function boot() {
   };
 
   let lastRouteKey = null;
+  let firstRender = true;
 
   const handleRoute = async () => {
     const route = parseHash(window.location.hash);
@@ -379,6 +383,7 @@ async function boot() {
       state.lastExploreState = state.exploreApi.snapshot();
     }
     state.intraExploreMove = intraExploreMove;
+    state.previousRouteName = (previousRouteKey || "").split(":")[0] || null;
     const routeKey = route.name + ":" + (route.params.profileId || route.params.stateId || route.params.compareIds || route.params.lessonId || (route.params.kind ? route.params.kind + ":" + (route.params.id || "") : "") || "");
     const routeChanged = routeKey !== lastRouteKey;
     lastRouteKey = routeKey;
@@ -391,7 +396,7 @@ async function boot() {
       link.textContent = locale.t("nav." + name);
       const active = name === route.name
         || (name === "explore" && (route.name === "state" || route.name === "profile"))
-        || (name === "discover" && route.name === "discover")
+        || (name === "discover" && ["discover", "plant", "tradition"].includes(route.name))
         || (name === "learn" && route.name === "plantToGlass");
       if (active) link.setAttribute("aria-current", "page");
       else link.removeAttribute("aria-current");
@@ -406,7 +411,6 @@ async function boot() {
     if (nav) nav.setAttribute("aria-label", ui(locale, "mainNav"));
     const prefs = document.querySelector(".header-preferences");
     if (prefs) prefs.setAttribute("aria-label", ui(locale, "preferences"));
-    document.title = ui(locale, "docTitle");
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", ui(locale, "docDescription"));
     const product = document.querySelector(".brand-product");
@@ -436,24 +440,62 @@ async function boot() {
       const candidates = [...main.querySelectorAll("details." + cls)];
       if (candidates[index]) candidates[index].open = true;
     }
+    const heading = main.querySelector("h1") || main.querySelector("h2");
+    // Pair 26: every page names itself in the browser tab and history.
+    document.title = route.name === "home" || !heading
+      ? ui(locale, "docTitle")
+      : `${heading.textContent.trim()} · ${ui(locale, "title")}`;
+
+    // A view that moved focus itself (a Learn deep link, a catalogue
+    // reveal, the compare picker) has already placed the reader; the app
+    // must not undo that by scrolling back to the top.
+    const viewPlacedFocus = main.contains(document.activeElement) && document.activeElement !== main;
     const restoreScroll = state.consumedRestore && typeof state.consumedRestore.scrollY === "number"
       ? state.consumedRestore.scrollY
       : null;
     if (restoreScroll != null) {
       window.scrollTo(0, restoreScroll);
-    } else if (routeChanged) {
-      // New pages start at their heading; same-route re-renders (e.g. the
-      // language toggle) keep the user's scroll position.
-      const heading = main.querySelector("h1, h2");
-      if (heading && typeof heading.scrollIntoView === "function") heading.scrollIntoView({ block: "start" });
+    } else if (routeChanged && !viewPlacedFocus) {
+      // Pair 26: new pages open at the top of their content. The landing
+      // target's scroll-margin matches the measured sticky-header height,
+      // so the back link and heading are never hidden under the header.
+      const landing = main.firstElementChild;
+      if (landing && typeof landing.scrollIntoView === "function") landing.scrollIntoView({ block: "start" });
     }
-    if (!main.contains(document.activeElement)) main.focus({ preventScroll: true });
+    if (routeChanged && !viewPlacedFocus && !firstRender && heading) {
+      // Pair 26: focus the page heading, so screen readers announce the
+      // new page; the initial load leaves focus where the browser put it.
+      if (!heading.hasAttribute("tabindex")) heading.setAttribute("tabindex", "-1");
+      heading.focus({ preventScroll: true });
+    } else if (!routeChanged && (!document.activeElement || document.activeElement === document.body)) {
+      // A same-route re-render detached the focused element: keep the
+      // reader inside the page. Focus outside main (the language or theme
+      // switch in the header) is left where it is.
+      main.focus({ preventScroll: true });
+    }
+    firstRender = false;
   };
 
   // Render the initial route without pushing a duplicate history entry.
   onLocaleSwitch = handleRoute;
   await handleRoute();
   startRouter(handleRoute);
+}
+
+/**
+ * Pair 26: keep --header-offset equal to the sticky header's real height
+ * (it wraps to two rows on phones), so landing and in-page jumps clear it.
+ */
+function trackHeaderOffset() {
+  const header = document.querySelector(".app-header");
+  if (!header) return;
+  const update = () => {
+    const height = Math.ceil(header.getBoundingClientRect().height);
+    if (height > 0) document.documentElement.style.setProperty("--header-offset", `${height}px`);
+  };
+  update();
+  if (typeof ResizeObserver === "function") new ResizeObserver(update).observe(header);
+  else window.addEventListener("resize", update);
 }
 
 /**

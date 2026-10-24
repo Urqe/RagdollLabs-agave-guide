@@ -32,7 +32,8 @@ es.set("es");
 test("pair 11: the two destinations carry distinct, consistent job labels", () => {
   const home = document.createElement("div");
   renderHome(home, { profiles, locale: en });
-  const labels = [...home.querySelectorAll(".welcome-action strong")].map((s) => s.textContent);
+  // Pair 26: Browse styles now sits inside the Explore path.
+  const labels = [...home.querySelectorAll(".welcome-paths a")].map((s) => s.textContent);
   assert.ok(labels.some((l) => /Browse styles/.test(l)), "browse styles action labeled");
   // The two navigation destinations carry distinct job labels in both
   // languages; a first-time visitor can tell "find a style" from
@@ -93,12 +94,15 @@ test("pair 11: map access is clearly labelled as browsing by place", async () =>
 test("pair 11: homepage actions align with the actual destinations", () => {
   const home = document.createElement("div");
   renderHome(home, { profiles, locale: en });
-  const actions = [...home.querySelectorAll(".welcome-action")].map((a) => a.getAttribute("href"));
-  assert.deepEqual(actions[0], "#/explore", "browse styles stays the main browsing action");
-  for (const href of ["#/explore", "#/compare", "#/start", "#/learn", "#/catalogue"]) {
+  // Pair 26: three paths (Start here, Explore, Look it up); every earlier
+  // destination stays one click away inside its path.
+  const actions = [...home.querySelectorAll(".welcome-paths a")].map((a) => a.getAttribute("href"));
+  assert.equal(home.querySelector(".welcome-action").getAttribute("href"), "#/start",
+    "the beginner path leads");
+  for (const href of ["#/explore", "#/compare", "#/start", "#/learn", "#/catalogue", "#/discover"]) {
     assert.ok(actions.includes(href), `${href} present on the homepage`);
   }
-  const labels = [...home.querySelectorAll(".welcome-action strong")].map((s) => s.textContent);
+  const labels = [...home.querySelectorAll(".welcome-action")].map((s) => s.textContent);
   assert.ok(labels.some((l) => /new to agave/i.test(l)), "the beginner action stays easy to find");
 });
 
