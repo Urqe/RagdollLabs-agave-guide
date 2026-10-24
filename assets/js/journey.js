@@ -1,3 +1,4 @@
+import { educationalFigure } from "./educational-images.js";
 import { el, clear } from "./dom-utils.js";
 import { navigateTo } from "./router.js";
 import { ui, renderHome } from "./presentation.js";
@@ -581,6 +582,7 @@ function guidedPractice(step, { profiles, locale }) {
   const profile = (profiles || []).find((p) => p.id === practice.exampleProfileId) || null;
   const wrapper = el("div", { class: "lesson-practice", role: "group", "aria-labelledby": "lesson-practice-heading" });
   wrapper.appendChild(el("h3", { id: "lesson-practice-heading", class: "sources-heading" }, practice.title[lang] || practice.title.en));
+  wrapper.appendChild(educationalFigure("tasting", locale));
 
   const modes = el("div", { class: "tasting-mode", role: "group", "aria-label": jt(locale, "modeLabel") });
   modes.appendChild(el("p", { class: "tasting-mode-label", "aria-hidden": "true" }, jt(locale, "modeLabel")));
