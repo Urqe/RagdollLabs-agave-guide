@@ -3226,8 +3226,12 @@ rendering was not re-verified in this pair.
 
 ### Deployed
 
-Commit ee00012 → this release on `main` via the existing GitHub Pages
-workflow (validate → stage → deploy). Live URL:
+Deployed commit: cc9495c on `main` (merge of PR
+<https://github.com/Urqe/RagdollLabs-agave-guide/pull/72>, content commit
+6064e58) via the existing GitHub Pages workflow (validate → stage →
+deploy), CI and Pages deployment both green. The live data files and
+compare.js were fetched from the deployed URL and verified to carry the
+corrected copy and logic. Live URL:
 <https://urqe.github.io/RagdollLabs-agave-guide/>
 
 ### Still unverified — no claim made
