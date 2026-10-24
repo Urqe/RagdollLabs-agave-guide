@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–23 are recorded as applied (pair 23 — Corrective editorial maintenance — applied 2026-10-24). **Pair 23.1 is the current execution priority**; it now opens with the editorial voice guide (`EDITORIAL_VOICE.md`) so that every later pair writes new text in the agreed voice. Section 8's learning roadmap (Pairs 24–29) follows, in the order set out in section 8 (reordered 2026-10-24 by the owner). This header is the single current pointer: status lines inside sections 4.3, 4.5 and 7 are historical. Execute only the owner-authorized pair.
+Post-roadmap pairs 8–23.1 are recorded as applied (Pair 23.1 — voice guide and Spanish localization — merged and deployed 2026-10-24). **Pair 24 (guided sensory tasting) is implemented on branch `pair-24-guided-tasting`, awaiting owner review; Pair 25 follows.** `EDITORIAL_VOICE.md` governs all new text. Section 8's learning roadmap (Pairs 24–29) follows, in the order set out in section 8 (reordered 2026-10-24 by the owner). This header is the single current pointer: status lines inside sections 4.3, 4.5 and 7 are historical. Execute only the owner-authorized pair.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -1113,7 +1113,7 @@ maintenance complete.**
 
 ### Pair 23.1 — Editorial and Spanish localization corrective maintenance (P0/P1)
 
-**Status:** implemented 2026-10-24 on branch `pair-23.1-voice-and-localization`; awaiting owner review before merge (see RELEASE_NOTES.md). Planned to execute before Pair 24. This is a bounded correction to applied Pair 23, not a new content/region expansion. Preserve factual sourcing, process-versus-tasting uncertainty, regional specificity, and all existing routes. No unrelated refactor.
+**Status:** applied 2026-10-24 — merged (PR #73, merge `1fb95ee`) and deployed to GitHub Pages; see RELEASE_NOTES.md. This is a bounded correction to applied Pair 23, not a new content/region expansion. Preserve factual sourcing, process-versus-tasting uncertainty, regional specificity, and all existing routes. No unrelated refactor.
 
 **Owner direction, 2026-10-24:** the voice is a knowledgeable person talking warmly about their own spirit, not an encyclopedia or a research text. It is not a fictional narrator: no invented personal history, memories or quotes. The voice guide below is written first, and every rewrite in this pair follows it.
 
@@ -1149,15 +1149,17 @@ Turn a source-backed reference into an intuitive beginner-to-enthusiast learning
 
 ### Pair 24 — Guided sensory tasting (feature, P0)
 
+**Status:** implemented 2026-10-24 on branch `pair-24-guided-tasting`; awaiting owner review (see RELEASE_NOTES.md).
+
 Build on `#/start`, its "How to taste" lesson and existing profile sensory vocabulary rather than creating a second learning syllabus.
 
-- [ ] Add a short guided practice sequence: prepare → aroma → sip/flavor → texture/body and alcohol warmth → finish → reflect/compare. Provide explicit no-glass/read-only mode using an existing representative style profile; actual tasting is optional.
-- [ ] Distinguish perceived sweetness from sugar content; alcohol burn from peppery flavor; smoke from other roasted aromas; body from flavor intensity; and smell from retronasal flavor.
-- [ ] Offer a small approachable sensory lexicon with everyday anchors (vegetal, herbal, earthy, mineral, floral, fruit, pepper, oak, cooked agave). Clarify that "mineral" is a subjective descriptor, not proof of dissolved rock or provenance.
-- [ ] Provide learner reflection prompts and optional choices rather than scored right/wrong palate tests. Do not imply that a beginner must find each prewritten note.
-- [ ] Link from starter lesson to a worked style example, retain lesson-origin context and a clear next step. Avoid durable tracking unless its value is demonstrated; no personal tasting data collection.
-- [ ] Show each sensory dimension once on profiles (added 2026-10-24). The valley blanco page shows "Body: Low" in the grid and "Light body" below it. Use the body scale words (light/medium/full) in the grid and drop the duplicate, so body is taught as texture, not as intensity.
-- [ ] Test EN/ES text, navigation/direct links, optional/no-glass paths, focus, and narrow-screen overflow. A non-drinker must be able to complete every lesson.
+- [x] Add a short guided practice sequence: prepare → aroma → sip/flavor → texture/body and alcohol warmth → finish → reflect/compare. Provide explicit no-glass/read-only mode using an existing representative style profile; actual tasting is optional.
+- [x] Distinguish perceived sweetness from sugar content; alcohol burn from peppery flavor; smoke from other roasted aromas; body from flavor intensity; and smell from retronasal flavor.
+- [x] Offer a small approachable sensory lexicon with everyday anchors (vegetal, herbal, earthy, mineral, floral, fruit, pepper, oak, cooked agave). Clarify that "mineral" is a subjective descriptor, not proof of dissolved rock or provenance.
+- [x] Provide learner reflection prompts and optional choices rather than scored right/wrong palate tests. Do not imply that a beginner must find each prewritten note.
+- [x] Link from starter lesson to a worked style example, retain lesson-origin context and a clear next step. Avoid durable tracking unless its value is demonstrated; no personal tasting data collection.
+- [x] Show each sensory dimension once on profiles (added 2026-10-24). The valley blanco page shows "Body: Low" in the grid and "Light body" below it. Use the body scale words (light/medium/full) in the grid and drop the duplicate, so body is taught as texture, not as intensity.
+- [x] Test EN/ES text, navigation/direct links, optional/no-glass paths, focus, and narrow-screen overflow. A non-drinker must be able to complete every lesson.
 - **Acceptance:** a first-time reader can describe aroma, taste, mouthfeel, finish and alcohol warmth and complete a simulated tasting without possessing a bottle.
 
 ### Pair 25 — Production → sensory explanation (feature, P0)
@@ -1197,6 +1199,7 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 - [ ] Review English and Mexican Spanish together; cultural warmth should be natural rather than literal translation. Keep legal terms, denomination status and composition precision.
 - [ ] Audit against `EDITORIAL_VOICE.md` (the guide now exists from Pair 23.1; this pair applies it to the remaining 18 profiles, bottles, Learn and Discover, rather than defining the voice). Include the generated suggestion text: "Explore next" repeats the same `sharesWhy` sentence word for word for every suggestion; vary it by what actually differs.
 - [ ] Localize profile coordinate precision labels (added 2026-10-24, found in Pair 23.1): `placeCoords.precision` renders in English on Spanish profile pages.
+- [ ] Fix the systemic "sabroso" for savoury and "lima" for lime in Spanish (added 2026-10-24, found in Pair 24). About 20 strings in `content-es.json` and the mood label "Especiado y sabroso" in `locale.js` use sabroso (tasty) for savoury; several use lima where Mexican Spanish says limón. Pair 23.1/24 fixed only the surfaces they touched. Check the chapter line "(lima, no siempre limón)" in context before changing it.
 - [ ] Align English spelling to British (added 2026-10-24): the edition uses the UK flag, but "Flavour" (filters, Learn) and "Flavor" (profiles) are mixed.
 - [ ] Correct source classification (added 2026-10-24). Diario Oficial de la Federación declarations, NOM-070, the Sonora state bacanora page, INIFAP and CONAFOR are tagged `kind: "style"`; add or use a `regulator`/official kind so legal claims visibly rest on official sources. Remove the duplicate Difford's URL and replace the Facebook-page producer link with the brand's own site where one exists. Note the weight on a single review site (about 30 Mezcal Reviews entries) and prefer an independent second source when touching those bottles.
 - **Acceptance:** profiles consistently answer "what will this likely taste like, why might it, what distinguishes it?" before methodology; no unsupported region-wide bottle extrapolation.

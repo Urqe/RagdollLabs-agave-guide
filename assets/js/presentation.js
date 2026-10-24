@@ -27,6 +27,7 @@ const COPY = {
     sensory: "Character in the glass",
     body: "Body", notes: "Typical notes", smoke: "Smoke", finish: "Finish",
     light: "Light body", medium: "Medium body", full: "Full body",
+    bodyLevelLight: "Light", bodyLevelMedium: "Medium", bodyLevelFull: "Full",
     sources: "Sources & references",
     legal: "Legal category", plant: "Plant", process: "Production",
     compareThis: "Compare this style", choices: "Your comparison",
@@ -143,6 +144,7 @@ const COPY = {
     sensory: "Carácter en la copa",
     body: "Cuerpo", notes: "Notas típicas", smoke: "Humo", finish: "Final",
     light: "Cuerpo ligero", medium: "Cuerpo medio", full: "Cuerpo pleno",
+    bodyLevelLight: "Ligero", bodyLevelMedium: "Medio", bodyLevelFull: "Pleno",
     sources: "Fuentes y referencias",
     legal: "Categoría legal", plant: "Planta", process: "Elaboración",
     compareThis: "Comparar este estilo", choices: "Tu comparación",
@@ -321,8 +323,14 @@ export function sensoryOverview(profile, locale) {
     const level = levelOf(profile, key);
     const row = el("div", { class: "sensory-row" });
     row.appendChild(el("dt", {}, ui(locale, keys[key] || key)));
-    const value = el("dd");
-    value.appendChild(el("span", { class: "sensory-value" }, ui(locale, level === "medium" ? "mediumLevel" : level || "unknown")));
+    // Pair 24: body is a texture, so it reads Light / Medium / Full (the
+    // profile's own body word), not Low / Medium / High, and it is shown
+    // only here rather than a second time in the facts list.
+    const bodyWord = key === "bodyLevel" && ["light", "medium", "full"].includes(profile.body)
+      ? ui(locale, "bodyLevel" + profile.body.replace(/^./, (c) => c.toUpperCase()))
+      : null;
+    const value = el("dd", key === "bodyLevel" ? { class: "profile-body" } : {});
+    value.appendChild(el("span", { class: "sensory-value" }, bodyWord || ui(locale, level === "medium" ? "mediumLevel" : level || "unknown")));
     const track = el("span", { class: "sensory-track", "aria-hidden": "true" });
     track.appendChild(el("span", { class: "sensory-fill level-" + (level || "unknown") }));
     value.appendChild(track);

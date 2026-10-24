@@ -29,19 +29,22 @@ const en = createLocale();
 const es = createLocale();
 es.set("es");
 
-test("pair 16: how-to-taste teaches a usable four-step practical sequence in both languages", () => {
+// Pair 24 extended the four-step sequence to the six-step guided tasting
+// (sip and texture became separate steps; reflect was added). The content
+// checks below are unchanged.
+test("pair 16: how-to-taste teaches a usable practical sequence in both languages", () => {
   for (const locale of [en, es]) {
     const container = document.createElement("div");
     renderLesson(container, { lessonId: "how-to-taste", profiles, chapters, locale });
     const practice = container.querySelector(".lesson-practice");
     assert.ok(practice, `${locale.get()}: practical sequence renders in the reading flow`);
     const steps = [...practice.querySelectorAll(".lesson-practice-step")];
-    assert.equal(steps.length, 4, `${locale.get()}: four practical steps`);
+    assert.equal(steps.length, 6, `${locale.get()}: six guided steps`);
     assert.ok(!container.querySelector("details.lesson-practice"),
       `${locale.get()}: the technique is not buried in a collapsed paragraph`);
     const headings = steps.map((s) => s.querySelector("strong").textContent);
     if (locale.get() === "en") {
-      assert.deepEqual(headings, ["Prepare", "Smell, gently", "Sip and notice the texture", "Follow the finish"]);
+      assert.deepEqual(headings, ["Prepare", "Smell, gently", "Sip", "Texture and warmth", "Follow the finish", "Reflect"]);
       assert.ok(practice.textContent.includes("no special stemware"));
       assert.ok(practice.textContent.includes("swirl"));
       assert.ok(practice.textContent.includes("warmth"));
@@ -66,8 +69,8 @@ test("pair 16: hub outcomes promise a tasting sequence, not only vocabulary", ()
     renderStartHub(container, { profiles, locale });
     const outcome = container.querySelector(".journey-outcome").textContent;
     assert.ok(locale.get() === "en"
-      ? /smell, sip, mouthfeel, finish/.test(outcome)
-      : /olfato, sorbo, textura, final/.test(outcome),
+      ? /aroma, flavour, body, alcohol warmth and finish/.test(outcome) && /guided tasting/.test(outcome)
+      : /aroma, sabor, cuerpo, calor del alcohol y final/.test(outcome) && /cata guiada/.test(outcome),
       `${locale.get()}: the outcome names the taught sequence`);
     assert.ok(!/no purchase, no glass, no account, no quiz/.test(outcome),
       `${locale.get()}: the repeated reassurance list is gone`);

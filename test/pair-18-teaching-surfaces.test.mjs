@@ -122,8 +122,8 @@ test("P18-4: the profile view renders the notice line (EN and ES)", async () => 
 test("P18-4: neat is defined at first use and finish means lingering character", async () => {
   const { JOURNEY_STEPS } = await import("../assets/js/journey.js");
   const lesson = JOURNEY_STEPS.find((l) => l.id === "how-to-taste");
-  const prepare = lesson.practice.steps[0];
-  const finish = lesson.practice.steps[3];
+  const prepare = lesson.practice.steps.find((s) => s.id === "prepare");
+  const finish = lesson.practice.steps.find((s) => s.id === "finish");
   assert.ok(prepare.text.en.includes("neat — that means without ice or mixers"),
     "the EN lesson defines neat at first use");
   assert.ok(prepare.text.es.includes("sin hielo ni mezcladores"),
@@ -132,7 +132,7 @@ test("P18-4: neat is defined at first use and finish means lingering character",
     "the EN finish step explains character as well as duration");
   assert.ok(finish.text.es.includes("tanto cuánto dura como a qué sabe mientras se apaga"),
     "the ES finish step explains character as well as duration");
-  assert.equal(lesson.practice.steps.length, 4, "the four-step lesson is preserved");
+  assert.equal(lesson.practice.steps.length, 6, "the Pair 24 six-step guided lesson keeps these definitions");
   const choosing = chapterById.get("choosing-and-enjoying");
   const serving = choosing.blocks.find((b) => b.text.startsWith("Serving is simple"));
   assert.ok(serving.text.includes("Neat — without ice or mixers —"),
