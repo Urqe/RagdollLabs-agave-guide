@@ -956,9 +956,9 @@
       },
       "exampleBottleId": "el-tesoro-extra-anejo",
       "placeCoords": {
-        "lat": 20.9,
-        "lon": -103.84,
-        "precision": "highlands (Los Altos, near Arandas; example producer La Alteña); approximate"
+        "lat": 20.71,
+        "lon": -102.35,
+        "precision": "municipality (Arandas, Los Altos; example producer La Alteña); approximate"
       },
       "pairing": {
         "serving": "Sipped neat after dinner, in a snifter-style glass (editorial suggestion).",
@@ -1248,8 +1248,8 @@
       },
       "exampleBottleId": "don-julio-blanco",
       "placeCoords": {
-        "lat": 20.06,
-        "lon": -102.1,
+        "lat": 20.55,
+        "lon": -102.51,
         "precision": "town (Atotonilco el Alto area, Los Altos); approximate"
       },
       "pairing": {

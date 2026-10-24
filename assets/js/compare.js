@@ -89,6 +89,8 @@ export function flavorMoods(profile) {
  * documented overlap, ties break by profile id, and self-links and
  * duplicate destinations are excluded.
  */
+const TEXTURE_KEYS = new Set(["bodyLevel"]);
+
 export function ifYouLikeThis(anchor, candidates, { maxSuggestions = 2 } = {}) {
   const qualified = [];
   const seen = new Set();
@@ -103,7 +105,11 @@ export function ifYouLikeThis(anchor, candidates, { maxSuggestions = 2 } = {}) {
         (LEVEL_ORDER[a] >= LEVEL_ORDER.medium ? strongShared : modestShared).push(key);
       }
     }
-    if (strongShared.length > 0) {
+    // Pair 23.1: body is texture, not flavour. A candidate whose only strong
+    // match is body would be presented as "a similar read in the glass"
+    // with no flavour in common, so it does not qualify.
+    const flavourShared = strongShared.filter((key) => !TEXTURE_KEYS.has(key));
+    if (flavourShared.length > 0) {
       seen.add(candidate.id);
       qualified.push({
         profile: candidate,
@@ -166,11 +172,12 @@ export function comparisonPerspectives(profiles) {
     // change together, and the perspective says so instead of implying a
     // single-variable comparison.
     if (sameMaturationClass && sameMethodSet) {
-      out.push({ id: "samePlantDifferentRegion", plant, plantProfileId: profiles[0].id, evidence: "plantIds" });
+      out.push({ id: "samePlantDifferentRegion", plant, plantId: sharedPlantIds[0] || null, plantProfileId: profiles[0].id, evidence: "plantIds" });
     } else {
       out.push({
         id: "samePlantDifferentRegionAndClass",
         plant,
+        plantId: sharedPlantIds[0] || null,
         plantProfileId: profiles[0].id,
         evidence: "plantIds",
         sameMaturationClass,

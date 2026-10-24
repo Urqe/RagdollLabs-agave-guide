@@ -1,6 +1,6 @@
 import { el, clear, safeLink } from "./dom-utils.js";
 import { ui } from "./presentation.js";
-import { localizedTitle, fieldEs } from "./editorial.js";
+import { localizedTitle, fieldEs, commonNamesText, plantCultivation } from "./editorial.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 import { tasteNote } from "./taste-notes.js";
 
@@ -63,11 +63,11 @@ export function renderPlantPage(container, { plant, plants, regions, traditions,
   section.appendChild(identity);
 
   section.appendChild(el("h2", {}, t("plant.atAGlance")));
-  section.appendChild(el("p", { class: "view-intro" }, fieldEs("plant", plant.id, "atAGlance", locale) || plant.atAGlance || plant.cultivation));
+  section.appendChild(el("p", { class: "view-intro" }, fieldEs("plant", plant.id, "atAGlance", locale) || plant.atAGlance || plantCultivation(plant, locale)));
 
   const alsoKnown = el("p", { class: "learn-names" });
   alsoKnown.appendChild(document.createTextNode(t("plant.alsoKnownAs") + " "));
-  alsoKnown.appendChild(document.createTextNode((plant.commonNames || []).map((n) => `${n.name} (${n.region})`).join(", ")));
+  alsoKnown.appendChild(document.createTextNode(commonNamesText(plant, locale, ", ")));
   section.appendChild(alsoKnown);
 
   section.appendChild(el("h2", {}, t("plant.whereItGrows")));
@@ -86,8 +86,8 @@ export function renderPlantPage(container, { plant, plants, regions, traditions,
   }
 
   section.appendChild(el("h2", {}, t("plant.harvestProduction")));
-  section.appendChild(el("p", {}, fieldEs("plant", plant.id, "harvestProduction", locale) || plant.harvestProduction || plant.cultivation));
-  section.appendChild(el("p", { class: "editorial-note" }, t("plant.cultivationLabel") + ": " + plant.cultivation));
+  section.appendChild(el("p", {}, fieldEs("plant", plant.id, "harvestProduction", locale) || plant.harvestProduction || plantCultivation(plant, locale)));
+  section.appendChild(el("p", { class: "editorial-note" }, t("plant.cultivationLabel") + ": " + plantCultivation(plant, locale)));
   if (plant.uncertainty) section.appendChild(el("p", { class: "editorial-note" }, fieldEs("plant", plant.id, "uncertainty", locale) || plant.uncertainty));
 
   section.appendChild(el("h2", {}, t("plant.sensoryTendencies")));

@@ -71,6 +71,33 @@ export function sourceKindLabel(kind, locale, uiFn) {
   return uiFn(locale, map[kind] || "kind" + (kind || "").replace(/^./, (c) => c.toUpperCase()));
 }
 
+/**
+ * Localized label for where a plant's common name is used. The labels are
+ * authored once in plants.json (English) and translated once in the
+ * content-es.json `commonNameRegions` map, keyed by the English label, so
+ * every view shows the same Spanish wording. validate.mjs fails when a
+ * label has no translation.
+ */
+export function commonNameRegion(region, locale = null) {
+  if (!region || !locale || locale.get() !== "es") return region;
+  const map = contentEs.commonNameRegions;
+  const value = map && map[region];
+  return typeof value === "string" && value.trim() ? value : region;
+}
+
+/** "name (region)" list for a plant's common names, localized regions. */
+export function commonNamesText(plant, locale = null, separator = ", ") {
+  return ((plant && plant.commonNames) || [])
+    .map((n) => (n.region ? `${n.name} (${commonNameRegion(n.region, locale)})` : n.name))
+    .join(separator);
+}
+
+/** Localized plant cultivation note (falls back to the English field). */
+export function plantCultivation(plant, locale = null) {
+  if (!plant) return "";
+  return fieldEs("plant", plant.id, "cultivation", locale) || plant.cultivation || "";
+}
+
 /** Localized display title for an entity (falls back to the English title). */
 export function localizedTitle(entity, id, englishTitle, locale = null) {
   if (!locale || locale.get() !== "es") return englishTitle;

@@ -481,6 +481,24 @@ for (const plant of plants) {
     fail(`content-es.json: plant ${plant.id} cultivation missing Spanish translation`);
   }
 }
+// Pair 23.1: one localization contract for common-name region labels.
+// Every label in plants.json needs a Spanish entry, and the map carries no
+// stale keys that no plant uses any more.
+const esRegionLabels = contentEsAll.commonNameRegions || {};
+const usedRegionLabels = new Set();
+for (const plant of plants) {
+  for (const n of plant.commonNames || []) {
+    if (!n.region) continue;
+    usedRegionLabels.add(n.region);
+    const es = esRegionLabels[n.region];
+    if (typeof es !== "string" || !es.trim()) {
+      fail(`content-es.json: commonNameRegions missing Spanish label for "${n.region}" (plant ${plant.id})`);
+    }
+  }
+}
+for (const key of Object.keys(esRegionLabels)) {
+  if (!usedRegionLabels.has(key)) fail(`content-es.json: commonNameRegions key "${key}" is not used by any plant`);
+}
 const esProcesses = contentEsAll.processes || {};
 for (const proc of processes) {
   const entry = esProcesses[proc.id];
@@ -505,6 +523,22 @@ for (const p of profiles) {
   const esEntry = (contentEsAll.profiles || {})[p.id];
   if (!esEntry || typeof esEntry.whyItTastes !== "string" || !esEntry.whyItTastes.trim()) {
     fail(`content-es.json: profile ${p.id} whyItTastes missing Spanish translation`);
+  }
+}
+// Pair 23.1: a Spanish profile entry may only carry fields a renderer reads.
+// Taste notes are localized through the ES_NOTES vocabulary in
+// taste-notes.js (one contract), so a freeform `tasteNotes` string here
+// would be dead data that looks like a published translation.
+const RENDERED_ES_PROFILE_FIELDS = new Set([
+  "title", "context", "description", "beginnerNote", "category", "plant",
+  "process", "smoke", "finish", "pairing", "whyItTastes",
+]);
+for (const [id, entry] of Object.entries(contentEsAll.profiles || {})) {
+  if (!profiles.some((p) => p.id === id)) fail(`content-es.json: profile entry "${id}" has no matching profile`);
+  for (const key of Object.keys(entry || {})) {
+    if (!RENDERED_ES_PROFILE_FIELDS.has(key)) {
+      fail(`content-es.json: profile ${id} field "${key}" is not rendered by any view (use the ES_NOTES vocabulary for taste notes)`);
+    }
   }
 }
 for (const plant of plants) {

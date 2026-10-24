@@ -6,7 +6,7 @@ function termSlug(term) {
     .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 import { ui } from "./presentation.js";
-import { sourceKindLabel, fieldEs } from "./editorial.js";
+import { sourceKindLabel, fieldEs, commonNamesText, plantCultivation } from "./editorial.js";
 import { localizedTitle } from "./editorial.js";
 import { SPIRIT_LABELS } from "./spirit-labels.js";
 
@@ -188,10 +188,10 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
     card.appendChild(el("h4", { id: `plant-${plant.id}` }, plant.species));
     const names = el("p", { class: "learn-names" });
     names.appendChild(document.createTextNode(
-      t("learn.commonNames") + " " + plant.commonNames.map((n) => `${n.name} (${n.region})`).join(", ")
+      t("learn.commonNames") + " " + commonNamesText(plant, locale, ", ")
     ));
     card.appendChild(names);
-    card.appendChild(el("p", { class: "learn-cultivation" }, `${t("learn.harvest")} ${fieldEs("plant", plant.id, "cultivation", locale) || plant.cultivation}.`));
+    card.appendChild(el("p", { class: "learn-cultivation" }, `${t("learn.harvest")} ${plantCultivation(plant, locale)}.`));
     if (plant.uncertainty) {
       card.appendChild(el("p", { class: "editorial-note" }, `${t("learn.uncertainty")} ${fieldEs("plant", plant.id, "uncertainty", locale) || plant.uncertainty}`));
     }
@@ -199,7 +199,7 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
     for (const pid of plant.profileIds || []) {
       const profile = profiles.find((p) => p.id === pid);
       if (profile) {
-        links.appendChild(el("a", { href: `#/profile/${encodeURIComponent(profile.id)}`, class: "catalogue-profile-link" }, `${profile.title} → `));
+        links.appendChild(el("a", { href: `#/profile/${encodeURIComponent(profile.id)}`, class: "catalogue-profile-link" }, `${localizedTitle("profile", profile.id, profile.title, locale)} → `));
       }
     }
     card.appendChild(links);
@@ -217,7 +217,7 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
     if (usedBy.length > 0) {
       const line = el("p", { class: "learn-usedby" }, `${t("learn.seenIn")} `);
       for (const pr of usedBy.slice(0, 4)) {
-        line.appendChild(el("a", { href: `#/profile/${encodeURIComponent(pr.id)}`, class: "catalogue-profile-link" }, `${pr.title}; `));
+        line.appendChild(el("a", { href: `#/profile/${encodeURIComponent(pr.id)}`, class: "catalogue-profile-link" }, `${localizedTitle("profile", pr.id, pr.title, locale)}; `));
       }
       card.appendChild(line);
     }
@@ -238,7 +238,7 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
     if (related.length > 0) {
       const line = el("p", { class: "learn-usedby" }, `${t("learn.relatesTo")} `);
       for (const pr of related.slice(0, 4)) {
-        line.appendChild(el("a", { href: `#/profile/${encodeURIComponent(pr.id)}`, class: "catalogue-profile-link" }, `${pr.title}; `));
+        line.appendChild(el("a", { href: `#/profile/${encodeURIComponent(pr.id)}`, class: "catalogue-profile-link" }, `${localizedTitle("profile", pr.id, pr.title, locale)}; `));
       }
       card.appendChild(line);
     }

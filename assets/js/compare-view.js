@@ -130,7 +130,18 @@ function levelCell(profile, dimKey, t) {
  * missing-data notes. Selections live in the route (#/compare/a,b,c) so
  * they survive reload, sharing and Back/Forward.
  */
-export function renderCompare(container, { profiles, compareIds, onSelectionChange, focusProfileId = null, keepPickerQuery = "", locale = null, from = null }) {
+/**
+ * Pair 23.1: the same-plant perspective names the shared plant by its
+ * canonical species from plants.json. The profile's full `plant` string
+ * carries its own parenthetical (cultivation, local names), which nested
+ * inside "Same plant (...)" produced double parentheses.
+ */
+function sharedPlantName(perspective, plants) {
+  const record = (plants || []).find((p) => p.id === perspective.plantId);
+  return (record && record.species) || perspective.plant;
+}
+
+export function renderCompare(container, { profiles, plants = [], compareIds, onSelectionChange, focusProfileId = null, keepPickerQuery = "", locale = null, from = null }) {
   clear(container);
   const byId = new Map(profiles.map((p) => [p.id, p]));
   const parsedIds = parseIds(compareIds);
@@ -260,9 +271,9 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
       const item = el("li", {});
       let text = "";
       if (perspective.id === "samePlantDifferentRegion") {
-        text = t("compare.perspective.samePlant").replace("{plant}", (perspective.plantProfileId ? fieldEs("profile", perspective.plantProfileId, "plant", locale) : null) || perspective.plant);
+        text = t("compare.perspective.samePlant").replace("{plant}", sharedPlantName(perspective, plants));
       } else if (perspective.id === "samePlantDifferentRegionAndClass") {
-        text = t("compare.perspective.samePlantAndClass").replace("{plant}", (perspective.plantProfileId ? fieldEs("profile", perspective.plantProfileId, "plant", locale) : null) || perspective.plant);
+        text = t("compare.perspective.samePlantAndClass").replace("{plant}", sharedPlantName(perspective, plants));
       } else if (perspective.id === "sameTraditionDifferentPlant") {
         text = t("compare.perspective.sameTraditionPlant").replace("{tradition}", SPIRIT_LABELS[perspective.tradition] || perspective.tradition);
       } else if (perspective.id === "sameTraditionDifferentPlantAndPlace") {

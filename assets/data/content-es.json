@@ -1,10 +1,32 @@
 {
+  "commonNameRegions": {
+    "international": "internacional",
+    "Jalisco, México": "Jalisco, México",
+    "Chihuahua, Coahuila, Durango": "Chihuahua, Coahuila, Durango",
+    "Chihuahuan desert (northern México and southwestern USA)": "desierto chihuahuense (norte de México y suroeste de EE. UU.)",
+    "Comitán, Chiapas": "Comitán, Chiapas",
+    "Durango (“ash-colored”, for the leaf tone)": "Durango («color ceniza», por el tono de las hojas)",
+    "Guerrero (Nahuatl-derived)": "Guerrero (de origen náhuatl)",
+    "Guerrero and Michoacán mountains": "sierras de Guerrero y Michoacán",
+    "Jalisco highlands (local usage; unrelated to the Sonoran lechuguilla, Agave shrevei)": "Altos de Jalisco (uso local; no es la lechuguilla sonorense, Agave shrevei)",
+    "Jalisco–Colima borderlands": "zona limítrofe entre Jalisco y Colima",
+    "Oaxaca": "Oaxaca",
+    "Oaxaca, Puebla (Sierra Norte)": "Oaxaca, Puebla (Sierra Norte)",
+    "Puebla (Mixteca Poblana; potatorum in the cited example's documented case)": "Puebla (Mixteca Poblana; potatorum en el caso documentado del ejemplo citado)",
+    "Rio de Parras, Michoacán": "Rio de Parras, Michoacán",
+    "Sierra de Jalisco": "Sierra de Jalisco",
+    "Sonora (bacanora)": "Sonora (bacanora)",
+    "Southern Jalisco (trade usage)": "sur de Jalisco (uso comercial)",
+    "Tlaxcala and central Mexico": "Tlaxcala y el centro de México",
+    "coastal Jalisco (raicilla)": "costa de Jalisco (raicilla)",
+    "regional usage (varies by taberna)": "uso regional (varía según la taberna)"
+  },
   "profiles": {
     "tequila-blanco-valley-jalisco": {
       "title": "Tequila blanco, estilo Valle de Tequila",
-      "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. Las condiciones del valle — menor elevación, noches más cálidas — tienden a producir agaves más pequeños y herbáceos que los de Los Altos, así que los blancos del valle suelen leerse sabrosos y vegetales en lugar de dulces: el sabor de este suelo, una distinción de la que el valle se enorgullece.",
+      "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. Las condiciones del valle — menor elevación, noches más cálidas — tienden a dar agaves más pequeños y herbáceos que los de Los Altos, así que los blancos del valle suelen saber más vegetales y salinos que dulces: el sabor de este suelo, una distinción de la que el valle se enorgullece.",
       "description": "Un blanco (también llamado silver o plata) es un tequila que suele embotellarse sin crianza en roble — las reglas permiten un reposo breve por debajo del mínimo del reposado, pero el estilo se define por el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas.",
-      "beginnerNote": "¿Nuevo en el tequila? Empieza aquí: ningún barril se interpone entre tú y el agave cocido, así que un blanco es la introducción más clara a cómo se lee la tierra de cada productor en la copa.",
+      "beginnerNote": "¿Nuevo en el tequila? Empieza aquí: ningún barril se interpone entre tú y el agave cocido, así que un blanco es la forma más clara de probar en la copa la tierra de cada productor.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
       "process": "Cocción al vapor (horno/autoclave), extracción con tahona o molino de rodillos, fermentación en tinas abiertas, doble destilación; normalmente sin crianza, aunque las reglas del blanco permiten un contacto breve con roble por debajo del mínimo de dos meses del reposado",
       "finish": "Limpio y picante, con cítricos y una calidez vegetal suave que se desvanece de forma constante.",
@@ -43,7 +65,7 @@
     },
     "bacanora-pacifica-sierra-sonora": {
       "title": "Bacanora, estilo Agave Pacifica (Sierra de Sonora)",
-      "context": "El bacanora es el destilado silvestre que Sonora llama suyo: destilado de Agave angustifolia pacifica (aquí le decimos Pacifica, o Yaquiana) en la Sierra Madre de Sonora, con denominación de origen que cubre 35 municipios sonorenses. Durante gran parte del siglo XX (1915–1992, según la historia oficial de Sonora) hacerlo fue prohibido, y en la sierra las familias siguieron destilándolo a escondidas; la producción se legalizó de nuevo en 1992 y la denominación de origen llegó en el año 2000 — dos hitos separados. Esa continuidad es el corazón de la tradición: el bacanora sobrevivió porque las familias siguieron destilándolo, en vinatas pasadas de una generación de vinateros a la siguiente.",
+      "context": "El bacanora es el destilado silvestre que Sonora llama suyo: destilado de Agave angustifolia pacifica (aquí le decimos Pacifica, o Yaquiana) en la Sierra Madre de Sonora, con denominación de origen que cubre 35 municipios sonorenses. Durante gran parte del siglo XX (1915–1992, según la historia oficial de Sonora) hacerlo fue prohibido, y en la sierra las familias siguieron destilándolo a escondidas; la producción se legalizó de nuevo en 1992 y la denominación de origen llegó en el año 2000 — dos hitos separados. Esa continuidad es el corazón de la tradición: el bacanora sobrevivió porque las familias siguieron destilándolo, en vinatas que pasaron de padres a hijos.",
       "description": "La producción tradicional de bacanora asa los corazones de agave en hornos subterráneos, a menudo con leña de mezquite, fermenta con levaduras silvestres y destila dos veces, dando un destilado que se ubica estilísticamente entre el tequila y el mezcal oaxaqueño: agave asado en el centro con un humo generalmente más suave que el del mezcal, más hierbas del desierto y un filo mineral de la sierra.",
       "beginnerNote": "¿Nuevo en el bacanora? Piénsalo como el primo sonorense del mezcal: mismo corazón de agave asado, normalmente un poco menos humo, a menudo más ligero y herbáceo.",
       "category": "Bacanora — destilado con Denominación de Origen propia (Sonora, desde 2000)",
@@ -121,7 +143,7 @@
         ],
         "notice": "Qué notar primero: el carácter verde y láctico de la savia — aquí nada fue asado."
       },
-      "whyItTastes": "Sin ningún asado: la savia (aguamiel) del maguey comiteco vivo se recolecta, fermenta y destila. Todo en la copa sigue de ese camino de savia — por eso el comiteco no se lee nada como un destilado de piña cocida.",
+      "whyItTastes": "Sin ningún asado: la savia (aguamiel) del maguey comiteco vivo se recolecta, fermenta y destila. Todo en la copa viene de ese camino de savia — por eso el comiteco no sabe en nada a un destilado de piña cocida.",
       "plant": "Maguey comiteco (Agave americana L. según la declaración de IG de 2025; algunas referencias nombran Agave atrovirens), cultivado; el aguamiel se recolecta de la planta viva"
     },
     "destilado-de-pulque-salmiana-tlaxcala": {
@@ -282,7 +304,7 @@
         ],
         "notice": "Qué notar primero: cuánto agave sobrevive al largo reposo — los mejores lo mantienen en el cuadro."
       },
-      "whyItTastes": "El agave del altiplano, de suelos rojos minerales, tiende a leerse más dulce y floral que el del valle — una tendencia documentada, no un resultado garantizado del lugar; tres años o más en roble (típicamente ex-bourbon americano) empujan el destilado firmemente hacia la madera mientras la fruta del altiplano se mantiene debajo.",
+      "whyItTastes": "El agave del altiplano, de suelos rojos minerales, tiende a ser más dulce y floral que el del valle — una tendencia documentada, no un resultado garantizado del lugar; tres años o más en roble (típicamente ex-bourbon americano) empujan el destilado firmemente hacia la madera mientras la fruta del altiplano se mantiene debajo.",
       "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales de Los Altos)"
     },
     "mezcal-reposado-espadin-oaxaca": {
@@ -391,7 +413,7 @@
     },
     "mezcal-cenizo-sierra-durango": {
       "title": "Mezcal de cenizo, estilo sierra duranguense (Agave durangensis)",
-      "context": "Durango es el norte dentro de la denominación del mezcal — sierra y cañones donde al destiladero le dicen vinata, no palenque, y el agave firma es el cenizo, nombrado por el tono cenizo de sus hojas. En El Mezquital, familias tepehuanas como la de los Cruz asan el cenizo entre pinos en altura, machacan con hacha y desgarradora, y destilan en pequeños alambiques de cobre y madera. Norteño no es sinónimo de oaxaqueño: el mezcal duranguense tiene su propia planta, vocabulario y voz.",
+      "context": "Durango es el norte dentro de la denominación del mezcal — sierra y cañones donde al destiladero le dicen vinata, no palenque, y el agave emblemático es el cenizo, nombrado por el tono cenizo de sus hojas. En El Mezquital, familias tepehuanas como la de los Cruz asan el cenizo entre pinos en altura, machacan con hacha y desgarradora, y destilan en pequeños alambiques de cobre y madera. Norteño no es sinónimo de oaxaqueño: el mezcal duranguense tiene su propia planta, vocabulario y voz.",
       "description": "Espera fruta de dulce: sandía y dulces de mora, chicle y cítricos sobre un asado ligero, con un borde láctico, casi de queso, y un calor de verdad. Así es la botella de ejemplo, de Federico Cruz y su familia tepehuana en El Mezquital. La mayoría de los catadores la encuentra viva, afrutada y bien equilibrada; algunos se han topado con lotes rústicos o que dividen opiniones, y el calor varía de lote a lote. Los propios productores de Durango, en un reportaje de SevenFifty Daily, describen el cenizo en general como verde y dulce, afrutado y terroso, con notas lácticas.",
       "beginnerNote": "¿Nuevo en el cenizo? Espera fruta de dulce — sandía, mora, chicle — sobre un asado suave, y ve preparado para el calor: los lotes de la botella de ejemplo van de 49 a 54% de alcohol y las reseñas lo sienten. Eso es de la botella y del lote, no una bienvenida fija de Durango.",
       "category": "Mezcal — Durango está dentro de la denominación de origen del mezcal; cenizo es el nombre regional de Agave durangensis, no una clase legal",
@@ -441,7 +463,6 @@
       "process": "Molido a mano con mazos de madera, fermentación silvestre iniciada con pulque, destilación en alambique de tradición filipina",
       "smoke": "Ligero o nulo según las reseñas citadas de la botella de ejemplo — el paladar encabeza con fruta y matiz láctico, no con humo de asado.",
       "finish": "Cremoso y afrutado en las reseñas de la botella de ejemplo, con un toque láctico suave; un lote muestra cáscara de lima y sal marina al final.",
-      "tasteNotes": "Fruta tropical, acidez láctica, manzana verde, mineral y pulque fresco — la firma michoacana de crema y chicle.",
       "pairing": {
         "serving": "Solo, en vaso pequeño; la fruta cremosa se abre con un reposo corto. También funciona en Margarita, donde su matiz láctico juega con los cítricos. Sugerencia editorial, no una regla.",
         "notice": "Qué notar primero: la llegada de chicle y crema y el matiz suave con toque de pulque detrás — la firma de esta productora y una buena introducción al estilo michoacano.",
@@ -463,7 +484,6 @@
       "process": "Asado en horno de piña, desgarradora mecánica, fermentación silvestre seca y luego húmeda (hasta 14+5-10 días; algunos lotes en cuero crudo), destilación única en cobre o barro",
       "smoke": "Ligero según las reseñas citadas de la botella de ejemplo — el asado en pozo está presente, pero la fruta y la acidez encabezan.",
       "finish": "Afrutado y floral en las reseñas de la botella de ejemplo, con un chispeo de acidez; algunos lotes terminan minerales sobre frutas oscuras como ciruela e higo.",
-      "tasteNotes": "Fruta tropical, manzana verde, cítricos, florales y acidez láctica — la firma poblana de fruta con chispa.",
       "pairing": {
         "serving": "Solo, en vaso pequeño; la acidez lo hace un mezcal vivo para la mesa. Sugerencia editorial, no una regla.",
         "notice": "Qué notar primero: la llegada de manzana y fruta tropical y la acidez viva, casi de vino espumoso, detrás — la firma del papalometl de esta productora y un primer acercamiento animado al mezcal poblano.",
@@ -784,14 +804,14 @@
       "batch": "Los lotes varían (reseñas citadas cubren embotellados de 42–45%); el método de cocción está en disputa entre la descripción de horno de barro del productor y el reporte de autoclave de un reseñista local — registrado, no resuelto"
     },
     "palalma-michoacan-cupreata": {
-      "reviewSummary": "Chicle rosa, fresas con crema, frutas ácidas y refresco de uva según sus reseñistas, con un filo cremoso y láctico que sus reseñistas atribuyen a la fermentación arrancada con pulque; varios notan que la fruta y el pulque suavizan tras meses en vidrio. Elaborado por la maestra mezcalera María E. Pérez y su familia en Rio de Parras.",
+      "reviewSummary": "Chicle rosa, fresas con crema, frutas ácidas y refresco de uva, con un borde cremoso y láctico que los catadores atribuyen a la fermentación arrancada con pulque; varios notan que la fruta y el pulque se suavizan tras meses en vidrio. Elaborado por la maestra mezcalera María E. Pérez y su familia en Rio de Parras.",
       "producer": "María E. Pérez y familia (maestra mezcalera), Rio de Parras, Michoacán; marca de Pal'alma (Erick Rodriguez)",
       "place": "Rio de Parras, Michoacán",
       "batch": "Lotes pequeños (24–60 botellas); algunos reposados meses en vidrio antes del embotellado; la graduación varía por lote",
       "abvNote": "La graduación varía por lote (reseñas citadas listan lotes de 50% y 52%); revisa tu botella"
     },
     "zinacantan-papalometl": {
-      "reviewSummary": "Pastel de manzana, taffy de plátano, mango y piña según sus reseñistas, con acidez aguda de vino espumoso y viajes minerales en algunos lotes; un lote fermentado en cuero crudo se lee más funky. Elaborado por la maestra mezcalera Fabiola Torres Monfil en San Diego La Mesa Tochimilitzingo.",
+      "reviewSummary": "Pastel de manzana, caramelo masticable de plátano, mango y piña según sus catadores, con una acidez marcada de vino espumoso y notas minerales en algunos lotes; un lote fermentado en cuero crudo tiene un matiz fermentado más intenso. Elaborado por la maestra mezcalera Fabiola Torres Monfil en San Diego La Mesa Tochimilitzingo.",
       "producer": "Zinacantan (maestra mezcalera Fabiola Torres Monfil, cofundadora Diana Pinzón), San Diego La Mesa Tochimilitzingo, Puebla",
       "place": "San Diego La Mesa Tochimilitzingo, Puebla",
       "batch": "Lotes muy pequeños (96–630 litros citados); mayoría destilados una sola vez en cobre, algunos en barro; algunos lotes fermentados en cuero crudo — revisa tu botella",
@@ -830,7 +850,7 @@
       "atAGlance": "El único agave permitido legalmente para el tequila; cultivado a escala en el valle y el altiplano de Jalisco.",
       "whereItGrows": "Cultivado en el Valle de Tequila y el altiplano de Jalisco (Los Altos), en suelos volcánicos y rojos minerales respectivamente.",
       "harvestProduction": "Cosechado en madurez (típicamente 5–7 años); el jimador recorta las hojas hasta la piña, que luego se cocina al vapor — nunca por savia.",
-      "sensoryTendencies": "Orientación editorial: el del valle se lee salado y vegetal, el del altiplano más dulce y floral; es orientación de lugar, no un sabor universal.",
+      "sensoryTendencies": "Orientación editorial: el del valle tiende a lo salino y vegetal, el del altiplano a lo más dulce y floral; es orientación de lugar, no un sabor universal.",
       "sustainability": "Cultivado, así que la presión sobre poblaciones silvestres no es la preocupación que es para agaves de cosecha silvestre."
     },
     "agave-angustifolia": {
@@ -838,7 +858,7 @@
       "atAGlance": "El gran caballo de batalla de México: espadín en el mezcal de Oaxaca, Pacifica/Yaquiana en el bacanora sonorense, chico aguiar en la raicilla de la costa.",
       "whereItGrows": "Valles Centrales de Oaxaca (cultivado), la Sierra de Sonora (silvestre) y la costa de Jalisco (silvestre y cultivado).",
       "harvestProduction": "Cultivado a escala en Oaxaca; de cosecha silvestre en Sonora. Cocido (pozo o vapor), nunca por savia.",
-      "sensoryTendencies": "Orientación editorial: los mezcales de espadín se leen con asado; la Pacifica del bacanora aporta herbalidad sonorense; los sabores difieren por lugar y proceso, no por el nombre.",
+      "sensoryTendencies": "Orientación editorial: los mezcales de espadín suelen saber a agave asado; la Pacifica del bacanora aporta un carácter herbal sonorense; los sabores cambian por lugar y proceso, no por el nombre.",
       "sustainability": "Las presiones de cosecha silvestre varían mucho por región: el bacanora sonorense depende de poblaciones silvestres de yaquiana/Pacifica, y el crecimiento del mezcal ha aumentado la demanda sobre parientes angustifolia de cosecha silvestre en otras partes. Donde el espadín se cultiva a escala (Oaxaca) la presión es mucho menor. Si la Pacifica/Yaquiana sonorense es la misma planta que el espadín o una variedad local distinta sigue en debate; esta guía conserva los nombres regionales sin zanjar la botánica. (El reporte sobre cosecha de agave silvestre es un tema activo en la prensa de la categoría, p. ej. Mezcalistas, revisado el 21-10-2026.)",
       "uncertainty": "Si la pacífica/yaquiana de Sonora es la misma planta que el espadín o una variedad local distinta está en debate; la app conserva los nombres regionales sin resolver la botánica."
     },
@@ -847,7 +867,7 @@
       "atAGlance": "El agave insignia de la raicilla de la Sierra de Jalisco, de cosecha silvestre; localmente también llamado lechuguilla (sin relación con la planta sonorense de ese nombre).",
       "whereItGrows": "El país de las montañas de la Sierra Occidental de Jalisco, alrededor de La Vieja y la Sierra de Talpa.",
       "harvestProduction": "Cosecha silvestre; asado en hornos de adobe sobre el suelo, fermentación con levaduras silvestres, destilación en pequeños lotes.",
-      "sensoryTendencies": "Orientación editorial: la raicilla de la Sierra se lee herbal y rústica; la cosecha silvestre implica variación genuina entre lotes.",
+      "sensoryTendencies": "Orientación editorial: la raicilla de la Sierra suele ser herbal y rústica; la cosecha silvestre hace que los lotes cambien de verdad.",
       "sustainability": "De cosecha silvestre en la Sierra Occidental de Jalisco; la creciente demanda de raicilla pone presión sobre las poblaciones silvestres de maximiliana, y algunos productores reportan programas de replantación, aunque la evidencia documentada es limitada. Se trata aquí como una preocupación de sostenibilidad de cosecha silvestre, no como una afirmación verificada del productor.",
       "uncertainty": "El nombre local se solapa con otras especies en otras regiones; los nombres comunes no son identificadores únicos globales."
     },
@@ -874,7 +894,7 @@
       "atAGlance": "Los agaves silvestres de la frontera Jalisco–Colima — Liñeño, Cimarrón y parientes locales — materia prima de los vinateros para el tuxca.",
       "whereItGrows": "Los cañones fluviales del sur de Jalisco, alrededor de Tuxcacuesco y Zapotitlán de Vadillo, llegando hacia Colima.",
       "harvestProduction": "Cosecha silvestre; asado en pozo cilíndrico, machacado a mano, fermentación en cráter volcánico, destilación en alambique filipino de madera. Los ensambles varían por lote.",
-      "sensoryTendencies": "Orientación editorial: los lotes varían genuinamente según el vinatero y la mezcla de agaves; la composición de especies se registra solo cuando una fuente documenta el lote real.",
+      "sensoryTendencies": "Orientación editorial: los lotes cambian según el vinatero y la mezcla de agaves; la composición de especies se registra solo cuando una fuente documenta el lote real.",
       "sustainability": "De cosecha silvestre; la composición del lote se rige por evidencia, nunca se asume.",
       "uncertainty": "Los lotes de tuxca pueden mezclar varios agaves silvestres; la composición de especies se registra solo cuando una fuente documenta el lote concreto."
     },
@@ -906,20 +926,20 @@
       "uncertainty": "Los nombres comunes de los agaves costeros de Jalisco varían por localidad y taberna; la app conserva los nombres regionales sin resolver los debates de especie."
     },
     "agave-cupreata": {
-      "cultivation": "de recolección silvestre y cultivado; el extremo silvestre carga la presión de sostenibilidad",
+      "cultivation": "de recolección silvestre y cultivado; el cupreata silvestre es el que está bajo presión",
       "atAGlance": "El agave papalote del mezcal de montaña guerrerense — un agave ancho, de tono cobrizo, que da al mezcal del estado su firma afrutada y mantecosa.",
       "whereItGrows": "Laderas de montaña de Guerrero y el Michoacán vecino (cuenca del Balsas), a menudo en altura y suelos delgados — y los valles volcánicos michoacanos, donde las comunidades de Rio de Parras lo llaman penca ancha.",
       "harvestProduction": "Tradiciones de piña: se cosecha en su madurez (años variables según la fuente), se asa en horno de piña, se fermenta y se destila como mezcal.",
-      "sensoryTendencies": "Orientación editorial: los mezcales de cupreata suelen leerse más afrutados y mantecosos que el espadín, con menta, pimiento verde y fruta tropical; el humo varía con el asado de cada productor.",
+      "sensoryTendencies": "Orientación editorial: los mezcales de cupreata suelen ser más afrutados y mantecosos que el espadín, con menta, pimiento verde y fruta tropical; el humo cambia con el asado de cada productor.",
       "sustainability": "Las poblaciones silvestres de cupreata cargan presión de cosecha mientras crece el mezcal guerrerense; algunos productores cultivan o reforestan.",
       "uncertainty": "Los nombres papalote/papalometl aparecen tanto en Guerrero como en Michoacán y pueden cubrir más de un taxón afín a cupreata; la penca ancha de Michoacán (Rio de Parras) está documentada como Agave cupreata para el ejemplo citado; la guía conserva los nombres regionales sin resolver el debate de especie."
     },
     "agave-durangensis": {
       "cultivation": "mayormente de recolección silvestre; existen programas de vivero y reforestación mientras crece la demanda",
-      "atAGlance": "El cenizo, el agave firma del mezcal duranguense — la planta que da a los mezcales del estado norteño su carácter afrutado y a menudo cremoso.",
+      "atAGlance": "El cenizo, el agave emblemático del mezcal duranguense — la planta que da a los mezcales del estado norteño su carácter afrutado y a menudo cremoso.",
       "whereItGrows": "Sierra y cañones de Durango, a menudo entre pinos en altura; el borde norte de la denominación del mezcal.",
       "harvestProduction": "Tradiciones de piña: se cosecha en su madurez, se asa en horno de piña, se machaca (hacha y desgarradora en las vinatas tradicionales), se fermenta y se destila como mezcal.",
-      "sensoryTendencies": "Orientación editorial: los mezcales de cenizo suelen leerse afrutados y cremosos, con notas de dulces, fruta tropical y lácticas; el calor y el funk rústico varían por lote.",
+      "sensoryTendencies": "Orientación editorial: los mezcales de cenizo suelen ser afrutados y cremosos, con notas de dulces, fruta tropical y lácticas; el calor y el carácter rústico cambian por lote.",
       "sustainability": "La presión de cosecha del cenizo silvestre crece con el auge de Durango; la propagación en vivero está documentada en la literatura regional de investigación."
     }
   },
@@ -968,7 +988,7 @@
       "title": "Conoce las plantas",
       "intro": "Todo destilado de agave empieza como planta. Este capítulo cubre las especies detrás de los perfiles de la guía, sus nombres regionales y cómo la cosecha y el cultivo moldean lo que llega a la copa.",
       "block0": "El agave azul es el único agave permitido legalmente en el tequila; el espadín es el caballo de batalla del mezcal, cultivado a escala. Otros agaves — la maximiliana en la Sierra de Jalisco, el tobalá en las montañas de Oaxaca — suelen cosecharse silvestres, lo que moldea tanto el sabor como la sostenibilidad.",
-      "block1": "Los nombres comunes son regionales, no científicos: la lechuguilla del altiplano de Jalisco es un nombre local para la maximiliana, mientras que la lechuguilla sonorense es una planta distinta. Donde la botánica está genuinamente sin resolver — como con la Pacifica/Yaquiana de Sonora — esta guía registra los nombres sin zanjar el debate.",
+      "block1": "Los nombres comunes son regionales, no científicos: la lechuguilla del altiplano de Jalisco es un nombre local para la maximiliana, mientras que la lechuguilla sonorense es una planta distinta. Donde la botánica sigue sin resolverse — como con la Pacifica/Yaquiana de Sonora — esta guía registra los nombres sin zanjar el debate.",
       "block2": "No todo destilado de esta guía cocina la piña. El comiteco y el destilado de pulque recolectan aguamiel — la savia extraída de la planta viva — y la fermentan en su lugar. Las tradiciones de savia se saltan el asado por completo, y por eso su camino de sabor difiere de los destilados de piña cocida.",
       "block2deeper": "Un agave maduro florece una sola vez y luego muere. Las tradiciones de piña cosechan la planta entera en esa madurez, tomando de una vez sus azúcares acumulados; las tradiciones de savia, en cambio, trabajan con la planta viva: cortan el tallo floral y recolectan el aguamiel a lo largo de varias temporadas — el sangrado repetido también agota la planta, solo en otra escala de tiempo."
     },
@@ -976,17 +996,17 @@
       "title": "De la planta a la copa",
       "intro": "¿Cómo se convierte una planta espinosa en un destilado? Este capítulo recorre la secuencia de producción — y por qué cada etapa deja una huella que puedes saborear.",
       "block0": "La cocción convierte los carbohidratos complejos del agave en azúcares fermentables. Los asados en pozo de tierra (mezcal, bacanora, tuxca, sotol) pueden aportar humo; la cocción al vapor en hornos o autoclaves (tequila) cocina limpio. Ningún método garantiza un sabor — la leña, el tiempo y la técnica deciden.",
-      "block1": "La extracción, la fermentación y la destilación importan cada una. Las fermentaciones silvestres y abiertas acarrean levaduras locales y carácter local; el alambique — de cobre, barro o madera estilo filipino — moldea la textura final. Los pequeños productores embotellan lote por lote, así que dos botellas de la misma marca pueden diferir genuinamente.",
+      "block1": "La extracción, la fermentación y la destilación importan cada una. Las fermentaciones silvestres y abiertas traen levaduras locales y carácter local; el alambique — de cobre, barro o madera estilo filipino — moldea la textura final. Los pequeños productores embotellan lote por lote, así que dos botellas de la misma marca pueden ser bastante distintas.",
       "block2": "La mayoría de los destilados de agave reposan: en vidrio, o en roble. La maduración en madera (clases reposado, añejo) aporta color, especia de roble y suavidad, con mínimos legales específicos por destilado. El reposo en vidrio (madurado en vidrio) suaviza sin influencia de madera. El comiteco muestra un tercer camino: su añejo toma el carácter maderable del reposo en vidrio con ramas de roble blanco en lugar de barricas — según el propio importador del productor — un recordatorio de que las tradiciones de reposo son más variadas de lo que sugieren las clases legales.",
       "block2deeper": "Las tradiciones de savia invierten la secuencia: sin asado, sin piña — el aguamiel fermenta primero (en pulque, para el destilado de pulque) y la destilación sigue, y por eso tanto la categoría regulatoria como el sabor divergen de los destilados de piña cocida."
     },
     "understanding-flavour": {
       "title": "Entender el sabor",
       "intro": "¿Qué estás saboreando realmente? Este capítulo separa el vocabulario del sabor — y muestra cada concepto en un perfil real de la guía.",
-      "block0": "El cuerpo es cómo se siente el destilado en la boca — ligero, medio o pleno. El humo, cuando está presente, suele venir del asado en pozo. Las notas herbales y vegetales vienen de la planta y de una cocción limpia; la fruta y las florales a menudo surgen con el agave de los Altos y los asados suaves. La dulzura aquí significa dulzura percibida, no azúcar medido. Dentro del tequila, la misma planta se lee distinto según el lugar: el agave del valle tiende a lo terroso y sabroso, el de Los Altos a lo más dulce y afrutado — una tendencia nombrada en los perfiles de blanco de valle y de los Altos, y honestamente una tendencia: un panel de cata a ciegas encontró el patrón más débil de lo que sugiere el folclore.",
+      "block0": "El cuerpo es cómo se siente el destilado en la boca — ligero, medio o pleno. El humo, cuando está presente, suele venir del asado en pozo. Las notas herbales y vegetales vienen de la planta y de una cocción limpia; la fruta y las florales a menudo surgen con el agave de los Altos y los asados suaves. La dulzura aquí significa dulzura percibida, no azúcar medido. Dentro del tequila, la misma planta sabe distinto según el lugar: el agave del valle tiende a lo terroso y salino, el de Los Altos a lo más dulce y afrutado — una tendencia nombrada en los perfiles de blanco de valle y de los Altos, y solo eso, una tendencia: un panel de cata a ciegas encontró el patrón más débil de lo que sugiere el folclore.",
       "block1": "El roble — del reposo en madera — aporta vainilla, caramelo y especias. La longitud del final es cuánto persiste el sabor después de tragar. Ninguno de estos niveles es una calificación de calidad: son descripciones editoriales de estilo, y las botellas dentro de un estilo varían.",
-      "block2": "La vista de comparación pone estas dimensiones lado a lado: un blanco contra un añejo muestra el mayor contraste de roble; un blanco del valle contra una expresión del altiplano muestra cómo se lee el lugar en la copa.",
-      "block2deeper": "La química del sabor es genuinamente compleja: los compuestos del asado, los ésteres de la fermentación y el corte del alambique contribuyen cada uno. Esta guía atribuye carácter al proceso solo donde las fuentes documentan el vínculo — nunca a partir de una sola nota de cata.",
+      "block2": "La vista de comparación pone estas dimensiones lado a lado: un blanco contra un añejo muestra el mayor contraste de roble; un blanco del valle contra una expresión del altiplano muestra cómo se nota el lugar en la copa.",
+      "block2deeper": "La química del sabor es compleja: los compuestos del asado, los ésteres de la fermentación y el corte del alambique contribuyen cada uno. Esta guía atribuye carácter al proceso solo donde las fuentes documentan el vínculo — nunca a partir de una sola nota de cata.",
       "block3": "Cómo llega esta guía a sus conclusiones: los perfiles de estilo son descripciones editoriales extraídas de los datos sensoriales documentados de cada perfil, no reseñas ni calificaciones de ninguna botella. Las impresiones de los reseñistas se atribuyen a su fuente, las notas de los productores nunca se presentan como reseñas independientes, y todo lo que la guía misma concluye se etiqueta como editorial. Los datos específicos de cada lote — ABV, productor, mezcla de agaves, notas de cata — permanecen adjuntos a la botella a la que pertenecen, y la evidencia faltante se declara en lugar de adivinarse."
     },
     "understanding-labels": {
@@ -1024,7 +1044,7 @@
       "origin": "Nacido en el pueblo de Tequila y sus alrededores, Jalisco; la industria moderna creció de las haciendas del valle y de los altos.",
       "history": "Uno de los destilados regulados más antiguos de México; la denominación de origen se limita a los municipios designados, principalmente en Jalisco.",
       "practices": "Cocción al vapor en hornos u autoclaves, extracción con tahona o molino de rodillos, fermentación, doble destilación y reposo opcional en roble.",
-      "diversity": "El agave del valle y el de los altos se leen editorialmente distintos (sabroso/vegetal frente a más dulce/floral); los términos de clase son propios de cada destilado."
+      "diversity": "El agave del valle y el de los Altos se describen distinto en la guía editorial (salino y vegetal frente a más dulce y floral); los términos de clase son propios de cada destilado."
     },
     "bacanora": {
       "sustainability": "El bacanora depende de poblaciones silvestres de yaquiana/Pacifica en la Sierra sonorense; la presión de cosecha sobre el agave silvestre es el principal tema de sostenibilidad de la tradición (reporte de categoría revisado el 21-10-2026).",
@@ -1102,7 +1122,7 @@
     "tequila-highlands-jal": {
       "name": "Los Altos de Jalisco (La Alteña), Jalisco",
       "geography": "Meseta alta al este del valle (alrededor de Arandas y la zona de La Alteña); suelos minerales rojos, noches más frescas.",
-      "distinctions": "El agave de los Altos se lee más dulce y floral en la guía editorial; algunos tradicionalistas asan en piedra. Una distinción cultural/agronómica, no una clase legal."
+      "distinctions": "La guía editorial describe el agave de los Altos como más dulce y floral; algunos tradicionalistas asan en piedra. Una distinción cultural/agronómica, no una clase legal."
     },
     "valles-centrales-oax": {
       "name": "Valles Centrales, Oaxaca",
