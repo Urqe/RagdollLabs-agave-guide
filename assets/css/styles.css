@@ -1200,6 +1200,32 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .lesson-practice { margin-block: 1rem; padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); }
 .lesson-practice-list { margin: 0.4rem 0 0; padding-left: 1.2rem; display: grid; gap: 0.6rem; }
 .lesson-practice-step > p { margin: 0.15rem 0 0; }
+/* Pair 24: guided tasting — mode switch, per-step panels, reflection. */
+.tasting-mode { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0.4rem 0 0.8rem; }
+.tasting-mode-label { margin: 0; width: 100%; font-size: 0.9rem; color: var(--text-soft); }
+.lesson-practice-list { gap: 1rem; }
+.tasting-box { margin-top: 0.5rem; padding: 0.6rem 0.8rem; border-left: 3px solid var(--agave-line); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; background: var(--surface); }
+.tasting-box.is-glass { border-left-color: var(--anejo); }
+.tasting-box .eyebrow { display: block; margin-bottom: 0.2rem; }
+.tasting-box p { margin: 0 0 0.3rem; }
+.tasting-box p:last-child { margin-bottom: 0; }
+.tasting-reflect { margin: 0.6rem 0 0; padding: 0.6rem 0.8rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); min-width: 0; }
+.tasting-reflect legend { padding: 0 0.3rem; font-weight: 600; }
+.tasting-reflect-choice { display: flex; align-items: center; gap: 0.55rem; min-height: var(--tap); }
+.tasting-reflect-choice input { width: 1.15rem; height: 1.15rem; margin: 0; flex: none; }
+.tasting-reflect-choice label { cursor: pointer; }
+.tasting-reflect-answer:not(:empty) { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--line-soft); }
+.tasting-reflect-answer p { margin: 0 0 0.4rem; }
+/* Pair 24: lesson 3 distinctions and lexicon. */
+.lesson-distinctions, .lesson-lexicon { margin-block: 1.2rem; }
+.lesson-term-list { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 0.5rem 1.2rem; margin: 0.5rem 0 0; }
+.lesson-term-list dt { font-weight: 600; }
+.lesson-term-list dd { margin: 0; overflow-wrap: anywhere; }
+.lexicon-note { display: block; margin-top: 0.15rem; font-size: 0.85rem; }
+@media (max-width: 40rem) {
+  .lesson-term-list { grid-template-columns: 1fr; gap: 0.15rem 0; }
+  .lesson-term-list dd + dt { margin-top: 0.6rem; }
+}
 .compare-change-styles { margin-top: 1.2rem; border-top: 1px solid var(--line); padding-top: 0.6rem; }
 .compare-change-styles summary { cursor: pointer; font-weight: 600; min-height: var(--tap); display: flex; align-items: center; }
 /* Pair 16: compact provenance line under bottle-first descriptions. */

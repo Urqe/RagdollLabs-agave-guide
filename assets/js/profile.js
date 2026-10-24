@@ -205,8 +205,6 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   
 
   const facts = el("dl", { class: "profile-facts" });
-  facts.appendChild(el("dt", {}, ui(locale, "body")));
-  facts.appendChild(el("dd", { class: "profile-body" }, ["light", "medium", "full"].includes(profile.body) ? ui(locale, profile.body) : profile.body));
   facts.appendChild(el("dt", {}, ui(locale, "notes")));
   const notes = el("dd", { class: "profile-taste" });
   const tasteList = el("ul", { class: "taste-list" });
