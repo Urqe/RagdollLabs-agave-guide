@@ -10,6 +10,7 @@ import { tasteNote } from "./taste-notes.js";
 import { editorialText, fieldEs, fieldEsAny, localizedTitle, sourceKindLabel } from "./editorial.js";
 import { tastingBasisLine, factsOnlyLine } from "./tasting-basis.js";
 import { lessonNoteFor } from "./journey.js";
+import { presetForProfile, presetHref } from "./compare-presets.js";
 
 function sourceLinks(sources, sourceIds, locale = null) {
   const list = el("ul", { class: "source-list" });
@@ -453,7 +454,15 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     section.appendChild(nextBlock);
   }
 
-  section.append(action, references);
+  section.append(action);
+  // Pair 27: styles used by a guided comparison link straight to it.
+  const guided = presetForProfile(profile.id);
+  if (guided) {
+    const lang = locale ? locale.get() : "en";
+    section.appendChild(el("a", { class: "quiet-link profile-guided-compare", href: presetHref(guided) },
+      t("compare.presets.fromProfile").replace("{title}", guided.title[lang] || guided.title.en)));
+  }
+  section.append(references);
   if (learnLinkNode) section.appendChild(learnLinkNode);
   section.appendChild(guidanceNote);
 

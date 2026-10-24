@@ -582,6 +582,21 @@ for (const p of profiles) {
   if (!svgStates.includes(p.stateId)) fail(`profile stateId ${p.stateId} has no path in mexico-states.svg`);
 }
 
+// Pair 27: curated learning comparisons must still say what the data shows.
+{
+  const { PRESETS, PRESET_FOR_FLAVOUR, checkPreset } = await import("../assets/js/compare-presets.js");
+  const byId = new Map(profiles.map((p) => [p.id, p]));
+  const seen = new Set();
+  for (const preset of PRESETS) {
+    if (seen.has(preset.id)) fail(`compare-presets: duplicate preset id ${preset.id}`);
+    seen.add(preset.id);
+    for (const problem of checkPreset(preset, byId)) fail(`compare-presets: ${problem}`);
+  }
+  for (const [flavour, presetId] of Object.entries(PRESET_FOR_FLAVOUR)) {
+    if (!seen.has(presetId)) fail(`compare-presets: flavour ${flavour} points to unknown preset ${presetId}`);
+  }
+}
+
 if (errors.length > 0) {
   console.error(`Validation failed with ${errors.length} error(s):`);
   for (const e of errors) console.error(`  - ${e}`);

@@ -232,6 +232,7 @@ async function renderRoute(container, route) {
       locale,
       compareIds: ids.join(","),
       from: route.params.from || null,
+      preset: route.params.preset || null,
       focusProfileId: state.lastComparePick,
       keepPickerQuery: state.lastCompareQuery,
       onSelectionChange: (nextIds, pickerQuery) => {
