@@ -1452,3 +1452,8 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
   .compare-craft dt { margin-top: .6rem; }
   .compare-craft dd { margin: .3rem 0 0; }
 }
+
+/* Educational illustrations remain subordinate to the lesson text. */
+.educational-figure { margin: 1rem 0 1.4rem; max-width: 560px; }
+.educational-figure img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border, #d8cfbc); }
+.educational-figure figcaption { margin-top: .4rem; font-size: .83rem; line-height: 1.45; color: var(--muted, #5c625c); }
