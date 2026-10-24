@@ -11,7 +11,7 @@ const images = {
 export function educationalFigure(key, locale = null) {
   const item = images[key];
   if (!item) return null;
-  const spanish = locale?.lang === "es" || locale?.language === "es" || locale?.code === "es" || locale?.lang === "es-MX";
+  const spanish = locale?.get?.() === "es";
   const caption = item[spanish ? 2 : 1];
   const figure = el("figure", { class: "educational-figure" });
   figure.appendChild(el("img", { src: `assets/img/${item[0]}`, alt: caption, loading: "lazy", decoding: "async", width: "640", height: "300" }));
