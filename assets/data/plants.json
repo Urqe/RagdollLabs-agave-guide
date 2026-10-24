@@ -58,7 +58,7 @@
         }
       ],
       "cultivation": "cultivated in Oaxaca; wild and cultivated elsewhere",
-      "uncertainty": "Whether Pacifica/Yaquiana in Sonora is the same plant as espadín or a distinct local variety is debated; the app preserves the regional names without settling the botany.",
+      "uncertainty": "Whether Sonora's Pacifica/Yaquiana is the same plant as espadín or a distinct local variety is debated, so the regional names stay as they are and the botany stays open.",
       "sourceIds": [
         "diffords-mezcal-what-it-is",
         "mezcalistas-bacanora-tradition",
@@ -164,7 +164,7 @@
         }
       ],
       "cultivation": "cultivated in pulque tradition; sap collected from the living plant",
-      "uncertainty": "Sources vary on subspecies naming (Manso/Salmiana); the app records the genus-level identity without resolving the subspecies debate.",
+      "uncertainty": "Sources vary on subspecies naming (Manso/Salmiana), so the plant is named at species level and the subspecies question stays open.",
       "sourceIds": [
         "mezcalistas-juerte",
         "skurnik-estancia"
@@ -184,7 +184,7 @@
       "atAGlance": "Maguey pulquero, the sap agave of the pulque heartland; the base of destilado de pulque.",
       "whereItGrows": "Cultivated in Tlaxcala and the central-Mexico pulque highlands.",
       "harvestProduction": "Cultivated; aguamiel is collected daily from the living plant, fermented into pulque (about 48 hours), then distilled — no cooking.",
-      "sensoryTendencies": "Editorial guidance: sap-derived, so no roast character; sources vary on subspecies naming (Manso/Salmiana), which this guide records without resolving.",
+      "sensoryTendencies": "Two paths from one species. As maguey pulquero its sap becomes pulque and destilado de pulque, with no roast at all; as maguey verde on the Potosino plateau its piña is cooked for mezcal, which tasters of the cited example find green and low in smoke.",
       "sustainability": "Cultivated; the plant stays alive through sap harvest."
     },
     {
@@ -314,7 +314,7 @@
         }
       ],
       "cultivation": "wild and cultivated; used in Costa raicilla alongside chico aguiar",
-      "uncertainty": "Common names for coastal Jalisco agaves vary by locality and taberna; the app preserves regional names without resolving species debates.",
+      "uncertainty": "Common names for coastal Jalisco agaves vary by locality and taberna; the regional names stay as they are, and the species debates stay open.",
       "traditionIds": [
         "raicilla"
       ],
@@ -357,7 +357,7 @@
       "harvestProduction": "Piña traditions: harvested at maturity (variable, source-dependent maturity years), pit-roasted, fermented and distilled as mezcal.",
       "sensoryTendencies": "Editorial guidance: cupreata mezcals often read fruitier and more buttery than espadín, with mint, green pepper and tropical-fruit notes; smoke varies with the producer's roast.",
       "sustainability": "Wild cupreata populations carry harvest pressure as Guerrero mezcal grows; some producers cultivate or reforest. The cited CONAFOR/INIFAP-style regional management literature is the evidence base for plant-level claims.",
-      "uncertainty": "Papalote/papalometl names appear in both Guerrero and Michoacán and may cover more than one cupreata-like taxon; Michoacán's penca ancha (Rio de Parras) is documented as Agave cupreata for the cited example; the app keeps names regional without resolving the species debate.",
+      "uncertainty": "Papalote/papalometl names appear in both Guerrero and Michoacán and may cover more than one cupreata-like taxon; Michoacán's penca ancha (Rio de Parras) is documented as Agave cupreata for the cited example. The names stay regional, and the species debate stays open.",
       "traditionIds": [
         "mezcal"
       ],

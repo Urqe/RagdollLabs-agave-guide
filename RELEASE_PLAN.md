@@ -8,9 +8,9 @@ Companion documents: `EDITORIAL_VOICE.md` (how all reader-facing text sounds, EN
 
 ## 1. Current status and next step
 
-- **Shipped and deployed:** Releases 1–26 and post-roadmap pairs 1–26, the last being Pair 26 (three-path navigation and lesson continuity; PR #76, merge `56ab9de`), plus the plan cleanup (PR #77).
-- **In review:** Pair 27, curated learning comparisons, on branch `pair-27-learning-comparisons`.
-- **Next after that:** Pair 28 (editorial consistency), then Pair 29 (quality and usability audit).
+- **Shipped and deployed:** Releases 1–26 and post-roadmap pairs 1–27, the last being Pair 27 (curated learning comparisons; PR #78, merge `5c6817b`), plus the plan cleanup (PR #77).
+- **In review:** Pair 28, editorial consistency and regional warmth, on branch `pair-28-editorial`.
+- **Next after that:** Pair 29 (quality and usability audit).
 - **How to work:** execute one owner-authorized pair at a time on its own branch, validate, record it in `RELEASE_NOTES.md`, open a PR and stop. The owner reviews and merges, and the merge deploys. Never start the following pair automatically.
 
 ## 2. Product and scope
@@ -226,22 +226,22 @@ Directional goals, not scores or release gates: beginner friendliness 7.5→9/10
 
 ### Pair 28 — Editorial consistency and regional warmth (content/maintenance, P1–P2)
 
-- [ ] Apply `EDITORIAL_VOICE.md` to the profiles not yet rewritten (including their `context` paragraphs, which still open each page in the older voice), bottles, Learn and Discover, in EN and ES together.
+- [x] Apply `EDITORIAL_VOICE.md` to the profiles not yet rewritten (including their `context` paragraphs, which still open each page in the older voice), bottles, Learn and Discover, in EN and ES together.
   - **What to remove:** research-paper narration, reviewer-led openings, premature legal detail, stacked disclaimers and generic flavour text.
   - **Generated text:** the "Explore next" `sharesWhy` sentence repeats word for word; vary it by what actually differs.
-- [ ] Review the highland/valley, terroir, smoke, mineral, wild-fermentation and process→flavour explanations for overstated causes.
-- [ ] Add short, sourced context for regional makers and traditions: Sonora's bacanora, Jalisco's coastal and sierra raicilla, Oaxaca's family and palenque practices. No invented quotes or blanket cultural claims.
-- [ ] Audit terminology across pages. Known case: `mezcal-espadin-valles-centrales` has `category` wording that treats "joven/abocado" as an unaged class. Verify against NOM-070 and add a regression test.
-- [ ] Fix "sabroso" used for savoury (about 20 strings in `content-es.json`, plus the mood "Especiado y sabroso" in `locale.js`) and "lima" used for lime. Check the chapter line "(lima, no siempre limón)" in context first.
-- [ ] Localize `placeCoords.precision`, which renders in English on Spanish profiles.
-- [ ] Align the English edition to British spelling ("Flavour" and "Flavor" are mixed).
-- [ ] Sources:
+- [x] Review the highland/valley, terroir, smoke, mineral, wild-fermentation and process→flavour explanations for overstated causes.
+- [x] Add short, sourced context for regional makers and traditions: Sonora's bacanora, Jalisco's coastal and sierra raicilla, Oaxaca's family and palenque practices. No invented quotes or blanket cultural claims.
+- [x] Audit terminology across pages. Known case: `mezcal-espadin-valles-centrales` has `category` wording that treats "joven/abocado" as an unaged class. Verify against NOM-070 and add a regression test.
+- [x] Fix "sabroso" used for savoury (about 20 strings in `content-es.json`, plus the mood "Especiado y sabroso" in `locale.js`) and "lima" used for lime. Check the chapter line "(lima, no siempre limón)" in context first.
+- [x] Localize `placeCoords.precision`, which renders in English on Spanish profiles.
+- [x] Align the English edition to British spelling ("Flavour" and "Flavor" are mixed).
+- [x] Sources:
   - Tag official sources (DOF declarations, NOM-070, the Sonora bacanora page, INIFAP, CONAFOR) with an official/regulator kind instead of `style`.
   - Remove the duplicate Difford's mezcal URL.
-  - Replace the Facebook producer link with the brand's own site if one exists.
-  - Prefer an independent second source when touching bottles that rely on Mezcal Reviews (about 30 entries).
+  - Replace the Facebook producer link with the brand's own site if one exists. *No Pal'alma site found; the link is labelled as Facebook.*
+  - Prefer an independent second source when touching bottles that rely on Mezcal Reviews (about 30 entries). *Carried forward: no bottle's tasting facts changed in Pair 28, so this stays a standing rule.*
   - Register the producer pages behind Pair 18's corrected bottle origins, which are not yet in `sources.json`: <https://www.montelobos.com/our-mezcals/montelobos-tobala/> (Palenque del Tentzo, Puebla) and <https://delmaguey.com/pechuga/> (Santa Catarina Minas, Oaxaca). Cite them on those bottles.
-- [ ] Check each process's `sourceIds` actually support its explanation (`diffords-mezcal-what-it-is` does not describe pit roasting). Add a profile milling/extraction process ID where the method text names the tool, if useful beyond the plant-to-glass routes.
+- [x] Check each process's `sourceIds` actually support its explanation (`diffords-mezcal-what-it-is` does not describe pit roasting). Add a profile milling/extraction process ID where the method text names the tool, if useful beyond the plant-to-glass routes.
 - **Acceptance:** profiles answer "what will this likely taste like, why might it, what sets it apart?" before methodology. No unsupported region-wide claims from one bottle.
 
 ### Pair 29 — Learning quality and usability audit (maintenance, P2)

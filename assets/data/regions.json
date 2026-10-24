@@ -171,7 +171,7 @@
         "wild-fermentation",
         "distillation-methods"
       ],
-      "distinctions": "Tuxca has no denomination of origin; vinatero practice is cultural, and bottles carry no NOM registration — the absence is of DO-scheme certification, not of other labelling obligations — a legal fact, not an authenticity judgment. The tradition is borderlands: it reaches into northern Colima, but the app's cited example is a Jalisco-made bottle, which does not by itself establish Colima production coverage.",
+      "distinctions": "Tuxca has no denomination of origin. Vinatero practice is cultural, and bottles carry no DO certification, though other labelling obligations still apply: a legal fact, not a judgment on authenticity. The tradition belongs to the borderlands and reaches into northern Colima, but the cited example is a Jalisco-made bottle, which does not by itself establish Colima production coverage.",
       "sourceIds": [
         "mexicanspiritsbible-tuxca"
       ]
@@ -238,7 +238,7 @@
         "wild-fermentation",
         "distillation-methods"
       ],
-      "distinctions": "Sotol's DO (2002) covers Chihuahua, Coahuila and Durango; Dasylirion is not an agave, and the app keeps that explicit.",
+      "distinctions": "Sotol's DO (2002) covers Chihuahua, Coahuila and Durango. Dasylirion is not an agave, and every page here says so.",
       "sourceIds": [
         "wikipedia-sotol"
       ]
@@ -260,7 +260,7 @@
         "wild-fermentation",
         "distillation-methods"
       ],
-      "distinctions": "App coverage, not a legal boundary: Guerrero is a major mezcal state under the DO, and papalote here names a cupreata-lineage agave of these mountains; local names need their geographic context.",
+      "distinctions": "This area marks where the profile comes from, not a legal boundary: Guerrero is a major mezcal state under the DO, and papalote here names a cupreata-lineage agave of these mountains; local names need their geographic context.",
       "sourceIds": [
         "sic-cultura-guerrero",
         "mezcalreviews-legendario-domingo-cupreata"
@@ -283,7 +283,7 @@
         "wild-fermentation",
         "distillation-methods"
       ],
-      "distinctions": "App coverage, not a legal boundary: Durango lies within the mezcal DO, and a vinata — not a palenque — is the Durango word for a small distillery.",
+      "distinctions": "This area marks where the profile comes from, not a legal boundary: Durango lies within the mezcal DO, and a vinata — not a palenque — is the Durango word for a small distillery.",
       "sourceIds": [
         "inifap-agave-reproduccion",
         "sevenfifty-durango-mezcal",
@@ -306,7 +306,7 @@
       "processIds": [
         "distillation-methods"
       ],
-      "distinctions": "App coverage, not a legal boundary: the salmiana here is the plateau's wild maguey verde, cooked mezcal-style — a different tradition from the pulquero sap harvest of the same species farther south.",
+      "distinctions": "This area marks where the profile comes from, not a legal boundary: the salmiana here is the plateau's wild maguey verde, cooked mezcal-style — a different tradition from the pulquero sap harvest of the same species farther south.",
       "sourceIds": [
         "conafor-salmiana-slp",
         "mezcalreviews-leyendas-slp",
@@ -328,7 +328,7 @@
       "processIds": [
         "distillation-methods"
       ],
-      "distinctions": "App coverage, not a legal boundary: Michoacán is a major mezcal state under the DO, and penca ancha is the Rio de Parras name for a cupreata-lineage agave; local names need their geographic context.",
+      "distinctions": "This area marks where the profile comes from, not a legal boundary: Michoacán is a major mezcal state under the DO, and penca ancha is the Rio de Parras name for a cupreata-lineage agave; local names need their geographic context.",
       "sourceIds": [
         "mezcalreviews-palalma-michoacan-cupreata",
         "mezcalreviews-michoacan-category"
@@ -351,7 +351,7 @@
         "wild-fermentation",
         "distillation-methods"
       ],
-      "distinctions": "App coverage, not a legal boundary: Puebla is a major mezcal state under the DO, and papalometl here names Agave potatorum in the bottle's documented case — the same word can name other agaves elsewhere, so local names need their geographic context.",
+      "distinctions": "This area marks where the guide's Puebla profile comes from, not a legal boundary: Puebla is a major mezcal state under the DO. Papalometl here names Agave potatorum in the bottle's documented case, and the same word can name other agaves elsewhere, so a local name needs its place.",
       "sourceIds": [
         "mezcalreviews-zinacantan-papalometl",
         "mezcalistas-zinacantan",

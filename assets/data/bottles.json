@@ -134,7 +134,7 @@
       "place": "Álamos, Sonora",
       "profileId": "bacanora-pacifica-sierra-sonora",
       "reviewSummary": "Wildflowers, citrus and the tartness of green apple, with a gentle violet finish — an aromatic, moderately complex bacanora.",
-      "editorialNote": "A fruitier, more floral read on bacanora than this profile describes — the green-apple tartness and violet finish sit well outside the mineral, savoury centre of the Rancho Tepúa example.",
+      "editorialNote": "Fruitier and more floral than the bacanora profile: green-apple tartness and a violet finish, well away from the mineral, savoury centre of the Rancho Tepúa example.",
       "noteProfileId": "bacanora-pacifica-sierra-sonora",
       "noteSourceIds": [
         "mezcalreviews-kilinga"
@@ -212,7 +212,7 @@
       "place": "Comitán de Domínguez, Chiapas",
       "profileId": "comiteco-aguamiel-chiapas",
       "composition": "Distilled from fermented agave sap (aguamiel); the broader comiteco category permits an additional cane-based sugar source — whether this specific bottle is 100% agave is not documented in the cited sources",
-      "reviewSummary": "Mezcal Reviews lists 9 Guardianes Comiteco Blanco from maguey Comitlán sap fermented and distilled in copper; tasting-note detail for this specific expression is not yet documented.",
+      "reviewSummary": "Made from the sap of maguey Comitlán, fermented and distilled in copper, according to its Mezcal Reviews listing. Tasting notes for this expression are not yet documented.",
       "sourceIds": [
         "backalley-comiteco",
         "mezcalreviews-9guardianes-blanco"
@@ -329,7 +329,7 @@
       "batch": "Rested in glass with branches of white oak",
       "profileId": "comiteco-anejo-comitan-chiapas",
       "composition": "Distilled from fermented agave sap (aguamiel); the broader comiteco category permits an additional cane-based sugar source — whether this specific bottle is 100% agave is not documented in the cited sources",
-      "reviewSummary": "Mezcal Reviews lists 9 Guardianes Comiteco Añejo at 42% ABV, from maguey Comitlán sap fermented and distilled in copper, then aged; the site lists no tasting notes for this expression, so no flavour description is offered beyond the profile-relative editorial note.",
+      "reviewSummary": "42% ABV, from maguey Comitlán sap fermented and distilled in copper, then aged, according to its Mezcal Reviews listing. The listing gives no tasting notes, so the only flavour guide here is the note on how it differs from the profile.",
       "sourceIds": [
         "mezcalreviews-9guardianes-anejo",
         "backalley-comiteco"
@@ -480,7 +480,7 @@
         "profile-not-covered"
       ],
       "noteProfileId": "mezcal-reposado-espadin-oaxaca",
-      "editorialNote": "An añejo (rested about 14 months, beyond the 1-year añejo minimum): the app's aged-mezcal profile describes the reposado class (2 months to 1 year), so this expression is covered as a catalogue fact, not mapped onto the reposado style profile.",
+      "editorialNote": "An añejo, rested about 14 months, past the 1-year añejo minimum. The aged-mezcal profile here covers the reposado class (2 months to 1 year), so this bottle sits in the catalogue on its own rather than as that profile's example.",
       "tastingSourceIds": [
         "bourbonbanter-ilegal"
       ]
@@ -510,7 +510,7 @@
       "noteSourceIds": [
         "mezcalreviews-montelobos-tobala"
       ],
-      "editorialNote": "Cultivated tobalá from Puebla, outside the wild-Oaxaca Sierra context this profile describes; the plant is the same species, but the growing region and cultivated production differ."
+      "editorialNote": "Cultivated tobalá from Puebla, away from the wild Oaxacan sierra the tobalá profile follows: the same species, grown in a different region and cultivated rather than wild."
     },
     {
       "id": "macurichos-ancestral-tobala",
@@ -599,7 +599,7 @@
       "place": "Zapotitlán de Vadillo, Jalisco",
       "batch": "Wild cimarrón (Agave angustifolia), cuaquizoca and salmiana (Agave inaequidens) agaves, pit-roasted, volcanic-stone-pit fermented, copper double-distilled; another producer pushing for a tuxca denomination of origin",
       "profileId": "tuxca-lineno-cimarron-jalisco-colima",
-      "reviewSummary": "The cited Mezcal Reviews entry documents the multi-agave composition (cimarrón, cuaquizoca, salmiana) and the volcanic-stone-pit fermentation; tasting notes for this specific batch are not yet documented, so no flavour character is claimed here.",
+      "reviewSummary": "Several agaves (cimarrón, cuaquizoca, salmiana), fermented in a volcanic-stone pit, according to its Mezcal Reviews entry. Tasting notes for this batch are not yet documented, so no flavour is claimed here.",
       "sourceIds": [
         "mezcalreviews-indio-alonso-tuxca"
       ],
@@ -654,7 +654,7 @@
         "profile-not-covered"
       ],
       "noteProfileId": "sotol-chihuahua",
-      "editorialNote": "An aged sotol (2 years in new French oak): the app's sotol profile describes an unaged Chihuahua desert style with no oak maturation, so this expression is covered as a catalogue fact, not mapped onto that style profile.",
+      "editorialNote": "An aged sotol, two years in new French oak. The sotol profile here follows the unaged Chihuahua desert style, so this bottle sits in the catalogue on its own rather than as that profile's example.",
       "tastingSourceIds": [
         "mezcalreviews-hacienda-chihuahua-anejo"
       ]
@@ -1021,7 +1021,7 @@
         "profile-not-covered"
       ],
       "reviewSummary": "Smooth complexity throughout: a fade of butterscotch, nutty almond and a smattering of wood-spice and tea, with peppery spices building in the throat.",
-      "editorialNote": "A highlands reposado: the app's reposado profile describes the Tequila Valley reading, and this expression distills in Los Altos — covered here as a catalogue fact, not mapped onto the valley profile.",
+      "editorialNote": "A highlands reposado: it's distilled in Los Altos, while the reposado profile here follows the Tequila Valley, so this bottle sits in the catalogue as a highland example rather than as that profile's example.",
       "noteProfileId": "tequila-reposado-valley-jalisco",
       "noteSourceIds": [
         "rumhowler-don-julio-reposado"
@@ -1051,7 +1051,7 @@
         "profile-not-covered"
       ],
       "reviewSummary": "Mellow agave with mild white pepper and light caramel, a very mild oak presence and an appealing honey-like sweetness, with lime zest and apricot jam melded into the agave, oak and caramel.",
-      "editorialNote": "A highlands añejo: the app's añejo profile describes the Tequila Valley reading, and this expression distills in Los Altos — covered here as a catalogue fact, not mapped onto the valley profile.",
+      "editorialNote": "A highlands añejo: it's distilled in Los Altos, while the añejo profile here follows the Tequila Valley, so this bottle sits in the catalogue as a highland example rather than as that profile's example.",
       "noteProfileId": "tequila-anejo-valley-jalisco",
       "noteSourceIds": [
         "rumhowler-don-julio-anejo"
@@ -1105,7 +1105,7 @@
         "profile-not-covered"
       ],
       "reviewSummary": "A dichotomous spirit: honeyed caramel sweetness, soft earthy baked squash, sweet green peppers, hot white pepper, sandalwood and a hint of vanilla, changing direction on the first sip.",
-      "editorialNote": "A highlands reposado: the app's reposado profile describes the Tequila Valley reading, and this expression distills in Los Altos — covered here as a catalogue fact, not mapped onto the valley profile.",
+      "editorialNote": "A highlands reposado: it's distilled in Los Altos, while the reposado profile here follows the Tequila Valley, so this bottle sits in the catalogue as a highland example rather than as that profile's example.",
       "noteProfileId": "tequila-reposado-valley-jalisco",
       "noteSourceIds": [
         "rumhowler-patron-reposado",
@@ -1136,7 +1136,7 @@
         "profile-not-covered"
       ],
       "reviewSummary": "Extraordinarily smooth, with a very sweet, fruity, almost wine-like nose and a bold, pure peppery flavour that finishes cleanly.",
-      "editorialNote": "A joven blend: no joven tequila style profile exists in this guide yet, so this entry is covered as a catalogue fact only.",
+      "editorialNote": "A joven blend. There's no joven tequila profile yet, so this bottle sits in the catalogue on its own.",
       "noteProfileId": "tequila-cristalino-style",
       "noteSourceIds": [
         "wineenthusiast-casa-dragones-joven"
