@@ -3065,3 +3065,62 @@ refinements, per plan section 4.5.
   physical touch and regional-reader validation of the new Spanish
   prose (Michoacán and Puebla voices) remain unverified. jsdom
   evidence only.
+
+## Post-roadmap pair 22 — Regional Expansion II Review (2026-10-24)
+
+Maintenance review of the pair-21 additions (Michoacán, Puebla) and the
+Colima/Nayarit contextual refinements, per plan section 4.5. All planned
+post-roadmap pairs (18–22) are now applied.
+
+### Defect found and fixed
+
+- **Formula repetition across the regional introductions (defect
+  found):** read together, three of the five new regional descriptions
+  (Durango, San Luis Potosí, Michoacán) opened with the same
+  construction — "…in a way espadín rarely does" / "…que el espadín
+  rara vez logra" — dulling the teaching voice the pair-19/21 gates
+  ask for. The three descriptions (EN and ES) were rewritten to lead
+  with each region's own concrete difference (Durango's
+  fruit-where-others-lean-smoky, the plateau's green-first welcome,
+  Michoacán's pulque-tinged house character). The tendency-qualifying
+  language is preserved, and a new regression caps the formula at one
+  occurrence across all five introductions in both languages.
+
+### Verified
+
+- **Reader journeys:** Michoacán and Puebla profiles render end to
+  end in EN and ES with serving advice, notice lines, example bottles
+  and onward steps — zero untranslated-field disclosures; accented
+  and unaccented searches still find both.
+- **Colima/Nayarit honesty:** Colima stays documented borderlands
+  context (the Jalisco-made example does not establish production
+  coverage — stated in the profile, the region record and both
+  languages); Nayarit stays exactly Bahía de Banderas, a strip, not
+  all Nayarit. No Colima or Nayarit state profile exists — pinned by
+  regression.
+- **Puebla bottle geography:** the corrected Montelobos record (San
+  Nicolás Huajuapan / Palenque del Tentzo, Puebla; honestly unmapped)
+  is consistent across the bottle record, its ES mirror, the
+  wild-Oaxaca tobalá profile (which keeps its own Santiago Matatlán
+  example), the catalogue and the plants file; no Oaxaca region
+  claims the Puebla palenque.
+- **No regressions:** all seven established traditions (tequila,
+  bacanora, raicilla, tuxca, comiteco, destilado de pulque, sotol)
+  re-pinned by id, tradition, example bottle and reference integrity;
+  every profile's example bottle resolves and maps back.
+
+### Validation
+
+- `npm run validate`: schema, cross-references and the full `node:test`
+  suite — 407 passing (401 prior + 6 new pair-22 regressions in
+  `test/pair-22-regional-review-2.test.mjs`).
+- Deployment: the existing GitHub Pages workflow; CI green on `main`.
+
+### Still unverified — no claim made
+
+- Native iPhone/iPad Safari, VoiceOver, physical touch and
+  regional-reader validation of the Spanish prose (including the
+  rewritten introductions) remain open, as in every prior pair.
+- Colima and Nayarit still have no documented profile-level coverage;
+  adding either remains future owner-directed work, not a gap in this
+  review.

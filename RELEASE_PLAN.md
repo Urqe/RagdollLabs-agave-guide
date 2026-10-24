@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–21 are recorded as applied (pair 21 — Beyond Oaxaca II — applied 2026-10-24). **Section 4.5 is the current execution authority**. Execute **post-roadmap pair 22 — Regional Expansion II Review next**, when requested by the owner.
+Post-roadmap pairs 8–22 are recorded as applied (pair 22 — Regional Expansion II Review — applied 2026-10-24). **Section 4.5 is the current execution authority**. All planned post-roadmap pairs are now applied; the plan's next work is the owner's to direct.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -808,7 +808,7 @@ These are claim-specific sources, not blanket endorsement of all content on thei
 
 ## 4.5 Follow-up audit and regional expansion — 2026-10-23
 
-**Current priority: post-roadmap pair 22 — Regional Expansion II Review (when the owner requests it).** Pairs 18–21 are recorded as applied in RELEASE_NOTES.md. These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
+**Current priority: none — all planned post-roadmap pairs (18–22) are applied.** Pairs 18–21 are recorded as applied in RELEASE_NOTES.md; pair 22 was applied 2026-10-24. These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
 
 ### Review baseline and assessment
 
@@ -930,10 +930,10 @@ These are priority coverage gaps, not a claim that other Mexican states lack tra
 
 ### Post-roadmap pair 22 — Regional Expansion II Review (maintenance)
 
-- [ ] Repeat pair 20's relevant semantic and reader-journey checks for Michoacán/Puebla and verify Colima/Nayarit contextual links do not overstate production, legal scope or app coverage.
-- [ ] Check that corrected Puebla bottle geography remains consistent across the earlier Oaxaca profile, catalogue, plants, regions and lessons.
-- [ ] Read the five added regional introductions together: each should teach a concrete difference and invite a sensible next step without repeating one formula or presenting dialect stereotypes.
-- [ ] Verify no regressions in established tequila, bacanora, raicilla, tuxca, comiteco, destilado de pulque or sotol paths. Document deployment, sources, remaining evidence gaps and actual device coverage.
+- [x] Repeat pair 20's relevant semantic and reader-journey checks for Michoacán/Puebla and verify Colima/Nayarit contextual links do not overstate production, legal scope or app coverage. (Pair 22 applied 2026-10-24: EN/ES reader journeys re-verified for both pair-21 profiles with zero untranslated disclosures; accented/unaccented search re-pinned; Colima kept to documented borderlands context and Nayarit to exactly Bahía de Banderas in EN and ES — no Colima or Nayarit state profile exists, pinned by regression.)
+- [x] Check that corrected Puebla bottle geography remains consistent across the earlier Oaxaca profile, catalogue, plants, regions and lessons. (Verified and pinned: Montelobos keeps San Nicolás Huajuapan/Palenque del Tentzo, Puebla in EN and ES with profileId null; the wild-Oaxaca tobalá profile keeps its own Santiago Matatlán example; no Oaxaca region claims the Puebla palenque; the potatorum plant links the new Puebla profile.)
+- [x] Read the five added regional introductions together: each should teach a concrete difference and invite a sensible next step without repeating one formula or presenting dialect stereotypes. (Defect found and fixed: Durango, SLP and Michoacán shared the same "in a way espadín rarely does" construction in EN and ES — three descriptions rewritten to lead with each region's own concrete difference; the tendency-qualifying language was preserved and is pinned by regression, with a formula-uniqueness cap of one across all five introductions in both languages.)
+- [x] Verify no regressions in established tequila, bacanora, raicilla, tuxca, comiteco, destilado de pulque or sotol paths. Document deployment, sources, remaining evidence gaps and actual device coverage. (All seven traditions re-pinned by id, tradition, example bottle, plant/region resolution and profile↔example integrity; `npm run validate` at 407 passing — 401 prior + 6 new pair-22 regressions in `test/pair-22-regional-review-2.test.mjs`; deployment via the existing Pages workflow with CI green; remaining evidence gaps and device coverage recorded in the pair-22 release notes — native-device and regional-reader validation remain open.)
 
 ### Regional research starting points
 
