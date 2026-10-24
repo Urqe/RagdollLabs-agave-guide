@@ -74,8 +74,8 @@
       "spirit": "mezcal",
       "stateId": "oax",
       "stateName": "Oaxaca",
-      "context": "Artisanal joven mezcal made from espadín agave (Agave angustifolia) in the Valles Centrales around Oaxaca. Here mezcal is family work: agave hearts roasted in earthen pit ovens, small batches, each palenque passing its craft to the next generation. The pit roast gives the spirit its signature smoke — in the Valles Centrales that smoke is part of home, the taste of the land itself, and locals embrace it as such. Espadín is the most widely planted mezcal agave — the one a Oaxacan family pours first for a curious visitor, because it is the friendliest way into the tradition.",
-      "description": "Mezcal is a distilled spirit made from the cooked hearts of many agave species, not just blue agave. This profile describes an artisanal pit-roasted style: roasting the piñas underground gives this style its smoke, though not all mezcal is pit-roasted or smoky, layered over fruit, herb and mineral notes that vary with the agave variety, the village and the maestro mezcalero. This profile describes the style of a typical Valles Centrales espadín joven; individual bottles vary widely.",
+      "context": "Joven mezcal from espadín (Agave angustifolia) in the Valles Centrales around Oaxaca, made the artisanal way. Here mezcal is family work: agave hearts roasted in earthen pit ovens, small batches, and a craft each palenque hands to the next generation. Espadín is the most widely planted mezcal agave, the one a Oaxacan family is likely to pour first for a curious visitor, because it's the friendliest way into the tradition. The smoke of the pit roast is part of what home tastes like here, and Oaxacans are proud of it.",
+      "description": "Expect roasted agave and smoke first, then fruit, herbs and a mineral-like edge that change with the village, the maestro mezcalero and the batch. Mezcal can be made from many agave species, not only blue agave, and not every mezcal is pit-roasted or smoky; this style is, because the piñas cook underground. Bottles from the same valley still vary widely.",
       "body": "medium",
       "tasteNotes": [
         "roasted agave",
@@ -97,7 +97,7 @@
       "plant": "Agave angustifolia (espadín, cultivated)",
       "process": "Earthen-pit roast, tahona or horse-drawn mill, wild-yeast fermentation, double distilled, joven (unaged)",
       "category": "Mezcal — spirit with its own Denomination of Origin; joven (or blanco) is its unaged legal class under NOM-070. Abocado con is a separate class, for mezcal with ingredients added",
-      "beginnerNote": "New to mezcal? The smoke comes from roasting the agave underground — it is a character of the process, not an added flavour. Oaxacans will happily tell you it is the taste of their earth.",
+      "beginnerNote": "New to mezcal? The smoke comes from roasting the agave underground. It's part of the process, not an added flavour, and Oaxacans will happily tell you it tastes of home.",
       "sensory": {
         "smoke": "medium",
         "herbal": "medium",
@@ -134,7 +134,7 @@
       "plantIds": [
         "agave-angustifolia"
       ],
-      "whyItTastes": "The earthen-pit roast cooks espadín slowly over wood — that is where the roast character comes from (how much smoke varies with wood, time and pit). Wild-yeast fermentation and tahona milling add texture; joven means no oak stands between you and the cook."
+      "whyItTastes": "The earthen pit cooks espadín slowly over wood, and that's where the roast and smoke come from; how much smoke depends on the wood, the time and the pit. Tahona milling and wild-yeast fermentation are part of the method too, and joven means no oak stands between you and the cook."
     },
     {
       "id": "bacanora-pacifica-sierra-sonora",
@@ -142,12 +142,12 @@
       "spirit": "bacanora",
       "stateId": "son",
       "stateName": "Sonora",
-      "context": "Bacanora is Sonora's own wild agave spirit: distilled from Agave angustifolia pacifica (locally called Pacifica, or Yaquiana) in the Sierra Madre de Sonora, under a denomination of origin that covers 35 Sonoran municipalities. For most of the 20th century (1915–1992, per Sonoran official history) making it was prohibited, and distilling continued quietly in the sierra; production was legalized again in 1992 and the denomination of origin arrived in 2000 — two separate milestones. That continuity is the heart of the tradition: bacanora survived because families kept distilling it, in vinatas passed from one generation of vinateros to the next.",
-      "description": "Traditional bacanora roasts the agave hearts in earthen pit ovens, often with mesquite wood, ferments with wild yeasts and distills twice, giving a spirit that sits stylistically between tequila and Oaxacan mezcal: roasted agave at the centre with smoke that is usually gentler than mezcal's, plus desert herbs and a mineral edge from the Sierra.",
+      "context": "Bacanora is Sonora's own wild agave spirit, distilled from Agave angustifolia pacifica (locally Pacifica, or Yaquiana) in the Sierra Madre de Sonora, under a denomination of origin that covers 35 Sonoran municipalities. For most of the 20th century (1915–1992, according to Sonora's official history) making it was prohibited, and families kept distilling quietly in the sierra. Production was legalized again in 1992, and the denomination of origin followed in 2000: two separate milestones. Bacanora survived because vinateros kept their vinatas going and taught the next generation, and Sonorans tell that story with pride.",
+      "description": "Expect roasted agave at the centre, a gentler smoke than most Oaxacan mezcal, desert herbs and a dry, mineral-like edge. Traditional bacanora roasts the agave hearts in earthen pits, often over mesquite, ferments with wild yeasts and is distilled twice, so in the glass it often sits between tequila and Oaxacan mezcal.",
       "plant": "Agave angustifolia pacifica (wild-harvested; locally Pacifica or Yaquiana)",
       "process": "Pit-roasted (often mesquite-fueled), wild-yeast fermentation, double distillation",
       "category": "Bacanora — spirit with its own Denomination of Origin (Sonora, since 2000)",
-      "beginnerNote": "New to bacanora? Think of it as mezcal's Sonoran cousin — same roasted-agave heart, usually a touch less smoky, often leaner and more herbal.",
+      "beginnerNote": "New to bacanora? Think of it as mezcal's Sonoran cousin: the same roasted-agave heart, usually a little less smoke, often leaner and more herbal.",
       "body": "medium",
       "tasteNotes": [
         "roasted agave",
@@ -202,7 +202,7 @@
       "plantIds": [
         "agave-angustifolia"
       ],
-      "whyItTastes": "Wild Pacifica/Yaquiana agave from the Sonoran sierra, pit-roasted (often over mesquite) and wild-fermented: reviewers and producers describe an herbal, gently smoky character that the guide attributes to the plant and the pit roast together — a documented tendency of this style, not a guaranteed outcome of wild harvest. Double distillation is the standard method here; it does not by itself ensure cleanliness."
+      "whyItTastes": "Wild Pacifica/Yaquiana from the Sonoran sierra, pit-roasted (often over mesquite) and wild-fermented. Producers and reviewers describe an herbal, gently smoky character and credit the plant and the pit roast together; take it as a tendency of the style, because wild harvest doesn't guarantee it. Double distillation is the standard method here, and on its own it doesn't make a spirit cleaner."
     },
     {
       "id": "raicilla-maximiliana-sierra-jalisco",
@@ -210,12 +210,12 @@
       "spirit": "raicilla",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Raicilla is the mountain spirit of Jalisco (the DO also reaches exactly one Nayarit municipality — Bahía de Banderas, on the Jalisco border, awarded in 2019 — a precise strip, not all Nayarit), and jaliscienses wear it as proof their state makes more than tequila. It splits into two editorial traditions: Sierra (mountain) raicilla, made mainly from Agave maximiliana and inaequidens cooked in above-ground ovens, and Costa (coastal) raicilla from angustifolia and rhodacantha cooked in underground pits. For decades raicilla was distilled informally, in the shadow of its famous neighbour — locals kept it alive until the law caught up. This profile covers the Sierra style around the Sierra Occidental.",
-      "description": "Sierra raicilla is typically cooked in above-ground adobe ovens rather than pits, so it tends to be less smoky than pit-roasted agave spirits, with a distinctive fermented, gently funky character: orchard fruit, herbs and a soft lactic roundness from wild-yeast fermentation in wooden vats. Distillation happens in small rustic tabernas — the word names the distillery itself, not the still — and each maestro's batches vary widely.",
+      "context": "Raicilla is Jalisco's mountain spirit, and jaliscienses pour it as proof that their state makes more than tequila. Its denomination of origin (2019) also reaches exactly one Nayarit municipality, Bahía de Banderas on the Jalisco border, not all Nayarit. There are two traditions: Sierra raicilla, made mainly from Agave maximiliana and inaequidens cooked in above-ground ovens, and Costa raicilla, from angustifolia and rhodacantha cooked in underground pits. For decades raicilla was made informally in the shadow of its famous neighbour, and the people of the sierra kept it alive until the law caught up. This is the Sierra style of the Sierra Occidental.",
+      "description": "Expect orchard fruit, herbs and a soft lactic roundness with a gently funky, fermented edge, and less smoke than pit-roasted spirits. Sierra raicilla is usually cooked in above-ground adobe ovens rather than pits, fermented with wild yeasts in wooden vats and distilled in small rustic tabernas (the word names the distillery, not the still). Each maestro's batches vary widely.",
       "plant": "Agave maximiliana (wild-harvested; Sierra raicilla's signature agave)",
       "process": "Above-ground adobe-oven roast, open wild-yeast fermentation in wooden vats, small-batch distillation",
       "category": "Raicilla — spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019)",
-      "beginnerNote": "New to raicilla? Expect an agave spirit that is often funkier and fruitier than tequila, and usually lighter on smoke than mezcal — Sierra versions especially. Jalisco's other pride, in a glass.",
+      "beginnerNote": "New to raicilla? Expect an agave spirit that's often funkier and fruitier than tequila and usually lighter on smoke than mezcal, Sierra raicilla especially. It's Jalisco's other pride.",
       "body": "medium",
       "tasteNotes": [
         "orchard fruit",
@@ -268,7 +268,7 @@
       "plantIds": [
         "agave-maximiliana"
       ],
-      "whyItTastes": "Wild maximiliana from Jalisco's mountains, roasted in above-ground adobe ovens rather than pits — less smoke than pit traditions — then open-fermented in wooden vats and small-batch distilled. The rustic herbal edge follows from wild plant, oven roast and batch scale."
+      "whyItTastes": "Wild maximiliana from Jalisco's mountains, roasted in above-ground adobe ovens instead of pits, which is why there's less smoke than in the pit traditions. Then come open fermentation in wooden vats and small-batch distillation. Plant, oven and batch size together give the rustic, herbal edge; no single step explains it."
     },
     {
       "id": "tuxca-lineno-cimarron-jalisco-colima",
@@ -276,12 +276,12 @@
       "spirit": "tuxca",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Tuxca is a borderlands spirit: a traditional agave distillate of the southern-Jalisco/northern-Colima frontier, named for the municipality of Tuxcacuesco below the Volcán de Colima. It has no denomination of origin, and the tradition itself keeps the name regional rather than legal — definitions are loose, and that looseness is part of how the communities around Tuxcacuesco, the Río Almería valley, Zapotitlán de Vadillo and Tolimán keep it: the old way, and quietly. Colima's documented role in this guide is this borderlands context — the tradition, the volcano's slopes and the Río Almería valley reach across the state line — while the cited example bottle is made in Jalisco; the app makes no claim of Colima production coverage beyond what its sources document.",
-      "description": "Tuxca is defined less by a legal category than by its method: wild agaves (often Liñeno/Cimarrón, i.e. Agave angustifolia and relatives) roasted in cylindrical pits, hand-mashed, fermented in volcanic stone craters, and distilled in wooden Filipino stills. The result is lean, spicy and mineral rather than smoky-sweet.",
+      "context": "Tuxca belongs to the borderlands of southern Jalisco and northern Colima, below the Volcán de Colima, and takes its name from the municipality of Tuxcacuesco. It has no denomination of origin, and the communities that keep it (Tuxcacuesco, the Río Almería valley, Zapotitlán de Vadillo, Tolimán) are content for the name to stay regional rather than legal. They make it the old way, and quietly. Colima's part in this story is the borderland itself: the tradition, the volcano's slopes and the Río Almería valley cross the state line. The cited example bottle is made in Jalisco, and this guide makes no claim of Colima production coverage beyond what its sources document.",
+      "description": "Expect a lean, spicy, mineral-like spirit rather than a smoky-sweet one. Tuxca is defined less by a legal category than by its method: wild agaves (often Liñeño/Cimarrón, Agave angustifolia and relatives) roasted in cylindrical pits, mashed by hand, fermented in volcanic stone craters and distilled in wooden Filipino stills.",
       "plant": "Wild agaves, often Liñeno/Cimarrón (Agave angustifolia and local relatives); ensambles vary by vinatero",
       "process": "Cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation",
       "category": "Tuxca — a regional tradition with no denomination of origin; legal status is not equivalent to tequila or mezcal",
-      "beginnerNote": "New to tuxca? Expect an uncertified, deeply traditional borderlands spirit — leaner and more mineral than most mezcal, with spice instead of smoke. No DO certification seal on the bottle; other labelling requirements still apply, and the tradition's authority is cultural rather than certified.",
+      "beginnerNote": "New to tuxca? Expect a deeply traditional borderlands spirit without certification: leaner and more mineral than most mezcal, with spice instead of smoke. You won't find a DO certification seal on the bottle, though other labelling requirements still apply; the tradition's authority is cultural rather than certified.",
       "aliases": [
         "tuxca",
         "vino de mezcal tuxca"
@@ -338,7 +338,7 @@
       "plantIds": [
         "tuxca-wild-agaves"
       ],
-      "whyItTastes": "Wild Liñeño/Cimarrón agaves, a cylindrical pit roast, hand-mashing, fermentation in a volcanic crater filter and a wooden Filipino still — an unusually specific method chain that leaves a distinctive cooked-wild character, varying batch to batch with the agave mix."
+      "whyItTastes": "Wild Liñeño/Cimarrón agaves, a cylindrical pit roast, hand-mashing, fermentation in a volcanic stone crater and a wooden Filipino still. Few traditions follow such a specific chain, and the cooked, wild character it leaves changes from batch to batch with the agave mix."
     },
     {
       "id": "comiteco-aguamiel-chiapas",
@@ -346,12 +346,12 @@
       "spirit": "comiteco",
       "stateId": "chis",
       "stateName": "Chiapas",
-      "context": "Comiteco belongs to Comitán, Chiapas: a sap-derived agave spirit where, instead of cooking harvested agave hearts, producers collect the fresh sap (aguamiel) of the living maguey comiteco, ferment it, and distill it. Since 6 October 2025 the name “Comiteco de Comitán, Chiapas” is protected as an Indicación Geográfica — a legal protection distinct from a denomination of origin — covering a spirit made from maguey comiteco (identified as Agave americana L. in the declaration; some references also name Agave atrovirens) together with cane sugars in the Meseta Comiteca-Tojolabal. Cane sugar alongside the sap is part of the protected definition, and an honest bottle always tells you what is in it.",
-      "description": "Because the agave is never cooked, comiteco lacks the roast and smoke of pit-roasted spirits and instead shows a green, lactic, gently herbal character carried over from the fermented sap — closer in character to a distilled pulque than to mezcal, though it is its own tradition. This profile describes the style generally; compositions vary between producers and are disclosed per bottle.",
+      "context": "Comiteco belongs to Comitán, Chiapas. Instead of cooking agave hearts, producers collect the fresh sap (aguamiel) of the living maguey comiteco, ferment it and distil it. Since 6 October 2025 the name “Comiteco de Comitán, Chiapas” has been protected as an Indicación Geográfica, a legal protection distinct from a denomination of origin. It covers a spirit made from maguey comiteco (identified as Agave americana L. in the declaration; some references also name Agave atrovirens) together with cane sugars in the Meseta Comiteca-Tojolabal. Cane sugar is part of the protected definition, and an honest bottle tells you what's in it.",
+      "description": "Expect green, lactic, gently herbal notes from the fermented sap, and none of the roast or smoke of pit-roasted spirits, because the agave is never cooked. In character it sits closer to a distilled pulque than to mezcal, though it's a tradition of its own. Recipes vary between producers and are disclosed bottle by bottle.",
       "plant": "Maguey comiteco (Agave americana L. per the 2025 IG declaration; some references name Agave atrovirens), cultivated; sap collected from the living plant",
       "process": "Sap-derived: aguamiel collected from the living plant, fermented, distilled — no cooking of the piña",
       "category": "Comiteco — a regional tradition from Comitán, Chiapas, protected since October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas”; an IG is a different legal figure from tequila's or mezcal's denomination of origin",
-      "beginnerNote": "New to comiteco? Forget smoke: this is a sap spirit — think green, lactic and herbal, from uncooked agave. Comitán's own tradition, unlike anything to the north.",
+      "beginnerNote": "New to comiteco? Forget smoke: this is a sap spirit, green, lactic and herbal, from uncooked agave. It's Comitán's own tradition, and unlike the cooked-agave spirits most people meet first.",
       "aliases": [
         "comiteco"
       ],
@@ -406,7 +406,7 @@
       "plantIds": [
         "agave-atrovirens"
       ],
-      "whyItTastes": "No roast at all: the living maguey comiteco's sap (aguamiel) is collected, fermented and distilled. Everything in the glass follows from that sap path — which is why comiteco reads nothing like a cooked-heart spirit."
+      "whyItTastes": "No roast at all: the sap (aguamiel) of the living maguey comiteco is collected, fermented and distilled, alongside the cane sugar the definition allows. That sap path is why comiteco tastes nothing like a cooked-heart spirit."
     },
     {
       "id": "destilado-de-pulque-salmiana-tlaxcala",
@@ -414,12 +414,12 @@
       "spirit": "destilado-de-pulque",
       "stateId": "tlax",
       "stateName": "Tlaxcala",
-      "context": "Tlaxcala holds pulque close: it is the heartland of the maguey pulquero. Destilado de pulque is the region's distilled agave-sap spirit — producers of the pulque tradition ferment the aguamiel of the maguey pulquero (Agave salmiana) into pulque, then distill it — the agave is never cooked. Tlaxcala is not part of the mezcal denomination, and destilado de pulque is not a certified category; it is a regional tradition, sold under destilado labels, kept by families for whom distilling pulque is part of the heritage of their hills. Fermented pulque itself (undistilled) is not part of this spirit catalogue.",
-      "description": "Distilling a fermented sap rather than a cooked agave mash gives destilado de pulque its signature: fresh, green, lactic and faintly wild, with the vegetal, slightly tangy character of pulque carried into the glass rather than roast or smoke. Reviews note everything from steamed grass and sour-candy acidity to creamed-corn sweetness — a broad, unusual range.",
+      "context": "Tlaxcala holds pulque close: it's the heartland of the maguey pulquero. Destilado de pulque is the region's distilled sap spirit. Producers ferment the aguamiel of the maguey pulquero (Agave salmiana) into pulque and then distil it, and the agave is never cooked. Tlaxcala isn't part of the mezcal denomination and destilado de pulque isn't a certified category; it's a regional tradition sold under destilado labels, kept by families for whom distilling pulque is part of the heritage of their hills. Pulque itself, undistilled, isn't part of this spirit catalogue.",
+      "description": "Expect fresh, green, lactic and faintly wild notes, with pulque's vegetal tang carried into the glass instead of roast or smoke. Tasters report a wide, unusual range, from steamed grass and sour-candy acidity to creamed-corn sweetness. That signature comes from distilling a fermented sap rather than a cooked agave mash.",
       "plant": "Maguey pulquero (Agave salmiana); sap collected daily from the living plant",
       "process": "Sap-derived: aguamiel fermented into pulque (about 48 hours), then distilled; the piña is never cooked",
       "category": "Destilado de pulque — a regional tradition; no denomination of origin, and explicitly not mezcal (fermented pulque is not a distilled spirit)",
-      "beginnerNote": "New to destilado de pulque? It is distilled pulque — uncooked agave sap, so expect lactic, green, gently sour character unlike any cooked-agave spirit. A taste of Tlaxcala's oldest trade.",
+      "beginnerNote": "New to destilado de pulque? It's distilled pulque: uncooked agave sap, so expect lactic, green, gently sour notes unlike any cooked-agave spirit. A taste of Tlaxcala's pulque country.",
       "aliases": [
         "destilado de pulque",
         "distilled pulque",
@@ -476,7 +476,7 @@
       "plantIds": [
         "agave-salmiana"
       ],
-      "whyItTastes": "Aguamiel from the living maguey pulquero is fermented into pulque (~48 hours) and then distilled; the piña is never cooked. The profile follows the sap, not the roast."
+      "whyItTastes": "Aguamiel from the living maguey pulquero ferments into pulque (about 48 hours) and is then distilled; the piña is never cooked. The flavour follows the sap, not a roast."
     },
     {
       "id": "raicilla-costa-jalisco",
@@ -484,13 +484,13 @@
       "spirit": "raicilla",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Raicilla's denomination of origin (2019) spans 16 Jalisco municipalities and exactly one in Nayarit — the Bahía de Banderas municipality on the Jalisco border, a precise strip rather than all Nayarit, and editorially splits into two traditions: Sierra (mountain) and Costa (coastal). Coastal raicilla comes from the Cabo Corrientes and Tomatlán area, made mainly with Agave angustifolia (locally chico aguiar) and Agave rhodacantha. Fishermen and farmers on this coast cook their agave in underground pits, the old way — and the coast takes pride in the lean, saline character of its raicilla beside the mountain style.",
-      "description": "Unlike the Sierra style's above-ground adobe ovens, coastal producers traditionally cook their agave in underground pits — so coastal raicilla leans smokier and more savoury than its mountain sibling, with the pit roast alongside citrus and herbal notes. This profile describes the editorial style; individual bottles vary widely and tasting notes for the example bottle are not yet documented.",
+      "context": "On the Jalisco coast, around Cabo Corrientes and Tomatlán, raicilla is made mainly from Agave angustifolia (locally chico aguiar) and Agave rhodacantha, and fishermen and farmers cook it the old way, in underground pits. Raicilla's denomination of origin (2019) covers 16 Jalisco municipalities and exactly one in Nayarit, Bahía de Banderas on the Jalisco border, rather than all Nayarit. The tradition splits into Sierra and Costa, and the coast is proud of the lean, saline character of its raicilla beside the mountain style.",
+      "description": "Expect more smoke and a more savoury edge than in Sierra raicilla, with citrus and herbs alongside the pit roast. The difference is in the cook: coastal producers traditionally roast in underground pits, where the Sierra uses above-ground adobe ovens. Bottles vary widely, and tasting notes for the example bottle are not yet documented.",
       "plant": "Agave angustifolia (chico aguiar) and Agave rhodacantha (wild and cultivated)",
       "plantId": "agave-angustifolia",
       "process": "Underground pit roast, wild-yeast fermentation, small-batch distillation",
       "category": "Raicilla — spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019); Costa is an editorial tradition split, not a legal class",
-      "beginnerNote": "New to coastal raicilla? Think of it as the maritime, more smoky-pit cousin of Sierra raicilla: same DO, different cook. The coast's own take.",
+      "beginnerNote": "New to coastal raicilla? Think of it as the smokier, pit-roasted cousin of Sierra raicilla: same DO, different cook, and the coast's own take.",
       "aliases": [
         "costa",
         "raicilla de la costa",
@@ -547,7 +547,7 @@
         "agave-angustifolia",
         "agave-rhodacantha"
       ],
-      "whyItTastes": "Coastal chico aguiar and rhodacantha agaves, an underground pit roast and wild fermentation in the Cabo Corrientes canyons — a different plant mix and roast from the Sierra tradition, which is why Costa and Sierra raicilla diverge."
+      "whyItTastes": "Coastal chico aguiar and rhodacantha, an underground pit roast and wild fermentation in the canyons of Cabo Corrientes: a different plant mix and a different roast from the Sierra tradition, which is why Costa and Sierra raicilla taste apart."
     },
     {
       "id": "tequila-reposado-valley-jalisco",
@@ -780,13 +780,13 @@
       "spirit": "comiteco",
       "stateId": "chis",
       "stateName": "Chiapas",
-      "context": "Comiteco is a sap-derived agave spirit from the municipality of Comitán, Chiapas, produced by fermenting and distilling the fresh sap (aguamiel) of the living maguey comiteco without cooking the plant. This profile covers the aged expression of that tradition. The añejo of the example producer rests in glass with branches of white oak rather than in barrels, so its wood character comes from oak contact in glass, not barrel maturation. Añejo here is a producer expression — verify against the applicable IG rules for “Comiteco de Comitán, Chiapas” (protected 6 October 2025) rather than assuming aged classes do not exist.",
-      "description": "Glass resting on white-oak branches gives this style a soft wood influence without the vanilla-heavy roundness of barrel-aged spirits: the green, lactic, herbal sap character of comiteco stays in the frame while oak contributes gentle spice and a touch of colour. Compared with the unaged comiteco profile, expect a slightly rounder, warmer version of the same tradition rather than a whiskey-adjacent profile.",
+      "context": "This is the aged side of comiteco, Comitán's sap spirit: the fresh aguamiel of the living maguey comiteco, fermented and distilled without cooking the plant. The example producer rests its añejo in glass with branches of white oak rather than in barrels, so the wood character comes from oak contact in glass, not barrel maturation. Añejo here is the producer's own expression. The Indicación Geográfica “Comiteco de Comitán, Chiapas” (protected 6 October 2025) sets the rules, so check them rather than assuming aged classes don't exist.",
+      "description": "Expect the same green, lactic, herbal sap character as young comiteco, with gentle oak spice and a little colour, and none of the vanilla-heavy roundness of barrel-aged spirits. Resting on white-oak branches in glass keeps the wood soft. Beside the unaged comiteco profile it tastes slightly rounder and warmer, still a long way from whiskey.",
       "plant": "Maguey comiteco (Agave americana L. per the 2025 IG declaration; some references name Agave atrovirens), cultivated; sap collected from the living plant",
       "plantId": "agave-atrovirens",
       "process": "Sap-derived: aguamiel collected from the living plant, fermented, distilled in copper, then rested in glass with branches of white oak (no barrel maturation, no cooking of the piña)",
       "category": "Comiteco añejo — a regional tradition from Comitán, Chiapas, protected since October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas”; añejo here is a producer expression, not a legal class as it is in tequila",
-      "beginnerNote": "New to comiteco añejo? Do not expect tequila añejo: the wood comes from oak branches resting in glass, so it is gentler — think warm spice over the same green, lactic sap character.",
+      "beginnerNote": "New to comiteco añejo? Don't expect a tequila añejo. The wood comes from oak branches resting in glass, so it's gentler: warm spice over the same green, lactic sap character.",
       "aliases": [
         "comiteco anejo",
         "aged comiteco"
@@ -842,7 +842,7 @@
       "plantIds": [
         "agave-atrovirens"
       ],
-      "whyItTastes": "Sap-derived like the blanco, then rested in glass with branches of white oak — a gentle wood touch without barrel maturation, and añejo here is a producer expression, not a legal class like tequila's."
+      "whyItTastes": "Sap-derived like the young comiteco, then rested in glass with branches of white oak: a gentle touch of wood without barrel maturation. Añejo here is a producer expression, not a legal class like tequila's."
     },
     {
       "id": "raicilla-reposado-jalisco",
@@ -850,12 +850,12 @@
       "spirit": "raicilla",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Raicilla is a denomination-of-origin agave spirit from Jalisco, and aged expressions exist (the example bottle rests in wood); the precise aged-class requirements rest on the 2019 DO declaration and the published standard project rather than tequila-style rules. This profile covers the young-rested end — short rests of a few months that round the spirit without pushing the agave out of the frame. Jalisco's raicilleros are proud that their spirit earned legal recognition without giving up its rustic character; short rests are how they keep it that way.",
-      "description": "A short barrel rest (the example bottle lists 3 months) takes the fruity, floral, delicately smoky raicilla character and adds a light wood halo: vanilla, caramel and soft fruit sweetness around — rather than instead of — the agave. Reviewers of the example bottle describe sherry-cask influence with plum, raisin and sweet tobacco, and note the agave can be overpowered by cask character; that risk of wood masking the spirit is part of this style's honest picture.",
+      "context": "Raicilla has a denomination of origin, and aged expressions exist (the example bottle rests in wood). The exact requirements for aged classes come from the 2019 DO declaration and the published draft standard, not from tequila's rules. This is the young-rested end: a few months in wood that round the spirit without pushing the agave aside. Jalisco's raicilleros are proud that their spirit won legal recognition without losing its rustic character, and short rests are one way they keep it.",
+      "description": "Expect the fruity, floral, lightly smoky raicilla character with a light halo of vanilla, caramel and soft fruit sweetness around the agave, not in place of it. The example bottle lists a 3-month rest, and its reviewers describe sherry-cask influence with plum, raisin and sweet tobacco; they also warn that the cask can overpower the agave. That risk of wood masking the spirit is part of an honest picture of the style.",
       "plant": "Varies by bottling (the example bottle lists Angustifolia and Maximiliana); linked to the Maximiliana plant page as the Sierra tradition's signature agave — check the bottle, batches differ",
       "process": "Fermented and distilled (the example bottle lists steel), then rested in wooden barrels about 3 months",
       "category": "Raicilla reposado — an aged-class claim under the raicilla denomination of origin (2019); the aged-class rules rest on the DO declaration and the published standard project, so verify the effective version rather than assuming tequila-style minimums",
-      "beginnerNote": "New to aged raicilla? Expect the fruit and florals of the joven with a light caramel-vanilla halo from a short rest — closer to its unaged self than to tequila reposado.",
+      "beginnerNote": "New to aged raicilla? Expect the fruit and flowers of a joven with a light caramel-vanilla halo from a short rest, closer to its unaged self than to tequila reposado.",
       "aliases": [
         "raicilla reposado",
         "aged raicilla"
@@ -911,7 +911,7 @@
       "plantIds": [
         "agave-maximiliana"
       ],
-      "whyItTastes": "Fermented and distilled (the example bottle lists steel), then rested in wooden barrels about three months — a short rest of the example bottle (not a legal minimum) that rounds the raicilla without turning it into something else.",
+      "whyItTastes": "Fermented and distilled (the example bottle lists steel), then rested in wooden barrels for about three months. That's this bottle's choice, not a legal minimum, and the short rest rounds the raicilla without turning it into something else.",
       "maturation": {
         "class": "reposado",
         "duration": "minimum 2 months in wood"
@@ -999,13 +999,13 @@
       "spirit": "mezcal",
       "stateId": "oax",
       "stateName": "Oaxaca",
-      "context": "Reposado is a legal mezcal class under NOM-070-SCFI-2016 (which defines six classes: blanco o joven, madurado en vidrio, reposado, añejo, abocado con and destilado con): a rest of two months to a year in wood. Most mezcal sold worldwide is joven (unaged), and many Oaxacan traditionalists argue wood obscures what makes mezcal distinct — that argument is part of the pride: they defend their pit roast because it is their land in the glass. Aged mezcal is nonetheless a growing, legal part of the category. This profile covers the short-rested end: a few months in wood, typically starting from pit-roasted espadín.",
-      "description": "A short barrel rest softens the pit-roast smoke of espadín mezcal and layers light vanilla and caramel over it, without erasing the spirit's vegetal, roasted character. Reviews of the example bottle describe exactly that balance — smoke carried from nose to finish, ending in a smoky butterscotch — while others caution the wood can dominate. Expect mezcal first, wood second; if the wood leads, it is closer to tequila reposado territory.",
+      "context": "Reposado is one of the six mezcal classes in NOM-070-SCFI-2016 (blanco o joven, madurado en vidrio, reposado, añejo, abocado con and destilado con): a rest of two months to a year in wood. Most mezcal sold around the world is joven, and many Oaxacan traditionalists argue that wood hides what makes mezcal distinct; they defend the pit roast because it tastes of their land. Aged mezcal is still a growing, legal part of the category. This is the short-rested end: a few months in wood, usually starting from pit-roasted espadín.",
+      "description": "Expect espadín's pit-roast smoke, softened, with light vanilla and caramel over it and the vegetal, roasted character still there. Reviewers of the example bottle describe exactly that balance, smoke from nose to finish ending in a smoky butterscotch, while others caution that the wood can dominate. Mezcal first, wood second: if the wood leads, it's drifting towards tequila reposado.",
       "plant": "Agave angustifolia (espadín, cultivated); some producers blend wild agaves",
       "plantId": "agave-angustifolia",
       "process": "Pit-roasted, stone-milled, wild-fermented, distilled, then rested in oak 2-12 months (the example bottle lists 4-6 months in American oak)",
       "category": "Mezcal — spirit with its own denomination of origin; reposado is a legal class (wood-rested, 2–12 months; the wood need not be oak, and the two-month start coincides with tequila's although the other requirements differ)",
-      "beginnerNote": "New to mezcal reposado? Expect the smoke of a joven softened with vanilla and caramel — a gentler entry into smoked agave spirits.",
+      "beginnerNote": "New to mezcal reposado? Expect the smoke of a joven softened with vanilla and caramel: a gentler way into smoky agave spirits.",
       "aliases": [
         "mezcal reposado",
         "aged mezcal",
@@ -1062,7 +1062,7 @@
       "plantIds": [
         "agave-angustifolia"
       ],
-      "whyItTastes": "The same pit-roasted espadín base as the joven, rested in oak 2–12 months (the example bottle lists 4–6 in American oak): the roast stays, softened by wood. Tequila and mezcal reposado both start at two months, but their other requirements differ — do not transfer rules between spirits.",
+      "whyItTastes": "The same pit-roasted espadín base as the joven, rested in oak for 2–12 months (the example bottle lists 4–6 in American oak): the roast stays, softened by wood. Tequila and mezcal reposado both start at two months, but their other requirements differ, so don't carry rules from one spirit to the other.",
       "maturation": {
         "class": "reposado",
         "duration": "2 months to 1 year in oak"
@@ -1074,13 +1074,13 @@
       "spirit": "mezcal",
       "stateId": "oax",
       "stateName": "Oaxaca",
-      "context": "Tobalá (Agave potatorum) is a small, high-altitude, mostly wild agave often called the 'king of agaves' in México; its tiny size and long maturity (a variable, source-dependent range often cited around 12–15 years) give very low yields, which has pushed prices up and wild populations down. The mezcal DO permits any agave species, so tobalá is mezcal; some tobalá is now cultivated, which changes both the sustainability story and, reviewers note, sometimes the flavour. This is a plant-driven style, not a place-driven one: tobalá grows across Oaxaca's Sierra Norte and beyond. In the Sierra Norte, finding a tobalá ready to harvest is a source of personal pride — a mezcalero will walk you to the plant, not to a map.",
-      "description": "Tobalá mezcal is typically lighter and more floral than espadín, with sweet citrus, tropical fruit and a silky texture over a gentler roast. Batch variation is genuinely large — a cited blind tasting of eight tobalás found no single common thread — so treat this as a family of expressions, not one flavour. The example bottle, from wild-harvested tobalá around Santiago Matatlán, is herbal and delicate, with dry soil, thyme, coriander and a touch of rosemary.",
+      "context": "Tobalá (Agave potatorum) is a small, mostly wild agave of the high country, often called the 'king of agaves' in México. It's tiny and slow to mature (a variable, source-dependent range often cited around 12–15 years), so yields are very low, which has pushed prices up and wild populations down. The mezcal DO permits any agave species, so tobalá is mezcal; some tobalá is now cultivated, which changes both the sustainability story and, reviewers note, sometimes the flavour. This style follows the plant rather than a place: tobalá grows across Oaxaca's Sierra Norte and beyond, and in the Sierra Norte finding one ready to harvest is a point of personal pride.",
+      "description": "Expect a lighter, more floral mezcal than espadín: sweet citrus, tropical fruit and a silky texture over a gentler roast. Ancestral producers distil it in clay pots, and artisanal producers in copper or clay, since the artisanal category allows both. Batch variation is genuinely large; a cited blind tasting of eight tobalás found no single common thread, so think of a family of expressions rather than one flavour. The example bottle, from wild-harvested tobalá around Santiago Matatlán, is herbal and delicate, with dry soil, thyme, coriander and a touch of rosemary.",
       "plant": "Agave potatorum (tobalá; mostly wild-harvested, some cultivated — check the bottle)",
       "plantId": "agave-potatorum",
       "process": "Pit-roasted, stone-milled, wild-fermented, distilled; NOM-070's artisanal category permits copper alembics or clay pots, so clay is not exclusive to ancestral production",
       "category": "Mezcal — tobalá is within the mezcal denomination of origin; it is a wild agave (Agave potatorum) under sustainability pressure, not a legal class or one of the NOM-070 production categories",
-      "beginnerNote": "New to tobalá? Expect mezcal's gentler, more floral cousin: sweet citrus and tropical fruit over a soft roast — pricier because the agave is small, slow and scarce.",
+      "beginnerNote": "New to tobalá? Expect mezcal's gentler, more floral side: sweet citrus and tropical fruit over a soft roast. It costs more because the agave is small, slow and scarce.",
       "aliases": [
         "tobala",
         "tobalá",
@@ -1136,7 +1136,7 @@
       "plantIds": [
         "agave-potatorum"
       ],
-      "whyItTastes": "Small wild tobalá matures over a variable, source-dependent range (often cited around 12–15 years) at altitude, giving very low yields; reviewers describe concentrated character in some batches, pit roast and often clay-pot distillation keep the cook gentle. Batch variation is genuine and large — a cited blind tasting found no single common thread."
+      "whyItTastes": "Small wild tobalá matures over many years at altitude (often cited around 12–15, depending on the source), giving very low yields. Reviewers describe concentrated character in some batches, and the pit roast and frequent clay-pot distillation keep the cook gentle. Batch variation is genuine and large: a cited blind tasting found no single common thread."
     },
     {
       "id": "sotol-chihuahua",
@@ -1144,12 +1144,12 @@
       "spirit": "sotol",
       "stateId": "chih",
       "stateName": "Chihuahua",
-      "context": "Sotol is the desert’s own spirit: distilled from plants of the Dasylirion genus (desert spoon, sereque), native to the Chihuahuan desert — relatives of agave in the Asparagaceae family that share the roasted-piña logic, and proudly not agave. Sotol has had a Denominación de Origen since 2002, covering only Chihuahua, Coahuila and Durango; its 20th-century history includes restrictive regulation and clandestine production in the northern Sierra (the exact legal framing varied by era and place; this guide asserts no single nationwide pre-1994 ban). The vinatas of the Sierra kept the tradition alive in quiet, generation-to-generation work — the same households Chihuahuenses still pour today. This profile describes the Chihuahua desert style.",
-      "description": "Sotol's signature is a bright, grassy, herbal, sometimes menthol- or eucalyptus-adjacent freshness — more vegetal than most agave spirits, with a smoky, earthy base from pit roasting. Terroir is unusually audible: the cited DO sources describe forested-region sotols tasting of menthol, mushrooms and pine, while arid-desert ones lean to leather, cacao and pepper. A single plant may yield roughly one bottle after a variable, source-dependent number of years (often cited around 8–12), so batches are small and vary genuinely.",
+      "context": "Sotol is the desert's own spirit, distilled from Dasylirion (desert spoon, sereque), native to the Chihuahuan desert. Dasylirion is a relative of agave in the Asparagaceae family that follows the same roasted-piña logic, and it's proudly not agave. Sotol has had a Denominación de Origen since 2002, covering only Chihuahua, Coahuila and Durango. Its 20th century included restrictive regulation and clandestine production in the northern sierra; the legal framing varied by era and place, and this guide asserts no single nationwide pre-1994 ban. The vinatas of the sierra kept the tradition going quietly, from one generation to the next, in the same households Chihuahuenses still pour from today. This is the Chihuahua desert style.",
+      "description": "Expect bright, grassy, herbal freshness, sometimes close to menthol or eucalyptus, over a smoky, earthy base from the pit roast: more vegetal than most agave spirits. Place shows unusually clearly here. The cited DO sources describe sotol from forested areas tasting of menthol, mushrooms and pine, and sotol from the arid desert leaning to leather, cacao and pepper. One plant may give roughly one bottle after a variable number of years (often cited around 8–12), so batches are small and genuinely vary.",
       "plant": "Dasylirion (desert spoon; commonly wheeleri, cedrosanum or leiophyllum), wild-harvested; not an agave, though a close relative",
       "process": "Piña pit-roasted in conical ovens (or steam-cooked by larger producers), wild-fermented, distilled in copper or clay; whether roots are left intact depends on harvest practice, and regrowth is not guaranteed",
       "category": "Sotol — spirit with its own Denomination of Origin (Chihuahua, Coahuila, Durango, since 2002); explicitly not an agave spirit, included here as an agave-adjacent northern tradition",
-      "beginnerNote": "New to sotol? Expect bright wet-grass and herbal freshness over gentle smoke — closer to a green, wild cousin of mezcal than to tequila.",
+      "beginnerNote": "New to sotol? Expect bright wet-grass and herbal freshness over gentle smoke, closer to a green, wild cousin of mezcal than to tequila.",
       "aliases": [
         "sotol",
         "desert spoon spirit",
@@ -1206,7 +1206,7 @@
       "plantIds": [
         "dasylirion-desert-spoon"
       ],
-      "whyItTastes": "Dasylirion (not an agave) wild-harvested, pit-roasted in conical ovens and wild-fermented: the earthy, smoky-herbal character follows from the plant and the desert cook. Wild stands face documented harvest pressure; regrowth claims need species and method evidence this guide has not verified."
+      "whyItTastes": "Wild-harvested Dasylirion (not an agave), roasted in conical pits and fermented with wild yeasts: the earthy, smoky, herbal character follows from the plant and the desert cook together. Wild stands face documented harvest pressure; claims that they regrow need species and method evidence this guide hasn't verified."
     },
     {
       "id": "tequila-blanco-highland-jalisco",
@@ -1513,7 +1513,7 @@
         "distillation-methods"
       ],
       "body": "medium",
-      "context": "Michoacán is a major mezcal state with a style voice all its own: river valleys of the Trans-Mexican Volcanic Belt, Filipino-style wooden stills, and fermentation practices that include pulque — more than one reviewer of Michoacán mezcals describes a creamy, lactic streak in the state's cupreata and inaequidens. In the Río de Parras communities, maestra mezcalera María E. Pérez and her family call their maguey penca ancha — a local name for Agave cupreata — and their vinata starts fermentation with 10–15 litres of pulque, a practice readers of this guide's destilado de pulque profile will recognise from the other side of the same plant family's world. The name penca ancha is Michoacán's, not Guerrero's papalote: two states, two names, one wide cupreata lineage.",
+      "context": "Michoacán is a major mezcal state with a voice of its own: river valleys of the Trans-Mexican Volcanic Belt, Filipino-style wooden stills and fermentations that can include pulque. More than one reviewer of Michoacán mezcals describes a creamy, lactic streak in the state's cupreata and inaequidens. In the Río de Parras communities, maestra mezcalera María E. Pérez and her family call their maguey penca ancha, a local name for Agave cupreata, and their vinata starts fermentation with 10–15 litres of pulque. Penca ancha is Michoacán's name, not Guerrero's papalote: two states, two names, one wide cupreata lineage.",
       "description": "This is the creamy side of mezcal: pink bubblegum, strawberries and cream, sour fruit and grape soda, with a lactic, slightly fizzy edge. That's the example bottle, from María E. Pérez and her family in Rio de Parras. Several tasters credit the pulque that starts its fermentation, and one says those fermentation notes are what set it apart from a Guerrero cupreata. In some reviewed lots the heat stays mild for the strength, though that varies. Other Michoacán mezcals share the state's tools and habits, not one flavour.",
       "beginnerNote": "New to Michoacán mezcal? Expect the creamy side of the family: bubblegum, strawberries, and a lactic tang that is a feature of this producer's method, not a flaw. If you know Guerrero's papalote, this is the same plant lineage with a different kitchen — and a different name.",
       "category": "Mezcal — Michoacán lies within the mezcal denomination of origin; penca ancha is the regional name for Agave cupreata in Rio de Parras, not a legal class",
