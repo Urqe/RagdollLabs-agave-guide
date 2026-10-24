@@ -4,7 +4,7 @@ Updated: 2026-10-24 · Live site: <https://urqe.github.io/RagdollLabs-agave-guid
 
 This plan says what to do next and which rules every change follows. It is not a history. What each release and pair shipped, and how it was verified, is in `RELEASE_NOTES.md`. Read the notes only when a task needs the background of an earlier decision.
 
-Companion documents: `EDITORIAL_VOICE.md` (how all reader-facing text sounds, EN and ES), `RELEASE_NOTES.md` (history and evidence), `README.md` (running, validating, deploying).
+Companion documents: `EDITORIAL_VOICE.md` (how all reader-facing text sounds, EN and ES), `RELEASE_NOTES.md` (history and evidence), `README.md` (running, validating, deploying). `docs/archive/` holds superseded documents, such as the original Release 1 prompt; they are not instructions.
 
 ## 1. Current status and next step
 
