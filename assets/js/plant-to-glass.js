@@ -187,7 +187,7 @@ const STRINGS = {
     practiseTaste: "Haz la cata guiada",
     practiseNotes: "Reconoce el agave, el humo, el cuerpo y el roble",
     practiseReference: "Consulta cada paso de la elaboración",
-    back: { learn: "← Volver a Aprende", start: "← Volver a la lección", profile: "← Volver al perfil" },
+    back: { learn: "← Volver a Aprender", start: "← Volver a la lección", profile: "← Volver al perfil" },
   },
 };
 
@@ -365,8 +365,22 @@ export function renderPlantToGlass(container, { processes = [], profiles = [], s
   section.appendChild(el("h1", { id: "plant-to-glass-heading" }, s(locale, "title")));
   section.appendChild(el("p", { class: "view-intro" }, s(locale, "intro")));
 
+  // Pair 26: the overview doubles as a jump list on this long page. Hash
+  // links would change the route, so these are buttons that scroll.
   const overview = el("ol", { class: "ptg-overview", "aria-label": s(locale, "overviewLabel") });
-  for (const stage of STAGES) overview.appendChild(el("li", {}, pick(stage.title, locale)));
+  for (const stage of STAGES) {
+    const li = el("li");
+    const jump = el("button", { type: "button", class: "ptg-jump", "data-stage": stage.id }, pick(stage.title, locale));
+    jump.addEventListener("click", () => {
+      const target = section.querySelector(`#ptg-stage-${stage.id} h3`);
+      if (!target) return;
+      if (typeof target.scrollIntoView === "function") target.scrollIntoView({ block: "start" });
+      if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+      target.focus({ preventScroll: true });
+    });
+    li.appendChild(jump);
+    overview.appendChild(li);
+  }
   section.appendChild(overview);
 
   section.appendChild(el("h2", {}, s(locale, "stepsHeading")));

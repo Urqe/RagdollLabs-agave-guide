@@ -13,6 +13,11 @@ const COPY = {
     learn: "Keep learning", learnHint: "Chapters, plants, processes and label vocabulary.",
     start: "New to agave?", startHint: "A five-step first journey — no glass, no purchase, no quiz.",
     catalogue: "Browse bottles", catalogueHint: "Find a brand, producer or expression.",
+    pathsLabel: "Three ways in",
+    pathStart: "Start here", pathStartHint: "New to agave? Five short lessons and a guided tasting, with or without a glass.",
+    pathExplore: "Explore", pathExploreHint: "Browse the styles by spirit, flavour, plant or place, and put two or three side by side.",
+    pathLookUp: "Look it up", pathLookUpHint: "Find a bottle, a label term or how a spirit is made.",
+    linkGlossary: "Label vocabulary", linkPlantToGlass: "From plant to glass",
     featured: "A few places to begin", featuredHint: "Three traditions. Three ways into the glass.",
     scene: "A little curiosity. Good company.", all: "Explore the collection",
     guide: "An invitation to explore", browse: "Find your next discovery",
@@ -130,6 +135,11 @@ const COPY = {
     learn: "Sigue aprendiendo", learnHint: "Capítulos, plantas, procesos y vocabulario de etiqueta.",
     start: "¿Nuevo en el agave?", startHint: "Un primer recorrido de cinco pasos — sin copa, sin compra, sin examen.",
     catalogue: "Explorar botellas", catalogueHint: "Busca una marca, productor o expresión.",
+    pathsLabel: "Tres maneras de entrar",
+    pathStart: "Empieza aquí", pathStartHint: "¿Nuevo en el agave? Cinco lecciones cortas y una cata guiada, con o sin copa.",
+    pathExplore: "Explora", pathExploreHint: "Recorre los estilos por destilado, sabor, planta o lugar, y pon dos o tres lado a lado.",
+    pathLookUp: "Consulta", pathLookUpHint: "Encuentra una botella, un término de etiqueta o cómo se hace un destilado.",
+    linkGlossary: "Vocabulario de etiqueta", linkPlantToGlass: "De la planta a la copa",
     featured: "Por dónde empezar", featuredHint: "Tres tradiciones. Tres formas de descubrir.",
     scene: "Un poco de curiosidad. Buena compañía.", all: "Explorar la colección",
     guide: "Una invitación a explorar", browse: "Encuentra tu próximo descubrimiento",
@@ -237,7 +247,7 @@ const COPY = {
     basisOneStyle: "Notas de carácter según un relato publicado de esta expresión",
     basisStyles: "Notas de carácter según {count} relatos publicados de esta expresión",
     basisFactsOnly: "Registro factual — aún no hay notas de cata documentadas para esta expresión.",
-    "learn.heading": "Aprende",
+    "learn.heading": "Aprender",
   },
 };
 
@@ -265,12 +275,31 @@ export function renderHome(container, { profiles, locale }) {
   copy.appendChild(el("h1", { id: "home-heading" }, ui(locale, "title")));
   copy.appendChild(el("p", { class: "welcome-tagline" }, ui(locale, "tagline")));
   copy.appendChild(el("p", { class: "home-intro" }, ui(locale, "intro")));
-  const actions = el("div", { class: "welcome-actions" });
-  for (const [key, href] of [["explore", "#/explore"], ["compare", "#/compare"], ["start", "#/start"], ["learn", "#/learn"], ["catalogue", "#/catalogue"]]) {
-    const action = el("a", { class: "welcome-action" + (key === "explore" ? " is-primary" : ""), href });
-    action.appendChild(el("strong", {}, ui(locale, key) + " ↗"));
-    action.appendChild(el("span", {}, ui(locale, key + "Hint")));
-    actions.appendChild(action);
+  // Pair 26: three clearly named ways in — learn, explore, look it up —
+  // instead of five competing cards. Every earlier destination stays one
+  // click away inside its path.
+  const nav = (key) => (locale ? locale.t("nav." + key) : key);
+  const paths = [
+    { key: "pathStart", href: "#/start", primary: true, links: [] },
+    { key: "pathExplore", href: "#/explore", links: [["#/explore", nav("explore")], ["#/discover", nav("discover")], ["#/compare", nav("compare")]] },
+    { key: "pathLookUp", href: "#/catalogue", links: [["#/catalogue", nav("catalogue")], ["#/learn", nav("learn")], ["#/learn/terms", ui(locale, "linkGlossary")], ["#/plant-to-glass", ui(locale, "linkPlantToGlass")]] },
+  ];
+  const actions = el("ul", { class: "welcome-actions welcome-paths", "aria-label": ui(locale, "pathsLabel") });
+  for (const path of paths) {
+    const item = el("li", { class: "welcome-path" + (path.primary ? " is-primary" : "") });
+    const action = el("a", { class: "welcome-action" + (path.primary ? " is-primary" : ""), href: path.href });
+    action.appendChild(el("strong", {}, ui(locale, path.key) + " →"));
+    action.appendChild(el("span", {}, ui(locale, path.key + "Hint")));
+    item.appendChild(action);
+    if (path.links.length) {
+      const sub = el("p", { class: "welcome-sublinks" });
+      path.links.forEach(([href, label], i) => {
+        if (i) sub.appendChild(document.createTextNode(" · "));
+        sub.appendChild(el("a", { href, class: "welcome-sublink" }, label));
+      });
+      item.appendChild(sub);
+    }
+    actions.appendChild(item);
   }
   copy.appendChild(actions);
   const scene = el("div", { class: "welcome-scene", "aria-hidden": "true" });

@@ -9,6 +9,7 @@ import { ui, sensoryOverview, dimensionLabel } from "./presentation.js";
 import { tasteNote } from "./taste-notes.js";
 import { editorialText, fieldEs, fieldEsAny, localizedTitle, sourceKindLabel } from "./editorial.js";
 import { tastingBasisLine, factsOnlyLine } from "./tasting-basis.js";
+import { lessonNoteFor } from "./journey.js";
 
 function sourceLinks(sources, sourceIds, locale = null) {
   const list = el("ul", { class: "source-list" });
@@ -146,6 +147,17 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
       : fromDiscovery ? t("profile.backDiscover") : t("profile.backExplore");
   const back = el("a", { href: backHref, class: "back-link" }, backLabel);
   section.appendChild(back);
+  // Pair 26: opened from a lesson, the profile says what the lesson wanted
+  // the reader to notice here.
+  let lessonNote = null;
+  if (originKind === "start") {
+    const note = lessonNoteFor(originId, profile.id, locale);
+    if (note && note.text) {
+      lessonNote = el("aside", { class: "lesson-note", "aria-label": note.from });
+      lessonNote.appendChild(el("span", { class: "eyebrow" }, note.from));
+      lessonNote.appendChild(el("p", {}, note.text));
+    }
+  }
 
   section.appendChild(el("h1", { id: "profile-title" }, fieldEs("profile", profile.id, "title", locale) || profile.title));
 
@@ -373,7 +385,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   const bodyGrid = el("div", { class: "profile-body-grid" });
   bodyGrid.append(story);
   clear(section);
-  section.append(back, identity, searchForm, bodyGrid);
+  section.append(back, identity, ...(lessonNote ? [lessonNote] : []), searchForm, bodyGrid);
 
   // Pair-5 reading order: what am I drinking (story) → why does it taste
   // this way → how it is made (craft) → character in the glass → how to

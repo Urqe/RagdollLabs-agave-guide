@@ -3418,8 +3418,9 @@ Headless Chromium against a local static server:
 
 ## Pair 25 — Production → sensory explanation (2026-10-24)
 
-Branch `pair-25-plant-to-glass`. Not merged or deployed: awaiting the
-owner's review. All new text follows `EDITORIAL_VOICE.md`.
+Branch `pair-25-plant-to-glass`, reviewed and merged by the owner as
+PR #75 (merge commit `0a6221c`). CI, Deploy to GitHub Pages and
+pages-build-deployment all succeeded. All new text follows `EDITORIAL_VOICE.md`.
 
 ### Changed
 
@@ -3500,3 +3501,94 @@ Headless Chromium against a local static server:
 - Native iPhone/iPad Safari, VoiceOver and touch checks remain unverified.
 - The page is long on phones (seven steps, two routes). Pair 26's
   orientation work should check whether a jump list helps.
+
+## Pair 26 — Three-intention navigation and lesson continuity (2026-10-24)
+
+Branch `pair-26-navigation`. Not merged or deployed: awaiting the owner's
+review.
+
+### Changed
+
+- **Home page: three paths instead of five cards.**
+  - **Start here** (`#/start`) comes first, as the plan orders it.
+  - **Explore** leads to Browse styles, with Plants & places and Compare
+    as secondary links.
+  - **Look it up** leads to the Catalogue, with Learn, Label vocabulary
+    and From plant to glass as secondary links.
+  - Every earlier destination stays one click away. The repeated "no
+    glass, no purchase, no quiz" line and the "Keep learning" label beside
+    Learn are gone.
+- **Pages open at their top.** A route change now scrolls instantly to the
+  top of the view. Its scroll margin equals the measured sticky-header
+  height (`--header-offset`, kept current with `ResizeObserver`, since
+  the header wraps to two rows on phones). The old 5rem margins are
+  replaced.
+  - **Real-browser check.** In Chromium after scrolling 1500px and
+    navigating, the heading sits just below the header on home, explore,
+    profile, lesson, plant-to-glass and compare: 13px below at 1280px, and
+    12–13px below at 375px (EN and ES).
+  - **Smooth-scroll fix.** The first attempt used the page's smooth
+    scrolling and landed mid-animation. It is now instant.
+- **The app no longer undoes a view's own landing.** It used to scroll to
+  the first heading after every render, which overrode Learn deep links
+  such as `#/learn/terms`. Views that place focus themselves (Learn deep
+  links, catalogue reveal, the compare picker after an action) are now
+  left alone.
+- **Focus and titles.**
+  - **Heading focus.** A route change focuses the page heading
+    (`tabindex="-1"`, so it is never in the tab order). The first load
+    leaves focus where the browser puts it.
+  - **Language and theme switches.** These keep focus on the switch;
+    before, it jumped into the page.
+  - **Browser titles.** Every page has its own document title, such as
+    "Espadín mezcal, Valles Centrales style · Agave Guide" or "2. Cómo
+    catar · Guía del Agave". Home keeps the site title.
+- **Compare** restores picker focus only after the reader acted on a
+  picker. On a fresh visit it no longer moves focus, and the page lands
+  normally.
+- **Nav highlighting.** Plant and tradition pages highlight Plants &
+  places. The beginner journey is reached from the home path and
+  highlights no nav item.
+- **Lesson continuity.**
+  - **Position.** Lessons show "Step n of 5" / "Paso n de 5".
+  - **What to notice.** A profile opened from a lesson shows a "From the
+    lesson …" note with that lesson's own reason for opening it, under
+    the heading, with "Back to the lesson" above.
+  - **Jump list.** The plant-to-glass overview is now a jump list of
+    buttons that scroll to and focus each step.
+- **Labels.** The Spanish section name is unified to "Aprender", the nav
+  label, and the "Aprende" variants are fixed. Lesson 5's "Keep learning"
+  becomes "Look it up in Learn" / "Consulta en Aprender".
+- **Checked, already in place.** The bilingual no-JS message in
+  `index.html`, Back/Forward, direct links and lesson back links. They
+  are now covered by tests.
+
+### Tests
+
+`npm run validate`: data validation passed and 468 tests pass (455 prior
+plus 13 in `test/pair-26-navigation.test.mjs`). Three home tests pinned
+"Browse styles" as the first home card and were updated for the
+beginner-first order. They still check that every earlier destination is
+reachable.
+
+### Manual checks
+
+Headless Chromium against a local static server, at 375px (EN, ES) and
+1280px (EN):
+
+- **Landing.** Measured as above.
+- **Focus.** It lands on the heading.
+- **Titles.** Each page has its own.
+- **Lesson note.** It renders on the espadín profile opened from lesson 3.
+- **Errors.** No page errors.
+
+### Still open or unverified
+
+- **Phone header height.** At 375px the sticky header is 165–182px tall,
+  about a fifth of the screen, because the five nav items wrap onto two
+  rows. This is logged in Pair 29.
+- **VoiceOver.** Screen-reader announcement of the focused heading has
+  not been checked; the jsdom and Chromium checks only confirm focus
+  placement.
+- **Native devices.** iPhone/iPad Safari and touch checks remain
+  unverified.

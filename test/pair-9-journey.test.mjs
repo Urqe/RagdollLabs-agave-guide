@@ -174,9 +174,10 @@ test("pair 9: existing Learn and glossary URLs stay intact", () => {
 test("pair 9: homepage offers the beginner entrance without replacing browsing", () => {
   const container = document.createElement("div");
   renderHome(container, { profiles, locale: en });
+  // Pair 26: the beginner path leads; browsing stays one of the three paths.
   const actions = [...container.querySelectorAll(".welcome-action")].map((a) => a.getAttribute("href"));
-  assert.ok(actions.includes("#/start"), "beginner journey is easy to find");
-  assert.ok(actions[0] === "#/explore", "browsing stays the main action");
+  assert.equal(actions[0], "#/start", "beginner journey is the first path");
+  assert.ok(actions.includes("#/explore"), "browsing stays a main path");
   const esContainer = document.createElement("div");
   renderHome(esContainer, { profiles, locale: es });
   const esAction = [...esContainer.querySelectorAll(".welcome-action")]

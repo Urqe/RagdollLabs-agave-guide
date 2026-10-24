@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–23.1 are recorded as applied (Pair 23.1 — voice guide and Spanish localization — merged and deployed 2026-10-24). Pair 24 (guided sensory tasting) is merged (PR #74, `2ed0e2c`) and deployed. **Pair 25 (plant to glass) is implemented on branch `pair-25-plant-to-glass`, awaiting owner review; Pair 26 follows.** `EDITORIAL_VOICE.md` governs all new text. Section 8's learning roadmap (Pairs 24–29) follows, in the order set out in section 8 (reordered 2026-10-24 by the owner). This header is the single current pointer: status lines inside sections 4.3, 4.5 and 7 are historical. Execute only the owner-authorized pair.
+Post-roadmap pairs 8–23.1 are recorded as applied (Pair 23.1 — voice guide and Spanish localization — merged and deployed 2026-10-24). Pair 24 (guided sensory tasting) is merged (PR #74, `2ed0e2c`) and deployed. Pair 25 (plant to glass) is merged (PR #75, `0a6221c`) and deployed. **Pair 26 (three-path navigation and lesson continuity) is implemented on branch `pair-26-navigation`, awaiting owner review; Pair 27 follows.** `EDITORIAL_VOICE.md` governs all new text. Section 8's learning roadmap (Pairs 24–29) follows, in the order set out in section 8 (reordered 2026-10-24 by the owner). This header is the single current pointer: status lines inside sections 4.3, 4.5 and 7 are historical. Execute only the owner-authorized pair.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -1164,7 +1164,7 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 
 ### Pair 25 — Production → sensory explanation (feature, P0)
 
-**Status:** implemented 2026-10-24 on branch `pair-25-plant-to-glass` as the `#/plant-to-glass` page; awaiting owner review (see RELEASE_NOTES.md).
+**Status:** applied 2026-10-24 — merged (PR #75, merge `0a6221c`) and deployed as the `#/plant-to-glass` page; see RELEASE_NOTES.md.
 
 - [x] Create an accessible, responsive *plant-to-glass* teaching sequence linking existing plant, region, cooking, extraction, fermentation, still and maturation entities to *possible* sensory effects and representative profiles. Include sap-derived routes and sotol's non-agave identity where relevant.
 - [x] Show examples: some pit roasts can add smoke; fermentation can influence aromatics; still choice and cuts affect the distillate; resting in oak often adds vanilla/spice/color; glass resting does not add oak. Explicitly say no individual note proves its cause.
@@ -1175,12 +1175,14 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 
 ### Pair 26 — Three-intention navigation and lesson continuity (UX, P1)
 
-- [ ] At the home/entry surface, clearly offer three paths with differentiated concise descriptions; keep power-user deep links and existing routes intact. Labels (decided 2026-10-24, see `EDITORIAL_VOICE.md`): **Start here** (`#/start`), **Explore** (styles, flavours, plants and places) and **Look it up** (catalogue, profiles, glossary). The nav item **Learn** keeps naming the reference chapters, so "Learn" never means two things.
-- [ ] Land every new page at its heading (added 2026-10-24). After a route change, `app.js` scrolls the first h1/h2 into view, but the sticky header covers it, so pages open mid-content with the title hidden. Give page headings a `scroll-margin-top` matching the header height (or offset the scroll), and test at desktop and narrow widths.
-- [ ] Move focus to the page heading and name the page (added 2026-10-24). Focus currently lands on the `main` container, so screen readers announce no page name, and `document.title` is the same on every route. Focus the h1 (tabindex −1) after route changes and set a per-route title such as "Blanco tequila, Tequila Valley style · Agave Guide", in EN and ES. Keep the existing same-route re-render behaviour for language and theme switches.
-- [ ] Establish consistent return-to-lesson/origin context for profile, compare, reference and bottle links launched from a lesson. Tell readers what to notice in the linked example rather than dropping them onto a generic page.
-- [ ] Audit `#/start`, `#/learn`, `#/discover`, `#/explore`, `#/compare` and `#/catalogue` for competing labels, duplicative calls to action, long-scroll reference overload and mobile orientation. Keep the seven reference chapters and jump access; do not create redundant new chapters.
-- [ ] Ensure clear "what next" suggestions after lessons without gating content or forcing completion. Validate Back/Forward, refresh, direct links, keyboard focus, screen-reader headings and no-JS failure messaging.
+**Status:** implemented 2026-10-24 on branch `pair-26-navigation`; awaiting owner review (see RELEASE_NOTES.md).
+
+- [x] At the home/entry surface, clearly offer three paths with differentiated concise descriptions; keep power-user deep links and existing routes intact. Labels (decided 2026-10-24, see `EDITORIAL_VOICE.md`): **Start here** (`#/start`), **Explore** (styles, flavours, plants and places) and **Look it up** (catalogue, profiles, glossary). The nav item **Learn** keeps naming the reference chapters, so "Learn" never means two things.
+- [x] Land every new page at its heading (added 2026-10-24). After a route change, `app.js` scrolls the first h1/h2 into view, but the sticky header covers it, so pages open mid-content with the title hidden. Give page headings a `scroll-margin-top` matching the header height (or offset the scroll), and test at desktop and narrow widths.
+- [x] Move focus to the page heading and name the page (added 2026-10-24). Focus currently lands on the `main` container, so screen readers announce no page name, and `document.title` is the same on every route. Focus the h1 (tabindex −1) after route changes and set a per-route title such as "Blanco tequila, Tequila Valley style · Agave Guide", in EN and ES. Keep the existing same-route re-render behaviour for language and theme switches.
+- [x] Establish consistent return-to-lesson/origin context for profile, compare, reference and bottle links launched from a lesson. Tell readers what to notice in the linked example rather than dropping them onto a generic page.
+- [x] Audit `#/start`, `#/learn`, `#/discover`, `#/explore`, `#/compare` and `#/catalogue` for competing labels, duplicative calls to action, long-scroll reference overload and mobile orientation. Keep the seven reference chapters and jump access; do not create redundant new chapters.
+- [x] Ensure clear "what next" suggestions after lessons without gating content or forcing completion. Validate Back/Forward, refresh, direct links, keyboard focus, screen-reader headings and no-JS failure messaging.
 - **Acceptance:** a novice can begin with one clearly named path, return after opening supporting evidence and recognize a next action; an enthusiast can reach reference content directly.
 
 ### Pair 27 — Comparison as a learning exercise (feature, P1)
@@ -1210,6 +1212,7 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 ### Pair 29 — Learning quality and usability audit (maintenance, P2)
 
 - [ ] Run schema/content checks and full `npm run validate`; add regression tests for all new journey routes, curated comparison IDs, normalized term links, Spanish parity, origin restoration and empty/unknown sensory states.
+- [ ] Reduce the sticky header's height on phones (added 2026-10-24, measured in Pair 26): at 375px it is 165–182px tall, about a fifth of the screen, because the five nav items wrap onto two rows. Consider a single scrolling row or a compact menu, without hiding Learn or Compare.
 - [ ] Carry out manual browser tests of actual deployed UI: desktop Chrome/Safari, iPhone/iPad Safari, keyboard/VoiceOver, long translated text, tap targets, direct-link reload, Back/Forward, enlarged text and reduced motion. Record unverified environments rather than asserting success.
 - [ ] Conduct simple observational novice tasks if testers are available: find a starting lesson; distinguish nose/mouthfeel/finish; locate why a mezcal might be smoky; complete a preset comparison; find an example bottle and return. Record whether the user succeeds without prompting.
 - [ ] Clean up redundant copy, broken paths, stale anchors and unnecessary UI complexity discovered during the audit. No new catalogue scope or speculative feature work.
