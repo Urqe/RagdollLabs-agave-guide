@@ -67,7 +67,7 @@ export function fieldEsAny(entity, id, field, locale = null) {
  * translated classification inside the localized template.
  */
 export function sourceKindLabel(kind, locale, uiFn) {
-  const map = { producer: "kindProducer", review: "kindReview", style: "kindStyle" };
+  const map = { producer: "kindProducer", review: "kindReview", style: "kindStyle", official: "kindOfficial" };
   return uiFn(locale, map[kind] || "kind" + (kind || "").replace(/^./, (c) => c.toUpperCase()));
 }
 

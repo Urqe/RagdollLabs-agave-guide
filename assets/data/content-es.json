@@ -5,7 +5,7 @@
     "Chihuahua, Coahuila, Durango": "Chihuahua, Coahuila, Durango",
     "Chihuahuan desert (northern México and southwestern USA)": "desierto chihuahuense (norte de México y suroeste de EE. UU.)",
     "Comitán, Chiapas": "Comitán, Chiapas",
-    "Durango (“ash-colored”, for the leaf tone)": "Durango («color ceniza», por el tono de las hojas)",
+    "Durango (“ash-coloured”, for the leaf tone)": "Durango («color ceniza», por el tono de las hojas)",
     "Guerrero (Nahuatl-derived)": "Guerrero (de origen náhuatl)",
     "Guerrero and Michoacán mountains": "sierras de Guerrero y Michoacán",
     "Jalisco highlands (local usage; unrelated to the Sonoran lechuguilla, Agave shrevei)": "Altos de Jalisco (uso local; no es la lechuguilla sonorense, Agave shrevei)",
@@ -24,8 +24,8 @@
   "profiles": {
     "tequila-blanco-valley-jalisco": {
       "title": "Tequila blanco, estilo Valle de Tequila",
-      "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. Las condiciones del valle — menor elevación, noches más cálidas — tienden a dar agaves más pequeños y herbáceos que los de Los Altos, así que los blancos del valle suelen saber más vegetales y salinos que dulces: el sabor de este suelo, una distinción de la que el valle se enorgullece.",
-      "description": "Un blanco (también llamado silver o plata) es un tequila que suele embotellarse sin crianza en roble — las reglas permiten un reposo breve por debajo del mínimo del reposado, pero el estilo se define por el carácter destilado del propio agave cocido: piña asada, cítricos, pimienta y notas vegetales frescas.",
+      "context": "Tequila blanco nacido en el pueblo de Tequila y en el valle que lleva su nombre, de 100% de agave azul criado en esta misma tierra. El valle está más bajo que Los Altos y sus noches son más cálidas. Las condiciones del valle tienden a dar un agave más pequeño y herbáceo, y un blanco del valle suele saber más salino y verde que dulce. El valle está orgulloso de esa diferencia.",
+      "description": "Espera primero piña asada, luego cítricos, pimienta negra y notas verdes frescas. Un blanco (también llamado silver o plata) suele embotellarse sin crianza; las reglas permiten un reposo breve por debajo del mínimo del reposado, pero el estilo vive del propio agave destilado, sin nada de por medio.",
       "beginnerNote": "¿Nuevo en el tequila? Empieza aquí: ningún barril se interpone entre tú y el agave cocido, así que un blanco es la forma más clara de probar en la copa la tierra de cada productor.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
       "process": "Cocción al vapor (horno/autoclave), extracción con tahona o molino de rodillos, fermentación en tinas abiertas, doble destilación; normalmente sin crianza, aunque las reglas del blanco permiten un contacto breve con roble por debajo del mínimo de dos meses del reposado",
@@ -39,15 +39,16 @@
         ],
         "notice": "Qué notar primero: el corazón de agave asado, más salado que dulce, y el final limpio y picante."
       },
-      "whyItTastes": "El filo sabroso y terroso es lugar y método trabajando juntos: el agave del valle tiende a crecer más pequeño y más herbáceo que el del altiplano (una tendencia, no una regla), y los productores tradicionales del valle muelen la piña cocida con tahona de piedra y fermentan en tinas abiertas. Ni la edad ni el precio lo explican; el método y el lugar juntos moldean la copa, ninguno la decide solo.",
-      "plant": "Agave tequilana Weber azul (agave azul, cultivado)"
+      "whyItTastes": "Ese lado salino y terroso viene del lugar y del método juntos. El agave del valle tiende a crecer más pequeño y herbáceo que el de los Altos, y los productores tradicionales del valle muelen la piña cocida con tahona de piedra y fermentan en tinas abiertas. La edad y el precio no tienen nada que ver.",
+      "plant": "Agave tequilana Weber azul (agave azul, cultivado)",
+      "placePrecision": "pueblo (Tequila, Jalisco); aproximada"
     },
     "mezcal-espadin-valles-centrales": {
       "title": "Mezcal de espadín, estilo Valles Centrales",
-      "context": "Mezcal artesanal joven hecho con agave espadín (Agave angustifolia) en los Valles Centrales de Oaxaca. Aquí el mezcal es asunto de familia: corazones asados en hornos subterráneos, lotes pequeños, cada palenque pasando su oficio a la siguiente generación. El asado en pozo le da su humo distintivo — en los Valles Centrales ese humo es parte de casa, el sabor de la tierra misma, y los oaxaqueños lo abrazan como tal. El espadín es el agave de mezcal más plantado — el que una familia oaxaqueña sirve primero al visitante curioso, porque es la forma más amable de entrar en la tradición.",
-      "description": "El mezcal es un destilado hecho de los corazones asados de muchas especies de agave, no solo del agave azul. Asar las piñas bajo tierra le da al mezcal su humo característico, superpuesto a notas de fruta, hierba y minerales que varían según la variedad de agave, el pueblo y el maestro mezcalero. Este perfil describe el estilo de un espadín joven típico de los Valles Centrales; cada botella varía considerablemente.",
-      "beginnerNote": "¿Nuevo en el mezcal? El humo proviene de asar el agave bajo tierra — es un carácter del proceso, no un sabor añadido. Los oaxaqueños te dirán con gusto que es el sabor de su tierra.",
-      "category": "Mezcal — destilado con Denominación de Origen propia; el joven/abocado es una clase legal sin crianza",
+      "context": "Mezcal joven de espadín (Agave angustifolia) de los Valles Centrales de Oaxaca, hecho a la manera artesanal. Aquí el mezcal es asunto de familia: corazones de agave asados en hornos de tierra, lotes pequeños y un oficio que cada palenque le pasa a la siguiente generación. El espadín es el agave mezcalero más plantado, el que una familia oaxaqueña seguramente te sirve primero si llegas con curiosidad, porque es la entrada más amable a la tradición. El humo del horno de tierra es parte de lo que aquí sabe a casa, y los oaxaqueños lo presumen con orgullo.",
+      "description": "Espera primero agave asado y humo, luego fruta, hierbas y un filo como mineral que cambian con el pueblo, el maestro mezcalero y el lote. El mezcal puede hacerse de muchas especies de agave, no solo del azul, y no todo mezcal se asa en pozo ni sabe a humo; este estilo sí, porque las piñas se cuecen bajo tierra. Aun dentro del mismo valle, cada botella cambia mucho.",
+      "beginnerNote": "¿Nuevo en el mezcal? El humo viene de asar el agave bajo tierra. Es parte del proceso, no un sabor añadido, y los oaxaqueños con gusto te dirán que sabe a casa.",
+      "category": "Mezcal — destilado con Denominación de Origen propia; el joven (o blanco) es su clase legal sin crianza según la NOM-070. El abocado con es otra clase, para mezcal al que se le agregan ingredientes",
       "process": "Asado en horno subterráneo, tahona o molino de tracción animal, fermentación con levaduras silvestres, doble destilación, joven (sin crianza)",
       "smoke": "Humo suave a moderado del asado en horno, entretejido con las notas de fruta y hierba en lugar de dominarlas.",
       "finish": "Largo y seco, con un humo que perdura suavemente y se desvanece en hierbas terrosas.",
@@ -60,17 +61,18 @@
         ],
         "notice": "Qué notar primero: el humo del asado como un hilo a través del agave, no un muro delante de él."
       },
-      "whyItTastes": "El asado en pozo de tierra cocina el espadín lentamente sobre leña — de ahí viene el carácter de asado (cuánto humo varía con la leña, el tiempo y el pozo). La fermentación con levaduras silvestres y la molienda en tahona aportan textura; joven significa que ningún roble se interpone entre tú y la cocción.",
-      "plant": "Agave angustifolia (espadín, cultivado)"
+      "whyItTastes": "El horno de tierra cuece el espadín despacio sobre leña, y de ahí vienen el asado y el humo; cuánto humo depende de la leña, del tiempo y del horno. La molienda en tahona y la fermentación con levaduras silvestres también son parte del método, y joven quiere decir que ningún roble se interpone entre tú y la cocción.",
+      "plant": "Agave angustifolia (espadín, cultivado)",
+      "placePrecision": "municipio (zona de Santiago Matatlán); aproximada"
     },
     "bacanora-pacifica-sierra-sonora": {
       "title": "Bacanora, estilo Agave Pacifica (Sierra de Sonora)",
-      "context": "El bacanora es el destilado silvestre que Sonora llama suyo: destilado de Agave angustifolia pacifica (aquí le decimos Pacifica, o Yaquiana) en la Sierra Madre de Sonora, con denominación de origen que cubre 35 municipios sonorenses. Durante gran parte del siglo XX (1915–1992, según la historia oficial de Sonora) hacerlo fue prohibido, y en la sierra las familias siguieron destilándolo a escondidas; la producción se legalizó de nuevo en 1992 y la denominación de origen llegó en el año 2000 — dos hitos separados. Esa continuidad es el corazón de la tradición: el bacanora sobrevivió porque las familias siguieron destilándolo, en vinatas que pasaron de padres a hijos.",
-      "description": "La producción tradicional de bacanora asa los corazones de agave en hornos subterráneos, a menudo con leña de mezquite, fermenta con levaduras silvestres y destila dos veces, dando un destilado que se ubica estilísticamente entre el tequila y el mezcal oaxaqueño: agave asado en el centro con un humo generalmente más suave que el del mezcal, más hierbas del desierto y un filo mineral de la sierra.",
-      "beginnerNote": "¿Nuevo en el bacanora? Piénsalo como el primo sonorense del mezcal: mismo corazón de agave asado, normalmente un poco menos humo, a menudo más ligero y herbáceo.",
+      "context": "El bacanora es el destilado de agave silvestre que Sonora llama suyo: se destila de Agave angustifolia pacifica (aquí le decimos Pacifica, o Yaquiana) en la Sierra Madre de Sonora, con una denominación de origen que cubre 35 municipios sonorenses. Durante gran parte del siglo XX (1915–1992, según la historia oficial de Sonora) hacerlo estuvo prohibido, y en la sierra las familias siguieron destilando a escondidas. La producción volvió a ser legal en 1992 y la denominación de origen llegó en el año 2000: dos hitos separados. El bacanora sobrevivió porque los vinateros mantuvieron vivas sus vinatas y le enseñaron el oficio a la siguiente generación, y en Sonora esa historia se cuenta con orgullo.",
+      "description": "Espera agave asado al centro, un humo más suave que el de casi todo el mezcal oaxaqueño, hierbas del desierto y un filo seco, como mineral. El bacanora tradicional asa los corazones de agave en hornos de tierra, a menudo con leña de mezquite, fermenta con levaduras silvestres y se destila dos veces, así que en la copa suele quedar entre el tequila y el mezcal oaxaqueño.",
+      "beginnerNote": "¿Nuevo en el bacanora? Piénsalo como el primo sonorense del mezcal: el mismo corazón de agave asado, normalmente con un poco menos de humo, a menudo más ligero y más herbal.",
       "category": "Bacanora — destilado con Denominación de Origen propia (Sonora, desde 2000)",
       "process": "Asado en horno (a menudo con mezquite), fermentación con levaduras silvestres, doble destilación",
-      "smoke": "Presente pero generalmente más suave que el mezcal oaxaqueño: el asado en horno da un humo magro y sabroso en lugar de dominante.",
+      "smoke": "Presente pero generalmente más suave que el mezcal oaxaqueño: el asado en horno da un humo magro y salino en lugar de dominante.",
       "finish": "Seco y herbáceo, con un hilo suave de humo y un final mineral y picante.",
       "pairing": {
         "serving": "Solo, en copa pequeña; un reposo corto abre los aromas del asado. Un poco de agua o un cubo de hielo también funcionan si lo prefieres más suave. Sugerencia editorial, no una regla.",
@@ -81,14 +83,15 @@
         ],
         "notice": "Qué notar primero: los aromas de agave asado que se abren tras un breve reposo en la copa."
       },
-      "whyItTastes": "Agave Pacifica/Yaquiana silvestre de la sierra sonorense, asado en pozo (a menudo sobre mezquite) y fermentado con levaduras silvestres: reseñistas y productores describen un carácter herbal y suavemente ahumado que la guía atribuye a la planta y al asado en pozo juntos — una tendencia documentada de este estilo, no un resultado garantizado de la cosecha silvestre. La doble destilación es el método estándar aquí; no asegura limpieza por sí misma.",
-      "plant": "Agave angustifolia pacifica (de recolección silvestre; conocido localmente como pacifica o yaquiana)"
+      "whyItTastes": "Pacifica/Yaquiana silvestre de la sierra sonorense, asada en pozo (a menudo con mezquite) y fermentada con levaduras silvestres. Productores y reseñistas describen un carácter herbal y suavemente ahumado y se lo atribuyen a la planta y al horno juntos; tómalo como una tendencia del estilo, porque la cosecha silvestre no lo garantiza. La doble destilación es el método estándar aquí, y por sí sola no hace más limpio un destilado.",
+      "plant": "Agave angustifolia pacifica (de recolección silvestre; conocido localmente como pacifica o yaquiana)",
+      "placePrecision": "municipio (Aconchi, Sonora); aproximada"
     },
     "raicilla-maximiliana-sierra-jalisco": {
       "title": "Raicilla de la sierra, estilo Maximiliana (Jalisco)",
-      "context": "La raicilla es el destilado de montaña de Jalisco (la DO también alcanza exactamente un municipio de Nayarit — Bahía de Banderas, en la frontera con Jalisco, otorgada en 2019 — una franja precisa, no todo Nayarit), y los jaliscienses la llevan como prueba de que su estado hace más que tequila. Se divide editorialmente en dos tradiciones: raicilla de Sierra, hecha principalmente con Agave maximiliana e inaequidens cocidos en hornos aéreos, y raicilla de Costa, de angustifolia y rhodacantha cocidos en hornos subterráneos. Durante décadas la raicilla se destiló de manera informal, a la sombra de su vecino famoso — la gente la mantuvo viva hasta que la ley la alcanzó. Este perfil cubre el estilo de Sierra en la Sierra Occidental.",
-      "description": "La raicilla es un destilado de agave de Jalisco históricamente destilado en alambiques de madera y barro. El estilo de la sierra asa corazones de agave maximiliana en hornos de adobe sobre el suelo, fermenta con levaduras silvestres en tinas de madera y destila en pequeños lotes, dando un destilado afrutado y con frecuencia con un matiz rústico, más ligero de humo que la mayoría de los mezcales.",
-      "beginnerNote": "¿Nuevo en la raicilla? Espera un destilado de agave a menudo más rústico y afrutado que el tequila, y normalmente con menos humo que el mezcal — especialmente las de Sierra. El otro orgullo de Jalisco, en una copa.",
+      "context": "La raicilla es el destilado de montaña de Jalisco, y los jaliscienses la sirven como prueba de que su estado hace más que tequila. Su denominación de origen (2019) también alcanza exactamente un municipio de Nayarit, Bahía de Banderas, en la frontera con Jalisco, no todo Nayarit. Hay dos tradiciones: la raicilla de Sierra, hecha sobre todo con Agave maximiliana e inaequidens cocidos en hornos sobre el suelo, y la raicilla de Costa, de angustifolia y rhodacantha cocidos en hornos bajo tierra. Durante décadas la raicilla se hizo de manera informal, a la sombra de su vecino famoso, y la gente de la sierra la mantuvo viva hasta que la ley la alcanzó. Este es el estilo de Sierra de la Sierra Occidental.",
+      "description": "Espera fruta de huerto, hierbas y una redondez láctica suave con un filo fermentado y algo rústico, y menos humo que en los destilados asados en pozo. La raicilla de Sierra suele cocerse en hornos de adobe sobre el suelo y no en pozos, fermenta con levaduras silvestres en tinas de madera y se destila en pequeñas tabernas rústicas (la palabra nombra el destiladero, no el alambique). Los lotes de cada maestro varían mucho.",
+      "beginnerNote": "¿Nuevo en la raicilla? Espera un destilado de agave a menudo más rústico y afrutado que el tequila, y casi siempre con menos humo que el mezcal, sobre todo la de Sierra. Es el otro orgullo de Jalisco.",
       "category": "Raicilla — destilado con Denominación de Origen propia (Jalisco y Bahía de Banderas, Nayarit, desde 2019)",
       "process": "Asado en horno de adobe sobre el suelo, fermentación silvestre abierta en tinas de madera, destilación en pequeños lotes",
       "smoke": "Generalmente ligero en el estilo de la sierra: los hornos sobre el suelo dan una nota de asado tenue en lugar de humo de horno subterráneo.",
@@ -102,18 +105,19 @@
         ],
         "notice": "Qué notar primero: el filo fermentado suave que hace de la raicilla de sierra algo propio."
       },
-      "whyItTastes": "Maximiliana silvestre de las montañas de Jalisco, asada en hornos de adobe sobre el suelo y no en pozos — menos humo que las tradiciones de pozo — luego fermentada al aire en tinas de madera y destilada en pequeños lotes. El filo herbal rústico sigue de la planta silvestre, el asado en horno y la escala de lote.",
-      "plant": "Agave maximiliana (de recolección silvestre; el agave distintivo de la raicilla de la Sierra)"
+      "whyItTastes": "Maximiliana silvestre de las montañas de Jalisco, asada en hornos de adobe sobre el suelo y no en pozos, y por eso hay menos humo que en las tradiciones de pozo. Luego vienen la fermentación al aire en tinas de madera y la destilación en lotes pequeños. La planta, el horno y el tamaño del lote juntos dan ese filo herbal y rústico; ningún paso por sí solo lo explica.",
+      "plant": "Agave maximiliana (de recolección silvestre; el agave distintivo de la raicilla de la Sierra)",
+      "placePrecision": "región (Sierra Occidental, Jalisco); aproximada"
     },
     "tuxca-lineno-cimarron-jalisco-colima": {
       "title": "Tuxca, estilo Liñeno/Cimarrón (frontera Jalisco–Colima)",
-      "context": "La tuxca es un destilado de la frontera: tradición agavera del sur de Jalisco y el norte de Colima, nombrada por el municipio de Tuxcacuesco, a los pies del Volcán de Colima. No tiene denominación de origen, y la propia tradición conserva el nombre como regional, no como legal — sus definiciones son flexibles, y esa flexibilidad es parte de cómo la mantienen las comunidades de Tuxcacuesco, del valle del Río Almería, de Zapotitlán de Vadillo y de Tolimán: a la vieja manera, y sin hacer ruido. El papel documentado de Colima en esta guía es este contexto de frontera — la tradición, las faldas del volcán y el valle del Río Almería cruzan la línea estatal — mientras que la botella de ejemplo citada se elabora en Jalisco; la app no afirma cobertura de producción colimense más allá de lo que sus fuentes documentan.",
-      "description": "La tuxca se asa en hornos cilíndricos, se muele a mano, fermenta en cráteres volcánicos recubiertos y se destila en alambiques de madera de tradición filipina. El resultado es un destilado magro, especiado y mineral muy tradicional de las tierras fronterizas del volcán de Colima.",
-      "beginnerNote": "¿Nuevo en la tuxca? Espera un destilado fronterizo profundamente tradicional y sin certificación — más magro y mineral que la mayoría de los mezcales, con especia en lugar de humo. Sin sello de certificación de DO en la botella; siguen aplicando otros requisitos de etiquetado, y la autoridad de la tradición es cultural, no certificada.",
+      "context": "La tuxca es de la frontera entre el sur de Jalisco y el norte de Colima, a los pies del Volcán de Colima, y toma su nombre del municipio de Tuxcacuesco. No tiene denominación de origen, y las comunidades que la mantienen (Tuxcacuesco, el valle del Río Almería, Zapotitlán de Vadillo, Tolimán) están conformes con que el nombre siga siendo regional y no legal. La hacen a la vieja manera, y sin hacer ruido. El papel de Colima en esta historia es la frontera misma: la tradición, las faldas del volcán y el valle del Río Almería cruzan la línea estatal. La botella de ejemplo citada se elabora en Jalisco, y esta guía no afirma cobertura de producción colimense más allá de lo que documentan sus fuentes.",
+      "description": "Espera un destilado magro, especiado y como mineral, no uno ahumado y dulce. A la tuxca la define menos una categoría legal que su método: agaves silvestres (a menudo Liñeño/Cimarrón, Agave angustifolia y parientes) asados en pozos cilíndricos, machacados a mano, fermentados en cráteres de piedra volcánica y destilados en alambiques filipinos de madera.",
+      "beginnerNote": "¿Nuevo en la tuxca? Espera un destilado fronterizo muy tradicional y sin certificación: más magro y mineral que casi todo el mezcal, con especia en lugar de humo. No vas a encontrar un sello de certificación de DO en la botella, aunque siguen aplicando otros requisitos de etiquetado; la autoridad de la tradición es cultural, no certificada.",
       "category": "Tuxca — una tradición regional sin denominación de origen; su estatus legal no equivale al del tequila ni al del mezcal",
       "process": "Asado en horno cilíndrico, molienda a mano, fermentación en cráter volcánico, destilación en alambique de madera filipino",
       "smoke": "Generalmente ligero: el asado en horno es más corto y los alambiques de madera se perciben herbáceo-especiados en lugar de ahumados.",
-      "finish": "Seco y especiado, con lima y pimienta que se desvanecen hacia lo mineral volcánico.",
+      "finish": "Seco y especiado, con limón y pimienta que se desvanecen hacia lo mineral volcánico.",
       "pairing": {
         "serving": "Se bebe solo acompañado de agua; magro y mineral, invita a beber despacio (sugerencia editorial).",
         "foods": [
@@ -123,14 +127,15 @@
         ],
         "notice": "Qué notar primero: la espina mineral y magra, y lo despacio que se abre la copa."
       },
-      "whyItTastes": "Agaves silvestres Liñeño/Cimarrón, asado en pozo cilíndrico, machacado a mano, fermentación en un filtro de cráter volcánico y alambique filipino de madera — una cadena de métodos inusualmente específica que deja un carácter cocido-silvestre distintivo, variando lote a lote con la mezcla de agaves.",
-      "plant": "Agaves silvestres, a menudo liñeno/cimarrón (Agave angustifolia y parientes locales); los ensambles varían según el vinatero"
+      "whyItTastes": "Agaves silvestres Liñeño/Cimarrón, asado en pozo cilíndrico, machacado a mano, fermentación en un cráter de piedra volcánica y alambique filipino de madera. Pocas tradiciones siguen una cadena tan específica, y el carácter cocido y silvestre que deja cambia de lote a lote con la mezcla de agaves.",
+      "plant": "Agaves silvestres, a menudo liñeno/cimarrón (Agave angustifolia y parientes locales); los ensambles varían según el vinatero",
+      "placePrecision": "municipio (Tuxcacuesco, Jalisco); aproximada"
     },
     "comiteco-aguamiel-chiapas": {
       "title": "Comiteco, estilo aguamiel (Comitán, Chiapas)",
-      "context": "El comiteco le pertenece a Comitán, Chiapas: un destilado de savia en el que, en lugar de cocinar corazones de agave, los productores recolectan el aguamiel fresco del maguey comiteco vivo, lo fermentan y lo destilan. Desde el 6 de octubre de 2025 el nombre “Comiteco de Comitán, Chiapas” está protegido como Indicación Geográfica — una figura legal distinta de una denominación de origen — y cubre un destilado hecho de maguey comiteco (identificado como Agave americana L. en la declaración; algunas referencias también nombran Agave atrovirens) junto con azúcares de caña en la Meseta Comiteca-Tojolabal. El azúcar de caña junto con la savia es parte de la definición protegida, y una botella honesta siempre dice qué contiene.",
-      "description": "El comiteco fermenta y destila el aguamiel recolectado de la planta viva, sin cocinar la piña. El resultado es un destilado verde, láctico y herbal, sin carácter de asado, con una suavidad característica de la savia fresca.",
-      "beginnerNote": "¿Nuevo en el comiteco? Olvídate del humo: es un destilado de savia — piensa verde, láctico y herbal, de agave sin cocinar. La tradición de Comitán, sin parecido al norte.",
+      "context": "El comiteco es de Comitán, Chiapas. En lugar de cocer corazones de agave, los productores recolectan el aguamiel fresco del maguey comiteco vivo, lo fermentan y lo destilan. Desde el 6 de octubre de 2025 el nombre “Comiteco de Comitán, Chiapas” está protegido como Indicación Geográfica, una figura legal distinta de una denominación de origen. Cubre un destilado hecho de maguey comiteco (identificado como Agave americana L. en la declaración; algunas referencias también nombran Agave atrovirens) junto con azúcares de caña en la Meseta Comiteca-Tojolabal. El azúcar de caña es parte de la definición protegida, y una botella honesta te dice qué trae.",
+      "description": "Espera notas verdes, lácticas y suavemente herbales del aguamiel fermentado, y nada del asado ni del humo de los destilados de pozo, porque el agave nunca se cuece. Por carácter queda más cerca de un pulque destilado que del mezcal, aunque es una tradición propia. Las recetas cambian de un productor a otro y se declaran botella por botella.",
+      "beginnerNote": "¿Nuevo en el comiteco? Olvídate del humo: es un destilado de savia, verde, láctico y herbal, de agave sin cocer. Es la tradición propia de Comitán, y muy distinta de los destilados de agave cocido que casi todos conocen primero.",
       "category": "Comiteco — una tradición regional de Comitán, Chiapas, protegida desde octubre de 2025 como la Indicación Geográfica “Comiteco de Comitán, Chiapas”; una IG es una figura legal distinta de la denominación de origen del tequila o el mezcal",
       "process": "Derivado de savia: aguamiel recolectado de la planta viva, fermentado, destilado — sin cocción de la piña",
       "finish": "Suave y herbal, con un final terroso ligero y sin carácter de asado.",
@@ -143,14 +148,15 @@
         ],
         "notice": "Qué notar primero: el carácter verde y láctico de la savia — aquí nada fue asado."
       },
-      "whyItTastes": "Sin ningún asado: la savia (aguamiel) del maguey comiteco vivo se recolecta, fermenta y destila. Todo en la copa viene de ese camino de savia — por eso el comiteco no sabe en nada a un destilado de piña cocida.",
-      "plant": "Maguey comiteco (Agave americana L. según la declaración de IG de 2025; algunas referencias nombran Agave atrovirens), cultivado; el aguamiel se recolecta de la planta viva"
+      "whyItTastes": "Sin ningún asado: el aguamiel del maguey comiteco vivo se recolecta, se fermenta y se destila, junto con el azúcar de caña que permite la definición. Ese camino de savia es la razón por la que el comiteco no sabe en nada a un destilado de piña cocida.",
+      "plant": "Maguey comiteco (Agave americana L. según la declaración de IG de 2025; algunas referencias nombran Agave atrovirens), cultivado; el aguamiel se recolecta de la planta viva",
+      "placePrecision": "municipio (Comitán de Domínguez, Chiapas); aproximada"
     },
     "destilado-de-pulque-salmiana-tlaxcala": {
       "title": "Destilado de pulque, estilo Salmiana (Tlaxcala)",
-      "context": "Tlaxcala guarda el pulque como suyo: es el corazón del maguey pulquero. El destilado de pulque es el destilado de savia de la región: los productores de la tradición pulquera fermentan el aguamiel del maguey pulquero (Agave salmiana) hasta hacer pulque y luego lo destilan — el agave nunca se cocina. Tlaxcala no forma parte de la denominación del mezcal y el destilado de pulque no es una categoría certificada; es una tradición regional, vendida bajo etiquetas de destilado, sostenida por familias para las que destilar el pulque es parte de la herencia de sus cerros. El pulque fermentado mismo (sin destilar) no forma parte de este catálogo.",
-      "description": "A diferencia de los destilados de agave cocido, el destilado de pulque parte de savia sin cocinar fermentada en pulque, que luego se destila. El resultado es ligero, láctico y verde, con una acidez suave completamente distinta al carácter asado de los destilados de agave cocido.",
-      "beginnerNote": "¿Nuevo en el destilado de pulque? Es pulque destilado — savia de agave sin cocinar, así que espera un carácter láctico, verde y suavemente ácido, distinto de cualquier destilado de agave cocido. Un sabor del oficio más antiguo de Tlaxcala.",
+      "context": "Tlaxcala quiere al pulque como suyo: es el corazón del maguey pulquero. El destilado de pulque es el destilado de savia de la región. Los productores fermentan el aguamiel del maguey pulquero (Agave salmiana) hasta hacer pulque y luego lo destilan, y el agave nunca se cuece. Tlaxcala no forma parte de la denominación del mezcal y el destilado de pulque no es una categoría certificada; es una tradición regional que se vende con etiqueta de destilado, sostenida por familias para las que destilar el pulque es parte de la herencia de sus cerros. El pulque mismo, sin destilar, no forma parte de este catálogo de destilados.",
+      "description": "Espera notas frescas, verdes, lácticas y un poco silvestres, con el toque vegetal y ácido del pulque llevado a la copa en lugar de asado o humo. Los catadores reportan un rango amplio y poco común, desde pasto al vapor y una acidez de dulce enchilado hasta el dulzor de un elote con crema. Esa firma viene de destilar una savia fermentada y no un mosto de agave cocido.",
+      "beginnerNote": "¿Nuevo en el destilado de pulque? Es pulque destilado: savia de agave sin cocer, así que espera notas lácticas, verdes y suavemente ácidas, distintas de cualquier destilado de agave cocido. Un trago de la tierra pulquera de Tlaxcala.",
       "category": "Destilado de pulque — una tradición regional; sin denominación de origen, y explícitamente no es mezcal (el pulque fermentado no es un destilado)",
       "process": "Derivado de savia: aguamiel fermentado en pulque (unas 48 horas), luego destilado; la piña nunca se cocina",
       "finish": "Ligero y ácido, con notas lácticas y verdes que se desvanecen rápido.",
@@ -163,18 +169,19 @@
         ],
         "notice": "Qué notar primero: el parentesco con el pulque fresco — láctico, con levadura, distinto de todo agave cocido."
       },
-      "whyItTastes": "El aguamiel del maguey pulquero vivo se fermenta en pulque (~48 horas) y luego se destila; la piña nunca se cocina. El perfil sigue la savia, no el asado.",
-      "plant": "Maguey pulquero (Agave salmiana); el aguamiel se recolecta a diario de la planta viva"
+      "whyItTastes": "El aguamiel del maguey pulquero vivo se fermenta en pulque (unas 48 horas) y luego se destila; la piña nunca se cuece. El sabor sigue a la savia, no a un asado.",
+      "plant": "Maguey pulquero (Agave salmiana); el aguamiel se recolecta a diario de la planta viva",
+      "placePrecision": "municipio (Nanacamilpa, Tlaxcala); aproximada"
     },
     "raicilla-costa-jalisco": {
       "title": "Raicilla de la costa, estilo costero (Jalisco)",
-      "context": "La denominación de origen de la raicilla (2019) abarca 16 municipios de Jalisco y exactamente uno de Nayarit — el municipio de Bahía de Banderas, en la frontera con Jalisco, una franja precisa y no todo Nayarit, y editorialmente se divide en dos tradiciones: Sierra (montaña) y Costa. La raicilla de la costa proviene de la zona de Cabo Corrientes y Tomatlán, hecha principalmente con Agave angustifolia (localmente chico aguiar) y Agave rhodacantha. Pescadores y campesinos de esta costa cocinan su agave en hornos subterráneos, a la vieja manera — y la costa se enorgullece del carácter magro y salino de su raicilla frente al de la sierra.",
-      "description": "El estilo costero de la raicilla asa los corazones de agave bajo tierra, dándole un humo sabroso más presente que en la variante de la sierra, entretejido con cítricos y hierbas. Comparte la denominación de origen con toda la raicilla; la diferencia está en la cocción.",
-      "beginnerNote": "¿Nuevo en la raicilla costera? Piénsala como la prima marítima y más ahumada de la raicilla de la sierra: misma DO, distinta cocción. La versión propia de la costa.",
+      "context": "En la costa de Jalisco, por Cabo Corrientes y Tomatlán, la raicilla se hace sobre todo con Agave angustifolia (aquí le dicen chico aguiar) y Agave rhodacantha, y las tabernas de la costa la cuecen a la vieja manera, en hornos bajo tierra. La denominación de origen de la raicilla (2019) abarca 16 municipios de Jalisco y exactamente uno de Nayarit, Bahía de Banderas, en la frontera con Jalisco, no todo Nayarit. La tradición se divide en Sierra y Costa, y la costa está orgullosa del carácter magro y salino de su raicilla frente a la de la montaña.",
+      "description": "Espera más humo y un filo más salino que en la raicilla de Sierra, con cítricos y hierbas junto al asado de pozo. La diferencia está en la cocción: los productores de la costa asan tradicionalmente en pozos bajo tierra, y la Sierra usa hornos de adobe sobre el suelo. Cada botella cambia mucho, y las notas de cata de la botella de ejemplo todavía no están documentadas.",
+      "beginnerNote": "¿Nuevo en la raicilla costera? Piénsala como la prima más ahumada, asada en pozo, de la raicilla de Sierra: la misma DO, otra cocción, y la versión propia de la costa.",
       "category": "Raicilla — destilado con Denominación de Origen propia (Jalisco y Bahía de Banderas, Nayarit, desde 2019); la costa es una división editorial de tradiciones, no una clase legal",
       "process": "Asado en horno subterráneo, fermentación con levaduras silvestres, destilación en pequeños lotes",
-      "smoke": "Más presente que en la raicilla de la sierra: la cocción bajo tierra da un humo sabroso entretejido con cítricos y hierbas.",
-      "finish": "Medio-largo, ahumado y sabroso con un final cítrico.",
+      "smoke": "Más presente que en la raicilla de la sierra: la cocción bajo tierra da un humo salino entretejido con cítricos y hierbas.",
+      "finish": "Medio-largo, ahumado y salino, con un final cítrico.",
       "pairing": {
         "serving": "Se bebe solo; el humo invita a beber despacio por la noche (sugerencia editorial).",
         "foods": [
@@ -184,14 +191,15 @@
         ],
         "notice": "Qué notar primero: las hierbas costeras y el humo, más ligeros de asado que el mezcal de valle."
       },
-      "whyItTastes": "Agaves chico aguiar y rhodacantha de la costa, asado en pozo subterráneo y fermentación silvestre en los cañones de Cabo Corrientes — una mezcla de plantas y un asado distintos de la tradición de la Sierra, y por eso la raicilla de la Costa y la de la Sierra divergen.",
-      "plant": "Agave angustifolia (chico aguiar) y Agave rhodacantha (silvestre y cultivado)"
+      "whyItTastes": "Chico aguiar y rhodacantha de la costa, asado en pozo bajo tierra y fermentación silvestre en los cañones de Cabo Corrientes: una mezcla de plantas y un asado distintos de los de la Sierra, y por eso la raicilla de Costa y la de Sierra saben diferente.",
+      "plant": "Agave angustifolia (chico aguiar) y Agave rhodacantha (silvestre y cultivado)",
+      "placePrecision": "región (costa de Cabo Corrientes, Jalisco); aproximada"
     },
     "tequila-reposado-valley-jalisco": {
       "title": "Tequila reposado, estilo Valle de Tequila",
-      "context": "El reposado es una clase legal del tequila: el destilado descansa en roble un mínimo de dos meses, sin máximo. En la práctica, la mayoría de los productores lo reposan de dos meses a un año. Este perfil describe un reposado tradicional del Valle de Tequila — el mismo estilo del blanco del valle, más roble. La tradición del valle dice que el reposo debe sazonar el agave, nunca enterrarlo; esa mesura es orgullo local.",
-      "description": "Un reposado es el mismo tequila que el blanco, reposado brevemente en roble: el agave permanece y se le unen vainilla y especias. En el estilo del valle el reposado suele ser breve — dos a doce meses — para no cubrir el carácter herbáceo del agave.",
-      "beginnerNote": "¿Nuevo en el reposado? Piénsalo como el mismo destilado que el blanco, reposado brevemente en roble: el agave permanece, la vainilla y las especias se suman.",
+      "context": "Es el blanco del valle después de un reposo en roble, hecho a la manera tradicional. El reposado es una clase legal: al menos dos meses en roble, sin máximo, y la mayoría de los productores lo reposan entre dos meses y un año. La tradición del valle dice que el reposo debe sazonar el agave, nunca enterrarlo, y aquí los productores se enorgullecen de esa mesura.",
+      "description": "Aquí el tequila conoce la madera. El carácter verde y especiado del blanco gana vainilla, caramelo y especias de repostería de la barrica, mientras el agave cocido sigue al centro: en un reposado tradicional el roble es el condimento, no el platillo, y las reseñas de la botella de ejemplo encuentran el agave todavía al frente. La edad no es una escalera: un reposado de dos meses puede saber más ligero que el blanco de otro productor, y más roble no es mejor.",
+      "beginnerNote": "¿Nuevo en el reposado? Piénsalo como el blanco después de un reposo corto en roble: el agave se queda, y la vainilla y las especias se le suman.",
       "category": "Tequila — destilado con Denominación de Origen propia; el reposado es una clase legal (reposado en roble, mínimo 2 meses)",
       "process": "Cocción al vapor, fermentación, doble destilación y reposo en barricas de roble (mínimo legal 2 meses; típicamente 2–12 meses)",
       "finish": "Medio, con especias suaves de madera y un final de caramelo y agave.",
@@ -204,14 +212,15 @@
         ],
         "notice": "Qué notar primero: cómo el roble suave se apoya bajo el agave sin cubrirlo."
       },
-      "whyItTastes": "La misma base del valle que el blanco, reposada en roble el mínimo legal de dos meses (típicamente 2–12): el roble suaviza el filo vegetal y aporta especias suaves, sin borrar el agave cocido debajo.",
-      "plant": "Agave tequilana Weber azul (agave azul, cultivado)"
+      "whyItTastes": "La misma base del valle que el blanco, reposada en roble al menos los dos meses legales (normalmente 2–12). El roble suaviza el filo verde y aporta especias suaves sin tapar el agave cocido de abajo.",
+      "plant": "Agave tequilana Weber azul (agave azul, cultivado)",
+      "placePrecision": "pueblo (Tequila, Jalisco); aproximada"
     },
     "tequila-anejo-valley-jalisco": {
       "title": "Tequila añejo, estilo Valle de Tequila",
-      "context": "El añejo es una clase legal del tequila: reposo en roble de al menos un año, en barricas de no más de 600 litros. El extra añejo (al menos tres años) existe como clase adicional. Este perfil describe un añejo tradicional del valle de unos 18 meses — muy por encima del mínimo de un año, que es la única referencia legal (la NOM fija un mínimo, no un rango). La práctica del valle favorece la mesura: el agave debe seguir hablando a través de un año de roble, y los mejores productores se aseguran de que así sea.",
-      "description": "Un añejo es tequila envejecido en roble un año o más: vainilla, fruta seca y especias de madera rodean el agave. Es la expresión más redonda y oscura del tequila, la más cercana al whisky en sensación, aunque sigue siendo tequila en esencia.",
-      "beginnerNote": "¿Nuevo en el añejo? Espera la expresión más redonda y oscura del tequila: vainilla de roble y fruta seca alrededor del agave — la más cercana al whisky en sentir, todavía tequila de corazón.",
+      "context": "Dale al tequila del valle un año o más en roble y tienes un añejo, una clase legal: al menos un año en barricas de no más de 600 litros, y más allá el extra añejo (tres años o más). Este es un añejo tradicional del valle de unos 18 meses; la NOM solo fija el mínimo, no un rango. En el valle se prefiere la mesura: el agave tiene que seguir hablando después de un año de roble, y los mejores productores se aseguran de que así sea.",
+      "description": "Un año o más de roble vuelve al tequila más oscuro, más redondo y de sabor más dulce: la barrica trae vainilla, fruta seca y algo cercano al cacao, mientras el filo verde y fresco del blanco se desvanece. Un buen añejo mantiene el agave cocido a la vista, y las reseñas de la botella de ejemplo encuentran justo ese equilibrio. «Más viejo es mejor» es mercadotecnia, no una regla: la madera depende del tipo de barrica, su tamaño, su edad y el clima, y mucha gente prefiere el blanco o el reposado.",
+      "beginnerNote": "¿Nuevo en el añejo? Espera el tequila en su versión más redonda y oscura: roble, vainilla y fruta seca alrededor del agave. Es lo más cercano al whisky en sensación, y sigue siendo tequila de corazón.",
       "category": "Tequila — destilado con Denominación de Origen propia; el añejo es una clase legal (envejecido en roble, mínimo 1 año)",
       "process": "Cocción al vapor, fermentación, doble destilación y envejecimiento en roble al menos un año (típicamente barricas ex-bourbon)",
       "finish": "Largo y redondo, con especias de roble, agave dulce y un final seco suave.",
@@ -224,14 +233,15 @@
         ],
         "notice": "Qué notar primero: el dulzor del roble envolviendo el agave cocido, y el final largo y suave."
       },
-      "whyItTastes": "Un año o más en roble (típicamente barricas ex-bourbon): la madera ahora habla claro — vainilla y caramelo sobre el agave — pero «más viejo es mejor» es marketing, no una regla de sabor.",
-      "plant": "Agave tequilana Weber azul (agave azul, cultivado)"
+      "whyItTastes": "Un año o más en roble, normalmente barricas que antes tuvieron bourbon. Ahora la madera habla claro: vainilla y caramelo sobre el agave.",
+      "plant": "Agave tequilana Weber azul (agave azul, cultivado)",
+      "placePrecision": "pueblo (Tequila, Jalisco); aproximada"
     },
     "tequila-cristalino-style": {
       "title": "Tequila cristalino, estilo",
-      "context": "El cristalino no es una clase legal: es un tequila envejecido (usualmente reposado o añejo) filtrado — típicamente con carbón de madera — para retirar el color que le dio la barrica. Casi todas las marcas grandes ya hacen uno. La categoría está en auge comercial y en pleno debate crítico: bartenders y escritores están divididos entre si es innovación o dilución del marketing de la tradición — y ese debate es parte de cómo México discute, con orgullo, sobre sus destilados.",
-      "description": "Un cristalino se elabora como reposado o añejo y luego se filtra con carbón hasta dejarlo claro: transparente como un blanco, más redondo como un añejo. Es objeto de debate honesto — algunos valoran la accesibilidad, otros prefieren los destilados sin filtrar.",
-      "beginnerNote": "¿Nuevo en el cristalino? Es un tequila envejecido con el color filtrado — claro como un blanco, más redondo como un añejo, y objeto de debate honesto.",
+      "context": "El cristalino parece un blanco, pero empieza como un tequila con crianza, casi siempre reposado o añejo, que se filtra (normalmente con carbón) para quitarle el color que le dio la barrica. No es una clase legal. Casi todas las marcas grandes ya tienen uno, y bartenders y escritores discuten si es innovación o una dilución de la tradición impulsada por la mercadotecnia. Esa discusión es parte de cómo México debate, con orgullo, lo que deben ser sus destilados.",
+      "description": "En la copa es transparente como un blanco, pero sabe a barrica suavizada: más redondo, más cremoso y a menudo más dulce que un blanco o que su base con crianza sin filtrar, con una acidez más amable y menos mordida de agave. El filtrado quita el color y, con él, algo de sabor, y lo que queda es suave y fácil a propósito. Los críticos señalan que la categoría se presta a usar aditivos que le devuelven dulzor y cuerpo, así que importan más el destilado base y el productor que el nombre.",
+      "beginnerNote": "¿Nuevo en el cristalino? Es un tequila con crianza al que le quitaron el color: transparente como un blanco, redondo como un añejo, y muy discutido.",
       "category": "Cristalino — un estilo de acabado/marketing sobre una clase legal, no una clase legal en sí; la divulgación de la base envejecida varía según la marca",
       "process": "Elaborado como reposado o añejo reposado en roble, luego filtrado con carbón hasta dejarlo claro; una elección de acabado, no una clase legal",
       "finish": "Suave y de corta a media duración; diseñado para beberse fácil.",
@@ -243,14 +253,15 @@
         ],
         "notice": "Qué notar primero: si el roble filtrado te parece suave o ligero — las opiniones difieren de verdad."
       },
-      "whyItTastes": "Elaborado como reposado o añejo reposado en roble y luego filtrado con carbón hasta dejarlo claro: el filtrado retira el color y, con él, algo de sabor. Lo que queda lleva influencia de madera pero parece blanco — una elección de acabado, no una clase legal.",
-      "plant": "Agave tequilana Weber azul (agave azul, cultivado)"
+      "whyItTastes": "Se hace como reposado o añejo en roble y luego se filtra con carbón hasta dejarlo transparente. Los productores dicen que el carácter de la crianza sobrevive al filtro; los reseñistas a menudo encuentran que una parte se va con el color. Lo que queda sabe a madera, pero parece blanco.",
+      "plant": "Agave tequilana Weber azul (agave azul, cultivado)",
+      "placePrecision": "región (Jalisco; valle o Altos según el productor); aproximada"
     },
     "comiteco-anejo-comitan-chiapas": {
       "title": "Comiteco añejo, reposado en vidrio con ramas de encino (Comitán, Chiapas)",
-      "context": "El comiteco es un destilado de savia del municipio de Comitán, Chiapas, producido fermentando y destilando el aguamiel fresco del maguey comiteco vivo sin cocinar la planta. Este perfil cubre la expresión envejecida de esa tradición. El añejo del productor de ejemplo reposa en vidrio con ramas de encino blanco y no en barricas, así que su carácter de madera viene del contacto con el roble en vidrio, no de una maduración en barrica. El añejo aquí es una expresión del productor — verifícalo contra las reglas de la IG aplicable “Comiteco de Comitán, Chiapas” (protegida el 6 de octubre de 2025) en lugar de suponer que no existen clases envejecidas.",
-      "description": "El comiteco añejo fermenta y destila aguamiel de la planta viva en cobre y luego lo reposa en vidrio con ramas de encino blanco. El resultado conserva el carácter verde, láctico y herbal del comiteco con un suave especiado de roble.",
-      "beginnerNote": "¿Nuevo en el comiteco añejo? No esperes un tequila añejo: la madera viene de ramas de encino reposadas en vidrio, así que es más suave — piensa en especias cálidas sobre el mismo carácter verde y láctico de savia.",
+      "context": "Este es el lado añejo del comiteco, el destilado de savia de Comitán: el aguamiel fresco del maguey comiteco vivo, fermentado y destilado sin cocer la planta. El productor de ejemplo reposa su añejo en vidrio con ramas de encino blanco y no en barricas, así que el carácter de madera viene del contacto con el roble dentro del vidrio, no de una maduración en barrica. El añejo aquí es una expresión propia del productor. La Indicación Geográfica “Comiteco de Comitán, Chiapas” (protegida el 6 de octubre de 2025) es la que fija las reglas, así que revísalas en lugar de suponer que no existen clases con crianza.",
+      "description": "Espera el mismo carácter verde, láctico y herbal de savia del comiteco joven, con un especiado suave de roble y un poco de color, y nada de la redondez cargada de vainilla de los destilados criados en barrica. Reposar sobre ramas de encino blanco en vidrio mantiene la madera suave. Junto al perfil de comiteco sin crianza sabe un poco más redondo y cálido, y sigue muy lejos del whisky.",
+      "beginnerNote": "¿Nuevo en el comiteco añejo? No esperes un tequila añejo. La madera viene de ramas de encino que reposan en el vidrio, así que es más suave: especias cálidas sobre el mismo carácter verde y láctico de savia.",
       "category": "Comiteco añejo — una tradición regional de Comitán, Chiapas, protegida desde octubre de 2025 como la Indicación Geográfica “Comiteco de Comitán, Chiapas”; el añejo aquí es una expresión del productor, no una clase legal como en el tequila",
       "process": "Derivado de savia: aguamiel recolectado de la planta viva, fermentado, destilado en cobre y reposado en vidrio con ramas de encino blanco (sin crianza en barrica, sin cocción de la piña)",
       "finish": "De duración media y herbal, con un suave final de especias de roble y sin carácter de asado.",
@@ -263,14 +274,15 @@
         ],
         "notice": "Qué notar primero: la especia del roble sobre la savia herbal, del reposo en vidrio y no en barrica."
       },
-      "whyItTastes": "De savia como el blanco, luego reposado en vidrio con ramas de encino — un toque de madera suave sin maduración en barrica, y el añejo aquí es una expresión del productor, no una clase legal como la del tequila.",
-      "plant": "Maguey comiteco (Agave americana L. según la declaración de IG de 2025; algunas referencias nombran Agave atrovirens), cultivado; el aguamiel se recolecta de la planta viva"
+      "whyItTastes": "De savia como el comiteco joven, luego reposado en vidrio con ramas de encino blanco: un toque suave de madera sin maduración en barrica. El añejo aquí es una expresión del productor, no una clase legal como la del tequila.",
+      "plant": "Maguey comiteco (Agave americana L. según la declaración de IG de 2025; algunas referencias nombran Agave atrovirens), cultivado; el aguamiel se recolecta de la planta viva",
+      "placePrecision": "municipio (Comitán de Domínguez, Chiapas); aproximada"
     },
     "raicilla-reposado-jalisco": {
       "title": "Raicilla reposado, estilo reposado en barrica (Jalisco)",
-      "context": "La raicilla es un destilado de agave con denominación de origen de Jalisco y las expresiones envejecidas existen (la botella de ejemplo reposa en madera); los requisitos exactos de las clases envejecidas descansan en la declaración de DO de 2019 y en el proyecto de norma publicado, no en reglas al estilo del tequila. Este perfil cubre el extremo joven — reposos breves de unos meses que redondean el destilado sin sacar el agave del centro. Los raicilleros de Jalisco se enorgullecen de que su destilado ganara reconocimiento legal sin perder su carácter rústico; los reposos cortos son su manera de mantenerlo así.",
-      "description": "Una raicilla reposado descansa en barricas de madera unos tres meses tras la destilación: la fruta y las florales del joven quedan con un halo ligero de caramelo y vainilla. Queda más cerca de su versión joven que de un tequila reposado.",
-      "beginnerNote": "¿Nuevo en la raicilla envejecida? Espera la fruta y las flores del joven con un halo ligero de caramelo y vainilla de un reposo breve — más cerca de su yo sin crianza que del tequila reposado.",
+      "context": "La raicilla tiene denominación de origen, y existen expresiones con crianza (la botella de ejemplo reposa en madera). Los requisitos exactos de las clases con crianza vienen de la declaración de DO de 2019 y del proyecto de norma publicado, no de las reglas del tequila. Este es el extremo joven del reposo: unos meses en madera que redondean el destilado sin hacer a un lado el agave. Los raicilleros de Jalisco están orgullosos de que su destilado ganara reconocimiento legal sin perder su carácter rústico, y los reposos cortos son una de las formas de cuidarlo.",
+      "description": "Espera el carácter afrutado, floral y apenas ahumado de la raicilla con un halo ligero de vainilla, caramelo y dulzor suave de fruta alrededor del agave, no en su lugar. La botella de ejemplo indica un reposo de 3 meses, y sus reseñistas describen influencia de barrica de jerez con ciruela, pasa y tabaco dulce; también advierten que la barrica puede opacar al agave. Ese riesgo de que la madera tape al destilado es parte de un retrato honesto del estilo.",
+      "beginnerNote": "¿Nuevo en la raicilla con crianza? Espera la fruta y las flores de una joven con un halo ligero de caramelo y vainilla de un reposo breve, más cerca de su versión sin crianza que de un tequila reposado.",
       "category": "Raicilla reposado — una afirmación de clase envejecida bajo la denominación de origen de la raicilla (2019); las reglas de las clases envejecidas descansan en la declaración de DO y en el proyecto de norma publicado, así que verifica la versión vigente en lugar de suponer mínimos al estilo del tequila",
       "process": "Fermentado y destilado (la botella de ejemplo indica acero inoxidable), luego reposado en barricas de madera unos 3 meses",
       "smoke": "Puede persistir un ahumado delicado de la producción; el reseñista de la botella de ejemplo describe humo de fogata en el final.",
@@ -284,14 +296,15 @@
         ],
         "notice": "Qué notar primero: cómo la fruta atraviesa el reposo."
       },
-      "whyItTastes": "Fermentado y destilado (la botella de ejemplo indica acero inoxidable), luego reposado en barricas de madera unos tres meses — un reposo corto de la botella de ejemplo (no un mínimo legal) que redondea la raicilla sin convertirla en otra cosa.",
-      "plant": "Varía según la botella (la botella de ejemplo indica angustifolia y maximiliana); vinculado a la página de la Maximiliana como el agave distintivo de la tradición de la Sierra — revisa la botella, los lotes difieren"
+      "whyItTastes": "Fermentada y destilada (la botella de ejemplo indica acero inoxidable), luego reposada en barricas de madera unos tres meses. Es la decisión de esta botella, no un mínimo legal, y el reposo corto redondea la raicilla sin convertirla en otra cosa.",
+      "plant": "Varía según la botella (la botella de ejemplo indica angustifolia y maximiliana); vinculado a la página de la Maximiliana como el agave distintivo de la tradición de la Sierra — revisa la botella, los lotes difieren",
+      "placePrecision": "estado (Jalisco; varía según el lote); aproximada"
     },
     "tequila-extra-anejo-highland-jalisco": {
       "title": "Tequila extra añejo, estilo de los altos (Jalisco)",
-      "context": "El extra añejo es la clase legal más reciente del tequila: mínimo tres años en barricas de roble de no más de 600 litros, agregado a la NOM en 2006. Existe porque los productores querían reconocimiento para los tequilas de largo reposo; la familia de El Tesoro lanzó su Paradiso en 1994, antes de que la clase existiera legalmente. Este perfil describe un extra añejo de los altos de cuatro a cinco años — muy por encima del mínimo de tres años, que es la única referencia legal (la NOM fija un mínimo, no un rango). El orgullo de los altos corre hondo aquí: los productores describen el agave de los Altos como más grande y más dulce, y algunos alteños sostienen que carga reposos largos en roble mejor que el agave del valle — la guía lo registra como visión local y tendencia, no como regla; las destilerías del valle también elaboran extra añejo.",
-      "description": "Un extra añejo es tequila envejecido tres años o más: el roble domina con chocolate, café y especias, y el agave de los altos — más dulce y frutal — sostiene la estructura. Es el tequila más cercano al whisky en carácter.",
-      "beginnerNote": "¿Nuevo en el extra añejo? Es el tequila en su versión más cercana al whisky: espera roble, chocolate y café — los buenos todavía saben a agave debajo.",
+      "context": "El extra añejo es la clase legal más nueva del tequila: al menos tres años en barricas de roble de no más de 600 litros, agregada a la NOM en 2006. Los productores la impulsaron porque ya reposaban tequila ese tiempo; la familia de El Tesoro sacó su Paradiso en 1994, antes de que la clase existiera. Este es un extra añejo de los Altos de cuatro a cinco años, muy por encima del mínimo de tres (la NOM fija un mínimo, no un rango). Los productores de Los Altos describen su agave como más grande y más dulce, y algunos alteños dicen que aguanta mejor los reposos largos que el del valle. Es una opinión local, y las destilerías del valle también hacen extra añejo.",
+      "description": "Tres años o más de roble llevan al tequila hacia el brandy: roble profundo, chocolate, café y fruta seca alrededor de un corazón de agave cocido. La tensión de esta clase es que muchos productores consideran demasiado lo que pasa de unos cuatro años, porque la madera puede ahogar el agave. Los mejores mantienen el agave a la vista, como encuentran las reseñas de la botella de ejemplo. «Más viejo es mejor» sigue siendo mercadotecnia, no una regla.",
+      "beginnerNote": "¿Nuevo en el extra añejo? Es el tequila en su versión más parecida al whisky: espera roble, chocolate y café. Los buenos todavía saben a agave debajo.",
       "category": "Tequila — destilado con Denominación de Origen propia; el extra añejo es una clase legal (envejecido en roble, mínimo 3 años, barricas de hasta 600 litros)",
       "process": "Cocción al vapor (o asado en piedra para algunos tradicionalistas), fermentación, doble destilación y envejecimiento de al menos tres años en roble (típicamente barricas americanas ex-bourbon)",
       "finish": "Largo y de roble, con chocolate, especias suaves y un final lento de agave.",
@@ -304,14 +317,15 @@
         ],
         "notice": "Qué notar primero: cuánto agave sobrevive al largo reposo — los mejores lo mantienen en el cuadro."
       },
-      "whyItTastes": "El agave del altiplano, de suelos rojos minerales, tiende a ser más dulce y floral que el del valle — una tendencia documentada, no un resultado garantizado del lugar; tres años o más en roble (típicamente ex-bourbon americano) empujan el destilado firmemente hacia la madera mientras la fruta del altiplano se mantiene debajo.",
-      "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales de Los Altos)"
+      "whyItTastes": "El agave de los Altos, de suelos rojos minerales, tiende a ser más dulce y floral que el del valle, aunque el lugar no lo garantiza. Tres años o más en roble, normalmente barricas americanas que tuvieron bourbon, llevan el destilado de lleno a la madera, con la fruta de los Altos aguantando debajo.",
+      "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales de Los Altos)",
+      "placePrecision": "municipio (Arandas, Los Altos; productor de ejemplo: La Alteña); aproximada"
     },
     "mezcal-reposado-espadin-oaxaca": {
       "title": "Mezcal reposado, estilo espadín con reposo breve en barrica (Valles Centrales, Oaxaca)",
-      "context": "El reposado es una clase legal del mezcal (la NOM reconoce joven, reposado y añejo): reposo en roble de dos meses a un año. La mayoría del mezcal vendido en el mundo es joven (sin crianza), y muchos tradicionalistas oaxaqueños argumentan que la madera oscurece lo que hace distinto al mezcal — ese argumento es parte del orgullo: defienden su horno subterráneo porque es su tierra en la copa. El mezcal envejecido es, con todo, una parte legal y creciente de la categoría. Este perfil cubre el extremo de reposo corto: unos meses en madera, típicamente partiendo de espadín asado en horno.",
-      "description": "Un mezcal reposado combina el humo del joven con vainilla y caramelo del reposo en roble. En el estilo de los Valles Centrales el reposo suele ser breve — el ejemplo indica 4–6 meses en roble americano — para que el humo del espadín siga presente de la nariz al final.",
-      "beginnerNote": "¿Nuevo en el mezcal reposado? Espera el humo de un joven suavizado con vainilla y caramelo — una entrada más amable a los destilados de agave ahumados.",
+      "context": "El reposado es una de las seis clases de mezcal de la NOM-070-SCFI-2016 (blanco o joven, madurado en vidrio, reposado, añejo, abocado con y destilado con): un reposo de dos meses a un año en madera. Casi todo el mezcal que se vende en el mundo es joven, y muchos tradicionalistas oaxaqueños sostienen que la madera esconde lo que hace distinto al mezcal; defienden el horno de tierra porque sabe a su tierra. Aun así, el mezcal con crianza es una parte legal y creciente de la categoría. Este es el extremo de reposo corto: unos meses en madera, casi siempre partiendo de espadín asado en horno de tierra.",
+      "description": "Espera el humo de pozo del espadín, suavizado, con algo de vainilla y caramelo encima y el carácter vegetal y asado todavía presente. Las reseñas de la botella de ejemplo describen justo ese equilibrio, humo de la nariz al final que termina en un caramelo de mantequilla ahumado, mientras otras advierten que la madera puede dominar. Primero el mezcal, después la madera: si la madera manda, ya se está yendo hacia un tequila reposado.",
+      "beginnerNote": "¿Nuevo en el mezcal reposado? Espera el humo de un joven suavizado con vainilla y caramelo: una entrada más amable a los destilados de agave ahumados.",
       "category": "Mezcal — destilado con denominación de origen propia; el reposado es una clase legal (reposo en madera de 2–12 meses; la madera no tiene que ser encino, y el inicio a los dos meses coincide con el del tequila aunque los demás requisitos difieren)",
       "process": "Asado en horno, molienda en piedra, fermentación silvestre, destilación y reposo en roble de 2 a 12 meses (la botella de ejemplo indica 4–6 meses en roble americano)",
       "smoke": "El humo del asado del espadín persiste tras el reposo; los reseñistas lo describen de la nariz al final.",
@@ -325,15 +339,16 @@
         ],
         "notice": "Qué notar primero: cómo la madera redondea el humo sin borrarlo."
       },
-      "whyItTastes": "La misma base de espadín asado en pozo que el joven, reposada en roble de 2 a 12 meses (la botella de ejemplo indica 4–6 en roble americano): el asado queda, suavizado por la madera. Nota: el mínimo de reposado del mezcal difiere del tequila — las reglas no se transfieren.",
-      "plant": "Agave angustifolia (espadín, cultivado); algunos productores mezclan agaves silvestres"
+      "whyItTastes": "La misma base de espadín asado en pozo que el joven, reposada en roble de 2 a 12 meses (la botella de ejemplo indica 4–6 en roble americano): el asado se queda, suavizado por la madera. El reposado de tequila y el de mezcal empiezan los dos en dos meses, pero sus otros requisitos son distintos, así que no pases las reglas de un destilado al otro.",
+      "plant": "Agave angustifolia (espadín, cultivado); algunos productores mezclan agaves silvestres",
+      "placePrecision": "región (valle de Tlacolula, Valles Centrales, Oaxaca); aproximada"
     },
     "mezcal-tobala-sierra-oaxaca": {
       "title": "Mezcal de tobalá, estilo Agave potatorum silvestre (Sierra, Oaxaca)",
-      "context": "El tobalá (Agave potatorum) es un agave pequeño, de altitud y mayormente silvestre, al que en México llaman el 'rey de los agaves'; su tamaño diminuto y su larga madurez (un rango variable según la fuente, a menudo citado alrededor de 12–15 años) dan rendimientos muy bajos, lo que ha encarecido su precio y mermado sus poblaciones silvestres. La DO del mezcal permite cualquier especie de agave, así que el tobalá es mezcal; parte del tobalá ya se cultiva, lo que cambia la historia de sostenibilidad y, anotan los reseñistas, a veces el sabor. Es un estilo dirigido por la planta, no por el lugar: el tobalá crece por la Sierra Norte de Oaxaca y más allá. En la Sierra Norte, encontrar un tobalá listo para cosechar es orgullo personal: el mezcalero te llevará a la planta, no al mapa.",
-      "description": "El tobalá se asa en horno, se muele en piedra, fermenta silvestre y se destila — en ollas de barro en las producciones ancestrales, y en cobre o barro en las artesanales, pues la categoría artesanal permite ambos caminos. El resultado es un mezcal más floral y afrutado que el espadín, con fruta dulce sobre un asado suave y un final mineral. La botella de ejemplo, de tobalá silvestre de los alrededores de Santiago Matatlán, es herbal y delicada, con tierra seca, tomillo, cilantro y un toque de romero.",
-      "beginnerNote": "¿Nuevo en el tobalá? Espera la prima más amable y floral del mezcal: cítricos dulces y fruta tropical sobre un asado suave — más caro porque el agave es pequeño, lento y escaso.",
-      "category": "Mezcal — el tobalá está dentro de la denominación de origen del mezcal; es una categoría de agave silvestre bajo presión de sostenibilidad, no una clase legal propia",
+      "context": "El tobalá (Agave potatorum) es un agave pequeño y casi siempre silvestre de las tierras altas, al que en México le dicen el 'rey de los agaves'. Es diminuto y tarda mucho en madurar (un rango que varía según la fuente, a menudo citado alrededor de 12–15 años), así que rinde muy poco, y eso ha subido su precio y mermado sus poblaciones silvestres. La DO del mezcal permite cualquier especie de agave, así que el tobalá es mezcal; parte del tobalá ya se cultiva, lo que cambia la historia de sostenibilidad y, según los reseñistas, a veces el sabor. Este estilo sigue a la planta más que a un lugar: el tobalá crece por la Sierra Norte de Oaxaca y más allá, y en la Sierra Norte encontrar uno listo para cosechar es motivo de orgullo personal.",
+      "description": "Espera un mezcal más ligero y más floral que el espadín: cítricos dulces, fruta tropical y una textura sedosa sobre un asado más suave. El tobalá se destila en ollas de barro en las producciones ancestrales, y en cobre o barro en las artesanales, pues la categoría artesanal permite ambos caminos. La variación entre lotes es de verdad grande; una cata a ciegas citada de ocho tobalás no encontró un solo hilo común, así que piensa en una familia de expresiones y no en un solo sabor. La botella de ejemplo, de tobalá silvestre de los alrededores de Santiago Matatlán, es herbal y delicada, con tierra seca, tomillo, cilantro y un toque de romero.",
+      "beginnerNote": "¿Nuevo en el tobalá? Espera el lado más amable y floral del mezcal: cítricos dulces y fruta tropical sobre un asado suave. Cuesta más porque el agave es pequeño, lento y escaso.",
+      "category": "Mezcal — el tobalá está dentro de la denominación de origen del mezcal; es un agave silvestre (Agave potatorum) bajo presión de sostenibilidad, no una clase legal ni una de las categorías de producción de la NOM-070",
       "process": "Asado en pozo, molido con piedra, fermentado con levaduras silvestres, destilado; la categoría artesanal de la NOM-070 permite alambiques de cobre u ollas de barro, así que el barro no es exclusivo de la producción ancestral",
       "smoke": "Un carácter de asado suave en lugar de humo pesado; los lotes ancestrales de barro pueden mostrar más.",
       "finish": "Medio y sedoso, con dulzor de fruta y un final mineral suave.",
@@ -346,14 +361,15 @@
         ],
         "notice": "Qué notar primero: el arranque floral y la textura sedosa — el tobalá silvestre suele ser más discreto que su fama."
       },
-      "whyItTastes": "El pequeño tobalá silvestre madura en un rango variable según la fuente (a menudo citado alrededor de 12–15 años) en altitud, dando rendimientos muy bajos; los reseñistas describen carácter concentrado en algunos lotes, y el asado en pozo y a menudo la destilación en ollas de barro mantienen la cocción suave. La variación entre lotes es genuina y grande — una cata ciega citada no encontró un solo hilo común.",
-      "plant": "Agave potatorum (tobalá; mayormente de recolección silvestre, algo cultivado — revisa la botella)"
+      "whyItTastes": "El pequeño tobalá silvestre madura durante muchos años en altura (a menudo se citan unos 12–15, según la fuente), y rinde muy poco. Los reseñistas describen un carácter concentrado en algunos lotes, y el asado en pozo y la destilación frecuente en ollas de barro mantienen la cocción suave. La variación entre lotes es real y grande: una cata a ciegas citada no encontró un solo hilo común.",
+      "plant": "Agave potatorum (tobalá; mayormente de recolección silvestre, algo cultivado — revisa la botella)",
+      "placePrecision": "región (Sierra Norte de Oaxaca; el estilo silvestre abarca toda la sierra, mientras que la botella de ejemplo se produce en Santiago Matatlán); aproximada"
     },
     "sotol-chihuahua": {
       "title": "Sotol, estilo desierto chihuahuense",
-      "context": "El sotol es el destilado del desierto: se destila de plantas del género Dasylirion (sotol o sereque), nativas del desierto chihuahuense — parientes del agave en la familia Asparagaceae que comparten la lógica del asado de piña, y con orgullo no son agave. Tiene Denominación de Origen desde 2002, que cubre solo Chihuahua, Coahuila y Durango; su historia del siglo XX incluye regulación restrictiva y producción clandestina en la sierra norte (el marco legal exacto varía según la época y el lugar; esta guía no afirma una sola prohibición nacional antes de 1994). Las vinatas de la sierra mantuvieron viva la tradición en un trabajo callado, de una generación a otra — los mismos hogares chihuahuenses que hoy se sirven su sotol. Este perfil describe el estilo del desierto de Chihuahua.",
-      "description": "El sotol asa la piña de Dasylirion en hornos cónicos (o la cuece al vapor los productores más grandes), fermenta silvestre y destila en cobre o barro. El resultado es un destilado herbal, fresco y ligeramente picante, más verde y salvaje que el tequila, con un humo generalmente más ligero que el del mezcal.",
-      "beginnerNote": "¿Nuevo en el sotol? Espera frescura herbácea y de pasto húmedo sobre un humo suave — más cercano a un primo verde y salvaje del mezcal que al tequila.",
+      "context": "El sotol es el destilado del desierto: se destila del Dasylirion (sotol o sereque), nativo del desierto chihuahuense. El Dasylirion es pariente del agave dentro de la familia Asparagaceae y sigue la misma lógica del asado de la piña, y con orgullo no es agave. El sotol tiene Denominación de Origen desde 2002, que cubre solo Chihuahua, Coahuila y Durango. Su siglo XX incluyó regulación restrictiva y producción clandestina en la sierra norte; el marco legal cambió según la época y el lugar, y esta guía no afirma una sola prohibición nacional antes de 1994. Las vinatas de la sierra mantuvieron viva la tradición en silencio, de una generación a otra, en los mismos hogares de donde los chihuahuenses todavía se sirven hoy. Este es el estilo del desierto de Chihuahua.",
+      "description": "Espera una frescura viva, herbácea y de pasto, a veces cercana al mentol o al eucalipto, sobre una base ahumada y terrosa del asado en pozo: más vegetal que casi todos los destilados de agave. Aquí el lugar se nota de manera poco común. Las fuentes de la DO citadas describen el sotol de zonas boscosas con notas de mentol, hongos y pino, y el del desierto árido más cargado a cuero, cacao y pimienta. Una planta puede dar más o menos una botella después de un número variable de años (a menudo se citan unos 8–12), así que los lotes son pequeños y de verdad varían.",
+      "beginnerNote": "¿Nuevo en el sotol? Espera una frescura viva de pasto mojado y hierbas sobre un humo suave, más cercana a un primo verde y silvestre del mezcal que al tequila.",
       "category": "Sotol — destilado con Denominación de Origen propia (Chihuahua, Coahuila, Durango, desde 2002); explícitamente no es un destilado de agave, incluido aquí como una tradición norteña afín",
       "process": "Piña asada en hornos cónicos (o cocida al vapor por los productores más grandes), fermentación silvestre, destilación en cobre o barro; que las raíces se dejen intactas depende de la práctica de cosecha, y el rebrote no está garantizado",
       "smoke": "Un humo suave, generalmente más ligero que el del mezcal, del asado en horno; depende del lote y del productor.",
@@ -367,14 +383,15 @@
         ],
         "notice": "Qué notar primero: la frescura de hierba del desierto que da el Dasylirion en lugar del dulzor del agave."
       },
-      "whyItTastes": "El Dasylirion (no un agave) se cosecha silvestre, se asa en pozos cónicos y se fermenta con levaduras silvestres: el carácter terroso, ahumado-herbal sigue de la planta y la cocción del desierto. Las poblaciones silvestres enfrentan presión de cosecha documentada; las afirmaciones de rebrote requieren evidencia de especie y método que esta guía no ha verificado.",
-      "plant": "Dasylirion (sotol, conocida comúnmente como cuchara del desierto; a menudo wheeleri, cedrosanum o leiophyllum), de recolección silvestre; no es un agave, aunque sí un pariente cercano"
+      "whyItTastes": "Dasylirion silvestre (no un agave), asado en pozos cónicos y fermentado con levaduras silvestres: el carácter terroso, ahumado y herbal viene de la planta y la cocción del desierto juntas. Las poblaciones silvestres enfrentan una presión de cosecha documentada; las afirmaciones de que rebrotan requieren evidencia de especie y método que esta guía no ha verificado.",
+      "plant": "Dasylirion (sotol, conocida comúnmente como cuchara del desierto; a menudo wheeleri, cedrosanum o leiophyllum), de recolección silvestre; no es un agave, aunque sí un pariente cercano",
+      "placePrecision": "estado (Chihuahua; varía según el lote); aproximada"
     },
     "tequila-blanco-highland-jalisco": {
       "title": "Tequila blanco de los Altos, estilo Los Altos (Jalisco)",
-      "context": "El blanco es la clase legal sin crianza del tequila — y los Altos (alrededor de Atotonilco el Alto y Arandas) lo leen de forma muy distinta al Valle de Tequila. Los suelos minerales ricos en hierro, la mayor elevación y las noches más frescas tienden a producir agaves más grandes y dulces, así que un blanco de los Altos suele inclinarse a lo brillante, afrutado y floral donde el valle tiende a lo terroso y sabroso. Es una distinción cultural y agronómica, no una clase legal — ambos son simplemente tequila blanco, y Los Altos presume con razón de la frutalidad de su tierra roja.",
-      "description": "La lectura alteña del tequila sin añejar: agave cocido más dulce con cítricos (piel de naranja, toronja), fruta tropical y de hueso, florales delicados y una especia suave, en un cuerpo más blando y redondo que el estilo del valle.",
-      "beginnerNote": "¿Nuevo en el tequila? Un blanco de los Altos suele describirse como punto de partida amable: suave, dulce y afrutado, y a menudo menos sabroso que un blanco del valle — aunque valle y altiplano se solapan y cada botella varía. Pruébalo junto al blanco del valle para saborear lo que el lugar puede hacer con la misma planta.",
+      "context": "Allá arriba, en Los Altos, alrededor de Atotonilco el Alto y Arandas, el blanco sabe distinto. La tierra roja rica en hierro, la altura y las noches más frescas tienden a dar agaves más grandes y dulces, así que un blanco de los Altos suele tirarle a lo brillante, afrutado y floral, donde el del valle tira a lo terroso y salino. Los dos son simplemente tequila blanco, la clase legal sin crianza; la diferencia es cultural y agronómica, y Los Altos presume con gusto la fruta de su tierra roja.",
+      "description": "Agave cocido más dulce, con cítricos (cáscara de naranja, toronja), fruta tropical y de hueso, flores delicadas y una especia suave, en un cuerpo más suave y redondo que el estilo del valle.",
+      "beginnerNote": "¿Nuevo en el tequila? Un blanco de los Altos suele ser un buen punto de partida: suave, dulce y afrutado, y casi siempre menos salino que un blanco del valle, aunque los dos se cruzan y cada botella cambia. Pruébalo junto al blanco del valle para sentir lo que el lugar le hace a la misma planta.",
       "category": "Tequila — destilado con Denominación de Origen propia; el blanco es una clase legal del tequila que suele venderse sin crianza, aunque las reglas permiten una maduración breve en roble por debajo del mínimo del reposado",
       "process": "Cocido al vapor (o asado en piedra según algunos tradicionalistas), fermentado, doble destilado, sin añejar (blanco)",
       "finish": "Suave y afrutado, con un lento desvanecer de agave dulce y un leve repunte de pimienta al final.",
@@ -387,8 +404,9 @@
         ],
         "notice": "Qué notar primero: la fruta floral y más dulce del altiplano frente a la pimienta."
       },
-      "whyItTastes": "El agave de Los Altos crece a mayor elevación en suelos rojos ricos en hierro con noches más frescas, y los productores dicen que esas condiciones producen piñas más grandes y dulces — por eso el destilado sin añejar tiende a lo afrutado, floral y brillante en cítricos en vez de lo terroso. Nótese la reserva honesta: un panel de cata a ciegas encontró el patrón regional más débil de lo que sugiere el folclore, así que trátalo como una tendencia, nunca una garantía.",
-      "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales rojos de Los Altos)"
+      "whyItTastes": "Los productores de Los Altos dicen que la altura, la tierra roja rica en hierro y las noches frescas dan piñas más grandes y dulces, y el destilado sin crianza tiende a lo afrutado, floral y brillante más que a lo terroso. Un panel de cata a ciegas encontró ese patrón regional más débil de lo que sugiere el folclore, así que tómalo como una tendencia.",
+      "plant": "Agave tequilana Weber azul (agave azul, cultivado; suelos minerales rojos de Los Altos)",
+      "placePrecision": "pueblo (zona de Atotonilco el Alto, Los Altos); aproximada"
     },
     "mezcal-papalote-montana-guerrero": {
       "title": "Mezcal de papalote, estilo montaña guerrerense (cupreata)",
@@ -409,7 +427,8 @@
           "quesos frescos",
           "salsas de fruta tropical"
         ]
-      }
+      },
+      "placePrecision": "municipio (Apango, Guerrero); aproximada"
     },
     "mezcal-cenizo-sierra-durango": {
       "title": "Mezcal de cenizo, estilo sierra duranguense (Agave durangensis)",
@@ -430,7 +449,8 @@
           "quesos asadero",
           "platillos de tortilla de harina"
         ]
-      }
+      },
+      "placePrecision": "municipio (El Mezquital, Durango); aproximada"
     },
     "mezcal-verde-altiplano-slp": {
       "title": "Mezcal de maguey verde, estilo Altiplano Potosino (Agave salmiana)",
@@ -451,18 +471,19 @@
           "salsas con chile",
           "postres de tuna"
         ]
-      }
+      },
+      "placePrecision": "municipio (zona de Santa Isabel, San Luis Potosí); aproximada"
     },
     "mezcal-cupreata-rio-de-parras-michoacan": {
       "title": "Mezcal de cupreata, estilo Rio de Parras (Michoacán)",
-      "context": "Michoacán es un gran estado mezcalero con voz propia: valles fluviales del Eje Volcánico Transversal, alambiques de madera de tradición filipina y prácticas de fermentación que incluyen el pulque — más de un reseñista de mezcales michoacanos describe un filo láctico y cremoso en los cupreata e inaequidens del estado. En las comunidades de Río de Parras, la maestra mezcalera María E. Pérez y su familia le dicen a su maguey penca ancha — nombre local de Agave cupreata — y su vinata arranca la fermentación con 10–15 litros de pulque, una práctica que quienes lean el perfil de destilado de pulque de esta guía reconocerán del otro lado del mundo de la misma familia de plantas. El nombre penca ancha es de Michoacán, no el papalote de Guerrero: dos estados, dos nombres, una misma estirpe ancha de cupreata.",
+      "context": "Michoacán es un gran estado mezcalero con voz propia: valles de río del Eje Volcánico Transversal, alambiques de madera de tipo filipino y fermentaciones que pueden llevar pulque. Más de un reseñista de mezcales michoacanos describe un filo cremoso y láctico en los cupreata e inaequidens del estado. En las comunidades de Río de Parras, la maestra mezcalera María E. Pérez y su familia le dicen a su maguey penca ancha, nombre local del Agave cupreata, y su vinata arranca la fermentación con 10–15 litros de pulque. Penca ancha es el nombre de Michoacán, no el papalote de Guerrero: dos estados, dos nombres, una misma estirpe ancha de cupreata.",
       "description": "Este es el lado cremoso del mezcal: chicle rosa, fresas con crema, fruta ácida y refresco de uva, con un borde láctico y un poco burbujeante. Así es la botella de ejemplo, de María E. Pérez y su familia en Rio de Parras. Varios catadores se lo atribuyen al pulque con el que arranca la fermentación, y uno dice que esas notas de fermentación son las que la distinguen de un cupreata guerrerense. En algunos lotes reseñados el calor se queda suave para la graduación, aunque eso varía. Otros mezcales michoacanos comparten las herramientas y las costumbres del estado, no un solo sabor.",
       "beginnerNote": "¿Nuevo en el mezcal michoacano? Espera el lado cremoso de la familia: chicle, fresas y un matiz láctico que es un rasgo del método de esta productora, no un defecto. Si conoces el papalote guerrerense, esta es la misma estirpe de planta con una cocina distinta — y un nombre distinto.",
       "category": "Mezcal — Michoacán está dentro de la denominación de origen del mezcal; penca ancha es el nombre regional de Agave cupreata en Rio de Parras, no una clase legal",
       "plant": "Agave cupreata (penca ancha en Rio de Parras; de recolección silvestre y cultivado)",
       "process": "Molido a mano con mazos de madera, fermentación silvestre iniciada con pulque, destilación en alambique de tradición filipina",
       "smoke": "Ligero o nulo según las reseñas citadas de la botella de ejemplo — el paladar encabeza con fruta y matiz láctico, no con humo de asado.",
-      "finish": "Cremoso y afrutado en las reseñas de la botella de ejemplo, con un toque láctico suave; un lote muestra cáscara de lima y sal marina al final.",
+      "finish": "Cremoso y afrutado en las reseñas de la botella de ejemplo, con un toque láctico suave; un lote muestra cáscara de limón y sal marina al final.",
       "pairing": {
         "serving": "Solo, en vaso pequeño; la fruta cremosa se abre con un reposo corto. También funciona en Margarita, donde su matiz láctico juega con los cítricos. Sugerencia editorial, no una regla.",
         "notice": "Qué notar primero: la llegada de chicle y crema y el matiz suave con toque de pulque detrás — la firma de esta productora y una buena introducción al estilo michoacano.",
@@ -472,7 +493,8 @@
           "salsas de fruta michoacana"
         ]
       },
-      "whyItTastes": "Aquí al cupreata le dicen penca ancha. Se muele a mano con mazos de madera, la fermentación arranca con 10–15 litros de pulque y se destila en un alambique de madera de tipo filipino. Más de un catador relaciona el chicle y el toque láctico con ese pulque. Es una explicación razonable y consistente, pero ninguna fuente aísla el pulque como causa: los lotes reseñados eran pequeños y además reposaron meses en vidrio. La página de la región también le atribuye al alambique de madera el perfil cremoso y mineral de Michoacán, pero eso describe la tradición, no un efecto medido. El método y el sabor son reales; cómo se conectan sigue siendo una pregunta abierta."
+      "whyItTastes": "Aquí al cupreata le dicen penca ancha. Se muele a mano con mazos de madera, la fermentación arranca con 10–15 litros de pulque y se destila en un alambique de madera de tipo filipino. Más de un catador relaciona el chicle y el toque láctico con ese pulque. Es una explicación razonable y consistente, pero ninguna fuente aísla el pulque como causa: los lotes reseñados eran pequeños y además reposaron meses en vidrio. La página de la región también le atribuye al alambique de madera el perfil cremoso y mineral de Michoacán, pero eso describe la tradición, no un efecto medido. El método y el sabor son reales; cómo se conectan sigue siendo una pregunta abierta.",
+      "placePrecision": "municipio (Rio de Parras, Michoacán); aproximada"
     },
     "mezcal-papalometl-mixteca-puebla": {
       "title": "Mezcal de papalometl, estilo Mixteca Poblana (Puebla)",
@@ -493,12 +515,13 @@
           "salsas de chile"
         ]
       },
-      "whyItTastes": "El papalometl de aquí es potatorum, en parte silvestre y en parte sembrado de semilla en el vivero de la productora. Se asa en horno de tierra, se muele en desgarradora mecánica y fermenta con levaduras silvestres: en seco hasta 14 días y luego con agua otros 5 a 10, algunos lotes pequeños en cuero crudo. Se destila una sola vez, en cobre o barro. Uno podría pensar que esa fermentación en seco y luego en húmedo afila la acidez, pero las reseñas no lo dicen: reportan la acidez, no su causa, y una visita a la productora describe los mezcales de la casa como limpios, sin notas fermentadas marcadas. Así que el vínculo queda abierto."
+      "whyItTastes": "El papalometl de aquí es potatorum, en parte silvestre y en parte sembrado de semilla en el vivero de la productora. Se asa en horno de tierra, se muele en desgarradora mecánica y fermenta con levaduras silvestres: en seco hasta 14 días y luego con agua otros 5 a 10, algunos lotes pequeños en cuero crudo. Se destila una sola vez, en cobre o barro. Uno podría pensar que esa fermentación en seco y luego en húmedo afila la acidez, pero las reseñas no lo dicen: reportan la acidez, no su causa, y una visita a la productora describe los mezcales de la casa como limpios, sin notas fermentadas marcadas. Así que el vínculo queda abierto.",
+      "placePrecision": "municipio (San Diego La Mesa Tochimilitzingo, Puebla); aproximada"
     }
   },
   "bottles": {
     "fortaleza-blanco": {
-      "reviewSummary": "Un blanco del valle de referencia: agave cocido sabroso y firme, con salmuera de aceituna y pimienta negra, y un final largo y mineral.",
+      "reviewSummary": "Un blanco del valle de referencia: agave cocido firme y salino, con salmuera de aceituna y pimienta negra, y un final largo y mineral.",
       "producer": "Tequila Fortaleza (destilería Fortaleza, Tequila, Jalisco)"
     },
     "lost-explorer-espadin": {
@@ -521,17 +544,17 @@
     },
     "kilinga-bacanora-silvestre": {
       "reviewSummary": "Flores silvestres, cítricos y la acidez de la manzana verde, con un suave final violeta — una bacanora aromática y moderadamente compleja.",
-      "editorialNote": "Una lectura más afrutada y floral del bacanora que la que describe este perfil — la acidez de manzana verde y el final violeta quedan fuera del centro mineral y sabroso del ejemplo de Rancho Tepúa.",
+      "editorialNote": "Más afrutado y floral que el perfil de bacanora: acidez de manzana verde y un final de violeta, muy lejos del centro mineral y salino del ejemplo de Rancho Tepúa.",
       "producer": "Rodrigo Bojórquez Bours (vinata familiar, Álamos, Sonora)"
     },
     "la-venenosa-costa": {
-      "reviewSummary": "La oferta más sabrosa y ahumada del rango de La Venenosa (lote 32, 2021) — un destilado que su reseñista encontró delicioso en su punto de precio.",
-      "editorialNote": "Encaja con la lectura costera de cocción en fosa del perfil Costa: sabroso y ahumado es exactamente lo que el perfil predice para este estilo.",
+      "reviewSummary": "La más salina y ahumada de la línea de La Venenosa (lote 32, 2021) — un destilado que su reseñista encontró delicioso en su punto de precio.",
+      "editorialNote": "Encaja con la lectura costera de cocción en fosa del perfil Costa: salino y ahumado es exactamente lo que el perfil predice para este estilo.",
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas",
       "place": "Jalisco costero (región de Cabo Corrientes)"
     },
     "balancan-tuxca": {
-      "reviewSummary": "Una nariz rica con notas especiado, jugo de pepinillos y ácido (Mezcalistas); ralladura de lima, heno, pimienta en grano y agave sobre un paladar directo y mineral (miembros de Mezcal Reviews).",
+      "reviewSummary": "Una nariz rica con notas especiado, jugo de pepinillos y ácido (Mezcalistas); ralladura de limón, heno, pimienta en grano y agave sobre un paladar directo y mineral (miembros de Mezcal Reviews).",
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas",
       "producer": "Ignacio Juárez (vinatero, región de Tuxcacuesco), embotellado por Laika Spirits",
       "place": "Región de Tuxcacuesco, sur de Jalisco (frontera Jalisco–Colima)"
@@ -539,7 +562,7 @@
     "nine-guardianes-comiteco-blanco": {
       "classification": "Comiteco — joven (sin clases legales de añejamiento; 100% de agave de solo savia, según el productor)",
       "plantComposition": "Fermentado y doble destilado a partir de aguamiel fresco de maguey comiteco (Agave atrovirens); según el importador estadounidense del productor, reposado en vidrio unos seis meses antes del embotellado",
-      "reviewSummary": "Mezcal Reviews lista el 9 Guardianes Comiteco Blanco como fermentado de la savia del maguey Comitlán y destilado en Chiapas.",
+      "reviewSummary": "Hecho de la savia del maguey Comitlán, fermentada y destilada en cobre, según su ficha en Mezcal Reviews. Las notas de cata de esta expresión todavía no están documentadas.",
       "abvNote": "Graduación alcohólica no documentada en las fuentes citadas",
       "composition": "Destilado de savia de agave fermentada (aguamiel); según la fuente citada, la categoría más amplia del comiteco permite azúcar de caña, y esta botella es de solo savia según el productor.",
       "producer": "Comiteco Córdova & Guillén (Comitán de Domínguez, Chiapas)"
@@ -565,7 +588,7 @@
     "nine-guardianes-comiteco-anejo": {
       "classification": "Comiteco — añejo (sin clases legales de añejamiento; el carácter maderable viene del reposo en vidrio, según el productor)",
       "plantComposition": "Fermentado y doble destilado a partir de aguamiel fresco de maguey comiteco (Agave atrovirens); según el importador estadounidense del productor, reposado en vidrio con ramas de roble blanco en lugar de barricas",
-      "reviewSummary": "Mezcal Reviews lista el 9 Guardianes Comiteco Añejo al 42% de alcohol, de savia de maguey Comitlán fermentada y destilada en Chiapas.",
+      "reviewSummary": "42% de alcohol, de savia de maguey Comitlán fermentada y destilada en cobre y luego añejada, según su ficha en Mezcal Reviews. La ficha no trae notas de cata, así que la única guía de sabor aquí es la nota sobre en qué se aparta del perfil.",
       "composition": "Destilado de savia de agave fermentada (aguamiel); según la fuente citada, la categoría más amplia del comiteco permite azúcar de caña, y esta botella es de solo savia según el productor.",
       "batch": "Reposado en vidrio con ramas de roble blanco",
       "producer": "Comiteco Córdova & Guillén (Comitán de Domínguez, Chiapas)"
@@ -601,7 +624,7 @@
     "ilegal-mezcal-anejo": {
       "reviewSummary": "Se inclina más al caramelo y a las notas de madera especiada que el reposado, con menos del humo del joven — una de las sorpresas de mezcal envejecido más placenteras para su reseñista; Bourbon Banter describe el mismo giro hacia caramelo y madera.",
       "batch": "Espadín joven reposado unos 14 meses en roble americano, más allá del mínimo de 1 año del añejo",
-      "editorialNote": "Un añejo (reposado unos 14 meses, más allá del mínimo de 1 año del añejo): el perfil de mezcal envejecido de la app describe la clase reposado (de 2 meses a 1 año), así que esta expresión se cubre como dato de catálogo, no como ejemplo del perfil de estilo reposado.",
+      "editorialNote": "Un añejo, reposado unos 14 meses, más allá del mínimo de 1 año del añejo. El perfil de mezcal con crianza de aquí cubre la clase reposado (de 2 meses a 1 año), así que esta botella queda en el catálogo por sí sola y no como ejemplo de ese perfil.",
       "producer": "Ilegal Mezcal (productores del valle de Tlacolula; marca de John Rexer), Oaxaca"
     },
     "montelobos-tobala": {
@@ -609,7 +632,7 @@
       "batch": "100% tobalá cultivado (sin recolección silvestre), asado en horno; producción enfocada en sostenibilidad",
       "abvNote": "La graduación varía por lote; la reseña citada lista notas específicas de lote — revisa tu botella",
       "producer": "Montelobos (mezcalero Iván Saldaña; producido en el Palenque del Tentzo), Puebla",
-      "editorialNote": "Tobalá cultivado de Puebla, fuera del contexto silvestre de la Sierra oaxaqueña que describe este perfil; la planta es la misma especie, pero la región de cultivo y la producción cultivada difieren.",
+      "editorialNote": "Tobalá cultivado de Puebla, lejos de la sierra oaxaqueña silvestre que sigue el perfil de tobalá: la misma especie, criada en otra región y cultivada en lugar de silvestre.",
       "place": "San Nicolás Huajuapan (Palenque del Tentzo), Puebla"
     },
     "macurichos-ancestral-tobala": {
@@ -633,7 +656,7 @@
       "producer": "Siete Pozos Taberna (maestro tabernero Refugio Pineda Cruz; propietario de la marca Luis Velasco), Zapotitlán de Vadillo, Jalisco"
     },
     "indio-alonso-tuxca": {
-      "reviewSummary": "La entrada citada de Mezcal Reviews documenta la composición multi-agave (cimarrón, cuaquizoca, salmiana) y la fermentación en horno de piedra volcánica; las notas de cata de este lote específico aún no están documentadas, así que aquí no se afirma ningún carácter de sabor.",
+      "reviewSummary": "Varios agaves (cimarrón, cuaquizoca, salmiana), fermentados en un hoyo de piedra volcánica, según su ficha en Mezcal Reviews. Las notas de cata de este lote todavía no están documentadas, así que aquí no se afirma ningún sabor.",
       "batch": "Agaves silvestres cimarrón (Agave angustifolia), cuaquizoca y salmiana (Agave inaequidens), asados en horno, fermentados en horno de piedra volcánica, doble destilación en cobre; otro productor que impulsa una denominación de origen para la tuxca",
       "abvNote": "Producción en lotes pequeños; graduación no documentada en la fuente citada — revisa tu botella",
       "producer": "Indio Alonso (tuxquero de quinta generación David Benítez Venegas), Zapotitlán de Vadillo, Jalisco"
@@ -648,7 +671,7 @@
       "reviewSummary": "Un carácter medicinal-herbal con azúcar moreno y anís y un final apenas amargo — un sorbo ligero de verano que su reseñista encontró comparable a añejos finos de tequila pero más profundo.",
       "batch": "100% Dasylirion de recolección silvestre, cocido al vapor, triple destilado en cobre de doble columna, luego envejecido 2 años en encino blanco francés nuevo; certificado orgánico USDA y Kosher",
       "abvNote": "Graduación no indicada en la página de la reseña citada; la línea envejecida del productor es de menor graduación según notas de miembros — revisa tu botella",
-      "editorialNote": "Un sotol envejecido (2 años en encino blanco francés nuevo): el perfil de sotol de la app describe un estilo desértico de Chihuahua sin crianza y sin maduración en madera, así que esta expresión se cubre como dato de catálogo, no como ejemplo de ese perfil de estilo.",
+      "editorialNote": "Un sotol con crianza, dos años en roble francés nuevo. El perfil de sotol de aquí sigue el estilo del desierto de Chihuahua sin crianza, así que esta botella queda en el catálogo por sí sola y no como ejemplo de ese perfil.",
       "producer": "Vinomex (maestro destilador José Daumas Gil de Partearroyo), Delicias, Chihuahua"
     },
     "bacatt-bacanora": {
@@ -697,7 +720,7 @@
       "producer": "Jose Cuervo (destilería La Rojeña, Tequila, Jalisco)"
     },
     "patron-silver": {
-      "reviewSummary": "Un encantador aroma vegetal de agave cocido — pasto, pimientos verdes, algo de tierra y eucalipto — con sabores de agave, eucalipto y pimienta blanca que llevan a un final suave y sabroso; fino solo y en cócteles, con precio premium.",
+      "reviewSummary": "Un encantador aroma vegetal de agave cocido — pasto, pimientos verdes, algo de tierra y eucalipto — con sabores de agave, eucalipto y pimienta blanca que llevan a un final suave y salino; fino solo y en cócteles, con precio premium.",
       "editorialNote": "Un blanco de los Altos: la misma clase sin añejar del ejemplo del valle, con la lectura más frutal y cítrica de los Altos.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
@@ -711,7 +734,7 @@
       "producer": "Casa Dragones (destilación en lotes pequeños, Tequila, Jalisco)"
     },
     "g4-blanco": {
-      "reviewSummary": "Muestra las delicias complejas y sabrosas del agave de los Altos, rezumando pimienta y notas de aceituna verde; el método del productor — cocción lenta en horno de piedra, tahona metálica artesanal, doble destilación en cobre — mantiene el agave en primer plano.",
+      "reviewSummary": "Muestra lo complejo y salino del agave de los Altos, rezumando pimienta y notas de aceituna verde; el método del productor — cocción lenta en horno de piedra, tahona metálica artesanal, doble destilación en cobre — mantiene el agave en primer plano.",
       "classification": "Tequila — blanco 100% de agave, sin añejar",
       "plantComposition": "100% de agave azul weber (Agave tequilana), de cultivo propio",
       "batch": "Elaborado con una mezcla 50/50 de agua de lluvia y de manantial; cocido en horno de piedra y molido con tahona",
@@ -749,15 +772,15 @@
     },
     "don-julio-reposado": {
       "reviewSummary": "Complejidad suave de principio a fin: un dejo de dulce de leche, almendra y un toque de especia maderable y té, con especias picantes que crecen en la garganta.",
-      "editorialNote": "Un reposado de los Altos: el perfil de reposado de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
+      "editorialNote": "Un reposado alteño: se destila en Los Altos, y el perfil de reposado de aquí sigue al Valle de Tequila, así que esta botella queda en el catálogo como ejemplo de los Altos y no como ejemplo de ese perfil.",
       "classification": "Tequila — reposado 100% de agave (8 meses de reposo en roble, según la reseña)",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
       "place": "Atotonilco el Alto, Jalisco (Los Altos)",
       "producer": "Don Julio (Tequila Tres Magueyes, Atotonilco el Alto, Jalisco)"
     },
     "don-julio-anejo": {
-      "reviewSummary": "Agave suave con pimienta blanca moderada y caramelo claro, una presencia de roble muy leve y un dulzor agradable a la miel, con ralladura de lima y confitura de albaricoque fundidos en el agave, el roble y el caramelo.",
-      "editorialNote": "Un añejo de los Altos: el perfil de añejo de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
+      "reviewSummary": "Agave suave con pimienta blanca moderada y caramelo claro, una presencia de roble muy leve y un dulzor agradable a la miel, con ralladura de limón y confitura de chabacano fundidos en el agave, el roble y el caramelo.",
+      "editorialNote": "Un añejo alteño: se destila en Los Altos, y el perfil de añejo de aquí sigue al Valle de Tequila, así que esta botella queda en el catálogo como ejemplo de los Altos y no como ejemplo de ese perfil.",
       "classification": "Tequila — añejo 100% de agave (18 meses en roble, según la cata citada)",
       "plantComposition": "100% de agave azul weber (Agave tequilana)",
       "place": "Atotonilco el Alto, Jalisco (Los Altos)",
@@ -772,7 +795,7 @@
     },
     "patron-reposado": {
       "reviewSummary": "Un destilado dicotómico: dulzor de caramelo a la miel, calabaza horneada suave y terrosa, pimientos verdes dulces, pimienta blanca picante, sándalo y un toque de vainilla, cambiando de dirección en el primer sorbo.",
-      "editorialNote": "Un reposado de los Altos: el perfil de reposado de la app describe la lectura del Valle de Tequila, y esta expresión se destila en Los Altos — cubierto aquí como dato de catálogo, no asignado al perfil del valle.",
+      "editorialNote": "Un reposado alteño: se destila en Los Altos, y el perfil de reposado de aquí sigue al Valle de Tequila, así que esta botella queda en el catálogo como ejemplo de los Altos y no como ejemplo de ese perfil.",
       "classification": "Tequila — reposado 100% de agave (reposo en roble, en promedio unos seis meses según la reseña)",
       "plantComposition": "100% de agave azul weber (Agave tequilana); una mezcla de tequilas de tahona y de molino de rodillos, según la ficha del productor",
       "place": "Atotonilco el Alto, Jalisco (Los Altos)",
@@ -780,7 +803,7 @@
     },
     "casa-dragones-joven": {
       "reviewSummary": "Extraordinariamente suave, con una nariz muy dulce, afrutada, casi vinosa y un sabor puro y contundente a pimienta que termina limpio.",
-      "editorialNote": "Una mezcla joven: esta guía aún no tiene un perfil de estilo tequila joven, así que esta entrada se cubre solo como dato de catálogo.",
+      "editorialNote": "Una mezcla joven. Todavía no hay un perfil de tequila joven, así que esta botella queda en el catálogo por sí sola.",
       "classification": "Tequila — joven (una mezcla maestra de plata con un toque de extra añejo, filtrada hasta la claridad del platino)",
       "plantComposition": "100% de agave azul weber (Agave tequilana), según la marca",
       "producer": "Casa Dragones (mezcla maestra en lotes pequeños, Tequila, Jalisco)"
@@ -831,7 +854,7 @@
     },
     "sap-collection": {
       "name": "Recolección de savia (aguamiel)",
-      "explanation": "En las tradiciones del comiteco y el pulque, el quiote — el tallo floral — de la planta viva se corta y la cavidad resultante en la cabeza de la planta se raspa; el aguamiel que se acumula se recolecta durante días sucesivos. Es una operación distinta de cosechar y cocinar una piña: la planta no muere en la cosecha, pero la recolección repetida de savia agota la planta — no es regeneración indefinida. La piña nunca se cocina en estas tradiciones, lo que las hace destilados de savia sin carácter de asado.",
+      "explanation": "En las tradiciones del comiteco y del pulque se hace un corte grande en la parte de arriba del agave vivo y se raspa por dentro durante días seguidos, para que el aguamiel se siga juntando y se pueda recoger. Es una operación distinta de cosechar y cocer una piña: la planta no muere en la cosecha, pero la recolección repetida de savia la agota; no es una regeneración indefinida. La piña nunca se cuece en estas tradiciones, así que son destilados de savia sin carácter de asado.",
       "glassEffect": "Sin asado: los destilados de savia no tienen notas de agave cocido ni de humo, y pueden mostrar tonos frescos, lácticos o fermentados."
     },
     "milling-extraction": {
@@ -851,17 +874,17 @@
     },
     "glass-resting": {
       "name": "Reposo en vidrio (madurado en vidrio)",
-      "explanation": "El reposo en vidrio (madurado en vidrio) suaviza el destilado sin influencia de madera — una opción tradicional que muchas categorías no exigen.",
+      "explanation": "Algunos productores reposan destilados sin crianza en vidrio para redondearlos; la NOM-070 del mezcal llama madurado en vidrio a la clase con más de 12 meses en vidrio. El reposo en vidrio es reposo, no maduración en madera: no aporta carácter de roble.",
       "glassEffect": "Redondea el destilado sin aportar nada de roble: del vidrio no viene vainilla ni color de madera."
     },
     "wood-maturation": {
       "name": "Maduración en madera",
-      "explanation": "La maduración en madera aporta color, especias de roble y suavidad. Los mínimos legales son específicos de cada destilado: las reglas del tequila no se transfieren a otras categorías.",
+      "explanation": "Las clases reposado y añejo reposan en madera durante mínimos que fija cada destilado: en el tequila, el reposado al menos dos meses y el añejo al menos un año en recipientes de hasta 600 litros (NOM-006); el mezcal tiene los suyos (NOM-070). Lo que aporta la madera depende del tipo, el tamaño, la edad y el tiempo; no hay una escalera universal de «más viejo es mejor», y la mayoría de las botellas de esta guía no tienen crianza a propósito.",
       "glassEffect": "A menudo aporta vainilla, especias, color y un borde más suave, según la madera, el tamaño de la barrica y el tiempo."
     },
     "filtration": {
       "name": "Filtrado",
-      "explanation": "El filtrado (a menudo con carbón) retira el color de un destilado con crianza, como en el cristalino — una elección de acabado, no una clase legal.",
+      "explanation": "Algunos destilados se filtran para darles claridad. El cristalino lleva esto más lejos: tequila con crianza que se filtra, normalmente con carbón, para quitarle el color que le dio la barrica. Los productores dicen que el carácter de la crianza se queda; los reseñistas a menudo encuentran que con el color se va algo de sabor.",
       "glassEffect": "Puede quitar color y, con él, algo de carácter; los cristalinos son el caso extremo."
     }
   },
@@ -881,7 +904,7 @@
       "harvestProduction": "Cultivado a escala en Oaxaca; de cosecha silvestre en Sonora. Cocido (pozo o vapor), nunca por savia.",
       "sensoryTendencies": "Orientación editorial: los mezcales de espadín suelen saber a agave asado; la Pacifica del bacanora aporta un carácter herbal sonorense; los sabores cambian por lugar y proceso, no por el nombre.",
       "sustainability": "Las presiones de cosecha silvestre varían mucho por región: el bacanora sonorense depende de poblaciones silvestres de yaquiana/Pacifica, y el crecimiento del mezcal ha aumentado la demanda sobre parientes angustifolia de cosecha silvestre en otras partes. Donde el espadín se cultiva a escala (Oaxaca) la presión es mucho menor. Si la Pacifica/Yaquiana sonorense es la misma planta que el espadín o una variedad local distinta sigue en debate; esta guía conserva los nombres regionales sin zanjar la botánica. (El reporte sobre cosecha de agave silvestre es un tema activo en la prensa de la categoría, p. ej. Mezcalistas, revisado el 21-10-2026.)",
-      "uncertainty": "Si la pacífica/yaquiana de Sonora es la misma planta que el espadín o una variedad local distinta está en debate; la app conserva los nombres regionales sin resolver la botánica."
+      "uncertainty": "Si la pacífica/yaquiana de Sonora es la misma planta que el espadín o una variedad local distinta está en debate, así que los nombres regionales se quedan como son y la botánica queda abierta."
     },
     "agave-maximiliana": {
       "cultivation": "cosecha silvestre",
@@ -906,9 +929,9 @@
       "atAGlance": "Maguey pulquero, el agave de savia del corazón pulquero; la base del destilado de pulque.",
       "whereItGrows": "Cultivado en Tlaxcala y el altiplano pulquero del centro de México.",
       "harvestProduction": "Cultivado; el aguamiel se recolecta a diario de la planta viva, se fermenta en pulque (~48 horas) y luego se destila — sin cocción.",
-      "sensoryTendencies": "Orientación editorial: al ser de savia, sin carácter de asado; las fuentes varían sobre la nomenclatura de subespecies (Manso/Salmiana), lo que esta guía registra sin resolver.",
+      "sensoryTendencies": "Dos caminos de una misma especie. Como maguey pulquero, su savia se vuelve pulque y destilado de pulque, sin ningún asado; como maguey verde en la meseta potosina, su piña se cuece para mezcal, que los catadores del ejemplo citado encuentran verde y de poco humo.",
       "sustainability": "Cultivado; la planta sigue viva tras la cosecha de savia.",
-      "uncertainty": "Las fuentes difieren en el nombre de la subespecie (Manso/Salmiana); la app registra la identidad a nivel de género sin resolver el debate de la subespecie."
+      "uncertainty": "Las fuentes difieren en el nombre de la subespecie (Manso/Salmiana), así que la planta se nombra a nivel de especie y la pregunta de la subespecie queda abierta."
     },
     "tuxca-wild-agaves": {
       "cultivation": "cosecha silvestre; los ensambles varían por lote",
@@ -944,7 +967,7 @@
       "harvestProduction": "Silvestre y cultivado; asado en pozo subterráneo, fermentación con levaduras silvestres, destilación en pequeños lotes.",
       "sensoryTendencies": "Orientación editorial: contribuye al perfil de la raicilla de la Costa junto al chico aguiar; los nombres comunes de los agaves de la costa de Jalisco varían por localidad y taberna.",
       "sustainability": "Misto silvestre/cultivado; los nombres regionales se conservan sin resolver debates de especies.",
-      "uncertainty": "Los nombres comunes de los agaves costeros de Jalisco varían por localidad y taberna; la app conserva los nombres regionales sin resolver los debates de especie."
+      "uncertainty": "Los nombres comunes de los agaves costeros de Jalisco varían por localidad y taberna; los nombres regionales se quedan como son, y los debates de especie quedan abiertos."
     },
     "agave-cupreata": {
       "cultivation": "de recolección silvestre y cultivado; el cupreata silvestre es el que está bajo presión",
@@ -1043,7 +1066,7 @@
       "title": "Elegir y disfrutar",
       "intro": "No hay una manera incorrecta de disfrutar estos destilados — pero sí maneras honestas de elegir. Este capítulo favorece tu propio paladar sobre el precio, la edad o la rareza.",
       "block0": "Empieza por lo que ya te gusta: blancos frescos y herbales, mezcales con humo, añejos con roble, o algo fuera de lo común. Los caminos de descubrimiento de esta guía agrupan perfiles por sabor para que sigas tu propio gusto, y cada perfil nombra su estilo sensorial con honestidad.",
-      "block1": "El servicio es simple: una copa pequeña a temperatura ambiente deja abrir los aromas; un chorrito de agua puede suavizar graduaciones altas. Beberlo solo — sin hielo ni mezcladores —, con hielo y mezclado son maneras legítimas de conocer estos destilados — una margarita o una paloma son una entrada real a un blanco, no un compromiso. La sal, los cítricos (lima, no siempre limón), el hielo y los acompañamientos son elecciones, no requisitos de entrada; las costumbres regionales varían y ninguna es una regla. Los maridajes de cada perfil son sugerencias editoriales, nunca reglas.",
+      "block1": "El servicio es simple: una copa pequeña a temperatura ambiente deja abrir los aromas; un chorrito de agua puede suavizar graduaciones altas. Beberlo solo — sin hielo ni mezcladores —, con hielo y mezclado son maneras legítimas de conocer estos destilados — una margarita o una paloma son una buena manera de conocer un blanco, no una opción de segunda. La sal, los cítricos (en México, casi siempre limón verde), el hielo y los acompañamientos son elecciones, no requisitos de entrada; las costumbres regionales varían y ninguna es una regla. Los maridajes de cada perfil son sugerencias editoriales, nunca reglas.",
       "block2": "Cuidado con las escaleras de marketing: más viejo no es automáticamente mejor, más graduación no es automáticamente mejor, y la rareza no es un sabor. Un blanco accesible de un buen productor puede superar a una botella trofeo. Esta guía perfila estilos, no trofeos.",
       "block2deeper": "Técnica de cata, en breve: una copa pequeña y limpia, una inhalación suave sin hundir la nariz ni girar con fuerza, un sorbo pequeño, atención a la textura y después el final. El agua — al lado o unas gotas dentro — es una elección que suaviza el calor del alcohol; no vuelve la bebida sin alcohol. La lección Cómo catar del recorrido de cinco pasos guía esta secuencia paso a paso, y la vista de comparación existe precisamente para catar dos estilos parecidos lado a lado."
     },
@@ -1138,7 +1161,7 @@
     "tequila-valley-jal": {
       "name": "Valle de Tequila, Jalisco",
       "geography": "Valle bajo alrededor del pueblo de Tequila; suelos volcánicos, más cálido y seco que los Altos.",
-      "distinctions": "El agave tiende a crecer más pequeño y herbáceo que el de los Altos; los blancos del valle tienden a lo sabroso y vegetal en la lectura editorial — una descripción cultural, no un límite legal."
+      "distinctions": "El agave tiende a crecer más pequeño y herbáceo que el de los Altos; los blancos del valle tienden a lo salino y vegetal en la lectura editorial — una descripción cultural, no un límite legal."
     },
     "tequila-highlands-jal": {
       "name": "Los Altos de Jalisco (La Alteña), Jalisco",
@@ -1173,7 +1196,7 @@
     "jalisco-colima-borderlands": {
       "name": "Región de Tuxcacuesco, sur de Jalisco (frontera Jalisco–Colima)",
       "geography": "Cañones fluviales del sur de Jalisco alrededor de Tuxcacuesco y Zapotitlán de Vadillo, cruzando la línea estatal hacia el norte de Colima — el valle del Río Almería y las faldas bajas del volcán.",
-      "distinctions": "La tuxca no tiene denominación de origen; la práctica vinatera es cultural y las botellas no llevan registro NOM — la ausencia es de certificación del esquema DO, no de otras obligaciones de etiquetado — un hecho legal, no un juicio de autenticidad. La tradición es de frontera: alcanza el norte de Colima, pero el ejemplo citado de la app es una botella elaborada en Jalisco, lo cual no establece por sí solo cobertura de producción colimense."
+      "distinctions": "La tuxca no tiene denominación de origen. La práctica vinatera es cultural y las botellas no llevan certificación de DO, aunque siguen aplicando otras obligaciones de etiquetado: un hecho legal, no un juicio de autenticidad. La tradición es de frontera y alcanza el norte de Colima, pero el ejemplo citado es una botella elaborada en Jalisco, lo cual no establece por sí solo cobertura de producción colimense."
     },
     "comitan-chiapas": {
       "name": "Comitán de Domínguez, Chiapas",
@@ -1188,32 +1211,32 @@
     "chihuahua-norte": {
       "name": "Sierra Chihuahuense del Norte, Chihuahua",
       "geography": "País de sierra y desierto del norte de Chihuahua, desde la Sierra hasta Delicias.",
-      "distinctions": "La DO del sotol (2002) cubre Chihuahua, Coahuila y Durango; el Dasylirion no es un agave, y la app lo mantiene explícito."
+      "distinctions": "La DO del sotol (2002) cubre Chihuahua, Coahuila y Durango. El Dasylirion no es un agave, y cada página de aquí lo dice."
     },
     "montana-guerrero": {
       "name": "La Montaña (Guerrero de montaña)",
       "geography": "Municipios de montaña del oriente de Guerrero, en la cuenca del Balsas — Apango y comunidades vecinas donde se hace el mezcal de papalote.",
-      "distinctions": "Cobertura de la guía, no un límite legal: Guerrero es un estado mezcalero mayor dentro de la DO, y aquí papalote nombra un agave de linaje cupreata de estas montañas; los nombres locales necesitan su contexto geográfico."
+      "distinctions": "Esta zona marca de dónde viene el perfil, no un límite legal: Guerrero es un estado mezcalero mayor dentro de la DO, y aquí papalote nombra un agave de linaje cupreata de estas montañas; los nombres locales necesitan su contexto geográfico."
     },
     "sierra-el-mezquital-dgo": {
       "name": "Sierra El Mezquital, Durango",
       "geography": "Alta sierra del municipio de El Mezquital, Durango — país de pinos donde vinateros tepehuanes trabajan el cenizo en altura.",
-      "distinctions": "Cobertura de la guía, no un límite legal: Durango está dentro de la DO del mezcal, y una vinata — no un palenque — es la palabra duranguense para un pequeño destiladero."
+      "distinctions": "Esta zona marca de dónde viene el perfil, no un límite legal: Durango está dentro de la DO del mezcal, y una vinata — no un palenque — es la palabra duranguense para un pequeño destiladero."
     },
     "altiplano-potosino": {
       "name": "Altiplano Potosino (meseta central), San Luis Potosí",
       "geography": "Meseta pótosina rocosa y árida alrededor de Santa Isabel y comunidades vecinas — el hogar del mezcal de maguey verde (Agave salmiana).",
-      "distinctions": "Cobertura de la guía, no un límite legal: la salmiana de aquí es el maguey verde silvestre de la meseta, cocido a la manera del mezcal — una tradición distinta de la cosecha de savia pulquera de la misma especie más al sur."
+      "distinctions": "Esta zona marca de dónde viene el perfil, no un límite legal: la salmiana de aquí es el maguey verde silvestre de la meseta, cocido a la manera del mezcal — una tradición distinta de la cosecha de savia pulquera de la misma especie más al sur."
     },
     "rio-de-parras-michoacan": {
       "name": "Rio de Parras, Michoacán",
       "geography": "Comunidades de valle fluvial del Eje Volcánico Transversal en Michoacán — Rio de Parras y las vinatas vecinas donde se elabora mezcal de cupreata (penca ancha).",
-      "distinctions": "Cobertura de la app, no un límite legal: Michoacán es un gran estado mezcalero dentro de la DO, y penca ancha es el nombre de Rio de Parras para un agave de estirpe cupreata; los nombres locales necesitan su contexto geográfico."
+      "distinctions": "Esta zona marca de dónde viene el perfil, no un límite legal: Michoacán es un gran estado mezcalero dentro de la DO, y penca ancha es el nombre de Rio de Parras para un agave de estirpe cupreata; los nombres locales necesitan su contexto geográfico."
     },
     "mixteca-poblana-pue": {
       "name": "Mixteca Poblana, Puebla",
       "geography": "Cerros de la Mixteca Poblana alrededor de San Diego La Mesa Tochimilitzingo y comunidades vecinas — país del mezcal de papalometl.",
-      "distinctions": "Cobertura de la app, no un límite legal: Puebla es un gran estado mezcalero dentro de la DO, y el papalometl de aquí nombra Agave potatorum en el caso documentado de la botella — la misma palabra puede nombrar otros agaves en otros lugares, así que los nombres locales necesitan su contexto geográfico."
+      "distinctions": "Esta zona marca de dónde viene el perfil poblano de la guía, no un límite legal: Puebla es un gran estado mezcalero dentro de la DO. Aquí el papalometl nombra Agave potatorum en el caso documentado de la botella, y la misma palabra puede nombrar otros agaves en otros lugares, así que un nombre local necesita su lugar."
     }
   }
 }

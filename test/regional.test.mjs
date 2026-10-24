@@ -273,7 +273,7 @@ test("tequila aged-class profiles: reposado, a\u00f1ejo, cristalino with honest 
 
   // Cristalino discloses the additive debate and filtration trade-off.
   assert.ok(cristalino.description.includes("additive") || cristalino.description.includes("critics"), "additive debate disclosed");
-  assert.ok(cristalino.description.includes("removes color and, with it, some flavor"), "filtration trade-off stated");
+  assert.ok(/removes colou?r and, with it, some flavou?r/.test(cristalino.description), "filtration trade-off stated");
 });
 
 test("tequila aged variants surface in compare with oak dimension", async () => {

@@ -48,7 +48,7 @@ test("P18-5: Fortaleza Blanco drops the site's comparative judgment for sensory 
   const fortaleza = bottleById.get("fortaleza-blanco");
   const review = fortaleza.reviewSummary;
   assert.ok(!/more complexity than most/.test(review), "the comparative judgment is gone");
-  assert.ok(/savory, assertive cooked agave/.test(review), "the character description stays");
+  assert.ok(/savou?ry, assertive cooked agave/.test(review), "the character description stays");
   assert.ok(/long, minerally finish/.test(review), "the finish is described, not just praised");
   const esReview = contentEs.bottles["fortaleza-blanco"].reviewSummary;
   assert.ok(!/m\u00e1s complejidad que la mayor\u00eda/.test(esReview), "ES comparative judgment gone");

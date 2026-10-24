@@ -8,7 +8,7 @@
       "legalStatus": "Spirit with its own Denomination of Origin; NOM-006-SCFI-2012 defines the legal classes blanco (which may receive brief permitted maturation up to the reposado window), joven or oro, reposado, añejo and extra añejo, each with oak-resting minimums. Tequila also comes in two composition categories — 100% de agave and tequila (mixed agave and other sugars) — which are composition facts, not quality grades. Cristalino is a finishing/marketing style, not a legal class.",
       "materials": "Blue weber agave (Agave tequilana), cultivated; 100% de agave tequila uses only agave sugars, while the other legal composition category permits other sugars alongside agave — a disclosed composition fact, not a quality grade.",
       "practices": "Steam cooking in hornos or autoclaves, tahona or roller-mill extraction, fermentation, double distillation, optional oak resting.",
-      "diversity": "Valley and highland agave read editorially distinct (savory/vegetal vs sweeter/floral); class terms are spirit-specific.",
+      "diversity": "Valley and highland agave read editorially distinct (savoury/vegetal vs sweeter/floral); class terms are spirit-specific.",
       "plantIds": [
         "agave-tequilana"
       ],
@@ -21,7 +21,7 @@
         "diffords-tequila-category",
         "wikipedia-tequila"
       ],
-      "sustainability": "Agave tequilana is cultivated at scale, so tequila does not share the wild-population pressure of wild-harvested traditions; documented industry concerns center on agave price cycles and the push for faster industrial cooking rather than species pressure."
+      "sustainability": "Agave tequilana is cultivated at scale, so tequila does not share the wild-population pressure of wild-harvested traditions; documented industry concerns centre on agave price cycles and the push for faster industrial cooking rather than species pressure."
     },
     {
       "id": "mezcal",
@@ -42,9 +42,8 @@
       ],
       "sourceIds": [
         "diffords-mezcal-what-it-is",
-        "diffords-mezcal-categories",
-        "mezcalreviews-tobala-category",
-        "dof-nom-070"
+        "dof-nom-070",
+        "mezcalreviews-tobala-category"
       ],
       "sustainability": "Mezcal spans cultivated espadín and many wild-harvested species; sustainability pressure concentrates on the wild-harvested end of the range (see the plant pages for species-level detail)."
     },

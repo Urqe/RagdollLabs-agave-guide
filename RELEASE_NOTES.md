@@ -3611,8 +3611,8 @@ On the owner's request, `RELEASE_PLAN.md` was rewritten from about 191 KB to abo
 
 ## Pair 27 — Comparison as a learning exercise (2026-10-24)
 
-Branch `pair-27-learning-comparisons`. Not merged or deployed: awaiting the
-owner's review. All new text follows `EDITORIAL_VOICE.md`.
+Branch `pair-27-learning-comparisons`. Merged as PR #78 (merge `5c6817b`)
+and deployed. All new text follows `EDITORIAL_VOICE.md`.
 
 ### Changed
 
@@ -3688,3 +3688,65 @@ Headless Chromium against a local static server, at 375px (EN, ES) and
   the free picker about a screen down. This is logged for Pair 29.
 - **Spanish and devices.** Native-speaker review of the new Spanish is not
   done. iPhone/iPad Safari, VoiceOver and touch checks remain unverified.
+
+## Pair 28 — Editorial consistency and regional warmth (2026-10-24)
+
+Branch `pair-28-editorial`. Not merged or deployed: awaiting the owner's
+review. All rewritten text follows `EDITORIAL_VOICE.md`, EN and ES written
+together (Mexican Spanish, tú).
+
+### Changed
+
+- **Voice pass on every profile.** All 23 profiles' context, description,
+  why-it-tastes and beginner note now lead with what is in the glass, then
+  why, then what sets the style apart. Removed: "This profile describes…",
+  reviewer-led openings, stacked caveats ("a tendency, not a rule",
+  "neither alone decides it"), legal definitions ahead of taste. Every fact,
+  date, legal class and attribution is kept.
+- **Spanish brought level with English.** Several ES descriptions were
+  shorter than, or different from, the English (reposado, añejo, extra
+  añejo, cristalino, raicilla, comiteco, destilado de pulque, sotol). Two
+  ES errors fixed: mezcal reposado said the NOM recognises three classes
+  (it defines six) and that mezcal's reposado minimum differs from tequila's
+  (both start at two months).
+- **Overstated causes softened.** The bacanora "mineral edge from the
+  Sierra", comiteco "everything follows from the sap" (cane sugar is in the
+  definition), "nothing to the north" (destilado de pulque is also a sap
+  spirit), extra añejo "only agave that can carry that much oak", and
+  wild fermentation "adds texture" in espadín.
+- **Regional context, sourced only.** Sonora's vinateros and the
+  1915–1992 prohibition (Sonora's official history), Jalisco's Sierra and
+  Costa tabernas, Oaxaca's family palenques. Unsupported details were
+  removed rather than kept: the coastal "fishermen and farmers" (not in any
+  cited source) and the tobalá mezcalero who "will walk you to the plant".
+- **App narration removed elsewhere.** Bottle notes ("the app's profile
+  describes…", "Mezcal Reviews lists…"), region distinctions ("App
+  coverage…") and plant notes ("the app preserves…") now speak to the
+  reader. Salmiana's sensory note no longer claims "no roast" for a species
+  that is also cooked for mezcal on the Potosino plateau.
+- **"If you like this" reasons** no longer repeat word for word: after the
+  shared dimensions the sentence names what differs (another spirit, another
+  plant, the time in wood, or place and producer).
+- **Checkable corrections (first commit):** "sabroso" → "salino", "lima" →
+  "limón", "albaricoque" → "chabacano"; Spanish coordinate precision;
+  British spelling in English; espadín class wording per NOM-070; an
+  `official` source kind for DOF, NOM-070, Sonora, INIFAP, CONAFOR and
+  Cultura records; NOM-006 added; the duplicate Difford's entry retired;
+  Montelobos and Del Maguey producer pages cited; process sources checked
+  against their pages; validation rejects duplicate source ids.
+
+### Checks run
+
+- `npm run validate`: data validation passes; 492 tests pass, including the
+  new `test/pair-28-editorial-consistency.test.mjs` (13 tests).
+- Headless Chromium at 390×844, EN and ES: valley blanco, espadín, coastal
+  raicilla and sotol profiles render the new context, varied reasons and
+  localized precision; the catalogue bottle note renders in both languages;
+  no page errors. CSS unchanged, so the cache key stays.
+
+### Not done / carried forward
+
+- Mezcal Reviews-only bottles still lack an independent second source; no
+  bottle tasting facts were touched, so this remains a standing rule.
+- The Bahía de Banderas and Agricultura bacanora pages could not be fetched
+  (robots and client errors), so nothing new was cited from them.

@@ -37,7 +37,7 @@ export const ES_NOTES = {
   "lactic freshness": "frescura láctica",
   "lactic tang": "acidez láctica",
   "light oak": "roble ligero",
-  "lime zest": "ralladura de lima",
+  "lime zest": "ralladura de limón",
   "mesquite smoke": "humo de mezquite",
   "mineral": "mineral",
   "mint / eucalyptus freshness": "frescura de menta / eucalipto",

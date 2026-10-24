@@ -175,7 +175,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
       ui(locale, "coordsNote")
         .replace("{lat}", c.lat.toFixed(2))
         .replace("{lon}", c.lon.toFixed(2))
-        .replace("{precision}", c.precision)));
+        .replace("{precision}", fieldEs("profile", profile.id, "placePrecision", locale) || c.precision)));
   }
 
   const contextText = editorialText("profile", profile.id, "context", profile.context, locale);
@@ -305,7 +305,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
       item.appendChild(link);
       const sharedText = sharedDimensionKeys.map((k) => dimensionLabel(k, locale)).join(", ");
       item.appendChild(el("span", { class: "search-result-reason" },
-        ` — ${ui(locale, "sharesWhy").replace("{list}", sharedText)}`));
+        ` — ${sharesWhyText(profile, other, sharedText, locale)}`));
       suggList.appendChild(item);
     }
     if (suggList.childNodes.length > 0) section.appendChild(suggList);
@@ -478,4 +478,18 @@ export function renderProfileNotFound(container, profileId, locale = null) {
   section.appendChild(el("h2", {}, t("profile.notFound", "Profile not found")));
   section.appendChild(el("p", {}, t("profile.notFoundBody", "No profile exists with the id “{id}”.").replace("{id}", profileId)));
   container.appendChild(section);
+}
+
+/**
+ * "If you like this" reason: the shared dimensions, then what actually
+ * differs (spirit, plant, time in wood), so the sentence does not repeat
+ * word for word down the list.
+ */
+export function sharesWhyText(profile, other, sharedText, locale) {
+  let key = "sharesWhy";
+  if (other.spirit !== profile.spirit) key = "sharesWhyOtherSpirit";
+  else if (other.plantId !== profile.plantId) key = "sharesWhyOtherPlant";
+  else if ((other.maturation?.class || null) !== (profile.maturation?.class || null)) key = "sharesWhyOtherRest";
+  const spirit = (SPIRIT_LABELS[other.spirit] || other.spirit || "").toLowerCase();
+  return ui(locale, key).replace("{list}", sharedText).replace("{spirit}", spirit);
 }

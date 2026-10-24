@@ -6,7 +6,6 @@
       "stage": "cooking",
       "explanation": "Agave hearts are roasted in rock-lined pits with wood fire, sometimes for days. This is the classic mezcal/bacanora/tuxca cook; it can contribute smoke, but how much varies with wood, time and pit — smoke is not guaranteed by the method alone.",
       "sourceIds": [
-        "diffords-mezcal-what-it-is",
         "mezcalistas-bacanora-tradition",
         "diffords-lost-explorer-palenque"
       ],
@@ -26,10 +25,9 @@
       "id": "sap-collection",
       "name": "Sap collection (aguamiel)",
       "stage": "raw material",
-      "explanation": "In the comiteco and pulque traditions, the flowering stalk (quiote) of the living agave is cut and the resulting cavity in the plant's head is scraped; the sap (aguamiel) that accumulates is collected over successive days. This is a distinct operation from harvesting and cooking a piña: the plant is not killed at harvest, but repeated sap collection uses up the plant — it is not indefinite regeneration. The piña is never cooked in these traditions, making them sap-derived spirits with no roast character.",
+      "explanation": "In the comiteco and pulque traditions, a large cut is made at the top of the living agave and its inside is scraped over successive days, so that sap (aguamiel) keeps gathering and can be collected. This is a different operation from harvesting and cooking a piña: the plant is not killed at harvest, but repeated sap collection uses it up; it is not indefinite regeneration. The piña is never cooked in these traditions, which makes them sap-derived spirits with no roast character.",
       "sourceIds": [
-        "backalley-comiteco",
-        "mezcalistas-juerte"
+        "backalley-comiteco"
       ],
       "glassEffect": "No roast at all: sap spirits skip the cooked-agave and smoke notes, and can show fresh, lactic or fermented tones instead."
     },
@@ -48,9 +46,9 @@
       "id": "wild-fermentation",
       "name": "Wild/open fermentation",
       "stage": "fermentation",
-      "explanation": "Most small-batch agave spirits ferment in open vessels with ambient yeasts — wooden vats, stainless tanks or volcanic craters. Vessel and local yeasts can shape texture and savory notes; the effect is traditional, not standardized. Difford's notes that the yeast a producer uses helps determine the finished flavour, and that fermenting with the crushed fibres can help trap aromatics.",
+      "explanation": "Most small-batch agave spirits ferment in open vessels with ambient yeasts — wooden vats, stainless tanks or volcanic craters. Vessel and local yeasts can shape texture and savoury notes; the effect is traditional, not standardized. Difford's notes that the yeast a producer uses helps determine the finished flavour, and that fermenting with the crushed fibres can help trap aromatics.",
       "sourceIds": [
-        "diffords-mezcal-what-it-is",
+        "diffords-lost-explorer-palenque",
         "mezcalistas-tepua-tasting",
         "diffords-tequila-made"
       ],
@@ -60,7 +58,7 @@
       "id": "distillation-methods",
       "name": "Still types",
       "stage": "distillation",
-      "explanation": "Copper alembics, stainless pot stills, clay pots and wooden Filipino stills each shape the spirit; tuxca's Filipino stills, for example, are part of its regional definition. Distillers also choose their cuts: they keep the heart and set aside the first and last parts of the run (heads and tails), because different flavour compounds come off at different temperatures. Still type and cuts are facts of method — they do not by themselves guarantee a flavor.",
+      "explanation": "Copper alembics, stainless pot stills, clay pots and wooden Filipino stills each shape the spirit; tuxca's Filipino stills, for example, are part of its regional definition. Distillers also choose their cuts: they keep the heart and set aside the first and last parts of the run (heads and tails), because different flavour compounds come off at different temperatures. Still type and cuts are facts of method — they do not by themselves guarantee a flavour.",
       "sourceIds": [
         "mexicanspiritsbible-tuxca",
         "mezcalistas-balancan-tasting",
@@ -73,9 +71,9 @@
       "id": "glass-resting",
       "name": "Glass resting (madurado en vidrio)",
       "stage": "resting",
-      "explanation": "Some producers rest unaged spirits in glass for months or years to round them. Glass resting is resting, not wood maturation — it adds no oak character.",
+      "explanation": "Some producers rest unaged spirits in glass to round them; mezcal's NOM-070 names the class madurado en vidrio for more than 12 months in glass. Glass resting is resting, not wood maturation — it adds no oak character.",
       "sourceIds": [
-        "mezcalreviews-raicilla-category"
+        "dof-nom-070"
       ],
       "glassEffect": "Rounds the spirit without adding any oak: no vanilla or wood colour comes from glass."
     },
@@ -83,9 +81,10 @@
       "id": "wood-maturation",
       "name": "Wood maturation",
       "stage": "resting",
-      "explanation": "Reposado and añejo classes rest in wood for defined minimum periods depending on the spirit's own rules. Wood influence depends on wood type, size, age and time — there is no universal 'older is better' ladder, and most bottles in this guide are unaged by design.",
+      "explanation": "Reposado and añejo classes rest in wood for minimum periods set by each spirit's own rules: for tequila, reposado at least two months and añejo at least a year in containers of up to 600 litres (NOM-006); mezcal sets its own (NOM-070). Wood influence depends on wood type, size, age and time — there is no universal 'older is better' ladder, and most bottles in this guide are unaged by design.",
       "sourceIds": [
-        "diffords-tequila-category"
+        "nom-006-tequila",
+        "dof-nom-070"
       ],
       "glassEffect": "Often adds vanilla, spice, colour and a softer edge, depending on the wood, the barrel size and the time."
     },
@@ -93,9 +92,10 @@
       "id": "filtration",
       "name": "Filtration",
       "stage": "finishing",
-      "explanation": "Some spirits are filtered for clarity. Filtration can remove character along with cloudiness; cristalino products take this furthest (see the glossary note).",
+      "explanation": "Some spirits are filtered for clarity. Cristalino takes this furthest: aged tequila filtered, typically through charcoal, to remove the colour the barrel gave it. Producers say the aged character stays; reviewers often find some flavour goes with the colour.",
       "sourceIds": [
-        "diffords-tequila-category"
+        "patron-what-is-cristalino",
+        "tequilareport-patron-cristalino"
       ],
       "glassEffect": "Can strip colour and some character along with it; cristalinos are the extreme case."
     }

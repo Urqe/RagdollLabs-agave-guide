@@ -26,7 +26,7 @@ const VALID_STATES = new Set([
 
 const VALID_SPIRITS = new Set(["tequila", "mezcal", "bacanora", "raicilla", "tuxca", "comiteco", "destilado-de-pulque", "sotol"]);
 const VALID_BODIES = new Set(["light", "medium", "full"]);
-const VALID_KINDS = new Set(["style", "producer", "review"]);
+const VALID_KINDS = new Set(["style", "producer", "review", "official"]);
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const FORBIDDEN_WORDS = [];
 
@@ -182,7 +182,7 @@ for (const s of sources) {
   }
   if (url.protocol !== "https:") fail(`${label}: url must be https`);
   if (url.username || url.password) fail(`${label}: url must not embed credentials`);
-  if (!VALID_KINDS.has(s.kind)) fail(`${label}: kind must be style, producer or review`);
+  if (!VALID_KINDS.has(s.kind)) fail(`${label}: kind must be style, producer, review or official`);
   if (s.author !== undefined && typeof s.author !== "string") fail(`${label}: author must be a string when present`);
   if (s.date !== undefined && typeof s.date !== "string") fail(`${label}: date must be a string when present`);
   if (!s.verified || !/^\d{4}-\d{2}-\d{2}$/.test(s.verified)) {
@@ -549,8 +549,15 @@ for (const p of profiles) {
 // would be dead data that looks like a published translation.
 const RENDERED_ES_PROFILE_FIELDS = new Set([
   "title", "context", "description", "beginnerNote", "category", "plant",
-  "process", "smoke", "finish", "pairing", "whyItTastes",
+  "process", "smoke", "finish", "pairing", "whyItTastes", "placePrecision",
 ]);
+// Pair 28: the coordinate precision label is shown in both editions.
+for (const p of profiles) {
+  const esEntry = (contentEsAll.profiles || {})[p.id] || {};
+  if (p.placeCoords && (typeof esEntry.placePrecision !== "string" || !esEntry.placePrecision.trim())) {
+    fail(`content-es.json: profile ${p.id} placePrecision missing Spanish translation`);
+  }
+}
 for (const [id, entry] of Object.entries(contentEsAll.profiles || {})) {
   if (!profiles.some((p) => p.id === id)) fail(`content-es.json: profile entry "${id}" has no matching profile`);
   for (const key of Object.keys(entry || {})) {
@@ -580,6 +587,20 @@ for (const m of svg.matchAll(/<path[^>]*data-state="([a-z]+)"[^>]*>\s*(<title>.*
 }
 for (const p of profiles) {
   if (!svgStates.includes(p.stateId)) fail(`profile stateId ${p.stateId} has no path in mexico-states.svg`);
+}
+
+// Pair 28: a source list never names the same source twice.
+{
+  const files = { profiles, bottles, plants, processes, regions, traditions };
+  for (const [name, list] of Object.entries(files)) {
+    for (const item of list || []) {
+      for (const [key, value] of Object.entries(item)) {
+        if (Array.isArray(value) && /sourceIds$/i.test(key) && new Set(value).size !== value.length) {
+          fail(`${name}: ${item.id || item.term} ${key} lists a source twice`);
+        }
+      }
+    }
+  }
 }
 
 // Pair 27: curated learning comparisons must still say what the data shows.
