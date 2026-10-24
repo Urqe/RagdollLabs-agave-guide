@@ -159,7 +159,7 @@
       "name": "Tuxcacuesco region, southern Jalisco (Jalisco–Colima borderlands)",
       "type": "subregion",
       "stateId": "jal",
-      "geography": "Southern Jalisco river canyons around Tuxcacuesco and Zapotitlán de Vadillo, reaching toward Colima.",
+      "geography": "Southern Jalisco river canyons around Tuxcacuesco and Zapotitlán de Vadillo, reaching across the state line into northern Colima — the Río Almería valley and the volcano's lower slopes.",
       "traditionIds": [
         "tuxca"
       ],
@@ -171,7 +171,7 @@
         "wild-fermentation",
         "distillation-methods"
       ],
-      "distinctions": "Tuxca has no denomination of origin; vinatero practice is cultural, and bottles carry no NOM registration — the absence is of DO-scheme certification, not of other labeling obligations — a legal fact, not an authenticity judgment.",
+      "distinctions": "Tuxca has no denomination of origin; vinatero practice is cultural, and bottles carry no NOM registration — the absence is of DO-scheme certification, not of other labeling obligations — a legal fact, not an authenticity judgment. The tradition is borderlands: it reaches into northern Colima, but the app's cited example is a Jalisco-made bottle, which does not by itself establish Colima production coverage.",
       "sourceIds": [
         "mexicanspiritsbible-tuxca"
       ]
@@ -311,6 +311,51 @@
         "conafor-salmiana-slp",
         "mezcalreviews-leyendas-slp",
         "mezcalesdeleyenda-slp"
+      ]
+    },
+    {
+      "id": "rio-de-parras-michoacan",
+      "name": "Rio de Parras, Michoacán",
+      "type": "subregion",
+      "stateId": "mich",
+      "geography": "River-valley communities of the Trans-Mexican Volcanic Belt in Michoacán — Rio de Parras and neighboring vinata country where cupreata (penca ancha) mezcal is made.",
+      "traditionIds": [
+        "mezcal"
+      ],
+      "plantIds": [
+        "agave-cupreata"
+      ],
+      "processIds": [
+        "distillation-methods"
+      ],
+      "distinctions": "App coverage, not a legal boundary: Michoacán is a major mezcal state under the DO, and penca ancha is the Rio de Parras name for a cupreata-lineage agave; local names need their geographic context.",
+      "sourceIds": [
+        "mezcalreviews-palalma-michoacan-cupreata",
+        "mezcalreviews-michoacan-category"
+      ]
+    },
+    {
+      "id": "mixteca-poblana-pue",
+      "name": "Mixteca Poblana, Puebla",
+      "type": "subregion",
+      "stateId": "pue",
+      "geography": "Hills of the Mixteca Poblana around San Diego La Mesa Tochimilitzingo and neighboring communities — papalometl mezcal country.",
+      "traditionIds": [
+        "mezcal"
+      ],
+      "plantIds": [
+        "agave-potatorum"
+      ],
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "distinctions": "App coverage, not a legal boundary: Puebla is a major mezcal state under the DO, and papalometl here names Agave potatorum in the bottle's documented case — the same word can name other agaves elsewhere, so local names need their geographic context.",
+      "sourceIds": [
+        "mezcalreviews-zinacantan-papalometl",
+        "mezcalistas-zinacantan",
+        "globalpress-zinacantan-agave"
       ]
     }
   ]

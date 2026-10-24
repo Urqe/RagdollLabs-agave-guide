@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–20 are recorded as applied (pair 20 — Regional Expansion I Review — applied 2026-10-23). **Section 4.5 is the current execution authority**. Execute **post-roadmap pair 21 — Beyond Oaxaca II next**, when requested by the owner, then pair 22.
+Post-roadmap pairs 8–21 are recorded as applied (pair 21 — Beyond Oaxaca II — applied 2026-10-24). **Section 4.5 is the current execution authority**. Execute **post-roadmap pair 22 — Regional Expansion II Review next**, when requested by the owner.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -808,7 +808,7 @@ These are claim-specific sources, not blanket endorsement of all content on thei
 
 ## 4.5 Follow-up audit and regional expansion — 2026-10-23
 
-**Current priority: post-roadmap pair 21 — Beyond Oaxaca II (when the owner requests it).** Pairs 18–20 are recorded as applied in RELEASE_NOTES.md on 2026-10-23. These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
+**Current priority: post-roadmap pair 22 — Regional Expansion II Review (when the owner requests it).** Pairs 18–21 are recorded as applied in RELEASE_NOTES.md. These are post-roadmap pair identifiers, not the original Releases 18–22. Pairs 15–17 are recorded as applied in RELEASE_NOTES.md; the outstanding requirements below reopen specific gaps rather than restarting those releases. This section supersedes conflicting completion claims and next-work instructions in sections 4.3–4.4. Preserve the historical checklists and append correction evidence when closing the reopened items.
 
 ### Review baseline and assessment
 
@@ -921,12 +921,12 @@ These are priority coverage gaps, not a claim that other Mexican states lack tra
 
 ### Post-roadmap pair 21 — Beyond Oaxaca II (feature/content)
 
-- [ ] **Michoacán:** add one documented cupreata or inaequidens context, selected by the strongest bounded evidence, with one example bottle. Explain regional naming and production differences without flattening the state into one style.
-- [ ] **Puebla:** add one documented papalometl context with one suitable example bottle. Reuse the corrected Montelobos record only if it genuinely matches the chosen profile; do not duplicate a bottle to satisfy the count or silently equate all local plant names.
-- [ ] **Colima visibility:** review the existing Jalisco–Colima tuxca context and make Colima's documented role findable through explanatory regional content. A Jalisco-made bottle does not establish Colima production coverage.
-- [ ] **Nayarit visibility:** explain the documented Bahía de Banderas connection to raicilla with precise geographic scope. Do not describe all Nayarit as a legal production area or create profile/map coverage without a matching documented profile.
-- [ ] Keep this release to two new profiles with one example each, plus concise Colima/Nayarit contextual refinements. If either refinement needs a genuinely new profile or bottle research beyond this scope, record a separate later candidate; do not silently expand the batch.
-- [ ] Apply pair 19's bilingual, serving, evidence and integration gates to both additions.
+- [x] **Michoacán:** add one documented cupreata or inaequidens context, selected by the strongest bounded evidence, with one example bottle. Explain regional naming and production differences without flattening the state into one style. (Pair 21 applied 2026-10-24: mezcal-cupreata-rio-de-parras-michoacan — cupreata named penca ancha in Rio de Parras, maestra mezcalera María E. Pérez, pulque-started fermentation taught without flattening the state; example Pal'alma Michoacán Cupreata with its fetched-and-verified Mezcal Reviews tasting evidence.)
+- [x] **Puebla:** add one documented papalometl context with one suitable example bottle. Reuse the corrected Montelobos record only if it genuinely matches the chosen profile; do not duplicate a bottle to satisfy the count or silently equate all local plant names. (Pair 21 applied 2026-10-24: mezcal-papalometl-mixteca-puebla — papalometl documented as Agave potatorum for the example's case, maestra mezcalera Fabiola Torres Monfil, San Diego La Mesa Tochimilitzingo; example Zinacantan Papalometl; Montelobos kept honestly unmapped since it is a tobalá expression, not a papalometl.)
+- [x] **Colima visibility:** review the existing Jalisco–Colima tuxca context and make Colima's documented role findable through explanatory regional content. A Jalisco-made bottle does not establish Colima production coverage. (Applied: the tuxca profile context and the borderlands region record now state Colima's borderlands role explicitly and record that the Jalisco-made example does not by itself establish Colima production coverage — EN and ES.)
+- [x] **Nayarit visibility:** explain the documented Bahía de Banderas connection to raicilla with precise geographic scope. Do not describe all Nayarit as a legal production area or create profile/map coverage without a matching documented profile. (Applied: the Sierra and Costa raicilla contexts now name exactly one Nayarit municipality — Bahía de Banderas, on the Jalisco border — as a precise strip, not all Nayarit, in EN and ES; no Nayarit profile or map coverage was created — pinned by regression.)
+- [x] Keep this release to two new profiles with one example each, plus concise Colima/Nayarit contextual refinements. If either refinement needs a genuinely new profile or bottle research beyond this scope, record a separate later candidate; do not silently expand the batch. (Kept: exactly two profiles (23 total) and two bottles (51 total), plus the two contextual refinements; no batch expansion.)
+- [x] Apply pair 19's bilingual, serving, evidence and integration gates to both additions. (Complete EN/ES mirrors of every authored field validated; serving/notice pairing lines in EN and ES; one expression-matched review each through the tastingSourceIds contract, producer/identity sources never counted as tasting evidence; full reuse of the entity model — regions, plants, search aliases, catalogue, comparisons; 10 new pair-21 regressions, suite at 401 passing.)
 
 ### Post-roadmap pair 22 — Regional Expansion II Review (maintenance)
 

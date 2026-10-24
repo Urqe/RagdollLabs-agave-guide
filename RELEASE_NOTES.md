@@ -2996,3 +2996,72 @@ San Luis Potosí) per plan section 4.5.
 - Live deployed-Pages rendering, native iPhone/iPad Safari, VoiceOver,
   physical touch and regional-reader validation of the new Spanish prose
   remain open, as recorded for pair 19.
+
+## Post-roadmap pair 21 — Beyond Oaxaca II (2026-10-24)
+
+Michoacán and Puebla coverage plus Colima/Nayarit contextual
+refinements, per plan section 4.5.
+
+### Added
+
+- **Michoacán — mezcal-cupreata-rio-de-parras-michoacan:** cupreata
+  named penca ancha in Rio de Parras, made by maestra mezcalera María
+  E. Pérez and her family; the pulque-started fermentation is taught as
+  Michoacán's own practice without flattening the state into one
+  style. Example: Pal'alma Michoacán Cupreata, its Mezcal Reviews page
+  fetched and verified before any sensory text was written (pink
+  bubblegum, strawberries and cream, lactic funk — presented as
+  reviewer findings, never a state-wide rule).
+- **Puebla — mezcal-papalometl-mixteca-puebla:** papalometl documented
+  as Agave potatorum for the example's case (the species Oaxaca calls
+  tobalá), made by maestra mezcalera Fabiola Torres Monfil in San
+  Diego La Mesa Tochimilitzingo with her seed-grown nursery and bat
+  programs. Example: Zinacantan Papalometl (apple pie, banana taffy,
+  mango and bright sparkling-wine acidity per its fetched reviews).
+  The corrected Montelobos record stays honestly unmapped — it is a
+  tobalá expression, not a papalometl, and was not duplicated to
+  satisfy the count.
+- Two new regions (Rio de Parras; Mixteca Poblana), both plants
+  extended with the new regional names and profiles (cupreata gains
+  penca ancha; potatorum gains papalometl with its state-attached
+  naming caveat), six new sources, and complete EN/ES mirrors of
+  every authored field — validated with zero untranslated-field
+  disclosures.
+
+### Colima and Nayarit contextual refinements
+
+- **Colima:** the tuxca profile context and the borderlands region
+  record now state Colima's documented role explicitly — the
+  borderlands tradition, the volcano's slopes and the Río Almería
+  valley reach across the state line — while recording that the cited
+  Jalisco-made example does not by itself establish Colima production
+  coverage. EN and ES.
+- **Nayarit:** the Sierra and Costa raicilla contexts now scope the
+  DO claim precisely — exactly one Nayarit municipality, Bahía de
+  Banderas on the Jalisco border, a precise strip and not all
+  Nayarit. No Nayarit profile or map coverage was created (no matching
+  documented profile exists yet). EN and ES; pinned by regression.
+
+### Honest evidence notes
+
+- Every sensory sentence traces to the fetched expression-matched
+  review page; producer/identity sources are never counted as
+  tasting evidence (the P18-2 contract, verified by test).
+- The Zinacantan record keeps lot variation honest: single distillation
+  in copper vs clay, and a rawhide-fermented batch, are flagged as
+  check-your-bottle facts, not settled ones.
+
+### Validation
+
+- `npm run validate`: schema, cross-references and the full `node:test`
+  suite — 401 passing (391 prior + 10 new pair-21 regressions in
+  `test/pair-21-beyond-oaxaca-2.test.mjs`; count pins in the pair-19,
+  model and catalogue tests updated to the planned expansion: 23
+  profiles, 51 bottles).
+
+### Still unverified — no claim made
+
+- Live deployed-Pages rendering, native iPhone/iPad Safari, VoiceOver,
+  physical touch and regional-reader validation of the new Spanish
+  prose (Michoacán and Puebla voices) remain unverified. jsdom
+  evidence only.

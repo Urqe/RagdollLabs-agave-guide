@@ -360,12 +360,16 @@ test("bottle-depth increment: single-example profiles gain documented second bot
   // not match those styles, so both profiles are single-example again.
   // Pair 19: the three new regional profiles ship with exactly one example
   // bottle each, by design of the Beyond Oaxaca I batch.
+  // Pair 21: the Michoacán and Puebla profiles ship with exactly one example
+  // each, by design of the Beyond Oaxaca II batch.
   const singles = profiles.filter((p) => bottles.filter((b) => b.profileId === p.id).length === 1).map((p) => p.id);
   assert.deepEqual(singles.sort(), [
     "comiteco-aguamiel-chiapas",
     "comiteco-anejo-comitan-chiapas",
     "mezcal-cenizo-sierra-durango",
+    "mezcal-cupreata-rio-de-parras-michoacan",
     "mezcal-espadin-valles-centrales",
+    "mezcal-papalometl-mixteca-puebla",
     "mezcal-papalote-montana-guerrero",
     "mezcal-reposado-espadin-oaxaca",
     "mezcal-tobala-sierra-oaxaca",

@@ -236,10 +236,14 @@
         {
           "name": "maguey de mesa",
           "region": "Oaxaca"
+        },
+        {
+          "name": "papalometl",
+          "region": "Puebla (Mixteca Poblana; potatorum in the cited example's documented case)"
         }
       ],
       "cultivation": "mostly wild-harvested at high altitude; seed-only reproduction makes cultivation slow, so wild populations are under pressure — some producers now cultivate or reforest (a cited cultivated example is Montelobos, produced in Puebla, outside this wild-style profile)",
-      "uncertainty": "Wild vs cultivated tobalá can taste noticeably different; flavor variation between batches is documented and genuine",
+      "uncertainty": "Wild vs cultivated tobalá can taste noticeably different; flavor variation between batches is documented and genuine. The name papalometl in Puebla names Agave potatorum in the cited example's documented case, but the same word can point to other agaves in other states — keep names regional.",
       "sourceIds": [
         "mezcalreviews-tobala-category",
         "mezcalreviews-montelobos-tobala",
@@ -249,10 +253,12 @@
         "mezcal"
       ],
       "regionIds": [
-        "sierra-norte-oax"
+        "sierra-norte-oax",
+        "mixteca-poblana-pue"
       ],
       "profileIds": [
-        "mezcal-tobala-sierra-oaxaca"
+        "mezcal-tobala-sierra-oaxaca",
+        "mezcal-papalometl-mixteca-puebla"
       ],
       "atAGlance": "Tobalá, the small high-altitude 'king of agaves' of Oaxaca's Sierra Norte — mostly wild, some cultivated.",
       "whereItGrows": "High mountains of Oaxaca's Sierra Norte (and beyond); 12–15 year maturity at altitude.",
@@ -339,23 +345,29 @@
         {
           "name": "papalometl",
           "region": "Guerrero (Nahuatl-derived)"
+        },
+        {
+          "name": "penca ancha",
+          "region": "Rio de Parras, Michoacán"
         }
       ],
       "cultivation": "wild-harvested and cultivated; the wild-harvest end carries the sustainability pressure",
       "atAGlance": "The papalote agave of Guerrero's mountain mezcal — a wide, frost-toned agave that gives the state's mezcal its fruity, buttery signature.",
-      "whereItGrows": "Mountain slopes of Guerrero and adjacent Michoacán (Balsas river basin), often at elevation on thin soils.",
+      "whereItGrows": "Mountain slopes of Guerrero and adjacent Michoacán (Balsas river basin), often at elevation on thin soils — and Michoacán's own volcanic river valleys, where Rio de Parras communities call it penca ancha.",
       "harvestProduction": "Piña traditions: harvested at maturity (variable, source-dependent maturity years), pit-roasted, fermented and distilled as mezcal.",
       "sensoryTendencies": "Editorial guidance: cupreata mezcals often read fruitier and more buttery than espadín, with mint, green pepper and tropical-fruit notes; smoke varies with the producer's roast.",
       "sustainability": "Wild cupreata populations carry harvest pressure as Guerrero mezcal grows; some producers cultivate or reforest. The cited CONAFOR/INIFAP-style regional management literature is the evidence base for plant-level claims.",
-      "uncertainty": "Papalote/papalometl names appear in both Guerrero and Michoacán and may cover more than one cupreata-like taxon; the app keeps the names regional without resolving the species debate.",
+      "uncertainty": "Papalote/papalometl names appear in both Guerrero and Michoacán and may cover more than one cupreata-like taxon; Michoacán's penca ancha (Rio de Parras) is documented as Agave cupreata for the cited example; the app keeps names regional without resolving the species debate.",
       "traditionIds": [
         "mezcal"
       ],
       "profileIds": [
-        "mezcal-papalote-montana-guerrero"
+        "mezcal-papalote-montana-guerrero",
+        "mezcal-cupreata-rio-de-parras-michoacan"
       ],
       "regionIds": [
-        "montana-guerrero"
+        "montana-guerrero",
+        "rio-de-parras-michoacan"
       ],
       "sourceIds": [
         "sic-cultura-guerrero",

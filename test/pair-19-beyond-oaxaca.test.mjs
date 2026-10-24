@@ -47,8 +47,9 @@ test("pair 19: three bounded profiles ship, each with one expression-matched exa
     assert.equal(mapped.length, 1, `${id} has exactly one example (bounded)`);
     assert.equal(p.traditionId, example.traditionId, "traditions agree");
   }
-  assert.equal(profiles.length, 21);
-  assert.equal(bottles.length, 49);
+  // Pair 21 adds two profiles and two bottles (Michoacán, Puebla).
+  assert.equal(profiles.length, 23);
+  assert.equal(bottles.length, 51);
 });
 
 test("pair 19: local plant names stay regional, never promoted to spirit families", () => {

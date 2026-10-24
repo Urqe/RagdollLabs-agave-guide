@@ -1220,6 +1220,55 @@
         "conafor-salmiana-slp"
       ],
       "batch": "Lots vary (cited reviews cover 42–45% bottlings); the cooking method is disputed between the producer's clay-oven description and a local reviewer's autoclave report — recorded, not settled"
+    },
+    {
+      "id": "palalma-michoacan-cupreata",
+      "brand": "Pal'alma",
+      "expression": "Michoacán Cupreata (Penca Ancha)",
+      "abv": null,
+      "abvNote": "ABV varies by lot (cited member reviews list 50% and 52% lots); check your bottle",
+      "reviewSummary": "Pink bubblegum, strawberries and cream, sour fruits and grape soda per its reviewers, with a creamy lactic edge from the pulque-started fermentation; several note fruit and soft pulque softening further with months in glass. Made by maestra mezcalera María E. Pérez and her family in Rio de Parras.",
+      "producer": "María E. Pérez and family (maestra mezcalera), Rio de Parras, Michoacán; brand by Pal'alma (Erick Rodriguez)",
+      "place": "Rio de Parras, Michoacán",
+      "spirit": "mezcal",
+      "traditionId": "mezcal",
+      "profileId": "mezcal-cupreata-rio-de-parras-michoacan",
+      "regionIds": [
+        "rio-de-parras-michoacan"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-palalma-michoacan-cupreata"
+      ],
+      "sourceIds": [
+        "mezcalreviews-palalma-michoacan-cupreata",
+        "palalma-brand"
+      ],
+      "batch": "Small lots (24–60 bottles); some rested months in glass before bottling; ABV varies by lot"
+    },
+    {
+      "id": "zinacantan-papalometl",
+      "brand": "Zinacantan",
+      "expression": "Papalometl (Puebla)",
+      "abv": null,
+      "abvNote": "ABV varies by lot (cited member reviews list 46–50% lots); check your bottle",
+      "reviewSummary": "Apple pie, banana taffy, mango and pineapple per its reviewers, with sharp, sparkling-wine acidity and mineral travels in some lots; a rawhide-fermented batch reads funkier. Made by maestra mezcalera Fabiola Torres Monfil in San Diego La Mesa Tochimilitzingo.",
+      "producer": "Zinacantan (maestra mezcalera Fabiola Torres Monfil, co-founder Diana Pinzón), San Diego La Mesa Tochimilitzingo, Puebla",
+      "place": "San Diego La Mesa Tochimilitzingo, Puebla",
+      "spirit": "mezcal",
+      "traditionId": "mezcal",
+      "profileId": "mezcal-papalometl-mixteca-puebla",
+      "regionIds": [
+        "mixteca-poblana-pue"
+      ],
+      "tastingSourceIds": [
+        "mezcalreviews-zinacantan-papalometl"
+      ],
+      "sourceIds": [
+        "mezcalreviews-zinacantan-papalometl",
+        "mezcalistas-zinacantan",
+        "globalpress-zinacantan-agave"
+      ],
+      "batch": "Very small lots (96–630 liters cited); most single-distilled in copper, some in clay; some batches fermented in rawhide — check your bottle"
     }
   ]
 }

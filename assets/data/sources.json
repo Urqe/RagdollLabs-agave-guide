@@ -720,6 +720,48 @@
       "title": "CONAFOR — Manejo y ecuaciones alométricas de Agave salmiana en San Luis Potosí",
       "url": "https://www.gob.mx/conafor/documentos/manual-mejores-practicas-de-manejo-y-ecuaciones-alometricas-de-biomasa-de-agave-salmiana-sen-el-estado-de-slp",
       "verified": "2026-10-23"
+    },
+    {
+      "id": "mezcalreviews-palalma-michoacan-cupreata",
+      "kind": "review",
+      "title": "Mezcal Reviews — Pal'alma Michoacán Cupreata (María E. Pérez, Rio de Parras)",
+      "url": "https://www.mezcalreviews.com/mezcal/palalma-michoacan-cupreata/",
+      "verified": "2026-10-24"
+    },
+    {
+      "id": "palalma-brand",
+      "kind": "producer",
+      "title": "Pal'alma / Mezcalito Pal'alma — brand site (Erick Rodriguez)",
+      "url": "https://www.facebook.com/Mezcalito-Palalma-865025870235262/",
+      "verified": "2026-10-24"
+    },
+    {
+      "id": "mezcalreviews-michoacan-category",
+      "kind": "style",
+      "title": "Mezcal Reviews — Michoacán region page (cupreata/Chino, inaequidens/Alto context)",
+      "url": "https://www.mezcalreviews.com/filter-by/state/michoacan/",
+      "verified": "2026-10-24"
+    },
+    {
+      "id": "mezcalreviews-zinacantan-papalometl",
+      "kind": "review",
+      "title": "Mezcal Reviews — Zinacantan Papalometl (Fabiola Torres Monfil, San Diego La Mesa Tochimilitzingo)",
+      "url": "https://www.mezcalreviews.com/mezcal/zinacantan-papalometl/",
+      "verified": "2026-10-24"
+    },
+    {
+      "id": "mezcalistas-zinacantan",
+      "kind": "producer",
+      "title": "Mezcalistas — The Zinacantan Mezcal story (Fabiola Torres Monfil, San Diego La Mesa Tochimilitzingo)",
+      "url": "https://www.mezcalistas.com/the-zinacantan-mezcal-story/",
+      "verified": "2026-10-24"
+    },
+    {
+      "id": "globalpress-zinacantan-agave",
+      "kind": "style",
+      "title": "Global Press Journal — Endangered Agave: Can Mezcal Avoid Tequila's Destructive Legacy? (Zinacantán, Puebla context)",
+      "url": "https://globalpressjournal.com/americas/mexico/endangered-agave-can-mezcal-avoid-tequilas-destructive-legacy/",
+      "verified": "2026-10-24"
     }
   ]
 }

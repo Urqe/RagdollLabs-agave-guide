@@ -210,7 +210,7 @@
       "spirit": "raicilla",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Raicilla is the mountain spirit of Jalisco (the DO also reaches one Nayarit municipality, awarded in 2019), and jaliscienses wear it as proof their state makes more than tequila. It splits into two editorial traditions: Sierra (mountain) raicilla, made mainly from Agave maximiliana and inaequidens cooked in above-ground ovens, and Costa (coastal) raicilla from angustifolia and rhodacantha cooked in underground pits. For decades raicilla was distilled informally, in the shadow of its famous neighbor — locals kept it alive until the law caught up. This profile covers the Sierra style around the Sierra Occidental.",
+      "context": "Raicilla is the mountain spirit of Jalisco (the DO also reaches exactly one Nayarit municipality — Bahía de Banderas, on the Jalisco border, awarded in 2019 — a precise strip, not all Nayarit), and jaliscienses wear it as proof their state makes more than tequila. It splits into two editorial traditions: Sierra (mountain) raicilla, made mainly from Agave maximiliana and inaequidens cooked in above-ground ovens, and Costa (coastal) raicilla from angustifolia and rhodacantha cooked in underground pits. For decades raicilla was distilled informally, in the shadow of its famous neighbor — locals kept it alive until the law caught up. This profile covers the Sierra style around the Sierra Occidental.",
       "description": "Sierra raicilla is typically cooked in above-ground adobe ovens rather than pits, so it tends to be less smoky than pit-roasted agave spirits, with a distinctive fermented, gently funky character: orchard fruit, herbs and a soft lactic roundness from wild-yeast fermentation in wooden vats. Distillation happens in small rustic tabernas — the word names the distillery itself, not the still — and each maestro's batches vary widely.",
       "plant": "Agave maximiliana (wild-harvested; Sierra raicilla's signature agave)",
       "process": "Above-ground adobe-oven roast, open wild-yeast fermentation in wooden vats, small-batch distillation",
@@ -276,7 +276,7 @@
       "spirit": "tuxca",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Tuxca is a borderlands spirit: a traditional agave distillate of the southern-Jalisco/northern-Colima frontier, named for the municipality of Tuxcacuesco below the Volcán de Colima. It has no denomination of origin, and the tradition itself keeps the name regional rather than legal — definitions are loose, and that looseness is part of how the communities around Tuxcacuesco, the Río Almería valley, Zapotitlán de Vadillo and Tolimán keep it: the old way, and quietly.",
+      "context": "Tuxca is a borderlands spirit: a traditional agave distillate of the southern-Jalisco/northern-Colima frontier, named for the municipality of Tuxcacuesco below the Volcán de Colima. It has no denomination of origin, and the tradition itself keeps the name regional rather than legal — definitions are loose, and that looseness is part of how the communities around Tuxcacuesco, the Río Almería valley, Zapotitlán de Vadillo and Tolimán keep it: the old way, and quietly. Colima's documented role in this guide is this borderlands context — the tradition, the volcano's slopes and the Río Almería valley reach across the state line — while the cited example bottle is made in Jalisco; the app makes no claim of Colima production coverage beyond what its sources document.",
       "description": "Tuxca is defined less by a legal category than by its method: wild agaves (often Liñeno/Cimarrón, i.e. Agave angustifolia and relatives) roasted in cylindrical pits, hand-mashed, fermented in volcanic stone craters, and distilled in wooden Filipino stills. The result is lean, spicy and mineral rather than smoky-sweet.",
       "plant": "Wild agaves, often Liñeno/Cimarrón (Agave angustifolia and local relatives); ensambles vary by vinatero",
       "process": "Cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation",
@@ -484,7 +484,7 @@
       "spirit": "raicilla",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Raicilla's denomination of origin (2019) spans 16 Jalisco municipalities and one in Nayarit, and editorially splits into two traditions: Sierra (mountain) and Costa (coastal). Coastal raicilla comes from the Cabo Corrientes and Tomatlán area, made mainly with Agave angustifolia (locally chico aguiar) and Agave rhodacantha. Fishermen and farmers on this coast cook their agave in underground pits, the old way — and the coast takes pride in the lean, saline character of its raicilla beside the mountain style.",
+      "context": "Raicilla's denomination of origin (2019) spans 16 Jalisco municipalities and exactly one in Nayarit — the Bahía de Banderas municipality on the Jalisco border, a precise strip rather than all Nayarit, and editorially splits into two traditions: Sierra (mountain) and Costa (coastal). Coastal raicilla comes from the Cabo Corrientes and Tomatlán area, made mainly with Agave angustifolia (locally chico aguiar) and Agave rhodacantha. Fishermen and farmers on this coast cook their agave in underground pits, the old way — and the coast takes pride in the lean, saline character of its raicilla beside the mountain style.",
       "description": "Unlike the Sierra style's above-ground adobe ovens, coastal producers traditionally cook their agave in underground pits — so coastal raicilla leans smokier and more savory than its mountain sibling, with the pit roast alongside citrus and herbal notes. This profile describes the editorial style; individual bottles vary widely and tasting notes for the example bottle are not yet documented.",
       "plant": "Agave angustifolia (chico aguiar) and Agave rhodacantha (wild and cultivated)",
       "plantId": "agave-angustifolia",
@@ -1494,6 +1494,148 @@
         "mezcalesdeleyenda-slp"
       ],
       "whyItTastes": "The green, smoke-free pour is the plateau’s own combination: wild salmiana ripens slowly on the arid Altiplano, and the hacienda cooking tradition here is an oven, not the smoky pit roast — so the plant’s jalapeño-and-lemon character arrives without the smoke that defines Oaxacan mezcal. The oven type is disputed between the producer and a local reviewer; either way, the cited reviews agree the pour reads green, not smoky."
+    },
+    {
+      "id": "mezcal-cupreata-rio-de-parras-michoacan",
+      "title": "Cupreata mezcal, Rio de Parras style (Michoacán)",
+      "spirit": "mezcal",
+      "traditionId": "mezcal",
+      "stateId": "mich",
+      "stateName": "Michoacán",
+      "regionIds": [
+        "rio-de-parras-michoacan"
+      ],
+      "plantIds": [
+        "agave-cupreata"
+      ],
+      "plantId": "agave-cupreata",
+      "processIds": [
+        "distillation-methods"
+      ],
+      "body": "medium",
+      "context": "Michoacán is a major mezcal state with a style voice all its own: river valleys of the Trans-Mexican Volcanic Belt, Filipino-style wooden stills, and a signature lactic, creamy streak reviewers keep finding in its cupreata and inaequidens mezcals. In the Río de Parras communities, maestra mezcalera María E. Pérez and her family call their maguey penca ancha — a local name for Agave cupreata — and some vinatas here even kickstart fermentation with pulque, a practice this guide's destilado de pulque readers will recognize from the other side of the same plant family's world. The name penca ancha is Michoacán's, not Guerrero's papalote: two states, two names, one wide cupreata lineage.",
+      "description": "Cupreata mezcal from Michoacán's Rio de Parras tends to read lactic and creamy in a way espadín rarely does: reviewers of the example bottle find pink bubblegum, strawberries and cream, sour fruits and grape soda, with the pulque-started fermentation showing through as an effervescent, funky edge. Heat is mild for the ABV in some lots and the character varies batch to batch — the honest state of a small-lot tradition.",
+      "beginnerNote": "New to Michoacán mezcal? Expect the creamy side of the family: bubblegum, strawberries, a lactic funk that is a feature, not a flaw — a different welcome from both espadín and Guerrero's papalote.",
+      "category": "Mezcal — Michoacán lies within the mezcal denomination of origin; penca ancha is the regional name for Agave cupreata in Rio de Parras, not a legal class",
+      "plant": "Agave cupreata (penca ancha in Rio de Parras; wild-harvested and cultivated)",
+      "process": "Hand-milled with wooden mallets, pulque-started wild fermentation, Filipino-style still distillation",
+      "smoke": "Light to none per the cited reviews — the palate leads with fruit and lactic funk, not roast smoke.",
+      "finish": "Creamy and fruity with a soft lactic tang; some lots show citrus rind and sea salt on the way out.",
+      "tasteNotes": [
+        "tropical fruit",
+        "lactic tang",
+        "green apple",
+        "mineral",
+        "fresh pulque"
+      ],
+      "sensory": {
+        "smoke": "low",
+        "herbal": "low",
+        "fruit": "high",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "none",
+        "finishLength": "medium"
+      },
+      "aliases": [
+        "penca ancha",
+        "mezcal michoacano",
+        "cupreata michoacan",
+        "rio de parras"
+      ],
+      "exampleBottleId": "palalma-michoacan-cupreata",
+      "placeCoords": {
+        "lat": 19.03,
+        "lon": -101.61,
+        "precision": "municipality (Rio de Parras, Michoacán); approximate"
+      },
+      "pairing": {
+        "serving": "Neat in a small glass; the creamy fruit opens with a short rest. Also works in a Margarita where its lactic funk plays with citrus. Editorial suggestion, not a rule.",
+        "notice": "What to notice first: the bubblegum-and-cream welcome and the gentle funk behind it — Michoacán's own signature.",
+        "foods": [
+          "corundas and uchepos",
+          "fresh cheeses",
+          "michoacana fruit salsas"
+        ]
+      },
+      "sourceIds": [
+        "mezcalreviews-palalma-michoacan-cupreata",
+        "palalma-brand",
+        "mezcalreviews-michoacan-category"
+      ],
+      "whyItTastes": "The creamy lactic signature is the cupreata plus the method: agave grown on the volcanic slopes of Michoacán's river valleys, milled by hand, often fermented with a pulque starter — a practice that leaves an effervescent, funky edge reviewers can taste — and distilled in Filipino-style wooden stills that keep the fruit forward and the smoke back."
+    },
+    {
+      "id": "mezcal-papalometl-mixteca-puebla",
+      "title": "Papalometl mezcal, Mixteca Poblana style (Puebla)",
+      "spirit": "mezcal",
+      "traditionId": "mezcal",
+      "stateId": "pue",
+      "stateName": "Puebla",
+      "regionIds": [
+        "mixteca-poblana-pue"
+      ],
+      "plantIds": [
+        "agave-potatorum"
+      ],
+      "plantId": "agave-potatorum",
+      "processIds": [
+        "pit-roast",
+        "wild-fermentation",
+        "distillation-methods"
+      ],
+      "body": "medium",
+      "context": "Puebla is quietly one of Mexico's biggest mezcal states, and in the Mixteca Poblana hills the plant at the center of its small-batch mezcal is the papalometl — a word that shares a Nahuatl root with Guerrero's papalote but, in this bottle's documented case, names Agave potatorum, the same species Oaxaca calls tobalá. Maestra mezcalera Fabiola Torres Monfil makes it in San Diego La Mesa Tochimilitzingo with a farmer-conservationist's hand: seed-grown agaves, a nursery, and programs that let plants flower for the bats that give her brand its name. The name is the lesson: papalometl needs its state attached, because the same word can point to different agaves in different states.",
+      "description": "Papalometl mezcal from Puebla's hills tends to read fruit-forward and brightly acidic: reviewers of the example bottle find apple pie, banana taffy, mango and pineapple, with sharp vinegar-sparkling-wine acidity and, in some batches, a rawhide-fermented funk behind the fruit. Batch variation is genuine across this maestra's small lots.",
+      "beginnerNote": "New to Puebla mezcal? Expect a fruit basket with a spark: apples, banana, tropical fruit and a bright, almost sparkling-wine acidity — nothing like the smoky welcome you might expect from the word mezcal.",
+      "category": "Mezcal — Puebla lies within the mezcal denomination of origin; papalometl is a regional plant name (potatorum in this bottle's documented case), not a legal class",
+      "plant": "Agave potatorum (papalometl in the Mixteca Poblana; wild and seed-grown from the producer's nursery)",
+      "process": "Pit roast, mechanical shredder, dry-then-wet wild fermentation (up to 14+5-10 days; some batches in rawhide), single distillation in copper or clay",
+      "smoke": "Light per the cited reviews — the pit roast is present but the fruit and acidity lead.",
+      "finish": "Fruity and floral with a bright acidic snap; some batches finish mineral over dark fruits like plum and fig.",
+      "tasteNotes": [
+        "tropical fruit",
+        "green apple",
+        "citrus",
+        "florals",
+        "lactic tang"
+      ],
+      "sensory": {
+        "smoke": "low",
+        "herbal": "low",
+        "fruit": "high",
+        "sweetness": "medium",
+        "pepper": "low",
+        "oak": "none",
+        "finishLength": "medium"
+      },
+      "aliases": [
+        "papalometl puebla",
+        "mezcal poblano",
+        "mixteca poblana",
+        "san diego la mesa tochimilitzingo"
+      ],
+      "exampleBottleId": "zinacantan-papalometl",
+      "placeCoords": {
+        "lat": 18.85,
+        "lon": -98.17,
+        "precision": "municipality (San Diego La Mesa Tochimilitzingo, Puebla); approximate"
+      },
+      "pairing": {
+        "serving": "Neat in a small glass; the acidity makes it a lively food mezcal. Editorial suggestion, not a rule.",
+        "notice": "What to notice first: the apple-and-tropical-fruit welcome and the bright, sparkling-wine acidity behind it — Puebla's own signature.",
+        "foods": [
+          "mole poblano",
+          "fresh cheeses",
+          "chile-forward salsas"
+        ]
+      },
+      "sourceIds": [
+        "mezcalreviews-zinacantan-papalometl",
+        "mezcalistas-zinacantan",
+        "globalpress-zinacantan-agave"
+      ],
+      "whyItTastes": "The bright fruit-and-acidity signature is the papalometl plus the method: seed-grown potatorum from the producer's nursery on the Mixteca Poblana hills, pit-roasted, fermented wild in a dry-then-wet sequence that sharpens the acidity, and single-distilled in copper or clay — a chain that keeps the fruit and spark forward and the smoke back."
     }
   ]
 }
