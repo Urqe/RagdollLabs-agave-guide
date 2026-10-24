@@ -60,7 +60,12 @@ test("pair 8: same plant, different region AND class never claims place is the o
 
 test("R23: same tradition different plant perspective is detected", () => {
   const r = comparisonPerspectives([byId("mezcal-espadin-valles-centrales"), byId("mezcal-tobala-sierra-oaxaca")]);
-  assert.ok(r.some((x) => x.id === "sameTraditionDifferentPlant"), "detected for espadín vs tobalá");
+  // Pair 23: these styles differ in region too, so the honest perspective
+  // names the changing combination rather than the agave alone.
+  assert.ok(r.some((x) => x.id === "sameTraditionDifferentPlantAndPlace"),
+    "espadín vs tobalá gets the multi-variable perspective");
+  assert.ok(!r.some((x) => x.id === "sameTraditionDifferentPlant"),
+    "a region-changing pair never gets the agave-only perspective");
 });
 
 test("R23: same tradition different method perspective is detected", () => {

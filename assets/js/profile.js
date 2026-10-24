@@ -273,11 +273,12 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
   
 
   const suggestions = ifYouLikeThis(profile, allProfiles);
-  if (suggestions.length > 0) {
+  const suggestionsWithReasons = suggestions.filter((s) => s.sharedDimensionKeys.length > 0);
+  if (suggestionsWithReasons.length > 0) {
     const suggHeading = el("h3", { class: "suggestions-heading" }, t("profile.ifYouLike"));
     section.appendChild(suggHeading);
     const suggList = el("ul", { class: "suggestion-list" });
-    for (const { profile: other, sharedDimensionKeys } of suggestions) {
+    for (const { profile: other, sharedDimensionKeys } of suggestionsWithReasons) {
       const item = el("li");
       const params = [];
       if (returnTo) params.push(`from=${encodeURIComponent(returnTo)}`);
@@ -292,7 +293,7 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
         ` — ${ui(locale, "sharesWhy").replace("{list}", sharedText)}`));
       suggList.appendChild(item);
     }
-    section.appendChild(suggList);
+    if (suggList.childNodes.length > 0) section.appendChild(suggList);
   }
 
   const learnLink = el("a", { href: "#/learn", class: "learn-callout-link" }, t("profile.learnLink"));

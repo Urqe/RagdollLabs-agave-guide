@@ -265,6 +265,8 @@ export function renderCompare(container, { profiles, compareIds, onSelectionChan
         text = t("compare.perspective.samePlantAndClass").replace("{plant}", (perspective.plantProfileId ? fieldEs("profile", perspective.plantProfileId, "plant", locale) : null) || perspective.plant);
       } else if (perspective.id === "sameTraditionDifferentPlant") {
         text = t("compare.perspective.sameTraditionPlant").replace("{tradition}", SPIRIT_LABELS[perspective.tradition] || perspective.tradition);
+      } else if (perspective.id === "sameTraditionDifferentPlantAndPlace") {
+        text = t("compare.perspective.sameTraditionPlantPlace").replace("{tradition}", SPIRIT_LABELS[perspective.tradition] || perspective.tradition);
       } else if (perspective.id === "sameTraditionDifferentMethod") {
         text = t("compare.perspective.sameTraditionMethod").replace("{tradition}", SPIRIT_LABELS[perspective.tradition] || perspective.tradition);
       } else if (perspective.id === "similarFlavoursAcrossTraditions") {

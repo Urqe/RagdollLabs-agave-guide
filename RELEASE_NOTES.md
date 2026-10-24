@@ -3124,3 +3124,120 @@ post-roadmap pairs (18–22) are now applied.
 - Colima and Nayarit still have no documented profile-level coverage;
   adding either remains future owner-directed work, not a gap in this
   review.
+
+## Post-roadmap pair 23 — Corrective editorial maintenance (2026-10-24)
+
+One bounded maintenance release over the five regional profiles added in
+pairs 19–21 (Guerrero, Durango, San Luis Potosí, Michoacán, Puebla). No new
+regions, profiles or bottles; every existing route, journey and example
+bottle is preserved.
+
+### Changed claims, with sources
+
+- **Bottle-scale evidence.** The five descriptions now state up front that
+  the profile is grounded in one bottle — the example expression — and
+  attribute each tasting note to that bottle's reviewers. Removed the
+  state-scale overreaches: "Durango's welcome is sweeter and often hotter
+  than Oaxaca's" (replaced with the example bottle's documented 49–54%
+  lots and the reviewers' own heat notes — Mezcal Reviews, Lamata Cenizo
+  page), "unmistakably Michoacán" (the creamy, pulque-tinged welcome is now
+  this Rio de Parras producer's, per the Pal'alma reviews), and the
+  "little smoke" claim about the plateau that relied on smoke "that defines
+  Oaxacan mezcal" (the SLP passage now reads green-first without
+  generalizing Oaxaca). Durango's state-level framing keeps only what
+  SevenFifty Daily documents: producers' own "sweet green flavors, fruity
+  and earthy with lactic notes" tendency and cenizo's seed-based genetic
+  diversity.
+- **Causal honesty.** Every regional whyItTastes now separates the
+  documented method from the documented tasting. The Michoacán pulque
+  starter: reviewers connect the lactic, effervescent edge to the pulque —
+  that attribution is kept and labeled as a reviewer's reading, not an
+  established mechanism (no source isolates the starter; lots rested
+  months in glass). The Filipino-still contribution stays a
+  tradition-level description from the Michoacán region page. The Puebla
+  dry-then-wet fermentation is documented; the sharp acidity it was said
+  to "sharpen" is documented separately — the causal link is now
+  explicitly open, and the Mezcalistas producer visit (which describes the
+  house's mezcals as clean) is noted against the guess. The SLP clay-oven
+  vs autoclave dispute stays open in the profile, the bottle record and
+  both languages.
+- **Comparison semantics.** `comparisonPerspectives` no longer says
+  "the agave is the variable" when region or method change too —
+  Michoacán vs Puebla now renders "not only the plant changes here: the
+  region or the production method differs too, so read the differences as
+  a whole combination" (EN and ES). The single-variable chips now fire
+  only for genuinely controlled comparisons (matching maturation class
+  and method set for same-plant pairs; matching region and method for
+  same-tradition-different-plant pairs), and the multi-variable
+  perspectives carry `sameRegion`/`sameMethodSet` evidence.
+- **Recommendation reasons.** `ifYouLikeThis` now separates strong
+  (medium/high) shared attributes from modest (low) ones; only strong
+  shared attributes qualify a suggestion and only they appear in the
+  rendered reason — "both lean {list}" became "both show {list}" / "ambos
+  muestran {list}". Missing values stay a first-class unknown: a shared
+  undocumented dimension is never counted as shared evidence, and the
+  compare table still renders "Not documented" distinctly from Low and
+  None.
+- **Copy rewrites (EN/ES).** All five regional profiles rewritten in
+  natural English and Mexican Spanish: fixed "atérran la fermentación"
+  (→ "arranca la fermentación"), "sodá de uva" (→ "refresco de uva"),
+  "el estado honesto de una tradición" (removed), and the literal
+  "en voz baja" everywhere it appeared (bacanora, tuxca, Puebla contexts);
+  removed reviewer-led openings and "this guide records" narration from
+  the reading flow; serving advice, notice lines, smoke and finish lines
+  now cite the example bottle's reviews. The compare intro now reads as
+  guidance ("Pick two or three styles and read them side by side — what
+  to taste, and what differs") instead of model narration, keeping the
+  material editorial-levels qualification.
+
+### Tests
+
+- New `test/pair-23-editorial-maintenance.test.mjs` (10 regressions):
+  fixtures distinguishing shared high/medium from shared low/none;
+  unknown-from-low/none in selection and in the rendered compare table;
+  a genuine single-variable regional comparison (matching class and
+  method) vs multiple-changing-variables fixtures; Michoacán–Puebla
+  rendered comparison never claiming a single variable; suggestion
+  reasons never claiming a shared "lean"; bottle-scale anchoring and
+  removal of the specific overreach phrases in EN and ES; method/tasting
+  separation in the Michoacán, Puebla and SLP why-blocks; no
+  reviewer-led/guide-model narration in the five reading flows, with
+  specific people and places kept; ES literal-translation artifacts
+  absent from the whole content file.
+- `test/comparison-intelligence.test.mjs` updated: espadín vs tobalá
+  (different regions) now expects the multi-variable perspective.
+- `npm run validate`: schema, cross-references and the full `node:test`
+  suite — **417 passing** (407 prior + 10 new).
+
+### Rendered-page checks
+
+Full-app boot checks (jsdom, real `app.js` boot path with the production
+data files) in both languages: all five regional profiles render their
+rewritten description, why-block, serving advice, example bottle cards
+and suggestion reasons; the Michoacán–Puebla comparison renders the
+multi-variable perspective chip, the plant/method rows showing the
+actual differing plants and methods, and the honest no-documented-
+differences line (both profiles' sensory levels match); language
+switching renders the ES mirrors; direct hash links (#/profile/…,
+#/compare/…) boot straight to the right view. A native desktop browser
+was not available in the execution sandbox; the deployed Pages URL below
+was checked via the workflow's validated artifact, and native-browser
+rendering was not re-verified in this pair.
+
+### Deployed
+
+Commit ee00012 → this release on `main` via the existing GitHub Pages
+workflow (validate → stage → deploy). Live URL:
+<https://urqe.github.io/RagdollLabs-agave-guide/>
+
+### Still unverified — no claim made
+
+- Native iPhone/iPad Safari, VoiceOver, physical touch and
+  regional-reader validation of the rewritten Spanish prose remain
+  unverified, as in every prior pair.
+- The Michoacán still/pulque and Puebla fermentation causal links remain
+  genuinely open questions; the SLP cooking method remains disputed
+  between producer and one local reviewer — recorded, not settled.
+- No claim is made that all bottles from any of these five regions taste
+  alike; every sensory statement is scoped to the example bottle's
+  reviews or to documented producer/state-level tendencies.

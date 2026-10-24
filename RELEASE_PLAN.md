@@ -1048,3 +1048,64 @@ For each release, record:
 - For maintenance: findings, implemented fixes, and evidence that the deployed behaviors improved.
 
 This file is the agreed plan for `RagdollLabs-agave-guide`; it does not create the repo, publish a site, or certify any listed bottle content. Implementers must use genuine sources for published claims within the bounded research rules above. Omit nonessential unknowns instead of delaying structural validation for exhaustive research.
+
+### Post-roadmap pair 23 — Corrective editorial maintenance (applied 2026-10-24)
+
+Owner-directed bounded maintenance release over pairs 19–22's five regional
+profiles (Guerrero, Durango, San Luis Potosí, Michoacán, Puebla). No new
+regions, profiles or bottles.
+
+- [x] Rewrite the five regional profiles in natural English and Mexican
+  Spanish: fix "atérran la fermentación," "sodá de uva," "el estado honesto
+  de una tradición" and the literal "en voz baja"; remove reviewer-led and
+  "this guide records" narration from the reading flow. (Applied: all five
+  EN and ES profiles rewritten — descriptions anchor tasting evidence to
+  the example bottle; ES artifacts fixed everywhere they appeared,
+  including the bacanora/tuxca "en voz baja" instances; no invented
+  dialect.)
+- [x] Keep bottle evidence at bottle scale: rescope "Durango's welcome is
+  sweeter and often hotter than Oaxaca's," "unmistakably Michoacán" and
+  smoke that "defines Oaxacan mezcal" to what the cited reviews support.
+  (Applied: all three removed; Durango's sweetness/heat now cites the
+  example bottle's 49–54% lots and reviewers; the Michoacán welcome is
+  attributed to this producer's method; the SLP smoke passage no longer
+  generalizes Oaxacan mezcal — pinned by regression.)
+- [x] Audit causal explanations: separate documented method from
+  documented tasting for the Michoacán wooden-still/pulque and Puebla
+  fermentation/acidity passages; keep the SLP oven dispute visible.
+  (Applied: every whyItTastes now opens with "What the glass shows and how
+  it is made are separate records"; the pulque-starter attribution stays a
+  reviewer's plausible reading, not an established mechanism; the
+  dry-then-wet fermentation/acidity link stays open; the clay-oven vs
+  autoclave dispute remains unresolved on the page.)
+- [x] Repair comparison and recommendation language: Michoacán–Puebla no
+  longer says "the agave is the variable" when place and method differ;
+  recommendations no longer say two profiles "lean" alike on shared
+  low ratings. (Applied: comparisonPerspectives gains
+  sameTraditionDifferentPlantAndPlace with sameRegion/sameMethodSet
+  evidence — the single-variable chip fires only for genuinely
+  controlled comparisons; ifYouLikeThis now separates strongShared from
+  modestShared keys and the reason names only medium/high shared
+  attributes ("both show …"); unknown stays distinct from low/none,
+  pinned by fixture regressions.)
+- [x] Reduce research-paper narration: the compare intro now tells the
+  reader what to do ("Pick two or three styles and read them side by side —
+  what to taste, and what differs") with the material editorial-levels
+  qualification kept; composition/uncertainty disclosures stay near their
+  claims in the profiles.
+- [x] Verification: supporting review pages re-fetched and re-read
+  (mezcalreviews pages for Legendario Domingo, Lamata Cenizo, Leyendas,
+  Pal'alma, Zinacantan; SevenFifty Daily Durango; Mezcalistas Zinacantan;
+  Michoacán region page) — no invented tasting details; `npm run validate`
+  green with 417 tests (407 prior + 10 new pair-23 regressions); full-app
+  jsdom boot checks of the five profiles, example bottles, suggestions,
+  Michoacán–Puebla comparison and ES rendering, plus direct-link reloads.
+  Desktop rendering verified through the real app boot path with the
+  production data; a native desktop browser (Chrome/Firefox/Safari) was
+  not available in the execution sandbox, so no native-browser claim is
+  made beyond the deployed-Pages check recorded in the release notes.
+  Native iPhone/iPad Safari, VoiceOver and regional-reader validation
+  remain unverified and unclaimed.
+
+**Current execution pointer: pair 23 applied — corrective editorial
+maintenance complete; stop here. The next work is the owner's to direct.**
