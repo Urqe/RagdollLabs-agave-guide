@@ -53,6 +53,11 @@ export function parseHash(hash) {
     }
     return { name: "notFound", params: {} };
   }
+  // Pair 25: the plant-to-glass teaching page, with an optional return context.
+  if (segments[0].split("?")[0] === "plant-to-glass" && segments.length === 1) {
+    const from = new URLSearchParams(segments[0].split("?")[1] || "").get("from");
+    return from ? { name: "plantToGlass", params: { from } } : { name: "plantToGlass", params: {} };
+  }
   if (segments[0] === "plant" && segments.length === 2) {
     return { name: "plant", params: { plantId: segments[1] } };
   }
@@ -104,6 +109,8 @@ export function buildHash(route) {
       return route.params.bottle ? `#/catalogue?bottle=${encodeURIComponent(route.params.bottle)}` : "#/catalogue";
     case "plant":
       return `#/plant/${encodeURIComponent(route.params.plantId)}`;
+    case "plantToGlass":
+      return route.params.from ? `#/plant-to-glass?from=${encodeURIComponent(route.params.from)}` : "#/plant-to-glass";
     case "tradition":
       return `#/tradition/${encodeURIComponent(route.params.traditionId)}`;
     case "discover":

@@ -130,6 +130,8 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
       ? `#/start/${encodeURIComponent(originId)}`
       : originKind === "profile"
       ? `#/profile/${encodeURIComponent(originId)}`
+      : originKind === "page" && originId === "plant-to-glass"
+      ? "#/plant-to-glass"
       : originKind === "plant" || originKind === "region" || originKind === "spirit" || originKind === "flavour"
         ? `#/discover/${encodeURIComponent(originKind)}/${encodeURIComponent(originId)}`
         : returnTo ? `#/explore/${encodeURIComponent(returnTo)}` : "#/explore";
@@ -139,6 +141,8 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
       ? t("profile.backLesson")
       : originKind === "profile"
       ? t("profile.backProfile")
+      : originKind === "page" && originId === "plant-to-glass"
+      ? t("profile.backPlantToGlass")
       : fromDiscovery ? t("profile.backDiscover") : t("profile.backExplore");
   const back = el("a", { href: backHref, class: "back-link" }, backLabel);
   section.appendChild(back);
@@ -391,6 +395,11 @@ export function renderProfile(container, { profile, bottle, sources, returnTo = 
     const craftBlock = el("section", { class: "profile-craft-section", "aria-labelledby": "craft-heading" });
     craftBlock.appendChild(el("h2", { id: "craft-heading" }, t("profile.craft")));
     craftBlock.appendChild(craftNode);
+    // Pair 25: from this style's method to the general plant-to-glass page.
+    craftBlock.appendChild(el("a", {
+      href: `#/plant-to-glass?from=${encodeURIComponent("profile:" + profile.id)}`,
+      class: "quiet-link profile-plant-to-glass",
+    }, t("profile.plantToGlassLink")));
     bodyGrid.appendChild(craftBlock);
   }
 

@@ -261,7 +261,8 @@ test("R20: plant and process reference text renders in Spanish", () => {
   const view = render(locale);
   const tequilanaCard = [...view.querySelectorAll("h4")].find((h) => h.textContent.includes("Agave tequilana")).parentElement;
   assert.ok(tequilanaCard.textContent.includes("cultivado"), "plant cultivation renders in Spanish");
-  const pitCard = [...view.querySelectorAll("h4")].find((h) => h.textContent.includes("Earthen pit roast")).parentElement;
+  // Pair 25 localized process names: the Spanish heading is the Spanish name.
+  const pitCard = [...view.querySelectorAll("h4")].find((h) => h.textContent.includes(contentEs.processes["pit-roast"].name)).parentElement;
   assert.ok(pitCard.textContent.includes("pozos"), "process explanation renders in Spanish");
   locale.set("en");
 });

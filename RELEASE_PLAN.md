@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–23.1 are recorded as applied (Pair 23.1 — voice guide and Spanish localization — merged and deployed 2026-10-24). **Pair 24 (guided sensory tasting) is implemented on branch `pair-24-guided-tasting`, awaiting owner review; Pair 25 follows.** `EDITORIAL_VOICE.md` governs all new text. Section 8's learning roadmap (Pairs 24–29) follows, in the order set out in section 8 (reordered 2026-10-24 by the owner). This header is the single current pointer: status lines inside sections 4.3, 4.5 and 7 are historical. Execute only the owner-authorized pair.
+Post-roadmap pairs 8–23.1 are recorded as applied (Pair 23.1 — voice guide and Spanish localization — merged and deployed 2026-10-24). Pair 24 (guided sensory tasting) is merged (PR #74, `2ed0e2c`) and deployed. **Pair 25 (plant to glass) is implemented on branch `pair-25-plant-to-glass`, awaiting owner review; Pair 26 follows.** `EDITORIAL_VOICE.md` governs all new text. Section 8's learning roadmap (Pairs 24–29) follows, in the order set out in section 8 (reordered 2026-10-24 by the owner). This header is the single current pointer: status lines inside sections 4.3, 4.5 and 7 are historical. Execute only the owner-authorized pair.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -1149,7 +1149,7 @@ Turn a source-backed reference into an intuitive beginner-to-enthusiast learning
 
 ### Pair 24 — Guided sensory tasting (feature, P0)
 
-**Status:** implemented 2026-10-24 on branch `pair-24-guided-tasting`; awaiting owner review (see RELEASE_NOTES.md).
+**Status:** applied 2026-10-24 — merged (PR #74, merge `2ed0e2c`) and deployed; see RELEASE_NOTES.md.
 
 Build on `#/start`, its "How to taste" lesson and existing profile sensory vocabulary rather than creating a second learning syllabus.
 
@@ -1164,11 +1164,13 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 
 ### Pair 25 — Production → sensory explanation (feature, P0)
 
-- [ ] Create an accessible, responsive *plant-to-glass* teaching sequence linking existing plant, region, cooking, extraction, fermentation, still and maturation entities to *possible* sensory effects and representative profiles. Include sap-derived routes and sotol's non-agave identity where relevant.
-- [ ] Show examples: some pit roasts can add smoke; fermentation can influence aromatics; still choice and cuts affect the distillate; resting in oak often adds vanilla/spice/color; glass resting does not add oak. Explicitly say no individual note proves its cause.
-- [ ] Distinguish evidence documented for an example bottle from broader style-level editorial interpretation. Preserve uncertain/disputed process records visibly (especially regional cases already corrected in pair 23).
-- [ ] Progressive reveal: first a concise visual/step sequence, then expandable technical details and attributed sources. Avoid duplicating long descriptions into new JSON silos.
-- [ ] Cross-link back to tasting exercises and relevant profiles; preserve EN/ES and text-first alternatives to diagrams.
+**Status:** implemented 2026-10-24 on branch `pair-25-plant-to-glass` as the `#/plant-to-glass` page; awaiting owner review (see RELEASE_NOTES.md).
+
+- [x] Create an accessible, responsive *plant-to-glass* teaching sequence linking existing plant, region, cooking, extraction, fermentation, still and maturation entities to *possible* sensory effects and representative profiles. Include sap-derived routes and sotol's non-agave identity where relevant.
+- [x] Show examples: some pit roasts can add smoke; fermentation can influence aromatics; still choice and cuts affect the distillate; resting in oak often adds vanilla/spice/color; glass resting does not add oak. Explicitly say no individual note proves its cause.
+- [x] Distinguish evidence documented for an example bottle from broader style-level editorial interpretation. Preserve uncertain/disputed process records visibly (especially regional cases already corrected in pair 23).
+- [x] Progressive reveal: first a concise visual/step sequence, then expandable technical details and attributed sources. Avoid duplicating long descriptions into new JSON silos.
+- [x] Cross-link back to tasting exercises and relevant profiles; preserve EN/ES and text-first alternatives to diagrams.
 - **Acceptance:** readers can follow at least two contrasting production routes, predict plausible sensory differences, and identify why those are not guarantees.
 
 ### Pair 26 — Three-intention navigation and lesson continuity (UX, P1)
@@ -1198,6 +1200,7 @@ Build on `#/start`, its "How to taste" lesson and existing profile sensory vocab
 - [ ] Add short, sourced context for regional makers and traditions, especially Sonora's bacanora, Jalisco's coastal vs sierra raicilla, and Oaxaca's family/palenque practices. Avoid invented quotes, blanket cultural assertions or exoticizing small producers.
 - [ ] Review English and Mexican Spanish together; cultural warmth should be natural rather than literal translation. Keep legal terms, denomination status and composition precision.
 - [ ] Audit against `EDITORIAL_VOICE.md` (the guide now exists from Pair 23.1; this pair applies it to the remaining 18 profiles, bottles, Learn and Discover, rather than defining the voice). Include the generated suggestion text: "Explore next" repeats the same `sharesWhy` sentence word for word for every suggestion; vary it by what actually differs.
+- [ ] Check process records against their sources (added 2026-10-24, found in Pair 25). `diffords-mezcal-what-it-is` is cited for the pit roast, but the page does not describe pit roasting or smoke; Pair 25 added the Lost Explorer palenque page, which does. Audit the remaining process `sourceIds` the same way, and add a profile milling/extraction id where the method text names the tool, if it proves useful beyond the plant-to-glass route view.
 - [ ] Localize profile coordinate precision labels (added 2026-10-24, found in Pair 23.1): `placeCoords.precision` renders in English on Spanish profile pages.
 - [ ] Fix the systemic "sabroso" for savoury and "lima" for lime in Spanish (added 2026-10-24, found in Pair 24). About 20 strings in `content-es.json` and the mood label "Especiado y sabroso" in `locale.js` use sabroso (tasty) for savoury; several use lima where Mexican Spanish says limón. Pair 23.1/24 fixed only the surfaces they touched. Check the chapter line "(lima, no siempre limón)" in context before changing it.
 - [ ] Align English spelling to British (added 2026-10-24): the edition uses the UK flag, but "Flavour" (filters, Learn) and "Flavor" (profiles) are mixed.

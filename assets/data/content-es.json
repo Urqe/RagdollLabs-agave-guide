@@ -820,28 +820,49 @@
   },
   "processes": {
     "pit-roast": {
-      "explanation": "Los corazones de agave se asan en pozos revestidos de piedra con fuego de leña, a veces durante días. Es la cocción clásica del mezcal, el bacanora y el tuxca; puede aportar humo, pero cuánto varía con la leña, el tiempo y el pozo — el método por sí solo no garantiza humo."
+      "name": "Asado en horno de tierra",
+      "explanation": "Los corazones de agave se asan en pozos revestidos de piedra con fuego de leña, a veces durante días. Es la cocción clásica del mezcal, el bacanora y el tuxca; puede aportar humo, pero cuánto varía con la leña, el tiempo y el pozo — el método por sí solo no garantiza humo.",
+      "glassEffect": "Puede aportar humo, desde un toque leve de fogata hasta una nariz muy ahumada. Cuánto depende de la leña, el tiempo y el horno."
     },
     "steam-cook": {
-      "explanation": "Los corazones de agave se cocinan al vapor en hornos de mampostería (hornos) o autoclaves. Es la cocción típica del tequila: limpia, sin humo de leña."
+      "name": "Cocción al vapor (hornos y autoclaves)",
+      "explanation": "Las piñas del tequila suelen cocerse al vapor en hornos de mampostería o en autoclaves de acero inoxidable. El fuego nunca toca el agave, así que el tequila cocido al vapor normalmente no tiene humo. Los dos hornos también son distintos: Difford's describe que la cocción lenta en horno da más fruta y dulzor, y advierte que cocer demasiado rápido puede dejar un sabor amargo a caramelo quemado.",
+      "glassEffect": "Normalmente nada de humo, así que el agave cocido, las hierbas y la pimienta se sienten limpios."
     },
     "sap-collection": {
-      "explanation": "En las tradiciones del comiteco y el pulque, el quiote — el tallo floral — de la planta viva se corta y la cavidad resultante en la cabeza de la planta se raspa; el aguamiel que se acumula se recolecta durante días sucesivos. Es una operación distinta de cosechar y cocinar una piña: la planta no muere en la cosecha, pero la recolección repetida de savia agota la planta — no es regeneración indefinida. La piña nunca se cocina en estas tradiciones, lo que las hace destilados de savia sin carácter de asado."
+      "name": "Recolección de savia (aguamiel)",
+      "explanation": "En las tradiciones del comiteco y el pulque, el quiote — el tallo floral — de la planta viva se corta y la cavidad resultante en la cabeza de la planta se raspa; el aguamiel que se acumula se recolecta durante días sucesivos. Es una operación distinta de cosechar y cocinar una piña: la planta no muere en la cosecha, pero la recolección repetida de savia agota la planta — no es regeneración indefinida. La piña nunca se cocina en estas tradiciones, lo que las hace destilados de savia sin carácter de asado.",
+      "glassEffect": "Sin asado: los destilados de savia no tienen notas de agave cocido ni de humo, y pueden mostrar tonos frescos, lácticos o fermentados."
+    },
+    "milling-extraction": {
+      "name": "Molienda y extracción",
+      "explanation": "Después de la cocción, el agave se machaca para liberar su jugo dulce. Las herramientas van de la tahona de piedra a los molinos de rodillos, las desgarradoras mecánicas, los mazos de madera y el hacha. En los molinos de rodillos, el agua lava el jugo de las fibras; algunos productores con tahona fermentan las fibras junto con el jugo. Difford's dice que el tamaño de la partícula influye en el sabor final.",
+      "glassEffect": "Qué tan fino se machaca el agave, y si las fibras fermentan con el jugo, puede cambiar el aroma y la textura. La fuente dice que importa; no dice cuánto."
     },
     "wild-fermentation": {
-      "explanation": "La fermentación ocurre en tinas abiertas con levaduras silvestres del entorno, aportando carácter local y variación genuina entre productores y lotes."
+      "name": "Fermentación silvestre y abierta",
+      "explanation": "La mayoría de los destilados de agave de lotes pequeños fermentan en tinas abiertas con levaduras del entorno — tinas de madera, tanques de acero o cráteres volcánicos. La tina y las levaduras locales pueden influir en la textura y en las notas saladas; el efecto es tradicional, no estandarizado. Difford's señala que la levadura que usa cada productor ayuda a definir el sabor final, y que fermentar junto con las fibras machacadas puede ayudar a atrapar los aromas.",
+      "glassEffect": "Puede aportar fruta, matices fermentados y carácter local. La levadura es una de las variables más grandes."
     },
     "distillation-methods": {
-      "explanation": "El alambique moldea el destilado: cobre en producción artesanal, barro en la ancestral, y madera estilo filipino en el occidente. El tipo de alambique y el corte dejan huella en la textura y el sabor."
+      "name": "Tipos de alambique",
+      "explanation": "Los alambiques de cobre, los de acero, las ollas de barro y los alambiques filipinos de madera moldean cada uno el destilado; los alambiques filipinos del tuxca, por ejemplo, son parte de su definición regional. El destilador también decide sus cortes: se queda con el corazón y aparta la primera y la última parte de la destilación (puntas y colas), porque los distintos compuestos de sabor salen a distintas temperaturas. El tipo de alambique y los cortes son hechos del método — por sí solos no garantizan un sabor.",
+      "glassEffect": "El alambique y dónde corta el destilador moldean el cuerpo y cuánto sabor del agave se queda."
     },
     "glass-resting": {
-      "explanation": "El reposo en vidrio (madurado en vidrio) suaviza el destilado sin influencia de madera — una opción tradicional que muchas categorías no exigen."
+      "name": "Reposo en vidrio (madurado en vidrio)",
+      "explanation": "El reposo en vidrio (madurado en vidrio) suaviza el destilado sin influencia de madera — una opción tradicional que muchas categorías no exigen.",
+      "glassEffect": "Redondea el destilado sin aportar nada de roble: del vidrio no viene vainilla ni color de madera."
     },
     "wood-maturation": {
-      "explanation": "La maduración en madera aporta color, especias de roble y suavidad. Los mínimos legales son específicos de cada destilado: las reglas del tequila no se transfieren a otras categorías."
+      "name": "Maduración en madera",
+      "explanation": "La maduración en madera aporta color, especias de roble y suavidad. Los mínimos legales son específicos de cada destilado: las reglas del tequila no se transfieren a otras categorías.",
+      "glassEffect": "A menudo aporta vainilla, especias, color y un borde más suave, según la madera, el tamaño de la barrica y el tiempo."
     },
     "filtration": {
-      "explanation": "El filtrado (a menudo con carbón) retira el color de un destilado con crianza, como en el cristalino — una elección de acabado, no una clase legal."
+      "name": "Filtrado",
+      "explanation": "El filtrado (a menudo con carbón) retira el color de un destilado con crianza, como en el cristalino — una elección de acabado, no una clase legal.",
+      "glassEffect": "Puede quitar color y, con él, algo de carácter; los cristalinos son el caso extremo."
     }
   },
   "plants": {

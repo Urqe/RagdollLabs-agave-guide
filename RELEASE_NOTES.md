@@ -3346,8 +3346,10 @@ adjusted deliberately:
 
 ## Pair 24 — Guided sensory tasting (2026-10-24)
 
-Branch `pair-24-guided-tasting`. Not merged or deployed: awaiting the
-owner's review. All new text follows `EDITORIAL_VOICE.md`.
+Branch `pair-24-guided-tasting`, reviewed and merged by the owner as
+PR #74 (merge commit `2ed0e2c`). CI, Deploy to GitHub Pages and
+pages-build-deployment all succeeded, and the live `journey.js` serves the
+guided tasting. All new text follows `EDITORIAL_VOICE.md`.
 
 ### Changed
 
@@ -3413,3 +3415,88 @@ Headless Chromium against a local static server:
 - Native iPhone/iPad Safari, VoiceOver and touch checks remain unverified.
 - Lesson 3 is now long on phones. Pair 26's page-landing and orientation
   work should check it.
+
+## Pair 25 — Production → sensory explanation (2026-10-24)
+
+Branch `pair-25-plant-to-glass`. Not merged or deployed: awaiting the
+owner's review. All new text follows `EDITORIAL_VOICE.md`.
+
+### Changed
+
+- **New page `#/plant-to-glass`** ("From plant to glass" / "De la planta
+  a la copa"):
+  - **Steps.** Seven steps: plant, cook (or no cook), crush, ferment,
+    still, rest, finish before bottling. Each shows its possible effect in
+    the glass, labelled as an editorial reading, the styles that use it,
+    and a closed "How it works, and the sources" disclosure with the full
+    explanation and attributed links.
+  - **Non-standard cases.** The sap route (comiteco, destilado de pulque)
+    and sotol's non-agave identity are taught in the plant and cook steps.
+  - **Two routes.** Steam or fire (valley blanco and espadín mezcal) and
+    straight to the bottle or oak (valley blanco and añejo). Each route
+    lists the steps from the profiles' process records, plus the crush
+    step when the profile's documented method names a crushing tool. It
+    quotes the documented method and asks a question to predict first.
+    The hidden answer shows the levels from data, explains why it isn't
+    proof (plant, place and producer differ; vanilla alone doesn't prove
+    oak) and links to the side-by-side comparison.
+  - **Still open.** The SLP oven dispute, the Michoacán pulque starter and
+    the Puebla fermentation and acidity question stay visible, each linked
+    to its profile.
+  - **Practise it.** Links back to the guided tasting, lesson 3 and the
+    process reference.
+- **Entry points, each keeping its return context.** The Learn production
+  chapter links to the page (`?from=learn`), lesson 3 adds a line after
+  the vocabulary (`?from=start:recognise-the-notes`), and every profile's
+  "How it is made" section adds "How each step can shape the glass"
+  (`?from=profile:<id>`). Profiles opened from the page return to it.
+- **Process data** (`processes.json`, `content-es.json`):
+  - **New `milling-extraction` record,** sourced to Difford's tequila
+    production page and Mezcalistas.
+  - **Glass effects.** Every process has a `glassEffect` line in EN and
+    ES, and the ES edition gains process names. Validation requires both
+    and rejects unrendered ES process fields.
+  - **Distillation** now teaches heads, heart and tails cuts (Difford's
+    tequila page; Lost Explorer palenque page), still without promising a
+    flavour.
+  - **Steam cook** drops "which is why tequila reads vegetal". It now says
+    steam-cooked tequila usually has no smoke, with Difford's oven and
+    autoclave contrast attributed.
+  - **Wild fermentation** adds the attributed point that the yeast choice
+    helps shape the finished flavour.
+  - **Pit roast** now also cites the Lost Explorer palenque page. Its
+    existing Difford's mezcal source does not describe pit roasting or
+    smoke, and the producer page does. This is logged for a source audit
+    in Pair 28.
+- **Michoacán profile** lists the wild fermentation its method text
+  already documents ("pulque-started wild fermentation"); before, it
+  listed distillation only.
+- **Learn** process headings, stages and chip labels are localized,
+  replacing the hard-coded "(see process reference below)". The milling
+  record matches profiles that name their crushing tool.
+
+### Tests
+
+`npm run validate`: data validation passed and 455 tests pass (442 prior
+plus 13 in `test/pair-25-plant-to-glass.test.mjs`). One existing test
+looked for the English heading "Earthen pit roast" on the Spanish Learn
+page; it now expects the Spanish name, which is the point of the change.
+
+### Manual checks
+
+Headless Chromium against a local static server:
+
+- **Widths and overflow.** At 375px (EN and ES) and 1280px (EN) there is
+  no horizontal overflow, with the answer panels closed or open, and no
+  page errors.
+- **Return links.** A profile opened from a stage chip shows "← Back to
+  plant to glass" / "← Volver a De la planta a la copa".
+- **Disclosure arrow.** The arrow was missing, because the summary uses
+  flex layout; I added one, which respects reduced motion.
+
+### Still open or unverified
+
+- Native-speaker review of the new Spanish is not done.
+- Native iPhone/iPad Safari, VoiceOver and touch checks remain unverified.
+- The page is long on phones (seven steps, two routes). Pair 26's
+  orientation work should check whether a jump list helps.

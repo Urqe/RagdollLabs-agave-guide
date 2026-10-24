@@ -210,6 +210,11 @@ export const JOURNEY_STEPS = [
         { term: { en: "Smoke", es: "Humo" }, anchors: { en: "campfire, grilled food, ash", es: "fogata, carne asada, ceniza" } },
       ],
     },
+    // Pair 25: where each landmark can come from, on the plant-to-glass page.
+    furtherLink: {
+      label: { en: "Where these come from: from plant to glass, step by step →", es: "De dónde vienen: de la planta a la copa, paso a paso →" },
+      reason: { en: "The cook, the ferment, the still and the rest, each with what it can and can't tell you.", es: "La cocción, la fermentación, el alambique y el reposo, cada uno con lo que puede y no puede decirte." },
+    },
     examples: [
       { profileId: "mezcal-espadin-valles-centrales", reason: { en: "Gentle smoke from the pit roast — compare its smoke level with a tequila blanco's none.", es: "Humo suave del asado en pozo — compara su nivel de humo con el «ninguno» de un tequila blanco." } },
       { profileId: "tequila-anejo-valley-jalisco", reason: { en: "What oak contributes once a spirit rests in wood.", es: "Lo que aporta el roble cuando un destilado reposa en madera." } },
@@ -653,6 +658,15 @@ export function renderLesson(container, { lessonId, profiles, chapters = [], loc
   if (step.practice) section.appendChild(guidedPractice(step, { profiles, locale }));
   if (step.distinctions) section.appendChild(distinctionsBlock(step.distinctions, lang));
   if (step.lexicon) section.appendChild(lexiconBlock(step.lexicon, lang));
+  if (step.furtherLink) {
+    const further = el("p", { class: "journey-reference" });
+    further.appendChild(el("a", {
+      href: `#/plant-to-glass?from=${encodeURIComponent("start:" + step.id)}`,
+      class: "learn-callout-link",
+    }, step.furtherLink.label[lang] || step.furtherLink.label.en));
+    section.appendChild(further);
+    section.appendChild(el("p", { class: "editorial-note" }, step.furtherLink.reason[lang] || step.furtherLink.reason.en));
+  }
 
   section.appendChild(stepList(step.id, locale));
 

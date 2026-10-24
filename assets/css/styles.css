@@ -1216,6 +1216,50 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .tasting-reflect-choice label { cursor: pointer; }
 .tasting-reflect-answer:not(:empty) { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--line-soft); }
 .tasting-reflect-answer p { margin: 0 0 0.4rem; }
+/* Pair 25: from plant to glass. */
+.plant-to-glass-view h2 { margin-top: 2rem; }
+.ptg-overview { display: flex; flex-wrap: wrap; gap: 0.35rem 0; list-style: none; margin: 1rem 0 0; padding: 0; counter-reset: ptg; }
+.ptg-overview li { counter-increment: ptg; display: inline-flex; align-items: center; font-size: 0.9rem; color: var(--text-soft); }
+.ptg-overview li::before { content: counter(ptg); display: inline-grid; place-items: center; width: 1.5rem; height: 1.5rem; margin-right: 0.35rem; border-radius: 50%; border: 1px solid var(--agave-line); font-size: 0.75rem; color: var(--text); }
+.ptg-overview li:not(:last-child)::after { content: "→"; margin: 0 0.5rem; color: var(--text-dim); }
+.ptg-stages { list-style: none; margin: 0.6rem 0 0; padding: 0; display: grid; gap: 0; }
+.ptg-stage { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 0 0.9rem; position: relative; padding-bottom: 1.4rem; }
+.ptg-stage:not(:last-child)::before { content: ""; position: absolute; left: 1.15rem; top: 2.4rem; bottom: 0; width: 2px; background: var(--line); }
+.ptg-stage-number { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; border: 2px solid var(--agave-line); background: var(--surface); font-weight: 700; }
+.ptg-stage-body h3 { margin: 0.35rem 0 0.4rem; }
+.ptg-stage-body > p { margin: 0 0 0.5rem; max-width: 46rem; }
+.ptg-effects { list-style: none; margin: 0.4rem 0; padding: 0; display: grid; gap: 0.5rem; }
+.ptg-effects li { padding: 0.55rem 0.8rem; border-left: 3px solid var(--agave-line); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; background: var(--surface-2); }
+.ptg-effects .eyebrow { display: block; margin: 0.1rem 0; }
+.ptg-effects p { margin: 0; }
+.ptg-process-name { display: block; }
+.ptg-seen-in { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.5rem 0; }
+.ptg-details { margin-top: 0.5rem; }
+.ptg-details summary { cursor: pointer; font-weight: 600; min-height: var(--tap); display: flex; align-items: center; }
+.ptg-details summary { list-style: none; gap: 0.45rem; }
+.ptg-details summary::-webkit-details-marker { display: none; }
+.ptg-details summary::before { content: "▸"; display: inline-block; transition: transform 0.15s var(--ease); }
+.ptg-details[open] > summary::before { transform: rotate(90deg); }
+@media (prefers-reduced-motion: reduce) { .ptg-details summary::before { transition: none; } }
+.ptg-details h4 { margin: 0.6rem 0 0.2rem; }
+.ptg-route { margin-top: 1rem; padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); }
+.ptg-route h3 { margin-top: 0; }
+.ptg-route-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.ptg-route-column h4 { margin: 0 0 0.3rem; }
+.ptg-route-steps { margin: 0 0 0.5rem; padding-left: 1.2rem; }
+.ptg-question { font-weight: 600; margin: 0.8rem 0 0; }
+.ptg-levels { border-collapse: collapse; margin: 0.5rem 0; width: 100%; max-width: 36rem; }
+.ptg-levels th, .ptg-levels td { padding: 0.35rem 0.5rem; border-bottom: 1px solid var(--line-soft); text-align: left; vertical-align: top; }
+.ptg-open { display: grid; gap: 0.7rem; padding-left: 1.2rem; }
+.ptg-open p { margin: 0 0 0.3rem; }
+.profile-plant-to-glass { display: inline-block; margin-top: 0.6rem; }
+@media (max-width: 40rem) {
+  .ptg-route-columns { grid-template-columns: 1fr; }
+  .ptg-stage { grid-template-columns: 2rem minmax(0, 1fr); gap: 0 0.7rem; }
+  .ptg-stage-number { width: 2rem; height: 2rem; }
+  .ptg-stage:not(:last-child)::before { left: 0.95rem; top: 2rem; }
+  .ptg-levels { font-size: 0.9rem; }
+}
 /* Pair 24: lesson 3 distinctions and lexicon. */
 .lesson-distinctions, .lesson-lexicon { margin-block: 1.2rem; }
 .lesson-term-list { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 0.5rem 1.2rem; margin: 0.5rem 0 0; }
