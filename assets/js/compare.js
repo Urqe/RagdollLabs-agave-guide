@@ -83,7 +83,9 @@ export function flavorMoods(profile) {
  * derived only from supported attributes: a candidate qualifies only
  * when it shares at least one documented medium-or-high dimension level
  * with the anchor — shared absence or shared low readings alone never
- * imply a strong match. Selection is deterministic: candidates rank by
+ * imply a strong match. The strong shared levels are what the reason
+ * names; a shared low reading is recorded but never described as a
+ * shared leaning. Selection is deterministic: candidates rank by
  * documented overlap, ties break by profile id, and self-links and
  * duplicate destinations are excluded.
  */
@@ -92,16 +94,23 @@ export function ifYouLikeThis(anchor, candidates, { maxSuggestions = 2 } = {}) {
   const seen = new Set();
   for (const candidate of candidates) {
     if (!candidate || candidate.id === anchor.id || seen.has(candidate.id)) continue;
-    const shared = [];
+    const strongShared = [];
+    const modestShared = [];
     for (const { key } of DIMENSIONS) {
       const a = levelOf(anchor, key);
       const c = levelOf(candidate, key);
-      if (isKnown(a) && a === c && a !== "none") shared.push(key);
+      if (isKnown(a) && a === c && a !== "none") {
+        (LEVEL_ORDER[a] >= LEVEL_ORDER.medium ? strongShared : modestShared).push(key);
+      }
     }
-    const strong = shared.some((key) => LEVEL_ORDER[levelOf(anchor, key)] >= LEVEL_ORDER.medium);
-    if (shared.length > 0 && strong) {
+    if (strongShared.length > 0) {
       seen.add(candidate.id);
-      qualified.push({ profile: candidate, sharedDimensionKeys: shared.slice(0, 2), sharedCount: shared.length });
+      qualified.push({
+        profile: candidate,
+        sharedDimensionKeys: strongShared.slice(0, 2),
+        modestSharedKeys: modestShared.slice(0, 2),
+        sharedCount: strongShared.length + modestShared.length,
+      });
     }
   }
   qualified.sort((x, y) => y.sharedCount - x.sharedCount || x.profile.id.localeCompare(y.profile.id));
@@ -150,18 +159,41 @@ export function comparisonPerspectives(profiles) {
   if (allSharePlant && !sameRegion) {
     const plant = (sharedPlantIds[0] || "").replace(/-/g, " ");
     const classSet = new Set(profiles.map((p) => maturationClassOf(p)));
+    const sameMaturationClass = classSet.size === 1;
     // "Place is the variable" is claimed only when the compared styles
-    // also share maturation class and production method; when class or
-    // method differ too, the perspective names the additional variable
-    // instead of implying a controlled regional comparison.
-    if (classSet.size === 1 && sameMethodSet) {
+    // also share maturation class and production method. Otherwise this
+    // is not a controlled comparison: place, plant-keeping and method all
+    // change together, and the perspective says so instead of implying a
+    // single-variable comparison.
+    if (sameMaturationClass && sameMethodSet) {
       out.push({ id: "samePlantDifferentRegion", plant, plantProfileId: profiles[0].id, evidence: "plantIds" });
     } else {
-      out.push({ id: "samePlantDifferentRegionAndClass", plant, plantProfileId: profiles[0].id, evidence: "plantIds" });
+      out.push({
+        id: "samePlantDifferentRegionAndClass",
+        plant,
+        plantProfileId: profiles[0].id,
+        evidence: "plantIds",
+        sameMaturationClass,
+        sameMethodSet,
+      });
     }
   }
   if (sameTradition && !allSharePlant) {
-    out.push({ id: "sameTraditionDifferentPlant", tradition: profiles[0].traditionId, evidence: "traditionId" });
+    // "The agave is the variable" is claimed only when the compared styles
+    // share region and production method; when place or method differ too,
+    // the perspective names the combination instead of implying a
+    // controlled plant-only comparison.
+    if (sameRegion && sameMethodSet) {
+      out.push({ id: "sameTraditionDifferentPlant", tradition: profiles[0].traditionId, evidence: "traditionId" });
+    } else {
+      out.push({
+        id: "sameTraditionDifferentPlantAndPlace",
+        tradition: profiles[0].traditionId,
+        evidence: "traditionId",
+        sameRegion,
+        sameMethodSet,
+      });
+    }
   }
   if (sameTradition && allSharePlant) {
     const methodSets = profiles.map((p) => [...(p.processIds || [])].sort().join(","));
