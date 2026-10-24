@@ -216,6 +216,7 @@ async function renderRoute(container, route) {
     setCompareSelection(ids);
     renderCompare(container, {
       profiles,
+      plants: state.data.plants,
       locale,
       compareIds: ids.join(","),
       from: route.params.from || null,
@@ -445,11 +446,14 @@ async function boot() {
 }
 
 /**
- * When the active locale lacks reviewed strings, disclose it once per
- * render instead of silently showing English.
+ * When the rendered page actually shows English fallback text in the
+ * Spanish edition, disclose it once per render. Renderers mark each
+ * fallback field with `.untranslated-field`; a fully translated page gets
+ * no page-level note (Pair 23.1 — the note used to appear on every
+ * Spanish page, including fully translated ones).
  */
 function appendUntranslatedNote(container) {
-  if (locale.get() === "es") {
+  if (locale.get() === "es" && container.querySelector(".untranslated-field")) {
     const note = document.createElement("p");
     note.className = "editorial-note untranslated-note";
     note.textContent = ui(locale, "disclosure");

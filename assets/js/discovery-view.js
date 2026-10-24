@@ -1,7 +1,7 @@
 import { el, clear } from "./dom-utils.js";
 import { navigateTo } from "./router.js";
 import { ui } from "./presentation.js";
-import { localizedTitle, fieldEs } from "./editorial.js";
+import { localizedTitle, fieldEs, commonNamesText, plantCultivation } from "./editorial.js";
 import { SPIRIT_LABELS, ADVENTUROUS_TRADITIONS } from "./spirit-labels.js";
 import { flavorMoods } from "./compare.js";
 import { tasteNote } from "./taste-notes.js";
@@ -147,12 +147,12 @@ function renderPlant(container, { plant, plants, regions, profiles, locale }) {
   section.appendChild(backToDiscover(locale));
   section.appendChild(el("p", { class: "eyebrow" }, ui(locale, "discoverByPlant")));
   section.appendChild(el("h1", { id: "discover-heading" }, plant.species));
-  section.appendChild(el("p", { class: "view-intro" }, `${ui(locale, "alsoKnownAs")}: ${(plant.commonNames || []).map((n) => `${n.name} (${n.region})`).join("; ")}`));
+  section.appendChild(el("p", { class: "view-intro" }, `${ui(locale, "alsoKnownAs")}: ${commonNamesText(plant, locale, "; ")}`));
   const plantCommonName = (p) => {
     const common = (p.commonNames || []).map((n) => n.name).filter(Boolean);
     return common.length ? `${common[0]} (${p.species})` : p.species;
   };
-  section.appendChild(el("p", { class: "view-intro" }, `${ui(locale, "cultivationLabel")}: ${plant.cultivation}`));
+  section.appendChild(el("p", { class: "view-intro" }, `${ui(locale, "cultivationLabel")}: ${plantCultivation(plant, locale)}`));
   if (plant.uncertainty) section.appendChild(el("p", { class: "editorial-note" }, fieldEs("plant", plant.id, "uncertainty", locale) || plant.uncertainty));
 
   const traditionsBlock = el("section", { class: "discover-block", "aria-labelledby": "plant-traditions" });

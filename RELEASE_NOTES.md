@@ -3245,3 +3245,98 @@ corrected copy and logic. Live URL:
 - No claim is made that all bottles from any of these five regions taste
   alike; every sensory statement is scoped to the example bottle's
   reviews or to documented producer/state-level tendencies.
+
+## Pair 23.1 — Editorial voice and Spanish localization maintenance (2026-10-24)
+
+Branch `pair-23.1-voice-and-localization`. Not merged or deployed:
+awaiting the owner's review. Section 8 of the plan was reordered on the
+owner's instruction (voice guide first; execution order 23.1 → 24 → … → 29)
+and the owner's live-site review findings were added to the pairs they
+belong to.
+
+### Changed
+
+- **Voice guide.** New `EDITORIAL_VOICE.md`: a knowledgeable person
+  talking warmly about their spirit, with no fictional narrator. It covers
+  the glass-first profile order, caution said once, regional voice through
+  specifics, words to avoid, British spelling for the English edition, the
+  home-path labels for Pair 26, Mexican Spanish rules (including
+  savory ≠ sabroso), a before-and-after sample and a rewrite checklist.
+- **Five regional profiles** (Guerrero, Durango, San Luis Potosí,
+  Michoacán, Puebla): descriptions and why-blocks rewritten in EN and ES.
+  The "This profile is grounded in one bottle" and "separate records"
+  formulas are gone. Every fact, attribution, the SLP oven dispute and the
+  open causal questions are kept. The SLP beginner note drops "genuinely
+  divided".
+- **Spanish plant fields.** Plant, discover and Learn pages render the
+  localized cultivation note and common-name region labels through one
+  contract: the `commonNameRegions` map in `content-es.json`, keyed by the
+  English label, plus `commonNameRegion`/`commonNamesText`/`plantCultivation`
+  in `editorial.js`. `validate.mjs` fails on a missing or stale label. A
+  label's own aside renders as a comma clause, so names never show nested
+  parentheses. Learn's reference lists now use localized profile titles,
+  which were English in ES before.
+- **Spanish calques.** Fixed "leerse sabrosos" (valley blanco context),
+  the remaining "se lee/leerse" flavour phrasing (13 strings),
+  "el agave firma", "en vinatas pasadas de una generación",
+  "carga la presión de sostenibilidad", "taffy de plátano",
+  "funky/funk", "viajes minerales" and the intensifier "genuinamente".
+- **Reviewer phrasing.** The Pal'alma EN/ES summaries no longer say
+  "reviewers … reviewers". The Zinacantan summary drops "mineral travels".
+- **Taste-note contract.** The two freeform ES `tasteNotes` strings, which
+  were never rendered and claimed a state-wide "firma", are removed.
+  `ES_NOTES` in `taste-notes.js` is the single contract, and validation
+  rejects ES profile fields that no view renders.
+- **Body-only suggestions.** `ifYouLikeThis` no longer qualifies a
+  candidate whose only strong match is body. A snapshot of all 23 profiles
+  before and after showed no change to real-data suggestions, and a
+  synthetic regression covers the case.
+- **Same-plant chips.** Comparison perspectives name the shared plant by
+  its canonical species from `plants.json` instead of the profile's full
+  plant string, which caused nested parentheses.
+- **Spanish page note.** The page-level "El contenido editorial … está
+  actualmente en inglés" note now appears only when the page really shows
+  an English fallback field (`.untranslated-field`), not on every Spanish
+  page.
+- **Los Altos pins.** The extra añejo moves from the town of Tequila
+  (20.90, −103.84) to Arandas (20.71, −102.35), matching its label, region
+  and example producer, La Alteña. The highland blanco, labelled
+  "Atotonilco el Alto area", sat at 20.06, −102.10, south of Los Altos near
+  the Michoacán border; it now sits at Atotonilco el Alto (20.55, −102.51).
+  Both stay labelled approximate and are pinned by a regression.
+
+### Tests
+
+`npm run validate`: data validation passed (23 profiles, 51 bottles, 109
+sources) and 431 tests pass (417 prior plus 14 in
+`test/pair-23-1-voice-localization.test.mjs`). Three existing tests were
+adjusted deliberately:
+
+- The pair-23 causal test pinned the removed "separate records / dos
+  registros distintos" formula. It now pins the substance: method and
+  tasting are both stated and the cause stays flagged open, in EN and ES.
+- The pair-4 English-leak test scanned the whole ES file. It now scans
+  the `commonNameRegions` values only, because the keys are English lookup
+  keys that never render.
+
+### Manual checks
+
+- Headless Chromium against a local static server (800px wide), EN and
+  ES: Michoacán, Guerrero and valley blanco profiles, the cupreata plant
+  page and the valley/highland blanco comparison render without script
+  errors. The only console errors are blocked external font requests from
+  the sandbox. No page-level or field-level English disclosure appears on
+  these fully translated Spanish pages.
+- Not yet checked on the deployed site, because the branch is not merged.
+
+### Still open or unverified
+
+- No native-speaker review of the new Spanish yet. That remains the owner's
+  or a Mexican reader's call.
+- The context paragraph of the five profiles was not part of this pair, so
+  it still opens each page in the older, encyclopedic voice before the
+  rewritten tasting paragraph. Pair 28 applies the voice guide to the
+  context paragraphs and the other 18 profiles.
+- Profile coordinate precision labels still render in English in the
+  Spanish edition. They are small and are recorded for Pair 28.
+- Native iPhone/iPad Safari, VoiceOver and touch checks remain unverified.

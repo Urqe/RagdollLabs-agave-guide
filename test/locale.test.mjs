@@ -103,6 +103,9 @@ test("release 14: moods translate via locale.mood and home via strings", () => {
 
 test("pair 4: Spanish terminology stays consistent with the glossary's canonical terms", async () => {
   const es = JSON.parse(await readFile(new URL("../assets/data/content-es.json", import.meta.url), "utf8"));
+  // commonNameRegions is keyed by the English label it translates (a lookup
+  // key, never rendered); only its Spanish values are reader-facing prose.
+  if (es.commonNameRegions) es.commonNameRegions = Object.values(es.commonNameRegions);
   const all = JSON.stringify(es);
   // The glossary term is "100% de agave"; translations must not drift to "100% agave".
   assert.equal((all.match(/100% agave/g) || []).length, 0, "no '100% agave' without the Spanish preposition");
