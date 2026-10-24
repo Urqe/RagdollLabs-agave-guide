@@ -7,7 +7,7 @@ Product subtitle: **Explore Mexico’s agave spirits**
 
 ## Current execution priority — post-completion corrections
 
-Post-roadmap pairs 8–22 are recorded as applied (pair 22 — Regional Expansion II Review — applied 2026-10-24). **Section 8 is the current execution authority for the next owner-directed learning releases.** Section 4.5 and pairs 18–23 remain historical implementation records. Start with pair 24 only after explicit owner authorization.
+Post-roadmap pairs 8–22 are recorded as applied (pair 22 — Regional Expansion II Review — applied 2026-10-24). **Pair 23.1 is the current next-execution priority**, followed by Section 8's learning roadmap (Pairs 24–29). Section 4.5 and pairs 18–23 remain historical implementation records. Execute only the owner-authorized pair.
 
 ## Implementation priority — small, profile-first foundation (historical)
 
@@ -1111,9 +1111,24 @@ regions, profiles or bottles.
 maintenance complete; stop here. The next work is the owner's to direct.**
 
 
+### Pair 23.1 — Editorial and Spanish localization corrective maintenance (P0/P1)
+
+**Status:** planned; execute before Pair 24. This is a bounded correction to applied Pair 23, not a new content/region expansion. Preserve factual sourcing, process-versus-tasting uncertainty, regional specificity, and all existing routes. No unrelated refactor.
+
+- [ ] **Remove five-fold editorial formulas (P1).** Rewrite the five new regional profile descriptions currently beginning "This profile is grounded in one bottle:" and their five `whyItTastes` fields beginning "What the glass shows and how it is made are separate records." Do likewise in the Spanish mirror. Give each region its own direct, natural sensory introduction; keep expression-level evidence and causal qualifications. Audit repeated sentence openings more broadly rather than simply banning these two exact strings.
+- [ ] **Fix untranslated Spanish plant fields (P0).** In `plant-tradition-view.js` and `discovery-view.js`, render the localized `plant.cultivation` value rather than raw English. Audit `commonNames[].region` labels across plant, discover, and Learn pages; introduce a single suitable regional-label localization contract rather than ad-hoc literal substitutions. Preserve scientific names and proper nouns. Add EN/ES DOM tests for both direct routes and navigation into them.
+- [ ] **Edit unnatural ES text (P1).** Audit the new Michoacán/Puebla and Zinacantan bottle copy for untranslated "funky" and "taffy de plátano"; prefer accurate natural Mexican Spanish (e.g., `matiz fermentado`, `caramelo masticable de plátano` when sensory evidence supports them). Replace stiff "genuinamente divididas" where appropriate and correct existing calques such as "el agave firma", "en vinatas pasadas de una generación…" and "carga la presión de sostenibilidad". Review surrounding prose, not isolated tokens; do not turn descriptions into generic machine-like wording.
+- [ ] **Remove repeated reviewer phrasing (P1).** Fix Pal'alma bottle `reviewSummary` EN/ES double attribution ("reviewers … reviewers" / "sus reseñistas … sus reseñistas"); check Guerrero description and explanation for the same issue. Keep source attribution clear without letting reviewer identity dominate sensory description.
+- [ ] **Resolve unused Spanish `tasteNotes` (P1).** `profile.js` currently renders the canonical English array using `tasteNote(note, locale)`; the independently authored Spanish `content-es.json` `tasteNotes` strings for Michoacán/Puebla are not displayed. Choose one canonical contract for translated structured notes, and separate any necessary freeform localized tasting *narrative* into an explicitly rendered field. Remove/migrate dead duplicate data and add validation to flag unused/nonconforming localization keys.
+- [ ] **Harden body-only suggestions (P2, bounded).** `ifYouLikeThis` can qualify candidates sharing only medium `bodyLevel`, even if all flavor dimensions differ. Prevent such entries being presented as flavor-similarity recommendations; require meaningful supported flavor overlap, or explicitly label a different texture-based recommendation. Add a synthetic regression fixture: no current real-data pair reportedly triggers the issue. Do not disturb existing valid suggestions or unknown≠none semantics.
+- [ ] **Improve same-plant chip readability (P2).** Comparison chips should use the canonical short plant name, not the full `plant` string including cultivation parentheses, which creates nested parentheses. Preserve correct plant identity and regional-name distinctions.
+- [ ] **Verification:** `npm run validate` plus EN/ES DOM checks for plant/discovery/Learn/profile/compare, localized cultivation and common-name regions, translated note contract, synthetic body-only match, readable plant chips, and editorial review of the five regional pages side-by-side in both languages. Manual desktop/mobile Safari, VoiceOver and real Mexican-Spanish reader review should be recorded as performed or explicitly unverified; do not claim these checks without evidence.
+
+**Acceptance:** No untranslated cultivation/region labels on ES plant and learning surfaces; no unused Spanish notes disguised as published translations; no body-only flavor recommendation; five regional profiles sound distinct in EN/ES without losing attribution or factual caution. Record outcomes and remaining unverified checks in `RELEASE_NOTES.md`. Stop after this maintenance pair and request owner authorization before Pair 24.
+
 ## 8. Owner-directed learning experience roadmap — 2026-10-24
 
-**Status:** planned, not implemented. This roadmap follows the completed post-roadmap pair 23; preserve its corrections, test contracts, localization, sources, and existing profile-first architecture. **Execute one owner-authorized pair at a time, validate, review, and stop.** No new spirit, region, plant, or bottle expansion is required in these pairs.
+**Status:** planned, not implemented. This roadmap follows the planned Pair 23.1 corrective maintenance (after completed Pair 23); preserve its corrections, test contracts, localization, sources, and existing profile-first architecture. **Execute one owner-authorized pair at a time, validate, review, and stop.** No new spirit, region, plant, or bottle expansion is required in these pairs.
 
 ### Product outcome and editorial principles
 
