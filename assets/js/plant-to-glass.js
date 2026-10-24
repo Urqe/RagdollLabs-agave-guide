@@ -248,6 +248,7 @@ function stageCard(stage, index, { processById, profileById, sourceById, locale 
   const body = el("div", { class: "ptg-stage-body" });
   body.appendChild(el("h3", {}, pick(stage.title, locale)));
   if (["cook", "cooking", "roast"].includes(stage.id)) body.appendChild(educationalFigure("roast", locale));
+  if (stage.id === "fermentation") body.appendChild(educationalFigure("ferment", locale));
   if (["distill", "distillation", "still"].includes(stage.id)) body.appendChild(educationalFigure("distill", locale));
   body.appendChild(el("p", {}, pick(stage.text, locale)));
 
