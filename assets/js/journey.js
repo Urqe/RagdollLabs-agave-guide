@@ -228,10 +228,13 @@ export const JOURNEY_STEPS = [
       es: "La forma más rápida de sentir lo que cambia el reposo en madera: compara el blanco del valle con el reposado del valle — misma tradición, misma región, misma planta, y el reposo en roble del reposado (el mínimo legal son dos meses; el estilo típico va de dos meses a un año) es la diferencia que la vista destaca. Son estilos típicos, no un experimento de laboratorio que aísle cada variable de producción; las botellas dentro de cada estilo varían.",
     },
     comparison: ["tequila-blanco-valley-jalisco", "tequila-reposado-valley-jalisco"],
+    // Pair 27: the lesson's comparisons open as the matching guided presets.
+    comparisonPreset: "wood",
     comparisonLabel: { en: "Open the prepared comparison: valley blanco vs valley reposado", es: "Abre la comparación preparada: blanco del valle contra reposado del valle" },
     secondExercise: {
       label: { en: "Optional second exercise: valley blanco vs highland blanco", es: "Segundo ejercicio opcional: blanco del valle contra blanco de los Altos" },
       ids: ["tequila-blanco-valley-jalisco", "tequila-blanco-highland-jalisco"],
+      preset: "region",
       reason: { en: "Same plant and class, different region. The comparison describes tendencies — geography shapes flavor together with method and plant, it never decides it alone.", es: "Misma planta y clase, distinta región. La comparación describe tendencias — la geografía moldea el sabor junto con el método y la planta, nunca lo decide sola." },
     },
   },
@@ -712,7 +715,7 @@ export function renderLesson(container, { lessonId, profiles, chapters = [], loc
     const ids = step.comparison.join(",");
     const handoff = el("p", { class: "journey-comparison" });
     const link = el("a", {
-      href: `#/compare/${ids}?from=${encodeURIComponent("start:" + step.id)}`,
+      href: `#/compare/${ids}?from=${encodeURIComponent("start:" + step.id)}${step.comparisonPreset ? `&preset=${step.comparisonPreset}` : ""}`,
       class: "cta-link",
     }, step.comparisonLabel[lang] || step.comparisonLabel.en || stepTitle(step, locale));
     handoff.appendChild(link);
@@ -721,7 +724,7 @@ export function renderLesson(container, { lessonId, profiles, chapters = [], loc
     if (step.secondExercise) {
       const second = el("p", { class: "journey-comparison" });
       const secondLink = el("a", {
-        href: `#/compare/${step.secondExercise.ids.join(",")}?from=${encodeURIComponent("start:" + step.id)}`,
+        href: `#/compare/${step.secondExercise.ids.join(",")}?from=${encodeURIComponent("start:" + step.id)}${step.secondExercise.preset ? `&preset=${step.secondExercise.preset}` : ""}`,
         class: "quiet-link",
       }, step.secondExercise.label[lang] || step.secondExercise.label.en);
       second.appendChild(secondLink);

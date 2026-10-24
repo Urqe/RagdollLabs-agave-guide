@@ -3504,8 +3504,9 @@ Headless Chromium against a local static server:
 
 ## Pair 26 — Three-intention navigation and lesson continuity (2026-10-24)
 
-Branch `pair-26-navigation`. Not merged or deployed: awaiting the owner's
-review.
+Branch `pair-26-navigation`, reviewed and merged by the owner as PR #76
+(merge commit `56ab9de`). CI, Deploy to GitHub Pages and
+pages-build-deployment all succeeded.
 
 ### Changed
 
@@ -3606,4 +3607,84 @@ On the owner's request, `RELEASE_PLAN.md` was rewritten from about 191 KB to abo
 - **New items found during the rewrite:**
   - The stylesheet cache key in `index.html` had not been bumped since Pair 16, although Pairs 24–26 changed the CSS. It is now `agave-pair26-1`, and the plan says to bump it with CSS changes.
   - The Montelobos and Del Maguey producer pages behind Pair 18's bottle-origin corrections are not registered in `sources.json`. This is logged under Pair 28.
-- **Not changed:** `START_HERE.md` is the original Release 1 prompt and tells agents not to read the plan. It is left for the owner to decide on.
+- **`START_HERE.md`:** the original Release 1 prompt, which told agents not to read the plan. Merged as PR #77; afterwards the owner moved it to `docs/archive/` (see Pair 27).
+
+## Pair 27 — Comparison as a learning exercise (2026-10-24)
+
+Branch `pair-27-learning-comparisons`. Not merged or deployed: awaiting the
+owner's review. All new text follows `EDITORIAL_VOICE.md`.
+
+### Changed
+
+- **Archive.** At the owner's request, `START_HERE.md` (the original
+  Release 1 prompt) moves to `docs/archive/`, with a README saying archived
+  documents are reference only. The plan points there.
+- **Five guided comparisons in the existing Compare view**
+  (`assets/js/compare-presets.js`). There is no parallel engine.
+
+  | Preset | Pair |
+  | --- | --- |
+  | wood | valley blanco vs reposado |
+  | region | valley vs highland blanco |
+  | tradition | valley blanco vs espadín |
+  | plant | espadín vs tobalá |
+  | mountains | bacanora vs Sierra raicilla |
+
+  Each preset has one beginner question, two or three dimensions to look
+  at, a hidden answer listing those levels from the profile data, what the
+  pair shows, "What this doesn't show" (its confounders) and a next
+  exercise. The chain runs wood → region → tradition → plant → mountains,
+  then to the free picker.
+- **Checked against data.** Each preset declares which way every
+  difference it describes goes. `checkPreset` verifies those directions
+  against the live profiles, and `validate.mjs` runs it, so a profile edit
+  that contradicts a preset fails validation instead of leaving it stale.
+  An undocumented level fails the check rather than reading as "none". A
+  preset that fails is never offered, and an active one only shows when
+  the selection is exactly its pair.
+- **Layout.**
+  - **Empty Compare.** The guided comparisons come first, then "Or choose
+    your own" with the "Pick at least two" instruction, then the free
+    picker. The instruction used to sit at the bottom.
+  - **Free comparison.** The guided comparisons are offered after the
+    results.
+  - **Active preset.** It teaches first, like a lesson handoff. The picker
+    moves into the existing "change styles" control, and changing the pair
+    drops the preset and returns to a free comparison.
+- **Ways in.**
+  - Lesson 4's two prepared comparisons now open as the `wood` and
+    `region` presets, keeping `from=start:first-comparison` through the
+    next-exercise chain.
+  - The flavour paths link to their matching preset: rich and oak to wood,
+    fresh and herbal to region, smoky and earthy to tradition, fruity and
+    floral to plant, peppery and spicy to mountains.
+  - Profiles that belong to a preset link to it.
+- **Body wording.** Compare shows body as Light / Medium / Full in the
+  table, summary line and biggest-differences list, matching Pair 24's
+  profile grid.
+- **Stylesheet cache key** bumped to `agave-pair27-1`.
+
+### Tests
+
+`npm run validate`: data and preset validation passed, and 479 tests pass
+(468 prior plus 11 in `test/pair-27-learning-comparisons.test.mjs`). No
+existing test needed changing.
+
+### Manual checks
+
+Headless Chromium against a local static server, at 375px (EN, ES) and
+1280px (EN):
+
+- **Path checked.** Empty Compare → first preset → reveal answer → next
+  exercise.
+- **Layout.** No horizontal overflow, with the answer closed or open. The
+  heading lands below the header, and each page has its own title.
+- **Next exercise.** It opens the `region` preset.
+- **Errors.** No page errors.
+
+### Still open or unverified
+
+- **Empty Compare on phones.** The five preset cards come first and push
+  the free picker about a screen down. This is logged for Pair 29.
+- **Spanish and devices.** Native-speaker review of the new Spanish is not
+  done. iPhone/iPad Safari, VoiceOver and touch checks remain unverified.

@@ -4,12 +4,13 @@ Updated: 2026-10-24 · Live site: <https://urqe.github.io/RagdollLabs-agave-guid
 
 This plan says what to do next and which rules every change follows. It is not a history. What each release and pair shipped, and how it was verified, is in `RELEASE_NOTES.md`. Read the notes only when a task needs the background of an earlier decision.
 
-Companion documents: `EDITORIAL_VOICE.md` (how all reader-facing text sounds, EN and ES), `RELEASE_NOTES.md` (history and evidence), `README.md` (running, validating, deploying).
+Companion documents: `EDITORIAL_VOICE.md` (how all reader-facing text sounds, EN and ES), `RELEASE_NOTES.md` (history and evidence), `README.md` (running, validating, deploying). `docs/archive/` holds superseded documents, such as the original Release 1 prompt; they are not instructions.
 
 ## 1. Current status and next step
 
-- **Shipped and deployed:** Releases 1–26 and post-roadmap pairs 1–26, the last being Pair 26 (three-path navigation and lesson continuity; PR #76, merge `56ab9de`).
-- **Next:** Pair 27, curated learning comparisons (section 9). Then Pair 28 (editorial consistency), then Pair 29 (quality and usability audit).
+- **Shipped and deployed:** Releases 1–26 and post-roadmap pairs 1–26, the last being Pair 26 (three-path navigation and lesson continuity; PR #76, merge `56ab9de`), plus the plan cleanup (PR #77).
+- **In review:** Pair 27, curated learning comparisons, on branch `pair-27-learning-comparisons`.
+- **Next after that:** Pair 28 (editorial consistency), then Pair 29 (quality and usability audit).
 - **How to work:** execute one owner-authorized pair at a time on its own branch, validate, record it in `RELEASE_NOTES.md`, open a PR and stop. The owner reviews and merges, and the merge deploys. Never start the following pair automatically.
 
 ## 2. Product and scope
@@ -204,23 +205,23 @@ Apply the checks that fit what the pair changed. Run each once and repeat only a
 
 | Priority | Pair | Outcome | Scope discipline |
 | --- | --- | --- | --- |
-| P1 | 27 | Curated learning comparisons | Extend the existing Compare |
+| P1 | 27 | Curated learning comparisons (in review) | Extend the existing Compare |
 | P1–P2 | 28 | Clear, warm and rigorous content across all surfaces | No catalogue expansion |
 | P2 | 29 | Accessibility, usability and regression audit | Fix what can be verified |
 
 Directional goals, not scores or release gates: beginner friendliness 7.5→9/10, learning journey 8→9.5, tasting education 7→9, overall 7.6→9. Success means beginners can describe, compare and navigate with confidence, not more words.
 
-### Pair 27 — Comparison as a learning exercise (feature, P1) — next
+### Pair 27 — Comparison as a learning exercise (feature, P1) — implemented, in review
 
-- [ ] Add curated learning comparisons to the existing Compare view (no parallel engine):
+- [x] Add curated learning comparisons to the existing Compare view (no parallel engine):
   - valley blanco vs reposado (wood)
   - valley vs highland blanco (a regional tendency, not single-variable proof)
   - blanco tequila vs espadín mezcal (several variables)
   - espadín vs tobalá and/or bacanora vs raicilla, where the data supports it
-- [ ] Each preset asks one beginner question, points to 2–3 sensory dimensions, explains the supported differences, names the confounders and suggests a next exercise. Keep "not documented" distinct from "none".
-- [ ] Put the curated comparisons and the "pick two or three" instruction above the free picker. Today the empty Compare page opens on 23 pills with the instruction at the bottom.
-- [ ] Cross-link from the journey, flavour discovery and profiles. The free comparison of two or three profiles stays fully available.
-- [ ] Validate presets and their localized interpretations against normalized data, so a profile change cannot silently make a preset stale.
+- [x] Each preset asks one beginner question, points to 2–3 sensory dimensions, explains the supported differences, names the confounders and suggests a next exercise. Keep "not documented" distinct from "none".
+- [x] Put the curated comparisons and the "pick two or three" instruction above the free picker. Today the empty Compare page opens on 23 pills with the instruction at the bottom.
+- [x] Cross-link from the journey, flavour discovery and profiles. The free comparison of two or three profiles stays fully available.
+- [x] Validate presets and their localized interpretations against normalized data, so a profile change cannot silently make a preset stale.
 - **Acceptance:** readers understand what each comparison shows *and what it does not establish*. No claim that region or method is the only variable unless supported.
 
 ### Pair 28 — Editorial consistency and regional warmth (content/maintenance, P1–P2)
@@ -259,6 +260,7 @@ Directional goals, not scores or release gates: beginner friendliness 7.5→9/10
   - find why a mezcal might be smoky
   - complete a preset comparison
   - find an example bottle and return
+- [ ] Check the empty Compare page on phones: the five guided-comparison cards come first (as Pair 27 intended) and push the free picker about a screen down. Decide whether a compact list works better.
 - [ ] Clean up redundant copy, broken paths, stale anchors and needless UI complexity found in the audit. No new scope.
 - **Acceptance:** test and task evidence supports the learning flow; issues and gaps are documented in the release notes.
 

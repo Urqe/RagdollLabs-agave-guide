@@ -11,6 +11,7 @@ import {
 import { SPIRIT_LABELS, groupProfilesBySpirit } from "./spirit-labels.js";
 import { dimensionLabel, dimensionHint } from "./presentation.js";
 import { editorialText, localizedTitle, fieldEs } from "./editorial.js";
+import { PRESETS, presetById, presetHref, checkPreset } from "./compare-presets.js";
 
 const MAX_SLOTS = 3;
 
@@ -121,7 +122,79 @@ function levelCell(profile, dimKey, t) {
   if (level === null || level === undefined) {
     return el("td", { class: "compare-unknown" }, t("compare.notDocumented"));
   }
-  return el("td", {}, t(`level.${level}`) || level);
+  return el("td", {}, levelText(profile, dimKey, t));
+}
+
+/**
+ * A level as readers see it everywhere: body uses Light / Medium / Full
+ * (Pair 24), every other dimension None / Low / Medium / High.
+ */
+function levelText(profile, dimKey, t) {
+  const level = levelOf(profile, dimKey);
+  if (level === null || level === undefined) return t("compare.notDocumented");
+  if (dimKey === "bodyLevel" && ["light", "medium", "full"].includes(profile.body)) {
+    return t(`compare.body.${profile.body}`);
+  }
+  return t(`level.${level}`) || level;
+}
+
+/** Pair 27: the active guided comparison — question, focus, answer, limits, next. */
+function presetPanel(preset, byId, { locale, title, t, from }) {
+  const lang = locale ? locale.get() : "en";
+  const [a, b] = preset.ids.map((id) => byId.get(id));
+  const panel = el("section", { class: "compare-preset", "aria-labelledby": "compare-preset-question" });
+  panel.appendChild(el("p", { class: "eyebrow" }, `${t("compare.presets.eyebrow")} · ${preset.title[lang] || preset.title.en}`));
+  panel.appendChild(el("h2", { id: "compare-preset-question" }, preset.question[lang] || preset.question.en));
+  const look = el("p", { class: "compare-preset-focus" });
+  look.appendChild(el("strong", {}, t("compare.presets.lookAt") + " "));
+  look.appendChild(document.createTextNode(preset.focus.map((k) => dimensionLabel(k, locale)).join(", ") + "."));
+  panel.appendChild(look);
+
+  const answer = el("details", { class: "compare-preset-answer" });
+  answer.appendChild(el("summary", {}, t("compare.presets.reveal")));
+  const list = el("dl", { class: "compare-preset-levels" });
+  for (const key of preset.focus) {
+    list.appendChild(el("dt", {}, dimensionLabel(key, locale)));
+    list.appendChild(el("dd", {}, `${title(a)}: ${levelText(a, key, t)} · ${title(b)}: ${levelText(b, key, t)}`));
+  }
+  answer.appendChild(list);
+  answer.appendChild(el("p", {}, preset.shows[lang] || preset.shows.en));
+  answer.appendChild(el("h3", {}, t("compare.presets.limitsHeading")));
+  answer.appendChild(el("p", {}, preset.limits[lang] || preset.limits.en));
+  panel.appendChild(answer);
+
+  const next = preset.next ? presetById(preset.next) : null;
+  const nextLine = el("p", { class: "compare-preset-next" });
+  if (next) {
+    nextLine.appendChild(el("a", { href: presetHref(next, from ? { from } : {}), class: "cta-link" },
+      t("compare.presets.next").replace("{title}", next.title[lang] || next.title.en)));
+  } else {
+    nextLine.appendChild(el("a", { href: "#/compare", class: "cta-link" }, t("compare.presets.ownLink")));
+  }
+  panel.appendChild(nextLine);
+  return panel;
+}
+
+/** Pair 27: the list of guided comparisons, first on an empty Compare page. */
+function presetsBlock(byId, { locale, title, t, from, place }) {
+  const lang = locale ? locale.get() : "en";
+  const block = el("section", { class: `compare-presets compare-presets-${place}`, "aria-labelledby": `compare-presets-heading-${place}` });
+  block.appendChild(el("h2", { id: `compare-presets-heading-${place}` }, t(place === "top" ? "compare.presets.heading" : "compare.presets.headingAfter")));
+  if (place === "top") block.appendChild(el("p", {}, t("compare.presets.intro")));
+  const list = el("ul", { class: "discovery-matches compare-preset-list" });
+  for (const preset of PRESETS) {
+    if (checkPreset(preset, byId).length) continue; // never offer a stale exercise
+    const [a, b] = preset.ids.map((id) => byId.get(id));
+    const li = el("li");
+    const link = el("a", { href: presetHref(preset, from ? { from } : {}), class: "discovery-card" });
+    link.appendChild(el("strong", {}, preset.title[lang] || preset.title.en));
+    link.appendChild(el("span", { class: "discovery-place" }, `${title(a)} · ${title(b)}`));
+    li.appendChild(link);
+    li.appendChild(el("p", { class: "discovery-reason" }, preset.question[lang] || preset.question.en));
+    list.appendChild(li);
+  }
+  block.appendChild(list);
+  return block;
 }
 
 /**
@@ -141,7 +214,7 @@ function sharedPlantName(perspective, plants) {
   return (record && record.species) || perspective.plant;
 }
 
-export function renderCompare(container, { profiles, plants = [], compareIds, onSelectionChange, focusProfileId = null, keepPickerQuery = "", locale = null, from = null }) {
+export function renderCompare(container, { profiles, plants = [], compareIds, onSelectionChange, focusProfileId = null, keepPickerQuery = "", locale = null, from = null, preset: presetParam = null }) {
   clear(container);
   const byId = new Map(profiles.map((p) => [p.id, p]));
   const parsedIds = parseIds(compareIds);
@@ -166,6 +239,22 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
   section.appendChild(el("h1", { id: "compare-heading" }, t("compare.heading")));
   section.appendChild(el("p", { class: "view-intro" }, t("compare.intro")));
 
+  // Pair 27: a curated exercise is active only when the route names a
+  // preset, the selection is exactly its pair, and its data still holds.
+  const requested = presetParam ? presetById(presetParam) : null;
+  const activePreset = requested
+    && selectedIds.length === 2
+    && requested.ids.every((id, i) => selectedIds[i] === id)
+    && checkPreset(requested, byId).length === 0 ? requested : null;
+  if (activePreset) section.appendChild(presetPanel(activePreset, byId, { locale, title, t, from }));
+  // Pair 27: with fewer than two styles chosen, the guided comparisons and
+  // the instruction come first; the free picker follows.
+  if (!activePreset && selected.length < 2) {
+    section.appendChild(presetsBlock(byId, { locale, title, t, from, place: "top" }));
+    section.appendChild(el("h2", { class: "compare-own-heading" }, t("compare.presets.ownHeading")));
+    section.appendChild(el("p", { class: "compare-instruction" }, t(selected.length === 1 ? "compare.oneMore" : "compare.pick")));
+  }
+
   // Picker
   const status = el("p", { class: "compare-status", role: "status", "aria-live": "polite" });
   section.appendChild(status);
@@ -182,6 +271,8 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
   // prepared comparison's explanation and results render before the full
   // profile picker, which stays available as a secondary control below.
   const fromLessonView = Boolean(from && from.startsWith("start:"));
+  // A guided comparison teaches first in the same way as a lesson handoff.
+  const teachFirst = fromLessonView || Boolean(activePreset);
   const pick = (profileId, pickerQuery) => {
     const removing = selectedIds.includes(profileId);
     const next = removing
@@ -208,13 +299,12 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
   selections.appendChild(selectionList);
   section.appendChild(selections);
   pickerHolder.appendChild(slotSelector(profiles, selectedIds, pick, { locale, initialQuery: keepPickerQuery || "", titleFn: title }));
-  if (!fromLessonView || selected.length < 2) {
+  if (!teachFirst || selected.length < 2) {
     section.appendChild(pickerHolder);
   }
 
   if (selected.length === 0) {
     announce(ui(locale, "noneSelected"));
-    section.appendChild(el("p", { class: "compare-empty" }, t("compare.pick")));
     container.appendChild(section);
     restoreFocus(pickerHolder, focusProfileId);
     return;
@@ -222,7 +312,6 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
 
   if (selected.length === 1) {
     announce(`${ui(locale, "oneSelected")}: ${title(selected[0])}.`);
-    section.appendChild(el("p", { class: "compare-empty" }, t("compare.oneMore")));
     container.appendChild(section);
     restoreFocus(pickerHolder, focusProfileId);
     return;
@@ -299,7 +388,7 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
   if (summary.differences.length > 0) {
     const diffLine = el("p", { class: "compare-summary-line" });
     const parts = summary.differences.map((d) => {
-      const labels = d.levels.map((l, i) => `${title(selected[i])}: ${t(`level.${l}`) || t("compare.notDocumented")}`);
+      const labels = selected.map((p) => `${title(p)}: ${levelText(p, d.key, t)}`);
       return `${dimLabel(d.key)} (${labels.join(" vs ")})`;
     });
     diffLine.appendChild(document.createTextNode(t("compare.summaryDifferences") + " " + parts.join("; ") + "."));
@@ -333,7 +422,7 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
       const item = el("li", {});
       item.appendChild(el("strong", {}, `${dimLabel(diff.key)}: `));
       item.appendChild(document.createTextNode(
-        selected.map((p, i) => `${title(p)} — ${t(`level.${diff.levels[i]}`) || t("compare.notDocumented")}`).join("; ")
+        selected.map((p) => `${title(p)} — ${levelText(p, diff.key, t)}`).join("; ")
       ));
       diffList.appendChild(item);
     }
@@ -352,7 +441,9 @@ export function renderCompare(container, { profiles, plants = [], compareIds, on
 
   // Pair 16: the lesson keeps its explanation and results first; changing
   // styles stays available through this clearly labelled secondary control.
-  if (fromLessonView) {
+  if (!activePreset) section.appendChild(presetsBlock(byId, { locale, title, t, from, place: "after" }));
+
+  if (teachFirst) {
     const changeBlock = el("details", { class: "compare-change-styles" });
     changeBlock.appendChild(el("summary", {}, t("compare.changeStyles")));
     changeBlock.appendChild(pickerHolder);

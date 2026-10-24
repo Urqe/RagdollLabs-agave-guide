@@ -1293,3 +1293,27 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .lesson-note p { margin: 0; }
 .ptg-jump { min-height: var(--tap); padding: 0 0.15rem; border: 0; background: none; color: var(--text-soft); font: inherit; cursor: pointer; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 0.2em; }
 .ptg-jump:hover { color: var(--text); }
+/* Pair 27: guided comparisons. */
+.compare-presets { margin: 1.2rem 0 1.4rem; }
+.compare-presets h2 { margin-bottom: 0.3rem; }
+.compare-presets-after { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.compare-own-heading { margin-top: 1.6rem; }
+.compare-instruction { margin: 0.2rem 0 0.6rem; font-weight: 600; }
+.compare-preset { margin: 1rem 0 1.4rem; padding: 1rem 1.1rem; border: 1px solid var(--anejo); border-radius: 12px; background: var(--surface-2); }
+.compare-preset h2 { margin: 0.2rem 0 0.5rem; font-size: 1.3rem; }
+.compare-preset-focus { margin: 0 0 0.4rem; }
+.compare-preset-answer summary { cursor: pointer; font-weight: 600; min-height: var(--tap); display: flex; align-items: center; gap: 0.45rem; list-style: none; }
+.compare-preset-answer summary::-webkit-details-marker { display: none; }
+.compare-preset-answer summary::before { content: "▸"; display: inline-block; transition: transform 0.15s var(--ease); }
+.compare-preset-answer[open] > summary::before { transform: rotate(90deg); }
+.compare-preset-answer h3 { margin: 0.8rem 0 0.2rem; font-size: 1rem; }
+.compare-preset-levels { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 0.3rem 1rem; margin: 0.4rem 0 0.6rem; }
+.compare-preset-levels dt { font-weight: 600; }
+.compare-preset-levels dd { margin: 0; overflow-wrap: anywhere; }
+.compare-preset-next { margin: 0.8rem 0 0; }
+.profile-guided-compare, .discover-guided-compare { display: block; margin-top: 0.6rem; }
+@media (max-width: 40rem) {
+  .compare-preset-levels { grid-template-columns: 1fr; gap: 0.1rem 0; }
+  .compare-preset-levels dd + dt { margin-top: 0.4rem; }
+}
+@media (prefers-reduced-motion: reduce) { .compare-preset-answer summary::before { transition: none; } }

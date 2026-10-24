@@ -83,7 +83,8 @@ export function parseHash(hash) {
       const [compareIds, query = ""] = segments[1].split("?");
       const params = new URLSearchParams(query);
       const from = params.get("from");
-      return { name: "compare", params: { compareIds, ...(from ? { from } : {}) } };
+      const preset = params.get("preset");
+      return { name: "compare", params: { compareIds, ...(from ? { from } : {}), ...(preset ? { preset } : {}) } };
     }
     return { name: "notFound", params: {} };
   }
@@ -128,8 +129,11 @@ export function buildHash(route) {
       return route.params.lessonId ? `#/start/${encodeURIComponent(route.params.lessonId)}` : "#/start";
     case "compare": {
       const idsPart = route.params.compareIds ? `/${route.params.compareIds.split(",").map(encodeURIComponent).join(",")}` : "";
-      const fromQuery = route.params.from ? `?from=${encodeURIComponent(route.params.from)}` : "";
-      return `#/compare${idsPart}${fromQuery}`;
+      const query = new URLSearchParams();
+      if (route.params.preset) query.set("preset", route.params.preset);
+      if (route.params.from) query.set("from", route.params.from);
+      const q = query.toString();
+      return `#/compare${idsPart}${q ? `?${q}` : ""}`;
     }
     case "profile":
       return `#/profile/${encodeURIComponent(route.params.profileId)}${buildProfileQuery(route.params)}`;

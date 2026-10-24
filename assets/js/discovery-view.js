@@ -5,6 +5,7 @@ import { localizedTitle, fieldEs, commonNamesText, plantCultivation } from "./ed
 import { SPIRIT_LABELS, ADVENTUROUS_TRADITIONS } from "./spirit-labels.js";
 import { flavorMoods } from "./compare.js";
 import { tasteNote } from "./taste-notes.js";
+import { PRESET_FOR_FLAVOUR, presetById, presetHref } from "./compare-presets.js";
 
 /**
  * Release 17 — Three Discovery Paths. One surface with three entry
@@ -302,6 +303,15 @@ function renderFlavour(container, { flavourId, profiles, locale }) {
   }
   section.appendChild(list);
   if (!matched.length) section.appendChild(el("p", { class: "empty-state" }, ui(locale, "discoverNoneYet")));
+  // Pair 27: each flavour path leads into the guided comparison that shows it.
+  const guided = presetById(PRESET_FOR_FLAVOUR[flavourId]);
+  if (guided) {
+    const lang = locale ? locale.get() : "en";
+    const line = el("p", { class: "discover-guided-compare" });
+    line.appendChild(el("a", { href: presetHref(guided), class: "cta-link" },
+      (locale ? locale.t("compare.presets.fromFlavour") : "compare.presets.fromFlavour").replace("{title}", guided.title[lang] || guided.title.en)));
+    section.appendChild(line);
+  }
   section.appendChild(el("p", { class: "editorial-note" }, ui(locale, "flavourDisclaimer")));
   container.appendChild(section);
 }
