@@ -7,6 +7,7 @@ import { renderCompare } from "./compare-view.js";
 import { renderCatalogue } from "./catalogue-view.js";
 import { renderLearn } from "./learn-view.js";
 import { renderStartHub, renderLesson } from "./journey.js";
+import { renderPlantToGlass } from "./plant-to-glass.js";
 import { renderDiscoverNotFound } from "./discovery-view.js";
 import { renderDiscover } from "./discovery-view.js";
 import { renderPlantPage, renderTraditionPage } from "./plant-tradition-view.js";
@@ -165,6 +166,15 @@ async function renderRoute(container, route) {
     } else {
       renderStartHub(container, { profiles, locale });
     }
+    return;
+  }
+  if (route.name === "plantToGlass") {
+    state.exploreApi = null;
+    renderPlantToGlass(container, {
+      processes: state.data.processes,
+      profiles, sources, locale,
+      from: route.params.from || null,
+    });
     return;
   }
   if (route.name === "learn") {
@@ -381,7 +391,8 @@ async function boot() {
       link.textContent = locale.t("nav." + name);
       const active = name === route.name
         || (name === "explore" && (route.name === "state" || route.name === "profile"))
-        || (name === "discover" && route.name === "discover");
+        || (name === "discover" && route.name === "discover")
+        || (name === "learn" && route.name === "plantToGlass");
       if (active) link.setAttribute("aria-current", "page");
       else link.removeAttribute("aria-current");
     }

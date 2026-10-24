@@ -505,6 +505,24 @@ for (const proc of processes) {
   if (!entry || typeof entry.explanation !== "string" || !entry.explanation.trim()) {
     fail(`content-es.json: process ${proc.id} explanation missing Spanish translation`);
   }
+  // Pair 25: the plant-to-glass sequence shows each process's name and its
+  // possible effect in the glass, in both editions.
+  if (typeof proc.glassEffect !== "string" || !proc.glassEffect.trim()) {
+    fail(`processes.json: ${proc.id} needs a glassEffect line`);
+  }
+  for (const field of ["name", "glassEffect"]) {
+    if (!entry || typeof entry[field] !== "string" || !entry[field].trim()) {
+      fail(`content-es.json: process ${proc.id} ${field} missing Spanish translation`);
+    }
+  }
+  for (const key of Object.keys(entry || {})) {
+    if (!["name", "explanation", "glassEffect"].includes(key)) {
+      fail(`content-es.json: process ${proc.id} field "${key}" is not rendered by any view`);
+    }
+  }
+}
+for (const id of Object.keys(esProcesses)) {
+  if (!processes.some((p) => p.id === id)) fail(`content-es.json: process entry "${id}" has no matching process`);
 }
 const esTerms = contentEsAll.terms || {};
 for (const term of glossary) {

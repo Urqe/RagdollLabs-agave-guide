@@ -31,6 +31,7 @@ const PROCESS_KEYWORDS = {
   "pit-roast": ["pit roast", "pit-roasted", "roasted in earthen", "cylindrical pit", "conical ovens", "adobe-oven roast", "underground pit roast"],
   "steam-cook": ["steam-cooked", "steam cooked", "steam-cook", "oven/autoclave"],
   "sap-collection": ["sap-derived", "sap collected", "aguamiel collected", "aguamiel fermented"],
+  "milling-extraction": ["tahona", "roller-mill", "roller mill", "mallet", "desgarradora", "shredd", "by axe", "stone-milled", "hand-mash", "horse-drawn mill"],
   "wild-fermentation": ["wild-yeast", "wild yeast", "wild-fermented", "open fermentation", "open wild-yeast", "wild-fe"],
   "distillation-methods": ["distilled", "distillation", "still"],
   "glass-resting": ["glass resting", "madurado", "glass-rested"],
@@ -122,6 +123,12 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
     card.appendChild(el("h3", { id: `chapter-${ch.id}`, tabindex: "-1" },
       `${index + 1}. ${fieldEs("chapter", ch.id, "title", locale) || ch.title}`));
     card.appendChild(el("p", { class: "view-intro" }, fieldEs("chapter", ch.id, "intro", locale) || ch.intro));
+    // Pair 25: the production chapter opens the step-by-step plant-to-glass page.
+    if (ch.id === "from-plant-to-glass") {
+      const callout = el("p", { class: "learn-callout" });
+      callout.appendChild(el("a", { href: "#/plant-to-glass?from=learn", class: "learn-callout-link" }, t("learn.plantToGlassLink")));
+      card.appendChild(callout);
+    }
     for (const block of ch.blocks || []) {
       const bi = ch.blocks.indexOf(block);
       const text = fieldEs("chapter", ch.id, "block" + bi, locale) || block.text;
@@ -149,7 +156,7 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
               target.scrollIntoView({ behavior: "smooth", block: "start" });
             }
             target?.focus?.({ preventScroll: true });
-          } }, `${proc.name} (see process reference below) → `));
+          } }, t("learn.processRef").replace("{name}", fieldEs("process", proc.id, "name", locale) || proc.name)));
           row.appendChild(document.createTextNode(" "));
         }
         card.appendChild(row);
@@ -211,7 +218,7 @@ export function renderLearn(container, { chapters = [], plants, processes, gloss
   section.appendChild(el("h3", { id: "learn-processes", tabindex: "-1" }, t("learn.processes")));
   for (const proc of processes) {
     const card = el("article", { class: "learn-card", "aria-labelledby": `process-${proc.id}` });
-    card.appendChild(el("h4", { id: `process-${proc.id}`, tabindex: "-1" }, `${proc.name} — ${proc.stage}`));
+    card.appendChild(el("h4", { id: `process-${proc.id}`, tabindex: "-1" }, `${fieldEs("process", proc.id, "name", locale) || proc.name} — ${t("learn.stage." + proc.stage) === "learn.stage." + proc.stage ? proc.stage : t("learn.stage." + proc.stage)}`));
     card.appendChild(el("p", {}, fieldEs("process", proc.id, "explanation", locale) || proc.explanation));
     const usedBy = profiles.filter((pr) => relevantTo(pr, proc));
     if (usedBy.length > 0) {

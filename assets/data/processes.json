@@ -7,17 +7,20 @@
       "explanation": "Agave hearts are roasted in rock-lined pits with wood fire, sometimes for days. This is the classic mezcal/bacanora/tuxca cook; it can contribute smoke, but how much varies with wood, time and pit — smoke is not guaranteed by the method alone.",
       "sourceIds": [
         "diffords-mezcal-what-it-is",
-        "mezcalistas-bacanora-tradition"
-      ]
+        "mezcalistas-bacanora-tradition",
+        "diffords-lost-explorer-palenque"
+      ],
+      "glassEffect": "Can add smoke, from a light campfire edge to a big smoky nose. How much depends on the wood, the time and the pit."
     },
     {
       "id": "steam-cook",
       "name": "Steam cooking (hornos and autoclaves)",
       "stage": "cooking",
-      "explanation": "Tequila's piñas are typically steam-cooked in stone ovens or autoclaves. No fire contacts the agave, which is why tequila reads vegetal rather than smoky.",
+      "explanation": "Tequila's piñas are typically steam-cooked in masonry ovens (hornos) or stainless autoclaves. No fire touches the agave, so steam-cooked tequila usually has no smoke. The two ovens differ too: Difford's describes slow oven baking as bringing more fruit and sweetness, and warns that cooking too fast risks a bitter, burnt-caramel taste.",
       "sourceIds": [
         "diffords-tequila-made"
-      ]
+      ],
+      "glassEffect": "Usually no smoke at all, so cooked agave, herbs and pepper come through clean."
     },
     {
       "id": "sap-collection",
@@ -27,27 +30,44 @@
       "sourceIds": [
         "backalley-comiteco",
         "mezcalistas-juerte"
-      ]
+      ],
+      "glassEffect": "No roast at all: sap spirits skip the cooked-agave and smoke notes, and can show fresh, lactic or fermented tones instead."
+    },
+    {
+      "id": "milling-extraction",
+      "name": "Milling and extraction",
+      "stage": "extraction",
+      "explanation": "After cooking, the agave is crushed to free its sugary juice. Tools range from a stone tahona wheel to roller mills, mechanical shredders, wooden mallets and axes. In roller mills, water washes the juice from the fibres; some tahona producers ferment the fibres along with the juice. Difford's says the particle size influences the final flavour.",
+      "sourceIds": [
+        "diffords-tequila-made",
+        "mezcalistas-bacanora-tradition"
+      ],
+      "glassEffect": "How finely the agave is crushed, and whether the fibres ferment with the juice, can change aroma and texture. The source says it matters; it doesn't say how much."
     },
     {
       "id": "wild-fermentation",
       "name": "Wild/open fermentation",
       "stage": "fermentation",
-      "explanation": "Most small-batch agave spirits ferment in open vessels with ambient yeasts — wooden vats, stainless tanks or volcanic craters. Vessel and local yeasts can shape texture and savory notes; the effect is traditional, not standardized.",
+      "explanation": "Most small-batch agave spirits ferment in open vessels with ambient yeasts — wooden vats, stainless tanks or volcanic craters. Vessel and local yeasts can shape texture and savory notes; the effect is traditional, not standardized. Difford's notes that the yeast a producer uses helps determine the finished flavour, and that fermenting with the crushed fibres can help trap aromatics.",
       "sourceIds": [
         "diffords-mezcal-what-it-is",
-        "mezcalistas-tepua-tasting"
-      ]
+        "mezcalistas-tepua-tasting",
+        "diffords-tequila-made"
+      ],
+      "glassEffect": "Can add fruit, funk and local character. The yeast is one of the biggest variables."
     },
     {
       "id": "distillation-methods",
       "name": "Still types",
       "stage": "distillation",
-      "explanation": "Copper alembics, stainless pot stills, clay pots and wooden Filipino stills each shape the spirit; tuxca's Filipino stills, for example, are part of its regional definition. Still type is a fact of method — it does not by itself guarantee a flavor.",
+      "explanation": "Copper alembics, stainless pot stills, clay pots and wooden Filipino stills each shape the spirit; tuxca's Filipino stills, for example, are part of its regional definition. Distillers also choose their cuts: they keep the heart and set aside the first and last parts of the run (heads and tails), because different flavour compounds come off at different temperatures. Still type and cuts are facts of method — they do not by themselves guarantee a flavor.",
       "sourceIds": [
         "mexicanspiritsbible-tuxca",
-        "mezcalistas-balancan-tasting"
-      ]
+        "mezcalistas-balancan-tasting",
+        "diffords-tequila-made",
+        "diffords-lost-explorer-palenque"
+      ],
+      "glassEffect": "The still and where the distiller cuts shape the body and how much of the agave's flavour stays in."
     },
     {
       "id": "glass-resting",
@@ -56,7 +76,8 @@
       "explanation": "Some producers rest unaged spirits in glass for months or years to round them. Glass resting is resting, not wood maturation — it adds no oak character.",
       "sourceIds": [
         "mezcalreviews-raicilla-category"
-      ]
+      ],
+      "glassEffect": "Rounds the spirit without adding any oak: no vanilla or wood colour comes from glass."
     },
     {
       "id": "wood-maturation",
@@ -65,7 +86,8 @@
       "explanation": "Reposado and añejo classes rest in wood for defined minimum periods depending on the spirit's own rules. Wood influence depends on wood type, size, age and time — there is no universal 'older is better' ladder, and most bottles in this guide are unaged by design.",
       "sourceIds": [
         "diffords-tequila-category"
-      ]
+      ],
+      "glassEffect": "Often adds vanilla, spice, colour and a softer edge, depending on the wood, the barrel size and the time."
     },
     {
       "id": "filtration",
@@ -74,7 +96,8 @@
       "explanation": "Some spirits are filtered for clarity. Filtration can remove character along with cloudiness; cristalino products take this furthest (see the glossary note).",
       "sourceIds": [
         "diffords-tequila-category"
-      ]
+      ],
+      "glassEffect": "Can strip colour and some character along with it; cristalinos are the extreme case."
     }
   ]
 }
