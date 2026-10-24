@@ -459,8 +459,10 @@ async function boot() {
       // Pair 26: new pages open at the top of their content. The landing
       // target's scroll-margin matches the measured sticky-header height,
       // so the back link and heading are never hidden under the header.
+      // "instant": a new page should not animate in from the old scroll
+      // position (html has scroll-behavior: smooth for in-page jumps).
       const landing = main.firstElementChild;
-      if (landing && typeof landing.scrollIntoView === "function") landing.scrollIntoView({ block: "start" });
+      if (landing && typeof landing.scrollIntoView === "function") landing.scrollIntoView({ block: "start", behavior: "instant" });
     }
     if (routeChanged && !viewPlacedFocus && !firstRender && heading) {
       // Pair 26: focus the page heading, so screen readers announce the
