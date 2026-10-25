@@ -975,27 +975,11 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
 .discovery-notes { display: block; color: var(--anejo-bright); font-size: .85rem; line-height: 1.6; margin-top: .85rem; }
 .card-arrow { align-self: flex-end; color: var(--anejo-bright); margin-top: auto; padding-top: 1rem; font-size: 1.25rem; }
 
-/* Decorative tasting-room scene. Essential content stays in HTML outside it. */
-.welcome-scene { position: relative; min-height: 570px; overflow: hidden; background: linear-gradient(180deg, #253d37, #9c8568 52%, #516951 53%, #223d31); isolation: isolate; }
-.scene-sun { position: absolute; width: 135px; height: 135px; top: 17%; right: 16%; border-radius: 50%; background: #e3bc81; box-shadow: 0 0 100px #edbd7b33; }
-.scene-ridge { position: absolute; inset: 29% -15% 22%; background: #49604c; clip-path: polygon(0 45%, 18% 31%, 32% 49%, 48% 12%, 64% 38%, 78% 25%, 100% 55%, 100% 100%, 0 100%); }
-.scene-ridge-front { inset: 42% -10% 12%; background: #2d4a3a; transform: scaleX(-1); }
-.scene-table { position: absolute; inset: auto -10% 0; height: 24%; background: linear-gradient(175deg, #7b5740, #372b24); border-top: 4px solid #ad825b; transform: skewY(-3deg); }
-.scene-cat { position: absolute; width: 47%; height: auto; bottom: 13%; right: 5%; filter: drop-shadow(0 10px 12px #0004); z-index: 2; }
-.scene-glass { position: absolute; bottom: 15%; left: 20%; width: 64px; height: 75px; border: 2px solid #e9e5d48c; border-radius: 6px 6px 22px 22px; background: linear-gradient(180deg, #ffffff09 55%, #d9a44155 56%, #d9a44166); transform: rotate(-3deg); z-index: 3; box-shadow: 8px 10px 15px #0003; }
-.scene-glass::before { content: ""; position: absolute; top: -5px; left: -2px; right: -2px; height: 8px; border: 2px solid #e9e5d48c; border-radius: 50%; }
-.scene-caption { position: absolute; left: 1.5rem; right: 1.5rem; bottom: .6rem; z-index: 4; text-align: center; color: #fff0d9; font: italic 1rem/1.5 var(--display); text-shadow: 0 2px 6px #000; }
-.scene-agave { position: absolute; width: 180px; height: 180px; left: -3%; bottom: 21%; z-index: 1; }
-.scene-agave-1 { left: 48%; bottom: 35%; transform: scale(.65); opacity: .75; }
-.scene-agave-2 { left: 9%; bottom: 40%; transform: scale(.4); opacity: .65; }
-.agave-leaf { position: absolute; bottom: 0; left: 48%; width: 26px; height: 150px; border-radius: 100% 0 80% 0; background: linear-gradient(90deg, #3d7963, #7ba089 60%, #345e4b); transform-origin: 50% 100%; }
-.leaf-0 { transform: rotate(-76deg) scaleY(.9); }
-.leaf-1 { transform: rotate(-50deg); }
-.leaf-2 { transform: rotate(-25deg) scaleY(1.1); }
-.leaf-3 { transform: rotate(0) scaleY(1.2); }
-.leaf-4 { transform: rotate(25deg) scaleY(1.1); }
-.leaf-5 { transform: rotate(50deg); }
-.leaf-6 { transform: rotate(76deg) scaleY(.9); }
+/* Landing picture: editorial illustration with a caption laid over a soft shade. */
+.welcome-scene { position: relative; margin: 0; min-height: 570px; overflow: hidden; background: #3b2b1f; isolation: isolate; }
+.scene-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 60%; }
+.welcome-scene::after { content: ""; position: absolute; inset: auto 0 0; height: 30%; background: linear-gradient(180deg, transparent, #1a110acc); z-index: 1; pointer-events: none; }
+.scene-caption { position: absolute; left: 1.5rem; right: 1.5rem; bottom: .6rem; z-index: 2; text-align: center; color: #fff0d9; font: italic 1rem/1.5 var(--display); text-shadow: 0 2px 6px #000; }
 
 /* ---------- exploration ---------- */
 .discovery-controls { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr) auto; align-items: end; gap: .8rem; margin: 1rem 0; padding: .9rem; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
@@ -1094,7 +1078,6 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
   .welcome-action { min-height: 72px; }
   .welcome-scene { min-height: 600px; }
   .profile-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .scene-cat { width: 65%; right: -1%; }
 }
 @media (max-width: 48rem) {
   .app-header { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; }
@@ -1110,12 +1093,6 @@ select:focus-visible, input:focus-visible { outline: 3px solid var(--focus); out
   .welcome-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.5rem; }
   .welcome-action { padding: .85rem; min-height: 100px; }
   .welcome-scene { min-height: 0; height: 330px; }
-  .scene-sun { width: 85px; height: 85px; top: 10%; }
-  .scene-cat { width: 160px; right: 12%; bottom: 11%; }
-  .scene-agave { transform: scale(.8); bottom: 15%; }
-  .scene-agave-1 { transform: scale(.45); bottom: 28%; }
-  .scene-agave-2 { transform: scale(.3); bottom: 32%; }
-  .scene-glass { width: 48px; height: 55px; bottom: 12%; left: 25%; }
   .scene-caption { bottom: 0; font-size: .9rem; }
   .discovery-grid { grid-template-columns: 1fr; }
   .discovery-card { padding: 1.3rem; }

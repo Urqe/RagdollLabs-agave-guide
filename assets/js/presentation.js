@@ -19,7 +19,8 @@ const COPY = {
     pathLookUp: "Look it up", pathLookUpHint: "Find a bottle, a label term or how a spirit is made.",
     linkGlossary: "Label vocabulary", linkPlantToGlass: "From plant to glass",
     featured: "A few places to begin", featuredHint: "Three traditions. Three ways into the glass.",
-    scene: "A little curiosity. Good company.", all: "Explore the collection",
+    scene: "A little curiosity. Good company.",
+    sceneAlt: "Illustration of a ragdoll cat resting on a sunlit terrace beside a tasting glass and a bottle of agave spirit, with agave fields and mountains at sunset.", all: "Explore the collection",
     guide: "An invitation to explore", browse: "Find your next discovery",
     browseIntro: "Browse a tradition, follow a flavour, or explore a place. Every profile is a starting point.",
     tradition: "Spirit / tradition", allTraditions: "All traditions", flavour: "Flavour mood",
@@ -141,7 +142,8 @@ const COPY = {
     pathLookUp: "Consulta", pathLookUpHint: "Encuentra una botella, un término de etiqueta o cómo se hace un destilado.",
     linkGlossary: "Vocabulario de etiqueta", linkPlantToGlass: "De la planta a la copa",
     featured: "Por dónde empezar", featuredHint: "Tres tradiciones. Tres formas de descubrir.",
-    scene: "Un poco de curiosidad. Buena compañía.", all: "Explorar la colección",
+    scene: "Un poco de curiosidad. Buena compañía.",
+    sceneAlt: "Ilustración de un gato ragdoll descansando en una terraza soleada junto a una copa de cata y una botella de destilado de agave, con campos de agave y montañas al atardecer.", all: "Explorar la colección",
     guide: "Una invitación a explorar", browse: "Encuentra tu próximo descubrimiento",
     browseIntro: "Explora una tradición, sigue un sabor o descubre un lugar. Cada perfil es un punto de partida.",
     tradition: "Destilado / tradición", allTraditions: "Todas las tradiciones", flavour: "Perfil de sabor",
@@ -302,19 +304,13 @@ export function renderHome(container, { profiles, locale }) {
     actions.appendChild(item);
   }
   copy.appendChild(actions);
-  const scene = el("div", { class: "welcome-scene", "aria-hidden": "true" });
-  scene.appendChild(el("div", { class: "scene-sun" }));
-  scene.appendChild(el("div", { class: "scene-ridge scene-ridge-back" }));
-  scene.appendChild(el("div", { class: "scene-ridge scene-ridge-front" }));
-  for (let plant = 0; plant < 3; plant++) {
-    const agave = el("div", { class: "scene-agave scene-agave-" + plant });
-    for (let leaf = 0; leaf < 7; leaf++) agave.appendChild(el("i", { class: "agave-leaf leaf-" + leaf }));
-    scene.appendChild(agave);
-  }
-  scene.appendChild(el("div", { class: "scene-table" }));
-  scene.appendChild(el("img", { src: "./assets/ragdoll-cat.svg", class: "scene-cat", width: "320", height: "360", alt: "" }));
-  scene.appendChild(el("div", { class: "scene-glass" }));
-  scene.appendChild(el("p", { class: "scene-caption" }, ui(locale, "scene")));
+  // Landing picture: an editorial illustration, so the figure carries a real alt text.
+  const scene = el("figure", { class: "welcome-scene" });
+  scene.appendChild(el("img", {
+    src: "./assets/img/welcome-terrace.webp", class: "scene-photo", width: "1200", height: "900",
+    alt: ui(locale, "sceneAlt"), fetchpriority: "high", decoding: "async"
+  }));
+  scene.appendChild(el("figcaption", { class: "scene-caption" }, ui(locale, "scene")));
   hero.append(copy, scene);
   section.appendChild(hero);
   const featured = el("section", { class: "featured-section", "aria-labelledby": "featured-heading" });
