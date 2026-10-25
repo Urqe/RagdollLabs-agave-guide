@@ -38,7 +38,7 @@
     {
       "term": "ensamble",
       "context": "mezcal production",
-      "definition": "A batch made from multiple agave species, typically harvested and fermented together. An ensamble needs composition evidence; it is not simply a post-distillation blend, and it is not a separate spirit family.",
+      "definition": "A batch made from multiple agave species, typically harvested and fermented together. Calling something an ensamble needs a known mix of agaves behind it; it is not simply a blend made after distillation, and it is not a separate spirit family.",
       "sourceIds": [
         "mexicanspiritsbible-tuxca"
       ]
@@ -80,8 +80,8 @@
     },
     {
       "term": "100% de agave",
-      "context": "composition claim",
-      "definition": "A composition claim about fermentables, distinct from quality: agave-based traditions with disclosed non-agave fermentables (some comiteco) are included with their composition stated honestly.",
+      "context": "composition",
+      "definition": "A statement about what was fermented, separate from quality: agave-based traditions with non-agave fermentables listed on the label (some comiteco) are included, with their composition stated plainly.",
       "sourceIds": [
         "backalley-comiteco"
       ]

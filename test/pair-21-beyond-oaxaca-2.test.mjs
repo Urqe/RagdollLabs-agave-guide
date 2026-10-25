@@ -176,10 +176,10 @@ test("pair 21: comparison vs espadín derives from supported sensory differences
 
 test("pair 21: Colima's role stays borderlands-contextual, not production coverage", () => {
   const tuxca = profileById.get("tuxca-lineno-cimarron-jalisco-colima");
-  assert.ok(/does not (by itself )?establish Colima production coverage|no claim of Colima production coverage/i.test(tuxca.context),
+  assert.ok(/does not (by itself )?establish Colima production coverage|no claim of Colima production coverage|not for Colima/i.test(tuxca.context),
     "the tuxca context states the Jalisco-made example does not establish Colima coverage");
   const region = regions.find((r) => r.id === "jalisco-colima-borderlands");
-  assert.ok(/does not (by itself )?establish Colima production coverage/i.test(region.distinctions),
+  assert.ok(/does not (by itself )?establish Colima production coverage|can't speak for Colima production/i.test(region.distinctions),
     "the region record states the same honest limit");
   const balam = bottles.find((b) => b.id === tuxca.exampleBottleId);
   assert.equal(balam.place.includes("Jalisco"), true, "the example bottle's place stays honestly Jalisco");

@@ -15,7 +15,7 @@
       "processIds": [
         "steam-cook"
       ],
-      "distinctions": "Agave grows smaller and more herbaceous than highland agave; valley blancos come across savoury and vegetal in editorial guidance — a cultural description, not a legal boundary.",
+      "distinctions": "Agave grows smaller and more herbaceous than highland agave; valley blancos tend to taste savoury and vegetal. That's a cultural description, not a legal boundary.",
       "sourceIds": [
         "diffords-tequila-made",
         "diffords-tequila-category"
@@ -37,7 +37,7 @@
         "steam-cook",
         "wood-maturation"
       ],
-      "distinctions": "Highland agave reads sweeter and more floral in editorial guidance; some traditionalists stone-roast. A cultural/agronomic distinction, not a legal class.",
+      "distinctions": "Highland agave tends to taste sweeter and more floral; some traditionalists stone-roast. A cultural and agronomic distinction, not a legal class.",
       "sourceIds": [
         "diffords-tequila-category",
         "wikipedia-tequila"
@@ -149,7 +149,7 @@
         "wild-fermentation",
         "distillation-methods"
       ],
-      "distinctions": "Costa is an editorial tradition split of raicilla, not a legal class.",
+      "distinctions": "Costa is one of raicilla's two styles, not a legal class.",
       "sourceIds": [
         "mezcalreviews-raicilla-category"
       ]
@@ -171,7 +171,7 @@
         "wild-fermentation",
         "distillation-methods"
       ],
-      "distinctions": "Tuxca has no denomination of origin. Vinatero practice is cultural, and bottles carry no DO certification, though other labelling obligations still apply: a legal fact, not a judgment on authenticity. The tradition belongs to the borderlands and reaches into northern Colima, but the cited example is a Jalisco-made bottle, which does not by itself establish Colima production coverage.",
+      "distinctions": "Tuxca has no denomination of origin. Vinatero practice is cultural, and bottles carry no DO certification, though other labelling obligations still apply: a legal fact, not a judgment on authenticity. The tradition belongs to the borderlands and reaches into northern Colima, but the example bottle is made in Jalisco, so it can't speak for Colima production.",
       "sourceIds": [
         "mexicanspiritsbible-tuxca"
       ]
@@ -193,7 +193,7 @@
         "distillation-methods",
         "glass-resting"
       ],
-      "distinctions": "Comiteco is protected since October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas” (an IG, not a DO); composition (agave vs cane sugars) is verified per bottle, never assumed.",
+      "distinctions": "Comiteco is protected since October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas” (an IG, not a DO); composition (agave vs cane sugars) is checked bottle by bottle, never assumed.",
       "sourceIds": [
         "backalley-comiteco"
       ]
@@ -351,7 +351,7 @@
         "wild-fermentation",
         "distillation-methods"
       ],
-      "distinctions": "This area marks where the guide's Puebla profile comes from, not a legal boundary: Puebla is a major mezcal state under the DO. Papalometl here names Agave potatorum in the bottle's documented case, and the same word can name other agaves elsewhere, so a local name needs its place.",
+      "distinctions": "This area marks where the Puebla profile comes from, not a legal boundary: Puebla is a major mezcal state under the DO. Papalometl here names Agave potatorum in the example bottle's case, and the same word can name other agaves elsewhere, so a local name needs its place.",
       "sourceIds": [
         "mezcalreviews-zinacantan-papalometl",
         "mezcalistas-zinacantan",

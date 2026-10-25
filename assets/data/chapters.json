@@ -15,7 +15,7 @@
           ]
         },
         {
-          "text": "Beyond the big names, Mexico has further regional traditions — tuxca in the Jalisco–Colima borderlands (no denomination of origin), comiteco from Chiapas (made from sap together with cane sugars; protected since October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas”, a figure distinct from a denomination of origin), destilado de pulque from the pulque heartland (no denomination of origin). Their legal status differs from tequila's, and this guide never treats that as a judgment of authenticity.",
+          "text": "Beyond the big names, Mexico has further regional traditions — tuxca in the Jalisco–Colima borderlands (no denomination of origin), comiteco from Chiapas (made from sap together with cane sugars; protected since October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas”, a figure distinct from a denomination of origin), destilado de pulque from the pulque heartland (no denomination of origin). Their legal status differs from tequila's, but that says nothing about how authentic they are.",
           "exampleProfileIds": [
             "tuxca-lineno-cimarron-jalisco-colima",
             "comiteco-aguamiel-chiapas",
@@ -52,7 +52,7 @@
           ]
         },
         {
-          "text": "Common names are regional, not scientific: lechuguilla in the Jalisco highlands is a local name for maximiliana, while the Sonoran lechuguilla is a different plant entirely. Where the botany is genuinely unsettled — as with Sonora's Pacifica/Yaquiana — this guide records the names without settling the debate.",
+          "text": "Common names are regional, not scientific: lechuguilla in the Jalisco highlands is a local name for maximiliana, while the Sonoran lechuguilla is a different plant entirely. Where the botany is still unsettled — as with Sonora's Pacifica/Yaquiana — the names stay as people use them, and the debate stays open.",
           "plantIds": [
             "agave-maximiliana",
             "agave-angustifolia"
@@ -81,7 +81,7 @@
           ]
         },
         {
-          "text": "Extraction, fermentation and distillation each matter. Wild open fermentations carry local yeasts and local character; the still — copper, clay, or Filipino-style wood — shapes the final texture. Small producers bottle batch by batch, so two bottles of the same brand can genuinely differ.",
+          "text": "Extraction, fermentation and distillation each matter. Wild open fermentations carry local yeasts and local character; the still — copper, clay, or Filipino-style wood — shapes the final texture. Small producers bottle batch by batch, so two bottles of the same brand can differ.",
           "processIds": [
             "wild-fermentation",
             "distillation-methods"
@@ -103,7 +103,7 @@
       "intro": "What are you actually tasting? This chapter separates the vocabulary of flavour — and shows each concept on a real profile from the guide.",
       "blocks": [
         {
-          "text": "Body is how the spirit feels in the mouth — light, medium or full. Smoke, when present, usually comes from the pit roast. Herbal and vegetal notes come from the plant and a clean cook; fruit and floral notes often rise with highland agave and gentle roasts. Sweetness here means perceived sweetness, not measured sugar. Within tequila, the same plant reads differently by place: valley agave trends earthy and savoury, Los Altos agave sweeter and fruitier — a tendency named on the highland and valley blanco profiles, and honestly a tendency: a blind tasting panel once found the pattern weaker than folklore suggests.",
+          "text": "Body is how the spirit feels in the mouth — light, medium or full. Smoke, when present, usually comes from the pit roast. Herbal and vegetal notes come from the plant and a clean cook; fruit and floral notes often rise with highland agave and gentle roasts. Sweetness here means perceived sweetness, not measured sugar. Within tequila, the same plant tastes different by place: valley agave trends earthy and savoury, Los Altos agave sweeter and fruitier — a tendency named on the highland and valley blanco profiles, and only a tendency: a blind tasting panel once found the pattern weaker than folklore suggests.",
           "exampleProfileIds": [
             "tequila-blanco-valley-jalisco",
             "bacanora-pacifica-sierra-sonora",
@@ -111,7 +111,7 @@
           ]
         },
         {
-          "text": "Oak — from wood resting — contributes vanilla, caramel and spice. Finish length is how long the flavour persists after swallowing. None of these levels is a quality score: they are editorial descriptions of style, and bottles within a style vary.",
+          "text": "Oak — from wood resting — contributes vanilla, caramel and spice. Finish length is how long the flavour persists after swallowing. None of these levels is a quality score: they describe a style, and bottles within a style vary.",
           "exampleProfileIds": [
             "tequila-anejo-valley-jalisco",
             "tequila-reposado-valley-jalisco"
@@ -119,10 +119,10 @@
         },
         {
           "text": "The compare view puts these dimensions side by side: a blanco against an añejo shows the largest oak gap; a valley blanco against a highland expression shows how place reads in the glass.",
-          "deeper": "Flavour chemistry is genuinely complex: roast compounds, fermentation esters and still cut each contribute. This guide attributes character to process only where sources document the link — never from a tasting note alone."
+          "deeper": "Flavour chemistry is complex: roast compounds, fermentation esters and still cut each contribute. A flavour is tied to a process only where a source makes that link — never from a tasting note alone."
         },
         {
-          "text": "How this guide reaches its conclusions: style profiles are editorial descriptions drawn from the documented sensory data on each profile, not reviews or ratings of any bottle. Reviewer impressions are attributed to their source, producer notes are never presented as independent reviews, and anything the guide itself concludes is labelled editorial. Batch-specific facts — ABV, maker, plant mix, tasting notes — stay attached to the bottle they belong to, and missing evidence is disclosed rather than guessed.",
+          "text": "How the guide works: the style profiles describe what the sensory notes on each profile show; they aren't reviews or ratings of any bottle. A reviewer's impression is credited to the reviewer, a producer's notes are never passed off as an independent review, and anything the guide concludes itself is flagged as its own view. Facts that belong to one batch — ABV, maker, plant mix, tasting notes — stay with that bottle, and where something is missing, it says so instead of guessing.",
           "exampleProfileIds": [
             "tequila-blanco-valley-jalisco",
             "tequila-anejo-valley-jalisco"
@@ -161,7 +161,7 @@
           ]
         },
         {
-          "text": "Composition claims are facts about fermentables, not quality grades. 100% de agave describes what was fermented; comiteco with disclosed cane sugar is equally honest about what it is. Composition disclosure is required reading on every bottle.",
+          "text": "Composition is a fact about what was fermented, not a quality grade. 100% de agave tells you what went into the ferment; comiteco with cane sugar listed on the label says just as plainly what it is. Read the composition on every bottle.",
           "termIds": [
             "100% de agave"
           ],
@@ -171,7 +171,7 @@
           ]
         },
         {
-          "text": "How do you know what a bottle tastes like? Independent reviews, producer descriptions and editorial syntheses are different kinds of evidence, and this guide keeps them visibly distinct: a reviewer's impression is attributed to the reviewer; a producer's own tasting notes are labelled as the producer's; where no review exists at all, the entry says so instead of borrowing character. When you read a tasting claim anywhere, ask whose palate it came from — that habit travels further than any single bottle.",
+          "text": "How do you know what a bottle tastes like? Independent reviews, producer descriptions and the guide's own summaries are different things, and the guide keeps them visibly apart: a reviewer's impression is credited to the reviewer; a producer's own tasting notes are labelled as the producer's; where no review exists at all, the entry says so instead of borrowing character. When you read a tasting note anywhere, ask whose palate it came from — that habit travels further than any single bottle.",
           "exampleProfileIds": [
             "tequila-extra-anejo-highland-jalisco"
           ],
@@ -184,10 +184,10 @@
     {
       "id": "choosing-and-enjoying",
       "title": "Choosing and Enjoying",
-      "intro": "There is no wrong way to enjoy these spirits — but there are honest ways to choose. This chapter favors your own palate over price, age or rarity.",
+      "intro": "There is no wrong way to enjoy these spirits — but there are good ways to choose. This chapter favors your own palate over price, age or rarity.",
       "blocks": [
         {
-          "text": "Start from what you already like: fresh and herbal blancos, smoky mezcals, oak-rich añejos, or something off the beaten path. The discovery paths in this guide group profiles by flavour so you can follow your own taste, and every profile names its sensory style honestly.",
+          "text": "Start from what you already like: fresh and herbal blancos, smoky mezcals, oak-rich añejos, or something off the beaten path. The discovery paths in this guide group profiles by flavour so you can follow your own taste, and every profile says plainly what its style tastes like.",
           "exampleProfileIds": [
             "tequila-blanco-valley-jalisco",
             "mezcal-espadin-valles-centrales",
@@ -195,7 +195,7 @@
           ]
         },
         {
-          "text": "Serving is simple: a small glass at room temperature lets aromatics open; a splash of water can soften high ABV. Neat — without ice or mixers — on the rocks and mixed are all legitimate ways to meet these spirits — a margarita or paloma is a real way into a blanco, not a compromise. Salt, citrus (in Mexico usually limón, the small green lime), ice and accompaniments are choices rather than admission requirements; regional customs vary and none of them is a rule. Pairings on each profile are editorial suggestions, never rules.",
+          "text": "Serving is simple: a small glass at room temperature lets aromatics open; a splash of water can soften high ABV. Neat — without ice or mixers — on the rocks and mixed are all legitimate ways to meet these spirits — a margarita or paloma is a real way into a blanco, not a compromise. Salt, citrus (in Mexico usually limón, the small green lime), ice and accompaniments are choices rather than admission requirements; regional customs vary and none of them is a rule. Pairings on each profile are suggestions, never rules.",
           "exampleProfileIds": [
             "bacanora-pacifica-sierra-sonora",
             "raicilla-costa-jalisco"
@@ -210,10 +210,10 @@
     {
       "id": "explore-deeper",
       "title": "Explore Deeper",
-      "intro": "Reference material for enthusiasts: the full plant, process and label vocabulary behind the chapters — kept honest with sources.",
+      "intro": "Reference material for enthusiasts: the full plant, process and label vocabulary behind the chapters — backed by sources.",
       "blocks": [
         {
-          "text": "The plant reference pages record scientific identity, regional common names, cultivation, honest botanical uncertainty and sources. The process pages explain each production stage with the profiles that use it. The glossary defines every label term in context.",
+          "text": "The plant reference pages record scientific identity, regional common names, cultivation, open botanical questions and sources. The process pages explain each production stage with the profiles that use it. The glossary defines every label term in context.",
           "plantIds": [
             "agave-tequilana",
             "agave-angustifolia",
@@ -227,7 +227,7 @@
           ]
         },
         {
-          "text": "Sustainability matters for wild-harvested agaves: tobalá's slow, seed-only reproduction makes wild populations vulnerable, and sotol's long maturity makes harvest practice decisive. Bacanora and raicilla add the same concern at tradition scale — both depend on wild-harvested agaves in Sonora and Jalisco — while cultivated espadín and blue weber carry far less pressure. The plant and tradition pages in this guide state these distinctions with dated sources, and label producer claims as unverified where the evidence is thin.",
+          "text": "Sustainability matters for wild-harvested agaves: tobalá's slow, seed-only reproduction makes wild populations vulnerable, and sotol's long maturity makes harvest practice decisive. Bacanora and raicilla add the same concern at tradition scale — both depend on wild-harvested agaves in Sonora and Jalisco — while cultivated espadín and blue weber carry far less pressure. The plant and tradition pages in this guide state these distinctions with dated sources, and mark what producers say as unconfirmed where the evidence is thin.",
           "exampleProfileIds": [
             "bacanora-pacifica-sierra-sonora",
             "raicilla-maximiliana-sierra-jalisco",
@@ -235,7 +235,7 @@
           ]
         },
         {
-          "text": "Designations evolve: bacanora's protection dates to 2000, raicilla's to 2019, sotol's to 2002. This guide records verification dates with each source and checks amendments before shipping legal summaries — a reachable URL never proves a claim by itself.",
+          "text": "Designations evolve: bacanora's protection dates to 2000, raicilla's to 2019, sotol's to 2002. Each source carries the date it was last checked, and legal summaries are rechecked against amendments before they go out. A link that opens doesn't prove anything by itself.",
           "deeper": "Legal geography is municipal, not whole-state: bacanora's designation covers selected Sonoran municipalities, and raicilla's names specific municipalities in Jalisco and Nayarit. Map shading means guide coverage, never legal boundaries."
         }
       ]

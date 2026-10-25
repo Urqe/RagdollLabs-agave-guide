@@ -8,7 +8,7 @@
       "legalStatus": "Spirit with its own Denomination of Origin; NOM-006-SCFI-2012 defines the legal classes blanco (which may receive brief permitted maturation up to the reposado window), joven or oro, reposado, añejo and extra añejo, each with oak-resting minimums. Tequila also comes in two composition categories — 100% de agave and tequila (mixed agave and other sugars) — which are composition facts, not quality grades. Cristalino is a finishing/marketing style, not a legal class.",
       "materials": "Blue weber agave (Agave tequilana), cultivated; 100% de agave tequila uses only agave sugars, while the other legal composition category permits other sugars alongside agave — a disclosed composition fact, not a quality grade.",
       "practices": "Steam cooking in hornos or autoclaves, tahona or roller-mill extraction, fermentation, double distillation, optional oak resting.",
-      "diversity": "Valley and highland agave read editorially distinct (savoury/vegetal vs sweeter/floral); class terms are spirit-specific.",
+      "diversity": "Valley agave tends to taste savoury and vegetal, highland agave sweeter and floral; class terms are spirit-specific.",
       "plantIds": [
         "agave-tequilana"
       ],
@@ -21,7 +21,7 @@
         "diffords-tequila-category",
         "wikipedia-tequila"
       ],
-      "sustainability": "Agave tequilana is cultivated at scale, so tequila does not share the wild-population pressure of wild-harvested traditions; documented industry concerns centre on agave price cycles and the push for faster industrial cooking rather than species pressure."
+      "sustainability": "Agave tequilana is cultivated at scale, so tequila does not share the wild-population pressure of wild-harvested traditions; the concerns the industry itself reports centre on agave price cycles and the push for faster industrial cooking rather than species pressure."
     },
     {
       "id": "mezcal",
@@ -31,7 +31,7 @@
       "legalStatus": "Spirit with its own Denomination of Origin; NOM-070-SCFI-2016 defines three production categories (mezcal, mezcal artesanal, mezcal ancestral) and six classes: blanco o joven, madurado en vidrio, reposado (2–12 months in wood), añejo (over 12 months in wood), abocado con and destilado con. Joven and abocado are different classes, not synonyms, and mezcal's requirements differ from tequila's even where minimums coincide. Tobalá is a wild agave under sustainability pressure, not a legal class of its own.",
       "materials": "Any agave species permitted by the denomination: cultivated espadín (Agave angustifolia), wild and cultivated tobalá (Agave potatorum), among many others.",
       "practices": "NOM-070 permits several equipment paths per category: pit, mampostería or autoclave cooking in the base category; pit or elevated mampostería ovens in artesanal; pit ovens in ancestral. Artisanal distillation may use copper alembics or clay pots (ollas de barro with clay/wood/copper monteras); ancestral uses clay pots with fuego directo. Pechuga is a destilado con practice, not a separate category. Not all mezcal is pit-roasted or smoky — the category-level process allows other cooking methods.",
-      "diversity": "Batch variation is genuine and large; ensambles need composition evidence; smoke depends on the cook, not the category.",
+      "diversity": "Batches vary a lot; an ensamble needs a known mix of agaves behind it; smoke depends on the cook, not the category.",
       "plantIds": [
         "agave-angustifolia",
         "agave-potatorum"
@@ -72,9 +72,9 @@
     {
       "id": "raicilla",
       "name": "Raicilla",
-      "origin": "A Jalisco tradition with editorially distinct Sierra and Costa styles.",
+      "origin": "A Jalisco tradition with two distinct styles, Sierra and Costa.",
       "history": "Historically a clandestine rural spirit in Jalisco's mountains; protected as a denomination of origin in 2019.",
-      "legalStatus": "Spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019); the declaration names specific municipalities. Costa vs Sierra is an editorial tradition split, not a legal class; reposado is a legally defined aged class under the DO.",
+      "legalStatus": "Spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019); the declaration names specific municipalities. Costa and Sierra are styles, not legal classes; reposado is a legally defined aged class under the DO.",
       "materials": "Several agaves: maximiliana (Sierra signature), angustifolia/chico aguiar, rhodacantha and others (Costa).",
       "practices": "Adobe-oven or pit roast, open wild-yeast fermentation in wooden vats, small-batch distillation; taberna is the local word for a small distillery.",
       "diversity": "Sierra and Costa bottlings differ in plant, roast and still; batches vary by taberna.",
@@ -92,7 +92,7 @@
         "wikipedia-raicilla",
         "mezcalistas-wild-agave-sustainability"
       ],
-      "sustainability": "Parts of the raicilla range depend on wild-harvested maximiliana and related species; sustainability claims vary by producer and are presented only where documented."
+      "sustainability": "Parts of the raicilla range depend on wild-harvested maximiliana and related species. Producers differ on sustainability, and only some have evidence to show for it."
     },
     {
       "id": "tuxca",
@@ -102,7 +102,7 @@
       "legalStatus": "A regional tradition with no denomination of origin; its legal status is not equivalent to tequila or mezcal, and absence of a NOM does not mean inauthentic.",
       "materials": "Wild agaves, often Liñeño/Cimarrón (Agave angustifolia and local relatives); ensambles vary by vinatero and batch.",
       "practices": "Cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation.",
-      "diversity": "Batch composition is genuinely variable; species composition is recorded only when a source documents the actual batch.",
+      "diversity": "Batches vary in what goes into them; the mix of agaves is only named when a source says what went into that batch.",
       "plantIds": [
         "tuxca-wild-agaves"
       ],
@@ -117,11 +117,11 @@
       "id": "comiteco",
       "name": "Comiteco",
       "origin": "A sap-derived tradition from Comitán, Chiapas; protected as an Indicación Geográfica since October 2025.",
-      "history": "Made from aguamiel collected from cultivated maguey comiteco (identified as Agave americana L. in the 2025 IG declaration; some other references and producer/importer material name Agave atrovirens — the guide keeps both and does not silently resolve the difference); the piña is never cooked.",
-      "legalStatus": "A regional tradition protected since 6 October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas” (an IG, not a denomination of origin like tequila or mezcal). The declaration covers a spirit made from maguey comiteco (Agave americana L.) and cane sugars in the Meseta Comiteca-Tojolabal; comiteco outside that scope is not automatically covered. Añejo remains a producer expression unless defined in the applicable IG rules — verify per bottle.",
+      "history": "Made from aguamiel collected from cultivated maguey comiteco (identified as Agave americana L. in the 2025 IG declaration; some other references and producer/importer material name Agave atrovirens — both names are kept here rather than quietly picking one); the piña is never cooked.",
+      "legalStatus": "A regional tradition protected since 6 October 2025 as the Indicación Geográfica “Comiteco de Comitán, Chiapas” (an IG, not a denomination of origin like tequila or mezcal). The declaration covers a spirit made from maguey comiteco (Agave americana L.) and cane sugars in the Meseta Comiteca-Tojolabal; comiteco outside that scope is not automatically covered. Añejo remains a producer expression unless defined in the applicable IG rules — check each bottle.",
       "materials": "Aguamiel from the living maguey comiteco (Agave americana L. per the IG declaration; some sources name Agave atrovirens); the protected name explicitly includes cane sugars alongside agave, and composition stays a per-bottle fact — do not label any bottle 100% agave.",
       "practices": "Sap collection, fermentation, distillation in copper; blanco unaged, añejo rested in glass with white oak branches (no barrel maturation) per the example producer.",
-      "diversity": "Composition disclosure varies by bottling; the app records it per bottle rather than as a category claim.",
+      "diversity": "Composition disclosure varies by bottling, so it's listed bottle by bottle, not for the whole category.",
       "plantIds": [
         "agave-atrovirens"
       ],

@@ -71,10 +71,10 @@ test("pair 22: accented/unaccented EN and ES searches keep finding both new prof
 
 test("pair 22: Colima and Nayarit contextual links do not overstate production, legal scope or coverage", () => {
   const tuxca = profileById.get("tuxca-lineno-cimarron-jalisco-colima");
-  assert.ok(/no claim of Colima production coverage/i.test(tuxca.context),
+  assert.ok(/no claim of Colima production coverage|not for Colima/i.test(tuxca.context),
     "the tuxca context keeps Colima to documented borderlands context");
   const region = regions.find((r) => r.id === "jalisco-colima-borderlands");
-  assert.ok(/does not by itself establish Colima production coverage/i.test(region.distinctions),
+  assert.ok(/does not by itself establish Colima production coverage|can't speak for Colima production/i.test(region.distinctions),
     "the region record states the Jalisco-made example limit");
   const sierra = profileById.get("raicilla-maximiliana-sierra-jalisco");
   const costa = profileById.get("raicilla-costa-jalisco");
@@ -88,7 +88,7 @@ test("pair 22: Colima and Nayarit contextual links do not overstate production, 
   }
   // ES mirrors carry the same limits.
   const esTuxca = contentEs.profiles["tuxca-lineno-cimarron-jalisco-colima"].context;
-  assert.ok(/cobertura de producción colimense/i.test(esTuxca), "ES tuxca context states the Colima limit");
+  assert.ok(/cobertura de producción colimense|no por Colima/i.test(esTuxca), "ES tuxca context states the Colima limit");
   const esCosta = contentEs.profiles["raicilla-costa-jalisco"].context;
   assert.ok(esCosta.includes("Bahía de Banderas") && /no todo Nayarit/i.test(esCosta), "ES costa context stays precise");
 });
