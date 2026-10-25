@@ -37,7 +37,7 @@
       "atAGlance": "The only agave legally permitted for tequila; cultivated at scale in Jalisco's valley and highlands.",
       "whereItGrows": "Cultivated in the Tequila Valley and the Jalisco highlands (Los Altos), in volcanic and red mineral soils respectively.",
       "harvestProduction": "Harvested at maturity (typically 5–7 years); the jimador trims the leaves to the piña, which is then steam-cooked — never sap-collected.",
-      "sensoryTendencies": "Editorial guidance: valley-grown reads savoury and vegetal, highland-grown sweeter and more floral; this is place guidance, not a universal flavour.",
+      "sensoryTendencies": "Valley-grown tends to taste savoury and vegetal, highland-grown sweeter and more floral; that's about place, not a universal flavour.",
       "sustainability": "Cultivated, so wild-population pressure is not the concern it is for wild-harvested agaves."
     },
     {
@@ -84,8 +84,8 @@
       "atAGlance": "Mexico's great workhorse agave: espadín in Oaxaca's mezcal, Pacifica/Yaquiana in Sonora's bacanora, chico aguiar in coastal raicilla.",
       "whereItGrows": "Valles Centrales of Oaxaca (cultivated), the Sierra de Sonora (wild), and coastal Jalisco (wild and cultivated).",
       "harvestProduction": "Cultivated at scale in Oaxaca; wild-harvested in Sonora. Cooked (pit roast or steam), never sap-collected.",
-      "sensoryTendencies": "Editorial guidance: espadín mezcals read roast-forward; bacanora's Pacifica adds Sonoran herbality; flavours differ by place and process, not by the name alone.",
-      "sustainability": "Wild harvest pressures vary sharply by region: Sonora's bacanora depends on wild yaquiana/Pacifica populations, and mezcal's growth has increased demand on wild-harvested angustifolia relatives elsewhere. Where espadín is cultivated at scale (Oaxaca) the pressure is far lower. Whether Sonora's Pacifica/Yaquiana is the same plant as espadín or a distinct local variety remains debated; this guide preserves the regional names without settling the botany. (Sustainability reporting on wild agave harvest is an active topic in the category press, e.g. Mezcalistas, reviewed 2026-10-21.)"
+      "sensoryTendencies": "Espadín mezcals tend to taste of roast; bacanora's Pacifica adds Sonoran herbality; flavours differ by place and process, not by the name alone.",
+      "sustainability": "Wild harvest pressures vary sharply by region: Sonora's bacanora depends on wild yaquiana/Pacifica populations, and mezcal's growth has increased demand on wild-harvested angustifolia relatives elsewhere. Where espadín is cultivated at scale (Oaxaca) the pressure is far lower. Whether Sonora's Pacifica/Yaquiana is the same plant as espadín or a distinct local variety is still debated, so the regional names stay as they are. Pressure on wild agave is a live topic in the category press, for example at Mezcalistas."
     },
     {
       "id": "agave-maximiliana",
@@ -120,8 +120,8 @@
       "atAGlance": "Sierra de Jalisco's signature raicilla agave, wild-harvested; locally also called lechuguilla (unrelated to the Sonoran plant of that name).",
       "whereItGrows": "Mountain country of Jalisco's Sierra Occidental, around La Vieja and the Sierra de Talpa.",
       "harvestProduction": "Wild-harvested; roasted in above-ground adobe ovens, fermented with wild yeasts, distilled in small batches.",
-      "sensoryTendencies": "Editorial guidance: Sierra raicilla reads herbal and rustic; wild harvest means genuine batch variation.",
-      "sustainability": "Wild-harvested in Jalisco's Sierra Occidental; raicilla's growing demand puts pressure on wild maximiliana populations, and some producers report replanting programs, though documented evidence is limited. Treated here as a wild-harvest sustainability concern, not a verified producer claim."
+      "sensoryTendencies": "Sierra raicilla tends to be herbal and rustic; with wild harvest, batches vary.",
+      "sustainability": "Wild-harvested in Jalisco's Sierra Occidental; raicilla's growing demand puts pressure on wild maximiliana populations. Some producers report replanting programs, but the evidence is thin, so take that as their word, not a checked fact."
     },
     {
       "id": "agave-atrovirens",
@@ -133,7 +133,7 @@
         }
       ],
       "cultivation": "cultivated; sap collected from the living plant (no cooking)",
-      "uncertainty": "The 2025 IG declaration for Comiteco de Comitán, Chiapas identifies the maguey comiteco as Agave americana L.; some producer/importer and earlier references name Agave atrovirens. The guide records both names rather than silently resolving the difference.",
+      "uncertainty": "The 2025 IG declaration for Comiteco de Comitán, Chiapas identifies the maguey comiteco as Agave americana L.; some producer/importer and earlier references name Agave atrovirens. Both names appear here, rather than one being quietly chosen.",
       "sourceIds": [
         "backalley-comiteco",
         "dof-comiteco-ig-2025"
@@ -151,7 +151,7 @@
       "atAGlance": "Maguey comiteco, the sap agave of Comitán, Chiapas; the base of comiteco. The 2025 IG declaration identifies it as Agave americana L.; earlier references also name Agave atrovirens.",
       "whereItGrows": "Cultivated in the highland plateau of central Chiapas around Comitán de Domínguez.",
       "harvestProduction": "Cultivated; the living plant is scraped and its aguamiel collected daily — the piña is never cooked.",
-      "sensoryTendencies": "Editorial guidance: sap-derived comiteco skips roast character entirely; disclosed bottlings may include cane sugars, and composition stays a per-bottle fact.",
+      "sensoryTendencies": "Sap-derived comiteco skips roast character entirely; bottlings may include cane sugars, and composition stays a per-bottle fact.",
       "sustainability": "Cultivated; the plant stays alive through sap harvest."
     },
     {
@@ -184,7 +184,7 @@
       "atAGlance": "Maguey pulquero, the sap agave of the pulque heartland; the base of destilado de pulque.",
       "whereItGrows": "Cultivated in Tlaxcala and the central-Mexico pulque highlands.",
       "harvestProduction": "Cultivated; aguamiel is collected daily from the living plant, fermented into pulque (about 48 hours), then distilled — no cooking.",
-      "sensoryTendencies": "Two paths from one species. As maguey pulquero its sap becomes pulque and destilado de pulque, with no roast at all; as maguey verde on the Potosino plateau its piña is cooked for mezcal, which tasters of the cited example find green and low in smoke.",
+      "sensoryTendencies": "Two paths from one species. As maguey pulquero its sap becomes pulque and destilado de pulque, with no roast at all; as maguey verde on the Potosino plateau its piña is cooked for mezcal, which tasters of the example bottle find green and low in smoke.",
       "sustainability": "Cultivated; the plant stays alive through sap harvest."
     },
     {
@@ -205,7 +205,7 @@
         }
       ],
       "cultivation": "wild-harvested; ensambles vary by batch",
-      "uncertainty": "Tuxca batches may blend several wild agaves; species composition is recorded only when a source documents the actual batch.",
+      "uncertainty": "Tuxca batches may blend several wild agaves; the mix is only named when a source says what went into the batch.",
       "sourceIds": [
         "mexicanspiritsbible-tuxca",
         "mezcalistas-balancan-tasting"
@@ -222,8 +222,8 @@
       "atAGlance": "The wild agaves of the Jalisco–Colima borderlands — Liñeño, Cimarrón and local relatives — vinateros' raw material for tuxca.",
       "whereItGrows": "Southern Jalisco river canyons around Tuxcacuesco and Zapotitlán de Vadillo, reaching toward Colima.",
       "harvestProduction": "Wild-harvested; cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation. Ensambles vary by batch.",
-      "sensoryTendencies": "Editorial guidance: batches vary genuinely by vinatero and agave mix; species composition is recorded only when a source documents the actual batch.",
-      "sustainability": "Wild-harvested; batch composition is evidence-led, never assumed."
+      "sensoryTendencies": "Batches vary by vinatero and agave mix; the mix of agaves is only named when a source says what went into that batch.",
+      "sustainability": "Wild-harvested; what went into a batch is never assumed."
     },
     {
       "id": "agave-potatorum",
@@ -239,11 +239,11 @@
         },
         {
           "name": "papalometl",
-          "region": "Puebla (Mixteca Poblana; potatorum in the cited example's documented case)"
+          "region": "Puebla (Mixteca Poblana; in the example bottle's case, potatorum)"
         }
       ],
-      "cultivation": "mostly wild-harvested at high altitude; seed-only reproduction makes cultivation slow, so wild populations are under pressure — some producers now cultivate or reforest (a cited cultivated example is Montelobos, produced in Puebla, outside this wild-style profile)",
-      "uncertainty": "Wild vs cultivated tobalá can taste noticeably different; flavour variation between batches is documented and genuine. The name papalometl in Puebla names Agave potatorum in the cited example's documented case, but the same word can point to other agaves in other states — keep names regional.",
+      "cultivation": "mostly wild-harvested at high altitude; seed-only reproduction makes cultivation slow, so wild populations are under pressure — some producers now cultivate or reforest (Montelobos is a cultivated example, made in Puebla, outside this wild-style profile)",
+      "uncertainty": "Wild and cultivated tobalá can taste noticeably different, and batches vary. In Puebla, papalometl names Agave potatorum in the example bottle's case, but the same word can point to other agaves in other states — keep names regional.",
       "sourceIds": [
         "mezcalreviews-tobala-category",
         "mezcalreviews-montelobos-tobala",
@@ -263,8 +263,8 @@
       "atAGlance": "Tobalá, the small high-altitude 'king of agaves' of Oaxaca's Sierra Norte — mostly wild, some cultivated.",
       "whereItGrows": "High mountains of Oaxaca's Sierra Norte (and beyond); 12–15 year maturity at altitude.",
       "harvestProduction": "Wild-harvested traditionally; some producers now cultivate or reforest. Pit roast, stone mill, wild fermentation; clay or copper stills.",
-      "sensoryTendencies": "Editorial guidance: typically lighter and more floral than espadín; a cited blind tasting of eight tobalás found no single common thread — wild and cultivated batches taste noticeably different.",
-      "sustainability": "Seed-only reproduction makes cultivation slow, so wild populations are under pressure from tobalá demand; some producers cultivate or reforest (the cited Montelobos entry is 100% cultivated). As a wild-harvested species with a long maturation cycle, tobala is one of the most-discussed sustainability cases in agave spirits (category reporting reviewed 2026-10-21)."
+      "sensoryTendencies": "Typically lighter and more floral than espadín; in one blind tasting of eight tobalás, tasters found no common thread — wild and cultivated batches taste noticeably different.",
+      "sustainability": "Seed-only reproduction makes cultivation slow, so wild populations are under pressure from tobalá demand; some producers cultivate or reforest (the Montelobos bottle is 100% cultivated). As a wild-harvested species with a long maturation cycle, tobala is one of the most-discussed sustainability cases in agave spirits."
     },
     {
       "id": "dasylirion-desert-spoon",
@@ -279,7 +279,7 @@
           "region": "Chihuahuan desert (northern México and southwestern USA)"
         }
       ],
-      "cultivation": "wild-harvested, often after roughly 8–12 years (a variable, source-dependent range, not a fixed figure); a single plant may yield roughly one bottle",
+      "cultivation": "wild-harvested, often after roughly 8–12 years (it varies, so treat that as a rough range); a single plant may yield roughly one bottle",
       "uncertainty": "Not an agave: Dasylirion is a related genus in the Asparagaceae family. This page keeps that distinction explicit.",
       "sourceIds": [
         "wikipedia-sotol",
@@ -297,8 +297,8 @@
       "atAGlance": "Desert spoon — sotol's plant. Not an agave: Dasylirion is a related genus in the Asparagaceae family.",
       "whereItGrows": "The Chihuahuan desert of northern México (Chihuahua, Coahuila, Durango), 8–12 years to maturity.",
       "harvestProduction": "Wild-harvested; piña pit-roasted in conical ovens (or steam-cooked by larger producers), wild-fermented, distilled in copper or clay. Harvest practice and species determine whether roots are left intact; regrowth is not guaranteed by harvest alone.",
-      "sensoryTendencies": "Editorial guidance: earthy and smoky-herbal; the genus distinction means sotol is never presented as an agave spirit.",
-      "sustainability": "Wild Dasylirion stands face documented harvest pressure; regrowth after heart harvest depends on species, method and evidence this guide has not verified, so no regeneration claim is made here. Conservation programs address the pressure; cultivation alone would not establish low impact."
+      "sensoryTendencies": "Earthy and smoky-herbal; sotol comes from a different genus than agave, so it's never presented as an agave spirit.",
+      "sustainability": "Wild sotol plants are under real harvest pressure. Whether they regrow after the heart is cut depends on the species and the method, and the evidence isn't there yet to promise it. Conservation programs work on the pressure; cultivation alone wouldn't make the impact low."
     },
     {
       "id": "agave-rhodacantha",
@@ -331,7 +331,7 @@
       "atAGlance": "A coastal-Jalisco raicilla agave, used alongside chico aguiar (angustifolia) in the Costa tradition.",
       "whereItGrows": "Coastal mountains and canyons of southwestern Jalisco, around Cabo Corrientes.",
       "harvestProduction": "Wild and cultivated; underground pit roast, wild-yeast fermentation, small-batch distillation.",
-      "sensoryTendencies": "Editorial guidance: contributes to Costa raicilla's profile alongside chico aguiar; common names for coastal Jalisco agaves vary by locality and taberna.",
+      "sensoryTendencies": "Contributes to Costa raicilla's profile alongside chico aguiar; common names for coastal Jalisco agaves vary from town to town and taberna to taberna.",
       "sustainability": "Mixed wild/cultivated; regional names are preserved without resolving species debates."
     },
     {
@@ -354,10 +354,10 @@
       "cultivation": "wild-harvested and cultivated; the wild-harvest end carries the sustainability pressure",
       "atAGlance": "The papalote agave of Guerrero's mountain mezcal — a wide, frost-toned agave that gives the state's mezcal its fruity, buttery signature.",
       "whereItGrows": "Mountain slopes of Guerrero and adjacent Michoacán (Balsas river basin), often at elevation on thin soils — and Michoacán's own volcanic river valleys, where Rio de Parras communities call it penca ancha.",
-      "harvestProduction": "Piña traditions: harvested at maturity (variable, source-dependent maturity years), pit-roasted, fermented and distilled as mezcal.",
-      "sensoryTendencies": "Editorial guidance: cupreata mezcals often read fruitier and more buttery than espadín, with mint, green pepper and tropical-fruit notes; smoke varies with the producer's roast.",
-      "sustainability": "Wild cupreata populations carry harvest pressure as Guerrero mezcal grows; some producers cultivate or reforest. The cited CONAFOR/INIFAP-style regional management literature is the evidence base for plant-level claims.",
-      "uncertainty": "Papalote/papalometl names appear in both Guerrero and Michoacán and may cover more than one cupreata-like taxon; Michoacán's penca ancha (Rio de Parras) is documented as Agave cupreata for the cited example. The names stay regional, and the species debate stays open.",
+      "harvestProduction": "Piña traditions: harvested at maturity (the number of years varies), pit-roasted, fermented and distilled as mezcal.",
+      "sensoryTendencies": "Cupreata mezcals often taste fruitier and more buttery than espadín, with mint, green pepper and tropical-fruit notes; smoke varies with the producer's roast.",
+      "sustainability": "Wild cupreata populations are under harvest pressure as Guerrero mezcal grows; some producers cultivate or reforest.",
+      "uncertainty": "Papalote/papalometl names appear in both Guerrero and Michoacán and may cover more than one cupreata-like taxon; Michoacán's penca ancha (Rio de Parras) is identified as Agave cupreata for the example bottle. The names stay regional, and the species debate stays open.",
       "traditionIds": [
         "mezcal"
       ],
@@ -387,8 +387,8 @@
       "atAGlance": "Cenizo, the signature agave of Durango's mezcal — the plant that gives the northern state's mezcals their fruity, often creamy character.",
       "whereItGrows": "Durango's sierra and canyon country, often among pines at elevation; the northern edge of the mezcal denomination.",
       "harvestProduction": "Piña traditions: harvested at maturity, pit-roasted, mashed (axe and desgarradora in traditional vinatas), fermented and distilled as mezcal.",
-      "sensoryTendencies": "Editorial guidance: cenizo mezcals often read fruit-forward and creamy, with candy, tropical-fruit and lactic notes; heat and rustic funk vary by batch.",
-      "sustainability": "Wild cenizo harvest pressure grows with Durango's rising output; nursery propagation is documented in the regional research literature.",
+      "sensoryTendencies": "Cenizo mezcals often taste fruit-forward and creamy, with candy, tropical-fruit and lactic notes; heat and rustic funk vary by batch.",
+      "sustainability": "Wild cenizo harvest pressure grows with Durango's rising output; regional research describes nursery propagation.",
       "uncertainty": null,
       "traditionIds": [
         "mezcal"

@@ -182,7 +182,7 @@ test("pair 8: one guidance note per profile view, methodology lives in Learn", a
     "deterministic-hedging boilerplate moved to Learn");
   const chapters = JSON.parse(await read("assets/data/chapters.json"));
   const flavour = chapters.chapters.find((c) => c.id === "understanding-flavour");
-  assert.ok(flavour.blocks.some((b) => /How this guide reaches its conclusions/.test(b.text)),
+  assert.ok(flavour.blocks.some((b) => /How (this guide reaches its conclusions|the guide works)/.test(b.text)),
     "extended methodology documented in the Learn reference chapter");
   const esData = JSON.parse(await read("assets/data/content-es.json"));
   const n = flavour.blocks.length - 1;

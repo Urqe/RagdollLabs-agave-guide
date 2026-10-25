@@ -66,7 +66,7 @@ test("R21: plant page follows the plan structure", () => {
   }
   assert.ok(view.textContent.includes("tobalá"), "common names shown");
   assert.ok(view.textContent.includes("wild"), "wild-harvest distinguished");
-  assert.match(view.textContent, /Editorial guidance/, "sensory tendencies qualified as editorial");
+  assert.match(view.textContent, /tasters found no common thread/, "sensory tendencies stay qualified in plain words");
   const exprLinks = view.querySelectorAll('a[href^="#/profile/"]');
   assert.ok(exprLinks.length >= 1, "regional expressions link out");
 });

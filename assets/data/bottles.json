@@ -164,7 +164,7 @@
         "casaendemica-brands",
         "mezcalreviews-lavenenosa-costa"
       ],
-      "abvNote": "ABV not documented in cited sources",
+      "abvNote": "The sources don't give the ABV — check your bottle",
       "editorialNote": "Fits the Costa profile's pit-cooked coastal reading: savoury and smoky is exactly what the profile predicts for this style.",
       "noteProfileId": "raicilla-costa-jalisco",
       "noteSourceIds": [
@@ -192,7 +192,7 @@
         "mezcalistas-balancan-tasting",
         "mezcalreviews-balancan-tuxca"
       ],
-      "abvNote": "ABV not documented in cited sources",
+      "abvNote": "The sources don't give the ABV — check your bottle",
       "traditionId": "tuxca",
       "regionIds": [
         "jalisco-colima-borderlands"
@@ -212,12 +212,12 @@
       "place": "Comitán de Domínguez, Chiapas",
       "profileId": "comiteco-aguamiel-chiapas",
       "composition": "Distilled from fermented agave sap (aguamiel); the broader comiteco category permits an additional cane-based sugar source — whether this specific bottle is 100% agave is not documented in the cited sources",
-      "reviewSummary": "Made from the sap of maguey Comitlán, fermented and distilled in copper, according to its Mezcal Reviews listing. Tasting notes for this expression are not yet documented.",
+      "reviewSummary": "Made from the sap of maguey Comitlán, fermented and distilled in copper, according to its Mezcal Reviews listing. No tasting notes for this expression yet.",
       "sourceIds": [
         "backalley-comiteco",
         "mezcalreviews-9guardianes-blanco"
       ],
-      "abvNote": "ABV not documented in cited sources",
+      "abvNote": "The sources don't give the ABV — check your bottle",
       "traditionId": "comiteco",
       "regionIds": [
         "comitan-chiapas"
@@ -347,7 +347,7 @@
       "producer": "Tabernas Edición line (batch producers vary; Antonio Arrizon, Benito Salcedo Rios, José Salcedo listed by the review source), Sierra Occidental, Jalisco",
       "expression": "Raicilla Tabernas Reposado",
       "abv": null,
-      "abvNote": "ABV varies by batch (review source lists a 44.8% batch; a 40-46% range is documented) — check the bottle",
+      "abvNote": "ABV varies by batch (the review lists a 44.8% batch; a 40–46% range is reported) — check the bottle",
       "spirit": "raicilla",
       "place": "Sierra Occidental, Jalisco",
       "batch": "Rested about 3 months in wooden (sherry) casks; each Tabernas Edición batch differs — check your bottle",
@@ -491,7 +491,7 @@
       "producer": "Montelobos (mezcalero Iván Saldaña; produced at Palenque del Tentzo), Puebla",
       "expression": "Montelobos Tobalá",
       "abv": null,
-      "abvNote": "ABV varies by lot; the cited review lists lot-specific notes — check your bottle",
+      "abvNote": "ABV varies by lot; the review lists lot-specific notes — check your bottle",
       "spirit": "mezcal",
       "place": "San Nicolás Huajuapan (Palenque del Tentzo), Puebla",
       "batch": "100% cultivated tobalá (no wild-harvest), pit-roasted; sustainability-focused production",
@@ -518,7 +518,7 @@
       "producer": "Macurichos (maestro mezcalero Gonzalo Martinez), Santiago Matatlán, Oaxaca",
       "expression": "Ancestral Tobalá",
       "abv": null,
-      "abvNote": "Small-batch ABV varies (a cited member review lists a 47.54% batch); check your bottle",
+      "abvNote": "Small-batch ABV varies (a member review lists a 47.54% batch); check your bottle",
       "spirit": "mezcal",
       "place": "Santiago Matatlán, Oaxaca",
       "batch": "Ancestral production: earthen-oven cooked, tahona-milled, wooden-vat fermented, clay pot stills; family also reforests wild populations",
@@ -541,13 +541,13 @@
       "producer": "Del Maguey Single Village (Florencio Carlos Sarmiento and family), Santa Catarina Minas, Oaxaca",
       "expression": "Pechuga",
       "abv": null,
-      "abvNote": "ABV varies by batch (a cited retail listing shows 49%); check your bottle",
+      "abvNote": "ABV varies by batch (a retail listing shows 49%); check your bottle",
       "spirit": "mezcal",
       "place": "Santa Catarina Minas, Oaxaca",
       "batch": "Triple-distilled; the third distillation passes vapor through wild mountain fruits, almonds, rice and a suspended raw chicken breast (pechuga); seasonal, limited production",
       "profileId": null,
       "reviewSummary": "Black licorice, anise and clove with fruit and a Scotch-like smokiness — and, yes, a taste of chicken; other notes find basil, lemon, ocean and fruit on the nose, with smoky roast chicken skin, paprika and sea salt in a second review. A festival-production style, not an everyday class.",
-      "editorialNote": "Pechuga is a festival-production style (a third distillation over fruit, rice and a suspended raw chicken breast), not a typical joven espadín; it is contextual to mezcal tradition rather than representative of this profile.",
+      "editorialNote": "Pechuga is a festival-production style (a third distillation over fruit, rice and a suspended raw chicken breast), not a typical joven espadín; it's here for context on mezcal tradition, not as a typical example of this profile.",
       "noteProfileId": "mezcal-espadin-valles-centrales",
       "noteSourceIds": [
         "mezcalreviews-del-maguey-pechuga"
@@ -594,12 +594,12 @@
       "producer": "Indio Alonso (fifth-generation tuxquero David Benítez Venegas), Zapotitlán de Vadillo, Jalisco",
       "expression": "Tuxca Cimarrón / Salmiana",
       "abv": null,
-      "abvNote": "Small-batch production; ABV not documented in the cited source — check your bottle",
+      "abvNote": "Small-batch production; the review doesn't give the ABV — check your bottle",
       "spirit": "tuxca",
       "place": "Zapotitlán de Vadillo, Jalisco",
       "batch": "Wild cimarrón (Agave angustifolia), cuaquizoca and salmiana (Agave inaequidens) agaves, pit-roasted, volcanic-stone-pit fermented, copper double-distilled; another producer pushing for a tuxca denomination of origin",
       "profileId": "tuxca-lineno-cimarron-jalisco-colima",
-      "reviewSummary": "Several agaves (cimarrón, cuaquizoca, salmiana), fermented in a volcanic-stone pit, according to its Mezcal Reviews entry. Tasting notes for this batch are not yet documented, so no flavour is claimed here.",
+      "reviewSummary": "Several agaves (cimarrón, cuaquizoca, salmiana), fermented in a volcanic-stone pit, according to its Mezcal Reviews entry. No tasting notes for this batch yet.",
       "sourceIds": [
         "mezcalreviews-indio-alonso-tuxca"
       ],
@@ -614,12 +614,12 @@
       "producer": "Bienvenido Fernandez (40+ years' experience; learned in clandestine vinatas of the northern Chihuahuan Sierra), Chihuahua",
       "expression": "Clande Sotol Yellow",
       "abv": null,
-      "abvNote": "ABV varies by batch (a cited member review lists 46.5% for a March 2018 lot); check your bottle",
+      "abvNote": "ABV varies by batch (a member review lists 46.5% for a March 2018 lot); check your bottle",
       "spirit": "sotol",
       "place": "Northern Chihuahuan Sierra, Chihuahua",
       "batch": "Small batches from wild Dasylirion; the colour-coded Clande labels each mark a different sotolero — the yellow label is Bienvenido Fernandez",
       "profileId": "sotol-chihuahua",
-      "reviewSummary": "Notes of banana, wood, cotija cheese, honey and nuts from the cited review, from a fourth-clandestine-generation sotolero; the brand’s terroir-driven project supports small local producers and Dasylirion conservation.",
+      "reviewSummary": "Notes of banana, wood, cotija cheese, honey and nuts from the review, from a fourth-clandestine-generation sotolero; the brand’s terroir-driven project supports small local producers and Dasylirion conservation.",
       "sourceIds": [
         "mezcalreviews-clande-yellow",
         "wikipedia-sotol"
@@ -638,7 +638,7 @@
       "producer": "Vinomex (master distiller José Daumas Gil de Partearroyo), Delicias, Chihuahua",
       "expression": "Sotol Añejo",
       "abv": null,
-      "abvNote": "ABV not stated on the cited review page; the producer's aged line is lower-ABV per member notes — check your bottle",
+      "abvNote": "The review page doesn't state the ABV; member notes say the producer's aged line runs lower — check your bottle",
       "spirit": "sotol",
       "place": "Delicias, Chihuahua",
       "batch": "100% wild-harvested Dasylirion, steam-cooked, triple-distilled in double-column copper, then aged 2 years in new French white oak; USDA organic and Kosher certified",
@@ -665,10 +665,10 @@
       "producer": "Bacatt (small-batch Sonoran bacanora), Sonora",
       "expression": "Bacatt Bacanora",
       "abv": null,
-      "abvNote": "Small-lot production; ABV varies (the cited review is from lot 2305) — check your bottle",
+      "abvNote": "Small-lot production; ABV varies (the review is from lot 2305) — check your bottle",
       "spirit": "bacanora",
       "place": "Sonora",
-      "batch": "Traditional underground-oven roasted maguey pacifica; lot 2305, bottle 242 of the cited run",
+      "batch": "Traditional underground-oven roasted maguey pacifica; lot 2305, bottle 242 of that run",
       "profileId": "bacanora-pacifica-sierra-sonora",
       "reviewSummary": "Wet grass after a rainstorm, woody sweetness and minerality on the nose; the palate shifts between a sweet mesquite-oak note with a minty finish and a peppery cookies-and-cream note — a bottle its reviewer now saves for special occasions.",
       "sourceIds": [
@@ -688,7 +688,7 @@
       "producer": "Sunora (small-batch, several generations of bacanora makers), Sonora",
       "expression": "Bacanora Blanco",
       "abv": null,
-      "abvNote": "ABV not documented on the cited review page — check your bottle",
+      "abvNote": "The review page doesn't give the ABV — check your bottle",
       "spirit": "bacanora",
       "place": "Sonora",
       "batch": "Maguey pacifica roasted 48 hours in underground ovens (mallas), stone-wheel crushed, fermented 6-12 days, triple-distilled",
@@ -711,10 +711,10 @@
       "producer": "Rafael Encinas (double-distillation), San Pedro de la Cueva, Sonora",
       "expression": "Bacanora",
       "abv": null,
-      "abvNote": "Small-batch production; ABV varies (the cited review lists 48% for batch B002) — check your bottle",
+      "abvNote": "Small-batch production; ABV varies (the review lists 48% for batch B002) — check your bottle",
       "spirit": "bacanora",
       "place": "San Pedro de la Cueva, Sonora",
-      "batch": "Handcrafted small batches from agave pacifica; cited batch B002, bottle 909/1000",
+      "batch": "Handcrafted small batches from agave pacifica; batch B002, bottle 909/1000",
       "profileId": "bacanora-pacifica-sierra-sonora",
       "reviewSummary": "Briny and viscous, with fruit and agave sugar; one member note found cotton candy on the nose, orange fancy-toothpaste and buttercream notes, and a slight sour finish.",
       "sourceIds": [
@@ -939,7 +939,7 @@
       "producer": "Tequila Cascahuín (Rosales family, NOM 1123, El Arenal, Jalisco)",
       "expression": "Añejo Tequila",
       "abv": null,
-      "abvNote": "ABV not documented in the cited reviews; the distillery's standard bottling is around 40% — check your bottle",
+      "abvNote": "The reviews don't give the ABV; the distillery's standard bottling is around 40% — check your bottle",
       "spirit": "tequila",
       "place": "El Arenal, Jalisco (Tequila Valley region)",
       "classification": "Tequila — 100% agave añejo (oak-aged 14–16 months)",
@@ -971,7 +971,7 @@
       "plantComposition": "100% blue weber agave (Agave tequilana), single-estate and vintage-dated",
       "batch": "Vintage-dated from a single rancho; aged a minimum of three years in ex-American whiskey barrels",
       "profileId": "tequila-extra-anejo-highland-jalisco",
-      "reviewSummary": "Cherries, anise, dark chocolate, sherry, oak and plantain on the nose, and oak, anise, dried fruit, cherries, toffee, black pepper and cinnamon on the palate. No independent review of the current release is documented; per the producer's own notes.",
+      "reviewSummary": "Cherries, anise, dark chocolate, sherry, oak and plantain on the nose, and oak, anise, dried fruit, cherries, toffee, black pepper and cinnamon on the palate. No independent review of the current release turned up, so this is per the producer's own notes.",
       "sourceIds": [
         "ochotequila-terroir",
         "liquorbarn-ocho-extra-anejo"
@@ -1044,7 +1044,7 @@
       "abv": 38,
       "spirit": "tequila",
       "place": "Atotonilco el Alto, Jalisco (highlands)",
-      "classification": "Tequila — 100% agave añejo (oak-aged 18 months, per the cited taste test)",
+      "classification": "Tequila — 100% agave añejo (oak-aged 18 months, per a taste test)",
       "plantComposition": "100% blue weber agave (Agave tequilana)",
       "profileId": null,
       "coverage": [
@@ -1173,7 +1173,7 @@
         "domingomezcal-brand",
         "sic-cultura-guerrero"
       ],
-      "batch": "Batch and ABV vary by lot (cited member reviews list 47% and 50% lots); check your bottle"
+      "batch": "Batch and ABV vary by lot (member reviews list 47% and 50% lots); check your bottle"
     },
     {
       "id": "lamata-cenizo-durango",
@@ -1197,7 +1197,7 @@
         "lamata-brand",
         "inifap-agave-reproduccion"
       ],
-      "batch": "Small lots from ~40 to 200 litres; ABV varies by lot (cited member reviews list 49.2–54% batches); originally released as Amormata"
+      "batch": "Small lots from ~40 to 200 litres; ABV varies by lot (member reviews list 49.2–54% batches); originally released as Amormata"
     },
     {
       "id": "leyendas-san-luis-potosi",
@@ -1221,14 +1221,14 @@
         "mezcalesdeleyenda-slp",
         "conafor-salmiana-slp"
       ],
-      "batch": "Lots vary (cited reviews cover 42–45% bottlings); the cooking method is disputed between the producer's clay-oven description and a local reviewer's autoclave report — recorded, not settled"
+      "batch": "Lots vary (reviews cover 42–45% bottlings); the cooking method is disputed between the producer's clay-oven description and a local reviewer's autoclave report — and the question is still open"
     },
     {
       "id": "palalma-michoacan-cupreata",
       "brand": "Pal'alma",
       "expression": "Michoacán Cupreata (Penca Ancha)",
       "abv": null,
-      "abvNote": "ABV varies by lot (cited member reviews list 50% and 52% lots); check your bottle",
+      "abvNote": "ABV varies by lot (member reviews list 50% and 52% lots); check your bottle",
       "reviewSummary": "Pink bubblegum, strawberries and cream, sour fruits and grape soda, with a creamy lactic edge its reviewers attribute to the pulque-started fermentation; several note the fruit and pulque softening further with months in glass. Made by maestra mezcalera María E. Pérez and her family in Rio de Parras.",
       "producer": "María E. Pérez and family (maestra mezcalera), Rio de Parras, Michoacán; brand by Pal'alma (Erick Rodriguez)",
       "place": "Rio de Parras, Michoacán",
@@ -1252,7 +1252,7 @@
       "brand": "Zinacantan",
       "expression": "Papalometl (Puebla)",
       "abv": null,
-      "abvNote": "ABV varies by lot (cited member reviews list 46–50% lots); check your bottle",
+      "abvNote": "ABV varies by lot (member reviews list 46–50% lots); check your bottle",
       "reviewSummary": "Apple pie, banana taffy, mango and pineapple per its reviewers, with sharp, sparkling-wine acidity and mineral notes in some lots; a rawhide-fermented batch comes across funkier. Made by maestra mezcalera Fabiola Torres Monfil in San Diego La Mesa Tochimilitzingo.",
       "producer": "Zinacantan (maestra mezcalera Fabiola Torres Monfil, co-founder Diana Pinzón), San Diego La Mesa Tochimilitzingo, Puebla",
       "place": "San Diego La Mesa Tochimilitzingo, Puebla",
@@ -1270,7 +1270,7 @@
         "mezcalistas-zinacantan",
         "globalpress-zinacantan-agave"
       ],
-      "batch": "Very small lots (96–630 litres cited); most single-distilled in copper, some in clay; some batches fermented in rawhide — check your bottle"
+      "batch": "Very small lots (96–630 litres reported); most single-distilled in copper, some in clay; some batches fermented in rawhide — check your bottle"
     }
   ]
 }

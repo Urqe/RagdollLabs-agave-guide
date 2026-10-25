@@ -68,7 +68,7 @@ test("P18-5: invented local testimony is gone; warmth is built from documented f
       "ES warmth comes from documented history");
     // The legal qualification is preserved without the invented speech.
     assert.ok(/no single nationwide pre-1994 ban/.test(enText), "EN legal qualification kept");
-    assert.ok(esText.includes("no afirma una sola prohibici\u00f3n nacional"), "ES legal qualification kept");
+    assert.ok(esText.includes("no muestran una sola prohibici\u00f3n nacional"), "ES legal qualification kept");
   }
 });
 

@@ -149,7 +149,7 @@ test("pair 19: the honest-disputed SLP cooking method is recorded, not settled",
   const esContext = contentEs.profiles["mezcal-verde-altiplano-slp"].context;
   assert.ok(esContext.includes("en disputa"), "the ES mirror states the dispute");
   // The smoke claim stays tied to the reviews, not to the disputed oven type.
-  assert.ok(/per the cited reviews/i.test(p.smoke), "smoke stays review-anchored");
+  assert.ok(/per the (cited )?reviews/i.test(p.smoke), "smoke stays review-anchored");
 });
 
 test("pair 19: ES mirrors are complete for every authored field of the new content", () => {

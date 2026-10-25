@@ -98,7 +98,7 @@ test("F4: profile view renders Spanish editorial content end to end", async () =
     "finish is Spanish");
   const pairing = root.querySelector(".profile-pairing").textContent;
   assert.ok(pairing.includes("Margarita"), "pairing serving renders");
-  assert.ok(pairing.includes("Sugerencia editorial"), "pairing serving is Spanish");
+  assert.ok(pairing.includes("Una sugerencia, no una regla"), "pairing serving is Spanish");
   assert.ok(!/Neat in a small glass/.test(pairing), "no English pairing text");
   // No per-section disclosures: everything relevant is translated.
   assert.equal(root.querySelectorAll(".untranslated-field").length, 0,

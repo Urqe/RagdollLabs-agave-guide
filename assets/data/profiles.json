@@ -46,7 +46,7 @@
         "precision": "town (Tequila, Jalisco); approximate"
       },
       "pairing": {
-        "serving": "Neat in a small glass or with a lime wheel; also the classic Margarita and Paloma base. Editorial suggestion, not a rule.",
+        "serving": "Neat in a small glass or with a lime wheel; also the classic Margarita and Paloma base. A suggestion, not a rule.",
         "foods": [
           "tacos al pastor",
           "ceviche",
@@ -184,7 +184,7 @@
         "precision": "municipality (Aconchi, Sonora); approximate"
       },
       "pairing": {
-        "serving": "Neat in a small glass; a short rest opens the roast aromas. A little water or one ice cube works too if you prefer it softer. Editorial suggestion, not a rule.",
+        "serving": "Neat in a small glass; a short rest opens the roast aromas. A little water or one ice cube works too if you prefer it softer. A suggestion, not a rule.",
         "foods": [
           "carne asada",
           "sonoran cheese (queso cocido)",
@@ -252,7 +252,7 @@
         "precision": "region (Sierra Occidental, Jalisco); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat; its gentle funk also works in a Negroni-style serve (editorial suggestion).",
+        "serving": "Sipped neat; its gentle funk also works in a Negroni-style serve (just a suggestion).",
         "foods": [
           "birria",
           "mole",
@@ -281,7 +281,7 @@
       "spirit": "tuxca",
       "stateId": "jal",
       "stateName": "Jalisco",
-      "context": "Tuxca belongs to the borderlands of southern Jalisco and northern Colima, below the Volcán de Colima, and takes its name from the municipality of Tuxcacuesco. It has no denomination of origin, and the communities that keep it (Tuxcacuesco, the Río Almería valley, Zapotitlán de Vadillo, Tolimán) are content for the name to stay regional rather than legal. They make it the old way, and quietly. Colima's part in this story is the borderland itself: the tradition, the volcano's slopes and the Río Almería valley cross the state line. The cited example bottle is made in Jalisco, and this guide makes no claim of Colima production coverage beyond what its sources document.",
+      "context": "Tuxca belongs to the borderlands of southern Jalisco and northern Colima, below the Volcán de Colima, and takes its name from the municipality of Tuxcacuesco. It has no denomination of origin, and the communities that keep it (Tuxcacuesco, the Río Almería valley, Zapotitlán de Vadillo, Tolimán) are content for the name to stay regional rather than legal. They make it the old way, and quietly. Colima's part in this story is the borderland itself: the tradition, the volcano's slopes and the Río Almería valley cross the state line. The example bottle is made in Jalisco, so it speaks for the Jalisco side of the borderland, not for Colima.",
       "description": "Expect a lean, spicy, mineral-like spirit rather than a smoky-sweet one. Tuxca is defined less by a legal category than by its method: wild agaves (often Liñeño/Cimarrón, Agave angustifolia and relatives) roasted in cylindrical pits, mashed by hand, fermented in volcanic stone craters and distilled in wooden Filipino stills.",
       "plant": "Wild agaves, often Liñeno/Cimarrón (Agave angustifolia and local relatives); ensambles vary by vinatero",
       "process": "Cylindrical pit roast, hand-mash, volcanic crater fermentation, wooden Filipino still distillation",
@@ -322,7 +322,7 @@
         "precision": "municipality (Tuxcacuesco, Jalisco); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat alongside water; lean and mineral, it suits slow sipping (editorial suggestion).",
+        "serving": "Sipped neat alongside water; lean and mineral, it suits slow sipping (just a suggestion).",
         "foods": [
           "pescado a la talla",
           "fresh cheese with tortillas",
@@ -352,7 +352,7 @@
       "spirit": "comiteco",
       "stateId": "chis",
       "stateName": "Chiapas",
-      "context": "Comiteco belongs to Comitán, Chiapas. Instead of cooking agave hearts, producers collect the fresh sap (aguamiel) of the living maguey comiteco, ferment it and distil it. Since 6 October 2025 the name “Comiteco de Comitán, Chiapas” has been protected as an Indicación Geográfica, a legal protection distinct from a denomination of origin. It covers a spirit made from maguey comiteco (identified as Agave americana L. in the declaration; some references also name Agave atrovirens) together with cane sugars in the Meseta Comiteca-Tojolabal. Cane sugar is part of the protected definition, and an honest bottle tells you what's in it.",
+      "context": "Comiteco belongs to Comitán, Chiapas. Instead of cooking agave hearts, producers collect the fresh sap (aguamiel) of the living maguey comiteco, ferment it and distil it. Since 6 October 2025 the name “Comiteco de Comitán, Chiapas” has been protected as an Indicación Geográfica, a legal protection distinct from a denomination of origin. It covers a spirit made from maguey comiteco (identified as Agave americana L. in the declaration; some references also name Agave atrovirens) together with cane sugars in the Meseta Comiteca-Tojolabal. Cane sugar is part of the protected definition, and the label should tell you what's in it.",
       "description": "Expect green, lactic, gently herbal notes from the fermented sap, and none of the roast or smoke of pit-roasted spirits, because the agave is never cooked. In character it sits closer to a distilled pulque than to mezcal, though it's a tradition of its own. Recipes vary between producers and are disclosed bottle by bottle.",
       "plant": "Maguey comiteco (Agave americana L. per the 2025 IG declaration; some references name Agave atrovirens), cultivated; sap collected from the living plant",
       "process": "Sap-derived: aguamiel collected from the living plant, fermented, distilled — no cooking of the piña",
@@ -391,7 +391,7 @@
         "precision": "municipality (Comitán de Domínguez, Chiapas); approximate"
       },
       "pairing": {
-        "serving": "Neat at room temperature, in a small glass; its green, lactic character also suits a meal shared slowly. Editorial suggestion, not a rule.",
+        "serving": "Neat at room temperature, in a small glass; its green, lactic character also suits a meal shared slowly. A suggestion, not a rule.",
         "foods": [
           "chiapaneco tamales",
           "smoked cheeses",
@@ -462,7 +462,7 @@
         "precision": "municipality (Nanacamilpa, Tlaxcala); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat, chilled slightly; its lactic tang suits an open mind (editorial suggestion).",
+        "serving": "Sipped neat, chilled slightly; its lactic tang suits an open mind (just a suggestion).",
         "foods": [
           "barbacoa",
           "mixiotes",
@@ -493,11 +493,11 @@
       "stateId": "jal",
       "stateName": "Jalisco",
       "context": "On the Jalisco coast, around Cabo Corrientes and Tomatlán, raicilla is made mainly from Agave angustifolia (locally chico aguiar) and Agave rhodacantha, and coastal tabernas cook it the old way, in underground pits. Raicilla's denomination of origin (2019) covers 16 Jalisco municipalities and exactly one in Nayarit, Bahía de Banderas on the Jalisco border, rather than all Nayarit. The tradition splits into Sierra and Costa, and the coast is proud of the lean, saline character of its raicilla beside the mountain style.",
-      "description": "Expect more smoke and a more savoury edge than in Sierra raicilla, with citrus and herbs alongside the pit roast. The difference is in the cook: coastal producers traditionally roast in underground pits, where the Sierra uses above-ground adobe ovens. Bottles vary widely, and tasting notes for the example bottle are not yet documented.",
+      "description": "Expect more smoke and a more savoury edge than in Sierra raicilla, with citrus and herbs alongside the pit roast. The difference is in the cook: coastal producers traditionally roast in underground pits, where the Sierra uses above-ground adobe ovens. Bottles vary widely, and there are no tasting notes yet for the example bottle.",
       "plant": "Agave angustifolia (chico aguiar) and Agave rhodacantha (wild and cultivated)",
       "plantId": "agave-angustifolia",
       "process": "Underground pit roast, wild-yeast fermentation, small-batch distillation",
-      "category": "Raicilla — spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019); Costa is an editorial tradition split, not a legal class",
+      "category": "Raicilla — spirit with its own Denomination of Origin (Jalisco and Bahía de Banderas, Nayarit, since 2019); Costa is a style, not a legal class",
       "beginnerNote": "New to coastal raicilla? Think of it as the smokier, pit-roasted cousin of Sierra raicilla: same DO, different cook, and the coast's own take.",
       "aliases": [
         "costa",
@@ -529,7 +529,7 @@
       },
       "exampleBottleId": "la-venenosa-costa",
       "pairing": {
-        "serving": "Sipped neat; the smoke suits slow evening sipping (editorial suggestion).",
+        "serving": "Sipped neat; the smoke suits slow evening sipping (just a suggestion).",
         "foods": [
           "grilled fish",
           "seafood with chile",
@@ -601,7 +601,7 @@
       },
       "exampleBottleId": "fortaleza-reposado",
       "pairing": {
-        "serving": "Neat in a small glass, or over one ice cube; its rounder base also carries a Margarita or Paloma well when you want the oak along. Editorial suggestion, not a rule.",
+        "serving": "Neat in a small glass, or over one ice cube; its rounder base also carries a Margarita or Paloma well when you want the oak along. A suggestion, not a rule.",
         "foods": [
           "tacos",
           "grilled meats",
@@ -678,7 +678,7 @@
       },
       "exampleBottleId": "fortaleza-anejo",
       "pairing": {
-        "serving": "Sipped neat, ideally in a small glass to concentrate the aroma (editorial suggestion).",
+        "serving": "Sipped neat, ideally in a small glass to concentrate the aroma (just a suggestion).",
         "foods": [
           "dark chocolate",
           "mole",
@@ -753,12 +753,12 @@
       },
       "exampleBottleId": "patron-anejo-cristalino",
       "pairing": {
-        "serving": "Served neat or over ice; often positioned as an entry to aged tequila (editorial suggestion).",
+        "serving": "Served neat or over ice; often positioned as an entry to aged tequila (just a suggestion).",
         "foods": [
           "light appetizers",
           "fresh fruit desserts"
         ],
-        "notice": "What to notice first: whether the filtered oak reads smooth or thin to you — opinions genuinely differ."
+        "notice": "What to notice first: whether the filtered oak feels smooth or thin to you — opinions differ."
       },
       "sourceIds": [
         "patron-what-is-cristalino",
@@ -828,7 +828,7 @@
         "precision": "municipality (Comitán de Domínguez, Chiapas); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat to let the gentle oak spice carry the herbal sap character (editorial suggestion).",
+        "serving": "Sipped neat to let the gentle oak spice carry the herbal sap character (just a suggestion).",
         "foods": [
           "chiapaneco tamales",
           "aged cheeses",
@@ -864,10 +864,10 @@
       "stateId": "jal",
       "stateName": "Jalisco",
       "context": "Raicilla has a denomination of origin, and aged expressions exist (the example bottle rests in wood). The exact requirements for aged classes come from the 2019 DO declaration and the published draft standard, not from tequila's rules. This is the young-rested end: a few months in wood that round the spirit without pushing the agave aside. Jalisco's raicilleros are proud that their spirit won legal recognition without losing its rustic character, and short rests are one way they keep it.",
-      "description": "Expect the fruity, floral, lightly smoky raicilla character with a light halo of vanilla, caramel and soft fruit sweetness around the agave, not in place of it. The example bottle lists a 3-month rest, and its reviewers describe sherry-cask influence with plum, raisin and sweet tobacco; they also warn that the cask can overpower the agave. That risk of wood masking the spirit is part of an honest picture of the style.",
+      "description": "Expect the fruity, floral, lightly smoky raicilla character with a light halo of vanilla, caramel and soft fruit sweetness around the agave, not in place of it. The example bottle lists a 3-month rest, and its reviewers describe sherry-cask influence with plum, raisin and sweet tobacco; they also warn that the cask can overpower the agave. Wood masking the spirit is a risk worth knowing about with this style.",
       "plant": "Varies by bottling (the example bottle lists Angustifolia and Maximiliana); linked to the Maximiliana plant page as the Sierra tradition's signature agave — check the bottle, batches differ",
       "process": "Fermented and distilled (the example bottle lists steel), then rested in wooden barrels about 3 months",
-      "category": "Raicilla reposado — an aged-class claim under the raicilla denomination of origin (2019); the aged-class rules rest on the DO declaration and the published standard project, so verify the effective version rather than assuming tequila-style minimums",
+      "category": "Raicilla reposado — an aged class under the raicilla denomination of origin (2019); its rules come from the DO declaration and the published draft standard, so check the current version rather than assuming tequila-style minimums",
       "beginnerNote": "New to aged raicilla? Expect the fruit and flowers of a joven with a light caramel-vanilla halo from a short rest, closer to its unaged self than to tequila reposado.",
       "aliases": [
         "raicilla reposado",
@@ -898,7 +898,7 @@
         "precision": "state (Jalisco, batch varies); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat; a short-rested raicilla also works where a fruity reposado is called for (editorial suggestion).",
+        "serving": "Sipped neat; a short-rested raicilla also works where a fruity reposado is called for (just a suggestion).",
         "foods": [
           "fruit-forward salsas",
           "caramelised pork",
@@ -975,7 +975,7 @@
         "precision": "municipality (Arandas, Los Altos; example producer La Alteña); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat after dinner, in a snifter-style glass (editorial suggestion).",
+        "serving": "Sipped neat after dinner, in a snifter-style glass (just a suggestion).",
         "foods": [
           "dark chocolate",
           "cigar-adjacent desserts",
@@ -1051,7 +1051,7 @@
         "precision": "region (Tlacolula valley, Valles Centrales, Oaxaca); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat; also works in margaritas where a smoky reposado is welcome (editorial suggestion).",
+        "serving": "Sipped neat; also works in margaritas where a smoky reposado is welcome (just a suggestion).",
         "foods": [
           "mild cheeses",
           "carnitas",
@@ -1090,8 +1090,8 @@
       "spirit": "mezcal",
       "stateId": "oax",
       "stateName": "Oaxaca",
-      "context": "Tobalá (Agave potatorum) is a small, mostly wild agave of the high country, often called the 'king of agaves' in México. It's tiny and slow to mature (a variable, source-dependent range often cited around 12–15 years), so yields are very low, which has pushed prices up and wild populations down. The mezcal DO permits any agave species, so tobalá is mezcal; some tobalá is now cultivated, which changes both the sustainability story and, reviewers note, sometimes the flavour. This style follows the plant rather than a place: tobalá grows across Oaxaca's Sierra Norte and beyond, and in the Sierra Norte finding one ready to harvest is a point of personal pride.",
-      "description": "Expect a lighter, more floral mezcal than espadín: sweet citrus, tropical fruit and a silky texture over a gentler roast. Ancestral producers distil it in clay pots, and artisanal producers in copper or clay, since the artisanal category allows both. Batch variation is genuinely large; a cited blind tasting of eight tobalás found no single common thread, so think of a family of expressions rather than one flavour. The example bottle, from wild-harvested tobalá around Santiago Matatlán, is herbal and delicate, with dry soil, thyme, coriander and a touch of rosemary.",
+      "context": "Tobalá (Agave potatorum) is a small, mostly wild agave of the high country, often called the 'king of agaves' in México. It's tiny and slow to mature (a range that varies by source, often put at 12–15 years), so yields are very low, which has pushed prices up and wild populations down. The mezcal DO permits any agave species, so tobalá is mezcal; some tobalá is now cultivated, which changes both the sustainability story and, reviewers note, sometimes the flavour. This style follows the plant rather than a place: tobalá grows across Oaxaca's Sierra Norte and beyond, and in the Sierra Norte finding one ready to harvest is a point of personal pride.",
+      "description": "Expect a lighter, more floral mezcal than espadín: sweet citrus, tropical fruit and a silky texture over a gentler roast. Ancestral producers distil it in clay pots, and artisanal producers in copper or clay, since the artisanal category allows both. Batches vary a lot: in one blind tasting of eight tobalás, tasters found no common thread, so think of a family of expressions rather than one flavour. The example bottle, from wild-harvested tobalá around Santiago Matatlán, is herbal and delicate, with dry soil, thyme, coriander and a touch of rosemary.",
       "plant": "Agave potatorum (tobalá; mostly wild-harvested, some cultivated — check the bottle)",
       "plantId": "agave-potatorum",
       "process": "Pit-roasted, stone-milled, wild-fermented, distilled; NOM-070's artisanal category permits copper alembics or clay pots, so clay is not exclusive to ancestral production",
@@ -1127,7 +1127,7 @@
         "precision": "region (Sierra Norte de Oaxaca; the wild style ranges across the Sierra, while the example bottle is produced in Santiago Matatlán); approximate"
       },
       "pairing": {
-        "serving": "Neat in a small copita — a small stemmed glass — so the florals gather; if you mix it, expect a quieter, gentler version rather than the whole character. Editorial suggestion, not a rule.",
+        "serving": "Neat in a small copita — a small stemmed glass — so the florals gather; if you mix it, expect a quieter, gentler version rather than the whole character. A suggestion, not a rule.",
         "foods": [
           "fresh cheeses",
           "fruit salsas",
@@ -1152,7 +1152,7 @@
       "plantIds": [
         "agave-potatorum"
       ],
-      "whyItTastes": "Small wild tobalá matures over many years at altitude (often cited around 12–15, depending on the source), giving very low yields. Reviewers describe concentrated character in some batches, and the pit roast and frequent clay-pot distillation keep the cook gentle. Batch variation is genuine and large: a cited blind tasting found no single common thread."
+      "whyItTastes": "Small wild tobalá matures over many years at altitude (often put at 12–15, depending on the source), giving very low yields. Reviewers describe concentrated character in some batches, and the pit roast and frequent clay-pot distillation keep the cook gentle. Batches vary a lot: in one blind tasting, tasters found no common thread."
     },
     {
       "id": "sotol-chihuahua",
@@ -1161,8 +1161,8 @@
       "spirit": "sotol",
       "stateId": "chih",
       "stateName": "Chihuahua",
-      "context": "Sotol is the desert's own spirit, distilled from Dasylirion (desert spoon, sereque), native to the Chihuahuan desert. Dasylirion is a relative of agave in the Asparagaceae family that follows the same roasted-piña logic, and it's proudly not agave. Sotol has had a Denominación de Origen since 2002, covering only Chihuahua, Coahuila and Durango. Its 20th century included restrictive regulation and clandestine production in the northern sierra; the legal framing varied by era and place, and this guide asserts no single nationwide pre-1994 ban. The vinatas of the sierra kept the tradition going quietly, from one generation to the next, in the same households Chihuahuenses still pour from today. This is the Chihuahua desert style.",
-      "description": "Expect bright, grassy, herbal freshness, sometimes close to menthol or eucalyptus, over a smoky, earthy base from the pit roast: more vegetal than most agave spirits. Place shows unusually clearly here. The cited DO sources describe sotol from forested areas tasting of menthol, mushrooms and pine, and sotol from the arid desert leaning to leather, cacao and pepper. One plant may give roughly one bottle after a variable number of years (often cited around 8–12), so batches are small and genuinely vary.",
+      "context": "Sotol is the desert's own spirit, distilled from Dasylirion (desert spoon, sereque), native to the Chihuahuan desert. Dasylirion is a relative of agave in the Asparagaceae family that follows the same roasted-piña logic, and it's proudly not agave. Sotol has had a Denominación de Origen since 2002, covering only Chihuahua, Coahuila and Durango. Its 20th century included restrictive regulation and clandestine production in the northern sierra; the rules varied by era and place, and the sources show no single nationwide pre-1994 ban. The vinatas of the sierra kept the tradition going quietly, from one generation to the next, in the same households Chihuahuenses still pour from today. This is the Chihuahua desert style.",
+      "description": "Expect bright, grassy, herbal freshness, sometimes close to menthol or eucalyptus, over a smoky, earthy base from the pit roast: more vegetal than most agave spirits. Place shows unusually clearly here. Sources on the DO describe sotol from forested areas tasting of menthol, mushrooms and pine, and sotol from the arid desert leaning to leather, cacao and pepper. One plant may give roughly one bottle after a variable number of years (often put at 8–12), so batches are small and vary.",
       "plant": "Dasylirion (desert spoon; commonly wheeleri, cedrosanum or leiophyllum), wild-harvested; not an agave, though a close relative",
       "process": "Piña pit-roasted in conical ovens (or steam-cooked by larger producers), wild-fermented, distilled in copper or clay; whether roots are left intact depends on harvest practice, and regrowth is not guaranteed",
       "category": "Sotol — spirit with its own Denomination of Origin (Chihuahua, Coahuila, Durango, since 2002); explicitly not an agave spirit, included here as an agave-adjacent northern tradition",
@@ -1197,7 +1197,7 @@
         "precision": "state (Chihuahua, batch varies); approximate"
       },
       "pairing": {
-        "serving": "Sipped neat in a small glass; also good with mineral sparkling water (editorial suggestion).",
+        "serving": "Sipped neat in a small glass; also good with mineral sparkling water (just a suggestion).",
         "foods": [
           "asadero cheeses",
           "flour-tortilla northern dishes",
@@ -1223,7 +1223,7 @@
       "plantIds": [
         "dasylirion-desert-spoon"
       ],
-      "whyItTastes": "Wild-harvested Dasylirion (not an agave), roasted in conical pits and fermented with wild yeasts: the earthy, smoky, herbal character follows from the plant and the desert cook together. Wild stands face documented harvest pressure; claims that they regrow need species and method evidence this guide hasn't verified."
+      "whyItTastes": "Wild-harvested Dasylirion (not an agave), roasted in conical pits and fermented with wild yeasts: the earthy, smoky, herbal character follows from the plant and the desert cook together."
     },
     {
       "id": "tequila-blanco-highland-jalisco",
@@ -1270,7 +1270,7 @@
         "precision": "town (Atotonilco el Alto area, Los Altos); approximate"
       },
       "pairing": {
-        "serving": "Neat in a small glass, or in a Margarita/Paloma where its fruit plays well with citrus. Editorial suggestion, not a rule.",
+        "serving": "Neat in a small glass, or in a Margarita/Paloma where its fruit plays well with citrus. A suggestion, not a rule.",
         "foods": [
           "fruit-forward salsas",
           "carnitas",
@@ -1326,7 +1326,7 @@
       "category": "Mezcal — Guerrero lies within the mezcal denomination of origin; papalote is the regional name for a cupreata-lineage agave, not a legal class",
       "plant": "Agave cupreata (papalote; wild-harvested and cultivated)",
       "process": "Pit-roasted, wild-fermented, distilled in small batches",
-      "smoke": "Gentle in the cited reviews of the example bottle — the roast supports the fruit rather than leading it.",
+      "smoke": "Gentle in the reviews of the example bottle — the roast supports the fruit rather than leading it.",
       "finish": "Medium and warm in the example bottle's reviews, with mint and sweet vanilla notes.",
       "tasteNotes": [
         "tropical fruit",
@@ -1356,7 +1356,7 @@
         "precision": "municipality (Apango, Guerrero); approximate"
       },
       "pairing": {
-        "serving": "Neat in a small glass; the fruit opens with a short rest. Also works in a Margarita, where its fruit plays with citrus. Editorial suggestion, not a rule.",
+        "serving": "Neat in a small glass; the fruit opens with a short rest. Also works in a Margarita, where its fruit plays with citrus. A suggestion, not a rule.",
         "notice": "What to notice first: the mint-and-fruit arrival. If that welcome suits you, another Guerrero papalote is worth seeking out — expect batch variation.",
         "foods": [
           "guerrillense mole",
@@ -1394,11 +1394,11 @@
       "body": "medium",
       "context": "Durango is the north within the mezcal denomination — sierra and canyon country where a distillery is a vinata, not a palenque, and the signature agave is cenizo, named for the ash tone of its leaves. In El Mezquital, Tepehuán vinatero families like the Cruz family roast cenizo among the pines at elevation, mash by axe and desgarradora, and distill in small copper-and-wood stills. Northern is not a synonym for Oaxacan: Durango's mezcal has its own plant, vocabulary and voice.",
       "description": "Expect candy fruit: watermelon and berry sweets, bubblegum and citrus over a light roast, with a lactic, almost cheesy edge and real heat. That's the example bottle, from Federico Cruz and his Tepehuán family in El Mezquital. Most tasters call it bright, fruity and well balanced; a few have met rustic or polarising lots, and the heat varies from lot to lot. Durango producers, speaking to SevenFifty Daily, describe cenizo in general as sweet and green, fruity and earthy, with lactic notes.",
-      "beginnerNote": "New to cenizo? Expect candy fruit — watermelon, berry, bubblegum — over a gentle roast, and be ready for heat: the example bottle's lots range from 49 to 54% ABV and reviewers feel it. That is the bottle and the batch, not a fixed Durango welcome.",
+      "beginnerNote": "New to cenizo? Expect candy fruit — watermelon, berry, bubblegum — over a gentle roast, and be ready for heat: the example bottle's lots range from 49 to 54% ABV and reviewers feel it. That is this bottle and this batch, not all of Durango.",
       "category": "Mezcal — Durango lies within the mezcal denomination of origin; cenizo is the regional name for Agave durangensis, not a legal class",
       "plant": "Agave durangensis (cenizo; mostly wild-harvested, nursery programs growing)",
       "process": "Pit-roasted, mashed by axe and desgarradora, wild-fermented in pine vats, distilled in copper-and-wood stills",
-      "smoke": "Light in the cited reviews of the example bottle — the pit roast is present but the fruit leads.",
+      "smoke": "Light in the reviews of the example bottle — the pit roast is present but the fruit leads.",
       "finish": "Long and drying in several of the example bottle's reviews, with mint and mineral notes after the fruit.",
       "tasteNotes": [
         "tropical fruit",
@@ -1428,7 +1428,7 @@
         "precision": "municipality (El Mezquital, Durango); approximate"
       },
       "pairing": {
-        "serving": "Neat in a small glass with water alongside — the cited lots run hot, and a few drops soften the heat without losing the fruit. Editorial suggestion, not a rule.",
+        "serving": "Neat in a small glass with water alongside — the lots reviewed run hot, and a few drops soften the heat without losing the fruit. A suggestion, not a rule.",
         "notice": "What to notice first: the candy-fruit arrival and the heat behind it. If the fruit suits you, other cenizo — from Durango or elsewhere — is worth a taste; expect each lot to read a little different.",
         "foods": [
           "norteño grilled meats",
@@ -1464,13 +1464,13 @@
         "distillation-methods"
       ],
       "body": "medium",
-      "context": "On the rocky, arid Potosino plateau, the agave that endures is maguey verde — the salmiana — and hacienda families like the Hernández lineage of Santa Isabel have made mezcal from it for over a century. The same species feeds the pulque heartland farther south, but here the tradition cooks the piña mezcal-style rather than tapping sap: a different plant context and a different tradition from the destilado de pulque this guide also covers. How the plateau's agave is cooked is genuinely disputed — the producer describes a traditional clay oven, a local reviewer reports an autoclave — and the disagreement stays open on this page.",
+      "context": "On the rocky, arid Potosino plateau, the agave that endures is maguey verde — the salmiana — and hacienda families like the Hernández lineage of Santa Isabel have made mezcal from it for over a century. The same species feeds the pulque heartland farther south, but here the tradition cooks the piña mezcal-style rather than tapping sap: a different plant context and a different tradition from the destilado de pulque, which has its own profile. How the plateau's agave is cooked is disputed — the producer describes a traditional clay oven, a local reviewer reports an autoclave — and the question stays open.",
       "description": "Green and bright, with little or no smoke: jalapeño and green pepper, cut grass, lemon and elderflower. That's how tasters describe the example bottle, made by maestro Juan José Hernández at the Santa Isabel hacienda, though they agree on little else. One calls it a soft, pretty example of the region; others find it grassy, soapy or harsh. That spread is part of the picture. Other maguey verde mezcals often pour differently.",
       "beginnerNote": "New to maguey verde? Expect a green, vegetal pour — jalapeño, grass, lemon — and very little smoke. Reviews of the example bottle are split, so taste it with food if the first sip is harsh.",
       "category": "Mezcal — San Luis Potosí lies within the mezcal denomination of origin; maguey verde is the regional salmiana name, not a legal class",
       "plant": "Agave salmiana (maguey verde; wild plateau populations, 7–10 years to maturity)",
       "process": "Cooked in the hacienda's oven tradition, wild-fermented, distilled in copper",
-      "smoke": "Little to none per the cited reviews of the example bottle — reviewers who address cooking connect the low smoke to an oven rather than a pit roast.",
+      "smoke": "Little to none per the reviews of the example bottle — reviewers who address cooking connect the low smoke to an oven rather than a pit roast.",
       "finish": "Medium in the example bottle's reviews; lemon and mineral notes.",
       "tasteNotes": [
         "green vegetal",
@@ -1500,7 +1500,7 @@
         "precision": "municipality (Santa Isabel area, San Luis Potosí); approximate"
       },
       "pairing": {
-        "serving": "Neat at room temperature in a small glass; the vegetal character also suits a salty companion (the regional serve pairs it with orange, salt and chili). Editorial suggestion, not a rule.",
+        "serving": "Neat at room temperature in a small glass; the vegetal character also suits a salty companion (the regional serve pairs it with orange, salt and chili). A suggestion, not a rule.",
         "notice": "What to notice first: the green, jalapeño-and-lemon character and the near-total absence of smoke — a useful contrast with pit-roasted styles.",
         "foods": [
           "nopal and queso panela dishes",
@@ -1541,7 +1541,7 @@
       "category": "Mezcal — Michoacán lies within the mezcal denomination of origin; penca ancha is the regional name for Agave cupreata in Rio de Parras, not a legal class",
       "plant": "Agave cupreata (penca ancha in Rio de Parras; wild-harvested and cultivated)",
       "process": "Hand-milled with wooden mallets, pulque-started wild fermentation, Filipino-style still distillation",
-      "smoke": "Light to none in the cited reviews of the example bottle — the palate leads with fruit and lactic tang, not roast smoke.",
+      "smoke": "Light to none in the reviews of the example bottle — the palate leads with fruit and lactic tang, not roast smoke.",
       "finish": "Creamy and fruity in the example bottle's reviews, with a soft lactic tang; one lot shows lime rind and sea salt on the way out.",
       "tasteNotes": [
         "tropical fruit",
@@ -1572,7 +1572,7 @@
         "precision": "municipality (Rio de Parras, Michoacán); approximate"
       },
       "pairing": {
-        "serving": "Neat in a small glass; the creamy fruit opens with a short rest. Also works in a Margarita, where its lactic tang plays with citrus. Editorial suggestion, not a rule.",
+        "serving": "Neat in a small glass; the creamy fruit opens with a short rest. Also works in a Margarita, where its lactic tang plays with citrus. A suggestion, not a rule.",
         "notice": "What to notice first: the bubblegum-and-cream arrival and the gentle, pulque-tinged tang behind it — this producer's signature, and a good introduction to Michoacán's style.",
         "foods": [
           "corundas and uchepos",
@@ -1608,13 +1608,13 @@
         "distillation-methods"
       ],
       "body": "medium",
-      "context": "Puebla is quietly one of Mexico's biggest mezcal states, and in the Mixteca Poblana hills the plant at the centre of its small-batch mezcal is the papalometl — a word that shares a Nahuatl root with Guerrero's papalote but, in this bottle's documented case, names Agave potatorum, the same species Oaxaca calls tobalá. Maestra mezcalera Fabiola Torres Monfil makes it in San Diego La Mesa Tochimilitzingo with a farmer-conservationist's hand: seed-grown agaves from her nursery, ecological restoration, and programs that let plants flower for the bats that give her brand its name. The name is the lesson: papalometl needs its state attached, because the same word can point to different agaves in different states.",
+      "context": "Puebla is quietly one of Mexico's biggest mezcal states, and in the Mixteca Poblana hills the plant at the centre of its small-batch mezcal is the papalometl — a word that shares a Nahuatl root with Guerrero's papalote but, in this bottle's case, names Agave potatorum, the same species Oaxaca calls tobalá. Maestra mezcalera Fabiola Torres Monfil makes it in San Diego La Mesa Tochimilitzingo with a farmer-conservationist's hand: seed-grown agaves from her nursery, ecological restoration, and programs that let plants flower for the bats that give her brand its name. The name is the lesson: papalometl needs its state attached, because the same word can point to different agaves in different states.",
       "description": "A fruit bowl with a spark: apple pie, banana taffy, mango and pineapple, and a sharp acidity that one taster compares to vinegar or sparkling wine and another to champagne. That's the example bottle, from maestra mezcalera Fabiola Torres Monfil in San Diego La Mesa Tochimilitzingo. It varies from one small lot to the next: one fermented in rawhide comes across funkier, and some finish with plum and fig. Take it as a first taste of what Puebla's mezcal can be rather than a rule, because the same word, papalometl, can pour quite differently from another producer.",
       "beginnerNote": "New to Puebla mezcal? Expect a fruit basket with a spark: apple, banana, tropical fruit and a bright, sparkling-wine acidity. Nothing here matches the smoky welcome the word mezcal might lead you to expect — and other Puebla producers will pour differently.",
-      "category": "Mezcal — Puebla lies within the mezcal denomination of origin; papalometl is a regional plant name (potatorum in this bottle's documented case), not a legal class",
+      "category": "Mezcal — Puebla lies within the mezcal denomination of origin; papalometl is a regional plant name (potatorum in this bottle's case), not a legal class",
       "plant": "Agave potatorum (papalometl in the Mixteca Poblana; wild and seed-grown from the producer's nursery)",
       "process": "Pit roast, mechanical shredder, dry-then-wet wild fermentation (up to 14+5-10 days; some batches in rawhide), single distillation in copper or clay",
-      "smoke": "Light in the cited reviews of the example bottle — the pit roast is present but the fruit and acidity lead.",
+      "smoke": "Light in the reviews of the example bottle — the pit roast is present but the fruit and acidity lead.",
       "finish": "Fruity and floral in the example bottle's reviews, with a bright acidic snap; some lots finish mineral over dark fruits like plum and fig.",
       "tasteNotes": [
         "tropical fruit",
@@ -1645,7 +1645,7 @@
         "precision": "municipality (San Diego La Mesa Tochimilitzingo, Puebla); approximate"
       },
       "pairing": {
-        "serving": "Neat in a small glass; the acidity makes it a lively food mezcal. Editorial suggestion, not a rule.",
+        "serving": "Neat in a small glass; the acidity makes it a lively food mezcal. A suggestion, not a rule.",
         "notice": "What to notice first: the apple-and-tropical-fruit arrival and the bright, almost sparkling-wine acidity behind it — the signature of this producer's papalometl, and a lively first taste of Puebla's mezcal.",
         "foods": [
           "mole poblano",
